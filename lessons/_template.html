@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--
+    ============================================================
+    🎓 国学课堂 · 课程模板 (Lesson Template)
+    ============================================================
+    【使用步骤 — 三步搞定一门新课】
+
+    步骤 1: 复制本文件
+        将本文件复制为 lessons/02-xxx/index.html (xxx 用 kebab-case)
+        例如: cp lessons/_template.html lessons/02-shijing/index.html
+
+    步骤 2: 填写内容
+        a) 修改 <title> 标签 (顶部)
+        b) 修改导航栏里的"📖 讲义"等三个 tab 的文字(可选)
+        c) 找到下面标注了 【填写讲义内容】 的位置,撰写讲义幻灯片
+        d) 找到 【填写测验题目】 的位置,定义本课的题目
+        e) 找到 【填写答疑内容】 的位置,撰写答疑解惑页面
+
+    步骤 3: 注册到课程目录
+        打开 assets/js/lessons-manifest.js
+        在 GUOXUE_LESSONS 数组中追加一个新对象,见文件末尾注释
+        刷新首页(index.html)即可看到新课程
+
+    【自定义测验题目】
+        在 <script> 标签里、引用 slide-engine.js 之前,定义:
+            window.GUOXUE_QUIZ_OVERRIDE = [
+                { q: '题目?', opts: ['A选项', 'B选项', 'C选项'], ans: 1, exp: '解析' },
+                ...
+            ];
+        引擎会自动使用你的题目,无需修改 slide-engine.js
+
+    【关键约定】
+        - 每张幻灯片必须有 data-page="0,1,2..."(从 0 开始连续编号)
+        - 章节归属用 data-section="lecture | quiz | review"
+        - 测验卡片用 <div class="slide" data-page="N" data-section="quiz" id="quiz-0">
+          引擎会自动填充内容(基于你提供的 GUOXUE_QUIZ_OVERRIDE)
+    ============================================================
+-->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="国学课堂课程模板">
+    <meta name="author" content="国学课堂">
+    <title>新课程标题 · 国学课堂</title>
+    <link rel="stylesheet" href="../assets/css/ds-design-system.css">
+    <style>
+        /* 课程专属样式(如需)可加在这里,优先复用 DS 中的类 */
+    </style>
+</head>
+<body>
+
+<div class="bg-layer"></div>
+<div class="ink-dot ink-dot-1"></div>
+<div class="ink-dot ink-dot-2"></div>
+<div class="ink-dot ink-dot-3"></div>
+
+<!-- 导航栏 -->
+<nav class="ds-navbar">
+    <div class="ds-tabs">
+        <button class="ds-tab active" data-section="lecture">📖 讲义</button>
+        <button class="ds-tab" data-section="quiz">✏️ 测验</button>
+        <button class="ds-tab" data-section="review">💬 答疑解惑</button>
+    </div>
+    <div class="ds-nav-center">
+        <span class="page-indicator" id="page-indicator">1 / 1</span>
+    </div>
+    <div class="ds-nav-right">
+        <div class="dots-row" id="dots-row"></div>
+        <button class="ds-btn-nav" id="nav-prev" disabled>← 上一页</button>
+        <button class="ds-btn-nav" id="nav-next">下一页 →</button>
+        <button class="fullscreen-btn" id="fullscreen-btn" title="切换全屏显示">⛶</button>
+    </div>
+</nav>
+
+<div class="slide-viewport">
+<div class="slide-container">
+
+    <!-- =============================================
+         封面页 (第 1 页)
+         ============================================= -->
+    <div class="slide active cover-slide" data-page="0" data-section="lecture">
+        <div class="cover-ornament"></div>
+        <h2 class="ds-display">【填写课程标题】</h2>
+        <div class="cover-ornament"></div>
+        <p class="cover-subtitle">【副标题 · 2-6 字】</p>
+        <p class="cover-desc">【一句话课程简介 · 30-60 字】</p>
+        <div class="cover-seal">课程</div>
+    </div>
+
+    <!-- =============================================
+         讲义区 (第 2 - N 页)
+         【填写讲义内容】 — 在这里复制多个 .slide 块
+         ============================================= -->
+
+    <!-- 第 2 页示例:核心概念介绍 -->
+    <div class="slide" data-page="1" data-section="lecture">
+        <span class="ds-badge ds-badge--accent">讲义</span>
+        <h2>【本节标题】</h2>
+        <p>【正文段落 ...】</p>
+        <div class="ds-quote">【金句引用 · 用 .ds-quote 包裹会更醒目】</div>
+        <ul>
+            <li>【要点 1】</li>
+            <li>【要点 2】</li>
+            <li>【要点 3】</li>
+        </ul>
+    </div>
+
+    <!-- 第 3 页示例:含图片 -->
+    <div class="slide" data-page="2" data-section="lecture">
+        <span class="ds-badge ds-badge--accent">讲义</span>
+        <h2>【本节标题】</h2>
+        <div class="slide-text-with-image">
+            <img src="【图片URL】" alt="【图片说明】" class="slide-image slide-image--portrait" style="border-radius:var(--ds-radius-lg);">
+            <p>【正文 ...】</p>
+        </div>
+    </div>
+
+    <!-- =============================================
+         测验区 (data-section="quiz")
+         【填写测验题目】 — 在 JS 中定义 window.GUOXUE_QUIZ_OVERRIDE
+         引擎会自动渲染到下面这些 .slide 容器里
+         ============================================= -->
+
+    <!-- 测验说明页 -->
+    <div class="slide" data-page="3" data-section="quiz" style="align-items:center;text-align:center;">
+        <span class="ds-badge ds-badge--success">测验</span>
+        <h2 style="border:none;text-align:center;padding-bottom:0;">测验说明</h2>
+        <ul style="text-align:left;margin-top:var(--ds-space-6);display:inline-block;">
+            <li>共 <b>【数量】</b> 道选择题,每题 3 个选项</li>
+            <li>每题 10 分,满分 【数量×10】 分</li>
+            <li>点击选项即可作答,选择后会显示讲解</li>
+            <li>可以随时返回讲义部分复习</li>
+        </ul>
+    </div>
+
+    <!-- 测验容器 — id 必须为 quiz-0, quiz-1, quiz-2... 引擎会填充内容 -->
+    <div class="slide" data-page="4" data-section="quiz" id="quiz-0"></div>
+    <div class="slide" data-page="5" data-section="quiz" id="quiz-1"></div>
+    <div class="slide" data-page="6" data-section="quiz" id="quiz-2"></div>
+    <!-- 根据你的题目数量,继续添加 quiz-3, quiz-4, ... -->
+
+    <!-- 测验得分页 — id="quiz-score" 是必须的 -->
+    <div class="slide" data-page="7" data-section="quiz" id="quiz-score" style="align-items:center;text-align:center;">
+        <span class="ds-badge ds-badge--success">测验得分</span>
+        <h2 style="border:none;text-align:center;padding-bottom:0;">测验完成!</h2>
+        <div style="margin-top:var(--ds-space-10);">
+            <div style="font-size:5rem;color:var(--ds-accent);font-weight:700;font-family:var(--ds-font-display);line-height:1;" id="score-display">0</div>
+            <div style="font-size:1.5rem;margin-top:var(--ds-space-4);color:var(--ds-color-fg-strong);font-weight:600;" id="score-message">正在计算得分...</div>
+            <div style="margin-top:var(--ds-space-8);font-size:1.125rem;color:var(--ds-color-fg);background:var(--ds-color-surface);padding:var(--ds-space-6);border-radius:var(--ds-radius-xl);display:inline-block;text-align:left;">
+                <p style="margin-bottom:var(--ds-space-3);">✅ 答对题数:<b id="correct-count" style="color:var(--ds-color-success);font-size:1.25rem;">0</b> / 10</p>
+                <p>📊 总得分:<b id="total-score" style="color:var(--ds-accent);font-size:1.25rem;">0</b> 分(满分 100 分)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============================================
+         答疑解惑区 (data-section="review")
+         【填写答疑内容】
+         ============================================= -->
+    <div class="slide" data-page="8" data-section="review">
+        <span class="ds-badge ds-badge--accent">答疑解惑</span>
+        <h2>常见易错点</h2>
+        <p>【易错点 1 的解释】</p>
+        <p>【易错点 2 的解释】</p>
+    </div>
+
+    <div class="slide" data-page="9" data-section="review">
+        <span class="ds-badge ds-badge--accent">答疑解惑</span>
+        <h2>知识拓展</h2>
+        <ul>
+            <li>【拓展知识 1】</li>
+            <li>【拓展知识 2】</li>
+        </ul>
+    </div>
+
+    <!-- 结束页 — cover-seal 文字可自定义 -->
+    <div class="slide end-slide" data-page="10" data-section="review">
+        <div class="cover-ornament"></div>
+        <h2 class="ds-display">谢谢大家</h2>
+        <div class="cover-ornament"></div>
+        <div class="end-quote">
+            "【结束寄语】"<br>
+            <span style="font-size:0.875rem;color:var(--ds-color-muted);">—— 【出处】</span>
+        </div>
+        <div class="cover-seal">课程</div>
+    </div>
+
+</div><!-- slide-container -->
+</div><!-- slide-viewport -->
+
+<div class="progress-bar-bottom">
+    <div class="progress-bar-fill" id="progress-fill" style="width:10%"></div>
+</div>
+
+<div class="kbd-hint">
+    <span class="kbd">←</span><span class="kbd">→</span> 翻页
+    <span style="margin-left:8px"><span class="kbd">Space</span> 下一页</span>
+</div>
+
+<!-- ============================================================
+     本课自定义测验题目(可选)
+     如果不写,引擎使用论语课的默认题目(仅供预览,正式发布请覆盖)
+     ============================================================ -->
+<script>
+window.GUOXUE_QUIZ_OVERRIDE = [
+    // 题目模板:
+    // { q: '题目文本?', opts: ['A选项', 'B选项', 'C选项'], ans: 0, exp: '答案解析' },
+    // 示例:
+    { q: '【示例题 1】本课程的主题是什么?', opts: ['选项 A', '选项 B', '选项 C'], ans: 0, exp: '请在发布前替换为真实题目' },
+    { q: '【示例题 2】请填写第二个问题?', opts: ['选项 A', '选项 B', '选项 C'], ans: 1, exp: '请在发布前替换为真实题目' }
+];
+</script>
+
+<!-- 共享课程引擎(不要修改) -->
+<script src="../assets/js/slide-engine.js"></script>
+</body>
+</html>
