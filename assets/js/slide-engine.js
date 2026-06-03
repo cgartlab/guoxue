@@ -313,7 +313,7 @@
     /* ===== 触屏滑动 ===== */
     (function () {
         var touchStartX = 0, touchStartY = 0;
-        var swipeThreshold = 50;
+        var swipeThreshold = window.innerWidth < 480 ? 70 : 50;
         var container = document.querySelector('.slide-viewport');
         if (!container) return;
         container.addEventListener('touchstart', function (e) {
@@ -321,6 +321,8 @@
             touchStartY = e.changedTouches[0].screenY;
         }, { passive: true });
         container.addEventListener('touchend', function (e) {
+            // #19: 答题区域内不触发滑动翻页，避免与答题按钮冲突
+            if (e.target.closest('.quiz-options-wrap, .quiz-explain, #retake-btn')) return;
             var deltaX = e.changedTouches[0].screenX - touchStartX;
             var deltaY = e.changedTouches[0].screenY - touchStartY;
             if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > swipeThreshold) {
