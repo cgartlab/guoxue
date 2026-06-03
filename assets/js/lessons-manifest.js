@@ -24,7 +24,8 @@ window.GUOXUE_LESSONS = [
         icon: '📖',
         grade: '小学中高年级',
         description: '走近孔子,理解仁、学、孝、礼四大核心思想,精读六句千古名言,配套十道互动测验。',
-        status: 'ready'
+        status: 'ready',
+        duration: '约 15 分钟'
     },
     {
         id: '01-lunyu-mixed',

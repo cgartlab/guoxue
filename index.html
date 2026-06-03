@@ -3,33 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="国学课堂 — 面向小学生的中华传统文化在线课程，传承经典，启迪智慧。">
+  <meta name="description" content="国学课堂 — 面向小学生的中华传统文化在线课件站，包含《论语》互动课程等。传承经典，启迪智慧，适合亲子共学。">
   <meta name="author" content="国学课堂">
+  <meta property="og:title" content="国学课堂 — 传承经典 · 启迪智慧">
+  <meta property="og:description" content="面向小学生的中华传统文化在线课件站，包含《论语》国学问答等互动课程。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://guoxue.cgartlab.com/">
+  <meta name="twitter:card" content="summary_large_image">
   <title>国学课堂 — 传承经典 · 启迪智慧</title>
+  <link rel="canonical" href="https://guoxue.cgartlab.com/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/css/ds-design-system.css">
 </head>
-<body>
+<body class="scroll-mode">
 
-  <!-- 背景装饰层 -->
+  <a class="skip-link" href="#main-content">跳过导航</a>
+
   <div class="bg-layer" aria-hidden="true"></div>
   <div class="ink-dot ink-dot-1" aria-hidden="true"></div>
   <div class="ink-dot ink-dot-2" aria-hidden="true"></div>
   <div class="ink-dot ink-dot-3" aria-hidden="true"></div>
 
-  <!-- 顶部导航 -->
-  <nav class="ds-navbar">
-    <a class="site-title" href="index.html">📜 国学课堂</a>
+  <nav class="ds-navbar" aria-label="主导航">
+    <a class="ds-btn-nav" href="index.html">📜 国学课堂</a>
     <div class="ds-nav-center"></div>
     <div class="ds-nav-right">
       <a class="ds-btn-nav" href="about.html">关于本站</a>
     </div>
   </nav>
 
-  <!-- 主内容 -->
-  <main>
+  <main id="main-content" class="page-wrapper">
     <div class="ds-container">
 
-      <!-- 英雄区 -->
       <section class="ds-hero">
         <h1>国学课堂</h1>
         <p class="hero-subtitle">传承经典 · 启迪智慧</p>
@@ -41,7 +48,6 @@
         </p>
       </section>
 
-      <!-- 课程目录 -->
       <section style="margin-bottom: var(--ds-space-12);">
         <h2 class="ds-section-title">📚 课程目录</h2>
         <div id="lesson-cards" class="ds-card-grid"></div>
@@ -50,13 +56,11 @@
     </div>
   </main>
 
-  <!-- 页脚 -->
   <footer class="ds-footer">
     © 2026 国学课堂 · Powered by GitHub Pages
   </footer>
 
-  <!-- 课程目录数据 -->
-  <script src="assets/js/lessons-manifest.js"></script>
+  <script src="assets/js/lessons-manifest.js" defer></script>
   <script>
     (function () {
       var lessons = window.GUOXUE_LESSONS || [];
@@ -87,7 +91,9 @@
 
         var subtitle = document.createElement('p');
         subtitle.className = 'lesson-subtitle';
-        subtitle.textContent = lesson.subtitle || '';
+        var meta = [lesson.subtitle || ''];
+        if (lesson.duration) meta.push(lesson.duration);
+        subtitle.textContent = meta.filter(Boolean).join(' · ');
 
         var desc = document.createElement('p');
         desc.className = 'lesson-desc';
