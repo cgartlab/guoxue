@@ -72,6 +72,8 @@ body {
     color: var(--ds-color-fg);
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: contain;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -454,8 +456,11 @@ a { color: inherit; text-decoration: none; }
         --ds-accent-soft: oklch(30% 0.04 115);
         --ds-color-olive-50: oklch(97% 0.02 115);
         --ds-color-olive-100: oklch(93% 0.035 115);
+        --ds-color-olive-200: oklch(85% 0.055 115);
         --ds-color-success: oklch(70% 0.1 145);
+        --ds-color-success-bg: oklch(25% 0.03 145);
         --ds-color-error: oklch(65% 0.14 30);
+        --ds-color-error-bg: oklch(25% 0.03 30);
         --ds-color-warning: oklch(75% 0.1 85);
     }
     .cover-slide, .end-slide {
