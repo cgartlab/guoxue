@@ -1,22 +1,24 @@
 /* =============================================================
- * CGArtLab Slide Engine — 共享课程引擎 v1.0
+ * CGArtLab Slide Engine — 共享课程引擎 v2.0
  * -------------------------------------------------------------
- * 来源:lesson01-lunyu.html (原 lines 1010-1271)
  * 用途:被各课程页 index.html 引用,提供:
  *   - 测验题目渲染与判分
  *   - 章节切换(讲义 / 测验 / 答疑解惑)
  *   - 上一页/下一页 / 键盘左右 / 触屏滑动 / 点击半屏
- *   - 全屏切换
- *   - 进度条 / 圆点导航 / 页码指示
+ *   - 全屏切换 / 进度条 / 圆点导航 / 页码指示
+ *   - data-section 自动探测(无需硬编码)
+ *   - localStorage 进度持久化
  *
- * 自定义本课数据的方法(推荐):
- *   在引用本文件之后,定义 window.GUOXUE_QUIZ_OVERRIDE = [...],
- *   引擎将优先使用你提供的题目。
+ * 自定义测验: 引用本文件后定义 window.GUOXUE_QUIZ_OVERRIDE
+ * 自定义课程配置: 引用本文件前定义 window.GUOXUE_COURSE_ID
  * ============================================================= */
 (function () {
     'use strict';
 
-    /* ===== 默认测验数据(可被 GUOXUE_QUIZ_OVERRIDE 覆盖) ===== */
+    /* ===== 课程配置(从 HTML 自动探测) ===== */
+    var courseId = window.GUOXUE_COURSE_ID || document.title.replace(/[^a-z0-9]/gi, '_').toLowerCase().slice(0, 32);
+
+    /* ===== 默认测验数据 ===== */
     var DEFAULT_QUIZ = [
         { q: '"学而时习之,不亦说乎?"这句话出自哪部经典著作?', opts: ['《道德经》', '《论语》', '《诗经》'], ans: 1, exp: '出自《论语·学而》,是论语开篇第一句。"说"同"悦",意思是愉快。整句意思是:学了知识并经常复习,不也很愉快吗?' },
         { q: '孔子,名什么?字什么?', opts: ['名丘,字仲尼', '名轲,字子舆', '名明,字孔明'], ans: 0, exp: '孔子名丘,字仲尼。孟子名轲字子舆,诸葛亮字孔明。孔子被尊称为"至圣先师"。' },
@@ -33,6 +35,54 @@
     var quizData = Array.isArray(window.GUOXUE_QUIZ_OVERRIDE) && window.GUOXUE_QUIZ_OVERRIDE.length > 0
         ? window.GUOXUE_QUIZ_OVERRIDE
         : DEFAULT_QUIZ;
+
+    var quizCount = quizData.length;
+
+    /* ===== 自动探测 sections(无需硬编码) ===== */
+    var allSlides = document.querySelectorAll('.slide');
+    var totalPages = allSlides.length;
+    var curPage = 0;
+    var sections = {};
+
+    allSlides.forEach(function(slide, idx) {
+        var sec = slide.getAttribute('data-section') || 'lecture';
+        if (!sections[sec]) sections[sec] = { start: idx, end: idx };
+        else sections[sec].end = idx;
+    });
+
+    /* ========== localStorage 持久化 ========== */
+    var STORAGE_KEY = 'guoxue_progress_' + courseId;
+
+    function saveProgress() {
+        try {
+            var data = {
+                currentPage: curPage,
+                quizAnswered: Object.keys(quizAnswered),
+                quizScore: quizScore,
+                updatedAt: Date.now()
+            };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        } catch(e) { /* ignore quota errors */ }
+    }
+
+    function loadProgress() {
+        try {
+            var raw = localStorage.getItem(STORAGE_KEY);
+            if (!raw) return null;
+            return JSON.parse(raw);
+        } catch(e) { return null; }
+    }
+
+    function clearProgress() {
+        try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+    }
+
+    /* ========== 恢复进度 ========== */
+    var saved = loadProgress();
+    var pendingRestore = null;
+    if (saved && saved.currentPage > 0 && saved.currentPage < totalPages) {
+        pendingRestore = saved;
+    }
 
     /* ===== 渲染测验卡片 ===== */
     var labels = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -54,6 +104,35 @@
     /* ===== 答题逻辑 ===== */
     var quizAnswered = {};
     var quizScore = 0;
+
+    // 恢复已答题目
+    if (pendingRestore && pendingRestore.quizAnswered) {
+        pendingRestore.quizAnswered.forEach(function(k) {
+            quizAnswered[k] = true;
+        });
+        quizScore = pendingRestore.quizScore || 0;
+        // 标记已答题目样式
+        quizData.forEach(function(item, idx) {
+            if (quizAnswered[idx]) {
+                document.querySelectorAll('[data-q="' + idx + '"]').forEach(function(b) {
+                    b.classList.add('disabled');
+                });
+                var expEl = document.getElementById('exp-' + idx);
+                if (expEl && quizScore > 0) {
+                    // 粗略判断正确/错误
+                    var btns = document.querySelectorAll('[data-q="' + idx + '"]');
+                    btns.forEach(function(b) {
+                        var oi = parseInt(b.dataset.o, 10);
+                        if (oi === item.ans) b.classList.add('correct');
+                        else b.classList.add('wrong');
+                    });
+                    expEl.className = 'quiz-explain show correct-exp';
+                    expEl.innerHTML = '<b>⚡ 已作答(恢复自上次进度)</b><br><br>' + item.exp;
+                }
+            }
+        });
+    }
+
     document.addEventListener('click', function (e) {
         var btn = e.target.closest('.quiz-option');
         if (!btn) return;
@@ -65,13 +144,14 @@
         var btns = document.querySelectorAll('[data-q="' + qi + '"]');
         var ok = (oi === item.ans);
         btns.forEach(function (b) { b.classList.add('disabled'); });
-        if (ok) { btn.classList.add('correct'); quizScore += 10; }
+        if (ok) { btn.classList.add('correct'); quizScore += (quizCount > 0 ? 100 / quizCount : 10); }
         else { btn.classList.add('wrong'); btns[item.ans].classList.add('correct'); }
         var expEl = document.getElementById('exp-' + qi);
         if (expEl) {
             expEl.className = 'quiz-explain show ' + (ok ? 'correct-exp' : 'wrong-exp');
             expEl.innerHTML = '<b>' + (ok ? '✓ 回答正确' : '✗ 回答错误,正确答案已标出') + '</b><br><br>' + item.exp;
         }
+        saveProgress();
     });
 
     /* ===== 重新答题 ===== */
@@ -86,6 +166,7 @@
         document.querySelectorAll('.quiz-explain').forEach(function(el) {
             el.className = 'quiz-explain'; el.innerHTML = '';
         });
+        clearProgress();
         var scoreDisplay = document.getElementById('score-display');
         if (scoreDisplay) {
             scoreDisplay.textContent = '0';
@@ -94,19 +175,11 @@
             document.getElementById('total-score').textContent = '0';
             document.getElementById('score-percent').textContent = '0%';
         }
-        goToPage(10);
+        var quizSection = sections['quiz'];
+        if (quizSection) goToPage(quizSection.start);
     });
 
     /* ===== 导航逻辑 ===== */
-    var allSlides = document.querySelectorAll('.slide');
-    var totalPages = allSlides.length;
-    var curPage = 0;
-    var sections = {
-        lecture: { start: 0, end: 9 },
-        quiz:    { start: 10, end: 21 },
-        review:  { start: 22, end: 24 }
-    };
-
     function $(id) { return document.getElementById(id); }
 
     function goToPage(n) {
@@ -115,8 +188,10 @@
         curPage = n;
         allSlides[curPage].classList.add('active');
         allSlides[curPage].scrollTop = 0;
-        if (n === 21) updateScoreDisplay();
+        var quizSection = sections['quiz'];
+        if (quizSection && n === quizSection.end) updateScoreDisplay();
         updateUI();
+        saveProgress();
     }
 
     function updateScoreDisplay() {
@@ -126,14 +201,15 @@
         var totalScore = document.getElementById('total-score');
         var scorePercent = document.getElementById('score-percent');
         if (!scoreDisplay) return;
-        var correct = quizScore / 10;
-        scoreDisplay.textContent = quizScore + ' 分';
-        correctCount.textContent = correct;
-        totalScore.textContent = quizScore;
-        scorePercent.textContent = Math.round(quizScore) + '%';
-        if (quizScore >= 90) scoreMessage.textContent = '🎉 太棒了!你是论语小达人!';
-        else if (quizScore >= 70) scoreMessage.textContent = '👍 不错!对论语有不错的了解!';
-        else if (quizScore >= 60) scoreMessage.textContent = '💪 继续加油!再多复习几遍!';
+        var maxScore = Math.round(quizCount * (100 / quizCount));
+        var roundedScore = Math.round(quizScore);
+        scoreDisplay.textContent = roundedScore + ' 分';
+        correctCount.textContent = Object.keys(quizAnswered).length;
+        totalScore.textContent = roundedScore;
+        scorePercent.textContent = Math.round(roundedScore) + '%';
+        if (roundedScore >= 90) scoreMessage.textContent = '🎉 太棒了!你是国学小达人!';
+        else if (roundedScore >= 70) scoreMessage.textContent = '👍 不错!对经典有不错的了解!';
+        else if (roundedScore >= 60) scoreMessage.textContent = '💪 继续加油!再多复习几遍!';
         else scoreMessage.textContent = '📚 需要加强学习,建议重温讲义部分!';
     }
 
@@ -161,12 +237,17 @@
         for (var i = 0; i < totalPages; i++) {
             var d = document.createElement('button');
             d.className = 'ds-dot' + (i === curPage ? ' active' : '');
+            d.setAttribute('role', 'tab');
+            d.setAttribute('aria-selected', i === curPage ? 'true' : 'false');
             d.setAttribute('aria-label', '第 ' + (i + 1) + ' 页');
+            d.setAttribute('tabindex', i === curPage ? '0' : '-1');
             (function (n) {
                 d.addEventListener('click', function () { goToPage(n); });
             })(i);
             box.appendChild(d);
         }
+        box.setAttribute('role', 'tablist');
+        box.setAttribute('aria-label', '幻灯片导航');
     }
 
     /* ===== 板块切换 ===== */
@@ -190,6 +271,10 @@
             e.preventDefault(); goToPage(curPage + 1);
         } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
             e.preventDefault(); goToPage(curPage - 1);
+        } else if (e.key === 'Home') {
+            e.preventDefault(); goToPage(0);
+        } else if (e.key === 'End') {
+            e.preventDefault(); goToPage(totalPages - 1);
         }
     });
 
@@ -200,7 +285,7 @@
     function toggleFullscreen() {
         if (!document.fullscreenElement) {
             var p = slideContainer && slideContainer.requestFullscreen && slideContainer.requestFullscreen();
-            if (p && p.then) p.then(function () { updateFullscreenBtn(true); }).catch(function () { updateFullscreenBtn(true); });
+            if (p && p.then) p.then(function () { updateFullscreenBtn(true); }).catch(function () {});
             else updateFullscreenBtn(true);
         } else {
             var q = document.exitFullscreen && document.exitFullscreen();
@@ -211,14 +296,9 @@
 
     function updateFullscreenBtn(isFullscreen) {
         if (!fullscreenBtn) return;
-        if (isFullscreen) {
-            fullscreenBtn.classList.add('exit');
-            fullscreenBtn.title = '退出全屏';
-        } else {
-            fullscreenBtn.classList.remove('exit');
-            fullscreenBtn.title = '切换全屏显示';
-        }
-        fullscreenBtn.textContent = '⛶';
+        fullscreenBtn.classList.toggle('exit', isFullscreen);
+        fullscreenBtn.title = isFullscreen ? '退出全屏' : '切换全屏显示';
+        fullscreenBtn.innerHTML = '⛶';
     }
 
     if (fullscreenBtn) {
@@ -263,5 +343,27 @@
         });
     })();
 
-    updateUI();
+    /* ===== 恢复自动保存进度 ===== */
+    if (pendingRestore) {
+        // 延迟恢复,让 DOM 先渲染
+        setTimeout(function() {
+            if (pendingRestore.currentPage > 0) {
+                goToPage(pendingRestore.currentPage);
+                // 显示恢复通知
+                var restoreMsg = document.createElement('div');
+                restoreMsg.style.cssText = 'position:fixed;bottom:50px;left:50%;transform:translateX(-50%);background:var(--ds-accent-soft);color:var(--ds-color-olive-700);padding:8px 20px;border-radius:20px;font-size:0.8125rem;z-index:200;box-shadow:var(--ds-shadow-md);animation:fadeUp 0.3s ease-out;pointer-events:none;';
+                restoreMsg.textContent = '⚡ 已恢复到上次浏览进度 (第 ' + (pendingRestore.currentPage + 1) + ' 页)';
+                document.body.appendChild(restoreMsg);
+                setTimeout(function() { restoreMsg.style.opacity = '0'; restoreMsg.style.transition = 'opacity 0.5s'; }, 3000);
+            }
+        }, 100);
+    }
+
+    /* ===== 初始化 ===== */
+    if (!pendingRestore) updateUI();
+    else {
+        // 进度恢复后 updateUI 由 goToPage 调用
+        goToPage(curPage);
+    }
+
 })();
