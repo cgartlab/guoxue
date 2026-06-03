@@ -74,6 +74,29 @@
         }
     });
 
+    /* ===== 重新答题 ===== */
+    document.addEventListener('click', function(e) {
+        var retake = e.target.closest('#retake-btn');
+        if (!retake) return;
+        quizAnswered = {};
+        quizScore = 0;
+        document.querySelectorAll('.quiz-option').forEach(function(b) {
+            b.classList.remove('disabled','correct','wrong');
+        });
+        document.querySelectorAll('.quiz-explain').forEach(function(el) {
+            el.className = 'quiz-explain'; el.innerHTML = '';
+        });
+        var scoreDisplay = document.getElementById('score-display');
+        if (scoreDisplay) {
+            scoreDisplay.textContent = '0';
+            document.getElementById('score-message').textContent = '重新答题中...';
+            document.getElementById('correct-count').textContent = '0';
+            document.getElementById('total-score').textContent = '0';
+            document.getElementById('score-percent').textContent = '0%';
+        }
+        goToPage(10);
+    });
+
     /* ===== 导航逻辑 ===== */
     var allSlides = document.querySelectorAll('.slide');
     var totalPages = allSlides.length;

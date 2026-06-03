@@ -23,6 +23,7 @@ window.GUOXUE_LESSONS = [
         path: 'lessons/01-lunyu/index.html',
         icon: '📖',
         grade: '小学中高年级',
+        duration: '约 15 分钟',
         description: '走近孔子,理解仁、学、孝、礼四大核心思想,精读六句千古名言,配套十道互动测验。',
         status: 'ready'
     },
@@ -33,6 +34,7 @@ window.GUOXUE_LESSONS = [
         path: 'lessons/01-lunyu-mixed/index.html',
         icon: '📚',
         grade: '小学高年级 / 初中',
+        duration: '约 25 分钟',
         description: '在标准版基础上拓展内容深度,适合学有余力的学生深入研读。',
         status: 'ready'
     }
