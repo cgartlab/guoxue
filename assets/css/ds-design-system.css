@@ -693,3 +693,531 @@ a { color: inherit; text-decoration: none; }
     @keyframes shake { 0%, 100% { transform: none; } }
     @keyframes fadeUp { from { opacity: 1; transform: none; } }
 }
+/* ========== 首页/关于页专用样式 ========== */
+.ds-hero {
+    text-align: center;
+    padding: var(--ds-space-16) 0 var(--ds-space-12);
+}
+.ds-hero .hero-ornament {
+    width: 80px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--ds-accent), transparent);
+    margin: var(--ds-space-5) auto; border-radius: 1px;
+}
+.ds-hero h1 {
+    font-family: var(--ds-font-display);
+    font-size: 3.25rem; font-weight: 700;
+    color: var(--ds-color-fg-strong);
+    line-height: 1.1; letter-spacing: 0.04em;
+    margin-bottom: var(--ds-space-4);
+}
+.ds-hero .hero-subtitle {
+    font-size: 1rem; color: var(--ds-color-muted);
+    letter-spacing: 0.3em; margin-bottom: var(--ds-space-5);
+    font-weight: 500; text-transform: uppercase;
+}
+.ds-hero p.hero-desc {
+    max-width: 580px; margin: 0 auto;
+    font-size: 1.0625rem; line-height: 1.85;
+    color: var(--ds-color-fg); text-align: center;
+}
+.ds-section-title {
+    font-family: var(--ds-font-display);
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--ds-color-fg-strong);
+    margin-bottom: var(--ds-space-6);
+    display: flex; align-items: center; gap: var(--ds-space-3);
+    letter-spacing: 0.02em;
+}
+.ds-section-title::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(90deg, var(--ds-color-border), transparent);
+}
+.ds-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--ds-space-6);
+}
+.ds-lesson-card {
+    display: flex; flex-direction: column;
+    padding: var(--ds-space-7) var(--ds-space-6);
+    border: 1px solid var(--ds-color-border);
+    border-radius: var(--ds-radius-2xl);
+    background: var(--ds-color-surface);
+    transition: all var(--ds-duration-300) var(--ds-ease-out);
+    text-decoration: none; color: inherit;
+    position: relative; overflow: hidden;
+}
+.ds-lesson-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--ds-accent), var(--ds-color-olive-300));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform var(--ds-duration-300) var(--ds-ease-out);
+}
+.ds-lesson-card:hover {
+    border-color: var(--ds-accent);
+    transform: translateY(-5px);
+    box-shadow: var(--ds-shadow-lg);
+}
+.ds-lesson-card:hover::before { transform: scaleX(1); }
+.ds-lesson-card .lesson-icon {
+    width: 60px; height: 60px;
+    border-radius: var(--ds-radius-xl);
+    background: linear-gradient(135deg, var(--ds-color-olive-50), var(--ds-color-olive-100));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.875rem; margin-bottom: var(--ds-space-5);
+    box-shadow: var(--ds-shadow-sm);
+}
+.ds-lesson-card .lesson-grade {
+    display: inline-block;
+    padding: 3px 12px; border-radius: 100px;
+    font-size: 0.75rem; font-weight: 600;
+    background: var(--ds-accent-soft); color: var(--ds-color-olive-700);
+    margin-bottom: var(--ds-space-4); align-self: flex-start;
+    letter-spacing: 0.05em;
+}
+.ds-lesson-card .lesson-title {
+    font-family: var(--ds-font-display);
+    font-size: 1.375rem; font-weight: 700;
+    color: var(--ds-color-fg-strong);
+    margin-bottom: var(--ds-space-2); line-height: 1.3;
+}
+.ds-lesson-card .lesson-subtitle {
+    font-size: 0.875rem; color: var(--ds-color-muted);
+    letter-spacing: 0.12em; margin-bottom: var(--ds-space-4);
+}
+.ds-lesson-card .lesson-desc {
+    font-size: 0.9375rem; line-height: 1.7;
+    color: var(--ds-color-fg); flex: 1;
+    margin-bottom: var(--ds-space-5);
+}
+.ds-lesson-card .lesson-cta {
+    display: flex; align-items: center; gap: var(--ds-space-2);
+    color: var(--ds-accent); font-weight: 600; font-size: 0.9375rem;
+    margin-top: auto;
+}
+.ds-lesson-card:hover .lesson-cta { gap: var(--ds-space-3); }
+.ds-lesson-card .lesson-cta .arrow {
+    transition: transform var(--ds-duration-200) var(--ds-ease-out);
+}
+.ds-lesson-card:hover .lesson-cta .arrow { transform: translateX(4px); }
+.teacher-section {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--ds-space-10); align-items: center;
+    margin-bottom: var(--ds-space-16);
+}
+.teacher-avatar {
+    width: 100%; aspect-ratio: 1;
+    border-radius: var(--ds-radius-2xl);
+    background: linear-gradient(135deg, var(--ds-color-olive-50), var(--ds-color-olive-100));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 4.5rem; border: 2px solid var(--ds-color-olive-200);
+    box-shadow: var(--ds-shadow-md);
+    position: relative; overflow: hidden;
+}
+.teacher-avatar::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, transparent 50%, var(--ds-accent-soft) 100%);
+    mix-blend-mode: overlay;
+}
+.teacher-intro p {
+    font-size: 1rem; line-height: 1.9;
+    color: var(--ds-color-fg);
+    margin-bottom: var(--ds-space-4); text-align: justify;
+}
+.about-philosophy {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--ds-space-5); margin-top: var(--ds-space-6);
+}
+.principle-card {
+    padding: var(--ds-space-7) var(--ds-space-6);
+    border: 1px solid var(--ds-color-border);
+    border-radius: var(--ds-radius-2xl);
+    background: var(--ds-color-surface);
+    transition: all var(--ds-duration-300) var(--ds-ease-out);
+    position: relative; overflow: hidden;
+}
+.principle-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--ds-accent), var(--ds-color-olive-300));
+    border-radius: 0 var(--ds-radius-2xl) 0 0;
+    opacity: 0;
+    transition: opacity var(--ds-duration-300) var(--ds-ease-out);
+}
+.principle-card:hover {
+    border-color: var(--ds-accent);
+    transform: translateY(-4px);
+    box-shadow: var(--ds-shadow-md);
+}
+.principle-card:hover::before { opacity: 1; }
+.principle-card .principle-icon { font-size: 2rem; margin-bottom: var(--ds-space-4); }
+.principle-card .principle-title {
+    font-family: var(--ds-font-display);
+    font-size: 1.125rem; font-weight: 700;
+    color: var(--ds-color-fg-strong);
+    margin-bottom: var(--ds-space-3); line-height: 1.35;
+}
+.principle-card .principle-desc {
+    font-size: 0.9375rem; line-height: 1.8;
+    color: var(--ds-color-fg);
+}
+.ds-quote--center {
+    max-width: 600px; margin-left: auto; margin-right: auto;
+    text-align: center; border-radius: var(--ds-radius-xl);
+}
+.ds-footer {
+    text-align: center;
+    padding: var(--ds-space-8) var(--ds-space-4);
+    color: var(--ds-color-muted); font-size: 0.875rem;
+    position: relative; z-index: 1;
+    border-top: 1px solid var(--ds-color-border);
+    margin-top: var(--ds-space-12);
+}
+
+/* ========== 键盘焦点可见性 ========== */
+:focus-visible {
+    outline: 2px solid var(--ds-accent);
+    outline-offset: 2px;
+    border-radius: var(--ds-radius-md);
+}
+.quiz-option:focus-visible, .ds-btn-nav:focus-visible,
+.fullscreen-btn:focus-visible, .ds-dot:focus-visible {
+    outline: 2px solid var(--ds-accent);
+    outline-offset: 3px;
+}
+
+/* ========== 触屏滑动提示 ========== */
+@media (max-width: 767px) {
+    .slide-viewport::after {
+        content: '← 左右滑动翻页 →';
+        position: absolute; bottom: var(--ds-space-6); left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.75rem; color: var(--ds-color-muted);
+        pointer-events: none; z-index: 10;
+        opacity: 0.6; letter-spacing: 0.05em; white-space: nowrap;
+    }
+    .progress-bar-bottom { height: 5px; }
+}
+
+/* ========== 超窄屏（≤374px）课程卡片 ========== */
+@media (max-width: 374px) {
+    .ds-card-grid { grid-template-columns: 1fr; gap: var(--ds-space-3); }
+    .ds-lesson-card { padding: var(--ds-space-5); }
+    .ds-hero h1 { font-size: 1.875rem; }
+}
+@media (max-width: 479px) {
+    .ds-hero h1 { font-size: 2rem; }
+}
+
+/* ========== 重做测验按钮 ========== */
+.retake-btn {
+    display: inline-flex; align-items: center; gap: var(--ds-space-2);
+    padding: var(--ds-space-2) var(--ds-space-5);
+    border: 1px solid var(--ds-accent);
+    border-radius: var(--ds-radius-lg);
+    background: transparent; color: var(--ds-accent);
+    font-family: var(--ds-font-body); font-size: 0.875rem;
+    font-weight: 600; cursor: pointer;
+    transition: all var(--ds-duration-200) var(--ds-ease-out);
+    margin-top: var(--ds-space-4);
+}
+.retake-btn:hover { background: var(--ds-accent); color: oklch(99% 0 0); }
+
+/* ========== 课程页底部导航 ========== */
+.course-nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: var(--ds-space-5) var(--ds-space-4);
+    border-top: 1px solid var(--ds-color-border);
+    margin-top: auto;
+}
+.course-nav .ds-btn-nav { min-width: 120px; justify-content: center; }
+
+/* ========== 打印样式 ========== */
+@media print {
+    .bg-layer, .ink-dot, .ds-navbar, .progress-bar-bottom,
+    .dots-row, .kbd-hint, .fullscreen-btn, .course-nav { display: none !important; }
+    body { background: white; overflow: visible; }
+    .slide-viewport { padding-top: 0; height: auto; }
+    .slide-container { box-shadow: none; border: none; border-radius: 0; width: 100%; height: auto; overflow: visible; }
+    .slide { position: relative; display: flex !important; opacity: 1 !important; animation: none; page-break-after: always; padding: 20px 0; }
+    .slide h2 { font-size: 1.25rem; }
+    .slide p, .slide li { font-size: 10pt; }
+    .cover-slide, .end-slide { background: white; min-height: 300px; }
+    .quiz-option { page-break-inside: avoid; }
+    .ds-quote { border-left-width: 2px; }
+}
+
+/* ========== 跳过导航链接 ========== */
+.skip-link {
+    position: absolute; top: -44px; left: var(--ds-space-4);
+    padding: var(--ds-space-2) var(--ds-space-4);
+    background: var(--ds-accent); color: oklch(99% 0 0);
+    font-size: 0.875rem; font-weight: 600;
+    border-radius: var(--ds-radius-lg); z-index: 9999;
+    text-decoration: none; transition: top var(--ds-duration-150);
+}
+.skip-link:focus { top: var(--ds-space-2); }
+
+/* ========== 首页/关于页容器（可滚动） ========== */
+.page-wrapper { position: relative; z-index: 1; }
+
+/* ========== 课程结束页 ========== */
+.end-slide .course-complete { text-align: center; }
+.end-slide .course-complete h2 { font-family: var(--ds-font-display); font-size: 2rem; color: var(--ds-color-fg-strong); margin-bottom: var(--ds-space-4); }
+
+/* ========== 首页/关于页专用样式 ========== */
+.ds-hero {
+    text-align: center;
+    padding: var(--ds-space-16) 0 var(--ds-space-12);
+}
+.ds-hero .hero-ornament {
+    width: 80px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--ds-accent), transparent);
+    margin: var(--ds-space-5) auto; border-radius: 1px;
+}
+.ds-hero h1 {
+    font-family: var(--ds-font-display);
+    font-size: 3.25rem; font-weight: 700;
+    color: var(--ds-color-fg-strong);
+    line-height: 1.1; letter-spacing: 0.04em;
+    margin-bottom: var(--ds-space-4);
+}
+.ds-hero .hero-subtitle {
+    font-size: 1rem; color: var(--ds-color-muted);
+    letter-spacing: 0.3em; margin-bottom: var(--ds-space-5);
+    font-weight: 500; text-transform: uppercase;
+}
+.ds-hero p.hero-desc {
+    max-width: 580px; margin: 0 auto;
+    font-size: 1.0625rem; line-height: 1.85;
+    color: var(--ds-color-fg); text-align: center;
+}
+.ds-section-title {
+    font-family: var(--ds-font-display);
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--ds-color-fg-strong);
+    margin-bottom: var(--ds-space-6);
+    display: flex; align-items: center; gap: var(--ds-space-3);
+    letter-spacing: 0.02em;
+}
+.ds-section-title::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(90deg, var(--ds-color-border), transparent);
+}
+.ds-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--ds-space-6);
+}
+.ds-lesson-card {
+    display: flex; flex-direction: column;
+    padding: var(--ds-space-7) var(--ds-space-6);
+    border: 1px solid var(--ds-color-border);
+    border-radius: var(--ds-radius-2xl);
+    background: var(--ds-color-surface);
+    transition: all var(--ds-duration-300) var(--ds-ease-out);
+    text-decoration: none; color: inherit;
+    position: relative; overflow: hidden;
+}
+.ds-lesson-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--ds-accent), var(--ds-color-olive-300));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform var(--ds-duration-300) var(--ds-ease-out);
+}
+.ds-lesson-card:hover {
+    border-color: var(--ds-accent);
+    transform: translateY(-5px);
+    box-shadow: var(--ds-shadow-lg);
+}
+.ds-lesson-card:hover::before { transform: scaleX(1); }
+.ds-lesson-card .lesson-icon {
+    width: 60px; height: 60px;
+    border-radius: var(--ds-radius-xl);
+    background: linear-gradient(135deg, var(--ds-color-olive-50), var(--ds-color-olive-100));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.875rem; margin-bottom: var(--ds-space-5);
+    box-shadow: var(--ds-shadow-sm);
+}
+.ds-lesson-card .lesson-grade {
+    display: inline-block;
+    padding: 3px 12px; border-radius: 100px;
+    font-size: 0.75rem; font-weight: 600;
+    background: var(--ds-accent-soft); color: var(--ds-color-olive-700);
+    margin-bottom: var(--ds-space-4); align-self: flex-start;
+    letter-spacing: 0.05em;
+}
+.ds-lesson-card .lesson-title {
+    font-family: var(--ds-font-display);
+    font-size: 1.375rem; font-weight: 700;
+    color: var(--ds-color-fg-strong);
+    margin-bottom: var(--ds-space-2); line-height: 1.3;
+}
+.ds-lesson-card .lesson-subtitle {
+    font-size: 0.875rem; color: var(--ds-color-muted);
+    letter-spacing: 0.12em; margin-bottom: var(--ds-space-4);
+}
+.ds-lesson-card .lesson-desc {
+    font-size: 0.9375rem; line-height: 1.7;
+    color: var(--ds-color-fg); flex: 1;
+    margin-bottom: var(--ds-space-5);
+}
+.ds-lesson-card .lesson-cta {
+    display: flex; align-items: center; gap: var(--ds-space-2);
+    color: var(--ds-accent); font-weight: 600; font-size: 0.9375rem;
+    margin-top: auto;
+}
+.ds-lesson-card:hover .lesson-cta { gap: var(--ds-space-3); }
+.ds-lesson-card .lesson-cta .arrow {
+    transition: transform var(--ds-duration-200) var(--ds-ease-out);
+}
+.ds-lesson-card:hover .lesson-cta .arrow { transform: translateX(4px); }
+.teacher-section {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--ds-space-10); align-items: center;
+    margin-bottom: var(--ds-space-16);
+}
+.teacher-avatar {
+    width: 100%; aspect-ratio: 1;
+    border-radius: var(--ds-radius-2xl);
+    background: linear-gradient(135deg, var(--ds-color-olive-50), var(--ds-color-olive-100));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 4.5rem; border: 2px solid var(--ds-color-olive-200);
+    box-shadow: var(--ds-shadow-md);
+    position: relative; overflow: hidden;
+}
+.teacher-avatar::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, transparent 50%, var(--ds-accent-soft) 100%);
+    mix-blend-mode: overlay;
+}
+.teacher-intro p {
+    font-size: 1rem; line-height: 1.9;
+    color: var(--ds-color-fg);
+    margin-bottom: var(--ds-space-4); text-align: justify;
+}
+.about-philosophy {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--ds-space-5); margin-top: var(--ds-space-6);
+}
+.principle-card {
+    padding: var(--ds-space-7) var(--ds-space-6);
+    border: 1px solid var(--ds-color-border);
+    border-radius: var(--ds-radius-2xl);
+    background: var(--ds-color-surface);
+    transition: all var(--ds-duration-300) var(--ds-ease-out);
+    position: relative; overflow: hidden;
+}
+.principle-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--ds-accent), var(--ds-color-olive-300));
+    border-radius: 0 var(--ds-radius-2xl) 0 0;
+    opacity: 0;
+    transition: opacity var(--ds-duration-300) var(--ds-ease-out);
+}
+.principle-card:hover {
+    border-color: var(--ds-accent);
+    transform: translateY(-4px);
+    box-shadow: var(--ds-shadow-md);
+}
+.principle-card:hover::before { opacity: 1; }
+.principle-card .principle-icon { font-size: 2rem; margin-bottom: var(--ds-space-4); }
+.principle-card .principle-title {
+    font-family: var(--ds-font-display);
+    font-size: 1.125rem; font-weight: 700;
+    color: var(--ds-color-fg-strong);
+    margin-bottom: var(--ds-space-3); line-height: 1.35;
+}
+.principle-card .principle-desc {
+    font-size: 0.9375rem; line-height: 1.8;
+    color: var(--ds-color-fg);
+}
+.ds-quote--center {
+    max-width: 600px; margin-left: auto; margin-right: auto;
+    text-align: center; border-radius: var(--ds-radius-xl);
+}
+.ds-footer {
+    text-align: center;
+    padding: var(--ds-space-8) var(--ds-space-4);
+    color: var(--ds-color-muted); font-size: 0.875rem;
+    position: relative; z-index: 1;
+    border-top: 1px solid var(--ds-color-border);
+    margin-top: var(--ds-space-12);
+}
+:focus-visible {
+    outline: 2px solid var(--ds-accent);
+    outline-offset: 2px;
+    border-radius: var(--ds-radius-md);
+}
+.quiz-option:focus-visible, .ds-btn-nav:focus-visible,
+.fullscreen-btn:focus-visible, .ds-dot:focus-visible {
+    outline: 2px solid var(--ds-accent); outline-offset: 3px;
+}
+@media (max-width: 767px) {
+    .slide-viewport::after {
+        content: '← 左右滑动翻页 →';
+        position: absolute; bottom: var(--ds-space-6); left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.75rem; color: var(--ds-color-muted);
+        pointer-events: none; z-index: 10;
+        opacity: 0.6; letter-spacing: 0.05em; white-space: nowrap;
+    }
+    .progress-bar-bottom { height: 5px; }
+}
+@media (max-width: 374px) {
+    .ds-card-grid { grid-template-columns: 1fr; gap: var(--ds-space-3); }
+    .ds-lesson-card { padding: var(--ds-space-5); }
+    .ds-hero h1 { font-size: 1.875rem; }
+}
+@media (max-width: 479px) {
+    .ds-hero h1 { font-size: 2rem; }
+}
+.retake-btn {
+    display: inline-flex; align-items: center; gap: var(--ds-space-2);
+    padding: var(--ds-space-2) var(--ds-space-5);
+    border: 1px solid var(--ds-accent);
+    border-radius: var(--ds-radius-lg);
+    background: transparent; color: var(--ds-accent);
+    font-family: var(--ds-font-body); font-size: 0.875rem;
+    font-weight: 600; cursor: pointer;
+    transition: all var(--ds-duration-200) var(--ds-ease-out);
+    margin-top: var(--ds-space-4);
+}
+.retake-btn:hover { background: var(--ds-accent); color: oklch(99% 0 0); }
+.course-nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: var(--ds-space-5) var(--ds-space-4);
+    border-top: 1px solid var(--ds-color-border);
+    margin-top: auto;
+}
+.course-nav .ds-btn-nav { min-width: 120px; justify-content: center; }
+@media print {
+    .bg-layer, .ink-dot, .ds-navbar, .progress-bar-bottom,
+    .dots-row, .kbd-hint, .fullscreen-btn, .course-nav { display: none !important; }
+    body { background: white; overflow: visible; }
+    .slide-viewport { padding-top: 0; height: auto; }
+    .slide-container { box-shadow: none; border: none; border-radius: 0; width: 100%; height: auto; overflow: visible; }
+    .slide { position: relative; display: flex !important; opacity: 1 !important; animation: none; page-break-after: always; padding: 20px 0; }
+    .slide h2 { font-size: 1.25rem; }
+    .slide p, .slide li { font-size: 10pt; }
+    .cover-slide, .end-slide { background: white; min-height: 300px; }
+    .quiz-option { page-break-inside: avoid; }
+    .ds-quote { border-left-width: 2px; }
+}
+.skip-link {
+    position: absolute; top: -44px; left: var(--ds-space-4);
+    padding: var(--ds-space-2) var(--ds-space-4);
+    background: var(--ds-accent); color: oklch(99% 0 0);
+    font-size: 0.875rem; font-weight: 600;
+    border-radius: var(--ds-radius-lg); z-index: 9999;
+    text-decoration: none; transition: top var(--ds-duration-150);
+}
+.skip-link:focus { top: var(--ds-space-2); }
+.page-wrapper { position: relative; z-index: 1; }
+.end-slide .course-complete { text-align: center; }
+.end-slide .course-complete h2 { font-family: var(--ds-font-display); font-size: 2rem; color: var(--ds-color-fg-strong); margin-bottom: var(--ds-space-4); }
