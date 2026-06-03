@@ -8,7 +8,7 @@
   <title>国学课堂 — 传承经典 · 启迪智慧</title>
   <link rel="stylesheet" href="assets/css/ds-design-system.css">
 </head>
-<body class="scroll-mode">
+<body>
 
   <!-- 背景装饰层 -->
   <div class="bg-layer" aria-hidden="true"></div>
@@ -18,7 +18,7 @@
 
   <!-- 顶部导航 -->
   <nav class="ds-navbar">
-    <a class="ds-btn-nav" href="index.html">📜 国学课堂</a>
+    <a class="site-title" href="index.html">📜 国学课堂</a>
     <div class="ds-nav-center"></div>
     <div class="ds-nav-right">
       <a class="ds-btn-nav" href="about.html">关于本站</a>
@@ -42,7 +42,7 @@
       </section>
 
       <!-- 课程目录 -->
-      <section>
+      <section style="margin-bottom: var(--ds-space-12);">
         <h2 class="ds-section-title">📚 课程目录</h2>
         <div id="lesson-cards" class="ds-card-grid"></div>
       </section>
@@ -51,7 +51,7 @@
   </main>
 
   <!-- 页脚 -->
-  <footer style="text-align:center; padding: var(--ds-space-8) var(--ds-space-4); color: var(--ds-color-muted); font-size: 0.875rem; position: relative; z-index: 1;">
+  <footer class="ds-footer">
     © 2026 国学课堂 · Powered by GitHub Pages
   </footer>
 
@@ -73,32 +73,26 @@
           card.style.opacity = '0.5';
         }
 
-        // 图标
         var iconDiv = document.createElement('div');
         iconDiv.className = 'lesson-icon';
         iconDiv.textContent = lesson.icon || '📚';
 
-        // 年级徽章
         var gradeBadge = document.createElement('span');
         gradeBadge.className = 'lesson-grade';
         gradeBadge.textContent = lesson.grade || '';
 
-        // 标题
         var title = document.createElement('h3');
         title.className = 'lesson-title';
         title.textContent = lesson.title || '';
 
-        // 副标题
         var subtitle = document.createElement('p');
         subtitle.className = 'lesson-subtitle';
         subtitle.textContent = lesson.subtitle || '';
 
-        // 描述
         var desc = document.createElement('p');
         desc.className = 'lesson-desc';
         desc.textContent = lesson.description || '';
 
-        // CTA 行
         var cta = document.createElement('div');
         cta.className = 'lesson-cta';
         var ctaText = document.createElement('span');
@@ -109,7 +103,6 @@
         cta.appendChild(ctaText);
         cta.appendChild(arrow);
 
-        // 即将上线覆盖层
         if (isComing) {
           var overlay = document.createElement('div');
           overlay.textContent = '即将上线';
