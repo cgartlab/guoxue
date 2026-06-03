@@ -72,6 +72,8 @@ body {
     color: var(--ds-color-fg);
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: contain;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -395,17 +397,32 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 767px) {
     .ds-navbar { padding: var(--ds-space-2) var(--ds-space-4); }
-    .ds-container { padding: 80px var(--ds-space-4) var(--ds-space-12); }
-    .ds-hero { padding: var(--ds-space-12) 0 var(--ds-space-10); }
-    .ds-hero h1 { font-size: 2.25rem; }
+    .ds-container { padding: 72px var(--ds-space-4) var(--ds-space-8); }
+    .ds-hero { padding: var(--ds-space-8) 0; }
+    .ds-hero h1 { font-size: 2.25rem; margin-bottom: var(--ds-space-2); }
     .ds-hero .hero-subtitle { font-size: 0.875rem; letter-spacing: 0.2em; }
     .ds-hero p.hero-desc { font-size: 0.9375rem; }
     .ds-card-grid { grid-template-columns: 1fr; gap: var(--ds-space-4); }
+    .ds-lesson-card { padding: var(--ds-space-5) var(--ds-space-4); }
     .ds-section-title { font-size: 1.25rem; }
-    .teacher-section { grid-template-columns: 1fr; gap: var(--ds-space-6); text-align: center; }
-    .teacher-avatar { max-width: 160px; margin: 0 auto; }
+    .teacher-section { grid-template-columns: 1fr; gap: var(--ds-space-5); text-align: center; }
+    .teacher-avatar { max-width: 140px; margin: 0 auto; }
     .teacher-intro p { text-align: left; }
-    .about-philosophy { grid-template-columns: 1fr; }
+    .about-philosophy { grid-template-columns: 1fr; gap: var(--ds-space-3); }
+    .ds-footer { padding: var(--ds-space-5) var(--ds-space-4); }
+    /* ===== 封面页响应式 (#17) ===== */
+    .cover-slide { padding: var(--ds-space-6); }
+    .cover-slide h2 { font-size: 1.5rem !important; }
+    .cover-slide .cover-subtitle { font-size: 0.875rem; letter-spacing: 0.15em; }
+    .cover-slide .cover-desc { font-size: 0.875rem; line-height: 1.7; margin-top: var(--ds-space-5); }
+    .cover-slide .cover-seal { width: 56px; height: 56px; font-size: 1rem; margin-top: var(--ds-space-6); }
+    /* ===== 结束页响应式 (#17) ===== */
+    .end-quote { font-size: 1.25rem; }
+    /* ===== 触控目标尺寸 (#19 WCAG 2.5.5) ===== */
+    .ds-btn-nav { min-height: 44px; }
+    .ds-dot { min-width: 12px; min-height: 12px; }
+    .ds-dot.active { min-width: 24px; }
+    .fullscreen-btn { width: 44px; height: 44px; }
 }
 
 /* ========== 打印 ========== */
@@ -421,6 +438,37 @@ a { color: inherit; text-decoration: none; }
     .ink-dot { animation: none; }
     .ds-lesson-card, .principle-card { transition: none; }
     .ds-lesson-card:hover, .principle-card:hover { transform: none; }
+    .bg-layer { display: none; }
+}
+
+/* ========== 深色模式 (#22) ======== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --ds-color-bg: oklch(15% 0.02 80);
+        --ds-color-surface: oklch(22% 0.02 80);
+        --ds-color-surface-raised: oklch(26% 0.02 80);
+        --ds-color-border: oklch(35% 0.02 80);
+        --ds-color-muted: oklch(60% 0.015 60);
+        --ds-color-fg: oklch(85% 0.01 60);
+        --ds-color-fg-strong: oklch(93% 0.01 60);
+        --ds-accent: oklch(70% 0.1 115);
+        --ds-accent-hover: oklch(60% 0.11 115);
+        --ds-accent-soft: oklch(30% 0.04 115);
+        --ds-color-olive-50: oklch(97% 0.02 115);
+        --ds-color-olive-100: oklch(93% 0.035 115);
+        --ds-color-olive-200: oklch(85% 0.055 115);
+        --ds-color-success: oklch(70% 0.1 145);
+        --ds-color-success-bg: oklch(25% 0.03 145);
+        --ds-color-error: oklch(65% 0.14 30);
+        --ds-color-error-bg: oklch(25% 0.03 30);
+        --ds-color-warning: oklch(75% 0.1 85);
+    }
+    .cover-slide, .end-slide {
+        background: linear-gradient(135deg, oklch(15% 0.02 80) 0%, oklch(22% 0.02 80) 100%);
+    }
+    .quiz-option:hover:not(.disabled) { border-color: var(--ds-accent); box-shadow: var(--ds-shadow-sm); transform: translateX(4px); }
+    .quiz-option:hover:not(.disabled) .opt-label { background: var(--ds-accent); color: oklch(15% 0 0); }
+    .retake-btn:hover { background: var(--ds-accent); color: oklch(15% 0 0); }
 }
 
 
@@ -677,14 +725,25 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 767px) {
-    .slide { padding: var(--ds-space-5) var(--ds-space-5); }
+    .slide { padding: var(--ds-space-5) var(--ds-space-5); -webkit-overflow-scrolling: touch; }
     .slide h2 { font-size: 1.375rem; }
-    .slide h3 { font-size: 1rem; }
-    .slide p { font-size: 0.9375rem; }
-    .slide li { font-size: 0.9375rem; }
+    .slide h3 { font-size: 1rem; padding-left: var(--ds-space-2); }
+    .slide p { font-size: 0.9375rem; line-height: 1.7; }
+    .slide li { font-size: 0.9375rem; margin-bottom: var(--ds-space-2); }
     .summary-grid { grid-template-columns: 1fr; }
+    .summary-card { padding: var(--ds-space-4); }
     .kbd-hint { display: none; }
     .slide-image--portrait { float: none; max-width: 100%; margin-left: 0; }
+    /* ===== 排版优化 (#18) ===== */
+    .ds-caption { padding: var(--ds-space-2) var(--ds-space-3); overflow-wrap: break-word; }
+    .ds-type-label { overflow-wrap: break-word; word-break: break-all; }
+    /* ===== 测验响应式 (#21 #24) ===== */
+    .quiz-explain { font-size: 0.8125rem; max-height: 150px; overflow-y: auto; }
+    .quiz-option:hover:not(.disabled) { border-color: var(--ds-color-border); box-shadow: none; transform: none; }
+    .quiz-option:hover:not(.disabled) .opt-label { background: var(--ds-color-olive-50); color: var(--ds-color-olive-600); }
+    .retake-btn { position: sticky; bottom: var(--ds-space-4); }
+    /* ===== 理念卡片图标 (#23) ===== */
+    .principle-card .principle-icon { font-size: 1.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
