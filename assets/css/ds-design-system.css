@@ -468,9 +468,70 @@ a { color: inherit; text-decoration: none; }
     .bg-layer { display: none; }
 }
 
-/* ========== 深色模式 (#22) ======== */
+/* ========== 深色模式 (#22) - 手动切换 ======== */
+:root.dark {
+    --ds-color-bg: oklch(15% 0.02 80);
+    --ds-color-surface: oklch(22% 0.02 80);
+    --ds-color-surface-raised: oklch(26% 0.02 80);
+    --ds-color-border: oklch(35% 0.02 80);
+    --ds-color-muted: oklch(60% 0.015 60);
+    --ds-color-fg: oklch(85% 0.01 60);
+    --ds-color-fg-strong: oklch(93% 0.01 60);
+    --ds-accent: oklch(70% 0.1 115);
+    --ds-accent-hover: oklch(60% 0.11 115);
+    --ds-accent-soft: oklch(30% 0.04 115);
+    --ds-color-olive-50: oklch(97% 0.02 115);
+    --ds-color-olive-100: oklch(93% 0.035 115);
+    --ds-color-olive-200: oklch(85% 0.055 115);
+    --ds-color-success: oklch(70% 0.1 145);
+    --ds-color-success-bg: oklch(25% 0.03 145);
+    --ds-color-error: oklch(65% 0.14 30);
+    --ds-color-error-bg: oklch(25% 0.03 30);
+    --ds-color-warning: oklch(75% 0.1 85);
+}
+:root.dark .cover-slide, :root.dark .end-slide {
+    background: linear-gradient(135deg, oklch(15% 0.02 80) 0%, oklch(22% 0.02 80) 100%);
+}
+:root.dark .quiz-option:hover:not(.disabled) { border-color: var(--ds-accent); box-shadow: var(--ds-shadow-sm); transform: translateX(4px); }
+:root.dark .quiz-option:hover:not(.disabled) .opt-label { background: var(--ds-accent); color: oklch(15% 0 0); }
+:root.dark .retake-btn:hover { background: var(--ds-accent); color: oklch(15% 0 0); }
+
+/* 主题切换按钮 */
+.theme-toggle {
+    position: fixed;
+    top: var(--ds-space-4);
+    right: calc(var(--ds-space-4) + 52px);
+    z-index: 1001;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--ds-color-surface);
+    border: 1px solid var(--ds-color-border);
+    cursor: pointer;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--ds-duration-200) var(--ds-ease-out);
+    box-shadow: var(--ds-shadow-sm);
+}
+.theme-toggle:hover {
+    border-color: var(--ds-accent);
+    transform: scale(1.05);
+}
+@media (max-width: 767px) {
+    .theme-toggle {
+        top: var(--ds-space-3);
+        right: calc(var(--ds-space-3) + 48px);
+        width: 40px;
+        height: 40px;
+        font-size: 1.125rem;
+    }
+}
+
+/* 保留系统偏好检测作为回退 */
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not(.light) {
         --ds-color-bg: oklch(15% 0.02 80);
         --ds-color-surface: oklch(22% 0.02 80);
         --ds-color-surface-raised: oklch(26% 0.02 80);

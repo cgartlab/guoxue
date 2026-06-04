@@ -361,6 +361,36 @@
         }, 100);
     }
 
+    /* ===== 主题切换功能 (#22) ===== */
+    function initThemeToggle() {
+        var btn = document.createElement('button');
+        btn.className = 'theme-toggle';
+        btn.setAttribute('aria-label', '切换深色/浅色模式');
+        btn.innerHTML = '🌙';
+        
+        // 恢复保存的主题
+        var savedTheme = localStorage.getItem('guoxue_theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+            btn.innerHTML = '☀️';
+        } else if (savedTheme === 'light') {
+            document.documentElement.classList.add('light');
+            btn.innerHTML = '🌙';
+        }
+        
+        btn.addEventListener('click', function() {
+            var isDark = document.documentElement.classList.toggle('dark');
+            document.documentElement.classList.remove('light');
+            localStorage.setItem('guoxue_theme', isDark ? 'dark' : 'light');
+            btn.innerHTML = isDark ? '☀️' : '🌙';
+        });
+        
+        document.body.appendChild(btn);
+    }
+    
+    // 延迟初始化主题切换按钮，确保 DOM 就绪
+    setTimeout(initThemeToggle, 0);
+
     /* ===== 初始化 ===== */
     if (!pendingRestore) updateUI();
     else {
