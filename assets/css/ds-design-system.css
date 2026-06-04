@@ -147,6 +147,7 @@ a { color: inherit; text-decoration: none; }
     font-family: var(--ds-font-body); font-size: 0.875rem;
     cursor: pointer; transition: all var(--ds-duration-200) var(--ds-ease-out);
     letter-spacing: 0.03em;
+    white-space: nowrap;
 }
 .ds-tab:hover { color: var(--ds-color-fg); background: var(--ds-color-olive-50); }
 .ds-tab.active { background: var(--ds-accent); color: oklch(99% 0 0); font-weight: 600; }
@@ -420,6 +421,8 @@ a { color: inherit; text-decoration: none; }
     .end-quote { font-size: 1.25rem; }
     /* ===== 触控目标尺寸 (#19 WCAG 2.5.5) ===== */
     .ds-btn-nav { min-height: 44px; }
+    .ds-tab { min-height: 44px; }
+    .retake-btn { min-height: 44px; }
     .ds-dot {
         min-width: 24px; min-height: 12px;
         border-radius: 6px;
@@ -453,7 +456,7 @@ a { color: inherit; text-decoration: none; }
     .principle-card:hover { transform: none; border-color: var(--ds-color-border); }
     .principle-card:hover::before { opacity: 0; }
     .summary-card:hover { transform: none; border-color: var(--ds-color-border); }
-    .fullscreen-btn:hover { background: var(--ds-color-surface); color: var(--ds-color-muted); border-color: var(--ds-color-border); transform: none; }
+    .fullscreen-btn:hover { background: var(--ds-color-surface); color: var(--ds-color-fg); border-color: var(--ds-color-border); transform: none; }
     .retake-btn:hover { background: transparent; color: var(--ds-accent); }
 }
 
@@ -468,7 +471,7 @@ a { color: inherit; text-decoration: none; }
 /* ========== 动画偏好 ========== */
 @media (prefers-reduced-motion: reduce) {
     .ink-dot { animation: none; }
-    .ds-lesson-card, .principle-card, .summary-card, .quiz-option { transition: none; }
+    .ds-lesson-card, .principle-card, .summary-card, .quiz-option, .fullscreen-btn, .retake-btn { transition: none; }
     .ds-lesson-card:hover, .principle-card:hover { transform: none; }
     .bg-layer { display: none; }
     @keyframes shake { 0%, 100% { transform: none; } }
@@ -744,11 +747,11 @@ a { color: inherit; text-decoration: none; }
 .fullscreen-btn {
     width: 36px; height: 36px; border: 1px solid var(--ds-color-border);
     border-radius: var(--ds-radius-lg); background: var(--ds-color-surface);
-    color: var(--ds-color-muted); cursor: pointer;
+    color: var(--ds-color-fg); cursor: pointer;
     display: flex; align-items: center; justify-content: center;
     transition: all var(--ds-duration-200) var(--ds-ease-out); box-shadow: var(--ds-shadow-sm); flex-shrink: 0;
 }
-.fullscreen-btn:hover { background: var(--ds-color-surface-raised); color: var(--ds-accent); border-color: var(--ds-accent); transform: scale(1.05); }
+.fullscreen-btn:hover { background: var(--ds-color-surface-raised); color: var(--ds-accent); border-color: var(--ds-accent); }
 .fullscreen-btn:active { transform: scale(0.98); }
 .fullscreen-btn svg { width: 18px; height: 18px; }
 
@@ -851,7 +854,7 @@ a { color: inherit; text-decoration: none; }
 
 @media (prefers-reduced-motion: reduce) {
     .slide.active { animation: none; }
-    .quiz-option, .summary-card { transition: none; }
+    .quiz-option, .summary-card, .fullscreen-btn, .retake-btn { transition: none; }
     @keyframes shake { 0%, 100% { transform: none; } }
     @keyframes fadeUp { from { opacity: 1; transform: none; } }
 }
