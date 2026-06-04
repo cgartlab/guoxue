@@ -36,6 +36,17 @@ window.GUOXUE_LESSONS = [
         grade: '小学高年级 / 初中',
         description: '在标准版基础上拓展内容深度,适合学有余力的学生深入研读。',
         status: 'ready'
+    },
+    {
+        id: '02-sanzijing',
+        title: '《三字经》国学启蒙',
+        subtitle: '人之初 · 性本善',
+        path: 'lessons/02-sanzijing/index.html',
+        icon: '📜',
+        grade: '小学低中年级',
+        description: '走进"三百千"之首,从开篇哲学到教育之道,从孝悌故事到历史长河,在朗朗书声中收获成长。',
+        status: 'ready',
+        duration: '约 15 分钟'
     }
     // ----- 在此下方添加新课程 -----
     // {
