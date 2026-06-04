@@ -397,19 +397,19 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 767px) {
     .ds-navbar { padding: var(--ds-space-2) var(--ds-space-4); }
-    .ds-container { padding: 72px var(--ds-space-4) var(--ds-space-8); }
-    .ds-hero { padding: var(--ds-space-8) 0; }
-    .ds-hero h1 { font-size: 2.25rem; margin-bottom: var(--ds-space-2); }
-    .ds-hero .hero-subtitle { font-size: 0.875rem; letter-spacing: 0.2em; }
-    .ds-hero p.hero-desc { font-size: 0.9375rem; }
-    .ds-card-grid { grid-template-columns: 1fr; gap: var(--ds-space-4); }
-    .ds-lesson-card { padding: var(--ds-space-5) var(--ds-space-4); }
-    .ds-section-title { font-size: 1.25rem; }
-    .teacher-section { grid-template-columns: 1fr; gap: var(--ds-space-5); text-align: center; }
-    .teacher-avatar { max-width: 140px; margin: 0 auto; }
-    .teacher-intro p { text-align: left; }
-    .about-philosophy { grid-template-columns: 1fr; gap: var(--ds-space-3); }
-    .ds-footer { padding: var(--ds-space-5) var(--ds-space-4); }
+    .ds-container { padding: 56px var(--ds-space-4) var(--ds-space-6); }
+    .ds-hero { padding: var(--ds-space-5) 0; }
+    .ds-hero h1 { font-size: 1.75rem; margin-bottom: var(--ds-space-1); }
+    .ds-hero .hero-subtitle { font-size: 0.8125rem; letter-spacing: 0.15em; }
+    .ds-hero p.hero-desc { font-size: 0.875rem; line-height: 1.7; }
+    .ds-card-grid { grid-template-columns: 1fr; gap: var(--ds-space-3); }
+    .ds-lesson-card { padding: var(--ds-space-4) var(--ds-space-3); }
+    .ds-section-title { font-size: 1.125rem; margin-bottom: var(--ds-space-4); }
+    .teacher-section { grid-template-columns: 1fr; gap: var(--ds-space-3); text-align: center; }
+    .teacher-avatar { max-width: 100px; margin: 0 auto; }
+    .teacher-intro p { text-align: left; font-size: 0.9375rem; line-height: 1.7; }
+    .about-philosophy { grid-template-columns: 1fr; gap: var(--ds-space-2); }
+    .ds-footer { padding: var(--ds-space-3) var(--ds-space-4); font-size: 0.8125rem; }
     /* ===== 封面页响应式 (#17) ===== */
     .cover-slide { padding: var(--ds-space-6); }
     .cover-slide h2 { font-size: 1.5rem !important; }
@@ -420,9 +420,41 @@ a { color: inherit; text-decoration: none; }
     .end-quote { font-size: 1.25rem; }
     /* ===== 触控目标尺寸 (#19 WCAG 2.5.5) ===== */
     .ds-btn-nav { min-height: 44px; }
-    .ds-dot { min-width: 12px; min-height: 12px; }
-    .ds-dot.active { min-width: 24px; }
+    .ds-dot {
+        min-width: 24px; min-height: 12px;
+        border-radius: 6px;
+        background: transparent;
+        border: 2px solid var(--ds-color-border);
+        position: relative;
+    }
+    .ds-dot::before {
+        content: '';
+        display: block;
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background: var(--ds-color-border);
+        margin: 1px auto;
+    }
+    .ds-dot.active {
+        min-width: 32px;
+        border-color: var(--ds-accent);
+    }
+    .ds-dot.active::before {
+        background: var(--ds-accent);
+        width: 12px; height: 12px;
+        margin: 1px auto;
+    }
     .fullscreen-btn { width: 44px; height: 44px; }
+    /* ===== 移动端禁用 hover 效果 (#22) ===== */
+    .ds-lesson-card:hover { transform: none; border-color: var(--ds-color-border); }
+    .ds-lesson-card:hover::before { transform: scaleX(0); }
+    .ds-lesson-card:hover .lesson-cta { gap: var(--ds-space-2); }
+    .ds-lesson-card:hover .lesson-cta .arrow { transform: none; }
+    .principle-card:hover { transform: none; border-color: var(--ds-color-border); }
+    .principle-card:hover::before { opacity: 0; }
+    .summary-card:hover { transform: none; border-color: var(--ds-color-border); }
+    .fullscreen-btn:hover { background: var(--ds-color-surface); color: var(--ds-color-muted); border-color: var(--ds-color-border); transform: none; }
+    .retake-btn:hover { background: transparent; color: var(--ds-accent); }
 }
 
 /* ========== 打印 ========== */
@@ -436,9 +468,11 @@ a { color: inherit; text-decoration: none; }
 /* ========== 动画偏好 ========== */
 @media (prefers-reduced-motion: reduce) {
     .ink-dot { animation: none; }
-    .ds-lesson-card, .principle-card { transition: none; }
+    .ds-lesson-card, .principle-card, .summary-card, .quiz-option { transition: none; }
     .ds-lesson-card:hover, .principle-card:hover { transform: none; }
     .bg-layer { display: none; }
+    @keyframes shake { 0%, 100% { transform: none; } }
+    @keyframes fadeUp { from { opacity: 1; transform: none; } }
 }
 
 /* ========== 深色模式 (#22) ======== */
@@ -454,14 +488,22 @@ a { color: inherit; text-decoration: none; }
         --ds-accent: oklch(70% 0.1 115);
         --ds-accent-hover: oklch(60% 0.11 115);
         --ds-accent-soft: oklch(30% 0.04 115);
-        --ds-color-olive-50: oklch(97% 0.02 115);
-        --ds-color-olive-100: oklch(93% 0.035 115);
-        --ds-color-olive-200: oklch(85% 0.055 115);
+        --ds-color-olive-50: oklch(20% 0.02 115);
+        --ds-color-olive-100: oklch(25% 0.03 115);
+        --ds-color-olive-200: oklch(32% 0.04 115);
+        --ds-color-olive-300: oklch(40% 0.05 115);
+        --ds-color-olive-600: oklch(55% 0.06 115);
+        --ds-color-olive-700: oklch(65% 0.05 115);
+        --ds-color-olive-800: oklch(75% 0.04 115);
+        --ds-color-olive-900: oklch(85% 0.03 115);
         --ds-color-success: oklch(70% 0.1 145);
         --ds-color-success-bg: oklch(25% 0.03 145);
         --ds-color-error: oklch(65% 0.14 30);
         --ds-color-error-bg: oklch(25% 0.03 30);
         --ds-color-warning: oklch(75% 0.1 85);
+        --ds-color-warning-bg: oklch(25% 0.03 85);
+        --ds-color-info: oklch(65% 0.12 240);
+        --ds-color-info-bg: oklch(25% 0.03 240);
     }
     .cover-slide, .end-slide {
         background: linear-gradient(135deg, oklch(15% 0.02 80) 0%, oklch(22% 0.02 80) 100%);
@@ -469,6 +511,9 @@ a { color: inherit; text-decoration: none; }
     .quiz-option:hover:not(.disabled) { border-color: var(--ds-accent); box-shadow: var(--ds-shadow-sm); transform: translateX(4px); }
     .quiz-option:hover:not(.disabled) .opt-label { background: var(--ds-accent); color: oklch(15% 0 0); }
     .retake-btn:hover { background: var(--ds-accent); color: oklch(15% 0 0); }
+    .ds-lesson-card, .principle-card, .summary-card, .ds-caption {
+        border-color: var(--ds-color-border);
+    }
 }
 
 
@@ -490,12 +535,15 @@ a { color: inherit; text-decoration: none; }
     background: var(--ds-color-surface);
     border: 1px solid var(--ds-color-border);
     box-shadow: var(--ds-shadow-lg);
+    overscroll-behavior-y: contain; /* #21: iOS 滚动保护 */
 }
 
 /* ========== 幻灯片 ========== */
 .slide {
     position: absolute; inset: 0; padding: var(--ds-space-12) var(--ds-space-16);
     overflow-y: auto; display: none; opacity: 0;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: contain; /* #21: iOS 滚动保护 */
 }
 .slide.active {
     display: flex; flex-direction: column;
@@ -725,25 +773,80 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 767px) {
-    .slide { padding: var(--ds-space-5) var(--ds-space-5); -webkit-overflow-scrolling: touch; }
-    .slide h2 { font-size: 1.375rem; }
-    .slide h3 { font-size: 1rem; padding-left: var(--ds-space-2); }
-    .slide p { font-size: 0.9375rem; line-height: 1.7; }
-    .slide li { font-size: 0.9375rem; margin-bottom: var(--ds-space-2); }
+    .slide { padding: var(--ds-space-5) var(--ds-space-4); -webkit-overflow-scrolling: touch; }
+    .slide h2 { font-size: 1.25rem; }
+    .slide h3 { font-size: 0.9375rem; padding-left: var(--ds-space-2); margin: var(--ds-space-5) 0 var(--ds-space-3); }
+    .slide p { font-size: 0.9375rem; line-height: 1.65; margin-bottom: var(--ds-space-3); }
+    .slide li { font-size: 0.875rem; margin-bottom: 4px; }
     .summary-grid { grid-template-columns: 1fr; }
-    .summary-card { padding: var(--ds-space-4); }
+    .summary-card { padding: var(--ds-space-3); }
     .kbd-hint { display: none; }
     .slide-image--portrait { float: none; max-width: 100%; margin-left: 0; }
     /* ===== 排版优化 (#18) ===== */
-    .ds-caption { padding: var(--ds-space-2) var(--ds-space-3); overflow-wrap: break-word; }
+    .ds-caption { font-size: 0.8125rem; padding: var(--ds-space-1) var(--ds-space-2); overflow-wrap: break-word; line-height: 1.5; }
     .ds-type-label { overflow-wrap: break-word; word-break: break-all; }
+    .ds-quote { padding: var(--ds-space-2) var(--ds-space-3); font-size: 0.9375rem; line-height: 1.6; }
     /* ===== 测验响应式 (#21 #24) ===== */
-    .quiz-explain { font-size: 0.8125rem; max-height: 150px; overflow-y: auto; }
+    .quiz-explain { font-size: 0.8125rem; max-height: 120px; overflow-y: auto; }
     .quiz-option:hover:not(.disabled) { border-color: var(--ds-color-border); box-shadow: none; transform: none; }
     .quiz-option:hover:not(.disabled) .opt-label { background: var(--ds-color-olive-50); color: var(--ds-color-olive-600); }
+    .quiz-option { padding: var(--ds-space-3) var(--ds-space-4); }
     .retake-btn { position: sticky; bottom: var(--ds-space-4); }
     /* ===== 理念卡片图标 (#23) ===== */
-    .principle-card .principle-icon { font-size: 1.5rem; }
+    .principle-card .principle-icon { font-size: 1.25rem; }
+    .principle-card .principle-title { font-size: 1rem; }
+    .principle-card .principle-desc { font-size: 0.875rem; line-height: 1.6; }
+}
+
+/* ===== 超小屏图片与测验适配 (#21 #24) ===== */
+@media (max-width: 480px) {
+    .slide-image--portrait {
+        max-width: 100%;
+        float: none;
+        margin-left: 0;
+        margin-bottom: var(--ds-space-3);
+        max-height: 200px;
+        object-fit: cover;
+    }
+    .slide-image--small {
+        max-width: 100%;
+        float: none;
+        margin: var(--ds-space-3) auto;
+    }
+    /* 得分页移动端紧凑布局 */
+    #quiz-score h2 {
+        font-size: 1.25rem;
+    }
+    #score-display {
+        font-size: 3rem !important;
+    }
+    #score-message {
+        font-size: 1rem;
+    }
+    #quiz-score > div:last-child {
+        width: 100%;
+    }
+    #quiz-score > div:last-child > p {
+        margin-bottom: 4px;
+        font-size: 0.8125rem;
+    }
+    .retake-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 8px 16px;
+        font-size: 0.8125rem;
+    }
+    .quiz-explain {
+        margin-top: var(--ds-space-3);
+        flex-shrink: 0;
+    }
+    .quiz-explain::-webkit-scrollbar {
+        width: 3px;
+    }
+    .quiz-explain::-webkit-scrollbar-thumb {
+        background: var(--ds-color-border);
+        border-radius: 2px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -959,15 +1062,14 @@ a { color: inherit; text-decoration: none; }
     }
     .progress-bar-bottom { height: 5px; }
 }
-
 /* ========== 超窄屏（≤374px）课程卡片 ========== */
 @media (max-width: 374px) {
-    .ds-card-grid { grid-template-columns: 1fr; gap: var(--ds-space-3); }
-    .ds-lesson-card { padding: var(--ds-space-5); }
-    .ds-hero h1 { font-size: 1.875rem; }
+    .ds-card-grid { grid-template-columns: 1fr; gap: var(--ds-space-2); }
+    .ds-lesson-card { padding: var(--ds-space-3); }
+    .ds-hero h1 { font-size: 1.5rem; }
 }
 @media (max-width: 479px) {
-    .ds-hero h1 { font-size: 2rem; }
+    .ds-hero h1 { font-size: 1.75rem; }
 }
 
 /* ========== 重做测验按钮 ========== */
@@ -1229,12 +1331,12 @@ a { color: inherit; text-decoration: none; }
     .progress-bar-bottom { height: 5px; }
 }
 @media (max-width: 374px) {
-    .ds-card-grid { grid-template-columns: 1fr; gap: var(--ds-space-3); }
-    .ds-lesson-card { padding: var(--ds-space-5); }
-    .ds-hero h1 { font-size: 1.875rem; }
+    .ds-card-grid { grid-template-columns: 1fr; gap: var(--ds-space-2); }
+    .ds-lesson-card { padding: var(--ds-space-3); }
+    .ds-hero h1 { font-size: 1.5rem; }
 }
 @media (max-width: 479px) {
-    .ds-hero h1 { font-size: 2rem; }
+    .ds-hero h1 { font-size: 1.75rem; }
 }
 .retake-btn {
     display: inline-flex; align-items: center; gap: var(--ds-space-2);
