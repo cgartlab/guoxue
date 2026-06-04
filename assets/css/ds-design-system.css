@@ -1305,3 +1305,174 @@ a { color: inherit; text-decoration: none; }
 .page-wrapper { position: relative; z-index: 1; }
 .end-slide .course-complete { text-align: center; }
 .end-slide .course-complete h2 { font-family: var(--ds-font-display); font-size: 2rem; color: var(--ds-color-fg-strong); margin-bottom: var(--ds-space-4); }
+
+/* ============================================================
+ * v2.0 顶栏菜单 + 门类分组 + "敬请期待"占位
+ * ============================================================ */
+
+/* ----- 顶栏菜单(桌面平铺) ----- */
+.ds-navbar__menu {
+  display: flex;
+  gap: var(--ds-space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ds-navbar__menu-item {
+  display: inline-block;
+  padding: var(--ds-space-2) var(--ds-space-4);
+  font-family: var(--ds-font-body);
+  font-size: 0.875rem;
+  color: var(--ds-color-fg);
+  text-decoration: none;
+  border-radius: var(--ds-radius-lg);
+  transition: all var(--ds-duration-150) var(--ds-ease-out);
+  letter-spacing: 0.04em;
+}
+.ds-navbar__menu-item:hover,
+.ds-navbar__menu-item:focus {
+  color: var(--ds-color-fg-strong);
+  background: var(--ds-color-olive-50);
+  outline: none;
+}
+.ds-navbar__menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-lg);
+  padding: var(--ds-space-2) var(--ds-space-3);
+  font-size: 1.125rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ds-color-fg-strong);
+  transition: all var(--ds-duration-150) var(--ds-ease-out);
+}
+.ds-navbar__menu-toggle:hover {
+  background: var(--ds-color-olive-50);
+}
+
+/* ----- 门类分组状态(coming 灰显) ----- */
+.home-sidebar__group {
+  margin-bottom: var(--ds-space-2);
+}
+.home-sidebar__group--coming .home-sidebar__category {
+  color: var(--ds-color-muted);
+  opacity: 0.65;
+}
+.home-sidebar__group--coming .home-sidebar__link {
+  color: var(--ds-color-muted);
+  opacity: 0.7;
+}
+.home-sidebar__group--coming .home-sidebar__link:hover {
+  opacity: 1;
+}
+.home-sidebar__badge--coming {
+  display: inline-block;
+  font-size: 0.625rem;
+  margin-left: var(--ds-space-2);
+  padding: 2px 6px;
+  background: var(--ds-color-olive-50);
+  color: var(--ds-color-muted);
+  border-radius: var(--ds-radius-sm);
+  letter-spacing: 0.08em;
+  vertical-align: middle;
+  font-weight: 500;
+}
+.home-sidebar__link--sub {
+  padding-left: var(--ds-space-5);
+  font-size: 0.8125rem;
+}
+.home-sidebar__link--planned {
+  font-style: italic;
+}
+
+/* ----- 筛选标题栏 ----- */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-space-3);
+  margin-bottom: var(--ds-space-4);
+  padding-bottom: var(--ds-space-3);
+  border-bottom: 1px solid var(--ds-color-border);
+}
+
+/* ----- "敬请期待"占位 ----- */
+.ds-coming-soon {
+  padding: var(--ds-space-8) var(--ds-space-6);
+  text-align: center;
+  background: var(--ds-color-surface-raised);
+  border: 1px dashed var(--ds-color-border);
+  border-radius: var(--ds-radius-2xl);
+  color: var(--ds-color-muted);
+}
+.ds-coming-soon__icon {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: var(--ds-space-3);
+  opacity: 0.55;
+}
+.ds-coming-soon__heading {
+  font-family: var(--ds-font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ds-color-fg-strong);
+  margin: 0 0 var(--ds-space-2) 0;
+  letter-spacing: 0.05em;
+}
+.ds-coming-soon__desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin: 0 auto var(--ds-space-5) auto;
+  max-width: 32rem;
+}
+.ds-coming-soon__planned {
+  margin-top: var(--ds-space-6);
+  text-align: left;
+}
+.ds-coming-soon__planned h4 {
+  font-family: var(--ds-font-display);
+  font-size: 0.875rem;
+  color: var(--ds-color-fg-strong);
+  letter-spacing: 0.05em;
+  margin: 0 0 var(--ds-space-3) 0;
+}
+
+/* ----- 移动端:菜单折叠为汉堡 ----- */
+@media (max-width: 767px) {
+  .ds-navbar__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: var(--ds-space-1);
+    background: var(--ds-color-surface-raised);
+    border-bottom: 1px solid var(--ds-color-border);
+    padding: var(--ds-space-3);
+    box-shadow: var(--ds-shadow-md);
+    z-index: 50;
+  }
+  .ds-navbar__menu.is-open {
+    display: flex;
+  }
+  .ds-navbar__menu-item {
+    display: block;
+    padding: var(--ds-space-3) var(--ds-space-4);
+  }
+  .ds-navbar__menu-toggle {
+    display: inline-flex;
+  }
+}
+
+/* ----- 暗色模式微调 ----- */
+html.dark .ds-coming-soon {
+  background: var(--ds-color-surface-raised);
+  border-color: var(--ds-color-border);
+}
+html.dark .ds-navbar__menu {
+  background: var(--ds-color-surface-raised);
+}
