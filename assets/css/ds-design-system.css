@@ -390,6 +390,290 @@ a { color: inherit; text-decoration: none; }
     margin-top: var(--ds-space-12);
 }
 
+/* =============================================================
+ * 首页三栏布局（adapté from runoob.com structural pattern）
+ * runoob uses: left sidebar nav | main content area | right info panel
+ * We use the same GRID STRUCTURE with our OKLCH palette and serif fonts
+ * ============================================================= */
+
+/* ----- 三栏主网格 ----- */
+.home-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 280px;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header header"
+    "sidebar main right-panel";
+  gap: var(--ds-space-6);
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-top: calc(60px + var(--ds-space-6));
+  padding-left: var(--ds-space-6);
+  padding-right: var(--ds-space-6);
+}
+
+/* ----- 左侧边栏 ----- */
+.home-sidebar {
+  grid-area: sidebar;
+  position: sticky;
+  top: calc(60px + var(--ds-space-4));
+  align-self: start;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  padding-right: var(--ds-space-3);
+}
+
+.home-sidebar__brand {
+  font-family: var(--ds-font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--ds-color-fg-strong);
+  letter-spacing: 0.06em;
+  padding: var(--ds-space-3) var(--ds-space-4);
+  margin-bottom: var(--ds-space-3);
+  border-radius: var(--ds-radius-lg);
+  background: var(--ds-color-surface-raised);
+  border: 1px solid var(--ds-color-border);
+}
+
+.home-sidebar__nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.home-sidebar__category {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ds-color-muted);
+  padding: var(--ds-space-4) var(--ds-space-3) var(--ds-space-1);
+  margin-top: var(--ds-space-2);
+}
+
+.home-sidebar__link {
+  display: block;
+  padding: var(--ds-space-2) var(--ds-space-3);
+  border-radius: var(--ds-radius-lg);
+  font-size: 0.875rem;
+  color: var(--ds-color-fg);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all var(--ds-duration-150) var(--ds-ease-out);
+  letter-spacing: 0.02em;
+}
+
+.home-sidebar__link:hover {
+  color: var(--ds-color-fg-strong);
+  background: var(--ds-color-olive-50);
+  border-color: var(--ds-color-border);
+}
+
+.home-sidebar__link--active {
+  color: var(--ds-accent);
+  background: var(--ds-accent-soft);
+  border-color: var(--ds-accent);
+  font-weight: 600;
+}
+
+/* ----- 搜索框 ----- */
+.search-box {
+  margin: var(--ds-space-2) var(--ds-space-2) var(--ds-space-4);
+}
+
+.search-box__input {
+  width: 100%;
+  padding: var(--ds-space-2) var(--ds-space-3);
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-lg);
+  background: var(--ds-color-surface-raised);
+  color: var(--ds-color-fg);
+  font-family: var(--ds-font-body);
+  font-size: 0.8125rem;
+  outline: none;
+  transition: border-color var(--ds-duration-150) var(--ds-ease-out);
+}
+
+.search-box__input::placeholder {
+  color: var(--ds-color-muted);
+  opacity: 0.7;
+}
+
+.search-box__input:focus {
+  border-color: var(--ds-accent);
+}
+
+/* ----- 中间主内容区 ----- */
+.home-content {
+  grid-area: main;
+  min-width: 0;
+}
+
+/* ----- 右侧栏 ----- */
+.home-aside {
+  grid-area: right-panel;
+  position: sticky;
+  top: calc(60px + var(--ds-space-4));
+  align-self: start;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-5);
+}
+
+.home-aside__title {
+  font-family: var(--ds-font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--ds-color-fg-strong);
+  letter-spacing: 0.08em;
+  padding-bottom: var(--ds-space-2);
+  border-bottom: 1px solid var(--ds-color-border);
+}
+
+/* ----- 精选卡片（右侧栏紧凑型） ----- */
+.featured-item {
+  display: flex;
+  gap: var(--ds-space-3);
+  padding: var(--ds-space-3) var(--ds-space-4);
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-xl);
+  background: var(--ds-color-surface-raised);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--ds-duration-200) var(--ds-ease-out);
+}
+
+.featured-item:hover {
+  border-color: var(--ds-accent);
+  box-shadow: var(--ds-shadow-sm);
+}
+
+.featured-item__icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.featured-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.featured-item__grade {
+  font-size: 0.6875rem;
+  color: var(--ds-color-olive-500);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.featured-item__title {
+  font-family: var(--ds-font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--ds-color-fg-strong);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ========== 响应式 — 三栏退化为单栏 ========== */
+@media (max-width: 1100px) {
+  .home-layout {
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+      "header header"
+      "sidebar main";
+    padding-left: var(--ds-space-4);
+    padding-right: var(--ds-space-4);
+  }
+  .home-aside {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+    padding-top: calc(52px + var(--ds-space-4));
+    gap: var(--ds-space-4);
+  }
+  .home-sidebar {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+  .home-sidebar__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--ds-space-1);
+  }
+  .home-sidebar__category {
+    display: none;
+  }
+  .home-sidebar__brand {
+    display: none;
+  }
+  .search-box {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-layout {
+    padding-left: var(--ds-space-3);
+    padding-right: var(--ds-space-3);
+    gap: var(--ds-space-3);
+  }
+}
+
+/* ===== 移动端禁用 hover 效果 (#22) ===== */
+@media (max-width: 767px) {
+  .home-sidebar__link:hover {
+    background: transparent;
+    border-color: transparent;
+  }
+  .featured-item:hover {
+    border-color: var(--ds-color-border);
+    box-shadow: none;
+  }
+}
+
+/* ===== 深色模式 (#22) ----- */
+@media (prefers-color-scheme: dark) {
+  .home-layout {
+    background: transparent;
+  }
+  .featured-item {
+    background: var(--ds-color-surface);
+    border-color: var(--ds-color-border);
+  }
+  .home-sidebar__brand {
+    background: var(--ds-color-surface);
+    border-color: var(--ds-color-border);
+  }
+  .search-box__input {
+    background: var(--ds-color-surface);
+    border-color: var(--ds-color-border);
+  }
+}
+
 /* ========== 响应式 ========== */
 @media (max-width: 1023px) {
     .ds-navbar { padding: var(--ds-space-2) var(--ds-space-6); }
