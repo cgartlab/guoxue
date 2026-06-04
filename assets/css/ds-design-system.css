@@ -397,19 +397,22 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 767px) {
     .ds-navbar { padding: var(--ds-space-2) var(--ds-space-4); }
+    /* ===== 首页/关于页间距优化 (#20) ===== */
     .ds-container { padding: 72px var(--ds-space-4) var(--ds-space-8); }
-    .ds-hero { padding: var(--ds-space-8) 0; }
+    .ds-hero { padding: var(--ds-space-8) 0 var(--ds-space-6); }
     .ds-hero h1 { font-size: 2.25rem; margin-bottom: var(--ds-space-2); }
-    .ds-hero .hero-subtitle { font-size: 0.875rem; letter-spacing: 0.2em; }
-    .ds-hero p.hero-desc { font-size: 0.9375rem; }
+    .ds-hero .hero-subtitle { font-size: 0.875rem; letter-spacing: 0.2em; margin-bottom: var(--ds-space-3); }
+    .ds-hero p.hero-desc { font-size: 0.9375rem; line-height: 1.7; }
     .ds-card-grid { grid-template-columns: 1fr; gap: var(--ds-space-4); }
     .ds-lesson-card { padding: var(--ds-space-5) var(--ds-space-4); }
-    .ds-section-title { font-size: 1.25rem; }
-    .teacher-section { grid-template-columns: 1fr; gap: var(--ds-space-5); text-align: center; }
+    .ds-section-title { font-size: 1.25rem; margin-bottom: var(--ds-space-4); }
+    /* 关于页间距优化 */
+    .teacher-section { grid-template-columns: 1fr; gap: var(--ds-space-5); text-align: center; margin-bottom: var(--ds-space-10); }
     .teacher-avatar { max-width: 140px; margin: 0 auto; }
     .teacher-intro p { text-align: left; }
-    .about-philosophy { grid-template-columns: 1fr; gap: var(--ds-space-3); }
-    .ds-footer { padding: var(--ds-space-5) var(--ds-space-4); }
+    .about-philosophy { grid-template-columns: 1fr; gap: var(--ds-space-3); margin-top: var(--ds-space-4); }
+    section[style*="margin-bottom: var(--ds-space-16)"] { margin-bottom: var(--ds-space-10) !important; }
+    .ds-footer { padding: var(--ds-space-5) var(--ds-space-4); margin-top: var(--ds-space-10); }
     /* ===== 封面页响应式 (#17) ===== */
     .cover-slide { padding: var(--ds-space-6); }
     .cover-slide h2 { font-size: 1.5rem !important; }
