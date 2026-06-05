@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://guoxue.cgartlab.com/">
   <meta name="twitter:card" content="summary_large_image">
-  <title>国学课堂 — 八〇二三老战士 — 传承经典 · 启迪智慧</title>
+  <title>国学课堂 — 传承经典 · 启迪智慧</title>
   <link rel="canonical" href="https://guoxue.cgartlab.com/">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
   <div class="ink-dot ink-dot-3" aria-hidden="true"></div>
 
   <nav class="ds-navbar" aria-label="主导航">
-    <a class="ds-btn-nav" href="index.html">📜 国学课堂</a>
+    <a class="ds-btn-nav ds-btn-nav--brand" href="index.html">国学课堂</a>
     <ul class="ds-navbar__menu" id="primary-menu">
       <li><a class="ds-navbar__menu-item" href="index.html">首页</a></li>
       <li><a class="ds-navbar__menu-item" href="#lesson-cards">课程</a></li>
@@ -40,45 +40,44 @@
       aria-controls="primary-menu"
       aria-expanded="false"
       aria-label="切换导航菜单"
-    >☰</button>
+    >菜单</button>
     <div class="ds-nav-right">
       <a class="ds-btn-nav" href="about.html">关于本站</a>
+      <button class="ds-btn-nav ds-btn-nav--drawer" id="drawer-toggle" aria-label="展开课程目录">
+        <span class="drawer-icon-open">☰</span>
+        <span class="drawer-icon-close" hidden>✕</span>
+      </button>
     </div>
   </nav>
 
-  <main id="main-content" class="page-wrapper home-layout">
-    <!-- ===== 左侧边栏 ===== -->
+  <div class="home-wrapper">
+    <!-- ===== 左侧边栏（抽屉式） ===== -->
     <aside class="home-sidebar" id="sidebar-nav" aria-label="课程分类导航">
       <!-- 由 homepage.js 渲染 -->
     </aside>
 
     <!-- ===== 中间主内容 ===== -->
-    <div class="home-content">
-      <section class="ds-hero">
-        <h1>国学课堂</h1>
-        <p class="hero-subtitle">传承经典 · 启迪智慧</p>
-        <div class="hero-ornament" aria-hidden="true"></div>
-        <p class="hero-desc">
-          欢迎来到国学课堂！在这里，我们一起走近中华传统文化的瑰宝，
-          在经典中汲取智慧，在诵读中涵养品格。每一门课程都精心设计，
-          适合小学生循序渐进地学习。
-        </p>
+    <main id="main-content" class="home-content">
+      <!-- 系列课程封面 -->
+      <section class="series-cover" id="series-cover">
+        <div class="series-cover__inner">
+          <p class="series-cover__subtitle">传承经典 · 启迪智慧</p>
+          <h1 class="series-cover__title">国学课堂 · 系列课程总览</h1>
+          <p class="series-cover__desc">涵盖经史子集 · 蒙学书法国画等十二门类</p>
+          <div class="series-cover__stats" id="series-cover-stats"></div>
+          <a class="series-cover__cta" href="#lesson-cards">浏览课程 ↓</a>
+        </div>
       </section>
 
       <section>
         <div class="filter-bar">
-          <h2 class="ds-section-title" id="filter-title">✨ 全部课程</h2>
+          <h2 class="ds-section-title" id="filter-title">全部课程</h2>
         </div>
         <div id="lesson-cards" class="ds-card-grid"></div>
         <div id="coming-soon" hidden></div>
       </section>
-    </div>
-
-    <!-- ===== 右侧栏 ===== -->
-    <aside class="home-aside" id="home-aside" aria-label="精选推荐">
-      <!-- 由 homepage.js 渲染 -->
-    </aside>
-  </main>
+    </main>
+  </div>
 
   <footer class="ds-footer">
     © 2026 <a href="https://8023laozhanshi.cc/" target="_blank" rel="noopener">八〇二三老战士</a> · 国学课堂 · Powered by GitHub Pages

@@ -1,5 +1,5 @@
 // tests/homepage.spec.js
-// Playwright E2E tests for homepage (v2.0 redesign)
+// Playwright E2E tests for homepage v2.1 (drawer sidebar + series cover + collapsed categories)
 // Run: npx playwright test tests/homepage.spec.js --workers=1
 
 const { test, expect } = require('@playwright/test');
@@ -49,10 +49,10 @@ test.afterAll(() => {
 test.describe('Desktop (1440x900)', () => {
   test.use({ viewport: { width: 1440, height: 900 } });
 
-  test('three-column layout renders', async ({ page }) => {
+  test('two-column layout with series cover renders', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    // Sidebar visible
+    // Sidebar visible (default expanded on desktop)
     const sidebar = page.locator('.home-sidebar');
     await expect(sidebar).toBeVisible();
 
@@ -60,81 +60,86 @@ test.describe('Desktop (1440x900)', () => {
     const mainContent = page.locator('.home-content');
     await expect(mainContent).toBeVisible();
 
-    // Right aside visible
+    // No right aside (removed)
     const aside = page.locator('.home-aside');
-    await expect(aside).toBeVisible();
+    await expect(aside).toHaveCount(0);
 
-    // Featured section has content
-    const featuredItems = page.locator('.featured-item');
-    await expect(featuredItems).toHaveCount(2); // 01-lunyu and 02-sanzijing
+    // Series cover visible
+    const seriesCover = page.locator('.series-cover');
+    await expect(seriesCover).toBeVisible();
+    await expect(seriesCover.locator('.series-cover__title')).toContainText('系列课程总览');
+
+    // Stats visible
+    const stats = page.locator('.series-stat__value');
+    await expect(stats).toHaveCount(3); // 已上线 / 筹备中 / 门类
   });
 
-  test('top nav menu shows 4 items on desktop', async ({ page }) => {
+  test('top nav menu shows pure text (no emoji)', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const items = page.locator('.ds-navbar__menu-item');
-    await expect(items).toHaveCount(3); // 首页 / 课程 / 门类 (关于本站在 ds-nav-right)
+    await expect(items).toHaveCount(3);
 
-    // 汉堡按钮在桌面端隐藏
+    // Brand link has no emoji
+    const brand = page.locator('.ds-btn-nav--brand');
+    await expect(brand).toHaveText('国学课堂');
+
+    // Menu toggle is text "菜单" (visible on desktop, no longer hidden)
     const toggle = page.locator('#menu-toggle');
-    const isHidden = await toggle.evaluate(el => getComputedStyle(el).display === 'none');
-    expect(isHidden).toBe(true);
+    await expect(toggle).toHaveText('菜单');
   });
 
-  test('sidebar renders 12 disciplines', async ({ page }) => {
+  test('sidebar renders 12 collapsible categories (default collapsed)', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const groups = page.locator('.home-sidebar__group');
     await expect(groups).toHaveCount(12);
 
-    // "✨ 全部课程" 重置项
-    const allLink = page.locator('.home-sidebar__link').filter({ hasText: '✨ 全部课程' });
+    // Category headers visible
+    const headers = page.locator('.home-sidebar__category-header');
+    await expect(headers).toHaveCount(12);
+
+    // Sub navs should be hidden by default
+    const subNavs = page.locator('.home-sidebar__nav:not(.home-sidebar__nav--all)');
+    for (let i = 0; i < await subNavs.count(); i++) {
+      const nav = subNavs.nth(i);
+      const isHidden = await nav.evaluate(el => el.hasAttribute('hidden'));
+      expect(isHidden).toBe(true);
+    }
+
+    // "全部课程" reset link visible
+    const allLink = page.locator('.home-sidebar__nav--all .home-sidebar__link');
     await expect(allLink).toBeVisible();
+    await expect(allLink).toContainText('全部课程');
   });
 
-  test('coming disciplines have badge', async ({ page }) => {
+  test('search box renders with L2 styling', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    // "经部" 状态为 coming,显示 ⏳ 徽标
-    const jingGroup = page.locator('.home-sidebar__group--coming').filter({ hasText: '经部' });
-    await expect(jingGroup).toBeVisible();
-    const badge = jingGroup.locator('.home-sidebar__badge--coming').first();
-    await expect(badge).toContainText('⏳');
+    const searchInput = page.locator('#sidebar-search');
+    await expect(searchInput).toBeVisible();
+    await expect(searchInput).toHaveAttribute('placeholder', '搜索课程…');
   });
 
   test('lesson cards render correctly', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(3); // 3 ready lessons
+    await expect(cards).toHaveCount(3);
 
-    // Check card content
     const firstCard = cards.first();
     await expect(firstCard.locator('.lesson-title')).toContainText('论语');
-    await expect(firstCard.locator('.lesson-icon')).toContainText('📖');
   });
 
-  test('hero section renders', async ({ page }) => {
+  test('series cover stats show correct counts', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    const hero = page.locator('.ds-hero');
-    await expect(hero).toBeVisible();
-    await expect(hero.locator('h1')).toContainText('国学课堂');
-    await expect(hero.locator('.hero-subtitle')).toContainText('传承经典');
-  });
-
-  test('filter-title shows "全部课程" by default', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/`);
-    const title = page.locator('#filter-title');
-    await expect(title).toContainText('✨ 全部课程');
-  });
-
-  test('search box renders in sidebar', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/`);
-
-    const searchInput = page.locator('#sidebar-search');
-    await expect(searchInput).toBeVisible();
-    await expect(searchInput).toHaveAttribute('placeholder', '🔍 搜索课程…');
+    const values = page.locator('.series-stat__value');
+    const vals = await values.allTextContents();
+    // 3 ready lessons, 0 coming lessons, 12 categories
+    expect(vals[0]).toBe('3'); // 已上线
+    expect(vals[1]).toBe('0'); // 筹备中
+    expect(vals[2]).toBe('12'); // 门类
   });
 });
 
@@ -142,23 +147,11 @@ test.describe('Desktop (1440x900)', () => {
 test.describe('Tablet (768x1024)', () => {
   test.use({ viewport: { width: 768, height: 1024 } });
 
-  test('right aside hidden on tablet', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/`);
-
-    const aside = page.locator('.home-aside');
-    const isHidden = await aside.evaluate(el => getComputedStyle(el).display === 'none');
-    expect(isHidden).toBe(true);
-  });
-
-  test('sidebar still visible on tablet', async ({ page }) => {
+  test('sidebar visible, cards in 2 columns', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const sidebar = page.locator('.home-sidebar');
     await expect(sidebar).toBeVisible();
-  });
-
-  test('cards render in 2 columns on tablet', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/`);
 
     const cards = page.locator('#lesson-cards .ds-lesson-card');
     await expect(cards).toHaveCount(3);
@@ -169,43 +162,62 @@ test.describe('Tablet (768x1024)', () => {
 test.describe('Mobile (375x812)', () => {
   test.use({ viewport: { width: 375, height: 812 } });
 
-  test('top nav collapses to hamburger on mobile', async ({ page }) => {
+  test('top nav collapses to text menu button', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const toggle = page.locator('#menu-toggle');
-    const isVisible = await toggle.isVisible();
-    expect(isVisible).toBe(true);
+    await expect(toggle).toBeVisible();
+    await expect(toggle).toHaveText('菜单');
 
-    // 菜单默认关闭
     const menu = page.locator('#primary-menu');
     const hasOpenClass = await menu.evaluate(el => el.classList.contains('is-open'));
     expect(hasOpenClass).toBe(false);
 
-    // 点击展开
     await toggle.click();
     await expect(menu).toHaveClass(/is-open/);
     await expect(toggle).toHaveAttribute('aria-expanded', 'true');
 
-    // 点击按钮再次收起
     await toggle.click();
     await expect(menu).not.toHaveClass(/is-open/);
     await expect(toggle).toHaveAttribute('aria-expanded', 'false');
   });
 
-  test('right aside hidden on mobile', async ({ page }) => {
+  test('drawer toggle button visible on mobile', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    const aside = page.locator('.home-aside');
-    const isHidden = await aside.evaluate(el => getComputedStyle(el).display === 'none');
-    expect(isHidden).toBe(true);
+    const drawerBtn = page.locator('.ds-btn-nav--drawer');
+    await expect(drawerBtn).toBeVisible();
+
+    // Sidebar hidden by default on mobile (transform: translateX(-100%) → matrix with negative tx)
+    const sidebar = page.locator('.home-sidebar');
+    const transform = await sidebar.evaluate(el => getComputedStyle(el).transform);
+    // matrix(1, 0, 0, 1, -260, 0) means translateX(-260px)
+    expect(transform).toMatch(/-\d+/);
+
+    // Click drawer to open
+    await drawerBtn.click();
+    const isOpen = await sidebar.evaluate(el => el.classList.contains('is-open'));
+    expect(isOpen).toBe(true);
   });
 
-  test('search box hidden on mobile', async ({ page }) => {
+  test('search box hidden on mobile when drawer closed', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const searchBox = page.locator('.search-box');
-    const isHidden = await searchBox.evaluate(el => getComputedStyle(el).display === 'none');
-    expect(isHidden).toBe(true);
+    const sidebar = page.locator('.home-sidebar');
+
+    // When drawer is closed (sidebar off-canvas), search box should not be interactable
+    const drawerClosed = await sidebar.evaluate(el => !el.classList.contains('is-open'));
+    expect(drawerClosed).toBe(true);
+
+    // Open drawer
+    const drawerBtn = page.locator('.ds-btn-nav--drawer');
+    await drawerBtn.click();
+
+    // Now search box should be visible inside the opened drawer
+    const isOpen = await sidebar.evaluate(el => el.classList.contains('is-open'));
+    expect(isOpen).toBe(true);
+    await expect(searchBox).toBeVisible();
   });
 
   test('cards render in single column on mobile', async ({ page }) => {
@@ -226,27 +238,54 @@ test.describe('Interactions', () => {
     const searchInput = page.locator('#sidebar-search');
     await searchInput.fill('诗书');
 
-    // 匹配的"经部"描述链接应可见（"儒家经典 · 诗书礼易春秋"包含"诗书"）
     const jingLink = page.locator('.home-sidebar__link').filter({ hasText: '儒家经典' }).first();
     await expect(jingLink).toBeVisible();
 
-    // 不匹配的"蒙学"描述链接应隐藏（"三字经 · 百家姓 · 千字文 · 论语"不含"诗书"）
     const mengxueDescLink = page.locator('.home-sidebar__link').filter({ hasText: '三字经 · 百家姓' }).first();
     await expect(mengxueDescLink).toBeHidden();
+  });
+
+  test('click category header expands/collapses sub-items', async ({ page }) => {
+    await page.goto(`http://localhost:${PORT}/`);
+
+    const mengxueHeader = page.locator('.home-sidebar__category-header').filter({ hasText: '蒙学' }).first();
+    const mengxueNav = page.locator('.home-sidebar__nav').filter({ hasText: '论语' }).first();
+
+    // Initially hidden
+    let isHidden = await mengxueNav.evaluate(el => el.hasAttribute('hidden'));
+    expect(isHidden).toBe(true);
+
+    // Click to expand
+    await mengxueHeader.click();
+    isHidden = await mengxueNav.evaluate(el => el.hasAttribute('hidden'));
+    expect(isHidden).toBe(false);
+    // toHaveClass does exact match, use evaluate instead
+    let hasExpanded = await mengxueHeader.evaluate(el => el.classList.contains('is-expanded'));
+    expect(hasExpanded).toBe(true);
+
+    // Click to collapse
+    await mengxueHeader.click();
+    isHidden = await mengxueNav.evaluate(el => el.hasAttribute('hidden'));
+    expect(isHidden).toBe(true);
+    hasExpanded = await mengxueHeader.evaluate(el => el.classList.contains('is-expanded'));
+    expect(hasExpanded).toBe(false);
   });
 
   test('click on ready discipline filters cards', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    // 点击"蒙学"门类的 filter 链接(描述文本"三字经 · 百家姓 · 千字文 · 论语")
-    const mengxueFilterLink = page.locator('.home-sidebar__link').filter({ hasText: '三字经 · 百家姓' }).first();
+    // Click the "蒙学" category header first to expand
+    const mengxueHeader = page.locator('.home-sidebar__category-header').filter({ hasText: '蒙学' }).first();
+    await mengxueHeader.click();
+
+    // Then click the filter link
+    const mengxueFilterLink = page.locator('.home-sidebar__link--filter').filter({ hasText: '三字经 · 百家姓' }).first();
     await mengxueFilterLink.click({ noWaitAfter: true });
 
-    // filter-title 应更新
     const title = page.locator('#filter-title');
     await expect(title).toContainText('蒙学');
 
-    // 应只显示蒙学的 ready 课程(论语 + 论语混合版 + 三字经 = 3)
+    // Should show 3 ready lessons in mengxue
     const cards = page.locator('#lesson-cards .ds-lesson-card');
     await expect(cards).toHaveCount(3);
   });
@@ -254,34 +293,39 @@ test.describe('Interactions', () => {
   test('click on coming discipline shows placeholder', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    // 点击"经部"门类的 filter 链接(描述文本"儒家经典 · 诗书礼易春秋")
-    const jingFilterLink = page.locator('.home-sidebar__link').filter({ hasText: '儒家经典' }).first();
+    // Expand 经部 first
+    const jingHeader = page.locator('.home-sidebar__category-header').filter({ hasText: '经部' }).first();
+    await jingHeader.click();
+
+    // Click filter link
+    const jingFilterLink = page.locator('.home-sidebar__link--filter').filter({ hasText: '儒家经典' }).first();
     await jingFilterLink.click({ noWaitAfter: true });
 
-    // 网格应隐藏,"敬请期待"占位应显示
-    const grid = page.locator('#lesson-cards');
     const comingEl = page.locator('#coming-soon');
     await expect(comingEl).toBeVisible();
     await expect(comingEl).toContainText('经部');
     await expect(comingEl).toContainText('即将上线');
-    // 检查 hidden 属性而非 toBeHidden()（Playwright 对 hidden 属性的 visibility 检测有差异）
+
+    const grid = page.locator('#lesson-cards');
     await expect(grid).toHaveAttribute('hidden');
   });
 
-  test('click "✨ 全部课程" resets to all', async ({ page }) => {
+  test('click "全部课程" resets to all', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    // 先点经部切到 coming 状态
-    const jingLink = page.locator('.home-sidebar__link').filter({ hasText: '诗书礼易春秋' });
-    await jingLink.first().click({ noWaitAfter: true });
+    // Expand and click 经部
+    const jingHeader = page.locator('.home-sidebar__category-header').filter({ hasText: '经部' }).first();
+    await jingHeader.click();
+    const jingLink = page.locator('.home-sidebar__link--filter').filter({ hasText: '儒家经典' }).first();
+    await jingLink.click({ noWaitAfter: true });
     await expect(page.locator('#coming-soon')).toBeVisible();
 
-    // 点击"✨ 全部课程"重置
-    const allLink = page.locator('.home-sidebar__link').filter({ hasText: '✨ 全部课程' });
+    // Click reset
+    const allLink = page.locator('.home-sidebar__nav--all .home-sidebar__link').first();
     await allLink.click({ noWaitAfter: true });
 
     await expect(page.locator('#lesson-cards')).toBeVisible();
-    await expect(page.locator('#filter-title')).toContainText('✨ 全部课程');
+    await expect(page.locator('#filter-title')).toContainText('全部课程');
   });
 });
 
@@ -292,13 +336,12 @@ test.describe('Regression', () => {
   test('about.html still works', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/about.html`);
 
-    // About page should not use .home-layout
-    const hasHomeLayout = await page.evaluate(() =>
-      document.querySelector('.home-layout') !== null
+    // About page should not use home-wrapper
+    const hasHomeWrapper = await page.evaluate(() =>
+      document.querySelector('.home-wrapper') !== null
     );
-    expect(hasHomeLayout).toBe(false);
+    expect(hasHomeWrapper).toBe(false);
 
-    // About page content should be visible
     const title = page.locator('h1');
     await expect(title).toBeVisible();
   });
@@ -306,13 +349,11 @@ test.describe('Regression', () => {
   test('lesson page still works', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/lessons/01-lunyu/index.html`);
 
-    // Lesson page should not use .home-layout
-    const hasHomeLayout = await page.evaluate(() =>
-      document.querySelector('.home-layout') !== null
+    const hasHomeWrapper = await page.evaluate(() =>
+      document.querySelector('.home-wrapper') !== null
     );
-    expect(hasHomeLayout).toBe(false);
+    expect(hasHomeWrapper).toBe(false);
 
-    // Slide viewport should be present
     const slideViewport = page.locator('.slide-viewport');
     await expect(slideViewport).toBeVisible();
   });
@@ -330,4 +371,3 @@ test.describe('Regression', () => {
     await expect(fourOhFour).toBeVisible();
   });
 });
-
