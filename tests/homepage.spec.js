@@ -77,16 +77,21 @@ test.describe('Desktop (1440x900)', () => {
   test('top nav menu shows pure text (no emoji)', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    const items = page.locator('.ds-navbar__menu-item');
-    await expect(items).toHaveCount(3);
+    // 主菜单项(首页/课程/门类)
+    const menuLinks = page.locator('.ds-navbar__menu .ds-btn-nav--ghost');
+    await expect(menuLinks).toHaveCount(3);
 
-    // Brand link has no emoji
+    // 品牌链接
     const brand = page.locator('.ds-btn-nav--brand');
     await expect(brand).toHaveText('国学课堂');
 
-    // Menu toggle is text "菜单" (visible on desktop, no longer hidden)
-    const toggle = page.locator('#menu-toggle');
-    await expect(toggle).toHaveText('菜单');
+    // 菜单切换按钮(桌面端可见,文字"菜单")
+    const menuToggle = page.locator('#menu-toggle .ds-btn-nav__text');
+    await expect(menuToggle).toHaveText('菜单');
+
+    // 抽屉切换按钮(桌面端可见,文字"目录")
+    const drawerToggle = page.locator('#drawer-toggle .ds-btn-nav__text');
+    await expect(drawerToggle).toHaveText('目录');
   });
 
   test('sidebar renders 12 collapsible categories (default collapsed)', async ({ page }) => {
@@ -167,7 +172,10 @@ test.describe('Mobile (375x812)', () => {
 
     const toggle = page.locator('#menu-toggle');
     await expect(toggle).toBeVisible();
-    await expect(toggle).toHaveText('菜单');
+    // 移动端只显示图标(无文字)
+    const menuToggleText = page.locator('#menu-toggle .ds-btn-nav__text');
+    const isVisible = await menuToggleText.isVisible();
+    expect(isVisible).toBe(false);
 
     const menu = page.locator('#primary-menu');
     const hasOpenClass = await menu.evaluate(el => el.classList.contains('is-open'));
@@ -185,7 +193,7 @@ test.describe('Mobile (375x812)', () => {
   test('drawer toggle button visible on mobile', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    const drawerBtn = page.locator('.ds-btn-nav--drawer');
+    const drawerBtn = page.locator('#drawer-toggle');
     await expect(drawerBtn).toBeVisible();
 
     // Sidebar hidden by default on mobile (transform: translateX(-100%) → matrix with negative tx)
@@ -198,6 +206,12 @@ test.describe('Mobile (375x812)', () => {
     await drawerBtn.click();
     const isOpen = await sidebar.evaluate(el => el.classList.contains('is-open'));
     expect(isOpen).toBe(true);
+
+    // 抽屉打开后,按钮文字变成"收起"
+    const text = page.locator('#drawer-toggle .ds-btn-nav__text');
+    // 移动端文字隐藏(只显示图标),所以通过 JS 检查
+    const textContent = await text.evaluate(el => el.textContent);
+    expect(textContent).toBe('收起');
   });
 
   test('search box hidden on mobile when drawer closed', async ({ page }) => {
@@ -211,7 +225,7 @@ test.describe('Mobile (375x812)', () => {
     expect(drawerClosed).toBe(true);
 
     // Open drawer
-    const drawerBtn = page.locator('.ds-btn-nav--drawer');
+    const drawerBtn = page.locator('#drawer-toggle');
     await drawerBtn.click();
 
     // Now search box should be visible inside the opened drawer
@@ -234,6 +248,11 @@ test.describe('Interactions', () => {
 
   test('sidebar search filters sidebar links', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
+
+    // 先展开所有门类,让所有链接可见(默认是折叠的)
+    const allLink = page.locator('.home-sidebar__nav--all .home-sidebar__link');
+    await allLink.click({ noWaitAfter: true });
+    await page.waitForTimeout(200);
 
     const searchInput = page.locator('#sidebar-search');
     await searchInput.fill('诗书');

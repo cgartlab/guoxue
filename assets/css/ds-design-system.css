@@ -102,83 +102,173 @@ a { color: inherit; text-decoration: none; }
 /* ========== 导航栏 ========== */
 .ds-navbar {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: oklch(99% 0.005 80 / 0.9);
+    background: oklch(99% 0.005 80 / 0.92);
     backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--ds-color-border);
-    padding: var(--ds-space-2) var(--ds-space-10);
-    display: flex; align-items: center; gap: var(--ds-space-4);
+    padding: 0 var(--ds-space-6);
+    display: flex; align-items: center; gap: var(--ds-space-2);
     height: 60px;
 }
-.ds-navbar .site-title {
-    font-family: var(--ds-font-display);
-    font-size: 1.0625rem; font-weight: 700;
-    color: var(--ds-color-fg-strong);
-    letter-spacing: 0.05em;
-    display: flex; align-items: center; gap: var(--ds-space-2);
-}
-.ds-nav-center { flex: 1; display: flex; justify-content: center; }
-.ds-nav-right { display: flex; align-items: center; gap: var(--ds-space-2); }
 
-.ds-btn-nav {
-    padding: var(--ds-space-1) var(--ds-space-4);
-    border: 1px solid var(--ds-color-border);
-    border-radius: var(--ds-radius-lg);
-    background: var(--ds-color-surface);
-    color: var(--ds-color-fg);
-    font-family: var(--ds-font-body); font-size: 0.8125rem;
-    cursor: pointer;
-    transition: all var(--ds-duration-200) var(--ds-ease-out);
-    display: flex; align-items: center; gap: var(--ds-space-1);
-    text-decoration: none;
-    white-space: nowrap;
-}
-.ds-btn-nav:hover:not(:disabled) {
-    border-color: var(--ds-accent);
-    color: var(--ds-accent);
-    box-shadow: var(--ds-shadow-sm);
-}
-.ds-btn-nav:disabled { opacity: 0.3; cursor: default; }
+/* 顶栏三段式:左组(品牌+抽屉) 中组(主菜单) 右组(菜单+关于) */
+.ds-navbar > .ds-btn-nav--brand,
+.ds-navbar > #drawer-toggle { flex: 0 0 auto; }
 
-/* 导航栏菜单项 — 与 .ds-btn-nav 统一 */
-.ds-navbar__menu-item {
-    display: inline-block;
-    padding: var(--ds-space-1) var(--ds-space-4);
-    border: 1px solid var(--ds-color-border);
-    border-radius: var(--ds-radius-lg);
-    background: var(--ds-color-surface);
-    color: var(--ds-color-fg);
-    font-family: var(--ds-font-body); font-size: 0.8125rem;
-    text-decoration: none;
-    transition: all var(--ds-duration-150) var(--ds-ease-out);
-    letter-spacing: 0.04em;
-    white-space: nowrap;
-}
-.ds-navbar__menu-item:hover,
-.ds-navbar__menu-item:focus {
-    border-color: var(--ds-accent);
-    color: var(--ds-accent);
-    background: var(--ds-color-surface);
-    outline: none;
-}
-.ds-navbar__menu-toggle {
-    display: none;
-    align-items: center;
+.ds-navbar > .ds-navbar__menu {
+    flex: 1 1 auto;
     justify-content: center;
-    padding: var(--ds-space-1) var(--ds-space-4);
+    margin: 0;
+}
+
+.ds-navbar > #menu-toggle,
+.ds-navbar > .ds-btn-nav:not(.ds-btn-nav--brand):not(.ds-btn-nav--icon) {
+    flex: 0 0 auto;
+}
+
+/* ----- 统一按钮基类(品牌/菜单/抽屉/关于 都用这套) ----- */
+.ds-btn-nav {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 6px;
+    height: 36px;
+    padding: 0 var(--ds-space-4);
     border: 1px solid var(--ds-color-border);
     border-radius: var(--ds-radius-lg);
     background: var(--ds-color-surface);
     color: var(--ds-color-fg);
-    font-family: var(--ds-font-body); font-size: 0.8125rem;
+    font-family: var(--ds-font-body);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.04em;
     cursor: pointer;
-    transition: all var(--ds-duration-150) var(--ds-ease-out);
     white-space: nowrap;
+    transition: all var(--ds-duration-150) var(--ds-ease-out);
 }
-.ds-navbar__menu-toggle:hover {
+.ds-btn-nav:hover {
     border-color: var(--ds-accent);
     color: var(--ds-accent);
+    background: var(--ds-color-olive-50);
+}
+.ds-btn-nav:active { transform: scale(0.98); }
+.ds-btn-nav:disabled { opacity: 0.3; cursor: default; }
+.ds-btn-nav:focus-visible {
+    outline: 2px solid var(--ds-accent);
+    outline-offset: 2px;
 }
 
+/* 变体 1: 品牌 — 文字加粗、字号略大、无边框背景对比 */
+.ds-btn-nav--brand {
+    background: transparent;
+    border-color: transparent;
+    color: var(--ds-color-fg-strong);
+    font-family: var(--ds-font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 0 var(--ds-space-3);
+}
+.ds-btn-nav--brand:hover {
+    color: var(--ds-accent);
+    background: var(--ds-color-olive-50);
+    border-color: var(--ds-color-olive-200);
+}
+
+/* 变体 2: ghost(主菜单项) — 默认无视觉重量,hover 才显边框 */
+.ds-btn-nav--ghost {
+    background: transparent;
+    border-color: transparent;
+    color: var(--ds-color-fg);
+}
+.ds-btn-nav--ghost:hover {
+    background: var(--ds-color-olive-50);
+    border-color: var(--ds-color-olive-200);
+}
+
+/* 变体 3: icon(带图标) — 14px 字符作为左侧辅助 */
+.ds-btn-nav--icon .ds-btn-nav__icon {
+    font-size: 0.875rem;
+    line-height: 1;
+    opacity: 0.7;
+}
+.ds-btn-nav--icon .ds-btn-nav__text {
+    line-height: 1;
+}
+
+/* ----- 课程页导航内部分区(中间页码 + 右侧操作) ----- */
+.ds-navbar__center {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+.ds-navbar__end {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: var(--ds-space-2);
+}
+
+/* ----- 顶栏主菜单列表(去列表样式) ----- */
+.ds-navbar__menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+}
+.ds-navbar__menu li { display: inline-flex; }
+
+/* 移动端:主菜单切换为下拉(顶栏内) */
+@media (max-width: 767px) {
+    .ds-navbar {
+        gap: 4px;
+        padding: 0 var(--ds-space-3);
+    }
+
+    /* 品牌缩小 */
+    .ds-btn-nav--brand {
+        font-size: 0.9375rem;
+    }
+
+    /* 抽屉按钮在移动端不显示文字,只显示图标 */
+    .ds-btn-nav--icon .ds-btn-nav__text {
+        display: none;
+    }
+    .ds-btn-nav--icon {
+        width: 40px;
+        padding: 0;
+        min-width: 40px;
+    }
+
+    /* 主菜单隐藏,点击 #menu-toggle 展开为下拉 */
+    .ds-navbar > .ds-navbar__menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding: var(--ds-space-3);
+        background: oklch(99% 0.005 80 / 0.98);
+        border-bottom: 1px solid var(--ds-color-border);
+        box-shadow: var(--ds-shadow-md);
+        flex: 0 0 auto;
+    }
+    .ds-navbar__menu.is-open {
+        display: flex;
+    }
+    .ds-navbar__menu li { display: block; }
+    .ds-navbar__menu li a {
+        justify-content: flex-start;
+        width: 100%;
+    }
+}
+
+/* ----- Tabs(课程页内复用) ----- */
 .ds-tabs { display: flex; gap: var(--ds-space-1); }
 .ds-tab {
     padding: var(--ds-space-2) var(--ds-space-4);
@@ -802,19 +892,6 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.04em;
 }
 
-/* ===== 抽屉切换按钮 ===== */
-.ds-btn-nav--drawer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 44px;
-  min-height: 44px;
-}
-
-.drawer-icon-close {
-  font-size: 1.125rem;
-}
-
 /* ===== 筛选标题栏 ===== */
 .filter-bar {
   display: flex;
@@ -872,41 +949,13 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 var(--ds-space-3) 0;
 }
 
-/* ----- 移动端:菜单折叠为汉堡 ----- */
-@media (max-width: 767px) {
-  .ds-navbar__menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    gap: var(--ds-space-1);
-    background: var(--ds-color-surface-raised);
-    border-bottom: 1px solid var(--ds-color-border);
-    padding: var(--ds-space-3);
-    box-shadow: var(--ds-shadow-md);
-    z-index: 50;
-  }
-  .ds-navbar__menu.is-open {
-    display: flex;
-  }
-  .ds-navbar__menu-item {
-    display: block;
-    padding: var(--ds-space-3) var(--ds-space-4);
-  }
-  .ds-navbar__menu-toggle {
-    display: inline-flex;
-  }
-}
-
 /* ----- 暗色模式微调 ----- */
 html.dark .ds-coming-soon {
   background: var(--ds-color-surface-raised);
   border-color: var(--ds-color-border);
 }
 html.dark .ds-navbar__menu {
-  background: var(--ds-color-surface-raised);
+  background: oklch(15% 0.02 80 / 0.98);
 }
 
 /* ========== 响应式 ========== */
