@@ -155,6 +155,20 @@
         saveProgress();
     });
 
+    /* ===== 答案解析折叠 ===== */
+    document.addEventListener('click', function (e) {
+        var exp = e.target.closest('.quiz-explain.show');
+        if (!exp) return;
+        // 第二次点击收起
+        if (exp.classList.contains('exp-collapsed')) {
+            exp.classList.remove('exp-collapsed');
+            exp.style.maxHeight = exp.scrollHeight + 'px';
+        } else {
+            exp.classList.add('exp-collapsed');
+            exp.style.maxHeight = '0';
+        }
+    });
+
     /* ===== 重新答题 ===== */
     document.addEventListener('click', function(e) {
         var retake = e.target.closest('#retake-btn');
