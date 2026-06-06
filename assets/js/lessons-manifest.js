@@ -36,6 +36,17 @@ window.GUOXUE_LESSONS = [
         grade: '小学高年级 / 初中',
         description: '在标准版基础上拓展内容深度,适合学有余力的学生深入研读。',
         status: 'ready'
+    },
+    {
+        id: '02-xueer',
+        title: '《学而》三问',
+        subtitle: '学而时习 · 君子之道',
+        path: 'lessons/02-xueer/index.html',
+        icon: '🌱',
+        grade: '小学中高年级',
+        description: '深入解读《论语·学而》开篇三问：学而时习、有朋远来、人不知愠，理解君子修养的三重境界。',
+        status: 'ready',
+        duration: '约 12 分钟'
     }
     // ----- 在此下方添加新课程 -----
     // {

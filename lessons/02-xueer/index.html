@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《学而》三问 · 国学课堂</title>
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/ds-design-system.css">
+</head>
+<body>
+
+<div class="bg-layer" aria-hidden="true"></div>
+<div class="ink-dot ink-dot-1" aria-hidden="true"></div>
+<div class="ink-dot ink-dot-2" aria-hidden="true"></div>
+<div class="ink-dot ink-dot-3" aria-hidden="true"></div>
+
+<!-- 导航栏 -->
+<nav class="ds-navbar">
+    <div class="ds-tabs">
+        <button class="ds-tab active" data-section="lecture">📖 讲义</button>
+        <button class="ds-tab" data-section="quiz">✏️ 测验</button>
+        <button class="ds-tab" data-section="review">💬 答疑解惑</button>
+    </div>
+    <div class="ds-nav-center">
+        <span class="page-indicator" id="page-indicator">1 / 26</span>
+    </div>
+    <div class="ds-nav-right">
+        <div class="dots-row" id="dots-row"></div>
+        <button class="ds-btn-nav" id="nav-prev" disabled>← 上一页</button>
+        <button class="ds-btn-nav" id="nav-next">下一页 →</button>
+        <button class="fullscreen-btn" id="fullscreen-btn" title="切换全屏显示">⛶</button>
+    </div>
+</nav>
+
+<!-- 幻灯片容器 -->
+<div class="slide-viewport">
+<div class="slide-container">
+
+<!-- ====== 第1页：封面 ====== -->
+<div class="slide active cover-slide" data-page="0" data-section="lecture">
+    <div class="cover-ornament"></div>
+    <h2 class="ds-display">学而三问</h2>
+    <div class="cover-ornament"></div>
+    <p class="cover-subtitle">《论语·学而》开篇精讲</p>
+    <p class="cover-desc">"学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？"这三句话是《论语》的开篇，也是孔子对君子修养的精妙概括。让我们一起深入理解其中的智慧。</p>
+    <div class="cover-seal">学而</div>
+</div>
+
+<!-- ====== 第2页：学而篇简介 ====== -->
+<div class="slide" data-page="1" data-section="lecture">
+    <span class="ds-badge ds-badge--accent">讲义</span>
+    <h2>《学而》篇简介</h2>
+    <p>《学而》是《论语》二十篇中的<span class="ds-highlight">第一篇</span>，共十六章。篇名取自开篇第一句"学而时习之"的前两个字。</p>
+    <h3>主要内容</h3>
+    <ul>
+        <li>阐述<span class="ds-highlight">学习的态度与方法</span></li>
+        <li>论述<span class="ds-highlight">君子修养</span>的基本准则</li>
+        <li>强调<span class="ds-highlight">孝悌</span>为仁之本</li>
+        <li>记录孔子及其弟子的<span class="ds-highlight">言行</span></li>
+    </ul>
+    <div class="ds-quote">"弟子入则孝，出则弟，谨而信，泛爱众，而亲仁。行有余力，则以学文。"</div>
+    <p class="ds-caption">这一篇为整部《论语》奠定了基调，是理解孔子思想的重要入门。</p>
+</div>
+
+<!-- ====== 第3页：开篇三问概览 ====== -->
+<div class="slide" data-page="2" data-section="lecture">
+    <span class="ds-badge ds-badge--accent">讲义</span>
+    <h2>开篇三问概览</h2>
+    <p>《论语》开篇这三句话，看似平常，实则蕴含了孔子对君子修养的三个层面：</p>
+    <div class="summary-grid">
+        <div class="summary-card">
+            <div class="card-label">第一问</div>
+            <div class="card-value">学而时习之</div>
+            <div style="font-size:0.875rem;color:var(--ds-color-muted);margin-top:var(--ds-space-2);">对学问的态度</div>
+        </div>
+        <div class="summary-card">
+            <div class="card-label">第二问</div>
+            <div class="card-value">有朋自远方来</div>
+            <div style="font-size:0.875rem;color:var(--ds-color-muted);margin-top:var(--ds-space-2);">对朋友的态度</div>
+        </div>
+        <div class="summary-card">
+            <div class="card-label">第三问</div>
+            <div class="card-value">人不知而不愠</div>
+            <div style="font-size:0.875rem;color:var(--ds-color-muted);margin-top:var(--ds-space-2);">对世人的态度</div>
+        </div>
+    </div>
+    <p style="margin-top:var(--ds-space-6);">这三句话层层递进，从<span class="ds-highlight">自我修养</span>到<span class="ds-highlight">待人接物</span>，再到<span class="ds-highlight">处世心态</span>，构成了君子人格的完整图景。</p>
+</div>
+
+<!-- ====== 第4页：第一问详解（上） ====== -->
+<div class="slide" data-page="3" data-section="lecture">
+    <span class="ds-badge ds-badge--accent">讲义</span>
+    <h2>第一问：学而时习之</h2>
+    <div class="ds-quote" style="font-size:1.5rem;">"学而时习之，不亦说乎？"</div>
+    <h3>逐字解读</h3>
+    <ul>
+        <li><b>学</b>：学习知识、技能，更重要的是学习做人的道理</li>
+        <li><b>而</b>：连词，表示顺承关系</li>
+        <li><b>时</b>：按时、时常，也有"适时"之意</li>
+        <li><b>习</b>：温习、练习，也有"实践"之意</li>
+        <li><b>之</b>：代词，指代所学的内容</li>
+    </ul>
+    <p><span class="ds-highlight">"说"</span>（yuè）通"悦"，愉快、高兴的意思。这是一个通假字。</p>
+</div>
+
+<!-- ====== 第5页：第一问详解（下） ====== -->
+<div class="slide" data-page="4" data-section="lecture">
+    <span class="ds-badge ds-badge--accent">讲义</span>
+    <h2>学而时习之 · 深层含义</h2>
+    <h3>学习的三重境界</h3>
+    <ul>
+        <li><b>学</b>：获取知识，是学习的起点</li>
+        <li><b>习</b>：温习巩固，是学习的深化</li>
+        <li><b>说</b>：乐在其中，是学习的升华</li>
+    </ul>
+    <div class="ds-quote">"知之者不如好之者，好之者不如乐之者。"</div>
+    <p>孔子认为，真正的学习不是苦差事，而是能带来内心愉悦的精神享受。当我们把学到的知识付诸实践，看到自己的成长，那种快乐是发自内心的。</p>
+    <p class="ds-caption">现代人常说的"终身学习"，其实早在两千多年前，孔子就已经倡导了。</p>
+</div>
+
+<!-- ====== 第6页：第二问详解（上） ====== -->
+<div class="slide" data-page="5" data-section="lecture">
+    <span class="ds-badge ds-badge--accent">讲义</span>
+    <h2>第二问：有朋自远方来</h2>
+    <div class="ds-quote" style="font-size:1.5rem;">"有朋自远方来，不亦乐乎？"</div>
+    <h3>逐字解读</h3>
+    <ul>
+        <li><b>有</b>：通"友"，也有版本直接写作"友"</li>
+        <li><b>朋</b>：志同道合的朋友，不是一般的熟人</li>
+        <li><b>自</b>：从</li>
+        <li><b>远方</b>：遥远的地方</li>
+        <li><b>来</b>：到来、来访</li>
+        <li><b>乐</b>：快乐、高兴（读 lè）</li>
+    </ul>
+    <p class="ds-caption">注意：这里的"朋"特指志同道合之人，不是酒肉朋友。</p>
+</div>
+
+<!-- ====== 第7页：第二问详解（下） ====== -->
+<div class="slide" data-page="6" data-section="lecture">
+    <span class="ds-badge ds-badge--accent">讲义</span>
+    <h2>有朋自远方来 · 深层含义</h2>
+    <h3>朋友的价值</h3>
+    <ul>
+        <li><b>知音难觅</b>：志同道合的朋友难得，从远方来访更显珍贵</li>
+        <li><b>切磋琢磨</b>：与朋友交流学问，可以互相启发、共同进步</li>
+        <li><b>精神共鸣</b>：与知己相聚，是精神上的享受</li>
+    </ul>
+    <div class="ds-quote">"独学而无友，则孤陋而寡闻。"<br><span style="font-size:0.875rem;">——《礼记·学记》</span></div>
+    <p>孔子重视交友，认为真正的朋友能够：</p>
+    <ul>
+        <li>互相学习、取长补短</li>
+        <li>互相规劝、共同进步</li>
+        <li>在精神上相互支持</li>
+    </ul>
+</div>
+
+<!-- ====== 第8页：第三问详解（上） ====== -->
+<div class="slide" data-page="7" data-section="lecture">
+    <span class="ds-badge ds-badge--accent">讲义</span>
+    <h2>第三问：人不知而不愠</h2>
+    <div class="ds-quote" style="font-size:1.5rem;">"人不知而不愠，不亦君子乎？"</div>
+    <h3>逐字解读</h3>
+    <ul>
+        <li><b>人</b>：别人、他人</li>
+        <li><b>不知</b>：不了解、不理解</li>
+        <li><b>而</b>：却、但是，表示转折</li>
+        <li><b>不愠</b>：不生气、不怨恨（愠 yùn）</li>
+        <li><b>君子</b>：有道德修养的人</li>
+    </ul>
+    <p><span class="ds-highlight">"愠"</span>：心中的怨恨、不满，比"怒"（发怒）程度轻，但更为持久。</p>
+</div>
+
+<!-- ====== 第9页：第三问详解（下） ====== -->
+<div class="slide" data-page="8" data-section="lecture">
+    <span class="ds-badge ds-badge--accent">讲义</span>
+    <h2>人不知而不愠 · 深层含义</h2>
+    <h3>君子的修养</h3>
+    <p>这句话是三者中境界最高的。它告诉我们：</p>
+    <ul>
+        <li><b>不追求虚名</b>：君子做事是为了内心的充实，不是为了别人的认可</li>
+        <li><b>心态平和</b>：即使不被理解，也能保持内心的平静</li>
+        <li><b>反求诸己</b>：别人不理解，首先反省自己是否做得不够好</li>
+    </ul>
+    <div class="ds-quote">"不患人之不己知，患不知人也。"<br><span style="font-size:0.875rem;">——《论语·学而》</span></div>
+    <p class="ds-caption">真正的君子，不担心别人不了解自己，而担心自己不了解别人。这是一种豁达的人生态度。</p>
+</div>
+
+<!-- ====== 第10页：三问关系总结 ====== -->
+<div class="slide" data-page="9" data-section="lecture">
+    <span class="ds-badge ds-badge--accent">讲义小结</span>
+    <h2>三问的内在联系</h2>
+    <p>这三句话不是孤立的，而是构成了一个完整的修养体系：</p>
+    <div class="summary-grid">
+        <div class="summary-card">
+            <div class="card-label">对己</div>
+            <div class="card-value">学而时习</div>
+            <div style="font-size:0.875rem;color:var(--ds-color-muted);margin-top:var(--ds-space-2);">自我提升</div>
+        </div>
+        <div class="summary-card">
+            <div class="card-label">对人</div>
+            <div class="card-value">有朋远来</div>
+            <div style="font-size:0.875rem;color:var(--ds-color-muted);margin-top:var(--ds-space-2);">待人以诚</div>
+        </div>
+        <div class="summary-card">
+            <div class="card-label">对世</div>
+            <div class="card-value">人不知愠</div>
+            <div style="font-size:0.875rem;color:var(--ds-color-muted);margin-top:var(--ds-space-2);">处世淡然</div>
+        </div>
+    </div>
+    <p style="margin-top:var(--ds-space-6);">从<span class="ds-highlight">修身</span>到<span class="ds-highlight">齐家</span>，再到<span class="ds-highlight">处世</span>，这是一个由内而外的修养过程。</p>
+    <div class="ds-quote" style="margin-top:var(--ds-space-6);">"古之学者为己，今之学者为人。"<br><span style="font-size:0.875rem;">——《论语·宪问》</span></div>
+</div>
+
+<!-- ====== 第11页：测验说明 ====== -->
+<div class="slide" data-page="10" data-section="quiz" style="align-items:center;text-align:center;">
+    <span class="ds-badge ds-badge--success">测验</span>
+    <h2 style="border:none;text-align:center;padding-bottom:0;">测验说明</h2>
+    <ul style="text-align:left;margin-top:var(--ds-space-6);display:inline-block;">
+        <li>共 <b>10 道</b> 选择题，每题 <b>3 个</b> 选项</li>
+        <li>每题 10 分，满分 100 分</li>
+        <li>点击选项即可作答</li>
+        <li>选择后会显示正确答案和讲解</li>
+        <li>可以随时返回讲义部分复习</li>
+    </ul>
+    <p style="margin-top:var(--ds-space-10);text-align:center;font-size:1.25rem;color:var(--ds-accent);font-weight:700;">准备好了吗？</p>
+</div>
+
+<!-- 测验1-10 -->
+<div class="slide" data-page="11" data-section="quiz" id="quiz-0"></div>
+<div class="slide" data-page="12" data-section="quiz" id="quiz-1"></div>
+<div class="slide" data-page="13" data-section="quiz" id="quiz-2"></div>
+<div class="slide" data-page="14" data-section="quiz" id="quiz-3"></div>
+<div class="slide" data-page="15" data-section="quiz" id="quiz-4"></div>
+<div class="slide" data-page="16" data-section="quiz" id="quiz-5"></div>
+<div class="slide" data-page="17" data-section="quiz" id="quiz-6"></div>
+<div class="slide" data-page="18" data-section="quiz" id="quiz-7"></div>
+<div class="slide" data-page="19" data-section="quiz" id="quiz-8"></div>
+<div class="slide" data-page="20" data-section="quiz" id="quiz-9"></div>
+
+<!-- ====== 第21页：测验得分 ====== -->
+<div class="slide" data-page="21" data-section="review" id="quiz-score" style="align-items:center;text-align:center;">
+    <span class="ds-badge ds-badge--success">测验得分</span>
+    <h2 style="border:none;text-align:center;padding-bottom:0;">测验完成！</h2>
+    <div style="margin-top:var(--ds-space-10);">
+        <div style="font-size:5rem;color:var(--ds-accent);font-weight:700;font-family:var(--ds-font-display);line-height:1;" id="score-display">0</div>
+        <div style="font-size:1.5rem;margin-top:var(--ds-space-4);color:var(--ds-color-fg-strong);font-weight:600;" id="score-message">正在计算得分...</div>
+        <div style="margin-top:var(--ds-space-8);font-size:1.125rem;color:var(--ds-color-fg);background:var(--ds-color-surface);padding:var(--ds-space-6);border-radius:var(--ds-radius-xl);display:inline-block;text-align:left;">
+            <p style="margin-bottom:var(--ds-space-3);">✅ 答对题数：<b id="correct-count" style="color:var(--ds-color-success);font-size:1.25rem;">0</b> / 10</p>
+            <p style="margin-bottom:var(--ds-space-3);">📊 总得分：<b id="total-score" style="color:var(--ds-accent);font-size:1.25rem;">0</b> 分（满分 100 分）</p>
+            <p>📈 正确率：<b id="score-percent" style="color:var(--ds-color-info);font-size:1.25rem;">0%</b></p>
+        </div>
+        <button class="retake-btn" id="retake-btn" aria-label="重新答题" style="margin-top:var(--ds-space-6);">↺ 重新答题</button>
+    </div>
+</div>
+
+<!-- ====== 第22页：答疑解惑 ====== -->
+<div class="slide" data-page="22" data-section="review">
+    <span class="ds-badge ds-badge--accent">答疑解惑</span>
+    <h2>常见问题解答</h2>
+    <h3>Q1："学而时习之"的"习"只是复习吗？</h3>
+    <p>A：不只是复习，更重要的是<span class="ds-highlight">实践</span>。清代学者颜元说："习行经济，学之真髓。"学到的知识要运用到实际生活中，才能真正掌握。</p>
+    <h3>Q2：为什么"有朋自远方来"会让人快乐？</h3>
+    <p>A：在古代交通不便，朋友从远方来访实属不易。更重要的是，志同道合的朋友能够互相启发，这种<span class="ds-highlight">精神交流</span>带来的快乐是独特的。</p>
+    <h3>Q3："人不知而不愠"是不是让人不求上进？</h3>
+    <p>A：恰恰相反。这是说君子不追求虚名，但会<span class="ds-highlight">反求诸己</span>——别人不理解，先反省自己哪里做得不够好，然后继续努力。</p>
+</div>
+
+<!-- ====== 第23页：生活应用 ====== -->
+<div class="slide" data-page="23" data-section="review">
+    <span class="ds-badge ds-badge--accent">答疑解惑</span>
+    <h2>生活中的应用</h2>
+    <h3>如何做到"学而时习之"？</h3>
+    <ul>
+        <li>每天固定时间复习当天所学</li>
+        <li>把学到的知识讲给别人听</li>
+        <li>在实践中运用所学</li>
+        <li>保持好奇心，享受学习的乐趣</li>
+    </ul>
+    <h3>如何做到"有朋自远方来"？</h3>
+    <ul>
+        <li>珍惜志同道合的朋友</li>
+        <li>主动与朋友交流思想</li>
+        <li>互相学习、共同进步</li>
+    </ul>
+    <h3>如何做到"人不知而不愠"？</h3>
+    <ul>
+        <li>做事出于内心，不为虚名</li>
+        <li>被误解时先反省自己</li>
+        <li>保持平和的心态</li>
+    </ul>
+</div>
+
+<!-- ====== 第24页：课程总结 ====== -->
+<div class="slide" data-page="24" data-section="review">
+    <span class="ds-badge ds-badge--accent">答疑解惑</span>
+    <h2>课程总结</h2>
+    <p>今天我们深入学习了《论语·学而》开篇的三句话：</p>
+    <div class="ds-quote" style="font-size:1.25rem;">
+        学而时习之，不亦说乎？<br>
+        有朋自远方来，不亦乐乎？<br>
+        人不知而不愠，不亦君子乎？
+    </div>
+    <p>这三句话告诉我们：</p>
+    <ol>
+        <li><b>学习</b>要持之以恒，乐在其中</li>
+        <li><b>交友</b>要志同道合，以诚相待</li>
+        <li><b>处世</b>要淡泊名利，修养内心</li>
+    </ol>
+    <hr class="ds-divider">
+    <p>希望同学们能把这些智慧运用到日常生活中，做一个真正的君子。</p>
+</div>
+
+<!-- ====== 第25页：结束页 ====== -->
+<div class="slide end-slide" data-page="25" data-section="review">
+    <div class="cover-ornament"></div>
+    <h2 class="ds-display">谢谢大家</h2>
+    <div class="cover-ornament"></div>
+    <div class="end-quote">
+        "学而时习之，不亦说乎？"<br>
+        <span style="font-size:0.875rem;color:var(--ds-color-muted);">—— 《论语·学而》</span>
+    </div>
+    <div class="cover-seal">学而</div>
+</div>
+
+</div><!-- slide-container -->
+</div><!-- slide-viewport -->
+
+<!-- 底部进度条 -->
+<div class="progress-bar-bottom">
+    <div class="progress-bar-fill" id="progress-fill" style="width:5%"></div>
+</div>
+
+<!-- 键盘提示 -->
+<div class="kbd-hint">
+    <span class="kbd">←</span><span class="kbd">→</span> 翻页
+    <span style="margin-left:8px"><span class="kbd">Space</span> 下一页</span>
+</div>
+
+<!-- 自定义测验题目 -->
+<script>
+window.GUOXUE_QUIZ_OVERRIDE = [
+    {
+        q: '"学而时习之，不亦说乎"中的"说"字应该怎么读？',
+        opts: ['shuō（说话的说）', 'yuè（通"悦"）', 'shuì（说服的说）'],
+        ans: 1,
+        exp: '"说"在这里读 yuè，通"悦"，意思是愉快、高兴。这是一个通假字，在古代汉语中很常见。'
+    },
+    {
+        q: '"有朋自远方来"中的"朋"指的是什么人？',
+        opts: ['任何认识的人', '志同道合的朋友', '亲戚家人'],
+        ans: 1,
+        exp: '"朋"特指志同道合的朋友，不是一般的熟人或酒肉朋友。古代"同门曰朋，同志曰友"，强调精神上的契合。'
+    },
+    {
+        q: '"人不知而不愠"中的"愠"是什么意思？',
+        opts: ['高兴', '生气、怨恨', '惊讶'],
+        ans: 1,
+        exp: '"愠"（yùn）指心中的怨恨、不满，比"怒"（发怒）程度轻，但更为持久。这句话是说别人不了解自己，也不生气。'
+    },
+    {
+        q: '这三句话分别对应哪三个层面的修养？',
+        opts: ['对己、对人、对世', '对天、对地、对人', '对师、对友、对亲'],
+        ans: 0,
+        exp: '第一问"学而时习之"是对自己（对己），第二问"有朋自远方来"是对朋友（对人），第三问"人不知而不愠"是对世人（对世）。'
+    },
+    {
+        q: '"学而时习之"的"习"最准确的理解是什么？',
+        opts: ['只是复习书本', '温习和实践', '预习新课'],
+        ans: 1,
+        exp: '"习"不只是复习，更重要的是实践。孔子强调学以致用，把学到的知识运用到实际生活中，才能真正掌握。'
+    },
+    {
+        q: '这三句话出自《论语》的哪一篇？',
+        opts: ['《为政》', '《学而》', '《述而》'],
+        ans: 1,
+        exp: '这三句话出自《论语·学而》篇的第一章，是整部《论语》的开篇，也是理解孔子思想的重要入门。'
+    },
+    {
+        q: '"学而时习之，不亦说乎"中的"时"是什么意思？',
+        opts: ['时间', '按时、时常', '时代'],
+        ans: 1,
+        exp: '"时"在这里是"按时、时常"的意思，表示学习后要按时温习、经常实践，这样才能体会到学习的快乐。'
+    },
+    {
+        q: '"人不知而不愠"体现了君子的什么品质？',
+        opts: ['不在乎别人的看法', '不追求虚名，心态平和', '不喜欢与人交往'],
+        ans: 1,
+        exp: '这句话体现君子不追求虚名，即使不被理解也能保持内心平静。不是不在乎别人，而是不因此心生怨恨。'
+    },
+    {
+        q: '以下哪句话也出自《论语·学而》篇？',
+        opts: ['"己所不欲，勿施于人"', '"弟子入则孝，出则弟"', '"三人行，必有我师焉"'],
+        ans: 1,
+        exp: '"弟子入则孝，出则弟"出自《论语·学而》第六章。A 出自《颜渊》篇，C 出自《述而》篇。'
+    },
+    {
+        q: '孔子认为学习的最高境界是什么？',
+        opts: ['考高分', '获得别人的称赞', '乐在其中'],
+        ans: 2,
+        exp: '孔子说"知之者不如好之者，好之者不如乐之者"，认为学习的最高境界是"乐"——发自内心地享受学习的过程。'
+    }
+];
+window.GUOXUE_COURSE_ID = 'xueer-sanwen';
+</script>
+
+<script src="../../assets/js/slide-engine.js"></script>
+</body>
+</html>
