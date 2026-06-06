@@ -113,7 +113,13 @@
     var html = '';
 
     // L1: 品牌标识
+    // L1: 品牌标识 + 折叠按钮（桌面端抽屉内的收起/展开控制）
+    html += '<div class="home-sidebar__header">';
     html += '<div class="home-sidebar__brand">课程导航</div>';
+    html += '<button class="ds-drawer-toggle-btn" id="drawer-close-btn" type="button" aria-label="收起侧栏">';
+    html += '<span aria-hidden="true">◀</span>';
+    html += '</button>';
+    html += '</div>';
 
     // L2: 搜索框
     html += '<div class="search-box"><input class="search-box__input" id="sidebar-search" type="text" placeholder="搜索课程…" autocomplete="off"></div>';
