@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="国学课堂 — 面向小学生的中华传统文化在线课件站，包含《论语》互动课程等。传承经典，启迪智慧，适合亲子共学。">
-  <meta name="author" content="国学课堂">
+  <meta name="author" content="八〇二三老战士">
   <meta property="og:title" content="国学课堂 — 传承经典 · 启迪智慧">
   <meta property="og:description" content="面向小学生的中华传统文化在线课件站，包含《论语》国学问答等互动课程。">
   <meta property="og:type" content="website">
@@ -27,107 +27,67 @@
   <div class="ink-dot ink-dot-3" aria-hidden="true"></div>
 
   <nav class="ds-navbar" aria-label="主导航">
-    <a class="ds-btn-nav" href="index.html">📜 国学课堂</a>
-    <div class="ds-nav-center"></div>
-    <div class="ds-nav-right">
-      <a class="ds-btn-nav" href="about.html">关于本站</a>
-    </div>
+    <a class="ds-btn-nav ds-btn-nav--brand" href="index.html">国学课堂</a>
+    <button
+      class="ds-btn-nav ds-btn-nav--icon"
+      id="drawer-toggle"
+      type="button"
+      aria-label="展开课程目录"
+      aria-expanded="false"
+    ><span class="ds-btn-nav__icon">☰</span><span class="ds-btn-nav__text">目录</span></button>
+    <ul class="ds-navbar__menu" id="primary-menu">
+      <li><a class="ds-btn-nav ds-btn-nav--ghost" href="index.html">首页</a></li>
+      <li><a class="ds-btn-nav ds-btn-nav--ghost" href="#lesson-cards">课程</a></li>
+      <li><a class="ds-btn-nav ds-btn-nav--ghost" href="#sidebar-nav">门类</a></li>
+    </ul>
+    <button
+      class="ds-btn-nav ds-btn-nav--icon"
+      id="menu-toggle"
+      type="button"
+      aria-controls="primary-menu"
+      aria-expanded="false"
+      aria-label="切换导航菜单"
+    ><span class="ds-btn-nav__icon">≡</span><span class="ds-btn-nav__text">菜单</span></button>
+    <a class="ds-btn-nav" href="about.html">关于本站</a>
   </nav>
 
-  <main id="main-content" class="page-wrapper">
-    <div class="ds-container">
+  <div class="home-wrapper">
+    <!-- ===== 左侧边栏（抽屉式） ===== -->
+    <aside class="home-sidebar" id="sidebar-nav" aria-label="课程分类导航">
+      <!-- 由 homepage.js 渲染 -->
+    </aside>
 
-      <section class="ds-hero">
-        <h1>国学课堂</h1>
-        <p class="hero-subtitle">传承经典 · 启迪智慧</p>
-        <div class="hero-ornament" aria-hidden="true"></div>
-        <p class="hero-desc">
-          欢迎来到国学课堂！在这里，我们一起走近中华传统文化的瑰宝，
-          在经典中汲取智慧，在诵读中涵养品格。每一门课程都精心设计，
-          适合小学生循序渐进地学习。
-        </p>
+    <!-- ===== 中间主内容 ===== -->
+    <main id="main-content" class="home-content">
+      <!-- 系列课程封面 -->
+      <section class="series-cover" id="series-cover">
+        <div class="series-cover__inner">
+          <p class="series-cover__subtitle">传承经典 · 启迪智慧</p>
+          <h1 class="series-cover__title">国学课堂 · 系列课程总览</h1>
+          <p class="series-cover__desc">涵盖经史子集 · 蒙学书法国画等十二门类</p>
+          <div class="series-cover__stats" id="series-cover-stats"></div>
+          <a class="series-cover__cta" href="#lesson-cards">浏览课程 ↓</a>
+        </div>
       </section>
 
-      <section style="margin-bottom: var(--ds-space-12);">
-        <h2 class="ds-section-title">📚 课程目录</h2>
+      <section>
+        <div class="filter-bar">
+          <h2 class="ds-section-title" id="filter-title">全部课程</h2>
+        </div>
         <div id="lesson-cards" class="ds-card-grid"></div>
+        <div id="coming-soon" hidden></div>
       </section>
-
-    </div>
-  </main>
+    </main>
+  </div>
 
   <footer class="ds-footer">
-    © 2026 国学课堂 · Powered by GitHub Pages
+    © 2026 <a href="https://8023laozhanshi.cc/" target="_blank" rel="noopener">八〇二三老战士</a> · 国学课堂 · Powered by GitHub Pages
   </footer>
 
+  <script src="assets/data/categories.js"></script>
   <script src="assets/js/lessons-manifest.js"></script>
-  <script>
-    (function () {
-      var lessons = window.GUOXUE_LESSONS || [];
-      var container = document.getElementById('lesson-cards');
-
-      lessons.forEach(function (lesson) {
-        var isComing = lesson.status === 'coming';
-
-        var card = document.createElement('a');
-        card.className = 'ds-lesson-card';
-        card.href = lesson.path;
-        if (isComing) {
-          card.style.pointerEvents = 'none';
-          card.style.opacity = '0.5';
-        }
-
-        var iconDiv = document.createElement('div');
-        iconDiv.className = 'lesson-icon';
-        iconDiv.textContent = lesson.icon || '📚';
-
-        var gradeBadge = document.createElement('span');
-        gradeBadge.className = 'lesson-grade';
-        gradeBadge.textContent = lesson.grade || '';
-
-        var title = document.createElement('h3');
-        title.className = 'lesson-title';
-        title.textContent = lesson.title || '';
-
-        var subtitle = document.createElement('p');
-        subtitle.className = 'lesson-subtitle';
-        var meta = [lesson.subtitle || ''];
-        if (lesson.duration) meta.push(lesson.duration);
-        subtitle.textContent = meta.filter(Boolean).join(' · ');
-
-        var desc = document.createElement('p');
-        desc.className = 'lesson-desc';
-        desc.textContent = lesson.description || '';
-
-        var cta = document.createElement('div');
-        cta.className = 'lesson-cta';
-        var ctaText = document.createElement('span');
-        ctaText.textContent = isComing ? '即将上线' : '开始学习';
-        var arrow = document.createElement('span');
-        arrow.className = 'arrow';
-        arrow.textContent = isComing ? '' : ' →';
-        cta.appendChild(ctaText);
-        cta.appendChild(arrow);
-
-        if (isComing) {
-          var overlay = document.createElement('div');
-          overlay.textContent = '即将上线';
-          overlay.style.cssText = 'position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:700;color:var(--ds-color-muted);background:oklch(100% 0 0 / 0.7);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);border-radius:var(--ds-radius-2xl);z-index:2;pointer-events:none;letter-spacing:0.1em;';
-          card.style.position = 'relative';
-          card.appendChild(overlay);
-        }
-
-        card.appendChild(iconDiv);
-        card.appendChild(gradeBadge);
-        card.appendChild(title);
-        card.appendChild(subtitle);
-        card.appendChild(desc);
-        card.appendChild(cta);
-
-        container.appendChild(card);
-      });
-    })();
-  </script>
+  <script src="assets/js/navbar.js" defer></script>
+  <script src="assets/js/homepage.js" defer></script>
 
 </body>
 </html>

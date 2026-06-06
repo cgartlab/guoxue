@@ -40,8 +40,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="八〇二三老战士">
     <meta name="description" content="国学课堂课程模板">
-    <meta name="author" content="国学课堂">
+    <meta property="og:title" content="新课程标题 · 国学课堂">
+    <meta property="og:description" content="国学课堂课程模板">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guoxue.cgartlab.com/lessons/XX/index.html">
+    <link rel="canonical" href="https://guoxue.cgartlab.com/lessons/XX/index.html">
     <title>新课程标题 · 国学课堂</title>
     <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../assets/css/ds-design-system.css">
@@ -54,20 +59,22 @@
 <div class="ink-dot ink-dot-3" aria-hidden="true"></div>
 
 <!-- 导航栏 -->
-<nav class="ds-navbar">
+<nav class="ds-navbar" aria-label="课程导航">
+    <a class="ds-btn-nav ds-btn-nav--brand" href="../index.html">国学课堂</a>
+    <a class="ds-btn-nav ds-btn-nav--ghost" href="../index.html">← 返回目录</a>
     <div class="ds-tabs">
-        <button class="ds-tab active" data-section="lecture">📖 讲义</button>
-        <button class="ds-tab" data-section="quiz">✏️ 测验</button>
-        <button class="ds-tab" data-section="review">💬 答疑解惑</button>
+        <button class="ds-tab active" data-section="lecture">讲义</button>
+        <button class="ds-tab" data-section="quiz">测验</button>
+        <button class="ds-tab" data-section="review">答疑解惑</button>
     </div>
-    <div class="ds-nav-center">
+    <div class="ds-navbar__center">
         <span class="page-indicator" id="page-indicator">1 / 1</span>
     </div>
-    <div class="ds-nav-right">
+    <div class="ds-navbar__end">
         <div class="dots-row" id="dots-row"></div>
         <button class="ds-btn-nav" id="nav-prev" disabled>← 上一页</button>
         <button class="ds-btn-nav" id="nav-next">下一页 →</button>
-        <button class="fullscreen-btn" id="fullscreen-btn" title="切换全屏显示">⛶</button>
+        <button class="ds-btn-nav ds-btn-nav--icon" id="fullscreen-btn" title="切换全屏显示" aria-label="切换全屏显示"><span class="ds-btn-nav__icon">⛶</span><span class="ds-btn-nav__text">全屏</span></button>
     </div>
 </nav>
 

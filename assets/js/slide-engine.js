@@ -136,6 +136,7 @@
     document.addEventListener('click', function (e) {
         var btn = e.target.closest('.quiz-option');
         if (!btn) return;
+        e.stopPropagation(); // #19: 阻止冒泡到 viewport 半屏翻页
         var qi = parseInt(btn.dataset.q, 10);
         if (quizAnswered[qi]) return;
         quizAnswered[qi] = true;
@@ -154,10 +155,25 @@
         saveProgress();
     });
 
+    /* ===== 答案解析折叠 ===== */
+    document.addEventListener('click', function (e) {
+        var exp = e.target.closest('.quiz-explain.show');
+        if (!exp) return;
+        // 第二次点击收起
+        if (exp.classList.contains('exp-collapsed')) {
+            exp.classList.remove('exp-collapsed');
+            exp.style.maxHeight = exp.scrollHeight + 'px';
+        } else {
+            exp.classList.add('exp-collapsed');
+            exp.style.maxHeight = '0';
+        }
+    });
+
     /* ===== 重新答题 ===== */
     document.addEventListener('click', function(e) {
         var retake = e.target.closest('#retake-btn');
         if (!retake) return;
+        e.stopPropagation(); // #19: 阻止冒泡到 viewport 半屏翻页
         quizAnswered = {};
         quizScore = 0;
         document.querySelectorAll('.quiz-option').forEach(function(b) {
@@ -313,7 +329,7 @@
     /* ===== 触屏滑动 ===== */
     (function () {
         var touchStartX = 0, touchStartY = 0;
-        var swipeThreshold = window.innerWidth < 480 ? 70 : 50;
+        var swipeThreshold = window.innerWidth < 375 ? 60 : window.innerWidth < 480 ? 70 : 50;
         var container = document.querySelector('.slide-viewport');
         if (!container) return;
         container.addEventListener('touchstart', function (e) {
@@ -322,7 +338,7 @@
         }, { passive: true });
         container.addEventListener('touchend', function (e) {
             // #19: 答题区域内不触发滑动翻页，避免与答题按钮冲突
-            if (e.target.closest('.quiz-options-wrap, .quiz-explain, #retake-btn')) return;
+            if (e.target.closest('.quiz-options-wrap, .quiz-explain, #retake-btn, .quiz-option, .ds-tab, .progress-bar-bottom')) return;
             var deltaX = e.changedTouches[0].screenX - touchStartX;
             var deltaY = e.changedTouches[0].screenY - touchStartY;
             if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > swipeThreshold) {
@@ -337,9 +353,13 @@
         var viewport = document.querySelector('.slide-viewport');
         if (!viewport) return;
         viewport.addEventListener('click', function (e) {
-            if (e.target.closest('button, a, input, textarea, .quiz-option, .ds-btn-nav')) return;
+            // 排除所有交互元素
+            if (e.target.closest('button, a, input, textarea, select, .quiz-option, .quiz-explain, .ds-btn-nav, .ds-tab, .retake-btn')) return;
             var rect = viewport.getBoundingClientRect();
             var clickX = e.clientX - rect.left;
+            // #19: 防抖 500ms
+            if (viewport._lastClick && Date.now() - viewport._lastClick < 500) return;
+            viewport._lastClick = Date.now();
             if (clickX < rect.width / 2) goToPage(curPage - 1);
             else goToPage(curPage + 1);
         });
