@@ -82,7 +82,7 @@ window.GUOXUE_LESSONS = [
         path: 'lessons/03-xueer-xiaoti/index.html',
         icon: '🌿',
         grade: '小学中高年级',
-        description: '《论语·学而》第二章名句解读：孝悌是仁的根本，君子务本，本立而道生。配套五道互动测验。',
+        description: '《论语·学而》第二章名句解读：孝悌是仁的根本，君子务本，本立而道生。配套十道互动测验。',
         status: 'ready',
         duration: '约 10 分钟',
         subject: 'mengxue',
