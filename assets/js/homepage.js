@@ -145,7 +145,7 @@
       html += '</div>';
 
       // 子项容器(默认隐藏)
-      html += '<ul class="home-sidebar__nav" data-subject-group="' + esc(cat.key) + '" hidden>';
+      html += '<ul class="home-sidebar__nav" data-subject-group="' + esc(cat.key) + '" hidden role="group">';
 
       // 门类描述行 — 点击过滤
       html += '<li><a class="home-sidebar__link home-sidebar__link--filter" href="#" data-subject="' + esc(cat.key) + '" data-action="filter">';
@@ -187,6 +187,7 @@
         e.preventDefault();
         var key = header.getAttribute('data-group-key');
         var group = header.closest('.home-sidebar__group');
+        if (!group) return; // 空指针防护
         var subNav = group.querySelector('.home-sidebar__nav');
         if (subNav) {
           var isHidden = subNav.hasAttribute('hidden');
@@ -254,30 +255,34 @@
       }
     });
 
-    // 搜索过滤
+    // 搜索过滤 (带防抖)
     var searchInput = document.getElementById('sidebar-search');
     if (searchInput) {
+      var searchTimer = null;
       searchInput.addEventListener('input', function () {
-        var q = searchInput.value.trim().toLowerCase();
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(function () {
+          var q = searchInput.value.trim().toLowerCase();
 
-        // 过滤所有链接
-        nav.querySelectorAll('.home-sidebar__link').forEach(function (link) {
-          var text = (link.textContent || '').toLowerCase();
-          var li = link.closest('li');
-          if (!li) return;
-          if (q === '') {
-            li.style.display = '';
-          } else {
-            li.style.display = text.indexOf(q) !== -1 ? '' : 'none';
-          }
-        });
+          // 过滤所有链接
+          nav.querySelectorAll('.home-sidebar__link').forEach(function (link) {
+            var text = (link.textContent || '').toLowerCase();
+            var li = link.closest('li');
+            if (!li) return;
+            if (q === '') {
+              li.style.display = '';
+            } else {
+              li.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+            }
+          });
 
-        // 门类分组:组内任意一项可见则显示,否则隐藏
-        nav.querySelectorAll('.home-sidebar__group').forEach(function (group) {
-          var items = group.querySelectorAll('.home-sidebar__nav > li');
-          var anyVisible = Array.from(items).some(function (li) { return li.style.display !== 'none'; });
-          group.style.display = anyVisible ? '' : 'none';
-        });
+          // 门类分组：组内任意一项可见则显示，否则隐藏
+          nav.querySelectorAll('.home-sidebar__group').forEach(function (group) {
+            var items = group.querySelectorAll('.home-sidebar__nav > li');
+            var anyVisible = Array.from(items).some(function (li) { return li.style.display !== 'none'; });
+            group.style.display = anyVisible ? '' : 'none';
+          });
+        }, 200); // 200ms 防抖
       });
     }
   }
@@ -296,6 +301,7 @@
 
   /* ===== 渲染:课程卡片 ===== */
   var currentFilter = 'all';
+  var expandedGroups = {}; // 记录用户展开的门类状态
 
   function renderCards(filterSubject) {
     var gridEl = document.getElementById('lesson-cards');
@@ -322,9 +328,19 @@
         if (subject === 'all') return l.status === 'ready';
         return l.subject === subject && l.status === 'ready';
       });
-      filtered.forEach(function (lesson) {
-        gridEl.insertAdjacentHTML('beforeend', buildCardHTML(lesson));
-      });
+      
+      // 空课程列表友好提示
+      if (filtered.length === 0) {
+        gridEl.innerHTML = '<div class=\"ds-empty-state\" role=\"status\" style=\"text-align:center;padding:var(--ds-space-12);color:var(--ds-color-muted);\">' +
+          '<div style=\"font-size:3rem;margin-bottom:var(--ds-space-4);\" aria-hidden=\"true\">📚</div>' +
+          '<p>暂无课程</p>' +
+          '<p style=\"font-size:0.875rem;margin-top:var(--ds-space-2);\">该门类课程正在筹备中，敬请期待。</p>' +
+          '</div>';
+      } else {
+        filtered.forEach(function (lesson) {
+          gridEl.insertAdjacentHTML('beforeend', buildCardHTML(lesson));
+        });
+      }
     }
 
     renderFilterTitle(subject);

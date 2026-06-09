@@ -1,16 +1,1 @@
-# 工具/缓存目录(不入版本控制)
-.omo/
-node_modules/
-*.log
-.DS_Store
-Thumbs.db
-
-# 编辑器
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# 系统临时
-*.sync-conflict-*
-*.tmp
+Nothing should be ignored since the changes only include JavaScript source files (.js) which are not build artifacts, dependencies, or temporary files.
