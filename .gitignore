@@ -14,3 +14,4 @@ Thumbs.db
 # 系统临时
 *.sync-conflict-*
 *.tmp
+test-results/
