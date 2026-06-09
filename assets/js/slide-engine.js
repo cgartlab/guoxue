@@ -118,8 +118,8 @@
                     b.classList.add('disabled');
                 });
                 var expEl = document.getElementById('exp-' + idx);
-                if (expEl && quizScore > 0) {
-                    // 粗略判断正确/错误
+                if (expEl) {
+                    // 修复 0 分解析显示 bug: 不再检查 quizScore > 0
                     var btns = document.querySelectorAll('[data-q="' + idx + '"]');
                     btns.forEach(function(b) {
                         var oi = parseInt(b.dataset.o, 10);
@@ -282,7 +282,8 @@
 
     /* ===== 键盘 ===== */
     document.addEventListener('keydown', function (e) {
-        if (e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+        // 排除输入元素和可编辑区域
+        if (e.target && (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || e.target.isContentEditable)) return;
         if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
             e.preventDefault(); goToPage(curPage + 1);
         } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
