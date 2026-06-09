@@ -74,24 +74,21 @@ test.describe('Desktop (1440x900)', () => {
     await expect(stats).toHaveCount(3); // 已上线 / 筹备中 / 门类
   });
 
-  test('top nav menu shows pure text (no emoji)', async ({ page }) => {
+  test('top nav shows simple brand and about link without emoji', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    // 主菜单项(首页/课程/门类)
-    const menuLinks = page.locator('.ds-navbar__menu .ds-btn-nav--ghost');
-    await expect(menuLinks).toHaveCount(3);
-
-    // 品牌链接
+    // 首页导航条使用 ds-navbar--simple,仅含品牌+"关于本站"
     const brand = page.locator('.ds-btn-nav--brand');
     await expect(brand).toHaveText('国学课堂');
+    await expect(brand.locator('.ds-btn-nav__icon')).toHaveCount(0);
 
-    // 菜单切换按钮(桌面端可见,文字"菜单")
-    const menuToggle = page.locator('#menu-toggle .ds-btn-nav__text');
-    await expect(menuToggle).toHaveText('菜单');
+    // 关于本站链接
+    const aboutLink = page.locator('.ds-navbar__inner .ds-btn-nav').last();
+    await expect(aboutLink).toHaveText('关于本站');
 
-    // 抽屉切换按钮(桌面端可见,文字"目录")
-    const drawerToggle = page.locator('#drawer-toggle .ds-btn-nav__text');
-    await expect(drawerToggle).toHaveText('目录');
+    // 首页无菜单/抽屉切换按钮(这些仅在课程页的 ds-navbar--global 中存在)
+    await expect(page.locator('#menu-toggle')).toHaveCount(0);
+    await expect(page.locator('#drawer-toggle')).toHaveCount(0);
   });
 
   test('sidebar renders 12 collapsible categories (default collapsed)', async ({ page }) => {
@@ -167,27 +164,20 @@ test.describe('Tablet (768x1024)', () => {
 test.describe('Mobile (375x812)', () => {
   test.use({ viewport: { width: 375, height: 812 } });
 
-  test('top nav collapses to text menu button', async ({ page }) => {
+  test('simple navbar adapts to mobile viewport', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    const toggle = page.locator('#menu-toggle');
-    await expect(toggle).toBeVisible();
-    // 移动端只显示图标(无文字)
-    const menuToggleText = page.locator('#menu-toggle .ds-btn-nav__text');
-    const isVisible = await menuToggleText.isVisible();
-    expect(isVisible).toBe(false);
+    // 首页使用 ds-navbar--simple,无菜单切换按钮
+    await expect(page.locator('#menu-toggle')).toHaveCount(0);
 
-    const menu = page.locator('#primary-menu');
-    const hasOpenClass = await menu.evaluate(el => el.classList.contains('is-open'));
-    expect(hasOpenClass).toBe(false);
+    // 品牌链接可见
+    const brand = page.locator('.ds-btn-nav--brand');
+    await expect(brand).toBeVisible();
+    await expect(brand).toHaveText('国学课堂');
 
-    await toggle.click();
-    await expect(menu).toHaveClass(/is-open/);
-    await expect(toggle).toHaveAttribute('aria-expanded', 'true');
-
-    await toggle.click();
-    await expect(menu).not.toHaveClass(/is-open/);
-    await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    // 关于本站链接可见
+    const aboutLink = page.locator('.ds-navbar__inner .ds-btn-nav').last();
+    await expect(aboutLink).toBeVisible();
   });
 
   test('drawer toggle button visible on mobile', async ({ page }) => {
@@ -366,7 +356,7 @@ test.describe('Regression', () => {
   });
 
   test('lesson page still works', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/lessons/01-lunyu/index.html`);
+    await page.goto(`http://localhost:${PORT}/lessons/01-lunyu/index.html`, { waitUntil: 'domcontentloaded' });
 
     const hasHomeWrapper = await page.evaluate(() =>
       document.querySelector('.home-wrapper') !== null
