@@ -74,6 +74,34 @@ window.GUOXUE_LESSONS = [
         subject: 'mengxue',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '03-xueer-xiaoti',
+        title: '孝悌为仁之本',
+        subtitle: '学而第二章 · 有子曰',
+        path: 'lessons/03-xueer-xiaoti/index.html',
+        icon: '🌿',
+        grade: '小学中高年级',
+        description: '《论语·学而》第二章名句解读：孝悌是仁的根本，君子务本，本立而道生。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 10 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: false
+    },
+    {
+        id: '04-zengzi-sansheng',
+        title: '曾子三省',
+        subtitle: '吾日三省吾身',
+        path: 'lessons/04-zengzi-sansheng/index.html',
+        icon: '🔄',
+        grade: '小学中高年级',
+        description: '《论语·学而》第四章精讲：吾日三省吾身——为人谋而不忠乎？与朋友交而不信乎？传不习乎？配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
     // {

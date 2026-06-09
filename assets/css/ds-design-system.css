@@ -212,6 +212,90 @@ a { color: inherit; text-decoration: none; }
 }
 .ds-navbar__menu li { display: inline-flex; }
 
+/* ===== 分层导航:全局导航栏（课件页专用） ===== */
+.ds-navbar--global {
+    display: flex;
+    align-items: center;
+    gap: var(--ds-space-2);
+    height: 48px;
+    padding: 0 var(--ds-space-6);
+    background: oklch(99% 0.005 80 / 0.95);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--ds-color-border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+
+/* 全局导航不显示图标按钮 */
+.ds-navbar--global .ds-btn-nav--icon { display: none; }
+
+/* ===== 课程工具栏（课件页:全局导航下方） ===== */
+.ds-toolbar {
+    display: flex;
+    align-items: center;
+    gap: var(--ds-space-2);
+    height: 48px;
+    padding: 0 var(--ds-space-4);
+    background: oklch(98% 0.01 80 / 0.95);
+    border-bottom: 1px solid var(--ds-color-border);
+    position: fixed;
+    top: 48px; left: 0; right: 0;
+    z-index: 99;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ds-toolbar__right {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--ds-space-2);
+    min-width: 0;
+}
+
+.ds-toolbar .ds-tabs {
+    flex: 0 1 auto;
+    min-width: 0;
+}
+
+.ds-toolbar .ds-btn-nav {
+    height: 34px;
+    font-size: 0.75rem;
+    padding: 0 var(--ds-space-3);
+}
+
+/* 移动端:工具栏紧凑排列 */
+@media (max-width: 767px) {
+    .ds-toolbar {
+        padding: 0 var(--ds-space-2);
+        gap: 4px;
+        height: 44px;
+        top: 44px;
+    }
+    .ds-toolbar .ds-btn-nav {
+        height: 32px;
+        padding: 0 var(--ds-space-2);
+        font-size: 0.6875rem;
+    }
+    .ds-toolbar .ds-tab {
+        padding: var(--ds-space-1) var(--ds-space-2);
+        font-size: 0.6875rem;
+        white-space: nowrap;
+    }
+    .ds-toolbar__right .page-indicator {
+        font-size: 0.6875rem;
+    }
+    .ds-navbar--global {
+        padding: 0 var(--ds-space-3);
+        height: 44px;
+    }
+    .ds-navbar--global .ds-btn-nav--brand {
+        font-size: 0.875rem;
+    }
+}
+
 /* 移动端:主菜单切换为下拉(顶栏内) */
 @media (max-width: 767px) {
     .ds-navbar {
@@ -596,17 +680,62 @@ a { color: inherit; text-decoration: none; }
 .home-sidebar.is-collapsed .home-sidebar__group[data-group-key="guqin"] .home-sidebar__category-icon::after { content: '琴'; }
 .home-sidebar.is-collapsed .home-sidebar__group[data-group-key="qilei"] .home-sidebar__category-icon::after { content: '棋'; }
 
-/* L1: 品牌标识 — 最高层级 */
+/* L1: 侧栏头部（品牌标识 + 折叠按钮） */
+.home-sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--ds-space-4) var(--ds-space-3) var(--ds-space-3);
+  border-bottom: 2px solid var(--ds-color-border);
+  margin-bottom: var(--ds-space-2);
+}
+
 .home-sidebar__brand {
   font-family: var(--ds-font-display);
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--ds-color-fg-strong);
   letter-spacing: 0.04em;
-  padding: var(--ds-space-4) var(--ds-space-4) var(--ds-space-3);
-  margin-bottom: var(--ds-space-2);
-  border-bottom: 2px solid var(--ds-color-border);
   text-align: center;
+}
+
+/* 侧栏折叠按钮（桌面端抽屉内） */
+.home-sidebar.is-collapsed .home-sidebar__header {
+  flex-direction: column;
+  padding: var(--ds-space-2);
+}
+.home-sidebar.is-collapsed .home-sidebar__brand {
+  font-size: 0.875rem;
+  margin-bottom: var(--ds-space-1);
+}
+
+.ds-drawer-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-surface);
+  color: var(--ds-color-fg);
+  cursor: pointer;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  transition: background 0.15s, transform 0.2s;
+}
+.ds-drawer-toggle-btn:hover {
+  background: var(--ds-color-bg-hover, oklch(92% 0.01 80));
+}
+.ds-drawer-toggle-btn:active {
+  transform: scale(0.95);
+}
+.home-sidebar.is-collapsed .ds-drawer-toggle-btn {
+  width: 100%;
+  border: none;
+  border-radius: var(--ds-radius-sm);
+  font-size: 0.6875rem;
+  padding: 0 var(--ds-space-2);
 }
 
 /* L2: 搜索框 — 中等层级 */
@@ -1010,6 +1139,7 @@ html.dark .ds-navbar__menu {
     font-size: 1.75rem;
   }
 }
+}
 
 /* ========== 响应式 ========== */
 @media (max-width: 1023px) {
@@ -1148,7 +1278,7 @@ html.dark .ds-navbar__menu {
 /* ========== 课程页布局 ========== */
 .slide-viewport {
     position: relative; width: 100vw; height: 100vh;
-    padding-top: 60px;
+    padding-top: 96px;
     display: flex; justify-content: center; align-items: center; z-index: 1;
 }
 .slide-container {
@@ -1564,7 +1694,7 @@ html.dark .ds-navbar__menu {
 .skip-link:focus { top: var(--ds-space-2); }
 
 /* ========== 首页/关于页容器（可滚动） ========== */
-.page-wrapper { position: relative; z-index: 1; }
+.page-wrapper { position: relative; z-index: 1; padding-top: calc(60px + var(--ds-space-6)); }
 
 /* ========== 课程结束页 ========== */
 .end-slide .course-complete { text-align: center; }
