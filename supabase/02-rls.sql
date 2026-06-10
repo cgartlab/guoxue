@@ -11,15 +11,15 @@
  * 本系统使用 Casdoor（而非 Supabase Auth）做身份认证。
  * Casdoor JWT 的 sub claim 存储在 users.casdoor_id 字段。
  * 因此 RLS 不能直接使用 auth.uid()（它返回 Supabase Auth 的 ID）。
- * 改为通过 helper 函数 current_user_id() 从 JWT sub 映射到 users.id UUID。
- * 
- * 前置条件：在 Supabase Dashboard → Authentication → Settings → JWT
- * 中配置 Casdoor 的 JWT secret，让 Supabase 能验证 Casdoor 签发的 token。
+ * 改为通过 helper 函数 current_user_id() 从 X-Casdoor-Sub 请求 header
+ * 映射到 users.id UUID。前端 supabase-client.js 在每个 API 请求中
+ * 注入该 header。
  */
 
 -- ============================================================
--- 0. Helper 函数：从 Casdoor JWT 获取当前用户的 UUID
---    用途：代替 public.current_user_id()，通过 Casdoor sub claim 查到 users.id
+-- 0. Helper 函数：从 X-Casdoor-Sub header 获取当前用户的 UUID
+--    用途：代替 auth.uid()，通过 Casdoor sub claim 查到 users.id
+--    前端 supabase-client.js 会在每个请求中注入 X-Casdoor-Sub header
 -- ============================================================
 CREATE OR REPLACE FUNCTION public.current_user_id()
 RETURNS UUID
@@ -27,7 +27,8 @@ LANGUAGE SQL
 STABLE
 SECURITY DEFINER
 AS $$
-  SELECT id FROM public.users WHERE casdoor_id = (auth.jwt()->>'sub')
+  SELECT id FROM public.users 
+  WHERE casdoor_id = current_setting('request.headers', true)::jsonb->>'x-casdoor-sub'
 $$;
 
 -- ============================================================

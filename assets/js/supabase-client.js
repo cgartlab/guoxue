@@ -34,6 +34,14 @@
    */
   async function fetchSupabaseAPI(endpoint, options = {}) {
     const url = new URL(`${SUPABASE_URL}/rest/v1${endpoint}`)
+    
+    // 从 Casdoor 的 id_token 提取用户身份
+    let casdoorSub = null
+    try {
+      const idToken = AUTH && AUTH.parseIdToken ? AUTH.parseIdToken() : null
+      if (idToken && idToken.sub) casdoorSub = idToken.sub
+    } catch(e) { /* ignore */ }
+
     const fetchOptions = {
       method: options.method || 'GET',
       headers: {
@@ -41,6 +49,11 @@
         'Content-Type': 'application/json',
         'Prefer': options.prefer || ''
       }
+    }
+
+    // 传递 Casdoor 用户身份给 RLS
+    if (casdoorSub) {
+      fetchOptions.headers['X-Casdoor-Sub'] = casdoorSub
     }
 
     // 添加请求体
