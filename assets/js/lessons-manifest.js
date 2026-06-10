@@ -102,6 +102,20 @@ window.GUOXUE_LESSONS = [
         subject: 'mengxue',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '06-dizi-ruze-xiao',
+        title: '弟子入则孝',
+        subtitle: '先做人 · 后学文',
+        path: 'lessons/06-dizi-ruze-xiao/index.html',
+        icon: '🎓',
+        grade: '小学中高年级',
+        description: '《论语·学而》第六章精讲：先孝悌谨信爱众亲仁，行有余力则以学文——儒家教育思想的核心纲领。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
     // {
