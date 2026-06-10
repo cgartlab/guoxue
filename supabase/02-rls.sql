@@ -66,10 +66,14 @@ CREATE POLICY "Users can update own profile" ON public.users
   USING (public.current_user_id() = id)
   WITH CHECK (public.current_user_id() = id);
 
--- 服务端函数可以插入用户（创建/同步）
+-- 用户可以插入自己的资料（通过 Casdoor sub 判断，而非 current_user_id()）
+-- 注意：current_user_id() 依赖用户已存在，新用户插入时返回 NULL
+-- 因此 INSERT 策略直接用 header 中的 casdoor_id 来判断
 CREATE POLICY "Users can insert own profile" ON public.users
   FOR INSERT
-  WITH CHECK (public.current_user_id() = id);
+  WITH CHECK (
+    casdoor_id = current_setting('request.headers', true)::jsonb->>'x_casdoor_sub'
+  );
 
 -- ============================================================
 -- 2. Study Progress 表策略
