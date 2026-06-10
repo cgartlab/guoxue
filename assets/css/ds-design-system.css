@@ -1420,7 +1420,7 @@ body:has(.slide-viewport) {
 }
 
 .slide-viewport {
-    flex: 1;
+    flex: auto;
     position: relative;
     display: flex; justify-content: center; align-items: center; z-index: 1;
     min-height: 0; /* 允许 flex 收缩 */
@@ -1934,7 +1934,7 @@ html.is-fullscreen .lesson-footer {
     backdrop-filter: blur(12px);
 }
 html.is-fullscreen .slide-viewport {
-    flex: 1;
+    flex: auto;
     min-height: 0;
 }
 html.is-fullscreen .slide-container {
