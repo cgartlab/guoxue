@@ -11,13 +11,13 @@ const AUTH = (function() {
 
   // ============ 配置 ============
   const CONFIG = {
-    serverUrl: "/casdoor-api",
+    serverUrl: "/casdoor",
     clientId: "16891ab8fba3b3416919",
     scope: "openid profile email",
-    tokenEndpoint: "/login/oauth/access_token",
-    authorizeEndpoint: "https://8023laozhanshi.cc/login/oauth/authorize",
-    userinfoEndpoint: "/userinfo",
-    logoutEndpoint: "https://8023laozhanshi.cc/logout",
+    authorizeEndpoint: "/login/oauth/authorize",
+    tokenEndpoint: "/api/login/oauth/access_token",
+    userinfoEndpoint: "/api/userinfo",
+    logoutEndpoint: "/logout",
   };
 
   // ============ PKCE 工具 ============
@@ -143,7 +143,7 @@ const AUTH = (function() {
         code_challenge_method: "S256",
       });
 
-      window.location.href = CONFIG.authorizeEndpoint + "?" + params.toString();
+      window.location.href = CONFIG.serverUrl + "/login/oauth/authorize?" + params.toString();
     } catch (e) {
       console.error("[Auth] 登录失败:", e);
       alert("登录失败: " + (e.message || "未知错误") + "\n请检查浏览器控制台获取详细信息。");
