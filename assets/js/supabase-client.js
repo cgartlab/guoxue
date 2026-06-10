@@ -18,7 +18,7 @@
   // 配置
   // ============================================================
   const SUPABASE_URL = 'https://zbjdpwkcnfnrrnlwifti.supabase.co'
-  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpiamdkcHdrY25mbm5ycm5sd2lmdGkiLCJyb2xlIjoiYW5vbiIsImlhdCI6MTczMDY5NTA0NywiZXhwIjoxNzYyMjMxMDQ3fQ.EH6UYTH3FKhCYsVNWnFCPvKrCBWBhwL5d8xQ2MYL3z8'
+  const SUPABASE_ANON_KEY = 'sb_publishable_oFnI4iU_vmua5AZnVPJtCg_yX5GvkJ9'
 
   // 缓存用户信息和 session
   let cachedUser = null
@@ -33,18 +33,10 @@
    * 使用 Casdoor Token 调用 Supabase REST API
    */
   async function fetchSupabaseAPI(endpoint, options = {}) {
-    const token = AUTH && AUTH.getAccessToken ? AUTH.getAccessToken() : null
-    
-    if (!token) {
-      console.warn('[Supabase] 未登录或 Token 过期，无法调用 API')
-      return { data: null, error: 'Not authenticated', status: 401 }
-    }
-
     const url = new URL(`${SUPABASE_URL}/rest/v1${endpoint}`)
     const fetchOptions = {
       method: options.method || 'GET',
       headers: {
-        'Authorization': `Bearer ${token}`,
         'apikey': SUPABASE_ANON_KEY,
         'Content-Type': 'application/json',
         'Prefer': options.prefer || ''
@@ -143,8 +135,7 @@
       const idToken = AUTH.parseIdToken()
       if (!idToken) return null
 
-      // 第一次查询时，需要先同步用户到数据库
-      // 这里假设用户已通过 Casdoor 认证，从数据库取用户信息
+      // 从数据库查找用户
       const filter = buildFilter({
         casdoor_id: { eq: idToken.sub }
       })
@@ -152,7 +143,7 @@
       const { data, error } = await fetchSupabaseAPI(`/users?${filter}&select=*`)
 
       if (error || !data || data.length === 0) {
-        console.warn('[Supabase] 用户不存在或查询失败，自动创建用户...')
+        console.warn('[Supabase] 用户不存在，自动创建...')
         return await syncUserToSupabase(idToken)
       }
 
