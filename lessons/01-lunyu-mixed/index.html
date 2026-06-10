@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="八〇二三老战士">
-<meta name="description" content="在标准版基础上拓展内容深度,适合学有余力的学生深入研读。">
-<meta property="og:title" content="论语问答课件·混合版 · 国学课堂">
-<meta property="og:description" content="在标准版基础上拓展内容深度,适合学有余力的学生深入研读。">
+<meta name="author" content="鍏€囦簩涓夎€佹垬澹?>
+<meta name="description" content="鍦ㄦ爣鍑嗙増鍩虹涓婃嫇灞曞唴瀹规繁搴?閫傚悎瀛︽湁浣欏姏鐨勫鐢熸繁鍏ョ爺璇汇€?>
+<meta property="og:title" content="璁鸿闂瓟璇句欢路娣峰悎鐗?路 鍥藉璇惧爞">
+<meta property="og:description" content="鍦ㄦ爣鍑嗙増鍩虹涓婃嫇灞曞唴瀹规繁搴?閫傚悎瀛︽湁浣欏姏鐨勫鐢熸繁鍏ョ爺璇汇€?>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://guoxue.cgartlab.com/lessons/01-lunyu-mixed/index.html">
 <link rel="canonical" href="https://guoxue.cgartlab.com/lessons/01-lunyu-mixed/index.html">
-<title>《论语》问答课件 · 混合版 · 八〇二三老战士 · 国学课堂</title>
+<title>銆婅璇€嬮棶绛旇浠?路 娣峰悎鐗?路 鍏€囦簩涓夎€佹垬澹?路 鍥藉璇惧爞</title>
 <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,218 +23,193 @@
 <div class="ink-dot ink-dot-2"></div>
 <div class="ink-dot ink-dot-3"></div>
 
-<!-- ===== 全局导航 ===== -->
-<nav class="ds-navbar ds-navbar--global" aria-label="主导航">
-    <a class="ds-btn-nav ds-btn-nav--brand" href="../../index.html">国学课堂</a>
-    <a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html">首页</a>
-    <ul class="ds-navbar__menu" id="primary-menu">
-        <li><a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html#lesson-cards">课程</a></li>
-        <li><a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html#sidebar-nav">门类</a></li>
-    </ul>
-    <a class="ds-btn-nav" href="../../about.html">关于本站</a>
-</nav>
+<!-- ===== 鍏ㄥ眬瀵艰埅 ===== -->
+<nav data-navbar="global" class="ds-navbar" aria-label="涓诲鑸?></nav>
 
-<!-- ===== 课程工具栏 ===== -->
-<nav class="ds-toolbar" aria-label="课程工具栏">
-    <a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html">← 返回目录</a>
-    <div class="ds-tabs">
-        <button class="ds-tab active" data-section="lecture">讲义</button>
-        <button class="ds-tab" data-section="quiz">测验</button>
-        <button class="ds-tab" data-section="review">答疑解惑</button>
-    </div>
-    <div class="ds-toolbar__right">
-        <span class="page-indicator" id="page-indicator">1 / 26</span>
-        <div class="dots-row" id="dots-row"></div>
-        <button class="ds-btn-nav" id="nav-prev" disabled>← 上一页</button>
-        <button class="ds-btn-nav" id="nav-next">下一页 →</button>
-        <button class="ds-btn-nav ds-btn-nav--icon" id="fullscreen-btn" title="切换全屏显示" aria-label="切换全屏显示"><span class="ds-btn-nav__icon">⛶</span><span class="ds-btn-nav__text">全屏</span></button>
-    </div>
-</nav>
-
-<!-- 幻灯片容器 -->
+<!-- 骞荤伅鐗囧鍣?-->
 <div class="slide-viewport">
 <div class="slide-container">
 
-<!-- ====== 第1页：封面 ====== -->
+<!-- ====== 绗?椤碉細灏侀潰 ====== -->
 <div class="slide active cover-slide" data-page="0" data-section="lecture">
     <div class="cover-ornament"></div>
-    <h2 class="ds-display">论语国学问答</h2>
+    <h2 class="ds-display">璁鸿鍥藉闂瓟</h2>
     <div class="cover-ornament"></div>
-    <p class="cover-subtitle">传承经典 · 启迪智慧</p>
-    <p class="cover-desc">《论语》是儒家学派的经典著作，集中体现了孔子的思想精华。本课件将从讲义、测验、答疑三个方面，带领大家走进这部千古名著。</p>
-    <div class="cover-seal">论语</div>
+    <p class="cover-subtitle">浼犳壙缁忓吀 路 鍚开鏅烘収</p>
+    <p class="cover-desc">銆婅璇€嬫槸鍎掑瀛︽淳鐨勭粡鍏歌憲浣滐紝闆嗕腑浣撶幇浜嗗瓟瀛愮殑鎬濇兂绮惧崕銆傛湰璇句欢灏嗕粠璁蹭箟銆佹祴楠屻€佺瓟鐤戜笁涓柟闈紝甯﹂澶у璧拌繘杩欓儴鍗冨彜鍚嶈憲銆?/p>
+    <div class="cover-seal">璁鸿</div>
 </div>
 
-<!-- ====== 第2页：论语简介 ====== -->
+<!-- ====== 绗?椤碉細璁鸿绠€浠?====== -->
 <div class="slide" data-page="1" data-section="lecture">
-    <span class="ds-badge ds-badge--accent">讲义</span>
-    <h2>论语简介</h2>
+    <span class="ds-badge ds-badge--accent">璁蹭箟</span>
+    <h2>璁鸿绠€浠?/h2>
     <div class="slide-text-with-image">
-        <img src="https://www.kzbwg.cn/uploads/image/20240625/1719296489508023.jpg" alt="孔子燕居像" class="slide-image slide-image--portrait" style="border-radius:var(--ds-radius-lg);">
-        <p>《论语》是中国古代最重要的儒家经典之一，由孔子的弟子及其再传弟子编撰而成。</p>
+        <img src="https://www.kzbwg.cn/uploads/image/20240625/1719296489508023.jpg" alt="瀛斿瓙鐕曞眳鍍? class="slide-image slide-image--portrait" style="border-radius:var(--ds-radius-lg);">
+        <p>銆婅璇€嬫槸涓浗鍙や唬鏈€閲嶈鐨勫剴瀹剁粡鍏镐箣涓€锛岀敱瀛斿瓙鐨勫紵瀛愬強鍏跺啀浼犲紵瀛愮紪鎾拌€屾垚銆?/p>
         <ul>
-            <li>全书共 <span class="ds-highlight">20 篇，492 章</span></li>
-            <li>以语录体为主，记录孔子及其弟子的言行</li>
-            <li>"论"是编纂的意思，"语"是话语的意思</li>
-            <li>与《大学》《中庸》《孟子》合称 <span class="ds-highlight">"四书"</span></li>
+            <li>鍏ㄤ功鍏?<span class="ds-highlight">20 绡囷紝492 绔?/span></li>
+            <li>浠ヨ褰曚綋涓轰富锛岃褰曞瓟瀛愬強鍏跺紵瀛愮殑瑷€琛?/li>
+            <li>"璁?鏄紪绾傜殑鎰忔€濓紝"璇?鏄瘽璇殑鎰忔€?/li>
+            <li>涓庛€婂ぇ瀛︺€嬨€婁腑搴搞€嬨€婂瓱瀛愩€嬪悎绉?<span class="ds-highlight">"鍥涗功"</span></li>
         </ul>
     </div>
-    <div class="ds-quote">学而时习之，不亦说乎？<br>有朋自远方来，不亦乐乎？</div>
-    <p class="ds-caption">《论语》对中国两千多年的文化产生了深远影响，是古代读书人的必读书目。</p>
+    <div class="ds-quote">瀛﹁€屾椂涔犱箣锛屼笉浜﹁涔庯紵<br>鏈夋湅鑷繙鏂规潵锛屼笉浜︿箰涔庯紵</div>
+    <p class="ds-caption">銆婅璇€嬪涓浗涓ゅ崈澶氬勾鐨勬枃鍖栦骇鐢熶簡娣辫繙褰卞搷锛屾槸鍙や唬璇讳功浜虹殑蹇呰涔︾洰銆?/p>
 </div>
 
-<!-- ====== 第3页：孔子生平 ====== -->
+<!-- ====== 绗?椤碉細瀛斿瓙鐢熷钩 ====== -->
 <div class="slide" data-page="2" data-section="lecture">
-    <span class="ds-badge ds-badge--accent">讲义</span>
-    <h2>孔子生平</h2>
+    <span class="ds-badge ds-badge--accent">璁蹭箟</span>
+    <h2>瀛斿瓙鐢熷钩</h2>
     <div class="slide-text-with-image">
-        <img src="https://img.redocn.com/sheying/20141117/kongzizhenshihuaxiang_3535475.jpg" alt="孔子画像" class="slide-image slide-image--portrait" style="border-radius:var(--ds-radius-lg);">
-        <p><b>孔子</b>（公元前 551 年—公元前 479 年），名丘，字仲尼，春秋时期鲁国人。中国古代伟大的思想家、教育家，儒家学派创始人。</p>
-        <h3>一生轨迹</h3>
+        <img src="https://img.redocn.com/sheying/20141117/kongzizhenshihuaxiang_3535475.jpg" alt="瀛斿瓙鐢诲儚" class="slide-image slide-image--portrait" style="border-radius:var(--ds-radius-lg);">
+        <p><b>瀛斿瓙</b>锛堝叕鍏冨墠 551 骞粹€斿叕鍏冨墠 479 骞达級锛屽悕涓橈紝瀛椾徊灏硷紝鏄ョ鏃舵湡椴佸浗浜恒€備腑鍥藉彜浠ｄ紵澶х殑鎬濇兂瀹躲€佹暀鑲插锛屽剴瀹跺娲惧垱濮嬩汉銆?/p>
+        <h3>涓€鐢熻建杩?/h3>
         <ul>
-            <li>三岁丧父，自幼好学</li>
-            <li>三十岁创办私学，广收门徒</li>
-            <li>曾任鲁国大司寇，后周游列国十四年</li>
-            <li>晚年回到鲁国，专注教育和整理典籍</li>
+            <li>涓夊瞾涓х埗锛岃嚜骞煎ソ瀛?/li>
+            <li>涓夊崄宀佸垱鍔炵瀛︼紝骞挎敹闂ㄥ緬</li>
+            <li>鏇句换椴佸浗澶у徃瀵囷紝鍚庡懆娓稿垪鍥藉崄鍥涘勾</li>
+            <li>鏅氬勾鍥炲埌椴佸浗锛屼笓娉ㄦ暀鑲插拰鏁寸悊鍏哥睄</li>
         </ul>
     </div>
-    <h3>历史地位</h3>
+    <h3>鍘嗗彶鍦颁綅</h3>
     <ul>
-        <li>被尊称为 <span class="ds-highlight">"至圣先师"</span>、"万世师表"</li>
-        <li>弟子三千，优秀者七十二人</li>
+        <li>琚皧绉颁负 <span class="ds-highlight">"鑷冲湥鍏堝笀"</span>銆?涓囦笘甯堣〃"</li>
+        <li>寮熷瓙涓夊崈锛屼紭绉€鑰呬竷鍗佷簩浜?/li>
     </ul>
 </div>
 
-<!-- ====== 第4页：仁 ====== -->
+<!-- ====== 绗?椤碉細浠?====== -->
 <div class="slide" data-page="3" data-section="lecture">
-    <span class="ds-badge ds-badge--accent">讲义</span>
-    <h2>核心思想：仁</h2>
-    <p>"仁"是孔子思想的核心，最基本的含义是 <span class="ds-highlight">"爱人"</span>。</p>
-    <div class="ds-quote">樊迟问仁，子曰："爱人。"</div>
-    <h3>仁的实践原则</h3>
+    <span class="ds-badge ds-badge--accent">璁蹭箟</span>
+    <h2>鏍稿績鎬濇兂锛氫粊</h2>
+    <p>"浠?鏄瓟瀛愭€濇兂鐨勬牳蹇冿紝鏈€鍩烘湰鐨勫惈涔夋槸 <span class="ds-highlight">"鐖变汉"</span>銆?/p>
+    <div class="ds-quote">妯婅繜闂粊锛屽瓙鏇帮細"鐖变汉銆?</div>
+    <h3>浠佺殑瀹炶返鍘熷垯</h3>
     <ul>
-        <li><b>"己所不欲，勿施于人"</b>——自己不喜欢的事物，不要强加于别人</li>
-        <li><b>"己欲立而立人，己欲达而达人"</b>——自己想站得住，也要帮别人站得住</li>
+        <li><b>"宸辨墍涓嶆锛屽嬁鏂戒簬浜?</b>鈥斺€旇嚜宸变笉鍠滄鐨勪簨鐗╋紝涓嶈寮哄姞浜庡埆浜?/li>
+        <li><b>"宸辨绔嬭€岀珛浜猴紝宸辨杈捐€岃揪浜?</b>鈥斺€旇嚜宸辨兂绔欏緱浣忥紝涔熻甯埆浜虹珯寰椾綇</li>
     </ul>
-    <p>"仁"不仅是对他人的关爱，更是一种发自内心的道德自觉。</p>
-    <p class="ds-caption">"仁"字由"人"和"二"组成，意思是两个人之间的相处之道。</p>
+    <p>"浠?涓嶄粎鏄浠栦汉鐨勫叧鐖憋紝鏇存槸涓€绉嶅彂鑷唴蹇冪殑閬撳痉鑷銆?/p>
+    <p class="ds-caption">"浠?瀛楃敱"浜?鍜?浜?缁勬垚锛屾剰鎬濇槸涓や釜浜轰箣闂寸殑鐩稿涔嬮亾銆?/p>
 </div>
 
-<!-- ====== 第5页：学 ====== -->
+<!-- ====== 绗?椤碉細瀛?====== -->
 <div class="slide" data-page="4" data-section="lecture">
-    <span class="ds-badge ds-badge--accent">讲义</span>
-    <h2>核心思想：学</h2>
+    <span class="ds-badge ds-badge--accent">璁蹭箟</span>
+    <h2>鏍稿績鎬濇兂锛氬</h2>
     <div class="slide-text-with-image">
-        <img src="https://5b0988e595225.cdn.sohucs.com/images/20180623/545a9229432c44738c91ba936f247892.jpeg" alt="论语书法" class="slide-image slide-image--small" style="float:right;margin-left:var(--ds-space-5);border-radius:var(--ds-radius-lg);">
-        <p>孔子是中国历史上 <span class="ds-highlight">第一位创办私学</span> 的人，非常重视学习。</p>
-        <div class="ds-quote">学而时习之，不亦说乎？</div>
-        <h3>关于学习的经典名言</h3>
+        <img src="https://5b0988e595225.cdn.sohucs.com/images/20180623/545a9229432c44738c91ba936f247892.jpeg" alt="璁鸿涔︽硶" class="slide-image slide-image--small" style="float:right;margin-left:var(--ds-space-5);border-radius:var(--ds-radius-lg);">
+        <p>瀛斿瓙鏄腑鍥藉巻鍙蹭笂 <span class="ds-highlight">绗竴浣嶅垱鍔炵瀛?/span> 鐨勪汉锛岄潪甯搁噸瑙嗗涔犮€?/p>
+        <div class="ds-quote">瀛﹁€屾椂涔犱箣锛屼笉浜﹁涔庯紵</div>
+        <h3>鍏充簬瀛︿範鐨勭粡鍏稿悕瑷€</h3>
         <ul>
-            <li><b>"温故而知新，可以为师矣"</b>——复习旧知识能有新发现</li>
-            <li><b>"学而不思则罔，思而不学则殆"</b>——只学不思会迷惘，只思不学会危险</li>
-            <li><b>"知之为知之，不知为不知，是知也"</b>——懂就是懂，不懂就是不懂</li>
+            <li><b>"娓╂晠鑰岀煡鏂帮紝鍙互涓哄笀鐭?</b>鈥斺€斿涔犳棫鐭ヨ瘑鑳芥湁鏂板彂鐜?/li>
+            <li><b>"瀛﹁€屼笉鎬濆垯缃旓紝鎬濊€屼笉瀛﹀垯娈?</b>鈥斺€斿彧瀛︿笉鎬濅細杩锋儤锛屽彧鎬濅笉瀛︿細鍗遍櫓</li>
+            <li><b>"鐭ヤ箣涓虹煡涔嬶紝涓嶇煡涓轰笉鐭ワ紝鏄煡涔?</b>鈥斺€旀噦灏辨槸鎳傦紝涓嶆噦灏辨槸涓嶆噦</li>
         </ul>
     </div>
-    <p>学习不仅是为了获得知识，更是为了 <span class="ds-highlight">提升品德和修养</span>。</p>
+    <p>瀛︿範涓嶄粎鏄负浜嗚幏寰楃煡璇嗭紝鏇存槸涓轰簡 <span class="ds-highlight">鎻愬崌鍝佸痉鍜屼慨鍏?/span>銆?/p>
 </div>
 
-<!-- ====== 第6页：孝 ====== -->
+<!-- ====== 绗?椤碉細瀛?====== -->
 <div class="slide" data-page="5" data-section="lecture">
-    <span class="ds-badge ds-badge--accent">讲义</span>
-    <h2>核心思想：孝</h2>
-    <p>"孝"是儒家伦理道德的基础。一个人首先要孝敬父母，才能谈得上对他人和社会的责任。</p>
-    <div class="ds-quote">父母在，不远游，游必有方。</div>
-    <h3>关于孝的名言</h3>
+    <span class="ds-badge ds-badge--accent">璁蹭箟</span>
+    <h2>鏍稿績鎬濇兂锛氬瓭</h2>
+    <p>"瀛?鏄剴瀹朵鸡鐞嗛亾寰风殑鍩虹銆備竴涓汉棣栧厛瑕佸瓭鏁埗姣嶏紝鎵嶈兘璋堝緱涓婂浠栦汉鍜岀ぞ浼氱殑璐ｄ换銆?/p>
+    <div class="ds-quote">鐖舵瘝鍦紝涓嶈繙娓革紝娓稿繀鏈夋柟銆?/div>
+    <h3>鍏充簬瀛濈殑鍚嶈█</h3>
     <ul>
-        <li><b>"弟子入则孝，出则弟"</b>——年少在家要孝敬父母，出门要尊敬长辈</li>
-        <li><b>"色难。有事，弟子服其劳"</b>——对父母和颜悦色是最难的</li>
+        <li><b>"寮熷瓙鍏ュ垯瀛濓紝鍑哄垯寮?</b>鈥斺€斿勾灏戝湪瀹惰瀛濇暚鐖舵瘝锛屽嚭闂ㄨ灏婃暚闀胯緢</li>
+        <li><b>"鑹查毦銆傛湁浜嬶紝寮熷瓙鏈嶅叾鍔?</b>鈥斺€斿鐖舵瘝鍜岄鎮﹁壊鏄渶闅剧殑</li>
     </ul>
-    <p>真正的"孝"不只是物质上的供养，更重要的是对父母保持 <span class="ds-highlight">恭敬和发自内心的关爱</span>。</p>
+    <p>鐪熸鐨?瀛?涓嶅彧鏄墿璐ㄤ笂鐨勪緵鍏伙紝鏇撮噸瑕佺殑鏄鐖舵瘝淇濇寔 <span class="ds-highlight">鎭暚鍜屽彂鑷唴蹇冪殑鍏崇埍</span>銆?/p>
 </div>
 
-<!-- ====== 第7页：礼 ====== -->
+<!-- ====== 绗?椤碉細绀?====== -->
 <div class="slide" data-page="6" data-section="lecture">
-    <span class="ds-badge ds-badge--accent">讲义</span>
-    <h2>核心思想：礼</h2>
-    <p>"礼"是维持社会秩序和人际和谐的重要规范。</p>
-    <div class="ds-quote">不学礼，无以立。</div>
-    <h3>孔子强调的"礼"</h3>
+    <span class="ds-badge ds-badge--accent">璁蹭箟</span>
+    <h2>鏍稿績鎬濇兂锛氱ぜ</h2>
+    <p>"绀?鏄淮鎸佺ぞ浼氱З搴忓拰浜洪檯鍜岃皭鐨勯噸瑕佽鑼冦€?/p>
+    <div class="ds-quote">涓嶅绀硷紝鏃犱互绔嬨€?/div>
+    <h3>瀛斿瓙寮鸿皟鐨?绀?</h3>
     <ul>
-        <li>尊重他人，讲究礼貌</li>
-        <li>遵守社会规范和秩序</li>
-        <li>用"礼"来约束自己的行为</li>
-        <li><b>"克己复礼为仁"</b>——约束欲望，使言行符合礼的规范</li>
+        <li>灏婇噸浠栦汉锛岃绌剁ぜ璨?/li>
+        <li>閬靛畧绀句細瑙勮寖鍜岀З搴?/li>
+        <li>鐢?绀?鏉ョ害鏉熻嚜宸辩殑琛屼负</li>
+        <li><b>"鍏嬪繁澶嶇ぜ涓轰粊"</b>鈥斺€旂害鏉熸鏈涳紝浣胯█琛岀鍚堢ぜ鐨勮鑼?/li>
     </ul>
-    <p class="ds-caption">古代"六礼"指结婚的六个步骤，体现了古人对礼仪的重视。</p>
+    <p class="ds-caption">鍙や唬"鍏ぜ"鎸囩粨濠氱殑鍏釜姝ラ锛屼綋鐜颁簡鍙や汉瀵圭ぜ浠殑閲嶈銆?/p>
 </div>
 
-<!-- ====== 第8页：名句赏析（上） ====== -->
+<!-- ====== 绗?椤碉細鍚嶅彞璧忔瀽锛堜笂锛?====== -->
 <div class="slide" data-page="7" data-section="lecture">
-    <span class="ds-badge ds-badge--accent">讲义</span>
-    <h2>经典名句赏析（上）</h2>
-    <h3>一、三人行，必有我师焉</h3>
-    <p>几个人一起行走，其中必定有人可以做我的老师。要善于向身边的人学习，发现别人的优点来学习，看到缺点则反省自己。</p>
-    <h3>二、岁寒，然后知松柏之后凋也</h3>
-    <p>到了寒冷的季节，才知道松柏是最后凋落的。用松柏比喻有德行的人，只有在逆境中才能考验出品格的高尚。</p>
-    <h3>三、有朋自远方来，不亦乐乎</h3>
-    <p>有志同道合的朋友从远方来，不也是一件快乐的事吗？表达了对友谊和交流的珍视。</p>
+    <span class="ds-badge ds-badge--accent">璁蹭箟</span>
+    <h2>缁忓吀鍚嶅彞璧忔瀽锛堜笂锛?/h2>
+    <h3>涓€銆佷笁浜鸿锛屽繀鏈夋垜甯堢剦</h3>
+    <p>鍑犱釜浜轰竴璧疯璧帮紝鍏朵腑蹇呭畾鏈変汉鍙互鍋氭垜鐨勮€佸笀銆傝鍠勪簬鍚戣韩杈圭殑浜哄涔狅紝鍙戠幇鍒汉鐨勪紭鐐规潵瀛︿範锛岀湅鍒扮己鐐瑰垯鍙嶇渷鑷繁銆?/p>
+    <h3>浜屻€佸瞾瀵掞紝鐒跺悗鐭ユ澗鏌忎箣鍚庡噵涔?/h3>
+    <p>鍒颁簡瀵掑喎鐨勫鑺傦紝鎵嶇煡閬撴澗鏌忔槸鏈€鍚庡噵钀界殑銆傜敤鏉炬煆姣斿柣鏈夊痉琛岀殑浜猴紝鍙湁鍦ㄩ€嗗涓墠鑳借€冮獙鍑哄搧鏍肩殑楂樺皻銆?/p>
+    <h3>涓夈€佹湁鏈嬭嚜杩滄柟鏉ワ紝涓嶄害涔愪箮</h3>
+    <p>鏈夊織鍚岄亾鍚堢殑鏈嬪弸浠庤繙鏂规潵锛屼笉涔熸槸涓€浠跺揩涔愮殑浜嬪悧锛熻〃杈句簡瀵瑰弸璋婂拰浜ゆ祦鐨勭弽瑙嗐€?/p>
 </div>
 
-<!-- ====== 第9页：名句赏析（下） ====== -->
+<!-- ====== 绗?椤碉細鍚嶅彞璧忔瀽锛堜笅锛?====== -->
 <div class="slide" data-page="8" data-section="lecture">
-    <span class="ds-badge ds-badge--accent">讲义</span>
-    <h2>经典名句赏析（下）</h2>
+    <span class="ds-badge ds-badge--accent">璁蹭箟</span>
+    <h2>缁忓吀鍚嶅彞璧忔瀽锛堜笅锛?/h2>
     <div class="slide-text-with-image">
-        <img src="https://img.redocn.com/sheying/20170106/lunyumingyanzhuanshubeike_7738703.jpg" alt="论语碑刻" class="slide-image slide-image--small" style="float:right;margin-left:var(--ds-space-5);border-radius:var(--ds-radius-lg);">
-        <h3>四、吾十有五而志于学……</h3>
-        <p>十五岁立志学习，三十岁自立，四十岁不再迷惑，五十岁懂得天命，六十岁听进不同意见，七十岁随心所欲而不超出规矩。孔子对自己一生的总结。</p>
-        <h3>五、巧言令色，鲜矣仁</h3>
-        <p>花言巧语、假装和善的人很少有仁德。告诫我们不要被表面现象迷惑，要注重内心的真诚。</p>
-        <h3>六、君子坦荡荡，小人长戚戚</h3>
-        <p>君子心胸开阔坦荡，小人总是忧虑不安。教导我们做人要光明磊落。</p>
+        <img src="https://img.redocn.com/sheying/20170106/lunyumingyanzhuanshubeike_7738703.jpg" alt="璁鸿纰戝埢" class="slide-image slide-image--small" style="float:right;margin-left:var(--ds-space-5);border-radius:var(--ds-radius-lg);">
+        <h3>鍥涖€佸惥鍗佹湁浜旇€屽織浜庡鈥︹€?/h3>
+        <p>鍗佷簲宀佺珛蹇楀涔狅紝涓夊崄宀佽嚜绔嬶紝鍥涘崄宀佷笉鍐嶈糠鎯戯紝浜斿崄宀佹噦寰楀ぉ鍛斤紝鍏崄宀佸惉杩涗笉鍚屾剰瑙侊紝涓冨崄宀侀殢蹇冩墍娆茶€屼笉瓒呭嚭瑙勭煩銆傚瓟瀛愬鑷繁涓€鐢熺殑鎬荤粨銆?/p>
+        <h3>浜斻€佸阀瑷€浠よ壊锛岄矞鐭ｄ粊</h3>
+        <p>鑺辫█宸ц銆佸亣瑁呭拰鍠勭殑浜哄緢灏戞湁浠佸痉銆傚憡璇垜浠笉瑕佽琛ㄩ潰鐜拌薄杩锋儜锛岃娉ㄩ噸鍐呭績鐨勭湡璇氥€?/p>
+        <h3>鍏€佸悰瀛愬潶鑽¤崱锛屽皬浜洪暱鎴氭垰</h3>
+        <p>鍚涘瓙蹇冭兏寮€闃斿潶鑽★紝灏忎汉鎬绘槸蹇ц檻涓嶅畨銆傛暀瀵兼垜浠仛浜鸿鍏夋槑纾婅惤銆?/p>
     </div>
 </div>
 
-<!-- ====== 第10页：讲义小结 ====== -->
+<!-- ====== 绗?0椤碉細璁蹭箟灏忕粨 ====== -->
 <div class="slide" data-page="9" data-section="lecture">
-    <span class="ds-badge ds-badge--accent">讲义小结</span>
-    <h2>今天我们学习了</h2>
+    <span class="ds-badge ds-badge--accent">璁蹭箟灏忕粨</span>
+    <h2>浠婂ぉ鎴戜滑瀛︿範浜?/h2>
     <div class="summary-grid">
         <div class="summary-card">
-            <div class="card-label">经典著作</div>
-            <div class="card-value">《论语》20 篇 492 章</div>
+            <div class="card-label">缁忓吀钁椾綔</div>
+            <div class="card-value">銆婅璇€?0 绡?492 绔?/div>
         </div>
         <div class="summary-card">
-            <div class="card-label">至圣先师</div>
-            <div class="card-value">孔子 · 名丘字仲尼</div>
+            <div class="card-label">鑷冲湥鍏堝笀</div>
+            <div class="card-value">瀛斿瓙 路 鍚嶄笜瀛椾徊灏?/div>
         </div>
         <div class="summary-card">
-            <div class="card-label">核心思想</div>
-            <div class="card-value">仁 · 学 · 孝 · 礼</div>
+            <div class="card-label">鏍稿績鎬濇兂</div>
+            <div class="card-value">浠?路 瀛?路 瀛?路 绀?/div>
         </div>
         <div class="summary-card">
-            <div class="card-label">经典名句</div>
-            <div class="card-value">六句名言及含义</div>
+            <div class="card-label">缁忓吀鍚嶅彞</div>
+            <div class="card-value">鍏彞鍚嶈█鍙婂惈涔?/div>
         </div>
     </div>
-    <p style="margin-top:var(--ds-space-8);text-align:center;font-size:1.125rem;color:var(--ds-color-olive-600);font-weight:600;">接下来，进入测验环节 →</p>
+    <p style="margin-top:var(--ds-space-8);text-align:center;font-size:1.125rem;color:var(--ds-color-olive-600);font-weight:600;">鎺ヤ笅鏉ワ紝杩涘叆娴嬮獙鐜妭 鈫?/p>
 </div>
 
-<!-- ====== 第11页：测验说明 ====== -->
+<!-- ====== 绗?1椤碉細娴嬮獙璇存槑 ====== -->
 <div class="slide" data-page="10" data-section="quiz" style="align-items:center;text-align:center;">
-    <span class="ds-badge ds-badge--success">测验</span>
-    <h2 style="border:none;text-align:center;padding-bottom:0;">测验说明</h2>
+    <span class="ds-badge ds-badge--success">娴嬮獙</span>
+    <h2 style="border:none;text-align:center;padding-bottom:0;">娴嬮獙璇存槑</h2>
     <ul style="text-align:left;margin-top:var(--ds-space-6);display:inline-block;">
-        <li>共 <b>10 道</b> 选择题，每题 <b>3 个</b> 选项</li>
-        <li>每题 10 分，满分 100 分</li>
-        <li>点击选项即可作答，无需额外操作</li>
-        <li>选择后会显示正确答案和讲解</li>
-        <li>可以随时返回讲义部分复习</li>
+        <li>鍏?<b>10 閬?/b> 閫夋嫨棰橈紝姣忛 <b>3 涓?/b> 閫夐」</li>
+        <li>姣忛 10 鍒嗭紝婊″垎 100 鍒?/li>
+        <li>鐐瑰嚮閫夐」鍗冲彲浣滅瓟锛屾棤闇€棰濆鎿嶄綔</li>
+        <li>閫夋嫨鍚庝細鏄剧ず姝ｇ‘绛旀鍜岃瑙?/li>
+        <li>鍙互闅忔椂杩斿洖璁蹭箟閮ㄥ垎澶嶄範</li>
     </ul>
-    <p style="margin-top:var(--ds-space-10);text-align:center;font-size:1.25rem;color:var(--ds-accent);font-weight:700;">准备好了吗？</p>
+    <p style="margin-top:var(--ds-space-10);text-align:center;font-size:1.25rem;color:var(--ds-accent);font-weight:700;">鍑嗗濂戒簡鍚楋紵</p>
 </div>
 
-<!-- 测验1-10 -->
+<!-- 娴嬮獙1-10 -->
 <div class="slide" data-page="11" data-section="quiz" id="quiz-0"></div>
 <div class="slide" data-page="12" data-section="quiz" id="quiz-1"></div>
 <div class="slide" data-page="13" data-section="quiz" id="quiz-2"></div>
@@ -246,105 +221,106 @@
 <div class="slide" data-page="19" data-section="quiz" id="quiz-8"></div>
 <div class="slide" data-page="20" data-section="quiz" id="quiz-9"></div>
 
-<!-- ====== 第21页：测验得分 ====== -->
+<!-- ====== 绗?1椤碉細娴嬮獙寰楀垎 ====== -->
 <div class="slide" data-page="21" data-section="review" id="quiz-score" style="align-items:center;text-align:center;">
-    <span class="ds-badge ds-badge--success">测验得分</span>
-    <h2 style="border:none;text-align:center;padding-bottom:0;">测验完成！</h2>
+    <span class="ds-badge ds-badge--success">娴嬮獙寰楀垎</span>
+    <h2 style="border:none;text-align:center;padding-bottom:0;">娴嬮獙瀹屾垚锛?/h2>
     <div style="margin-top:var(--ds-space-10);">
         <div style="font-size:5rem;color:var(--ds-accent);font-weight:700;font-family:var(--ds-font-display);line-height:1;" id="score-display">0</div>
-        <div style="font-size:1.5rem;margin-top:var(--ds-space-4);color:var(--ds-color-fg-strong);font-weight:600;" id="score-message">正在计算得分...</div>
+        <div style="font-size:1.5rem;margin-top:var(--ds-space-4);color:var(--ds-color-fg-strong);font-weight:600;" id="score-message">姝ｅ湪璁＄畻寰楀垎...</div>
         <div style="margin-top:var(--ds-space-8);font-size:1.125rem;color:var(--ds-color-fg);background:var(--ds-color-surface);padding:var(--ds-space-6);border-radius:var(--ds-radius-xl);display:inline-block;text-align:left;">
-            <p style="margin-bottom:var(--ds-space-3);">✅ 答对题数：<b id="correct-count" style="color:var(--ds-color-success);font-size:1.25rem;">0</b> / 10</p>
-            <p style="margin-bottom:var(--ds-space-3);">📊 总得分：<b id="total-score" style="color:var(--ds-accent);font-size:1.25rem;">0</b> 分（满分 100 分）</p>
-            <p>📈 正确率：<b id="score-percent" style="color:var(--ds-color-info);font-size:1.25rem;">0%</b></p>
+            <p style="margin-bottom:var(--ds-space-3);">鉁?绛斿棰樻暟锛?b id="correct-count" style="color:var(--ds-color-success);font-size:1.25rem;">0</b> / 10</p>
+            <p style="margin-bottom:var(--ds-space-3);">馃搳 鎬诲緱鍒嗭細<b id="total-score" style="color:var(--ds-accent);font-size:1.25rem;">0</b> 鍒嗭紙婊″垎 100 鍒嗭級</p>
+            <p>馃搱 姝ｇ‘鐜囷細<b id="score-percent" style="color:var(--ds-color-info);font-size:1.25rem;">0%</b></p>
         </div>
     </div>
     <div id="quiz-review-content" style="margin-top:var(--ds-space-12);width:100%;max-width:800px;text-align:left;padding:var(--ds-space-8);"></div>
-    <button class="ds-btn-restart" id="restart-quiz" style="margin-top:var(--ds-space-10);padding:var(--ds-space-3) var(--ds-space-8);font-size:1.125rem;font-weight:600;background:var(--ds-accent);color:white;border:none;border-radius:var(--ds-radius-lg);cursor:pointer;transition:all var(--ds-duration-200) var(--ds-ease-out);box-shadow:var(--ds-shadow-md);">🔄 重新测试</button>
+    <button class="ds-btn-restart" id="restart-quiz" style="margin-top:var(--ds-space-10);padding:var(--ds-space-3) var(--ds-space-8);font-size:1.125rem;font-weight:600;background:var(--ds-accent);color:white;border:none;border-radius:var(--ds-radius-lg);cursor:pointer;transition:all var(--ds-duration-200) var(--ds-ease-out);box-shadow:var(--ds-shadow-md);">馃攧 閲嶆柊娴嬭瘯</button>
 </div>
 
-<!-- ====== 第22页：易错题回顾 ====== -->
+<!-- ====== 绗?2椤碉細鏄撻敊棰樺洖椤?====== -->
 <div class="slide" data-page="22" data-section="review">
-    <span class="ds-badge ds-badge--accent">答疑解惑</span>
-    <h2>常见易错题回顾</h2>
-    <h3>易错点一："说"字的通假</h3>
-    <p>"学而时习之，不亦说乎"中的"说"读 <b>yuè</b>，通"悦"，不是说话的意思。论语中经常出现通假字，阅读时要注意辨别。</p>
-    <h3>易错点二："知"字的多音</h3>
-    <p>"知之为知之，不知为不知，是知也"中，最后一个"知"读 <b>zhì</b>，通"智"。同一个字在不同位置可能有不同的读音和含义。</p>
-    <h3>易错点三：六艺 vs 六经</h3>
+    <span class="ds-badge ds-badge--accent">绛旂枒瑙ｆ儜</span>
+    <h2>甯歌鏄撻敊棰樺洖椤?/h2>
+    <h3>鏄撻敊鐐逛竴锛?璇?瀛楃殑閫氬亣</h3>
+    <p>"瀛﹁€屾椂涔犱箣锛屼笉浜﹁涔?涓殑"璇?璇?<b>yu猫</b>锛岄€?鎮?锛屼笉鏄璇濈殑鎰忔€濄€傝璇腑缁忓父鍑虹幇閫氬亣瀛楋紝闃呰鏃惰娉ㄦ剰杈ㄥ埆銆?/p>
+    <h3>鏄撻敊鐐逛簩锛?鐭?瀛楃殑澶氶煶</h3>
+    <p>"鐭ヤ箣涓虹煡涔嬶紝涓嶇煡涓轰笉鐭ワ紝鏄煡涔?涓紝鏈€鍚庝竴涓?鐭?璇?<b>zh矛</b>锛岄€?鏅?銆傚悓涓€涓瓧鍦ㄤ笉鍚屼綅缃彲鑳芥湁涓嶅悓鐨勮闊冲拰鍚箟銆?/p>
+    <h3>鏄撻敊鐐逛笁锛氬叚鑹?vs 鍏粡</h3>
     <ul>
-        <li><b>六艺</b>（技能）：礼、乐、射、御、书、数</li>
-        <li><b>六经</b>（著作）：《诗》《书》《礼》《乐》《易》《春秋》</li>
+        <li><b>鍏壓</b>锛堟妧鑳斤級锛氱ぜ銆佷箰銆佸皠銆佸尽銆佷功銆佹暟</li>
+        <li><b>鍏粡</b>锛堣憲浣滐級锛氥€婅瘲銆嬨€婁功銆嬨€婄ぜ銆嬨€婁箰銆嬨€婃槗銆嬨€婃槬绉嬨€?/li>
     </ul>
-    <p class="ds-caption">不要把"六艺"和"六经"混淆了！</p>
+    <p class="ds-caption">涓嶈鎶?鍏壓"鍜?鍏粡"娣锋穯浜嗭紒</p>
 </div>
 
-<!-- ====== 第23页：知识拓展 ====== -->
+<!-- ====== 绗?3椤碉細鐭ヨ瘑鎷撳睍 ====== -->
 <div class="slide" data-page="23" data-section="review">
-    <span class="ds-badge ds-badge--accent">答疑解惑</span>
-    <h2>知识拓展</h2>
-    <h3>你知道吗？</h3>
+    <span class="ds-badge ds-badge--accent">绛旂枒瑙ｆ儜</span>
+    <h2>鐭ヨ瘑鎷撳睍</h2>
+    <h3>浣犵煡閬撳悧锛?/h3>
     <ul>
-        <li>《论语》已被翻译成多种语言传遍世界。1593 年利玛窦将其翻译成拉丁文。</li>
-        <li>联合国教科文组织将 <span class="ds-highlight">"己所不欲，勿施于人"</span> 列为人类伦理道德的黄金法则。</li>
-        <li>孔子的生日（农历八月二十七）在古代被定为教师节。</li>
-        <li>韩国至今仍保留着许多儒家传统，被称为"儒教国家"。</li>
+        <li>銆婅璇€嬪凡琚炕璇戞垚澶氱璇█浼犻亶涓栫晫銆?593 骞村埄鐜涚灏嗗叾缈昏瘧鎴愭媺涓佹枃銆?/li>
+        <li>鑱斿悎鍥芥暀绉戞枃缁勭粐灏?<span class="ds-highlight">"宸辨墍涓嶆锛屽嬁鏂戒簬浜?</span> 鍒椾负浜虹被浼︾悊閬撳痉鐨勯粍閲戞硶鍒欍€?/li>
+        <li>瀛斿瓙鐨勭敓鏃ワ紙鍐滃巻鍏湀浜屽崄涓冿級鍦ㄥ彜浠ｈ瀹氫负鏁欏笀鑺傘€?/li>
+        <li>闊╁浗鑷充粖浠嶄繚鐣欑潃璁稿鍎掑浼犵粺锛岃绉颁负"鍎掓暀鍥藉"銆?/li>
     </ul>
-    <h3>推荐阅读</h3>
+    <h3>鎺ㄨ崘闃呰</h3>
     <ul>
-        <li>《论语译注》——杨伯峻 著</li>
-        <li>《论语新解》——钱穆 著</li>
-        <li>《孔子传》——鲍鹏山 著</li>
+        <li>銆婅璇瘧娉ㄣ€嬧€斺€旀潹浼郴 钁?/li>
+        <li>銆婅璇柊瑙ｃ€嬧€斺€旈挶绌?钁?/li>
+        <li>銆婂瓟瀛愪紶銆嬧€斺€旈矋楣忓北 钁?/li>
     </ul>
 </div>
 
-<!-- ====== 第24页：课程总结 ====== -->
+<!-- ====== 绗?4椤碉細璇剧▼鎬荤粨 ====== -->
 <div class="slide" data-page="24" data-section="review">
-    <span class="ds-badge ds-badge--accent">答疑解惑</span>
-    <h2>课程总结</h2>
-    <p>今天我们一起学习了：</p>
+    <span class="ds-badge ds-badge--accent">绛旂枒瑙ｆ儜</span>
+    <h2>璇剧▼鎬荤粨</h2>
+    <p>浠婂ぉ鎴戜滑涓€璧峰涔犱簡锛?/p>
     <ol>
-        <li>《论语》的基本信息与历史地位</li>
-        <li>孔子的生平与主要成就</li>
-        <li>四大核心思想：仁、学、孝、礼</li>
-        <li>六句经典名句的深刻含义</li>
-        <li>通过 10 道测验题巩固了所学知识</li>
+        <li>銆婅璇€嬬殑鍩烘湰淇℃伅涓庡巻鍙插湴浣?/li>
+        <li>瀛斿瓙鐨勭敓骞充笌涓昏鎴愬氨</li>
+        <li>鍥涘ぇ鏍稿績鎬濇兂锛氫粊銆佸銆佸瓭銆佺ぜ</li>
+        <li>鍏彞缁忓吀鍚嶅彞鐨勬繁鍒诲惈涔?/li>
+        <li>閫氳繃 10 閬撴祴楠岄宸╁浐浜嗘墍瀛︾煡璇?/li>
     </ol>
     <hr class="ds-divider">
-    <p>希望同学们能够：</p>
+    <p>甯屾湜鍚屽浠兘澶燂細</p>
     <ul>
-        <li>继续阅读《论语》原文</li>
-        <li>将论语的智慧运用到生活中</li>
-        <li>做一个有道德修养的人</li>
+        <li>缁х画闃呰銆婅璇€嬪師鏂?/li>
+        <li>灏嗚璇殑鏅烘収杩愮敤鍒扮敓娲讳腑</li>
+        <li>鍋氫竴涓湁閬撳痉淇吇鐨勪汉</li>
     </ul>
 </div>
 
-<!-- ====== 第25页：结束页 ====== -->
+<!-- ====== 绗?5椤碉細缁撴潫椤?====== -->
 <div class="slide end-slide" data-page="25" data-section="review">
     <div class="cover-ornament"></div>
-    <h2 class="ds-display">谢谢大家</h2>
+    <h2 class="ds-display">璋㈣阿澶у</h2>
     <div class="cover-ornament"></div>
     <div class="end-quote">
-        "学而不厌，诲人不倦"<br>
-        <span style="font-size:0.875rem;color:var(--ds-color-muted);">—— 孔子</span>
+        "瀛﹁€屼笉鍘岋紝璇蹭汉涓嶅€?<br>
+        <span style="font-size:0.875rem;color:var(--ds-color-muted);">鈥斺€?瀛斿瓙</span>
     </div>
-    <div class="cover-seal">论语</div>
+    <div class="cover-seal">璁鸿</div>
 </div>
 
 </div><!-- slide-container -->
 </div><!-- slide-viewport -->
 
-<!-- 底部进度条 -->
+<!-- 搴曢儴杩涘害鏉?-->
 <div class="progress-bar-bottom">
     <div class="progress-bar-fill" id="progress-fill" style="width:4%"></div>
 </div>
 
-<!-- 键盘提示 -->
+<!-- 閿洏鎻愮ず -->
 <div class="kbd-hint">
-    <span class="kbd">←</span><span class="kbd">→</span> 翻页
-    <span style="margin-left:8px"><span class="kbd">Space</span> 下一页</span>
+    <span class="kbd">鈫?/span><span class="kbd">鈫?/span> 缈婚〉
+    <span style="margin-left:8px"><span class="kbd">Space</span> 涓嬩竴椤?/span>
 </div>
 
 <script src="../../assets/js/slide-engine.js"></script>
+  <script src="../../assets/js/navbar-component.js" defer></script>
 </body>
 </html>
