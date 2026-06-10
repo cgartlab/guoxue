@@ -1,26 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--
     ============================================================
     🎓 国学课堂 · 课程模板 (Lesson Template)
     ============================================================
     【使用步骤 — 三步搞定一门新课】
-
     步骤 1: 复制本文件
         将本文件复制为 lessons/02-xxx/index.html (xxx 用 kebab-case)
         例如: cp lessons/_template.html lessons/02-shijing/index.html
-
     步骤 2: 填写内容
         a) 修改 <title> 标签 (顶部)
         b) 修改导航栏里的"📖 讲义"等三个 tab 的文字(可选)
         c) 找到下面标注了 【填写讲义内容】 的位置,撰写讲义幻灯片
         d) 找到 【填写测验题目】 的位置,定义本课的题目
         e) 找到 【填写答疑内容】 的位置,撰写答疑解惑页面
-
     步骤 3: 注册到课程目录
         打开 assets/js/lessons-manifest.js
         在 GUOXUE_LESSONS 数组中追加一个新对象,见文件末尾注释
         刷新首页(index.html)即可看到新课程
-
     【自定义测验题目】
         在 <script> 标签里、引用 slide-engine.js 之前,定义:
             window.GUOXUE_QUIZ_OVERRIDE = [
@@ -28,7 +24,6 @@
                 ...
             ];
         引擎会自动使用你的题目,无需修改 slide-engine.js
-
     【关键约定】
         - 每张幻灯片必须有 data-page="0,1,2..."(从 0 开始连续编号)
         - 章节归属用 data-section="lecture | quiz | review"
@@ -52,35 +47,15 @@
     <link rel="stylesheet" href="../assets/css/ds-design-system.css">
 </head>
 <body>
-
 <div class="bg-layer" aria-hidden="true"></div>
 <div class="ink-dot ink-dot-1" aria-hidden="true"></div>
 <div class="ink-dot ink-dot-2" aria-hidden="true"></div>
 <div class="ink-dot ink-dot-3" aria-hidden="true"></div>
-
 <!-- ===== 全局导航（由 navbar-component.js 统一渲染） ===== -->
 <nav data-navbar="global" class="ds-navbar" aria-label="主导航"></nav>
-
-<!-- ===== 课程工具栏 ===== -->
-<nav class="ds-toolbar" aria-label="课程工具栏">
-    <a class="ds-btn-nav ds-btn-nav--ghost" href="../index.html">← 返回目录</a>
-    <div class="ds-tabs">
-        <button class="ds-tab active" data-section="lecture">讲义</button>
-        <button class="ds-tab" data-section="quiz">测验</button>
-        <button class="ds-tab" data-section="review">答疑解惑</button>
-    </div>
-    <div class="ds-toolbar__right">
-        <span class="page-indicator" id="page-indicator">1 / 1</span>
-        <div class="dots-row" id="dots-row"></div>
-        <button class="ds-btn-nav" id="nav-prev" disabled>← 上一页</button>
-        <button class="ds-btn-nav" id="nav-next">下一页 →</button>
-        <button class="ds-btn-nav ds-btn-nav--icon" id="fullscreen-btn" title="切换全屏显示" aria-label="切换全屏显示"><span class="ds-btn-nav__icon">⛶</span><span class="ds-btn-nav__text">全屏</span></button>
-    </div>
-</nav>
-
+<!
 <div class="slide-viewport">
 <div class="slide-container">
-
     <!-- =============================================
          封面页 (第 1 页)
          ============================================= -->
@@ -92,12 +67,10 @@
         <p class="cover-desc">【一句话课程简介 · 30-60 字】</p>
         <div class="cover-seal">课程</div>
     </div>
-
     <!-- =============================================
          讲义区 (第 2 - N 页)
          【填写讲义内容】 — 在这里复制多个 .slide 块
          ============================================= -->
-
     <!-- 第 2 页示例:核心概念介绍 -->
     <div class="slide" data-page="1" data-section="lecture">
         <span class="ds-badge ds-badge--accent">讲义</span>
@@ -110,7 +83,6 @@
             <li>【要点 3】</li>
         </ul>
     </div>
-
     <!-- 第 3 页示例:含图片 -->
     <div class="slide" data-page="2" data-section="lecture">
         <span class="ds-badge ds-badge--accent">讲义</span>
@@ -120,13 +92,11 @@
             <p>【正文 ...】</p>
         </div>
     </div>
-
     <!-- =============================================
          测验区 (data-section="quiz")
          【填写测验题目】 — 在 JS 中定义 window.GUOXUE_QUIZ_OVERRIDE
          引擎会自动渲染到下面这些 .slide 容器里
          ============================================= -->
-
     <!-- 测验说明页 -->
     <div class="slide" data-page="3" data-section="quiz" style="align-items:center;text-align:center;">
         <span class="ds-badge ds-badge--success">测验</span>
@@ -138,13 +108,11 @@
             <li>可以随时返回讲义部分复习</li>
         </ul>
     </div>
-
     <!-- 测验容器 — id 必须为 quiz-0, quiz-1, quiz-2... 引擎会填充内容 -->
     <div class="slide" data-page="4" data-section="quiz" id="quiz-0"></div>
     <div class="slide" data-page="5" data-section="quiz" id="quiz-1"></div>
     <div class="slide" data-page="6" data-section="quiz" id="quiz-2"></div>
     <!-- 根据你的题目数量,继续添加 quiz-3, quiz-4, ... -->
-
     <!-- 测验得分页 — id="quiz-score" 是必须的 -->
     <div class="slide" data-page="7" data-section="quiz" id="quiz-score" style="align-items:center;text-align:center;">
         <span class="ds-badge ds-badge--success">测验得分</span>
@@ -158,7 +126,6 @@
             </div>
         </div>
     </div>
-
     <!-- =============================================
          答疑解惑区 (data-section="review")
          【填写答疑内容】
@@ -169,7 +136,6 @@
         <p>【易错点 1 的解释】</p>
         <p>【易错点 2 的解释】</p>
     </div>
-
     <div class="slide" data-page="9" data-section="review">
         <span class="ds-badge ds-badge--accent">答疑解惑</span>
         <h2>知识拓展</h2>
@@ -178,7 +144,6 @@
             <li>【拓展知识 2】</li>
         </ul>
     </div>
-
     <!-- 结束页 — cover-seal 文字可自定义 -->
     <div class="slide end-slide" data-page="10" data-section="review">
         <div class="cover-ornament"></div>
@@ -190,19 +155,33 @@
         </div>
         <div class="cover-seal">课程</div>
     </div>
-
 </div><!-- slide-container -->
 </div><!-- slide-viewport -->
-
-<div class="progress-bar-bottom">
-    <div class="progress-bar-fill" id="progress-fill" style="width:10%"></div>
+<footer class="lesson-footer">
+    <div class="lesson-footer__tabs">
+        <button class="ds-tab active" data-section="lecture">讲义</button>
+        <button class="ds-tab" data-section="quiz">测验</button>
+        <button class="ds-tab" data-section="review">答疑解惑</button>
+    </div>
+    <div class="lesson-footer__nav">
+        <a class="ds-btn-nav" href="../../index.html">← 返回首页</a>
+        <button class="ds-btn-nav" id="nav-prev" disabled>← 上一页</button>
+        <span class="lesson-footer__progress">
+            <span class="page-indicator" id="page-indicator">1 / 1</span>
+        </span>
+        <button class="ds-btn-nav" id="nav-next">下一页 →</button>
+        <a class="ds-btn-nav" id="nav-next-lesson" href="../NEXT_LESSON_DIR/">下一课 →</a>
+        <button class="ds-btn-nav" id="nav-fullscreen">⛶ 全屏</button>
+    </div>
+    <div class="progress-bar-bottom">
+        <div class="progress-bar-fill" id="progress-fill" style="width:4%"></div>
+    </div>
+</footer>
 </div>
-
 <div class="kbd-hint">
     <span class="kbd">←</span><span class="kbd">→</span> 翻页
     <span style="margin-left:8px"><span class="kbd">Space</span> 下一页</span>
 </div>
-
 <!-- ============================================================
      本课自定义测验题目(可选)
      如果不写,引擎使用论语课的默认题目(仅供预览,正式发布请覆盖)
@@ -216,7 +195,6 @@ window.GUOXUE_QUIZ_OVERRIDE = [
     { q: '【示例题 2】请填写第二个问题?', opts: ['选项 A', '选项 B', '选项 C'], ans: 1, exp: '请在发布前替换为真实题目' }
 ];
 </script>
-
 <!-- 导航栏组件(统一) -->
 <script src="../assets/js/navbar-component.js" defer></script>
 <!-- 共享课程引擎(不要修改) -->

@@ -295,13 +295,12 @@
         }
     });
 
-    /* ===== 全屏切换 ===== */
+    /* ===== 全屏切换（整个文档全屏，导航栏保持可见） ===== */
     var fullscreenBtn = $('fullscreen-btn');
-    var slideContainer = document.querySelector('.slide-container');
 
     function toggleFullscreen() {
         if (!document.fullscreenElement) {
-            var p = slideContainer && slideContainer.requestFullscreen && slideContainer.requestFullscreen();
+            var p = document.documentElement.requestFullscreen();
             if (p && p.then) p.then(function () { updateFullscreenBtn(true); }).catch(function () {});
             else updateFullscreenBtn(true);
         } else {
@@ -313,9 +312,9 @@
 
     function updateFullscreenBtn(isFullscreen) {
         if (!fullscreenBtn) return;
-        fullscreenBtn.classList.toggle('exit', isFullscreen);
-        fullscreenBtn.title = isFullscreen ? '退出全屏' : '切换全屏显示';
-        fullscreenBtn.innerHTML = '⛶';
+        document.documentElement.classList.toggle('is-fullscreen', isFullscreen);
+        fullscreenBtn.title = isFullscreen ? '退出全屏' : '全屏演示';
+        fullscreenBtn.innerHTML = isFullscreen ? '✕ 退出' : '⛶ 全屏';
     }
 
     if (fullscreenBtn) {
@@ -324,7 +323,12 @@
         });
     }
     document.addEventListener('fullscreenchange', function () {
-        updateFullscreenBtn(!!document.fullscreenElement);
+        var fs = !!document.fullscreenElement;
+        document.documentElement.classList.toggle('is-fullscreen', fs);
+        if (fullscreenBtn) {
+            fullscreenBtn.title = fs ? '退出全屏' : '全屏演示';
+            fullscreenBtn.innerHTML = fs ? '✕ 退出' : '⛶ 全屏';
+        }
     });
 
     /* ===== 触屏滑动 ===== */
@@ -339,7 +343,7 @@
         }, { passive: true });
         container.addEventListener('touchend', function (e) {
             // #19: 答题区域内不触发滑动翻页，避免与答题按钮冲突
-            if (e.target.closest('.quiz-options-wrap, .quiz-explain, #retake-btn, .quiz-option, .ds-tab, .progress-bar-bottom')) return;
+            if (e.target.closest('.quiz-options-wrap, .quiz-explain, #retake-btn, .quiz-option, .ds-tab, .progress-bar-bottom, .lesson-footer, .lesson-footer *')) return;
             var deltaX = e.changedTouches[0].screenX - touchStartX;
             var deltaY = e.changedTouches[0].screenY - touchStartY;
             if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > swipeThreshold) {
@@ -355,7 +359,7 @@
         if (!viewport) return;
         viewport.addEventListener('click', function (e) {
             // 排除所有交互元素
-            if (e.target.closest('button, a, input, textarea, select, .quiz-option, .quiz-explain, .ds-btn-nav, .ds-tab, .retake-btn')) return;
+            if (e.target.closest('button, a, input, textarea, select, .quiz-option, .quiz-explain, .ds-btn-nav, .ds-tab, .retake-btn, .lesson-footer')) return;
             var rect = viewport.getBoundingClientRect();
             var clickX = e.clientX - rect.left;
             // #19: 防抖 500ms

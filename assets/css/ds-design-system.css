@@ -1801,6 +1801,186 @@ html.dark .ds-navbar__menu {
 }
 .course-nav .ds-btn-nav { min-width: 120px; justify-content: center; }
 
+/* =============================================================
+ * 课件底部导航栏（替代顶部工具栏）
+ * ============================================================= */
+
+/* ----- 底部控制栏容器 ----- */
+.lesson-footer {
+    position: relative;
+    z-index: 10;
+    background: var(--ds-color-surface);
+    border-top: 1px solid var(--ds-color-border);
+    padding: var(--ds-space-3) var(--ds-space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--ds-space-2);
+}
+
+/* ----- 章节标签（讲义/测验/答疑解惑） ----- */
+.lesson-footer__tabs {
+    display: flex;
+    justify-content: center;
+    gap: var(--ds-space-2);
+    flex-wrap: wrap;
+}
+
+.lesson-footer__tabs .ds-tab {
+    font-size: 0.8125rem;
+    padding: 6px 16px;
+    border-radius: var(--ds-radius-lg);
+}
+
+/* ----- 导航按钮行 ----- */
+.lesson-footer__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--ds-space-2);
+    flex-wrap: wrap;
+}
+
+.lesson-footer__nav .ds-btn-nav,
+.lesson-footer__nav .ds-nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    height: 36px;
+    padding: 0 var(--ds-space-3);
+    border: 1px solid var(--ds-color-border);
+    border-radius: var(--ds-radius-lg);
+    background: var(--ds-color-surface-raised);
+    color: var(--ds-color-fg);
+    font-family: var(--ds-font-body);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all var(--ds-duration-200) var(--ds-ease-out);
+}
+
+.lesson-footer__nav .ds-btn-nav:hover,
+.lesson-footer__nav .ds-nav-link:hover {
+    background: var(--ds-color-olive-50);
+    border-color: var(--ds-color-olive-300);
+}
+
+.lesson-footer__nav .ds-btn-nav:disabled {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+}
+
+.lesson-footer__nav .lesson-footer__progress {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    padding: 0 var(--ds-space-2);
+    font-size: 0.8125rem;
+    color: var(--ds-color-muted);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.03em;
+}
+
+.lesson-footer__nav .lesson-footer__progress .page-indicator {
+    font-weight: 600;
+    color: var(--ds-color-fg);
+}
+
+/* ----- 底部进度条 ----- */
+.progress-bar-bottom {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background: var(--ds-color-border);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: var(--ds-space-1);
+}
+.progress-bar-bottom .progress-fill {
+    height: 100%;
+    background: var(--ds-accent);
+    border-radius: 2px;
+    transition: width var(--ds-duration-300) var(--ds-ease-out);
+}
+
+/* ===== 全屏模式 ===== */
+html.is-fullscreen .lesson-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background: var(--ds-color-surface / 0.95);
+    backdrop-filter: blur(12px);
+}
+
+html.is-fullscreen .slide-viewport {
+    height: calc(100vh - 60px - 130px); /* navbar(60px) + footer(~130px) */
+    overflow-y: auto;
+}
+
+html.is-fullscreen .slide-container {
+    min-height: auto;
+}
+
+/* ===== 暗色 — 底部导航 ===== */
+[data-theme="dark"] .lesson-footer {
+    background: var(--ds-color-surface);
+    border-top-color: var(--ds-color-border);
+}
+[data-theme="dark"] .lesson-footer__nav .ds-btn-nav,
+[data-theme="dark"] .lesson-footer__nav .ds-nav-link {
+    background: var(--ds-color-surface-raised);
+    border-color: var(--ds-color-border);
+}
+[data-theme="dark"] .lesson-footer__nav .ds-btn-nav:hover,
+[data-theme="dark"] .lesson-footer__nav .ds-nav-link:hover {
+    background: var(--ds-color-olive-50);
+}
+
+/* ===== 响应式 — 底部导航 ===== */
+@media (max-width: 767px) {
+    .lesson-footer {
+        padding: var(--ds-space-2) var(--ds-space-3);
+    }
+    .lesson-footer__nav .ds-btn-nav,
+    .lesson-footer__nav .ds-nav-link {
+        font-size: 0.75rem;
+        padding: 0 var(--ds-space-2);
+        height: 32px;
+    }
+    .lesson-footer__nav {
+        gap: 4px;
+    }
+    .lesson-footer__tabs .ds-tab {
+        font-size: 0.75rem;
+        padding: 4px 12px;
+    }
+    html.is-fullscreen .slide-viewport {
+        height: calc(100vh - 60px - 110px);
+    }
+}
+
+@media (max-width: 480px) {
+    .lesson-footer__nav {
+        gap: 2px;
+    }
+    .lesson-footer__nav .ds-btn-nav,
+    .lesson-footer__nav .ds-nav-link {
+        font-size: 0.6875rem;
+        padding: 0 8px;
+        height: 28px;
+    }
+}
+
+@media print {
+    .lesson-footer { display: none !important; }
+}
+
 /* ========== 打印样式 ========== */
 @media print {
     .bg-layer, .ink-dot, .ds-navbar, .progress-bar-bottom,
