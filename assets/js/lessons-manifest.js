@@ -104,13 +104,27 @@ window.GUOXUE_LESSONS = [
         featured: false
     },
     {
+        id: '05-dao-qiancheng-guo',
+        title: '道千乘之国',
+        subtitle: '敬事信 · 节用爱',
+        path: 'lessons/05-dao-qiancheng-guo/index.html',
+        icon: '🏛️',
+        grade: '小学中高年级',
+        description: '《论语·学而》第五章精讲：孔子论治国五要——敬事而信、节用而爱人、使民以时。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: false
+    },
+    {
         id: '06-dizi-ruze-xiao',
         title: '弟子入则孝',
         subtitle: '先做人 · 后学文',
         path: 'lessons/06-dizi-ruze-xiao/index.html',
         icon: '🎓',
         grade: '小学中高年级',
-        description: '《论语·学而》第六章精讲：先孝悌谨信爱众亲仁，行有余力则以学文——儒家教育思想的核心纲领。配套十道互动测验。',
+        description: '《论语·学而》第六章精讲：先孝悌谨信爱众亲仁，行有余力则以学文——儒家教育思想的核心纲领。配套十道互动测验。'
         status: 'ready',
         duration: '约 12 分钟',
         subject: 'mengxue',
