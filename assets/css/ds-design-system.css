@@ -61,6 +61,48 @@
     --ds-ease-spring: cubic-bezier(.34,1.56,.64,1);
 }
 
+/* ===== 暗色模式 ===== */
+[data-theme="dark"] {
+    --ds-color-bg: oklch(15% 0.008 75);
+    --ds-color-surface: oklch(18% 0.01 75);
+    --ds-color-surface-raised: oklch(22% 0.012 75);
+    --ds-color-border: oklch(28% 0.015 75);
+    --ds-color-muted: oklch(60% 0.01 72);
+    --ds-color-fg: oklch(84% 0.008 72);
+    --ds-color-fg-strong: oklch(93% 0.005 72);
+    --ds-accent: oklch(57% 0.065 115);
+    --ds-accent-hover: oklch(62% 0.07 115);
+    --ds-accent-soft: oklch(28% 0.03 115);
+    --ds-color-olive-50: oklch(20% 0.02 115);
+    --ds-color-olive-100: oklch(25% 0.025 115);
+    --ds-color-olive-200: oklch(32% 0.03 115);
+    --ds-color-olive-300: oklch(45% 0.04 115);
+    --ds-color-olive-400: oklch(57% 0.065 115);
+    --ds-color-olive-500: oklch(62% 0.07 115);
+    --ds-color-olive-600: oklch(68% 0.06 115);
+    --ds-color-olive-700: oklch(75% 0.04 115);
+    --ds-color-olive-800: oklch(82% 0.025 115);
+    --ds-color-olive-900: oklch(90% 0.015 115);
+    --ds-color-success: oklch(60% 0.08 145);
+    --ds-color-success-bg: oklch(22% 0.03 145);
+    --ds-color-error: oklch(58% 0.12 30);
+    --ds-color-error-bg: oklch(22% 0.04 30);
+    --ds-color-warning: oklch(68% 0.08 85);
+    --ds-color-warning-bg: oklch(25% 0.04 85);
+    --ds-color-info: oklch(60% 0.07 240);
+    --ds-color-info-bg: oklch(22% 0.03 240);
+    --ds-shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.3);
+    --ds-shadow-md: 0 4px 12px oklch(0% 0 0 / 0.4);
+    --ds-shadow-lg: 0 12px 40px oklch(0% 0 0 / 0.5);
+}
+
+/* ===== 暗色模式 — 跟随系统 ===== */
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) {
+        color-scheme: dark;
+    }
+}
+
 /* ========== 全局重置 ========== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -111,10 +153,11 @@ a { color: inherit; text-decoration: none; }
 
 .ds-navbar__inner {
     width: 100%;
-    max-width: 960px;
+    max-width: 1200px;
     padding: 0 var(--ds-space-6);
-    display: flex; align-items: center; gap: var(--ds-space-2);
+    display: flex; align-items: center; gap: var(--ds-space-3);
     justify-content: flex-start;
+    margin: 0 auto;
 }
 
 /* ----- 统一按钮基类(品牌/菜单/抽屉/关于 都用这套) ----- */
@@ -211,6 +254,77 @@ a { color: inherit; text-decoration: none; }
     margin: 0;
 }
 .ds-navbar__menu li { display: inline-flex; }
+
+/* ===== EDIC 导航栏组件类 ===== */
+.ds-navbar-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--ds-space-6);
+    display: flex;
+    align-items: center;
+    gap: var(--ds-space-4);
+}
+.ds-navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--ds-font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--ds-color-fg-strong);
+    padding: 0 var(--ds-space-2);
+    text-decoration: none;
+    white-space: nowrap;
+}
+.ds-navbar-brand:hover {
+    color: var(--ds-accent);
+}
+.ds-navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.ds-navbar-link {
+    display: inline-flex;
+    align-items: center;
+    height: 36px;
+    padding: 0 var(--ds-space-3);
+    border-radius: var(--ds-radius-lg);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--ds-color-fg);
+    background: transparent;
+    border: 1px solid transparent;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all var(--ds-duration-200) var(--ds-ease-out);
+}
+.ds-navbar-link:hover {
+    background: var(--ds-color-olive-50);
+    border-color: var(--ds-color-olive-200);
+}
+.ds-navbar-link--active {
+    color: var(--ds-accent);
+    background: var(--ds-color-olive-50);
+    border-color: var(--ds-color-olive-200);
+    font-weight: 600;
+}
+
+/* ===== 暗色模式 — 导航栏 ===== */
+[data-theme="dark"] .ds-navbar {
+    background: oklch(15% 0.008 75 / 0.92);
+    border-bottom-color: var(--ds-color-border);
+}
+[data-theme="dark"] .ds-navbar-link:hover {
+    background: var(--ds-color-olive-50);
+}
+[data-theme="dark"] .ds-navbar-link--active {
+    background: var(--ds-color-olive-50);
+}
 
 /* ===== 分层导航:全局导航栏（课件页专用） ===== */
 .ds-navbar--global {

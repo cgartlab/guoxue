@@ -268,7 +268,7 @@
       if (window.innerWidth >= 768) return;
       var existingToggle = document.getElementById('mobile-sidebar-toggle');
       if (existingToggle) return;
-      var navbarInner = document.querySelector('.ds-navbar__inner');
+      var navbarInner = document.querySelector('.ds-navbar-inner');
       if (!navbarInner) return;
       var toggleBtn = document.createElement('button');
       toggleBtn.id = 'mobile-sidebar-toggle';
@@ -303,7 +303,7 @@
       }
       toggleBtn.addEventListener('click', function () { toggleMobileSidebar(); });
       // 插入到品牌链接后面
-      var brand = navbarInner.querySelector('.ds-btn-nav--brand');
+      var brand = navbarInner.querySelector('.ds-navbar-brand');
       if (brand && brand.nextSibling) {
         navbarInner.insertBefore(toggleBtn, brand.nextSibling);
       } else {
