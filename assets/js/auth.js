@@ -220,6 +220,18 @@ const AUTH = (function() {
         localStorage.setItem("casdoor_refresh_token", tokenData.refresh_token);
       }
 
+      // ===== 登录成功，同步用户到 Supabase（不阻塞返回） =====
+      if (typeof window !== 'undefined' && window.SUPABASE && window.SUPABASE.syncUser) {
+        setTimeout(function() {
+          window.SUPABASE.syncUser().then(function() {
+            console.log('[Auth] 用户已同步到 Supabase');
+            window.dispatchEvent(new CustomEvent('auth:user-synced'));
+          }).catch(function(err) {
+            console.warn('[Auth] Supabase 同步失败（非致命）:', err);
+          });
+        }, 100);
+      }
+
       return { success: true, tokenData };
     } catch (err) {
       showError("网络错误: " + err.message);

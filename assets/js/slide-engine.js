@@ -61,7 +61,21 @@
                 quizScore: quizScore,
                 updatedAt: Date.now()
             };
+            // 1. 本地存储（快速，离线可用）
             localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+            
+            // 2. 云端保存（如果登录且 Supabase 可用）
+            if (typeof AUTH !== 'undefined' && AUTH.isLoggedIn && AUTH.isLoggedIn() &&
+                typeof window !== 'undefined' && window.SUPABASE && window.SUPABASE.saveProgress) {
+                window.SUPABASE.saveProgress(courseId, {
+                    currentPage: curPage,
+                    totalPages: totalPages,
+                    quizAnswered: quizAnswered,
+                    quizScore: quizScore
+                }).catch(function(err) {
+                    console.warn('[Sync] 云端保存失败（本地进度已保存）:', err);
+                });
+            }
         } catch(e) { /* ignore quota errors */ }
     }
 
