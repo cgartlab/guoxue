@@ -1410,14 +1410,27 @@ html.dark .ds-navbar__menu {
  * ============================================================= */
 
 /* ========== 课程页布局 ========== */
+
+/* 有幻灯片的页面: flex 列布局, 导航栏固定顶部, 幻灯片撑满, 控制栏固定底部 */
+body:has(.slide-viewport) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 60px; /* 导航栏高度 */
+}
+
 .slide-viewport {
-    position: relative; width: 100vw; height: 100vh;
-    padding-top: 96px;
+    flex: 1;
+    position: relative;
     display: flex; justify-content: center; align-items: center; z-index: 1;
+    min-height: 0; /* 允许 flex 收缩 */
+    width: 100%;
+    padding: var(--ds-space-4) var(--ds-space-4) 0;
 }
 .slide-container {
     width: min(92vw, 1200px);
-    height: min(80vh, 680px);
+    height: 100%;
+    max-height: 100%;
     position: relative; overflow: hidden;
     border-radius: var(--ds-radius-2xl);
     background: var(--ds-color-surface);
@@ -1655,7 +1668,7 @@ html.dark .ds-navbar__menu {
 
 /* ========== 课程页响应式 ========== */
 @media (max-width: 1023px) {
-    .slide-container { width: 98vw; height: 85vh; border-radius: var(--ds-radius-xl); }
+    .slide-container { width: 98vw; border-radius: var(--ds-radius-xl); }
     .slide { padding: var(--ds-space-8) var(--ds-space-8); }
     .slide h2 { font-size: 1.625rem; }
 }
@@ -1908,6 +1921,9 @@ html.dark .ds-navbar__menu {
 }
 
 /* ===== 全屏模式 ===== */
+html.is-fullscreen {
+    padding-top: 60px; /* 导航栏保持可见 */
+}
 html.is-fullscreen .lesson-footer {
     position: fixed;
     bottom: 0;
@@ -1917,14 +1933,12 @@ html.is-fullscreen .lesson-footer {
     background: var(--ds-color-surface / 0.95);
     backdrop-filter: blur(12px);
 }
-
 html.is-fullscreen .slide-viewport {
-    height: calc(100vh - 60px - 130px); /* navbar(60px) + footer(~130px) */
-    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
 }
-
 html.is-fullscreen .slide-container {
-    min-height: auto;
+    max-height: 100%;
 }
 
 /* ===== 暗色 — 底部导航 ===== */
@@ -1960,8 +1974,8 @@ html.is-fullscreen .slide-container {
         font-size: 0.75rem;
         padding: 4px 12px;
     }
-    html.is-fullscreen .slide-viewport {
-        height: calc(100vh - 60px - 110px);
+    .slide-viewport {
+        padding: var(--ds-space-2) var(--ds-space-2) 0;
     }
 }
 
