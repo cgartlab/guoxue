@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -25,6 +25,24 @@
 
 <!-- ===== 鍏ㄥ眬瀵艰埅 ===== -->
 <nav data-navbar="global" class="ds-navbar" aria-label="涓诲鑸?></nav>
+
+<!-- ===== 课程工具栏 ===== -->
+<nav class="ds-toolbar" aria-label="课程工具栏">
+    <a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html">← 返回目录</a>
+    <div class="ds-tabs">
+        <button class="ds-tab active" data-section="lecture">讲义</button>
+        <button class="ds-tab" data-section="quiz">测验</button>
+        <button class="ds-tab" data-section="review">答疑解惑</button>
+    </div>
+    <div class="ds-toolbar__right">
+        <span class="page-indicator" id="page-indicator">1 / 1</span>
+        <div class="dots-row" id="dots-row"></div>
+        <button class="ds-btn-nav" id="nav-prev" disabled>← 上一页</button>
+        <button class="ds-btn-nav" id="nav-next">下一页 →</button>
+        <button class="ds-btn-nav ds-btn-nav--icon" id="fullscreen-btn" title="切换全屏显示" aria-label="切换全屏显示"><span class="ds-btn-nav__icon">⛶</span><span class="ds-btn-nav__text">全屏</span></button>
+    </div>
+</nav>
+
 
 <!-- 骞荤伅鐗囧鍣?-->
 <div class="slide-viewport">
