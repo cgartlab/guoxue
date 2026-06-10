@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supabase 集成测试</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      width: 100%;
+      padding: 40px;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .test-section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+    .test-section h2 {
+      font-size: 16px;
+      color: #667eea;
+      margin-bottom: 15px;
+    }
+    .test-item {
+      margin-bottom: 12px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    button {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      flex-grow: 1;
+      text-align: left;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #764ba2;
+    }
+    button.success {
+      background: #10b981;
+    }
+    button.error {
+      background: #ef4444;
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .status-badge.pending {
+      background: #fcd34d;
+      color: #78350f;
+    }
+    .status-badge.success {
+      background: #d1fae5;
+      color: #065f46;
+    }
+    .status-badge.error {
+      background: #fee2e2;
+      color: #7f1d1d;
+    }
+    .output {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      max-height: 200px;
+      overflow-y: auto;
+      color: #333;
+      word-break: break-all;
+    }
+    .info-box {
+      background: #e0f2fe;
+      border-left: 4px solid #0ea5e9;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #0c4a6e;
+    }
+    .divider {
+      height: 1px;
+      background: #e5e7eb;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🧪 Supabase 集成测试</h1>
+    
+    <div class="info-box">
+      💡 此页面用于测试 Supabase 集成。请先登录，然后依次运行以下测试。
+    </div>
+
+    <!-- 认证测试 -->
+    <div class="test-section">
+      <h2>1️⃣ 认证状态</h2>
+      <div class="test-item">
+        <button onclick="testAuth()">检查登录状态</button>
+        <span id="auth-status" class="status-badge pending">未测试</span>
+      </div>
+      <div class="output" id="auth-output"></div>
+    </div>
+
+    <!-- 用户同步 -->
+    <div class="test-section">
+      <h2>2️⃣ 用户同步</h2>
+      <div class="test-item">
+        <button onclick="testSyncUser()">同步用户到 Supabase</button>
+        <span id="sync-status" class="status-badge pending">未测试</span>
+      </div>
+      <div class="output" id="sync-output"></div>
+    </div>
+
+    <!-- 学习进度 -->
+    <div class="test-section">
+      <h2>3️⃣ 学习进度</h2>
+      <div class="test-item">
+        <button onclick="testGetProgress()">获取进度</button>
+        <span id="progress-get-status" class="status-badge pending">未测试</span>
+      </div>
+      <div class="test-item">
+        <button onclick="testSaveProgress()">保存进度</button>
+        <span id="progress-save-status" class="status-badge pending">未测试</span>
+      </div>
+      <div class="output" id="progress-output"></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 笔记 -->
+    <div class="test-section">
+      <h2>4️⃣ 学习笔记</h2>
+      <div class="test-item">
+        <button onclick="testCreateNote()">创建笔记</button>
+        <span id="note-create-status" class="status-badge pending">未测试</span>
+      </div>
+      <div class="test-item">
+        <button onclick="testGetNotes()">获取笔记列表</button>
+        <span id="note-get-status" class="status-badge pending">未测试</span>
+      </div>
+      <div class="output" id="note-output"></div>
+    </div>
+
+    <!-- 书签 -->
+    <div class="test-section">
+      <h2>5️⃣ 书签</h2>
+      <div class="test-item">
+        <button onclick="testAddBookmark()">添加书签</button>
+        <span id="bookmark-add-status" class="status-badge pending">未测试</span>
+      </div>
+      <div class="test-item">
+        <button onclick="testGetBookmarks()">获取书签</button>
+        <span id="bookmark-get-status" class="status-badge pending">未测试</span>
+      </div>
+      <div class="output" id="bookmark-output"></div>
+    </div>
+
+    <!-- 成绩 -->
+    <div class="test-section">
+      <h2>6️⃣ 测试成绩</h2>
+      <div class="test-item">
+        <button onclick="testSaveQuizScore()">保存成绩</button>
+        <span id="quiz-save-status" class="status-badge pending">未测试</span>
+      </div>
+      <div class="test-item">
+        <button onclick="testGetQuizScores()">获取成绩</button>
+        <span id="quiz-get-status" class="status-badge pending">未测试</span>
+      </div>
+      <div class="output" id="quiz-output"></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 清理 -->
+    <div class="test-section">
+      <h2>🧹 清理</h2>
+      <div class="test-item">
+        <button onclick="clearCache()" style="background: #f59e0b;">清除缓存</button>
+      </div>
+      <div class="test-item">
+        <button onclick="clearAllTests()" style="background: #6b7280;">清除所有测试结果</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 认证脚本（从项目中复制） -->
+  <script src="/assets/js/auth.js"></script>
+  
+  <!-- Supabase 库 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+  <!-- Supabase 客户端 -->
+  <script src="/assets/js/supabase-client.js"></script>
+
+  <script>
+    // 测试工具函数
+    function updateStatus(elementId, status, message = '') {
+      const el = document.getElementById(elementId)
+      if (!el) return
+      
+      el.textContent = status === 'pending' ? '⏳ 测试中...' : 
+                       status === 'success' ? '✅ 成功' : 
+                       status === 'error' ? '❌ 失败' : '⏳'
+      el.className = 'status-badge ' + status
+    }
+
+    function log(elementId, text) {
+      const el = document.getElementById(elementId)
+      if (!el) return
+      el.textContent = text
+      el.scrollTop = el.scrollHeight
+    }
+
+    // 1. 测试认证状态
+    async function testAuth() {
+      updateStatus('auth-status', 'pending')
+      
+      try {
+        const isLoggedIn = AUTH && AUTH.isLoggedIn && AUTH.isLoggedIn()
+        const token = AUTH && AUTH.getAccessToken ? AUTH.getAccessToken() : null
+        const user = AUTH && AUTH.parseIdToken ? AUTH.parseIdToken() : null
+        
+        if (!isLoggedIn) {
+          log('auth-output', '❌ 未登录\n\n请先点击"登录 / 注册"登录系统')
+          updateStatus('auth-status', 'error')
+          return
+        }
+        
+        const output = `✅ 已登录\n\nToken: ${token ? token.substring(0, 30) + '...' : 'None'}\n\nUser Info:\n${JSON.stringify(user, null, 2)}`
+        log('auth-output', output)
+        updateStatus('auth-status', 'success')
+      } catch (err) {
+        log('auth-output', '❌ 错误: ' + err.message)
+        updateStatus('auth-status', 'error')
+      }
+    }
+
+    // 2. 测试用户同步
+    async function testSyncUser() {
+      updateStatus('sync-status', 'pending')
+      
+      try {
+        if (!AUTH || !AUTH.isLoggedIn()) {
+          throw new Error('未登录')
+        }
+        
+        if (!window.SUPABASE || !window.SUPABASE.syncUser) {
+          throw new Error('Supabase 客户端未加载')
+        }
+        
+        const user = await window.SUPABASE.syncUser()
+        
+        if (!user) {
+          throw new Error('用户同步返回空值')
+        }
+        
+        const output = `✅ 用户已同步\n\n${JSON.stringify(user, null, 2)}`
+        log('sync-output', output)
+        updateStatus('sync-status', 'success')
+      } catch (err) {
+        log('sync-output', '❌ 错误: ' + err.message)
+        updateStatus('sync-status', 'error')
+      }
+    }
+
+    // 3. 获取进度
+    async function testGetProgress() {
+      updateStatus('progress-get-status', 'pending')
+      
+      try {
+        if (!window.SUPABASE) throw new Error('Supabase 不可用')
+        
+        const progress = await window.SUPABASE.getProgress('01-lunyu')
+        
+        if (!progress) {
+          log('progress-output', '✅ 获取成功（尚无进度记录）')
+        } else {
+          log('progress-output', '✅ 获取成功\n\n' + JSON.stringify(progress, null, 2))
+        }
+        
+        updateStatus('progress-get-status', 'success')
+      } catch (err) {
+        log('progress-output', '❌ 错误: ' + err.message)
+        updateStatus('progress-get-status', 'error')
+      }
+    }
+
+    // 4. 保存进度
+    async function testSaveProgress() {
+      updateStatus('progress-save-status', 'pending')
+      
+      try {
+        if (!window.SUPABASE) throw new Error('Supabase 不可用')
+        
+        const result = await window.SUPABASE.saveProgress('01-lunyu', {
+          currentPage: Math.floor(Math.random() * 10),
+          totalPages: 15,
+          quizAnswered: { '0': true, '1': false },
+          quizScore: Math.floor(Math.random() * 100)
+        })
+        
+        if (!result) {
+          throw new Error('保存失败')
+        }
+        
+        log('progress-output', '✅ 进度已保存到 Supabase\n\n请在 Supabase Dashboard 中查看 study_progress 表')
+        updateStatus('progress-save-status', 'success')
+      } catch (err) {
+        log('progress-output', '❌ 错误: ' + err.message)
+        updateStatus('progress-save-status', 'error')
+      }
+    }
+
+    // 5. 创建笔记
+    async function testCreateNote() {
+      updateStatus('note-create-status', 'pending')
+      
+      try {
+        if (!window.SUPABASE) throw new Error('Supabase 不可用')
+        
+        const note = await window.SUPABASE.createNote('01-lunyu', 2, {
+          title: '测试笔记 - ' + new Date().toLocaleTimeString(),
+          content: '这是一条测试笔记\n\n时间: ' + new Date().toLocaleString(),
+          color_tag: 'yellow'
+        })
+        
+        if (!note) {
+          throw new Error('笔记创建失败')
+        }
+        
+        log('note-output', '✅ 笔记已创建\n\n' + JSON.stringify(note, null, 2))
+        updateStatus('note-create-status', 'success')
+      } catch (err) {
+        log('note-output', '❌ 错误: ' + err.message)
+        updateStatus('note-create-status', 'error')
+      }
+    }
+
+    // 6. 获取笔记
+    async function testGetNotes() {
+      updateStatus('note-get-status', 'pending')
+      
+      try {
+        if (!window.SUPABASE) throw new Error('Supabase 不可用')
+        
+        const notes = await window.SUPABASE.getNotes('01-lunyu')
+        
+        log('note-output', `✅ 获取成功 (${notes.length} 条笔记)\n\n${JSON.stringify(notes, null, 2)}`)
+        updateStatus('note-get-status', 'success')
+      } catch (err) {
+        log('note-output', '❌ 错误: ' + err.message)
+        updateStatus('note-get-status', 'error')
+      }
+    }
+
+    // 7. 添加书签
+    async function testAddBookmark() {
+      updateStatus('bookmark-add-status', 'pending')
+      
+      try {
+        if (!window.SUPABASE) throw new Error('Supabase 不可用')
+        
+        const bookmark = await window.SUPABASE.addBookmark('01-lunyu', Math.floor(Math.random() * 10), '测试书签')
+        
+        if (!bookmark) {
+          throw new Error('书签创建失败')
+        }
+        
+        log('bookmark-output', '✅ 书签已添加\n\n' + JSON.stringify(bookmark, null, 2))
+        updateStatus('bookmark-add-status', 'success')
+      } catch (err) {
+        log('bookmark-output', '❌ 错误: ' + err.message)
+        updateStatus('bookmark-add-status', 'error')
+      }
+    }
+
+    // 8. 获取书签
+    async function testGetBookmarks() {
+      updateStatus('bookmark-get-status', 'pending')
+      
+      try {
+        if (!window.SUPABASE) throw new Error('Supabase 不可用')
+        
+        const bookmarks = await window.SUPABASE.getBookmarks('01-lunyu')
+        
+        log('bookmark-output', `✅ 获取成功 (${bookmarks.length} 个书签)\n\n${JSON.stringify(bookmarks, null, 2)}`)
+        updateStatus('bookmark-get-status', 'success')
+      } catch (err) {
+        log('bookmark-output', '❌ 错误: ' + err.message)
+        updateStatus('bookmark-get-status', 'error')
+      }
+    }
+
+    // 9. 保存成绩
+    async function testSaveQuizScore() {
+      updateStatus('quiz-save-status', 'pending')
+      
+      try {
+        if (!window.SUPABASE) throw new Error('Supabase 不可用')
+        
+        const answers = [
+          { q_idx: 0, chosen: 1, correct: 1 },
+          { q_idx: 1, chosen: 0, correct: 0 },
+          { q_idx: 2, chosen: 1, correct: 1 }
+        ]
+        
+        const score = await window.SUPABASE.saveQuizScore('01-lunyu', 66.67, answers)
+        
+        if (!score) {
+          throw new Error('成绩保存失败')
+        }
+        
+        log('quiz-output', '✅ 成绩已保存\n\n' + JSON.stringify(score, null, 2))
+        updateStatus('quiz-save-status', 'success')
+      } catch (err) {
+        log('quiz-output', '❌ 错误: ' + err.message)
+        updateStatus('quiz-save-status', 'error')
+      }
+    }
+
+    // 10. 获取成绩
+    async function testGetQuizScores() {
+      updateStatus('quiz-get-status', 'pending')
+      
+      try {
+        if (!window.SUPABASE) throw new Error('Supabase 不可用')
+        
+        const scores = await window.SUPABASE.getQuizScores('01-lunyu')
+        
+        log('quiz-output', `✅ 获取成功 (${scores.length} 条成绩)\n\n${JSON.stringify(scores, null, 2)}`)
+        updateStatus('quiz-get-status', 'success')
+      } catch (err) {
+        log('quiz-output', '❌ 错误: ' + err.message)
+        updateStatus('quiz-get-status', 'error')
+      }
+    }
+
+    // 清理缓存
+    function clearCache() {
+      if (window.SUPABASE && window.SUPABASE.clearCache) {
+        window.SUPABASE.clearCache()
+        alert('✅ 缓存已清除')
+      }
+    }
+
+    // 清除所有测试结果
+    function clearAllTests() {
+      document.querySelectorAll('.status-badge').forEach(el => {
+        el.textContent = '未测试'
+        el.className = 'status-badge pending'
+      })
+      document.querySelectorAll('.output').forEach(el => {
+        el.textContent = ''
+      })
+    }
+
+    // 页面加载时检查登录状态
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const isLoggedIn = AUTH && AUTH.isLoggedIn && AUTH.isLoggedIn()
+        if (!isLoggedIn) {
+          alert('⚠️  请先登录')
+        }
+      }, 500)
+    })
+  </script>
+</body>
+</html>
