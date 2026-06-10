@@ -82,8 +82,8 @@
       }
 
       // 跳转回来源页
-      const redirectBack = sessionStorage.getItem("casdoor_redirect_back");
-      sessionStorage.removeItem("casdoor_redirect_back");
+      const redirectBack = localStorage.getItem("casdoor_redirect_back");
+      localStorage.removeItem("casdoor_redirect_back");
       setTimeout(function() {
         window.location.href = redirectBack || "index.html";
       }, 1500);

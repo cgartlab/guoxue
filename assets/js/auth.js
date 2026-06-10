@@ -129,9 +129,9 @@ const AUTH = (function() {
       const state = randomString(32);
       const redirectUri = getRedirectUri();
 
-      sessionStorage.setItem("casdoor_code_verifier", verifier);
-      sessionStorage.setItem("casdoor_state", state);
-      sessionStorage.setItem("casdoor_redirect_back", window.location.href);
+      localStorage.setItem("casdoor_code_verifier", verifier);
+      localStorage.setItem("casdoor_state", state);
+      localStorage.setItem("casdoor_redirect_back", window.location.href);
 
       const params = new URLSearchParams({
         client_id: CONFIG.clientId,
@@ -170,20 +170,20 @@ const AUTH = (function() {
     }
 
     // 验证 state（防止 CSRF）
-    const savedState = sessionStorage.getItem("casdoor_state");
+    const savedState = localStorage.getItem("casdoor_state");
     if (state && savedState && state !== savedState) {
       showError("state 不匹配，可能存在 CSRF 攻击");
       return { success: false, error: "state_mismatch" };
     }
-    sessionStorage.removeItem("casdoor_state");
+    localStorage.removeItem("casdoor_state");
 
     // 获取 PKCE verifier
-    const verifier = sessionStorage.getItem("casdoor_code_verifier");
+    const verifier = localStorage.getItem("casdoor_code_verifier");
     if (!verifier) {
       showError("找不到 PKCE verifier，请重新登录");
       return { success: false, error: "no_verifier" };
     }
-    sessionStorage.removeItem("casdoor_code_verifier");
+    localStorage.removeItem("casdoor_code_verifier");
 
     // 交换授权码获取 Token
     const redirectUri = getRedirectUri();
