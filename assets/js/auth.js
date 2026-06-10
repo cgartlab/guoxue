@@ -11,13 +11,13 @@ const AUTH = (function() {
 
   // ============ 配置 ============
   const CONFIG = {
-    serverUrl: "https://8023laozhanshi.cc",
+    serverUrl: "",
     clientId: "16891ab8fba3b3416919",
     scope: "openid profile email",
-    tokenEndpoint: "/api/login/oauth/access_token",
-    authorizeEndpoint: "/login/oauth/authorize",
-    userinfoEndpoint: "/api/userinfo",
-    logoutEndpoint: "/logout",
+    tokenEndpoint: "/casdoor-api/login/oauth/access_token",
+    authorizeEndpoint: "https://8023laozhanshi.cc/login/oauth/authorize",
+    userinfoEndpoint: "/casdoor-api/userinfo",
+    logoutEndpoint: "https://8023laozhanshi.cc/logout",
   };
 
   // ============ PKCE 工具 ============
@@ -143,7 +143,7 @@ const AUTH = (function() {
         code_challenge_method: "S256",
       });
 
-      window.location.href = CONFIG.serverUrl + "/login/oauth/authorize?" + params.toString();
+      window.location.href = CONFIG.authorizeEndpoint + "?" + params.toString();
     } catch (e) {
       console.error("[Auth] 登录失败:", e);
       alert("登录失败: " + (e.message || "未知错误") + "\n请检查浏览器控制台获取详细信息。");
@@ -187,7 +187,7 @@ const AUTH = (function() {
 
     // 交换授权码获取 Token
     const redirectUri = getRedirectUri();
-    const tokenUrl = CONFIG.serverUrl + CONFIG.tokenEndpoint;
+    const tokenUrl = CONFIG.tokenEndpoint;
     const body = new URLSearchParams({
       grant_type: "authorization_code",
       code: code,
@@ -247,7 +247,7 @@ const AUTH = (function() {
     if (!token) return null;
 
     try {
-      const resp = await fetch(CONFIG.serverUrl + CONFIG.userinfoEndpoint, {
+      const resp = await fetch(CONFIG.userinfoEndpoint, {
         headers: {
           Authorization: "Bearer " + token,
         },
