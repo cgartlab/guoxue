@@ -28,7 +28,7 @@ STABLE
 SECURITY DEFINER
 AS $$
   SELECT id FROM public.users 
-  WHERE casdoor_id = current_setting('request.headers', true)::jsonb->>'x-casdoor-sub'
+  WHERE casdoor_id = current_setting('request.headers', true)::jsonb->>'x_casdoor_sub'
 $$;
 
 -- ============================================================
