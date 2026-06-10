@@ -38,12 +38,12 @@
 <nav class="ds-toolbar" aria-label="课程工具栏">
     <a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html">← 返回目录</a>
     <div class="ds-tabs">
-        <button class="ds-tab active" data-section="lecture">讲义</button>
-        <button class="ds-tab" data-section="quiz">测验</button>
-        <button class="ds-tab" data-section="review">答疑解惑</button>
+        <button class="ds-tab active" data-section="lecture">📖 讲义</button>
+        <button class="ds-tab" data-section="quiz">✏️ 测验</button>
+        <button class="ds-tab" data-section="review">💬 答疑解惑</button>
     </div>
     <div class="ds-toolbar__right">
-        <span class="page-indicator" id="page-indicator">1 / 23</span>
+        <span class="page-indicator" id="page-indicator">1 / 24</span>
         <div class="dots-row" id="dots-row"></div>
         <button class="ds-btn-nav" id="nav-prev" disabled>← 上一页</button>
         <button class="ds-btn-nav" id="nav-next">下一页 →</button>
@@ -315,6 +315,7 @@
 
 <!-- 自定义测验题目 -->
 <script>
+window.GUOXUE_COURSE_ID = 'junzi-bu-zhong';
 window.GUOXUE_QUIZ_OVERRIDE = [
     {
         q: '"君子不重则不威"中的"重"字是什么意思？',

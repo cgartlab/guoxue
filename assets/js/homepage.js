@@ -180,6 +180,19 @@
     var nav = document.getElementById('sidebar-nav');
     if (!nav) return;
 
+    // 抽屉收起/展开按钮
+    var drawerBtn = document.getElementById('drawer-close-btn');
+    if (drawerBtn) {
+      drawerBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var wrapper = document.querySelector('.home-wrapper');
+        var sidebar = document.getElementById('sidebar-nav');
+        if (!sidebar) return;
+        sidebar.classList.toggle('is-collapsed');
+        if (wrapper) wrapper.classList.toggle('sidebar-collapsed');
+      });
+    }
+
     // 门类折叠/展开
     nav.addEventListener('click', function (e) {
       var header = e.target.closest('.home-sidebar__category-header');
@@ -248,12 +261,55 @@
 
       renderCards(subject);
 
-      // 滚动到主区(移动端)
-      var main = document.querySelector('.home-content');
-      if (main && window.innerWidth < 768) {
-        main.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
     });
+
+    // ===== 移动端：在导航栏中添加侧栏开关按钮 =====
+    (function addMobileToggle() {
+      if (window.innerWidth >= 768) return;
+      var existingToggle = document.getElementById('mobile-sidebar-toggle');
+      if (existingToggle) return;
+      var navbarInner = document.querySelector('.ds-navbar__inner');
+      if (!navbarInner) return;
+      var toggleBtn = document.createElement('button');
+      toggleBtn.id = 'mobile-sidebar-toggle';
+      toggleBtn.className = 'ds-btn-nav ds-btn-nav--icon';
+      toggleBtn.setAttribute('type', 'button');
+      toggleBtn.setAttribute('aria-label', '打开课程导航');
+      toggleBtn.innerHTML = '<span class="ds-btn-nav__icon" aria-hidden="true">☰</span><span class="ds-btn-nav__text">目录</span>';
+      function toggleMobileSidebar(open) {
+        var sidebar = document.getElementById('sidebar-nav');
+        if (!sidebar) return;
+        var overlay = document.getElementById('sidebar-overlay');
+        if (open === undefined) {
+          sidebar.classList.toggle('is-open');
+        } else {
+          if (open) sidebar.classList.add('is-open');
+          else sidebar.classList.remove('is-open');
+        }
+        var isOpen = sidebar.classList.contains('is-open');
+        toggleBtn.setAttribute('aria-label', isOpen ? '关闭课程导航' : '打开课程导航');
+        toggleBtn.innerHTML = isOpen
+          ? '<span class="ds-btn-nav__icon" aria-hidden="true">✕</span><span class="ds-btn-nav__text">关闭</span>'
+          : '<span class="ds-btn-nav__icon" aria-hidden="true">☰</span><span class="ds-btn-nav__text">目录</span>';
+        // 遮罩
+        if (!overlay) {
+          overlay = document.createElement('div');
+          overlay.id = 'sidebar-overlay';
+          overlay.className = 'sidebar-overlay';
+          overlay.addEventListener('click', function () { toggleMobileSidebar(false); });
+          document.body.appendChild(overlay);
+        }
+        overlay.classList.toggle('is-visible', isOpen);
+      }
+      toggleBtn.addEventListener('click', function () { toggleMobileSidebar(); });
+      // 插入到品牌链接后面
+      var brand = navbarInner.querySelector('.ds-btn-nav--brand');
+      if (brand && brand.nextSibling) {
+        navbarInner.insertBefore(toggleBtn, brand.nextSibling);
+      } else {
+        navbarInner.appendChild(toggleBtn);
+      }
+    })();
 
     // 搜索过滤 (带防抖)
     var searchInput = document.getElementById('sidebar-search');
