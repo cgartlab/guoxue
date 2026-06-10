@@ -11,7 +11,7 @@ const AUTH = (function() {
 
   // ============ 配置 ============
   const CONFIG = {
-    serverUrl: "https://8023laozhanshi.cc/casdoor",
+    serverUrl: "https://8023laozhanshi.cc",
     clientId: "16891ab8fba3b3416919",
     scope: "openid profile email",
     tokenEndpoint: "/api/login/oauth/access_token",
