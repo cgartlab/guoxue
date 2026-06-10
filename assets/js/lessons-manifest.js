@@ -144,20 +144,6 @@ window.GUOXUE_LESSONS = [
         subject: 'mengxue',
         tier: 'core',
         featured: false
-    },
-    {
-        id: '08-junzi-bu-zhong',
-        title: '君子不重则不威',
-        subtitle: '自重威·信交友·勇改过',
-        path: 'lessons/08-junzi-bu-zhong/index.html',
-        icon: '⚖️',
-        grade: '小学中高年级',
-        description: '《论语·学而》第八章精讲：君子不重则不威——持重自威、主忠信、无友不如己者、过则勿惮改。配套十道互动测验。',
-        status: 'ready',
-        duration: '约 12 分钟',
-        subject: 'mengxue',
-        tier: 'core',
-        featured: false
     }
     // ----- 在此下方添加新课程 -----
     // {
