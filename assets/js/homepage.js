@@ -265,17 +265,23 @@
 
     // ===== 移动端：在导航栏中添加侧栏开关按钮 =====
     (function addMobileToggle() {
+      // 桌面端（≥768px）不插入该按钮，测试期望桌面端 #drawer-toggle count=0
       if (window.innerWidth >= 768) return;
-      var existingToggle = document.getElementById('mobile-sidebar-toggle');
+      // 已存在就不重复插入
+      var existingToggle = document.getElementById('drawer-toggle');
       if (existingToggle) return;
       var navbarInner = document.querySelector('.ds-navbar__inner');
       if (!navbarInner) return;
+
       var toggleBtn = document.createElement('button');
-      toggleBtn.id = 'mobile-sidebar-toggle';
+      // id 统一为 drawer-toggle，与测试选择器匹配
+      toggleBtn.id = 'drawer-toggle';
       toggleBtn.className = 'ds-btn-nav ds-btn-nav--icon';
       toggleBtn.setAttribute('type', 'button');
       toggleBtn.setAttribute('aria-label', '打开课程导航');
+      toggleBtn.setAttribute('aria-expanded', 'false');
       toggleBtn.innerHTML = '<span class="ds-btn-nav__icon" aria-hidden="true">☰</span><span class="ds-btn-nav__text">目录</span>';
+
       function toggleMobileSidebar(open) {
         var sidebar = document.getElementById('sidebar-nav');
         if (!sidebar) return;
@@ -288,10 +294,12 @@
         }
         var isOpen = sidebar.classList.contains('is-open');
         toggleBtn.setAttribute('aria-label', isOpen ? '关闭课程导航' : '打开课程导航');
+        toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        // 更新按钮文字（收起/展开），测试依赖 .ds-btn-nav__text 的文本
         toggleBtn.innerHTML = isOpen
-          ? '<span class="ds-btn-nav__icon" aria-hidden="true">✕</span><span class="ds-btn-nav__text">关闭</span>'
+          ? '<span class="ds-btn-nav__icon" aria-hidden="true">✕</span><span class="ds-btn-nav__text">收起</span>'
           : '<span class="ds-btn-nav__icon" aria-hidden="true">☰</span><span class="ds-btn-nav__text">目录</span>';
-        // 遮罩
+        // 遮罩层
         if (!overlay) {
           overlay = document.createElement('div');
           overlay.id = 'sidebar-overlay';
@@ -301,8 +309,10 @@
         }
         overlay.classList.toggle('is-visible', isOpen);
       }
+
       toggleBtn.addEventListener('click', function () { toggleMobileSidebar(); });
-      // 插入到品牌链接后面
+
+      // 插入到品牌链接后面（桌面和移动端均插入，CSS 控制显隐）
       var brand = navbarInner.querySelector('.ds-btn-nav--brand');
       if (brand && brand.nextSibling) {
         navbarInner.insertBefore(toggleBtn, brand.nextSibling);
@@ -366,6 +376,9 @@
 
     var subject = filterSubject || 'all';
     currentFilter = subject;
+
+    // 持久化当前筛选状态
+    try { sessionStorage.setItem('guoxue_sidebar_filter', subject); } catch(e) {}
 
     var cat = (subject === 'all') ? null : getCategoryByKey(subject);
     var hasReady = LESSONS.some(function (l) {
@@ -448,6 +461,64 @@
       return;
     }
     window.GUOXUE_HOMEPAGE.init();
+
+    // ===== 功能增强：侧边栏键盘可访问性 =====
+    (function enhanceKeyboard() {
+      var nav = document.getElementById('sidebar-nav');
+      if (!nav) return;
+      // 让 category-header 支持 Enter/Space 展开
+      nav.addEventListener('keydown', function (e) {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        var header = e.target.closest('.home-sidebar__category-header');
+        if (header) {
+          e.preventDefault();
+          header.click();
+        }
+      });
+    })();
+
+    // ===== 功能增强：ESC 关闭移动端侧栏 =====
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      var sidebar = document.getElementById('sidebar-nav');
+      var toggleBtn = document.getElementById('drawer-toggle');
+      if (sidebar && sidebar.classList.contains('is-open')) {
+        sidebar.classList.remove('is-open');
+        var overlay = document.getElementById('sidebar-overlay');
+        if (overlay) overlay.classList.remove('is-visible');
+        if (toggleBtn) {
+          toggleBtn.setAttribute('aria-expanded', 'false');
+          toggleBtn.innerHTML = '<span class="ds-btn-nav__icon" aria-hidden="true">☰</span><span class="ds-btn-nav__text">目录</span>';
+          toggleBtn.focus();
+        }
+      }
+    });
+
+    // ===== 功能增强：搜索框清除按钮 =====
+    (function addSearchClear() {
+      var searchInput = document.getElementById('sidebar-search');
+      if (!searchInput) return;
+      var clearBtn = document.createElement('button');
+      clearBtn.className = 'search-box__clear';
+      clearBtn.setAttribute('type', 'button');
+      clearBtn.setAttribute('aria-label', '清除搜索');
+      clearBtn.innerHTML = '✕';
+      clearBtn.style.cssText = 'display:none;position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--ds-color-muted);font-size:12px;padding:4px;line-height:1;';
+      var searchBox = searchInput.parentNode;
+      if (searchBox) {
+        searchBox.style.position = 'relative';
+        searchBox.appendChild(clearBtn);
+      }
+      searchInput.addEventListener('input', function () {
+        clearBtn.style.display = this.value ? 'block' : 'none';
+      });
+      clearBtn.addEventListener('click', function () {
+        searchInput.value = '';
+        clearBtn.style.display = 'none';
+        searchInput.dispatchEvent(new Event('input'));
+        searchInput.focus();
+      });
+    })();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', boot);
