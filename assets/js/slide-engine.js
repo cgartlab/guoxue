@@ -61,7 +61,21 @@
                 quizScore: quizScore,
                 updatedAt: Date.now()
             };
+            // 1. 本地存储（快速，离线可用）
             localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+            
+            // 2. 云端保存（如果登录且 Supabase 可用）
+            if (typeof AUTH !== 'undefined' && AUTH.isLoggedIn && AUTH.isLoggedIn() &&
+                typeof window !== 'undefined' && window.SUPABASE && window.SUPABASE.saveProgress) {
+                window.SUPABASE.saveProgress(courseId, {
+                    currentPage: curPage,
+                    totalPages: totalPages,
+                    quizAnswered: quizAnswered,
+                    quizScore: quizScore
+                }).catch(function(err) {
+                    console.warn('[Sync] 云端保存失败（本地进度已保存）:', err);
+                });
+            }
         } catch(e) { /* ignore quota errors */ }
     }
 
@@ -118,8 +132,8 @@
                     b.classList.add('disabled');
                 });
                 var expEl = document.getElementById('exp-' + idx);
-                if (expEl && quizScore > 0) {
-                    // 粗略判断正确/错误
+                if (expEl) {
+                    // 修复 0 分解析显示 bug: 不再检查 quizScore > 0
                     var btns = document.querySelectorAll('[data-q="' + idx + '"]');
                     btns.forEach(function(b) {
                         var oi = parseInt(b.dataset.o, 10);
@@ -282,7 +296,8 @@
 
     /* ===== 键盘 ===== */
     document.addEventListener('keydown', function (e) {
-        if (e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+        // 排除输入元素和可编辑区域
+        if (e.target && (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || e.target.isContentEditable)) return;
         if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
             e.preventDefault(); goToPage(curPage + 1);
         } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {

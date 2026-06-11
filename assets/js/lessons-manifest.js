@@ -102,6 +102,62 @@ window.GUOXUE_LESSONS = [
         subject: 'mengxue',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '05-dao-qiancheng-guo',
+        title: '道千乘之国',
+        subtitle: '敬事信 · 节用爱',
+        path: 'lessons/05-dao-qiancheng-guo/index.html',
+        icon: '🏛️',
+        grade: '小学中高年级',
+        description: '《论语·学而》第五章精讲：孔子论治国五要——敬事而信、节用而爱人、使民以时。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: false
+    },
+    {
+        id: '06-dizi-ruze-xiao',
+        title: '弟子入则孝',
+        subtitle: '先做人 · 后学文',
+        path: 'lessons/06-dizi-ruze-xiao/index.html',
+        icon: '🎓',
+        grade: '小学中高年级',
+        description: '《论语·学而》第六章精讲：先孝悌谨信爱众亲仁，行有余力则以学文——儒家教育思想的核心纲领。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: false
+    },
+    {
+        id: '07-xianxian-yise',
+        title: '贤贤易色',
+        subtitle: '实践出真知',
+        path: 'lessons/07-xianxian-yise/index.html',
+        icon: '🤝',
+        grade: '小学中高年级',
+        description: '子夏论真学问——贤贤易色、事父母竭其力、事君致其身、与朋友交言而有信。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: false
+    },
+    {
+        id: '08-junzi-bu-zhong',
+        title: '君子不重则不威',
+        subtitle: '自重威·信交友·勇改过',
+        path: 'lessons/08-junzi-bu-zhong/index.html',
+        icon: '⚖️',
+        grade: '小学中高年级',
+        description: '《论语·学而》第八章精讲：君子不重则不威——持重自威、主忠信、无友不如己者、过则勿惮改。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
     // {

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录中 — 国学课堂</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/ds-design-system.css">
+  <style>
+    .callback-container {
+      max-width: 480px;
+      margin: 120px auto;
+      text-align: center;
+      padding: 40px;
+    }
+    .callback-status {
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 0.9375rem;
+    }
+    .callback-status.loading {
+      background: var(--ds-color-olive-50, #f5f7f0);
+      color: var(--ds-color-muted, #666);
+    }
+    .callback-status.success {
+      background: var(--ds-color-success-bg, #f0fae8);
+      color: var(--ds-color-success, #52c41a);
+    }
+    .callback-status.error {
+      background: var(--ds-color-error-bg, #fef2f2);
+      color: var(--ds-color-error, #ef4444);
+    }
+    .spinner {
+      display: inline-block;
+      width: 32px; height: 32px;
+      border: 3px solid var(--ds-color-border, #e5e5e5);
+      border-top-color: var(--ds-accent, #1677ff);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .auth-error { display: none; }
+  </style>
+</head>
+<body>
+  <div class="callback-container">
+    <h1 style="font-size:1.5rem;margin-bottom:20px;">📚 国学课堂</h1>
+    <div class="spinner" id="loading-spinner"></div>
+    <div id="status-message" class="callback-status loading">正在处理登录...</div>
+    <div id="auth-error" class="auth-error callback-status error"></div>
+    <p style="margin-top:24px;font-size:0.875rem;color:var(--ds-color-muted);">
+      <a href="index.html" style="color:var(--ds-accent);">← 返回首页</a>
+    </p>
+  </div>
+
+  <script src="assets/js/auth.js" defer></script>
+
+  <!-- Supabase 数据持久化 -->
+  <script src="assets/js/api-client.js" defer></script>
+  <script src="assets/js/auth-supabase-patch.js" defer></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", async function() {
+    const statusEl = document.getElementById("status-message");
+    const spinner = document.getElementById("loading-spinner");
+    const errorEl = document.getElementById("auth-error");
+
+    // 处理回调
+    const result = await AUTH.handleCallback();
+
+    if (result && result.success) {
+      spinner.style.display = "none";
+      statusEl.className = "callback-status success";
+      statusEl.textContent = "✅ 登录成功！即将跳转...";
+
+      // 获取用户信息
+      const userInfo = await AUTH.getUserInfo();
+      if (userInfo) {
+        localStorage.setItem("casdoor_user_name", userInfo.name || userInfo.displayName || "");
+        localStorage.setItem("casdoor_user_avatar", userInfo.avatar || "");
+      }
+
+      // 跳转回来源页
+      const redirectBack = localStorage.getItem("casdoor_redirect_back");
+      localStorage.removeItem("casdoor_redirect_back");
+      setTimeout(function() {
+        window.location.href = redirectBack || "index.html";
+      }, 1500);
+    } else {
+      spinner.style.display = "none";
+      statusEl.className = "callback-status error";
+      statusEl.textContent = "❌ 登录处理失败";
+    }
+  });
+  </script>
+</body>
+</html>
