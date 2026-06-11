@@ -171,6 +171,10 @@
 
   /**
    * 同步用户信息到 Supabase（从 Casdoor Token）
+   * 
+   * 使用 SECURITY DEFINER RPC 函数绕过 RLS 创建用户。
+   * PostgREST 的 INSERT RLS 策略对 anon 角色无法正确评估
+   * current_setting('request.headers')，所以使用 RPC 是标准方案。
    */
   async function syncUserToSupabase(idToken) {
     if (!idToken) {
@@ -178,26 +182,25 @@
       if (!idToken) return null
     }
 
-    const userData = {
-      casdoor_id: idToken.sub,
-      username: idToken.name || idToken.preferred_username || idToken.sub,
-      email: idToken.email || null,
-      full_name: idToken.name || null,
-      avatar_url: idToken.picture || null,
-      user_type: 'student',  // 默认值
-      locale: 'zh-CN',
-      updated_at: new Date().toISOString()
+    const rpcParams = {
+      p_casdoor_id: idToken.sub,
+      p_username: idToken.name || idToken.preferred_username || idToken.sub,
+      p_full_name: idToken.name || null,
+      p_email: idToken.email || null,
+      p_avatar_url: idToken.picture || null,
+      p_user_type: 'student',
+      p_locale: 'zh-CN'
     }
 
     // 移除 null 值
-    Object.keys(userData).forEach(key => {
-      if (userData[key] === null) delete userData[key]
+    Object.keys(rpcParams).forEach(key => {
+      if (rpcParams[key] === null) delete rpcParams[key]
     })
 
-    const { data, error, status } = await fetchSupabaseAPI('/users', {
+    // RPC 返回单条记录 (jsonb 对象)，直接赋值给 cachedUser
+    const { data, error, status } = await fetchSupabaseAPI('/rpc/sync_user', {
       method: 'POST',
-      data: userData,
-      prefer: 'resolution=merge-duplicates'
+      data: rpcParams
     })
 
     if (error) {
@@ -205,7 +208,7 @@
       return null
     }
 
-    cachedUser = data && Array.isArray(data) ? data[0] : data
+    cachedUser = data
     cacheExpiry = Date.now() + CACHE_DURATION
     return cachedUser
   }

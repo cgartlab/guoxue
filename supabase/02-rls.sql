@@ -28,8 +28,61 @@ STABLE
 SECURITY DEFINER
 AS $$
   SELECT id FROM public.users 
-  WHERE casdoor_id = current_setting('request.headers', true)::jsonb->>'x_casdoor_sub'
+  WHERE casdoor_id = current_setting('request.headers', true)::jsonb->>'x-casdoor-sub'
 $$;
+
+-- ============================================================
+-- 0b. sync_user RPC 函数：为新用户创建记录（绕过 RLS 的 INSERT 限制）
+--     用途：由于 Supabase PostgREST 的 anon 角色无法正确评估
+--           current_setting('request.headers') 的 INSERT RLS 策略，
+--           使用 SECURITY DEFINER 函数来创建用户。
+--     前端 supabase-client.js 通过 POST /rest/v1/rpc/sync_user 调用
+-- ============================================================
+CREATE OR REPLACE FUNCTION public.sync_user(
+  p_casdoor_id text,
+  p_username text DEFAULT NULL,
+  p_full_name text DEFAULT NULL,
+  p_email text DEFAULT NULL,
+  p_avatar_url text DEFAULT NULL,
+  p_user_type text DEFAULT 'student',
+  p_locale text DEFAULT 'zh-CN'
+)
+RETURNS jsonb
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+DECLARE
+  v_user public.users;
+BEGIN
+  INSERT INTO public.users (casdoor_id, username, email, full_name, avatar_url, user_type, locale, updated_at)
+  VALUES (p_casdoor_id, p_username, p_email, p_full_name, p_avatar_url, p_user_type, p_locale, NOW())
+  ON CONFLICT (casdoor_id) 
+  DO UPDATE SET
+    username = COALESCE(p_username, users.username),
+    email = COALESCE(p_email, users.email),
+    full_name = COALESCE(p_full_name, users.full_name),
+    avatar_url = COALESCE(p_avatar_url, users.avatar_url),
+    updated_at = NOW()
+  RETURNING * INTO v_user;
+  
+  RETURN jsonb_build_object(
+    'id', v_user.id,
+    'casdoor_id', v_user.casdoor_id,
+    'username', v_user.username,
+    'full_name', v_user.full_name,
+    'email', v_user.email,
+    'avatar_url', v_user.avatar_url,
+    'user_type', v_user.user_type,
+    'locale', v_user.locale,
+    'created_at', v_user.created_at,
+    'updated_at', v_user.updated_at
+  );
+END;
+$$;
+
+-- 授予 anon 角色执行权限
+GRANT EXECUTE ON FUNCTION public.sync_user TO anon, authenticated;
 
 -- ============================================================
 -- 启用 RLS
@@ -68,11 +121,12 @@ CREATE POLICY "Users can update own profile" ON public.users
 
 -- 用户可以插入自己的资料（通过 Casdoor sub 判断，而非 current_user_id()）
 -- 注意：current_user_id() 依赖用户已存在，新用户插入时返回 NULL
--- 因此 INSERT 策略直接用 header 中的 casdoor_id 来判断
+-- 实际用户创建通过 sync_user() RPC 函数完成（SECURITY DEFINER 绕过 RLS）
+-- 保留此策略作为后备，但主要入口是 RPC
 CREATE POLICY "Users can insert own profile" ON public.users
   FOR INSERT
   WITH CHECK (
-    casdoor_id = current_setting('request.headers', true)::jsonb->>'x_casdoor_sub'
+    casdoor_id = current_setting('request.headers', true)::jsonb->>'x-casdoor-sub'
   );
 
 -- ============================================================
