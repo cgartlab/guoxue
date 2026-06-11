@@ -1006,11 +1006,11 @@ a { color: inherit; text-decoration: none; }
   box-shadow: var(--ds-shadow-md);
 }
 
-/* ===== 顶栏品牌链接 ===== */
-.ds-btn-nav--brand {
-  font-family: var(--ds-font-display);
+/* ===== 顶栏品牌链接（首页专用微调：字号稍大、字距稍紧） ===== */
+/* 注：基础样式在 L152 的 .ds-btn-nav--brand，这里仅覆盖首页差异 */
+.home-wrapper ~ * .ds-btn-nav--brand,
+.ds-navbar .ds-btn-nav--brand {
   font-size: 1.0625rem;
-  font-weight: 700;
   letter-spacing: 0.04em;
 }
 
@@ -1714,53 +1714,17 @@ html.dark .ds-navbar__menu {
 .skip-link:focus { top: var(--ds-space-2); }
 
 /* ========== 首页/关于页容器（可滚动） ========== */
+/* scroll-mode: 首页和关于页 body 使用，区别于课件页全屏固定模式 */
+body.scroll-mode {
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+}
 .page-wrapper { position: relative; z-index: 1; padding-top: calc(60px + var(--ds-space-6)); }
 
 /* ========== 课程结束页 ========== */
 .end-slide .course-complete { text-align: center; }
 .end-slide .course-complete h2 { font-family: var(--ds-font-display); font-size: 2rem; color: var(--ds-color-fg-strong); margin-bottom: var(--ds-space-4); }
-
-:focus-visible {
-    outline: 2px solid var(--ds-accent);
-    outline-offset: 2px;
-    border-radius: var(--ds-radius-md);
-}
-.quiz-option:focus-visible, .ds-btn-nav:focus-visible,
-.fullscreen-btn:focus-visible, .ds-dot:focus-visible {
-    outline: 2px solid var(--ds-accent); outline-offset: 3px;
-}
-@media (max-width: 767px) {
-    .slide-viewport::after {
-        content: '← 左右滑动翻页 →';
-        position: absolute; bottom: var(--ds-space-6); left: 50%;
-        transform: translateX(-50%);
-        font-size: 0.75rem; color: var(--ds-color-muted);
-        pointer-events: none; z-index: 10;
-        opacity: 0.6; letter-spacing: 0.05em; white-space: nowrap;
-    }
-    .progress-bar-bottom { height: 5px; }
-}
-@media (max-width: 374px) {
-    .ds-card-grid { grid-template-columns: 1fr; gap: var(--ds-space-2); }
-    .ds-lesson-card { padding: var(--ds-space-3); }
-    .ds-hero h1 { font-size: 1.5rem; }
-}
-@media (max-width: 479px) {
-    .ds-hero h1 { font-size: 1.75rem; }
-}
-.retake-btn {
-    display: inline-flex; align-items: center; gap: var(--ds-space-2);
-    padding: var(--ds-space-2) var(--ds-space-5);
-    border: 1px solid var(--ds-accent);
-    border-radius: var(--ds-radius-lg);
-    background: transparent; color: var(--ds-accent);
-    font-family: var(--ds-font-body); font-size: 0.875rem;
-    font-weight: 600; cursor: pointer;
-    transition: all var(--ds-duration-200) var(--ds-ease-out);
-    margin-top: var(--ds-space-4);
-}
-.retake-btn:hover { background: var(--ds-accent); color: oklch(99% 0 0); }
-
 
 /* =============================================================
  * Casdoor 登录相关样式
