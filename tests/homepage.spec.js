@@ -82,8 +82,8 @@ test.describe('Desktop (1440x900)', () => {
     await expect(brand).toHaveText('国学课堂');
     await expect(brand.locator('.ds-btn-nav__icon')).toHaveCount(0);
 
-    // 关于本站链接
-    const aboutLink = page.locator('.ds-navbar__inner .ds-btn-nav').last();
+    // 关于本站链接（用 href 精确匹配，避免 auth 按钮干扰）
+    const aboutLink = page.locator('.ds-navbar__inner a[href="about.html"]');
     await expect(aboutLink).toHaveText('关于本站');
 
     // 首页无菜单/抽屉切换按钮(这些仅在课程页的 ds-navbar--global 中存在)
@@ -127,7 +127,7 @@ test.describe('Desktop (1440x900)', () => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(6);
+    await expect(cards).toHaveCount(10);
 
     const firstCard = cards.first();
     await expect(firstCard.locator('.lesson-title')).toContainText('论语');
@@ -138,8 +138,8 @@ test.describe('Desktop (1440x900)', () => {
 
     const values = page.locator('.series-stat__value');
     const vals = await values.allTextContents();
-    // 6 ready lessons, 0 coming lessons, 12 categories
-    expect(vals[0]).toBe('6'); // 已上线
+    // 10 ready lessons, 0 coming lessons, 12 categories
+    expect(vals[0]).toBe('10'); // 已上线
     expect(vals[1]).toBe('0'); // 筹备中
     expect(vals[2]).toBe('12'); // 门类
   });
@@ -156,7 +156,7 @@ test.describe('Tablet (768x1024)', () => {
     await expect(sidebar).toBeVisible();
 
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(6);
+    await expect(cards).toHaveCount(10);
   });
 });
 
@@ -228,7 +228,7 @@ test.describe('Mobile (375x812)', () => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(6);
+    await expect(cards).toHaveCount(10);
   });
 });
 
@@ -294,9 +294,9 @@ test.describe('Interactions', () => {
     const title = page.locator('#filter-title');
     await expect(title).toContainText('蒙学');
 
-    // Should show 6 ready lessons in mengxue
+    // Should show 10 ready lessons in mengxue
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(6);
+    await expect(cards).toHaveCount(10);
   });
 
   test('click on coming discipline shows placeholder', async ({ page }) => {

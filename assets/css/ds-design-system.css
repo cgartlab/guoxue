@@ -15,6 +15,7 @@
     --ds-accent: oklch(52% 0.08 115);
     --ds-accent-hover: oklch(44% 0.09 115);
     --ds-accent-soft: oklch(93% 0.025 115);
+    --ds-color-on-accent: oklch(99% 0 0); /* text on colored backgrounds (accent/olive) - flips to dark in dark mode */
     --ds-color-olive-50: oklch(97% 0.02 115);
     --ds-color-olive-100: oklch(93% 0.035 115);
     --ds-color-olive-200: oklch(85% 0.055 115);
@@ -46,8 +47,12 @@
     --ds-space-12: 48px; --ds-space-16: 64px; --ds-space-20: 80px;
 
     /* ===== 圆角 ===== */
+    --ds-radius-sm: 2px;
     --ds-radius-md: 4px; --ds-radius-lg: 8px;
     --ds-radius-xl: 12px; --ds-radius-2xl: 16px;
+
+    /* ===== 交互态 ===== */
+    --ds-color-bg-hover: oklch(92% 0.01 80);
 
     /* ===== 阴影 ===== */
     --ds-shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.06);
@@ -356,7 +361,7 @@ a { color: inherit; text-decoration: none; }
     white-space: nowrap;
 }
 .ds-tab:hover { color: var(--ds-color-fg); background: var(--ds-color-olive-50); }
-.ds-tab.active { background: var(--ds-accent); color: oklch(99% 0 0); font-weight: 600; }
+.ds-tab.active { background: var(--ds-accent); color: var(--ds-color-on-accent); font-weight: 600; }
 
 /* ========== 主容器 ========== */
 .ds-container {
@@ -606,7 +611,7 @@ a { color: inherit; text-decoration: none; }
   grid-template-columns: var(--sidebar-width, 220px) minmax(0, 1fr);
   grid-template-rows: auto 1fr;
   gap: var(--ds-space-6);
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   min-height: 100vh;
   padding-top: calc(60px + var(--ds-space-6));
@@ -725,7 +730,7 @@ a { color: inherit; text-decoration: none; }
   transition: background 0.15s, transform 0.2s;
 }
 .ds-drawer-toggle-btn:hover {
-  background: var(--ds-color-bg-hover, oklch(92% 0.01 80));
+  background: var(--ds-color-bg-hover);
 }
 .ds-drawer-toggle-btn:active {
   transform: scale(0.95);
@@ -923,7 +928,8 @@ a { color: inherit; text-decoration: none; }
   padding: var(--ds-space-12) var(--ds-space-6) var(--ds-space-10);
   background: linear-gradient(135deg, var(--ds-color-olive-50) 0%, var(--ds-color-surface) 60%, var(--ds-color-surface) 100%);
   border-bottom: 1px solid var(--ds-color-border);
-  margin: 0 calc(-1 * var(--ds-space-6));
+  border-radius: var(--ds-radius-xl);
+  margin: 0;
   padding-left: var(--ds-space-6);
   padding-right: var(--ds-space-6);
 }
@@ -1005,11 +1011,11 @@ a { color: inherit; text-decoration: none; }
   box-shadow: var(--ds-shadow-md);
 }
 
-/* ===== 顶栏品牌链接 ===== */
-.ds-btn-nav--brand {
-  font-family: var(--ds-font-display);
+/* ===== 顶栏品牌链接（首页专用微调：字号稍大、字距稍紧） ===== */
+/* 注：基础样式在 L152 的 .ds-btn-nav--brand，这里仅覆盖首页差异 */
+.home-wrapper ~ * .ds-btn-nav--brand,
+.ds-navbar .ds-btn-nav--brand {
   font-size: 1.0625rem;
-  font-weight: 700;
   letter-spacing: 0.04em;
 }
 
@@ -1070,18 +1076,12 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 var(--ds-space-3) 0;
 }
 
-/* ----- 暗色模式微调 ----- */
-html.dark .ds-coming-soon {
-  background: var(--ds-color-surface-raised);
-  border-color: var(--ds-color-border);
-}
-html.dark .ds-navbar__menu {
-  background: oklch(15% 0.02 80 / 0.98);
-}
+/* ----- 暗色模式微调(已合并到 @media prefers-color-scheme: dark 中) ----- */
 
 /* ========== 响应式 ========== */
 @media (max-width: 1100px) {
   .home-wrapper {
+    max-width: 100%;
     grid-template-columns: var(--sidebar-width, 200px) 1fr;
     padding-left: var(--ds-space-4);
     padding-right: var(--ds-space-4);
@@ -1090,6 +1090,7 @@ html.dark .ds-navbar__menu {
 
 @media (max-width: 767px) {
   .home-wrapper {
+    max-width: 100%;
     grid-template-columns: 1fr;
     padding-top: calc(52px + var(--ds-space-4));
     gap: var(--ds-space-4);
@@ -1099,12 +1100,13 @@ html.dark .ds-navbar__menu {
     top: 52px;
     left: 0;
     bottom: 0;
-    width: 260px !important;
+    width: 280px !important;
     max-height: none;
     overflow-y: auto;
     z-index: 200;
     background: var(--ds-color-bg);
     border-right: 1px solid var(--ds-color-border);
+    box-shadow: var(--ds-shadow-lg);
     transform: translateX(-100%);
     transition: transform var(--ds-duration-300) var(--ds-ease-out);
     padding-right: var(--ds-space-3);
@@ -1114,6 +1116,10 @@ html.dark .ds-navbar__menu {
   }
   .home-sidebar.is-collapsed {
     width: 48px !important;
+    transform: translateX(-100%);
+  }
+  .home-sidebar.is-collapsed.is-open {
+    transform: translateX(0);
   }
 }
 
@@ -1125,7 +1131,8 @@ html.dark .ds-navbar__menu {
   }
   .series-cover {
     padding: var(--ds-space-8) var(--ds-space-4) var(--ds-space-6);
-    margin: 0 calc(-1 * var(--ds-space-4));
+    margin: 0;
+    border-radius: var(--ds-radius-lg);
     padding-left: var(--ds-space-4);
     padding-right: var(--ds-space-4);
   }
@@ -1139,6 +1146,17 @@ html.dark .ds-navbar__menu {
     font-size: 1.75rem;
   }
 }
+
+/* ===== 移动端遮罩层 ===== */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: oklch(0% 0 0 / 0.3);
+  z-index: 199;
+}
+.sidebar-overlay.is-visible {
+  display: block;
 }
 
 /* ========== 响应式 ========== */
@@ -1242,10 +1260,13 @@ html.dark .ds-navbar__menu {
         --ds-accent: oklch(70% 0.1 115);
         --ds-accent-hover: oklch(60% 0.11 115);
         --ds-accent-soft: oklch(30% 0.04 115);
+        --ds-color-on-accent: oklch(15% 0 0); /* dark text on light accent in dark mode */
         --ds-color-olive-50: oklch(20% 0.02 115);
         --ds-color-olive-100: oklch(25% 0.03 115);
         --ds-color-olive-200: oklch(32% 0.04 115);
         --ds-color-olive-300: oklch(40% 0.05 115);
+        --ds-color-olive-400: oklch(48% 0.05 115);
+        --ds-color-olive-500: oklch(55% 0.06 115);
         --ds-color-olive-600: oklch(55% 0.06 115);
         --ds-color-olive-700: oklch(65% 0.05 115);
         --ds-color-olive-800: oklch(75% 0.04 115);
@@ -1258,15 +1279,58 @@ html.dark .ds-navbar__menu {
         --ds-color-warning-bg: oklch(25% 0.03 85);
         --ds-color-info: oklch(65% 0.12 240);
         --ds-color-info-bg: oklch(25% 0.03 240);
+        --ds-color-bg-hover: oklch(20% 0.02 80);
     }
     .cover-slide, .end-slide {
         background: linear-gradient(135deg, oklch(15% 0.02 80) 0%, oklch(22% 0.02 80) 100%);
     }
     .quiz-option:hover:not(.disabled) { border-color: var(--ds-accent); box-shadow: var(--ds-shadow-sm); transform: translateX(4px); }
-    .quiz-option:hover:not(.disabled) .opt-label { background: var(--ds-accent); color: oklch(15% 0 0); }
-    .retake-btn:hover { background: var(--ds-accent); color: oklch(15% 0 0); }
+    .retake-btn:hover { background: var(--ds-accent); color: var(--ds-color-on-accent); }
     .ds-lesson-card, .principle-card, .summary-card, .ds-caption {
         border-color: var(--ds-color-border);
+    }
+
+    /* ===== Dark mode: fix hardcoded backgrounds (wasn't using CSS variables) ===== */
+    .ds-navbar { background: oklch(18% 0.02 80 / 0.92); }
+    .ds-navbar--global { background: oklch(18% 0.02 80 / 0.95); }
+    .ds-toolbar { background: oklch(20% 0.02 80 / 0.95); }
+    .ds-caption { background: oklch(22% 0.02 80); }
+
+    /* mobile dropdown menu */
+    .ds-navbar > .ds-navbar__menu { background: oklch(15% 0.02 80 / 0.98); }
+    .ds-navbar__menu { background: oklch(15% 0.02 80 / 0.98); }
+
+    /* ===== Dark mode: fix hardcoded quote/border colors ===== */
+    .ds-quote {
+        background: linear-gradient(135deg, var(--ds-color-olive-50) 0%, oklch(20% 0.02 115) 100%);
+        box-shadow: inset 0 0 0 1px oklch(30% 0.03 115 / 0.5);
+    }
+    .quiz-explain.correct-exp { border-color: oklch(40% 0.06 145); }
+    .quiz-explain.wrong-exp { border-color: oklch(40% 0.06 30); }
+
+    /* ===== Dark mode: visual quality tweaks ===== */
+    .ink-dot { opacity: 0.12; }
+    .bg-layer { opacity: 0.5; }
+
+    /* ===== Dark mode: coming-soon card (redundant via vars, kept for safety) ===== */
+    .ds-coming-soon {
+        background: var(--ds-color-surface-raised);
+        border-color: var(--ds-color-border);
+    }
+
+    /* ===== Dark mode: auth UI dropdowns ===== */
+    .auth-dropdown-menu {
+        background: var(--ds-color-surface);
+        border-color: var(--ds-color-border);
+    }
+    .auth-dropdown-item {
+        color: var(--ds-color-fg);
+    }
+    .auth-dropdown-item:hover {
+        background: var(--ds-color-surface-raised);
+    }
+    .auth-user-btn:hover {
+        background: var(--ds-color-surface);
     }
 }
 
@@ -1431,12 +1495,12 @@ html.dark .ds-navbar__menu {
     transition: all var(--ds-duration-200) var(--ds-ease-out);
 }
 .quiz-option:hover:not(.disabled) { border-color: var(--ds-accent); box-shadow: var(--ds-shadow-sm); transform: translateX(4px); }
-.quiz-option:hover:not(.disabled) .opt-label { background: var(--ds-accent); color: oklch(99% 0 0); }
+.quiz-option:hover:not(.disabled) .opt-label { background: var(--ds-accent); color: var(--ds-color-on-accent); }
 .quiz-option.disabled { cursor: default; pointer-events: none; }
 .quiz-option.correct { border-color: var(--ds-color-success); background: var(--ds-color-success-bg); }
-.quiz-option.correct .opt-label { background: var(--ds-color-success); color: #fff; }
+.quiz-option.correct .opt-label { background: var(--ds-color-success); color: var(--ds-color-on-accent); }
 .quiz-option.wrong { border-color: var(--ds-color-error); background: var(--ds-color-error-bg); animation: shake var(--ds-duration-500) var(--ds-ease-out); }
-.quiz-option.wrong .opt-label { background: var(--ds-color-error); color: #fff; }
+.quiz-option.wrong .opt-label { background: var(--ds-color-error); color: var(--ds-color-on-accent); }
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
     20%, 60% { transform: translateX(-8px); }
@@ -1656,7 +1720,7 @@ html.dark .ds-navbar__menu {
     transition: all var(--ds-duration-200) var(--ds-ease-out);
     margin-top: var(--ds-space-4);
 }
-.retake-btn:hover { background: var(--ds-accent); color: oklch(99% 0 0); }
+.retake-btn:hover { background: var(--ds-accent); color: var(--ds-color-on-accent); }
 
 /* ========== 课程页底部导航 ========== */
 .course-nav {
@@ -1694,50 +1758,113 @@ html.dark .ds-navbar__menu {
 .skip-link:focus { top: var(--ds-space-2); }
 
 /* ========== 首页/关于页容器（可滚动） ========== */
+/* scroll-mode: 首页和关于页 body 使用，区别于课件页全屏固定模式 */
+body.scroll-mode {
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+}
 .page-wrapper { position: relative; z-index: 1; padding-top: calc(60px + var(--ds-space-6)); }
 
 /* ========== 课程结束页 ========== */
 .end-slide .course-complete { text-align: center; }
 .end-slide .course-complete h2 { font-family: var(--ds-font-display); font-size: 2rem; color: var(--ds-color-fg-strong); margin-bottom: var(--ds-space-4); }
 
-:focus-visible {
-    outline: 2px solid var(--ds-accent);
-    outline-offset: 2px;
-    border-radius: var(--ds-radius-md);
-}
-.quiz-option:focus-visible, .ds-btn-nav:focus-visible,
-.fullscreen-btn:focus-visible, .ds-dot:focus-visible {
-    outline: 2px solid var(--ds-accent); outline-offset: 3px;
-}
-@media (max-width: 767px) {
-    .slide-viewport::after {
-        content: '← 左右滑动翻页 →';
-        position: absolute; bottom: var(--ds-space-6); left: 50%;
-        transform: translateX(-50%);
-        font-size: 0.75rem; color: var(--ds-color-muted);
-        pointer-events: none; z-index: 10;
-        opacity: 0.6; letter-spacing: 0.05em; white-space: nowrap;
-    }
-    .progress-bar-bottom { height: 5px; }
-}
-@media (max-width: 374px) {
-    .ds-card-grid { grid-template-columns: 1fr; gap: var(--ds-space-2); }
-    .ds-lesson-card { padding: var(--ds-space-3); }
-    .ds-hero h1 { font-size: 1.5rem; }
-}
-@media (max-width: 479px) {
-    .ds-hero h1 { font-size: 1.75rem; }
-}
-.retake-btn {
-    display: inline-flex; align-items: center; gap: var(--ds-space-2);
-    padding: var(--ds-space-2) var(--ds-space-5);
-    border: 1px solid var(--ds-accent);
-    border-radius: var(--ds-radius-lg);
-    background: transparent; color: var(--ds-accent);
-    font-family: var(--ds-font-body); font-size: 0.875rem;
-    font-weight: 600; cursor: pointer;
-    transition: all var(--ds-duration-200) var(--ds-ease-out);
-    margin-top: var(--ds-space-4);
-}
-.retake-btn:hover { background: var(--ds-accent); color: oklch(99% 0 0); }
+/* =============================================================
+ * Casdoor 登录相关样式
+ * ============================================================= */
 
+/* --- 登录/注册 按钮 --- */
+.auth-login-btn {
+  font-family: var(--ds-font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  min-width: 80px;
+  justify-content: center;
+}
+.auth-login-btn::before {
+  content: "👤 ";
+  font-size: 0.875rem;
+}
+
+/* --- 已登录用户按钮 --- */
+.auth-user-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px !important;
+  min-width: auto !important;
+}
+.auth-user-btn:hover {
+  background: var(--ds-color-surface);
+}
+
+.auth-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--ds-accent);
+  color: var(--ds-color-surface-raised, oklch(99% 0 0));
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.auth-name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ds-color-fg-strong);
+  max-width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- 用户下拉菜单 --- */
+.auth-user-dropdown {
+  position: relative;
+  display: inline-flex;
+}
+
+.auth-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 120px;
+  margin-top: 4px;
+  padding: 4px;
+  background: var(--ds-color-surface);
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-lg);
+  box-shadow: var(--ds-shadow-md);
+  z-index: 1000;
+}
+
+.auth-dropdown-item {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  color: var(--ds-color-fg);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.auth-dropdown-item:hover {
+  background: var(--ds-color-surface-raised);
+  color: var(--ds-color-error);
+}
+
+/* --- #auth-nav 挂载点确保在导航栏右侧 --- */
+#auth-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* --- 暗色模式适配(已合并到 @media prefers-color-scheme: dark 中) ----- */

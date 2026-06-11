@@ -145,7 +145,7 @@
       html += '</div>';
 
       // 子项容器(默认隐藏)
-      html += '<ul class="home-sidebar__nav" data-subject-group="' + esc(cat.key) + '" hidden>';
+      html += '<ul class="home-sidebar__nav" data-subject-group="' + esc(cat.key) + '" hidden role="group">';
 
       // 门类描述行 — 点击过滤
       html += '<li><a class="home-sidebar__link home-sidebar__link--filter" href="#" data-subject="' + esc(cat.key) + '" data-action="filter">';
@@ -180,6 +180,19 @@
     var nav = document.getElementById('sidebar-nav');
     if (!nav) return;
 
+    // 抽屉收起/展开按钮
+    var drawerBtn = document.getElementById('drawer-close-btn');
+    if (drawerBtn) {
+      drawerBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var wrapper = document.querySelector('.home-wrapper');
+        var sidebar = document.getElementById('sidebar-nav');
+        if (!sidebar) return;
+        sidebar.classList.toggle('is-collapsed');
+        if (wrapper) wrapper.classList.toggle('sidebar-collapsed');
+      });
+    }
+
     // 门类折叠/展开
     nav.addEventListener('click', function (e) {
       var header = e.target.closest('.home-sidebar__category-header');
@@ -187,6 +200,7 @@
         e.preventDefault();
         var key = header.getAttribute('data-group-key');
         var group = header.closest('.home-sidebar__group');
+        if (!group) return; // 空指针防护
         var subNav = group.querySelector('.home-sidebar__nav');
         if (subNav) {
           var isHidden = subNav.hasAttribute('hidden');
@@ -247,37 +261,86 @@
 
       renderCards(subject);
 
-      // 滚动到主区(移动端)
-      var main = document.querySelector('.home-content');
-      if (main && window.innerWidth < 768) {
-        main.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
     });
 
-    // 搜索过滤
+    // ===== 移动端：在导航栏中添加侧栏开关按钮 =====
+    (function addMobileToggle() {
+      if (window.innerWidth >= 768) return;
+      var existingToggle = document.getElementById('drawer-toggle');
+      if (existingToggle) return;
+      var navbarInner = document.querySelector('.ds-navbar__inner');
+      if (!navbarInner) return;
+      var toggleBtn = document.createElement('button');
+      toggleBtn.id = 'drawer-toggle';
+      toggleBtn.className = 'ds-btn-nav ds-btn-nav--icon';
+      toggleBtn.setAttribute('type', 'button');
+      toggleBtn.setAttribute('aria-label', '打开课程导航');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.innerHTML = '<span class="ds-btn-nav__icon" aria-hidden="true">☰</span><span class="ds-btn-nav__text">目录</span>';
+      function toggleMobileSidebar(open) {
+        var sidebar = document.getElementById('sidebar-nav');
+        if (!sidebar) return;
+        var overlay = document.getElementById('sidebar-overlay');
+        if (open === undefined) {
+          sidebar.classList.toggle('is-open');
+        } else {
+          if (open) sidebar.classList.add('is-open');
+          else sidebar.classList.remove('is-open');
+        }
+        var isOpen = sidebar.classList.contains('is-open');
+        toggleBtn.setAttribute('aria-label', isOpen ? '关闭课程导航' : '打开课程导航');
+        toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        toggleBtn.innerHTML = isOpen
+          ? '<span class="ds-btn-nav__icon" aria-hidden="true">✕</span><span class="ds-btn-nav__text">收起</span>'
+          : '<span class="ds-btn-nav__icon" aria-hidden="true">☰</span><span class="ds-btn-nav__text">目录</span>';
+        // 遮罩层
+        if (!overlay) {
+          overlay = document.createElement('div');
+          overlay.id = 'sidebar-overlay';
+          overlay.className = 'sidebar-overlay';
+          overlay.addEventListener('click', function () { toggleMobileSidebar(false); });
+          document.body.appendChild(overlay);
+        }
+        overlay.classList.toggle('is-visible', isOpen);
+      }
+      toggleBtn.addEventListener('click', function () { toggleMobileSidebar(); });
+      // 插入到品牌链接后面
+      var brand = navbarInner.querySelector('.ds-btn-nav--brand');
+      if (brand && brand.nextSibling) {
+        navbarInner.insertBefore(toggleBtn, brand.nextSibling);
+      } else {
+        navbarInner.appendChild(toggleBtn);
+      }
+    })();
+
+    // 搜索过滤 (带防抖)
     var searchInput = document.getElementById('sidebar-search');
     if (searchInput) {
+      var searchTimer = null;
       searchInput.addEventListener('input', function () {
-        var q = searchInput.value.trim().toLowerCase();
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(function () {
+          var q = searchInput.value.trim().toLowerCase();
 
-        // 过滤所有链接
-        nav.querySelectorAll('.home-sidebar__link').forEach(function (link) {
-          var text = (link.textContent || '').toLowerCase();
-          var li = link.closest('li');
-          if (!li) return;
-          if (q === '') {
-            li.style.display = '';
-          } else {
-            li.style.display = text.indexOf(q) !== -1 ? '' : 'none';
-          }
-        });
+          // 过滤所有链接
+          nav.querySelectorAll('.home-sidebar__link').forEach(function (link) {
+            var text = (link.textContent || '').toLowerCase();
+            var li = link.closest('li');
+            if (!li) return;
+            if (q === '') {
+              li.style.display = '';
+            } else {
+              li.style.display = text.indexOf(q) !== -1 ? '' : 'none';
+            }
+          });
 
-        // 门类分组:组内任意一项可见则显示,否则隐藏
-        nav.querySelectorAll('.home-sidebar__group').forEach(function (group) {
-          var items = group.querySelectorAll('.home-sidebar__nav > li');
-          var anyVisible = Array.from(items).some(function (li) { return li.style.display !== 'none'; });
-          group.style.display = anyVisible ? '' : 'none';
-        });
+          // 门类分组：组内任意一项可见则显示，否则隐藏
+          nav.querySelectorAll('.home-sidebar__group').forEach(function (group) {
+            var items = group.querySelectorAll('.home-sidebar__nav > li');
+            var anyVisible = Array.from(items).some(function (li) { return li.style.display !== 'none'; });
+            group.style.display = anyVisible ? '' : 'none';
+          });
+        }, 200); // 200ms 防抖
       });
     }
   }
@@ -296,6 +359,7 @@
 
   /* ===== 渲染:课程卡片 ===== */
   var currentFilter = 'all';
+  var expandedGroups = {}; // 记录用户展开的门类状态
 
   function renderCards(filterSubject) {
     var gridEl = document.getElementById('lesson-cards');
@@ -304,6 +368,9 @@
 
     var subject = filterSubject || 'all';
     currentFilter = subject;
+
+    // 持久化当前筛选状态（跨导航保持）
+    try { sessionStorage.setItem('guoxue_sidebar_filter', subject); } catch(e) {}
 
     var cat = (subject === 'all') ? null : getCategoryByKey(subject);
     var hasReady = LESSONS.some(function (l) {
@@ -322,9 +389,19 @@
         if (subject === 'all') return l.status === 'ready';
         return l.subject === subject && l.status === 'ready';
       });
-      filtered.forEach(function (lesson) {
-        gridEl.insertAdjacentHTML('beforeend', buildCardHTML(lesson));
-      });
+      
+      // 空课程列表友好提示
+      if (filtered.length === 0) {
+        gridEl.innerHTML = '<div class=\"ds-empty-state\" role=\"status\" style=\"text-align:center;padding:var(--ds-space-12);color:var(--ds-color-muted);\">' +
+          '<div style=\"font-size:3rem;margin-bottom:var(--ds-space-4);\" aria-hidden=\"true\">📚</div>' +
+          '<p>暂无课程</p>' +
+          '<p style=\"font-size:0.875rem;margin-top:var(--ds-space-2);\">该门类课程正在筹备中，敬请期待。</p>' +
+          '</div>';
+      } else {
+        filtered.forEach(function (lesson) {
+          gridEl.insertAdjacentHTML('beforeend', buildCardHTML(lesson));
+        });
+      }
     }
 
     renderFilterTitle(subject);
@@ -376,6 +453,60 @@
       return;
     }
     window.GUOXUE_HOMEPAGE.init();
+
+    // ===== 功能增强：侧边栏键盘可访问性（Enter/Space 展开分类） =====
+    (function enhanceKeyboard() {
+      var nav = document.getElementById('sidebar-nav');
+      if (!nav) return;
+      nav.addEventListener('keydown', function (e) {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        var header = e.target.closest('.home-sidebar__category-header');
+        if (header) { e.preventDefault(); header.click(); }
+      });
+    })();
+
+    // ===== 功能增强：ESC 关闭移动端侧栏 =====
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      var sidebar = document.getElementById('sidebar-nav');
+      var toggleBtn = document.getElementById('drawer-toggle');
+      if (sidebar && sidebar.classList.contains('is-open')) {
+        sidebar.classList.remove('is-open');
+        var overlay = document.getElementById('sidebar-overlay');
+        if (overlay) overlay.classList.remove('is-visible');
+        if (toggleBtn) {
+          toggleBtn.setAttribute('aria-expanded', 'false');
+          toggleBtn.innerHTML = '<span class="ds-btn-nav__icon" aria-hidden="true">☰</span><span class="ds-btn-nav__text">目录</span>';
+          toggleBtn.focus();
+        }
+      }
+    });
+
+    // ===== 功能增强：搜索框清除按钮 =====
+    (function addSearchClear() {
+      var searchInput = document.getElementById('sidebar-search');
+      if (!searchInput) return;
+      var clearBtn = document.createElement('button');
+      clearBtn.className = 'search-box__clear';
+      clearBtn.setAttribute('type', 'button');
+      clearBtn.setAttribute('aria-label', '清除搜索');
+      clearBtn.innerHTML = '✕';
+      clearBtn.style.cssText = 'display:none;position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--ds-color-muted);font-size:12px;padding:4px;line-height:1;';
+      var searchBox = searchInput.parentNode;
+      if (searchBox) {
+        searchBox.style.position = 'relative';
+        searchBox.appendChild(clearBtn);
+      }
+      searchInput.addEventListener('input', function () {
+        clearBtn.style.display = this.value ? 'block' : 'none';
+      });
+      clearBtn.addEventListener('click', function () {
+        searchInput.value = '';
+        clearBtn.style.display = 'none';
+        searchInput.dispatchEvent(new Event('input'));
+        searchInput.focus();
+      });
+    })();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', boot);

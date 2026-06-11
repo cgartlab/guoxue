@@ -8,8 +8,8 @@
 <meta property="og:title" content="论语问答课件·混合版 · 国学课堂">
 <meta property="og:description" content="在标准版基础上拓展内容深度,适合学有余力的学生深入研读。">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://guoxue.cgartlab.com/lessons/01-lunyu-mixed/index.html">
-<link rel="canonical" href="https://guoxue.cgartlab.com/lessons/01-lunyu-mixed/index.html">
+<meta property="og:url" content="https://guoxue.8023laozhanshi.cc/lessons/01-lunyu-mixed/index.html">
+<link rel="canonical" href="https://guoxue.8023laozhanshi.cc/lessons/01-lunyu-mixed/index.html">
 <title>《论语》问答课件 · 混合版 · 八〇二三老战士 · 国学课堂</title>
 <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,8 +31,10 @@
         <li><a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html#lesson-cards">课程</a></li>
         <li><a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html#sidebar-nav">门类</a></li>
     </ul>
+    <span style="flex:1"></span>
     <a class="ds-btn-nav" href="../../about.html">关于本站</a>
-</nav>
+    <div id="auth-nav"></div>
+  </nav>
 
 <!-- ===== 课程工具栏 ===== -->
 <nav class="ds-toolbar" aria-label="课程工具栏">
@@ -260,7 +262,7 @@
         </div>
     </div>
     <div id="quiz-review-content" style="margin-top:var(--ds-space-12);width:100%;max-width:800px;text-align:left;padding:var(--ds-space-8);"></div>
-    <button class="ds-btn-restart" id="restart-quiz" style="margin-top:var(--ds-space-10);padding:var(--ds-space-3) var(--ds-space-8);font-size:1.125rem;font-weight:600;background:var(--ds-accent);color:white;border:none;border-radius:var(--ds-radius-lg);cursor:pointer;transition:all var(--ds-duration-200) var(--ds-ease-out);box-shadow:var(--ds-shadow-md);">🔄 重新测试</button>
+    <button class="ds-btn-restart" id="restart-quiz" style="margin-top:var(--ds-space-10);padding:var(--ds-space-3) var(--ds-space-8);font-size:1.125rem;font-weight:600;background:var(--ds-accent);color:var(--ds-color-on-accent);border:none;border-radius:var(--ds-radius-lg);cursor:pointer;transition:all var(--ds-duration-200) var(--ds-ease-out);box-shadow:var(--ds-shadow-md);">🔄 重新测试</button>
 </div>
 
 <!-- ====== 第22页：易错题回顾 ====== -->
@@ -346,5 +348,10 @@
 </div>
 
 <script src="../../assets/js/slide-engine.js"></script>
+<script src="../../assets/js/auth.js" defer></script>
+
+<!-- Supabase 数据持久化 -->
+<script src="../../assets/js/api-client.js" defer></script>
+<script src="../../assets/js/auth-supabase-patch.js" defer></script>
 </body>
 </html>

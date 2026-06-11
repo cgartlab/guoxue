@@ -8,10 +8,10 @@
   <meta property="og:title" content="国学课堂 — 传承经典 · 启迪智慧">
   <meta property="og:description" content="面向小学生的中华传统文化在线课件站，包含《论语》国学问答等互动课程。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://guoxue.cgartlab.com/">
+  <meta property="og:url" content="https://guoxue.8023laozhanshi.cc/">
   <meta name="twitter:card" content="summary_large_image">
   <title>国学课堂 — 传承经典 · 启迪智慧</title>
-  <link rel="canonical" href="https://guoxue.cgartlab.com/">
+  <link rel="canonical" href="https://guoxue.8023laozhanshi.cc/">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,9 @@
   <nav class="ds-navbar" aria-label="主导航">
     <div class="ds-navbar__inner">
       <a class="ds-btn-nav ds-btn-nav--brand" href="index.html">国学课堂</a>
+      <span style="flex:1"></span>
       <a class="ds-btn-nav" href="about.html">关于本站</a>
+      <div id="auth-nav"></div>
     </div>
   </nav>
 
@@ -70,5 +72,10 @@
   <script src="assets/js/lessons-manifest.js"></script>
   <script src="assets/js/homepage.js" defer></script>
 
+<script src="assets/js/auth.js" defer></script>
+
+  <!-- Supabase 数据持久化 -->
+  <script src="assets/js/api-client.js" defer></script>
+  <script src="assets/js/auth-supabase-patch.js" defer></script>
 </body>
 </html>
