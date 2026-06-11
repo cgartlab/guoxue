@@ -15,6 +15,7 @@
     --ds-accent: oklch(52% 0.08 115);
     --ds-accent-hover: oklch(44% 0.09 115);
     --ds-accent-soft: oklch(93% 0.025 115);
+    --ds-color-on-accent: oklch(99% 0 0); /* text on colored backgrounds (accent/olive) - flips to dark in dark mode */
     --ds-color-olive-50: oklch(97% 0.02 115);
     --ds-color-olive-100: oklch(93% 0.035 115);
     --ds-color-olive-200: oklch(85% 0.055 115);
@@ -46,8 +47,12 @@
     --ds-space-12: 48px; --ds-space-16: 64px; --ds-space-20: 80px;
 
     /* ===== 圆角 ===== */
+    --ds-radius-sm: 2px;
     --ds-radius-md: 4px; --ds-radius-lg: 8px;
     --ds-radius-xl: 12px; --ds-radius-2xl: 16px;
+
+    /* ===== 交互态 ===== */
+    --ds-color-bg-hover: oklch(92% 0.01 80);
 
     /* ===== 阴影 ===== */
     --ds-shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.06);
@@ -725,7 +730,7 @@ a { color: inherit; text-decoration: none; }
   transition: background 0.15s, transform 0.2s;
 }
 .ds-drawer-toggle-btn:hover {
-  background: var(--ds-color-bg-hover, oklch(92% 0.01 80));
+  background: var(--ds-color-bg-hover);
 }
 .ds-drawer-toggle-btn:active {
   transform: scale(0.95);
@@ -1071,14 +1076,7 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 var(--ds-space-3) 0;
 }
 
-/* ----- 暗色模式微调 ----- */
-html.dark .ds-coming-soon {
-  background: var(--ds-color-surface-raised);
-  border-color: var(--ds-color-border);
-}
-html.dark .ds-navbar__menu {
-  background: oklch(15% 0.02 80 / 0.98);
-}
+/* ----- 暗色模式微调(已合并到 @media prefers-color-scheme: dark 中) ----- */
 
 /* ========== 响应式 ========== */
 @media (max-width: 1100px) {
@@ -1262,10 +1260,13 @@ html.dark .ds-navbar__menu {
         --ds-accent: oklch(70% 0.1 115);
         --ds-accent-hover: oklch(60% 0.11 115);
         --ds-accent-soft: oklch(30% 0.04 115);
+        --ds-color-on-accent: oklch(15% 0 0); /* dark text on light accent in dark mode */
         --ds-color-olive-50: oklch(20% 0.02 115);
         --ds-color-olive-100: oklch(25% 0.03 115);
         --ds-color-olive-200: oklch(32% 0.04 115);
         --ds-color-olive-300: oklch(40% 0.05 115);
+        --ds-color-olive-400: oklch(48% 0.05 115);
+        --ds-color-olive-500: oklch(55% 0.06 115);
         --ds-color-olive-600: oklch(55% 0.06 115);
         --ds-color-olive-700: oklch(65% 0.05 115);
         --ds-color-olive-800: oklch(75% 0.04 115);
@@ -1278,6 +1279,7 @@ html.dark .ds-navbar__menu {
         --ds-color-warning-bg: oklch(25% 0.03 85);
         --ds-color-info: oklch(65% 0.12 240);
         --ds-color-info-bg: oklch(25% 0.03 240);
+        --ds-color-bg-hover: oklch(20% 0.02 80);
     }
     .cover-slide, .end-slide {
         background: linear-gradient(135deg, oklch(15% 0.02 80) 0%, oklch(22% 0.02 80) 100%);
@@ -1287,6 +1289,49 @@ html.dark .ds-navbar__menu {
     .retake-btn:hover { background: var(--ds-accent); color: oklch(15% 0 0); }
     .ds-lesson-card, .principle-card, .summary-card, .ds-caption {
         border-color: var(--ds-color-border);
+    }
+
+    /* ===== Dark mode: fix hardcoded backgrounds (wasn't using CSS variables) ===== */
+    .ds-navbar { background: oklch(18% 0.02 80 / 0.92); }
+    .ds-navbar--global { background: oklch(18% 0.02 80 / 0.95); }
+    .ds-toolbar { background: oklch(20% 0.02 80 / 0.95); }
+    .ds-caption { background: oklch(22% 0.02 80); }
+
+    /* mobile dropdown menu */
+    .ds-navbar > .ds-navbar__menu { background: oklch(15% 0.02 80 / 0.98); }
+    .ds-navbar__menu { background: oklch(15% 0.02 80 / 0.98); }
+
+    /* ===== Dark mode: fix hardcoded quote/border colors ===== */
+    .ds-quote {
+        background: linear-gradient(135deg, var(--ds-color-olive-50) 0%, oklch(20% 0.02 115) 100%);
+        box-shadow: inset 0 0 0 1px oklch(30% 0.03 115 / 0.5);
+    }
+    .quiz-explain.correct-exp { border-color: oklch(40% 0.06 145); }
+    .quiz-explain.wrong-exp { border-color: oklch(40% 0.06 30); }
+
+    /* ===== Dark mode: visual quality tweaks ===== */
+    .ink-dot { opacity: 0.12; }
+    .bg-layer { opacity: 0.5; }
+
+    /* ===== Dark mode: coming-soon card (redundant via vars, kept for safety) ===== */
+    .ds-coming-soon {
+        background: var(--ds-color-surface-raised);
+        border-color: var(--ds-color-border);
+    }
+
+    /* ===== Dark mode: auth UI dropdowns ===== */
+    .auth-dropdown-menu {
+        background: var(--ds-color-surface);
+        border-color: var(--ds-color-border);
+    }
+    .auth-dropdown-item {
+        color: var(--ds-color-fg);
+    }
+    .auth-dropdown-item:hover {
+        background: var(--ds-color-surface-raised);
+    }
+    .auth-user-btn:hover {
+        background: var(--ds-color-surface);
     }
 }
 
@@ -1454,9 +1499,9 @@ html.dark .ds-navbar__menu {
 .quiz-option:hover:not(.disabled) .opt-label { background: var(--ds-accent); color: oklch(99% 0 0); }
 .quiz-option.disabled { cursor: default; pointer-events: none; }
 .quiz-option.correct { border-color: var(--ds-color-success); background: var(--ds-color-success-bg); }
-.quiz-option.correct .opt-label { background: var(--ds-color-success); color: #fff; }
+.quiz-option.correct .opt-label { background: var(--ds-color-success); color: oklch(99% 0 0); }
 .quiz-option.wrong { border-color: var(--ds-color-error); background: var(--ds-color-error-bg); animation: shake var(--ds-duration-500) var(--ds-ease-out); }
-.quiz-option.wrong .opt-label { background: var(--ds-color-error); color: #fff; }
+.quiz-option.wrong .opt-label { background: var(--ds-color-error); color: oklch(99% 0 0); }
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
     20%, 60% { transform: translateX(-8px); }
@@ -1753,7 +1798,7 @@ body.scroll-mode {
   min-width: auto !important;
 }
 .auth-user-btn:hover {
-  background: var(--ds-color-surface, #f5f5f5);
+  background: var(--ds-color-surface);
 }
 
 .auth-avatar {
@@ -1763,8 +1808,8 @@ body.scroll-mode {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: var(--ds-accent, #1677ff);
-  color: #fff;
+  background: var(--ds-accent);
+  color: var(--ds-color-surface-raised, oklch(99% 0 0));
   font-size: 0.75rem;
   font-weight: 700;
   flex-shrink: 0;
@@ -1794,10 +1839,10 @@ body.scroll-mode {
   min-width: 120px;
   margin-top: 4px;
   padding: 4px;
-  background: var(--ds-color-surface, #fff);
-  border: 1px solid var(--ds-color-border, #e5e5e5);
-  border-radius: var(--ds-radius-lg, 8px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: var(--ds-color-surface);
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-lg);
+  box-shadow: var(--ds-shadow-md);
   z-index: 1000;
 }
 
@@ -1806,14 +1851,14 @@ body.scroll-mode {
   padding: 8px 12px;
   border-radius: 6px;
   font-size: 0.8125rem;
-  color: var(--ds-color-fg, #333);
+  color: var(--ds-color-fg);
   text-decoration: none;
   cursor: pointer;
   transition: background 0.15s;
 }
 .auth-dropdown-item:hover {
-  background: var(--ds-color-surface-raised, #f0f0f0);
-  color: var(--ds-color-error, #ef4444);
+  background: var(--ds-color-surface-raised);
+  color: var(--ds-color-error);
 }
 
 /* --- #auth-nav 挂载点确保在导航栏右侧 --- */
@@ -1823,17 +1868,4 @@ body.scroll-mode {
   align-items: center;
 }
 
-/* --- 暗色模式适配 --- */
-html.dark .auth-dropdown-menu {
-  background: oklch(22% 0.02 80);
-  border-color: oklch(35% 0.02 80);
-}
-html.dark .auth-dropdown-item {
-  color: oklch(85% 0.01 60);
-}
-html.dark .auth-dropdown-item:hover {
-  background: oklch(26% 0.02 80);
-}
-html.dark .auth-user-btn:hover {
-  background: oklch(22% 0.02 80);
-}
+/* --- 暗色模式适配(已合并到 @media prefers-color-scheme: dark 中) ----- */
