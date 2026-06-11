@@ -1,1 +1,13 @@
-Nothing should be ignored since the changes only include JavaScript source files (.js) which are not build artifacts, dependencies, or temporary files.
+# Debug scripts with API tokens
+.omo/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Environment
+.env
+.env.local
