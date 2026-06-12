@@ -20,3 +20,5 @@ node_modules/
 test-results/
 .sisyphus/
 .opencode/
+supabase-client.js
+auth-supabase-patch.js
