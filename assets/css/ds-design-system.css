@@ -1795,6 +1795,35 @@ body.scroll-mode {
   font-size: 0.875rem;
 }
 
+/* --- 登录按钮容器（容纳多个登录选项）--- */
+.auth-login-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* --- 微信登录按钮 --- */
+.auth-wechat-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px !important;
+  min-width: auto !important;
+  color: #07C160;
+  background: transparent;
+  border: 1px solid #07C160;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.auth-wechat-btn:hover {
+  background: rgba(7, 193, 96, 0.1);
+}
+.auth-wechat-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* --- 已登录用户按钮 --- */
 .auth-user-btn {
   display: inline-flex !important;
