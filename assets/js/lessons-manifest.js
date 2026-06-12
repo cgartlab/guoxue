@@ -172,6 +172,20 @@ window.GUOXUE_LESSONS = [
         subject: 'mengxue',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '10-fu-zai-guan-qi-zhi',
+        title: '父在观其志',
+        subtitle: '孝道 · 志行 · 传承',
+        path: 'lessons/10-fu-zai-guan-qi-zhi/index.html',
+        icon: '👨‍👦',
+        grade: '小学中高年级',
+        description: '《论语·学而》第十一章精讲：子曰：父在观其志，父没观其行，三年无改于父之道，可谓孝矣。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
     // {
