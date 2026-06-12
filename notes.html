@@ -6,197 +6,164 @@
   <title>笔记和书签 - 国学课堂</title>
   <link rel="stylesheet" href="/assets/css/ds-design-system.css">
   <style>
-    :root {
-      --page-bg: #f8fafc;
-      --card-bg: #ffffff;
-      --text-primary: #1e293b;
-      --text-secondary: #64748b;
-      --border-color: #e2e8f0;
-      --accent: #667eea;
-      --accent-light: #f0f4ff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background: var(--page-bg);
-      color: var(--text-primary);
-      min-height: 100vh;
-    }
-
+    /* ===== 布局 ===== */
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 20px;
+      padding: var(--ds-space-6);
     }
 
     /* ===== 头部 ===== */
     .page-header {
-      margin-bottom: 30px;
+      margin-bottom: var(--ds-space-6);
     }
 
     .page-title {
-      font-size: 32px;
+      font-family: var(--ds-font-display);
+      font-size: 1.75rem;
       font-weight: 700;
-      margin-bottom: 10px;
+      color: var(--ds-color-fg-strong);
+      margin-bottom: var(--ds-space-2);
     }
 
     .page-subtitle {
-      font-size: 14px;
-      color: var(--text-secondary);
+      font-size: 0.875rem;
+      color: var(--ds-color-muted);
     }
 
     /* ===== 选项卡 ===== */
     .tabs {
       display: flex;
-      gap: 10px;
-      margin-bottom: 30px;
-      border-bottom: 2px solid var(--border-color);
+      gap: var(--ds-space-2);
+      margin-bottom: var(--ds-space-6);
+      border-bottom: 2px solid var(--ds-color-border);
     }
 
     .tab {
-      padding: 12px 20px;
+      padding: var(--ds-space-3) var(--ds-space-4);
       border: none;
       background: none;
-      color: var(--text-secondary);
-      font-size: 14px;
+      color: var(--ds-color-muted);
+      font-family: var(--ds-font-body);
+      font-size: 0.875rem;
       font-weight: 500;
       cursor: pointer;
       border-bottom: 2px solid transparent;
       margin-bottom: -2px;
-      transition: all 0.3s;
+      transition: all var(--ds-duration-200) var(--ds-ease-out);
     }
 
     .tab:hover {
-      color: var(--text-primary);
+      color: var(--ds-color-fg);
     }
 
     .tab.active {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
+      color: var(--ds-accent);
+      border-bottom-color: var(--ds-accent);
+      font-weight: 600;
     }
 
     /* ===== 课程选择器 ===== */
     .course-selector {
-      margin-bottom: 20px;
+      margin-bottom: var(--ds-space-5);
       display: flex;
-      gap: 10px;
+      gap: var(--ds-space-3);
       align-items: center;
       flex-wrap: wrap;
     }
 
     .course-selector label {
-      font-size: 13px;
+      font-size: 0.8125rem;
       font-weight: 500;
-      color: var(--text-secondary);
+      color: var(--ds-color-muted);
     }
 
     .course-selector select {
-      padding: 8px 12px;
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      font-size: 13px;
-      color: var(--text-primary);
+      padding: var(--ds-space-2) var(--ds-space-3);
+      border: 1px solid var(--ds-color-border);
+      border-radius: var(--ds-radius-md);
+      font-family: var(--ds-font-body);
+      font-size: 0.8125rem;
+      color: var(--ds-color-fg);
       cursor: pointer;
       min-width: 200px;
+      background: var(--ds-color-surface);
     }
 
     /* ===== 笔记卡片 ===== */
     .notes-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--ds-space-5);
     }
 
     .note-card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      background: var(--ds-color-surface);
+      border-radius: var(--ds-radius-xl);
+      box-shadow: var(--ds-shadow-sm);
       overflow: hidden;
       border-left: 4px solid;
-      transition: all 0.3s;
+      transition: all var(--ds-duration-200) var(--ds-ease-out);
+      border: 1px solid var(--ds-color-border);
+      border-left-width: 4px;
     }
 
     .note-card:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--ds-shadow-md);
       transform: translateY(-2px);
     }
 
-    .note-card.yellow {
-      border-left-color: #fbbf24;
-      background: linear-gradient(135deg, rgba(251, 191, 36, 0.05) 0%, rgba(251, 191, 36, 0) 100%);
-    }
-
-    .note-card.green {
-      border-left-color: #10b981;
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(16, 185, 129, 0) 100%);
-    }
-
-    .note-card.blue {
-      border-left-color: #3b82f6;
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0) 100%);
-    }
-
-    .note-card.pink {
-      border-left-color: #ec4899;
-      background: linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(236, 72, 153, 0) 100%);
-    }
-
-    .note-card.red {
-      border-left-color: #ef4444;
-      background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(239, 68, 68, 0) 100%);
-    }
+    .note-card.yellow { border-left-color: #fbbf24; }
+    .note-card.green  { border-left-color: #10b981; }
+    .note-card.blue   { border-left-color: #3b82f6; }
+    .note-card.pink   { border-left-color: #ec4899; }
+    .note-card.red    { border-left-color: #ef4444; }
 
     .note-header {
-      padding: 16px;
-      border-bottom: 1px solid var(--border-color);
+      padding: var(--ds-space-4);
+      border-bottom: 1px solid var(--ds-color-border);
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
     }
 
     .note-title {
-      font-size: 14px;
+      font-size: 0.875rem;
       font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 4px;
+      color: var(--ds-color-fg-strong);
+      margin-bottom: var(--ds-space-1);
       flex: 1;
       word-break: break-word;
     }
 
     .note-meta {
-      font-size: 11px;
-      color: var(--text-secondary);
+      font-size: 0.6875rem;
+      color: var(--ds-color-muted);
     }
 
     .note-actions {
       display: flex;
-      gap: 6px;
+      gap: var(--ds-space-1);
     }
 
     .note-action-btn {
       background: none;
       border: none;
-      color: var(--text-secondary);
+      color: var(--ds-color-muted);
       cursor: pointer;
-      font-size: 16px;
-      transition: color 0.3s;
+      font-size: 1rem;
+      transition: color var(--ds-duration-150) var(--ds-ease-out);
     }
 
     .note-action-btn:hover {
-      color: var(--accent);
+      color: var(--ds-accent);
     }
 
     .note-body {
-      padding: 16px;
-      font-size: 13px;
+      padding: var(--ds-space-4);
+      font-size: 0.8125rem;
       line-height: 1.6;
-      color: var(--text-primary);
+      color: var(--ds-color-fg);
       max-height: 150px;
       overflow-y: auto;
       white-space: pre-wrap;
@@ -205,15 +172,16 @@
 
     /* ===== 书签列表 ===== */
     .bookmarks-list {
-      background: var(--card-bg);
-      border-radius: 12px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      background: var(--ds-color-surface);
+      border-radius: var(--ds-radius-xl);
+      box-shadow: var(--ds-shadow-sm);
       overflow: hidden;
+      border: 1px solid var(--ds-color-border);
     }
 
     .bookmark-item {
-      padding: 16px;
-      border-bottom: 1px solid var(--border-color);
+      padding: var(--ds-space-4);
+      border-bottom: 1px solid var(--ds-color-border);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -228,34 +196,34 @@
     }
 
     .bookmark-course {
-      font-size: 14px;
+      font-size: 0.875rem;
       font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 4px;
+      color: var(--ds-color-fg-strong);
+      margin-bottom: var(--ds-space-1);
     }
 
     .bookmark-page {
-      font-size: 12px;
-      color: var(--text-secondary);
+      font-size: 0.75rem;
+      color: var(--ds-color-muted);
     }
 
     .bookmark-actions {
       display: flex;
-      gap: 10px;
+      gap: var(--ds-space-2);
       align-items: center;
     }
 
     .bookmark-icon {
-      font-size: 20px;
+      font-size: 1.125rem;
     }
 
     .delete-btn {
       background: none;
       border: none;
-      color: #ef4444;
+      color: var(--ds-color-error);
       cursor: pointer;
-      font-size: 18px;
-      transition: opacity 0.3s;
+      font-size: 1rem;
+      transition: opacity var(--ds-duration-150) var(--ds-ease-out);
     }
 
     .delete-btn:hover {
@@ -265,30 +233,31 @@
     /* ===== 空状态 ===== */
     .empty-state {
       text-align: center;
-      padding: 60px 20px;
-      color: var(--text-secondary);
+      padding: var(--ds-space-16) var(--ds-space-5);
+      color: var(--ds-color-muted);
     }
 
     .empty-icon {
-      font-size: 64px;
-      margin-bottom: 16px;
+      font-size: 2.5rem;
+      margin-bottom: var(--ds-space-4);
     }
 
     .empty-text {
-      font-size: 16px;
-      margin-bottom: 8px;
+      font-size: 1rem;
+      color: var(--ds-color-fg);
+      margin-bottom: var(--ds-space-2);
     }
 
     .empty-hint {
-      font-size: 13px;
-      color: #a0aec0;
+      font-size: 0.8125rem;
+      color: var(--ds-color-muted);
     }
 
     /* ===== 加载状态 ===== */
     .loading {
       text-align: center;
-      padding: 40px 20px;
-      color: var(--text-secondary);
+      padding: var(--ds-space-10) var(--ds-space-5);
+      color: var(--ds-color-muted);
     }
 
     /* ===== 响应式 ===== */
@@ -298,7 +267,7 @@
       }
 
       .page-title {
-        font-size: 24px;
+        font-size: 1.5rem;
       }
 
       .course-selector {
@@ -314,16 +283,13 @@
 </head>
 <body>
   <!-- 导航栏 -->
-  <nav class="ds-navbar" id="navbar">
-    <div class="ds-navbar-container">
-      <h1 class="ds-navbar-logo">
-        <a href="/">国学课堂</a>
-      </h1>
-      <div class="ds-navbar-links">
-        <a href="/" class="ds-navbar-link">首页</a>
-        <a href="/dashboard.html" class="ds-navbar-link">学习面板</a>
-        <a href="/notes.html" class="ds-navbar-link active">笔记和书签</a>
-      </div>
+  <nav class="ds-navbar" aria-label="主导航">
+    <div class="ds-navbar__inner">
+      <a class="ds-btn-nav ds-btn-nav--brand" href="/">国学课堂</a>
+      <span class="flex-spacer"></span>
+      <a class="ds-btn-nav" href="/">首页</a>
+      <a class="ds-btn-nav ds-btn-nav--ghost" href="/dashboard.html">学习面板</a>
+      <a class="ds-btn-nav ds-btn-nav--ghost active" href="/notes.html" aria-current="page">笔记和书签</a>
       <div id="auth-nav"></div>
     </div>
   </nav>
@@ -357,7 +323,7 @@
     </div>
 
     <!-- 书签标签页 -->
-    <div id="bookmarks-tab" class="tab-content" style="display: none;">
+    <div id="bookmarks-tab" class="tab-content" hidden>
       <div class="course-selector">
         <label for="bookmarks-course-select">筛选课程：</label>
         <select id="bookmarks-course-select" onchange="filterBookmarks()">
