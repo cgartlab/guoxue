@@ -51,7 +51,7 @@
 
 ## Casdoor Email (SMTP) Configuration
 - Casdoor manages its own SMTP/email config via the admin web UI at `https://casdoor.8023laozhanshi.cc`
-- Login: `admin` / `123` (change after first login)
+- Login with admin credentials (defaults are set during Casdoor deployment)
 - **To configure**:
   1. Settings → Providers → Add → Email → SMTP
   2. Fill in SMTP server, port, username, password (QQ授权码), sender info
