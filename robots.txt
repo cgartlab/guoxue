@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://guoxue.cgartlab.com/sitemap.xml
+Sitemap: https://guoxue.8023laozhanshi.cc/sitemap.xml
