@@ -12,7 +12,7 @@
 (function() {
   'use strict'
 
-  const API_BASE = window.location.origin + '/api'
+  const API_BASE = 'https://guoxue.8023laozhanshi.cc'
   let cachedUser = null
   let cacheExpiry = 0
   const CACHE_DURATION = 5 * 60 * 1000
