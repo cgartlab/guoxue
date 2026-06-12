@@ -302,7 +302,7 @@ const AUTH = (function() {
   }
 
   /**
-   * 退出登录
+   * 退出登录（清除本地 + Casdoor session）
    */
   function logout() {
     const keys = [
@@ -311,6 +311,9 @@ const AUTH = (function() {
     ];
     keys.forEach(k => localStorage.removeItem(k));
     updateAuthUI();
+    // 真正通知 Casdoor 清除 session cookie
+    fetch(CONFIG.serverUrl + CONFIG.logoutEndpoint, { method: 'GET', credentials: 'include' })
+      .catch(() => {});
   }
 
   // ============ UI 相关 ============
