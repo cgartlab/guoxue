@@ -62,6 +62,16 @@
 - For QQ邮箱: server `smtp.qq.com`, port `465` (SSL), use **授权码** not password
 - SMTP credentials are NOT stored in this repo (they are secrets managed in Casdoor)
 
+## Nginx Routing Requirements
+- Casdoor API endpoints (`send-verification-code`, `verify-captcha`, `get-*`, `signin`, `login`) must be proxied to **Casdoor port 8000**, not Guoxue API port 3000
+- See `deploy/nginx-guoxue.conf` for the correct location regex rule:
+  ```
+  location ~ ^/api/(get-|signin|login|send-verification-code|verify-captcha) {
+      proxy_pass http://127.0.0.1:8000;
+  }
+  ```
+- If this regex is missing any endpoint, the request will fall through to the generic `/api/` block and get a 404 from the Guoxue Express API
+
 ## Key Conventions
 - Course HTML files: `lessons/XX-name/index.html`, relative asset paths use `../assets/…`
 - Slide `data-section`: `lecture` | `quiz` | `review`
