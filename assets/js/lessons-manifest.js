@@ -158,6 +158,20 @@ window.GUOXUE_LESSONS = [
         subject: 'mengxue',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '09-wen-liang-gong-jian-rang',
+        title: '温良恭俭让',
+        subtitle: '夫子五德 · 以德服人',
+        path: 'lessons/09-wen-liang-gong-jian-rang/index.html',
+        icon: '🌟',
+        grade: '小学中高年级',
+        description: '《论语·学而》第十章精讲：子贡论孔子五德——温良恭俭让。子禽问于子贡，夫子至邦必闻其政，求之与抑与之与？配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
     // {
