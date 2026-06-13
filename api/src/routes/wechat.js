@@ -18,14 +18,7 @@ if (!JWT_SECRET) {
 }
 
 function randomString(len) {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~';
-  const array = new Uint8Array(len);
-  crypto.getRandomValues(array);
-  let result = '';
-  for (let i = 0; i < len; i++) {
-    result += chars[array[i] & 0x3f];
-  }
-  return result;
+  return crypto.randomUUID().replace(/-/g, '').slice(0, len);
 }
 
 function isValidRedirect(url) {
@@ -95,6 +88,11 @@ router.get('/callback', async (req, res) => {
     tokenUrl.searchParams.set('grant_type', 'authorization_code');
 
     const tokenResponse = await fetch(tokenUrl.toString());
+    if (!tokenResponse.ok) {
+      const text = await tokenResponse.text();
+      console.error('[WeChat] Token exchange HTTP error:', tokenResponse.status, text);
+      return res.redirect(`${CALLBACK_URL}?error=wechat_http_error`);
+    }
     const tokenData = await tokenResponse.json();
 
     if (tokenData.errcode) {

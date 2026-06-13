@@ -24,12 +24,12 @@ const AUTH = (function() {
 
   // 生成随机字符串
   function randomString(len) {
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~";
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
     const array = new Uint8Array(len);
     crypto.getRandomValues(array);
     let result = "";
     for (let i = 0; i < len; i++) {
-      result += chars[array[i] % chars.length];
+      result += chars[array[i] & 0x3f];
     }
     return result;
   }
