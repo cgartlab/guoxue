@@ -8,12 +8,20 @@ const pool = require('../db');
 
 const router = express.Router();
 
-const SMTP_HOST = process.env.SMTP_HOST || 'smtp.qq.com';
+const SMTP_HOST = process.env.SMTP_HOST;
 const SMTP_PORT = parseInt(process.env.SMTP_PORT || '465', 10);
-const SMTP_USER = process.env.SMTP_USER || 'cgartlab@qq.com';
-const SMTP_PASS = process.env.SMTP_PASS || 'xuttpgidcjgbdffh';
-const JWT_SECRET = process.env.CASDOOR_JWT_SECRET || 'guoxue-supabase-shared-secret-2026';
+const SMTP_SECURE = process.env.SMTP_SECURE !== 'false';
+const SMTP_USER = process.env.SMTP_USER;
+const SMTP_PASS = process.env.SMTP_PASS;
+const JWT_SECRET = process.env.CASDOOR_JWT_SECRET;
 const CASDOOR_URL = process.env.CASDOOR_URL || 'https://casdoor.8023laozhanshi.cc';
+
+if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
+  throw new Error('SMTP_HOST, SMTP_USER, and SMTP_PASS environment variables are required');
+}
+if (!JWT_SECRET) {
+  throw new Error('CASDOOR_JWT_SECRET environment variable is required');
+}
 
 const EMAIL_HTML_TEMPLATE = `<div style="max-width:560px;margin:24px auto;background:#fff;border-radius:12px;padding:24px 32px;font-family:sans-serif"><h2 style="margin:0;font-size:18px;color:#333">国学课堂</h2><hr style="border:none;border-top:1px solid #eee"><p style="margin:16px 0;font-size:15px;color:#333">您好，</p><p style="margin:0 0 16px;font-size:15px;color:#333">您的邮箱验证码为：</p><div style="text-align:center;margin:24px 0"><span style="display:inline-block;padding:10px 36px;font-size:30px;font-weight:bold;letter-spacing:10px;color:#1677ff;background:#f0f5ff;border-radius:8px">%s</span></div><p style="margin:0;font-size:13px;color:#888">验证码有效期为 <strong>5 分钟</strong>，请勿泄露给他人。</p><hr style="border:none;border-top:1px solid #eee"><p style="margin:16px 0 0;font-size:11px;color:#bbb;text-align:center">此邮件由系统自动发送，请勿回复</p></div>`;
 
@@ -23,63 +31,48 @@ function randomCode() {
 
 function buildSmtpClient() {
   let socket = null;
-  let connected = false;
-  const commandQueue = [];
-  let currentResolver = null;
-  let currentRejecter = null;
 
   function sendCommand(cmd) {
     return new Promise((resolve, reject) => {
-      if (!connected) {
-        reject(new Error('Not connected'));
-        return;
-      }
       const line = cmd + '\r\n';
       socket.write(line, 'utf8', (err) => {
-        if (err) reject(err);
-        else resolve();
-      });
-    });
-  }
-
-  function readResponse() {
-    return new Promise((resolve, reject) => {
-      const chunks = [];
-      socket.once('data', (chunk) => {
-        chunks.push(chunk.toString());
-        const response = chunks.join('');
-        const lines = response.split('\r\n');
-        const lastLine = lines[lines.length - 1];
-        if (lastLine.startsWith('354') || lastLine.startsWith('250') || lastLine.startsWith('235') || lastLine.startsWith('220') || lastLine.startsWith('221')) {
-          resolve(lastLine);
-        } else {
-          reject(new Error('SMTP response: ' + lastLine));
+        if (err) { reject(err); return; }
+        const chunks = [];
+        function onData(chunk) {
+          chunks.push(chunk.toString());
+          const response = chunks.join('');
+          const lines = response.split('\r\n');
+          const lastLine = lines[lines.length - 1];
+          const code = lastLine.split(' ')[0];
+          if (code === '235' || code === '250' || code === '354' || code === '220' || code === '221') {
+            socket.removeListener('data', onData);
+            resolve(lastLine);
+          } else if (code.startsWith('4') || code.startsWith('5')) {
+            socket.removeListener('data', onData);
+            reject(new Error('SMTP error: ' + lastLine));
+          }
         }
+        socket.on('data', onData);
+        socket.once('error', reject);
       });
-      socket.once('error', reject);
     });
   }
 
   return {
     connect() {
       return new Promise((resolve, reject) => {
-        socket = tls.connect(SMTP_PORT, SMTP_HOST, { rejectUnauthorized: false }, () => {
-          connected = true;
+        const options = { host: SMTP_HOST, port: SMTP_PORT };
+        if (SMTP_SECURE) {
+          options.rejectUnauthorized = true;
+        } else {
+          options.rejectUnauthorized = false;
+        }
+        socket = tls.connect(options, () => {
           resolve();
         });
         socket.setEncoding('utf8');
-        socket.on('data', (chunk) => {
-          const lines = chunk.split('\r\n');
-          for (const line of lines) {
-            if (line.startsWith('235 ') || line.startsWith('250 ') || line.startsWith('354 ') || line.startsWith('220 ') || line.startsWith('221 ')) {
-              // ready
-            }
-          }
-        });
         socket.on('error', reject);
-        socket.on('close', () => { connected = false; });
-
-        socket.once('data', () => {});
+        socket.on('close', () => { socket = null; });
         setTimeout(() => reject(new Error('SMTP connect timeout')), 10000);
       });
     },
@@ -87,29 +80,13 @@ function buildSmtpClient() {
     sendEmail(to, subject, html) {
       return new Promise(async (resolve, reject) => {
         try {
-          const code = Buffer.from(`${SMTP_USER}:${SMTP_PASS}`).toString('base64');
-
           await sendCommand('EHLO localhost');
-          await readResponse();
-
           await sendCommand('AUTH LOGIN');
-          await readResponse();
-
           await sendCommand(Buffer.from(SMTP_USER).toString('base64'));
-          await readResponse();
-
           await sendCommand(Buffer.from(SMTP_PASS).toString('base64'));
-          await readResponse();
-
           await sendCommand(`MAIL FROM:<${SMTP_USER}>`);
-          await readResponse();
-
           await sendCommand(`RCPT TO:<${to}>`);
-          await readResponse();
-
           await sendCommand('DATA');
-          await readResponse();
-
           const fromHeader = `From: 国学课堂 <${SMTP_USER}>\r\n`;
           const toHeader = `To: ${to}\r\n`;
           const subjectHeader = `Subject: ${subject}\r\n`;
@@ -117,15 +94,11 @@ function buildSmtpClient() {
           const emailContent = fromHeader + toHeader + subjectHeader + mimeHeaders + '\r\n' + html;
           const dotStuffed = emailContent.replace(/\n\./g, '\n..');
           await sendCommand(dotStuffed + '\r\n.');
-          await readResponse();
-
           await sendCommand('QUIT');
-          await readResponse();
-
           socket.end();
           resolve();
         } catch (err) {
-          socket.end();
+          if (socket) socket.end();
           reject(err);
         }
       });
@@ -172,7 +145,7 @@ router.post('/send-code', async (req, res) => {
     }
 
     const code = randomCode();
-    const codeHash = crypto.createHash('bcrypt').syncBcrypt ? crypto.createHash('sha256').update(code).digest('hex') : code;
+    const codeHash = crypto.createHash('sha256').update(code).digest('hex');
 
     await pool.query(
       `UPDATE email_verification_codes SET used_at = NOW() WHERE email = $1 AND purpose = $2 AND used_at IS NULL`,
@@ -188,6 +161,7 @@ router.post('/send-code', async (req, res) => {
       await sendEmailCode(email, code);
     } catch (mailErr) {
       console.error('[EmailAuth] send-email error:', mailErr);
+      return res.status(500).json({ error: '邮件发送失败，请稍后重试' });
     }
 
     res.json({ success: true });
@@ -236,7 +210,7 @@ router.post('/verify-login', async (req, res) => {
     const user = userResult.rows[0];
     const token = signJwt({ sub: user.casdoor_sub, name: user.full_name || user.username, email: user.email });
 
-    res.json({ token, user: { id: user.id, username: user.username, email: user.email } });
+    res.json({ token, username: user.username || user.full_name });
   } catch (err) {
     console.error('[EmailAuth] verify-login error:', err);
     res.status(500).json({ error: 'internal error' });
@@ -318,7 +292,7 @@ router.post('/register', async (req, res) => {
     const user = userResult.rows[0];
     const token = signJwt({ sub: user.casdoor_sub, name: user.full_name, email: user.email });
 
-    res.json({ token, user: { id: user.id, username: user.username, email: user.email } });
+    res.json({ token, username: user.username });
   } catch (err) {
     console.error('[EmailAuth] register error:', err);
     res.status(500).json({ error: 'internal error' });

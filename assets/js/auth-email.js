@@ -1,5 +1,19 @@
 const API_BASE = 'https://guoxue.8023laozhanshi.cc/api';
 
+function setAuthToken(token, username) {
+  localStorage.setItem('guoxue_token', token);
+  localStorage.setItem('guoxue_username', username);
+  localStorage.setItem('casdoor_access_token', token);
+  try {
+    const payload = JSON.parse(atob(token.split('.')[1]));
+    if (payload.exp) {
+      localStorage.setItem('casdoor_expires_at', String(payload.exp * 1000));
+    }
+  } catch (e) {
+    localStorage.setItem('casdoor_expires_at', String(Date.now() + 86400000));
+  }
+}
+
 const MODAL_HTML = `
 <style>
 .modal-overlay {
@@ -377,8 +391,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let data = await res.json();
       if (data.token) {
         localStorage.setItem('guoxue_email', email);
-        localStorage.setItem('guoxue_token', data.token);
-        localStorage.setItem('guoxue_username', data.username || email.split('@')[0]);
+        setAuthToken(data.token, data.username || email.split('@')[0]);
         showSuccess('login-success', '登录成功！正在跳转…');
         setTimeout(() => {
           hideLoginModal();
@@ -417,8 +430,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let data = await res.json();
       if (data.token) {
         localStorage.setItem('guoxue_email', email);
-        localStorage.setItem('guoxue_token', data.token);
-        localStorage.setItem('guoxue_username', username);
+        setAuthToken(data.token, username);
         showSuccess('login-success', '注册成功！正在跳转…');
         setTimeout(() => {
           hideLoginModal();
