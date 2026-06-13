@@ -142,3 +142,19 @@ BEGIN
   RETURN v_user_id;
 END;
 $$ LANGUAGE plpgsql;
+
+-- ============================================================
+-- 邮箱验证码
+-- ============================================================
+CREATE TABLE IF NOT EXISTS public.email_verification_codes (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email TEXT NOT NULL,
+  code_hash TEXT NOT NULL,
+  purpose TEXT NOT NULL DEFAULT 'login',
+  expires_at TIMESTAMPTZ NOT NULL,
+  used_at TIMESTAMPTZ,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_email_codes_email ON public.email_verification_codes(email);
+CREATE INDEX IF NOT EXISTS idx_email_codes_expires ON public.email_verification_codes(expires_at);
