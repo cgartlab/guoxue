@@ -16,6 +16,44 @@ app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 200 }));
 // ─── 公开路由 ─────────────────────────────────────────────
 app.get('/api/health', (_req, res) => res.json({ ok: true, time: new Date().toISOString() }));
 
+// ─── 微信 OAuth 路由（公开，不需要 JWT）───────────────────
+const wechatRouter = require('./routes/wechat');
+app.use('/api/auth/wechat', wechatRouter);
+
+// ─── 数据库初始化 ─────────────────────────────────────────
+async function initDb() {
+  try {
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS wechat_users (
+        id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+        user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        openid TEXT UNIQUE NOT NULL,
+        unionid TEXT,
+        nickname TEXT,
+        avatar_url TEXT,
+        created_at TIMESTAMPTZ DEFAULT NOW(),
+        updated_at TIMESTAMPTZ DEFAULT NOW()
+      );
+    `);
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS oauth_states (
+        state TEXT PRIMARY KEY,
+        redirect_back TEXT NOT NULL DEFAULT '/',
+        created_at TIMESTAMPTZ DEFAULT NOW()
+      );
+    `);
+    await pool.query(`
+      CREATE INDEX IF NOT EXISTS idx_wechat_users_openid ON wechat_users(openid);
+    `);
+    await pool.query(`
+      CREATE INDEX IF NOT EXISTS idx_oauth_states_created ON oauth_states(created_at);
+    `);
+    console.log('[DB] Tables initialized');
+  } catch (err) {
+    console.error('[DB] Init error:', err.message);
+  }
+}
+
 // ─── 受保护路由 ──────────────────────────────────────────
 // 所有 /api/* 路由都需要验证 JWT
 app.use('/api', verifyToken);
@@ -189,7 +227,8 @@ app.use((err, _req, res, _next) => {
 });
 
 // ─── 启动 ─────────────────────────────────────────────────
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
+  await initDb();
   console.log(`🚀 Guoxue API running on port ${PORT}`);
   console.log(`   CORS origin: ${process.env.CORS_ORIGIN || '*'}`);
 });
