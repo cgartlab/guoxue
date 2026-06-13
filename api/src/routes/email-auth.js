@@ -3,13 +3,15 @@
 const express = require('express');
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
+const net = require('net');
+const dns = require('dns');
 const tls = require('tls');
 const pool = require('../db');
 
 const router = express.Router();
 
 const SMTP_HOST = process.env.SMTP_HOST;
-const SMTP_PORT = parseInt(process.env.SMTP_PORT || '465', 10);
+const SMTP_PORT = parseInt(process.env.SMTP_PORT || '587', 10);
 const SMTP_SECURE = process.env.SMTP_SECURE !== 'false';
 const SMTP_USER = process.env.SMTP_USER;
 const SMTP_PASS = process.env.SMTP_PASS;
@@ -32,22 +34,21 @@ function randomCode() {
 function buildSmtpClient() {
   let socket = null;
 
-  function sendCommand(cmd, timeoutMs = 10000) {
+  function sendCommand(cmd, timeoutMs) {
     return new Promise((resolve, reject) => {
-      const line = cmd + '\r\n';
+      timeoutMs = timeoutMs === undefined ? 10000 : timeoutMs;
       const timer = setTimeout(() => {
-        reject(new Error('SMTP command timeout: ' + cmd.slice(0, 20)));
+        reject(new Error('SMTP command timeout: ' + cmd.slice(0, 30)));
       }, timeoutMs);
-      socket.write(line, 'utf8', (err) => {
+      socket.write(cmd + '\r\n', 'utf8', (err) => {
         if (err) { clearTimeout(timer); reject(err); return; }
         const chunks = [];
         function onData(chunk) {
           chunks.push(chunk.toString());
           const response = chunks.join('');
-          const lines = response.split('\r\n');
-          const lastLine = lines[lines.length - 1];
+          const lastLine = response.split('\r\n').filter(l => l).pop();
           const code = lastLine.split(' ')[0];
-          if (code === '235' || code === '250' || code === '354' || code === '220' || code === '221') {
+          if (code === '235' || code === '250' || code === '334' || code === '354' || code === '220' || code === '221') {
             clearTimeout(timer);
             socket.removeListener('data', onData);
             resolve(lastLine);
@@ -70,44 +71,81 @@ function buildSmtpClient() {
   return {
     connect() {
       return new Promise((resolve, reject) => {
-        const options = { host: SMTP_HOST, port: SMTP_PORT };
-        if (SMTP_SECURE) {
-          options.rejectUnauthorized = true;
+        if (SMTP_SECURE && SMTP_PORT === 465) {
+          socket = tls.connect({
+            host: SMTP_HOST,
+            port: SMTP_PORT,
+            minVersion: 'TLSv1',
+            rejectUnauthorized: false,
+          }, () => { resolve(); });
+          socket.setEncoding('utf8');
+          socket.on('error', reject);
+          socket.on('close', () => { socket = null; });
+          setTimeout(() => reject(new Error('SMTP connect timeout')), 10000);
         } else {
-          options.rejectUnauthorized = false;
+          dns.resolve4(SMTP_HOST, (dnsErr, addrs) => {
+            if (dnsErr) { reject(dnsErr); return; }
+            socket = new net.Socket();
+            socket.setEncoding('utf8');
+            let bannerDone = false;
+            let bannerTimer;
+            function onBanner(chunk) {
+              if (bannerDone) return;
+              bannerDone = true;
+              clearTimeout(bannerTimer);
+              socket.removeListener('data', onBanner);
+              resolve();
+            }
+            socket.on('data', onBanner);
+            socket.on('error', reject);
+            socket.on('close', () => { socket = null; });
+            bannerTimer = setTimeout(() => {
+              if (!bannerDone) reject(new Error('SMTP banner timeout'));
+            }, 10000);
+            socket.connect({ host: addrs[0], port: SMTP_PORT });
+          });
         }
-        socket = tls.connect(options, () => {
-          resolve();
-        });
-        socket.setEncoding('utf8');
-        socket.on('error', reject);
-        socket.on('close', () => { socket = null; });
-        setTimeout(() => reject(new Error('SMTP connect timeout')), 10000);
       });
     },
 
     sendEmail(to, subject, html) {
       return new Promise(async (resolve, reject) => {
         try {
-          await sendCommand('EHLO localhost');
-          await sendCommand('AUTH LOGIN');
-          await sendCommand(Buffer.from(SMTP_USER).toString('base64'));
-          await sendCommand(Buffer.from(SMTP_PASS).toString('base64'));
-          await sendCommand(`MAIL FROM:<${SMTP_USER}>`);
-          await sendCommand(`RCPT TO:<${to}>`);
-          await sendCommand('DATA');
+          const banner = await sendCommand('EHLO localhost', 15000);
+          if (SMTP_SECURE && SMTP_PORT === 587 && banner.includes('STARTTLS')) {
+            await sendCommand('STARTTLS', 10000);
+            const tlsSocket = tls.connect({
+              socket: socket,
+              host: SMTP_HOST,
+              rejectUnauthorized: false,
+            });
+            socket = tlsSocket;
+            socket.setEncoding('utf8');
+            await new Promise((res, rej) => {
+              tlsSocket.once('secureConnect', res);
+              tlsSocket.once('error', rej);
+              setTimeout(() => rej(new Error('TLS handshake timeout')), 10000);
+            });
+            await sendCommand('EHLO localhost', 15000);
+          }
+          await sendCommand('AUTH LOGIN', 10000);
+          await sendCommand(Buffer.from(SMTP_USER).toString('base64'), 10000);
+          await sendCommand(Buffer.from(SMTP_PASS).toString('base64'), 10000);
+          await sendCommand(`MAIL FROM:<${SMTP_USER}>`, 10000);
+          await sendCommand(`RCPT TO:<${to}>`, 10000);
+          await sendCommand('DATA', 10000);
           const fromHeader = `From: 国学课堂 <${SMTP_USER}>\r\n`;
           const toHeader = `To: ${to}\r\n`;
           const subjectHeader = `Subject: ${subject}\r\n`;
           const mimeHeaders = `MIME-Version: 1.0\r\nContent-Type: text/html; charset=UTF-8\r\n`;
           const emailContent = fromHeader + toHeader + subjectHeader + mimeHeaders + '\r\n' + html;
           const dotStuffed = emailContent.replace(/\n\./g, '\n..');
-          await sendCommand(dotStuffed + '\r\n.');
-          await sendCommand('QUIT');
+          await sendCommand(dotStuffed + '\r\n.', 10000);
+          await sendCommand('QUIT', 5000);
           socket.end();
           resolve();
         } catch (err) {
-          if (socket) socket.end();
+          if (socket && !socket.destroyed) socket.end();
           reject(err);
         }
       });
