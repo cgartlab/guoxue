@@ -38,7 +38,7 @@ router.get('/login', async (req, res) => {
 
     const wechatAuthUrl = new URL('https://open.weixin.qq.com/connect/oauth2/authorize');
     wechatAuthUrl.searchParams.set('appid', WECHAT_APP_ID);
-    wechatAuthUrl.searchParams.set('redirect_uri', `https://guoxue.8023laozhanshi.cc/api/auth/wechat/callback`);
+    wechatAuthUrl.searchParams.set('redirect_uri', `${CALLBACK_URL.replace('/callback.html', '')}/api/auth/wechat/callback`);
     wechatAuthUrl.searchParams.set('response_type', 'code');
     wechatAuthUrl.searchParams.set('scope', 'snsapi_base');
     wechatAuthUrl.searchParams.set('state', state);
