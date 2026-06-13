@@ -61,8 +61,60 @@
     const statusEl = document.getElementById("status-message");
     const spinner = document.getElementById("loading-spinner");
     const errorEl = document.getElementById("auth-error");
+    const urlParams = new URLSearchParams(window.location.search);
 
-    // 处理回调
+    // 检查是否是 WeChat OAuth 直接返回的 token
+    const directToken = urlParams.get("token");
+    const redirectParam = urlParams.get("redirect");
+    const errorParam = urlParams.get("error");
+
+    if (errorParam) {
+      spinner.style.display = "none";
+      statusEl.className = "callback-status error";
+      statusEl.textContent = "❌ 登录失败: " + (errorParam === 'wechat_token_failed' ? '微信授权失败' : errorParam);
+      return;
+    }
+
+    if (directToken) {
+      // WeChat OAuth 直接返回 token - 直接存储并完成登录
+      localStorage.setItem("casdoor_access_token", directToken);
+      localStorage.setItem("casdoor_id_token", directToken);
+      localStorage.setItem("casdoor_expires_at", String(Date.now() + 7 * 24 * 60 * 60 * 1000));
+
+      // 解析 JWT payload 获取用户信息
+      try {
+        const payload = JSON.parse(atob(directToken.split('.')[1]));
+        localStorage.setItem("casdoor_user_name", payload.name || "");
+        localStorage.setItem("casdoor_user_avatar", payload.avatar || "");
+      } catch (e) {
+        console.warn("[Callback] Failed to parse token payload:", e);
+      }
+
+      // 同步到 Supabase（非阻塞）
+      if (typeof window !== 'undefined' && window.SUPABASE && window.SUPABASE.syncUser) {
+        setTimeout(function() {
+          window.SUPABASE.syncUser().then(function() {
+            console.log('[Callback] User synced to Supabase');
+          }).catch(function(err) {
+            console.warn('[Callback] Supabase sync failed (non-fatal):', err);
+          });
+        }, 100);
+      }
+
+      spinner.style.display = "none";
+      statusEl.className = "callback-status success";
+      statusEl.textContent = "✅ 微信登录成功！即将跳转...";
+
+      // 跳转回来源页
+      const redirectBack = redirectParam || localStorage.getItem("casdoor_redirect_back") || "index.html";
+      localStorage.removeItem("casdoor_redirect_back");
+      setTimeout(function() {
+        window.location.href = redirectBack;
+      }, 1500);
+      return;
+    }
+
+    // 标准 Casdoor OAuth 流程
     const result = await AUTH.handleCallback();
 
     if (result && result.success) {
