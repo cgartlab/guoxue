@@ -5,10 +5,14 @@ const pool = require('../db');
 
 const router = express.Router();
 
-const WECHAT_APP_ID = process.env.WECHAT_APP_ID || 'wx6bf7b8586719dbe7';
-const WECHAT_APP_SECRET = process.env.WECHAT_APP_SECRET || 'bc6fe2ebbf945d78c4f05f2932257cdb';
+const WECHAT_APP_ID = process.env.WECHAT_APP_ID;
+const WECHAT_APP_SECRET = process.env.WECHAT_APP_SECRET;
 const JWT_SECRET = process.env.CASDOOR_JWT_SECRET;
 const CALLBACK_URL = process.env.CALLBACK_URL || 'https://guoxue.8023laozhanshi.cc/callback.html';
+
+if (!WECHAT_APP_ID || !WECHAT_APP_SECRET) {
+  throw new Error('WECHAT_APP_ID and WECHAT_APP_SECRET must be set in environment variables');
+}
 
 function randomString(len) {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~';
