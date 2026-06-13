@@ -20,6 +20,10 @@ app.get('/api/health', (_req, res) => res.json({ ok: true, time: new Date().toIS
 const wechatRouter = require('./routes/wechat');
 app.use('/api/auth/wechat', wechatRouter);
 
+// ─── 邮箱登录注册路由（公开，不需要 JWT）─────────────────
+const emailAuthRouter = require('./routes/email-auth');
+app.use('/api/auth/email', emailAuthRouter);
+
 // ─── 数据库初始化 ─────────────────────────────────────────
 async function initDb() {
   try {
@@ -47,6 +51,23 @@ async function initDb() {
     `);
     await pool.query(`
       CREATE INDEX IF NOT EXISTS idx_oauth_states_created ON oauth_states(created_at);
+    `);
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS email_verification_codes (
+        id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+        email TEXT NOT NULL,
+        code_hash TEXT NOT NULL,
+        purpose TEXT NOT NULL DEFAULT 'login',
+        expires_at TIMESTAMPTZ NOT NULL,
+        used_at TIMESTAMPTZ,
+        created_at TIMESTAMPTZ DEFAULT NOW()
+      );
+    `);
+    await pool.query(`
+      CREATE INDEX IF NOT EXISTS idx_email_codes_email ON email_verification_codes(email);
+    `);
+    await pool.query(`
+      CREATE INDEX IF NOT EXISTS idx_email_codes_expires ON email_verification_codes(expires_at);
     `);
     console.log('[DB] Tables initialized');
   } catch (err) {

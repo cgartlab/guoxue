@@ -120,33 +120,18 @@ const AUTH = (function() {
   // ============ 核心方法 ============
 
   /**
-   * 登录：重定向到 Casdoor 授权页面（PKCE 流）
+   * 登录：打开邮箱登录弹窗
    */
-  async function login() {
+  function login() {
     try {
-      const verifier = randomString(64);
-      const challenge = await generateCodeChallenge(verifier);
-      const state = randomString(32);
-      const redirectUri = getRedirectUri();
-
-      localStorage.setItem("casdoor_code_verifier", verifier);
-      localStorage.setItem("casdoor_state", state);
       localStorage.setItem("casdoor_redirect_back", window.location.href);
-
-      const params = new URLSearchParams({
-        client_id: CONFIG.clientId,
-        response_type: "code",
-        redirect_uri: redirectUri,
-        scope: CONFIG.scope,
-        state: state,
-        code_challenge: challenge,
-        code_challenge_method: "S256",
-      });
-
-      window.location.href = CONFIG.serverUrl + "/login/oauth/authorize?" + params.toString();
+      if (typeof window.showLoginModal === 'function') {
+        window.showLoginModal();
+      } else {
+        console.error("[Auth] auth-email.js 未加载");
+      }
     } catch (e) {
       console.error("[Auth] 登录失败:", e);
-      alert("登录失败: " + (e.message || "未知错误") + "\n请检查浏览器控制台获取详细信息。");
     }
   }
 
@@ -377,9 +362,6 @@ const AUTH = (function() {
       container.innerHTML = [
         '<div class="auth-login-container">',
         '  <button class="ds-btn-nav auth-login-btn" id="auth-login-btn">登录 / 注册</button>',
-        '  <button class="ds-btn-nav auth-wechat-btn" id="auth-wechat-btn" title="微信登录">',
-        '    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.219c0 2.093 1.164 3.75 2.578 4.889 1.395 1.116 3.031 1.946 3.031 1.946l-.703-.422s-.766.469-1.447.703C2.164 14.906 1.5 16.375 1.5 17.938 1.5 21.687 4.57 24 8.691 24c4.121 0 7.191-2.313 7.191-6.062 0-3.75-3.094-6.062-7.191-6.062-4.121 0-6.978 2.625-6.978 6.062h2.859c0-1.664.984-2.869 2.578-2.869 1.595 0 2.578 1.204 2.578 2.869 0 1.664-.984 2.869-2.578 2.869-1.594 0-2.891-1.205-2.891-2.869h-2.86c0 3.426 2.578 6.062 5.75 6.062s5.75-2.636 5.75-6.062c0-3.563-2.578-6.062-5.75-6.062-.648 0-1.223.094-1.723.238l-1.305-2.098z"/></svg>',
-        '  </button>',
         '</div>',
       ].join("");
       const loginBtn = document.getElementById("auth-login-btn");
@@ -387,14 +369,6 @@ const AUTH = (function() {
         loginBtn.addEventListener("click", function(e) {
           e.preventDefault();
           login();
-        });
-      }
-      const wechatBtn = document.getElementById("auth-wechat-btn");
-      if (wechatBtn) {
-        wechatBtn.addEventListener("click", function(e) {
-          e.preventDefault();
-          localStorage.setItem("casdoor_redirect_back", window.location.href);
-          window.location.href = "/api/auth/wechat/login";
         });
       }
     }
