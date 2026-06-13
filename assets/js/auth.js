@@ -422,7 +422,8 @@ const AUTH = (function() {
       if (wechatBtn) {
         wechatBtn.addEventListener("click", function(e) {
           e.preventDefault();
-          loginWithProvider("wechat-login");
+          localStorage.setItem("casdoor_redirect_back", window.location.href);
+          window.location.href = "/api/auth/wechat/login";
         });
       }
     }
