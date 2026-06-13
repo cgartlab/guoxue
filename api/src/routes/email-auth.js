@@ -71,20 +71,21 @@ function buildSmtpClient() {
   return {
     connect() {
       return new Promise((resolve, reject) => {
-        if (SMTP_SECURE && SMTP_PORT === 465) {
-          socket = tls.connect({
-            host: SMTP_HOST,
-            port: SMTP_PORT,
-            minVersion: 'TLSv1',
-            rejectUnauthorized: false,
-          }, () => { resolve(); });
-          socket.setEncoding('utf8');
-          socket.on('error', reject);
-          socket.on('close', () => { socket = null; });
-          setTimeout(() => reject(new Error('SMTP connect timeout')), 10000);
-        } else {
-          dns.resolve4(SMTP_HOST, (dnsErr, addrs) => {
-            if (dnsErr) { reject(dnsErr); return; }
+        dns.resolve4(SMTP_HOST, (dnsErr, addrs) => {
+          if (dnsErr) { reject(dnsErr); return; }
+          const ip = addrs[0];
+          if (SMTP_SECURE && SMTP_PORT === 465) {
+            socket = tls.connect({
+              host: ip,
+              port: SMTP_PORT,
+              minVersion: 'TLSv1',
+              rejectUnauthorized: false,
+            }, () => { resolve(); });
+            socket.setEncoding('utf8');
+            socket.on('error', reject);
+            socket.on('close', () => { socket = null; });
+            setTimeout(() => reject(new Error('SMTP connect timeout')), 10000);
+          } else {
             socket = new net.Socket();
             socket.setEncoding('utf8');
             let bannerDone = false;
@@ -102,9 +103,9 @@ function buildSmtpClient() {
             bannerTimer = setTimeout(() => {
               if (!bannerDone) reject(new Error('SMTP banner timeout'));
             }, 10000);
-            socket.connect({ host: addrs[0], port: SMTP_PORT });
-          });
-        }
+            socket.connect({ host: ip, port: SMTP_PORT });
+          }
+        });
       });
     },
 
@@ -179,13 +180,13 @@ router.post('/send-code', async (req, res) => {
     }
 
     const existing = await pool.query(
-      `SELECT id FROM email_verification_codes
+      `SELECT id, created_at FROM email_verification_codes
        WHERE email = $1 AND purpose = $2 AND used_at IS NULL AND expires_at > NOW()
        ORDER BY created_at DESC LIMIT 1`,
       [email, purpose]
     );
     if (existing.rows.length > 0) {
-      const age = (Date.now() - existing.rows[0].created_at.getTime()) / 1000;
+      const age = (Date.now() - new Date(existing.rows[0].created_at).getTime()) / 1000;
       if (age < 60) {
         return res.status(429).json({ error: 'please wait before requesting another code' });
       }
