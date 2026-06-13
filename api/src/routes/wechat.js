@@ -13,6 +13,9 @@ const CALLBACK_URL = process.env.CALLBACK_URL || 'https://guoxue.8023laozhanshi.
 if (!WECHAT_APP_ID || !WECHAT_APP_SECRET) {
   throw new Error('WECHAT_APP_ID and WECHAT_APP_SECRET must be set in environment variables');
 }
+if (!JWT_SECRET) {
+  throw new Error('CASDOOR_JWT_SECRET must be set in environment variables');
+}
 
 function randomString(len) {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~';
@@ -20,24 +23,40 @@ function randomString(len) {
   crypto.getRandomValues(array);
   let result = '';
   for (let i = 0; i < len; i++) {
-    result += chars[array[i] % chars.length];
+    result += chars[array[i] & 0x3f];
   }
   return result;
 }
 
+function isValidRedirect(url) {
+  if (!url) return true;
+  if (url.startsWith('/')) return true;
+  try {
+    const u = new URL(url, CALLBACK_URL);
+    return u.origin === new URL(CALLBACK_URL).origin;
+  } catch {
+    return false;
+  }
+}
+
 router.get('/login', async (req, res) => {
   try {
-    const state = randomString(32);
-    const redirectBack = req.query.redirect || '/';
+    const rawRedirect = req.query.redirect;
+    const redirectBack = isValidRedirect(rawRedirect) ? (rawRedirect || '/') : '/';
 
+    await pool.query('DELETE FROM oauth_states WHERE created_at < NOW() - INTERVAL \'30 minutes\'');
+
+    const state = randomString(32);
     await pool.query(
       'INSERT INTO oauth_states (state, redirect_back) VALUES ($1, $2) ON CONFLICT (state) DO UPDATE SET redirect_back = $2',
       [state, redirectBack]
     );
 
+    const cbUrl = new URL(CALLBACK_URL);
+    cbUrl.pathname = '/api/auth/wechat/callback';
     const wechatAuthUrl = new URL('https://open.weixin.qq.com/connect/oauth2/authorize');
     wechatAuthUrl.searchParams.set('appid', WECHAT_APP_ID);
-    wechatAuthUrl.searchParams.set('redirect_uri', `${CALLBACK_URL.replace('/callback.html', '')}/api/auth/wechat/callback`);
+    wechatAuthUrl.searchParams.set('redirect_uri', cbUrl.toString());
     wechatAuthUrl.searchParams.set('response_type', 'code');
     wechatAuthUrl.searchParams.set('scope', 'snsapi_base');
     wechatAuthUrl.searchParams.set('state', state);
@@ -58,7 +77,7 @@ router.get('/callback', async (req, res) => {
     }
 
     const stateResult = await pool.query(
-      'SELECT redirect_back FROM oauth_states WHERE state = $1',
+      'SELECT redirect_back FROM oauth_states WHERE state = $1 AND created_at > NOW() - INTERVAL \'30 minutes\'',
       [state]
     );
 
@@ -80,7 +99,7 @@ router.get('/callback', async (req, res) => {
 
     if (tokenData.errcode) {
       console.error('[WeChat] Token exchange error:', tokenData);
-      return res.redirect(`${CALLBACK_URL}?error=wechat_token_failed&msg=${tokenData.errmsg}`);
+      return res.redirect(`${CALLBACK_URL}?error=wechat_token_failed&msg=${encodeURIComponent(tokenData.errmsg || '')}`);
     }
 
     const { openid, unionid } = tokenData;
