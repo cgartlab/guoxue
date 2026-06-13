@@ -32,11 +32,14 @@ function randomCode() {
 function buildSmtpClient() {
   let socket = null;
 
-  function sendCommand(cmd) {
+  function sendCommand(cmd, timeoutMs = 10000) {
     return new Promise((resolve, reject) => {
       const line = cmd + '\r\n';
+      const timer = setTimeout(() => {
+        reject(new Error('SMTP command timeout: ' + cmd.slice(0, 20)));
+      }, timeoutMs);
       socket.write(line, 'utf8', (err) => {
-        if (err) { reject(err); return; }
+        if (err) { clearTimeout(timer); reject(err); return; }
         const chunks = [];
         function onData(chunk) {
           chunks.push(chunk.toString());
@@ -45,15 +48,21 @@ function buildSmtpClient() {
           const lastLine = lines[lines.length - 1];
           const code = lastLine.split(' ')[0];
           if (code === '235' || code === '250' || code === '354' || code === '220' || code === '221') {
+            clearTimeout(timer);
             socket.removeListener('data', onData);
             resolve(lastLine);
           } else if (code.startsWith('4') || code.startsWith('5')) {
+            clearTimeout(timer);
             socket.removeListener('data', onData);
             reject(new Error('SMTP error: ' + lastLine));
+          } else if (code.match(/^\d{3}$/)) {
+            clearTimeout(timer);
+            socket.removeListener('data', onData);
+            reject(new Error('SMTP unexpected response: ' + lastLine));
           }
         }
         socket.on('data', onData);
-        socket.once('error', reject);
+        socket.once('error', (err) => { clearTimeout(timer); reject(err); });
       });
     });
   }
@@ -208,7 +217,7 @@ router.post('/verify-login', async (req, res) => {
     }
 
     const user = userResult.rows[0];
-    const token = signJwt({ sub: user.casdoor_sub, name: user.full_name || user.username, email: user.email });
+    const token = signJwt({ sub: user.casdoor_sub, name: user.username || user.full_name, email: user.email });
 
     res.json({ token, username: user.username || user.full_name });
   } catch (err) {
