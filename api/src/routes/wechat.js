@@ -29,7 +29,6 @@ router.get('/login', async (req, res) => {
   try {
     const state = randomString(32);
     const redirectBack = req.query.redirect || '/';
-    const stateValue = `${state}:${redirectBack}`;
 
     await pool.query(
       'INSERT INTO oauth_states (state, redirect_back) VALUES ($1, $2) ON CONFLICT (state) DO UPDATE SET redirect_back = $2',
