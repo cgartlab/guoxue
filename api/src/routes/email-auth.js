@@ -8,6 +8,8 @@ const dns = require('dns');
 const tls = require('tls');
 const pool = require('../db');
 
+const rateLimit = require('express-rate-limit');
+
 const router = express.Router();
 
 const SMTP_HOST = process.env.SMTP_HOST;
@@ -165,7 +167,12 @@ function signJwt(payload) {
   return jwt.sign(payload, JWT_SECRET, { expiresIn: '24h' });
 }
 
-router.post('/send-code', async (req, res) => {
+router.post('/send-code', rateLimit({
+  max: 3,
+  windowMs: 60000,
+  legacyHeaders: false,
+  handler: (req, res) => res.status(429).json({ error: 'too many requests' }),
+}), async (req, res) => {
   try {
     const { email, purpose } = req.body;
     if (!email || !purpose) {
