@@ -1,5 +1,7 @@
 # 📜 国学课堂
 
+[![Argus-Flash Review](https://github.com/cgartlab/guoxue/actions/workflows/argus-review.yml/badge.svg)](https://github.com/cgartlab/guoxue/actions/workflows/argus-review.yml)
+
 > 面向小学生的中华传统文化在线课件站 · GitHub Pages 部署
 
 本仓库是「国学课堂」互动课件网站,适用于小学语文/国学课程,采用纯静态 HTML+CSS+JS(无构建步骤、无框架),通过 GitHub Pages 即可上线。
