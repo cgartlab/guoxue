@@ -186,6 +186,20 @@ window.GUOXUE_LESSONS = [
         subject: 'mengxue',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '11-li-zhi-yong-he-wei-gui',
+        title: '礼之用和为贵',
+        subtitle: '礼乐 · 和谐 · 节制',
+        path: 'lessons/11-li-zhi-yong-he-wei-gui/index.html',
+        icon: '⚖️',
+        grade: '小学中高年级',
+        description: '《论语·学而》第十二章精讲：有子论礼与和——礼之用和为贵，小大由之。知和而和，不以礼节之，亦不可行也。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
     // {
