@@ -32,6 +32,8 @@
         <li><a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html#sidebar-nav">门类</a></li>
     </ul>
     <a class="ds-btn-nav" href="../../about.html">关于本站</a>
+    <span style="flex:1"></span>
+    <div id="auth-nav"></div>
 </nav>
 
 <!-- ===== 课程工具栏 ===== -->
@@ -52,12 +54,13 @@
 </nav>
 
 <!-- ===== 幻灯片容器 ===== -->
-<main class="ds-slide-container" id="slide-container">
+<div class="slide-viewport">
+    <div class="slide-container" id="slide-container">
 
 <!-- ====== 讲义部分 ====== -->
 
 <!-- 1. 标题页 -->
-<section class="slide" data-section="lecture" data-index="0">
+<div class="slide active" data-page="0" data-section="lecture">
     <div class="slide-card slide-card--cover">
         <div class="slide-card__body slide-card__body--center">
             <div class="lesson-number"><small>第13课 · 《论语·学而》第十二章</small></div>
@@ -79,10 +82,10 @@
             <p>📖 讲义部分 · 共8页 ｜ ✏️ 测验10题 ｜ 💬 答疑解惑</p>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 2. 原文呈现 -->
-<section class="slide" data-section="lecture" data-index="1">
+<div class="slide" data-page="1" data-section="lecture">
     <div class="slide-card">
         <h2 class="slide-card__heading">📜 原文呈现</h2>
         <div class="slide-card__body">
@@ -106,10 +109,10 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 3. 逐句解读一：礼之用，和为贵 -->
-<section class="slide" data-section="lecture" data-index="2">
+<div class="slide" data-page="2" data-section="lecture">
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 一：礼之用，和为贵</h2>
         <div class="slide-card__body">
@@ -127,10 +130,10 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 4. 逐句解读二：先王之道，斯为美 -->
-<section class="slide" data-section="lecture" data-index="3">
+<div class="slide" data-page="3" data-section="lecture">
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 二：先王之道，斯为美</h2>
         <div class="slide-card__body">
@@ -150,10 +153,10 @@
             <p>有子在这里亮出了儒家的历史观——<strong>最好的政治不是靠严刑峻法，而是通过礼乐教化营造社会和谐</strong>。先王们做到了礼与和的完美统一，所以他们的治国之道才如此美好。</p>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 5. 逐句解读三：小大由之 -->
-<section class="slide" data-section="lecture" data-index="4">
+<div class="slide" data-page="4" data-section="lecture">
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 三：小大由之</h2>
         <div class="slide-card__body">
@@ -173,10 +176,10 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 6. 逐句解读四：有所不行 -->
-<section class="slide" data-section="lecture" data-index="5">
+<div class="slide" data-page="5" data-section="lecture">
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 四：有所不行</h2>
         <div class="slide-card__body">
@@ -200,10 +203,10 @@
             <p style="margin-top:0.8rem;"><strong>有子看到了"和为贵"可能被误用的风险</strong>——有人会打着"和"的旗号抛弃礼的规范。所以他马上补充说明：光知道和是不够的。</p>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 7. 逐句解读五：知和而和，不以礼节之 -->
-<section class="slide" data-section="lecture" data-index="6">
+<div class="slide" data-page="6" data-section="lecture">
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 五：知和而和，不以礼节之</h2>
         <div class="slide-card__body">
@@ -225,10 +228,10 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 8. 核心思想 -->
-<section class="slide" data-section="lecture" data-index="7">
+<div class="slide" data-page="7" data-section="lecture">
     <div class="slide-card">
         <h2 class="slide-card__heading">🎯 核心思想 · 礼与和的辩证智慧</h2>
         <div class="slide-card__body">
@@ -252,324 +255,73 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- ====== 测验部分 ====== -->
 
-<!-- 9. 题1 -->
-<section class="slide" data-section="quiz" data-index="0">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第1题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>1. 本章是《论语》中谁的言论？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">孔子</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">有子（有若）</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">曾子（曾参）</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">子贡</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- 9. 测验说明 -->
+<div class="slide" data-page="9" data-section="quiz">
+    <span class="ds-badge ds-badge--success">测验</span>
+    <h2 style="border:none;text-align:center;padding-bottom:0;">测验说明</h2>
+    <ul style="text-align:left;margin-top:var(--ds-space-6);display:inline-block;">
+        <li>共 <b>10 道</b> 选择题，每题 <b>4 个</b> 选项</li>
+        <li>每题 10 分，满分 100 分</li>
+        <li>点击选项即可作答，选择后会显示正确答案和讲解</li>
+        <li>可以随时返回讲义部分复习</li>
+    </ul>
+    <p style="margin-top:var(--ds-space-10);text-align:center;font-size:1.25rem;color:var(--ds-accent);font-weight:700;">准备好了吗？</p>
+</div>
 
-<!-- 10. 题2 -->
-<section class="slide" data-section="quiz" data-index="1">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第2题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>2. "礼之用，和为贵"中的"和"最准确的含义是什么？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">一团和气，不吵架</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">和谐、协调、恰到好处的状态</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">和平，不打仗</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">温和的态度</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- 10. 题1 -->
+<div class="slide" data-page="10" data-section="quiz" id="quiz-0"></div>
 
-<!-- 11. 题3 -->
-<section class="slide" data-section="quiz" data-index="2">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第3题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>3. "先王之道，斯为美"中的"斯"指代什么？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">先王本人</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">"和为贵"这一原则</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">礼的制度本身</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">治理国家的方法</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- 11. 题2 -->
+<div class="slide" data-page="11" data-section="quiz" id="quiz-1"></div>
 
-<!-- 12. 题4 -->
-<section class="slide" data-section="quiz" data-index="3">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第4题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>4. "小大由之"中的"由之"是什么意思？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">从此开始</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">遵循这一原则（和为贵）</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">由着自己性子来</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">自由选择</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- 12. 题3 -->
+<div class="slide" data-page="12" data-section="quiz" id="quiz-2"></div>
 
-<!-- 13. 题5 -->
-<section class="slide" data-section="quiz" data-index="4">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第5题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>5. 为什么有子要在"和为贵"之后说"有所不行"？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">因为他前后矛盾</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">因为礼制度在某些情况下不好用</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">他预见到"和为贵"可能被滥用来搞无原则妥协，所以提前辩证地补充说明</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">因为先王之道已经不适用了</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- 13. 题4 -->
+<div class="slide" data-page="13" data-section="quiz" id="quiz-3"></div>
 
-<!-- 14. 题6 -->
-<section class="slide" data-section="quiz" data-index="5">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第6题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>6. "知和而和，不以礼节之，亦不可行也"的核心意思是？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">只知道和而不懂礼，也是可以的</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">礼制度和和谐无法共存</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">只知道追求和谐，却不用礼来节制约束，也是行不通的</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">和谐不需要任何规则</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- 14. 题5 -->
+<div class="slide" data-page="14" data-section="quiz" id="quiz-4"></div>
 
-<!-- 15. 题7 -->
-<section class="slide" data-section="quiz" data-index="6">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第7题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>7. 以下哪个比喻最能体现"礼"与"和"的关系？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">鱼和水的关系</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">河岸与河水——礼如河岸提供秩序，和如河水在其中流动</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">铁轨和火车</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">锁和钥匙</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- 15. 题6 -->
+<div class="slide" data-page="15" data-section="quiz" id="quiz-5"></div>
 
-<!-- 16. 题8 -->
-<section class="slide" data-section="quiz" data-index="7">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第8题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>8. 有子在本章中提到"先王"的目的是什么？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">炫耀历史知识</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">以古代圣王的治国实践为证，说明礼与和的平衡是经过历史验证的智慧</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">要求人们完全照搬古代的制度</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">说明古代比现代好</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- 16. 题7 -->
+<div class="slide" data-page="16" data-section="quiz" id="quiz-6"></div>
 
-<!-- 17. 题9 -->
-<section class="slide" data-section="quiz" data-index="8">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第9题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>9. 本章体现了儒家的什么核心思想？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">无为而治</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">兼爱非攻</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">中庸思想——在礼（规矩）与和（和谐）之间找到平衡点</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">严刑峻法</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- 17. 题8 -->
+<div class="slide" data-page="17" data-section="quiz" id="quiz-7"></div>
 
-<!-- 18. 题10 -->
-<section class="slide" data-section="quiz" data-index="9">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第10题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>10. 有子"礼之用和为贵"这段话对现代社会最重要的启示是什么？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">凡事都要讲和气</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">制度规范与人文关怀要兼顾——既要遵守规则，又要注重和谐，二者不可偏废</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">古代的礼制是最好的，应该恢复</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">和谐比什么都重要，规矩可以灵活</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
+<!-- 18. 题9 -->
+<div class="slide" data-page="18" data-section="quiz" id="quiz-8"></div>
+
+<!-- 19. 题10 -->
+<div class="slide" data-page="19" data-section="quiz" id="quiz-9"></div>
+
+<!-- 20. 测验得分 -->
+<div class="slide" data-page="20" data-section="review" id="quiz-score" style="align-items:center;text-align:center;">
+    <span class="ds-badge ds-badge--success">测验得分</span>
+    <h2 style="border:none;text-align:center;padding-bottom:0;">测验完成！</h2>
+    <div style="margin-top:var(--ds-space-10);">
+        <div style="font-size:5rem;color:var(--ds-accent);font-weight:700;font-family:var(--ds-font-display);line-height:1;" id="score-display">0</div>
+        <div style="font-size:1.5rem;margin-top:var(--ds-space-4);color:var(--ds-color-fg-strong);font-weight:600;" id="score-message">正在计算得分...</div>
+        <div style="margin-top:var(--ds-space-8);font-size:1.125rem;color:var(--ds-color-fg);background:var(--ds-color-surface);padding:var(--ds-space-6);border-radius:var(--ds-radius-xl);display:inline-block;text-align:left;">
+            <p style="margin-bottom:var(--ds-space-3);">✅ 答对题数：<b id="correct-count" style="color:var(--ds-color-success);font-size:1.25rem;">0</b> / 10</p>
+            <p style="margin-bottom:var(--ds-space-3);">📊 总得分：<b id="total-score" style="color:var(--ds-accent);font-size:1.25rem;">0</b> 分（满分 100 分）</p>
+            <p>📈 正确率：<b id="score-percent" style="color:var(--ds-color-info);font-size:1.25rem;">0%</b></p>
         </div>
+        <button class="retake-btn" id="retake-btn" aria-label="重新答题" style="margin-top:var(--ds-space-6);">↺ 重新答题</button>
     </div>
-</section>
+</div>
 
 <!-- ====== 答疑解惑 ====== -->
 
-<!-- 19. FAQ -->
-<section class="slide" data-section="review" data-index="0">
+<!-- 21. FAQ -->
+<div class="slide" data-page="21" data-section="review">
     <div class="slide-card">
         <h2 class="slide-card__heading">💬 常见问题</h2>
         <div class="slide-card__body">
@@ -587,10 +339,10 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<!-- 20. 生活应用 -->
-<section class="slide" data-section="review" data-index="1">
+<!-- 22. 生活应用 -->
+<div class="slide" data-page="22" data-section="review">
     <div class="slide-card">
         <h2 class="slide-card__heading">🌟 生活应用</h2>
         <div class="slide-card__body">
@@ -615,10 +367,10 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<!-- 21. 辨证总结 -->
-<section class="slide" data-section="review" data-index="2">
+<!-- 23. 辨证总结 -->
+<div class="slide" data-page="23" data-section="review">
     <div class="slide-card">
         <h2 class="slide-card__heading">🧠 辩证智慧 · 礼与和的平衡之道</h2>
         <div class="slide-card__body">
@@ -638,10 +390,10 @@
             </p>
         </div>
     </div>
-</section>
+</div>
 
-<!-- 22. 课程总结 -->
-<section class="slide" data-section="review" data-index="3">
+<!-- 24. 课程总结 -->
+<div class="slide" data-page="24" data-section="review">
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 课程总结</h2>
         <div class="slide-card__body">
@@ -663,134 +415,39 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
-</main><!-- end slide-container -->
+<div class="progress-bar-bottom">
+    <div class="progress-bar-fill" id="progress-fill" style="width:5%"></div>
+</div>
+
+<div class="kbd-hint">
+    <span class="kbd">←</span><span class="kbd">→</span> 翻页
+    <span style="margin-left:8px"><span class="kbd">Space</span> 下一页</span>
+</div>
+
+</div><!-- .slide-container -->
+</div><!-- .slide-viewport -->
 
 <script>
-// ===== 页面导航控制 =====
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-const pageIndicator = document.getElementById('page-indicator');
-const prevBtn = document.getElementById('nav-prev');
-const nextBtn = document.getElementById('nav-next');
-const dotsRow = document.getElementById('dots-row');
-
-// 生成页码点
-for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('span');
-    dot.className = 'dot';
-    dot.dataset.index = i;
-    dot.addEventListener('click', function() { goToSlide(parseInt(this.dataset.index)); });
-    dotsRow.appendChild(dot);
-}
-
-function goToSlide(index) {
-    if (index < 0 || index >= totalSlides) return;
-    currentSlide = index;
-
-    slides.forEach((s, i) => {
-        s.classList.toggle('active', i === index);
-    });
-
-    const section = slides[index].dataset.section;
-    let actualPage = 0;
-    let totalInSection = 0;
-    slides.forEach((s, i) => {
-        if (s.dataset.section === section) {
-            totalInSection++;
-            if (i <= index) actualPage++;
-        }
-    });
-
-    let sectionLabel = '';
-    if (section === 'lecture') sectionLabel = '📖 讲义';
-    else if (section === 'quiz') sectionLabel = '✏️ 测验';
-    else sectionLabel = '💬 答疑解惑';
-
-    pageIndicator.textContent = `${sectionLabel} ${actualPage}/${totalInSection}`;
-
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index === totalSlides - 1;
-
-    document.querySelectorAll('.ds-tab').forEach(tab => {
-        tab.classList.toggle('active', tab.dataset.section === section);
-    });
-
-    document.querySelectorAll('.dot').forEach((d, i) => {
-        d.classList.toggle('active', i === index);
-    });
-}
-
-prevBtn.addEventListener('click', function() { goToSlide(currentSlide - 1); });
-nextBtn.addEventListener('click', function() { goToSlide(currentSlide + 1); });
-
-document.querySelectorAll('.ds-tab').forEach(tab => {
-    tab.addEventListener('click', function() {
-        const section = this.dataset.section;
-        for (let i = 0; i < slides.length; i++) {
-            if (slides[i].dataset.section === section) {
-                goToSlide(i);
-                break;
-            }
-        }
-    });
-});
-
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-        if (currentSlide < totalSlides - 1) goToSlide(currentSlide + 1);
-    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-        if (currentSlide > 0) goToSlide(currentSlide - 1);
-    }
-});
-
-document.getElementById('fullscreen-btn').addEventListener('click', function() {
-    if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
-        this.querySelector('.ds-btn-nav__icon').textContent = '⛶✕';
-        this.querySelector('.ds-btn-nav__text').textContent = '退出';
-    } else {
-        document.exitFullscreen();
-        this.querySelector('.ds-btn-nav__icon').textContent = '⛶';
-        this.querySelector('.ds-btn-nav__text').textContent = '全屏';
-    }
-});
-
-function checkAnswer(el) {
-    const question = el.closest('.quiz-question');
-    const options = question.querySelectorAll('.quiz-option');
-    const feedback = question.querySelector('.quiz-feedback');
-
-    options.forEach(opt => {
-        opt.style.pointerEvents = 'none';
-        if (opt.dataset.correct) {
-            opt.classList.add('correct');
-        }
-    });
-
-    el.classList.add(el.dataset.correct ? 'correct' : 'incorrect');
-
-    if (el.dataset.correct) {
-        feedback.style.display = 'block';
-        feedback.style.color = 'var(--green-700)';
-        feedback.textContent = '✅ 回答正确！很棒！';
-    } else {
-        feedback.style.display = 'block';
-        feedback.style.color = 'var(--red-700)';
-        let correctText = '';
-        options.forEach(opt => {
-            if (opt.dataset.correct) {
-                correctText = opt.querySelector('.quiz-option-text').textContent;
-            }
-        });
-        feedback.textContent = `❌ 答错了。正确答案是：${correctText}`;
-    }
-}
-
-goToSlide(0);
+window.GUOXUE_QUIZ_OVERRIDE = [
+    { q: '本章是《论语》中谁的言论？', opts: ['孔子', '有子（有若）', '曾子（曾参）', '子贡'], ans: 1, exp: '有子（有若，字子有），是孔子的学生，比孔子小33岁。在《论语》中，只有曾参和有若被尊称为"子"（老师），可见其地位之高。' },
+    { q: '"礼之用，和为贵"中的"和"最准确的含义是什么？', opts: ['一团和气，不吵架', '和谐、协调、恰到好处的状态', '和平，不打仗', '温和的态度'], ans: 1, exp: '"和"不是无原则的妥协，而是和谐、协调、恰到好处。就像音乐需要不同音调配合，烹饪需要味道平衡，"和"追求多样性的统一。' },
+    { q: '"先王之道，斯为美"中的"斯"指代什么？', opts: ['先王本人', '"和为贵"这一原则', '礼的制度本身', '治理国家的方法'], ans: 1, exp: '"斯"指代上一句的"和为贵"——先王治国之道的美妙之处，就体现在礼与和的浑然一体上。' },
+    { q: '"小大由之"中的"由之"是什么意思？', opts: ['从此开始', '遵循这一原则（和为贵）', '由着自己性子来', '自由选择'], ans: 1, exp: '"由之"的意思是遵循"和为贵"这个原则。无论大事小事，都要遵循这一原则，体现的是礼的普适性。' },
+    { q: '为什么有子要在"和为贵"之后说"有所不行"？', opts: ['因为他前后矛盾', '因为礼制度在某些情况下不好用', '他预见到"和为贵"可能被滥用来搞无原则妥协，所以提前辩证地补充说明', '因为先王之道已经不适用了'], ans: 2, exp: '有子最精妙的洞见在于——他预见到了"和为贵"可能被滥用。所以立即补充：知和而和，不以礼节之，亦不可行。' },
+    { q: '"知和而和，不以礼节之，亦不可行也"的核心意思是？', opts: ['只知道和而不懂礼，也是可以的', '礼制度和和谐无法共存', '只知道追求和谐，却不用礼来节制约束，也是行不通的', '和谐不需要任何规则'], ans: 2, exp: '有子用辩证眼光指出：真正的和谐应该建立在规矩和秩序之上——礼是和的边界和保障，没有礼的节制，和谐会变成一团和气。' },
+    { q: '以下哪个比喻最能体现"礼"与"和"的关系？', opts: ['鱼和水的关系', '河岸与河水——礼如河岸提供秩序，和如河水在其中流动', '铁轨和火车', '锁和钥匙'], ans: 1, exp: '礼如同河岸，和如同河水——没有河岸，河水会泛滥成灾；但河岸如果太窄太死，河水也无法流动。礼与和的辩证关系是既要保持秩序，又要保持活力。' },
+    { q: '有子在本章中提到"先王"的目的是什么？', opts: ['炫耀历史知识', '以古代圣王的治国实践为证，说明礼与和的平衡是经过历史验证的智慧', '要求人们完全照搬古代的制度', '说明古代比现代好'], ans: 1, exp: '有子以尧舜禹汤文武等先王为例，说明礼与和的平衡是儒家"法先王"思想的体现——最好的政治是靠礼乐教化营造社会和谐。' },
+    { q: '本章体现了儒家的什么核心思想？', opts: ['无为而治', '兼爱非攻', '中庸思想——在礼与和之间找到平衡点', '严刑峻法'], ans: 2, exp: '有子既不是"礼教派"（死守规矩），也不是"和稀泥派"（无原则妥协）。他找到了一条中间道路：以礼为体、以和为用，体用一源。这是儒家中庸思想最生动的体现。' },
+    { q: '有子"礼之用和为贵"这段话对现代社会最重要的启示是什么？', opts: ['凡事都要讲和气', '制度规范与人文关怀要兼顾——既要遵守规则，又要注重和谐，二者不可偏废', '古代的礼制是最好的，应该恢复', '和谐比什么都重要，规矩可以灵活'], ans: 1, exp: '最高明的处世之道，是在规矩与和谐之间找到恰到好处的平衡。既不要做死守规矩的教条主义者，也不要做放弃原则的和稀泥者。' }
+];
+window.GUOXUE_COURSE_ID = 'li-zhi-yong-he-wei-gui';
 </script>
+<script src="../../assets/js/slide-engine.js?v=29f633f"></script>
+<script src="../../assets/js/auth-email.js" defer></script>
+<script src="../../assets/js/auth.js" defer></script>
+<script src="../../assets/js/api-client.js" defer></script>
 
 </body>
 </html>
