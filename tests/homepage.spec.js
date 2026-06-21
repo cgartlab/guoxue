@@ -127,7 +127,7 @@ test.describe('Desktop (1440x900)', () => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(12);
+    await expect(cards).toHaveCount(13);
 
     const firstCard = cards.first();
     await expect(firstCard.locator('.lesson-title')).toContainText('论语');
@@ -139,7 +139,7 @@ test.describe('Desktop (1440x900)', () => {
     const values = page.locator('.series-stat__value');
     const vals = await values.allTextContents();
     // 12 ready lessons, 0 coming lessons, 12 categories
-    expect(vals[0]).toBe('12'); // 已上线
+    expect(vals[0]).toBe('13'); // 已上线
     expect(vals[1]).toBe('0'); // 筹备中
     expect(vals[2]).toBe('12'); // 门类
   });
@@ -156,7 +156,7 @@ test.describe('Tablet (768x1024)', () => {
     await expect(sidebar).toBeVisible();
 
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(12);
+    await expect(cards).toHaveCount(13);
   });
 });
 
@@ -228,7 +228,7 @@ test.describe('Mobile (375x812)', () => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(12);
+    await expect(cards).toHaveCount(13);
   });
 });
 
@@ -294,9 +294,9 @@ test.describe('Interactions', () => {
     const title = page.locator('#filter-title');
     await expect(title).toContainText('蒙学');
 
-    // Should show 10 ready lessons in mengxue
+    // Should show ready lessons in mengxue
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(12);
+    await expect(cards).toHaveCount(13);
   });
 
   test('click on coming discipline shows placeholder', async ({ page }) => {

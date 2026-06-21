@@ -32,6 +32,8 @@
         <li><a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html#sidebar-nav">门类</a></li>
     </ul>
     <a class="ds-btn-nav" href="../../about.html">关于本站</a>
+    <span style="flex:1"></span>
+    <div id="auth-nav"></div>
 </nav>
 
 <!-- ===== 课程工具栏 ===== -->
@@ -52,84 +54,85 @@
 </nav>
 
 <!-- ===== 幻灯片容器 ===== -->
-<main class="ds-slide-container" id="slide-container">
+<div class="slide-viewport">
+<div class="slide-container" id="slide-container">
 
 <!-- ====== 讲义部分 ====== -->
 
 <!-- 1. 标题页 -->
-<section class="slide" data-section="lecture" data-index="0">
+<div class="slide active" data-page="0" data-section="lecture">
     <div class="slide-card slide-card--cover">
         <div class="slide-card__body slide-card__body--center">
             <div class="lesson-number"><small>第11课 · 《论语·学而》第十章</small></div>
             <h1 class="lesson-title" style="font-size:2.4rem;">温良恭俭让</h1>
-            <p class="lesson-subtitle" style="font-size:1.3rem;color:var(--blue-700);">夫子五德 · 以德服人</p>
-            <div class="quote-block" style="margin-top:2rem;">
+            <p class="lesson-subtitle" style="font-size:1.3rem;color:var(--ds-color-olive-600);">夫子五德 · 以德服人</p>
+            <div class="quote-block" style="margin-top:var(--ds-space-8);">
                 <p style="font-size:1.6rem;font-weight:700;">子禽问于子贡曰：</p>
                 <p style="font-size:1.1rem;line-height:1.8;">"夫子至于是邦也，必闻其政，<br>求之与，抑与之与？"</p>
-                <p style="font-size:1.1rem;line-height:1.8;margin-top:0.5rem;">子贡曰：<br>"夫子温、良、恭、俭、让以得之。<br>夫子之求之也，其诸异乎人之求之与？"</p>
+                <p style="font-size:1.1rem;line-height:1.8;margin-top:var(--ds-space-2);">子贡曰：<br>"夫子温、良、恭、俭、让以得之。<br>夫子之求之也，其诸异乎人之求之与？"</p>
             </div>
         </div>
         <div class="slide-card__footer">
             <p>📖 讲义部分 · 共7页 ｜ ✏️ 测验10题 ｜ 💬 答疑解惑</p>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 2. 原文呈现 -->
-<section class="slide" data-section="lecture" data-index="1">
+<div class="slide" data-section="lecture" data-page="1">
     <div class="slide-card">
         <h2 class="slide-card__heading">📜 原文呈现</h2>
         <div class="slide-card__body">
-            <div class="dialogue-scene" style="text-align:center;margin:1rem 0;">
-                <div class="speaker speaker-a" style="background:var(--blue-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
-                    <p style="font-weight:700;margin-bottom:0.5rem;">🎤 子禽问曰</p>
+            <div class="dialogue-scene" style="text-align:center;margin:var(--ds-space-4) 0;">
+                <div class="speaker speaker-a" style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
+                    <p style="font-weight:700;margin-bottom:var(--ds-space-2);">🎤 子禽问曰</p>
                     <p style="font-size:1.4rem;line-height:2;">
                         "<ruby>夫<rt>fú</rt></ruby><ruby>子<rt>zǐ</rt></ruby><ruby>至<rt>zhì</rt></ruby><ruby>于<rt>yú</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>邦<rt>bāng</rt></ruby><ruby>也<rt>yě</rt></ruby>，<ruby>必<rt>bì</rt></ruby><ruby>闻<rt>wén</rt></ruby><ruby>其<rt>qí</rt></ruby><ruby>政<rt>zhèng</rt></ruby>。<br><ruby>求<rt>qiú</rt></ruby><ruby>之<rt>zhī</rt></ruby><ruby>与<rt>yú</rt></ruby>，<ruby>抑<rt>yì</rt></ruby><ruby>与<rt>yǔ</rt></ruby><ruby>之<rt>zhī</rt></ruby><ruby>与<rt>yú</rt></ruby>？"
                     </p>
                 </div>
-                <div class="speaker speaker-b" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
-                    <p style="font-weight:700;margin-bottom:0.5rem;">🎤 子贡对曰</p>
+                <div class="speaker speaker-b" style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
+                    <p style="font-weight:700;margin-bottom:var(--ds-space-2);">🎤 子贡对曰</p>
                     <p style="font-size:1.4rem;line-height:2;">
                         "<ruby>夫<rt>fū</rt></ruby><ruby>子<rt>zǐ</rt></ruby><ruby>温<rt>wēn</rt></ruby>、<ruby>良<rt>liáng</rt></ruby>、<ruby>恭<rt>gōng</rt></ruby>、<ruby>俭<rt>jiǎn</rt></ruby>、<ruby>让<rt>ràng</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>之<rt>zhī</rt></ruby>。<br><ruby>夫<rt>fú</rt></ruby><ruby>子<rt>zǐ</rt></ruby><ruby>之<rt>zhī</rt></ruby><ruby>求<rt>qiú</rt></ruby><ruby>之<rt>zhī</rt></ruby><ruby>也<rt>yě</rt></ruby>，<ruby>其<rt>qí</rt></ruby><ruby>诸<rt>zhū</rt></ruby><ruby>异<rt>yì</rt></ruby><ruby>乎<rt>hū</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>之<rt>zhī</rt></ruby><ruby>求<rt>qiú</rt></ruby><ruby>之<rt>zhī</rt></ruby><ruby>与<rt>yú</rt></ruby>？"
                     </p>
                 </div>
             </div>
-            <div class="translation-box" style="background:var(--gray-100);border-radius:12px;padding:1.2rem;margin-top:1rem;">
+            <div class="translation-box" style="background:var(--ds-color-surface);border-radius:var(--ds-radius-xl);padding:var(--ds-space-5);margin-top:var(--ds-space-4);">
                 <p><strong>🔍 通译：</strong>子禽问子贡说："夫子每到一个国家，一定听得到那个国家的政事。这是他主动求来的呢？还是别人主动告诉他的呢？"子贡回答说："夫子是靠温和、善良、恭敬、节俭、谦让这五种美德获得的。夫子求得政闻的方式，大概与别人求得的方式不同吧？"</p>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 3. 人物与背景 -->
-<section class="slide" data-section="lecture" data-index="2">
+<div class="slide" data-section="lecture" data-page="2">
     <div class="slide-card">
         <h2 class="slide-card__heading">👥 人物与背景</h2>
         <div class="slide-card__body">
-            <div class="people-grid" style="display:grid;gap:0.8rem;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:1rem;">
+            <div class="people-grid" style="display:grid;gap:var(--ds-space-3);">
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <p><strong>🎤 子禽（陈亢）</strong></p>
-                    <p style="margin:0.3rem 0 0;font-size:0.95rem;">姓陈名亢，字子禽，陈国人。孔子的弟子，比孔子小四十岁。他性格好问，常向师兄请教问题。本章中他向子贡提问，体现了孔门弟子互相切磋学习的风气。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.95rem;">姓陈名亢，字子禽，陈国人。孔子的弟子，比孔子小四十岁。他性格好问，常向师兄请教问题。本章中他向子贡提问，体现了孔门弟子互相切磋学习的风气。</p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <p><strong>🎤 子贡（端木赐）</strong></p>
-                    <p style="margin:0.3rem 0 0;font-size:0.95rem;">姓端木名赐，字子贡，卫国人。孔子的杰出弟子，以口才和经商才能闻名，是"孔门十哲"之一。他善于言辞、理解力强，本章中他对老师品德的精妙概括，成为千古名言。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.95rem;">姓端木名赐，字子贡，卫国人。孔子的杰出弟子，以口才和经商才能闻名，是"孔门十哲"之一。他善于言辞、理解力强，本章中他对老师品德的精妙概括，成为千古名言。</p>
                 </div>
             </div>
-            <div style="background:var(--purple-100);border-radius:12px;padding:1rem;margin-top:0.8rem;">
+            <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-top:var(--ds-space-3);">
                 <p><strong>📖 场景解读</strong></p>
-                <p style="margin:0.3rem 0 0;font-size:0.95rem;">孔子周游列国时，每到一国都能参与或了解该国的政事。子禽很好奇——是老师主动去打探，还是人家主动来请教？子贡的回答揭示了一个深刻的道理：<strong>真正的影响力来自于人格魅力，而非手段技巧。</strong></p>
+                <p style="margin:var(--ds-space-1) 0 0;font-size:0.95rem;">孔子周游列国时，每到一国都能参与或了解该国的政事。子禽很好奇——是老师主动去打探，还是人家主动来请教？子贡的回答揭示了一个深刻的道理：<strong>真正的影响力来自于人格魅力，而非手段技巧。</strong></p>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 4. 逐句解读：子禽之问 -->
-<section class="slide" data-section="lecture" data-index="3">
+<div class="slide" data-section="lecture" data-page="3">
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 一</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.3rem;font-weight:700;">"夫子至于是邦也，必闻其政，求之与，抑与之与？"</p>
             </div>
             <ul>
@@ -142,409 +145,137 @@
             <p>这个提问本身就暗含了一个标准——普通人是靠钻营打听或硬凑上去才能得知政事的；那孔子是和别人一样呢，还是不一样？</p>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 5. 逐句解读：子贡之答·五德 -->
-<section class="slide" data-section="lecture" data-index="4">
+<div class="slide" data-section="lecture" data-page="4">
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 二</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.3rem;font-weight:700;">"夫子温、良、恭、俭、让以得之。"</p>
             </div>
             <p>子贡的回答精妙绝伦——他没有直接回答"是求还是与"，而是指出了问题的本质：<strong>孔子的品格本身就是答案</strong>。</p>
             <p><strong>"夫子之求之也，其诸异乎人之求之与"</strong>——即便是"求"，夫子的"求"也和别人的"求"不一样！</p>
             <p>普通人求取政闻，靠的是钻营、讨好、打听、送礼；而孔子靠的是人格魅力的自然感召——国君因敬重他的德行，主动向他请教。表面上看起来也是"求"，但此求非彼求。</p>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:1rem;margin-top:1rem;">
+            <div class="tip-box" style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-top:var(--ds-space-4);">
                 <p>💡 <strong>关键领悟：</strong>子贡实际上是在说——不要去纠结"求还是与"这个问题，因为夫子以德服人，他的品格让人自然而然地信任他、请教他。这才是最高明的"求"——<strong>不求自得</strong>。</p>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 6. 五德详解 -->
-<section class="slide" data-section="lecture" data-index="5">
+<div class="slide" data-section="lecture" data-page="5">
     <div class="slide-card">
         <h2 class="slide-card__heading">🌟 夫子五德</h2>
         <div class="slide-card__body">
             <p>子贡用五个字精准概括了孔子的品德，每一个字都蕴含深意：</p>
-            <div class="five-virtues" style="display:grid;gap:0.6rem;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:0.8rem 1rem;">
-                    <p style="font-size:1.2rem;font-weight:700;margin-bottom:0.2rem;">🌤 温</p>
+            <div class="five-virtues" style="display:grid;gap:var(--ds-space-2);">
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3) var(--ds-space-4);">
+                    <p style="font-size:1.2rem;font-weight:700;margin-bottom:var(--ds-space-1);">🌤 温</p>
                     <p style="margin:0;font-size:0.95rem;">温和、平和。不冷峻、不偏激，与人相处如春风化雨。孔子面见任何人都不摆架子，让人如沐春风。</p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:0.8rem 1rem;">
-                    <p style="font-size:1.2rem;font-weight:700;margin-bottom:0.2rem;">💚 良</p>
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3) var(--ds-space-4);">
+                    <p style="font-size:1.2rem;font-weight:700;margin-bottom:var(--ds-space-1);">💚 良</p>
                     <p style="margin:0;font-size:0.95rem;">善良、仁厚。心怀善念，待人真诚，不刻薄、不阴险。良是仁的内在体现。</p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:0.8rem 1rem;">
-                    <p style="font-size:1.2rem;font-weight:700;margin-bottom:0.2rem;">🙏 恭</p>
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3) var(--ds-space-4);">
+                    <p style="font-size:1.2rem;font-weight:700;margin-bottom:var(--ds-space-1);">🙏 恭</p>
                     <p style="margin:0;font-size:0.95rem;">恭敬、庄重。对人对事皆存敬意，不傲慢、不轻慢。恭是外在的礼貌，也是内心的尊重。</p>
                 </div>
-                <div style="background:var(--purple-100);border-radius:12px;padding:0.8rem 1rem;">
-                    <p style="font-size:1.2rem;font-weight:700;margin-bottom:0.2rem;">🍃 俭</p>
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3) var(--ds-space-4);">
+                    <p style="font-size:1.2rem;font-weight:700;margin-bottom:var(--ds-space-1);">🍃 俭</p>
                     <p style="margin:0;font-size:0.95rem;">节俭、节制。不奢侈浪费，不贪图享乐。俭不仅是物质层面的节约，更是欲望上的克制。</p>
                 </div>
-                <div style="background:var(--red-100);border-radius:12px;padding:0.8rem 1rem;">
-                    <p style="font-size:1.2rem;font-weight:700;margin-bottom:0.2rem;">🤲 让</p>
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3) var(--ds-space-4);">
+                    <p style="font-size:1.2rem;font-weight:700;margin-bottom:var(--ds-space-1);">🤲 让</p>
                     <p style="margin:0;font-size:0.95rem;">谦让、不争。不争名夺利，不居功自傲。让是一种自信——内心充实的人，不需要通过争抢来证明自己。</p>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 7. 核心思想 -->
-<section class="slide" data-section="lecture" data-index="6">
+<div class="slide" data-section="lecture" data-page="6">
     <div class="slide-card">
         <h2 class="slide-card__heading">🧠 核心思想 · 以德服人</h2>
         <div class="slide-card__body">
             <p>本章的核心思想可以用四个字概括——<strong>以德服人</strong>。</p>
-            <div class="core-grid" style="display:grid;gap:0.8rem;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:1rem;">
+            <div class="core-grid" style="display:grid;gap:var(--ds-space-3);">
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 人格即力量</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">孔子不需要刻意去"打听"消息，他的品德本身就是一种力量，让人愿意亲近他、信任他、向他请教。这就是"不言之教"的力量。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">孔子不需要刻意去"打听"消息，他的品德本身就是一种力量，让人愿意亲近他、信任他、向他请教。这就是"不言之教"的力量。</p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 不求自得</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">有时候最有效的"求"恰恰是不求。当你专注于提升自己的品德和能力时，机会和资源反而会主动向你靠拢。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">有时候最有效的"求"恰恰是不求。当你专注于提升自己的品德和能力时，机会和资源反而会主动向你靠拢。</p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 内圣外王</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">先修身（内圣），后自然能影响他人、成就事业（外王）。温良恭俭让是"内圣"的具体表现，而能够参与各国政事则是"外王"的自然结果。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">先修身（内圣），后自然能影响他人、成就事业（外王）。温良恭俭让是"内圣"的具体表现，而能够参与各国政事则是"外王"的自然结果。</p>
                 </div>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>📚 <strong>延伸阅读：</strong>《孟子·公孙丑上》中说："以力服人者，非心服也，力不赡也；以德服人者，中心悦而诚服也。"——用武力让人服从，不是真心的；用道德让人信服，才是发自内心的心悦诚服。</p>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- ====== 测验部分 ====== -->
 
-<!-- 8. 题1 -->
-<section class="slide" data-section="quiz" data-index="0">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第1题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>1. 本章的对话发生在哪两个人之间？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">孔子和子路</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">子禽和子贡</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">孔子和子贡</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">曾子和子贡</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
+<div class="slide" data-page="8" data-section="quiz">
+    <span class="ds-badge ds-badge--success">测验</span>
+    <h2 style="border:none;text-align:center;padding-bottom:0;">测验说明</h2>
+    <ul style="text-align:left;margin-top:var(--ds-space-6);display:inline-block;">
+        <li>共 <b>10 道</b> 选择题，每题 <b>4 个</b> 选项</li>
+        <li>每题 10 分，满分 100 分</li>
+        <li>点击选项即可作答，选择后会显示正确答案和讲解</li>
+        <li>可以随时返回讲义部分复习</li>
+    </ul>
+    <p style="margin-top:var(--ds-space-10);text-align:center;font-size:1.25rem;color:var(--ds-accent);font-weight:700;">准备好了吗？</p>
+</div>
 
-<!-- 9. 题2 -->
-<section class="slide" data-section="quiz" data-index="1">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第2题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>2. "夫子至于是邦也"中的"是邦"指什么？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">鲁国</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">卫国</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">孔子所到的各个诸侯国</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">周天子所在的都城</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
+<div class="slide" data-page="9" data-section="quiz" id="quiz-0"></div>
+<div class="slide" data-page="10" data-section="quiz" id="quiz-1"></div>
+<div class="slide" data-page="11" data-section="quiz" id="quiz-2"></div>
+<div class="slide" data-page="12" data-section="quiz" id="quiz-3"></div>
+<div class="slide" data-page="13" data-section="quiz" id="quiz-4"></div>
+<div class="slide" data-page="14" data-section="quiz" id="quiz-5"></div>
+<div class="slide" data-page="15" data-section="quiz" id="quiz-6"></div>
+<div class="slide" data-page="16" data-section="quiz" id="quiz-7"></div>
+<div class="slide" data-page="17" data-section="quiz" id="quiz-8"></div>
+<div class="slide" data-page="18" data-section="quiz" id="quiz-9"></div>
 
-<!-- 10. 题3 -->
-<section class="slide" data-section="quiz" data-index="2">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第3题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>3. "求之与，抑与之与"中，"抑"字是什么意思？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">抑制、压制</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">但是、然而</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">或者（表示选择）</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">语气助词，无实义</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
+<div class="slide" data-page="19" data-section="review" id="quiz-score" style="align-items:center;text-align:center;">
+    <span class="ds-badge ds-badge--success">测验得分</span>
+    <h2 style="border:none;text-align:center;padding-bottom:0;">测验完成！</h2>
+    <div style="margin-top:var(--ds-space-10);">
+        <div style="font-size:5rem;color:var(--ds-accent);font-weight:700;font-family:var(--ds-font-display);line-height:1;" id="score-display">0</div>
+        <div style="font-size:1.5rem;margin-top:var(--ds-space-4);color:var(--ds-color-fg-strong);font-weight:600;" id="score-message">正在计算得分...</div>
+        <div style="margin-top:var(--ds-space-8);font-size:1.125rem;color:var(--ds-color-fg);background:var(--ds-color-surface);padding:var(--ds-space-6);border-radius:var(--ds-radius-xl);display:inline-block;text-align:left;">
+            <p style="margin-bottom:var(--ds-space-3);">✅ 答对题数：<b id="correct-count" style="color:var(--ds-color-success);font-size:1.25rem;">0</b> / 10</p>
+            <p style="margin-bottom:var(--ds-space-3);">📊 总得分：<b id="total-score" style="color:var(--ds-accent);font-size:1.25rem;">0</b> 分（满分 100 分）</p>
+            <p>📈 正确率：<b id="score-percent" style="color:var(--ds-color-info);font-size:1.25rem;">0%</b></p>
         </div>
+        <button class="retake-btn" id="retake-btn" aria-label="重新答题" style="margin-top:var(--ds-space-6);">↺ 重新答题</button>
     </div>
-</section>
-
-<!-- 11. 题4 -->
-<section class="slide" data-section="quiz" data-index="3">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第4题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>4. 子贡用哪五个字来概括孔子的品德？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">仁义礼智信</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">温良恭俭让</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">忠孝节义勇</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">刚毅木讷仁</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 12. 题5 -->
-<section class="slide" data-section="quiz" data-index="4">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第5题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>5. "温"字在五德中形容的是什么品质？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">温暖、热心助人</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">温和、平和，如春风化雨</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">温度、热情</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">温习、复习</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 13. 题6 -->
-<section class="slide" data-section="quiz" data-index="5">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第6题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>6. 子贡说"夫子之求之也，其诸异乎人之求之与"，这句话是什么意思？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">孔子求人的方法和别人一样</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">孔子求得的方式与别人不同，他是凭品德自然获得的</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">孔子从来不求人</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">孔子求人的方式很奇怪</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 14. 题7 -->
-<section class="slide" data-section="quiz" data-index="6">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第7题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>7. "让"作为五德之一，核心含义是什么？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">退让、软弱</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">忍让、委屈</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">谦让、不争——内心充实的人无需争抢证明自己</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">礼让、给人让座</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 15. 题8 -->
-<section class="slide" data-section="quiz" data-index="7">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第8题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>8. 子贡是孔子的哪位弟子？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">以武力闻名的弟子</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">以口才和经商闻名的弟子，孔门十哲之一</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">以孝行闻名的弟子</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">以文学闻名的弟子</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 16. 题9 -->
-<section class="slide" data-section="quiz" data-index="8">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第9题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>9. 本章的核心思想可以概括为什么？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">学而优则仕</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">三人行必有我师</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">以德服人——人格魅力自然赢得信任</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">学而不思则罔</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 17. 题10 -->
-<section class="slide" data-section="quiz" data-index="9">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第10题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>10. "俭"在五德中不仅指物质节俭，更包含什么含义？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">A</span>
-                        <span class="quiz-option-text">吝啬小气</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">B</span>
-                        <span class="quiz-option-text">欲望上的克制和节制</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">C</span>
-                        <span class="quiz-option-text">只穿朴素衣服</span>
-                    </div>
-                    <div class="quiz-option" onclick="checkAnswer(this)">
-                        <span class="quiz-option-key">D</span>
-                        <span class="quiz-option-text">不吃好的食物</span>
-                    </div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
+</div>
 
 <!-- ====== 答疑解惑 ====== -->
 
 <!-- 18. FAQ -->
-<section class="slide" data-section="review" data-index="0">
+<div class="slide" data-section="review" data-page="20">
     <div class="slide-card">
         <h2 class="slide-card__heading">💬 常见问题</h2>
         <div class="slide-card__body">
-            <div class="faq-item" style="margin-bottom:1.2rem;">
+            <div class="faq-item" style="margin-bottom:var(--ds-space-5);">
                 <p><strong>❓ "温良恭俭让"和"仁义礼智信"有什么关系？</strong></p>
                 <p>"仁义礼智信"是后来儒家发展出的"五常"，是更系统的道德框架；而"温良恭俭让"则是对孔子个人品格的具体描述，属于"圣人之德"的形象刻画。两者角度不同——五常是理论框架，五德是人格画像。</p>
             </div>
-            <div class="faq-item" style="margin-bottom:1.2rem;">
+            <div class="faq-item" style="margin-bottom:var(--ds-space-5);">
                 <p><strong>❓ 孔子真的每次都是"不求自得"吗？</strong></p>
                 <p>从《论语》的记载来看，孔子确实经常受到各国国君的礼遇和请教。但这并不意味着孔子完全被动——他会主动接触各国的贤臣和使节，也会通过学生了解情况。子贡想表达的深层意思是：<strong>同样的行为，因动机和方式的不同而本质不同</strong>。孔子去了解政事，是为了推行仁政、造福百姓，而非谋取私利。背后是"道"与"利"的区别。</p>
             </div>
@@ -554,42 +285,42 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 19. 生活应用 -->
-<section class="slide" data-section="review" data-index="1">
+<div class="slide" data-section="review" data-page="21">
     <div class="slide-card">
         <h2 class="slide-card__heading">🌟 生活应用</h2>
         <div class="slide-card__body">
             <p>五德如何应用在当今生活中：</p>
-            <div class="app-grid" style="display:grid;gap:0.8rem;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:1rem;">
+            <div class="app-grid" style="display:grid;gap:var(--ds-space-3);">
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🌤 温 — 情绪管理</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">与人沟通时保持平和语气，不暴躁不急躁。温和≠软弱，温和是一种力量。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">与人沟通时保持平和语气，不暴躁不急躁。温和≠软弱，温和是一种力量。</p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>💚 良 — 待人以善</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">不管对方如何对待你，保持内心的善良和真诚，不因外界改变自己的原则。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">不管对方如何对待你，保持内心的善良和真诚，不因外界改变自己的原则。</p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🙏 恭 — 尊重他人</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">无论对方地位高低，都给予应有的尊重。尊重别人就是尊重自己。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">无论对方地位高低，都给予应有的尊重。尊重别人就是尊重自己。</p>
                 </div>
-                <div style="background:var(--purple-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🍃 俭 — 低碳生活</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">不浪费资源，克制消费欲望。节俭不仅是美德，也是现代环保理念的体现。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">不浪费资源，克制消费欲望。节俭不仅是美德，也是现代环保理念的体现。</p>
                 </div>
-                <div style="background:var(--red-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🤲 让 — 不争之争</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">该让的时候让，该退的时候退。不争一时长短，把精力放在提升自己上。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">该让的时候让，该退的时候退。不争一时长短，把精力放在提升自己上。</p>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- 20. 课程总结 -->
-<section class="slide" data-section="review" data-index="2">
+<div class="slide" data-section="review" data-page="22">
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 课程总结</h2>
         <div class="slide-card__body">
@@ -602,155 +333,49 @@
                 <li><strong>让</strong> — 谦让不争，以退为进</li>
             </ol>
             <p>这五德告诉我们：<strong>真正的力量不是靠争取得来的，人格的魅力自然能吸引人、感化人。</strong>与其费尽心机去"求"，不如专注于修身养德——当你足够优秀时，机会和信任自然会来找你。</p>
-            <div class="original-text" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-top:1rem;text-align:center;">
+            <div class="original-text" style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-top:var(--ds-space-4);text-align:center;">
                 <p style="font-size:1.2rem;font-weight:700;">📜 原文重温</p>
                 <p style="font-size:1.1rem;">子禽问于子贡曰："夫子至于是邦也，必闻其政，<br>求之与，抑与之与？"</p>
                 <p style="font-size:1.1rem;">子贡曰："夫子温、良、恭、俭、让以得之。<br>夫子之求之也，其诸异乎人之求之与？"</p>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-olive-100);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>✨ 课后小挑战：今天试着用"温良恭俭让"的标准来对照自己——你做到了几条？哪一条最需要加强？</p>
             </div>
         </div>
     </div>
-</section>
+</div>
 
-</main><!-- end slide-container -->
+</div><!-- .slide-container -->
+</div><!-- .slide-viewport -->
+
+<div class="progress-bar-bottom">
+    <div class="progress-bar-fill" id="progress-fill" style="width:5%"></div>
+</div>
+
+<div class="kbd-hint">
+    <span class="kbd">←</span><span class="kbd">→</span> 翻页
+    <span style="margin-left:var(--ds-space-2)"><span class="kbd">Space</span> 下一页</span>
+</div>
 
 <script>
-// ===== 页面导航控制 =====
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-const pageIndicator = document.getElementById('page-indicator');
-const prevBtn = document.getElementById('nav-prev');
-const nextBtn = document.getElementById('nav-next');
-const dotsRow = document.getElementById('dots-row');
-
-// 生成页码点
-for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('span');
-    dot.className = 'dot';
-    dot.dataset.index = i;
-    dot.addEventListener('click', function() { goToSlide(parseInt(this.dataset.index)); });
-    dotsRow.appendChild(dot);
-}
-
-function goToSlide(index) {
-    if (index < 0 || index >= totalSlides) return;
-    currentSlide = index;
-
-    // 切换幻灯片
-    slides.forEach((s, i) => {
-        s.classList.toggle('active', i === index);
-    });
-
-    // 计算分节页码
-    const section = slides[index].dataset.section;
-    let actualPage = 0;
-    let totalInSection = 0;
-    slides.forEach((s, i) => {
-        if (s.dataset.section === section) {
-            totalInSection++;
-            if (i <= index) actualPage++;
-        }
-    });
-
-    let sectionLabel = '';
-    if (section === 'lecture') sectionLabel = '📖 讲义';
-    else if (section === 'quiz') sectionLabel = '✏️ 测验';
-    else sectionLabel = '💬 答疑解惑';
-
-    pageIndicator.textContent = `${sectionLabel} ${actualPage}/${totalInSection}`;
-
-    // 更新按钮状态
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index === totalSlides - 1;
-
-    // 更新标签高亮
-    document.querySelectorAll('.ds-tab').forEach(tab => {
-        tab.classList.toggle('active', tab.dataset.section === section);
-    });
-
-    // 更新dot
-    document.querySelectorAll('.dot').forEach((d, i) => {
-        d.classList.toggle('active', i === index);
-    });
-}
-
-// 按钮事件
-prevBtn.addEventListener('click', function() { goToSlide(currentSlide - 1); });
-nextBtn.addEventListener('click', function() { goToSlide(currentSlide + 1); });
-
-// 标签切换
-document.querySelectorAll('.ds-tab').forEach(tab => {
-    tab.addEventListener('click', function() {
-        const section = this.dataset.section;
-        for (let i = 0; i < slides.length; i++) {
-            if (slides[i].dataset.section === section) {
-                goToSlide(i);
-                break;
-            }
-        }
-    });
-});
-
-// 键盘导航
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-        if (currentSlide < totalSlides - 1) goToSlide(currentSlide + 1);
-    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-        if (currentSlide > 0) goToSlide(currentSlide - 1);
-    }
-});
-
-// 全屏
-document.getElementById('fullscreen-btn').addEventListener('click', function() {
-    if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
-        this.querySelector('.ds-btn-nav__icon').textContent = '⛶✕';
-        this.querySelector('.ds-btn-nav__text').textContent = '退出';
-    } else {
-        document.exitFullscreen();
-        this.querySelector('.ds-btn-nav__icon').textContent = '⛶';
-        this.querySelector('.ds-btn-nav__text').textContent = '全屏';
-    }
-});
-
-// ===== 测验答案检查 =====
-function checkAnswer(el) {
-    const question = el.closest('.quiz-question');
-    const options = question.querySelectorAll('.quiz-option');
-    const feedback = question.querySelector('.quiz-feedback');
-
-    options.forEach(opt => {
-        opt.style.pointerEvents = 'none';
-        if (opt.dataset.correct) {
-            opt.classList.add('correct');
-        }
-    });
-
-    el.classList.add(el.dataset.correct ? 'correct' : 'incorrect');
-
-    if (el.dataset.correct) {
-        feedback.style.display = 'block';
-        feedback.style.color = 'var(--green-700)';
-        feedback.textContent = '✅ 回答正确！很棒！';
-    } else {
-        feedback.style.display = 'block';
-        feedback.style.color = 'var(--red-700)';
-        let correctText = '';
-        options.forEach(opt => {
-            if (opt.dataset.correct) {
-                correctText = opt.querySelector('.quiz-option-text').textContent;
-            }
-        });
-        feedback.textContent = `❌ 答错了。正确答案是：${correctText}`;
-    }
-}
-
-// 启动
-goToSlide(0);
+window.GUOXUE_QUIZ_OVERRIDE = [
+    { q: '本章的对话发生在哪两个人之间？', opts: ['孔子和子路', '子禽和子贡', '孔子和子贡', '曾子和子贡'], ans: 1, exp: '子禽（陈亢）向子贡（端木赐）提问——孔子每到一个国家为什么能听闻其政事？子贡用"温良恭俭让"五德回答。' },
+    { q: '"夫子至于是邦也"中的"是邦"指什么？', opts: ['鲁国', '卫国', '孔子所到的各个诸侯国', '周天子所在的都城'], ans: 2, exp: '"是邦"指孔子周游列国时到达的各个诸侯国，不特指某一个。' },
+    { q: '"求之与，抑与之与"中"抑"字什么意思？', opts: ['抑制、压制', '但是、然而', '或者（表示选择）', '语气助词，无实义'], ans: 2, exp: '"抑"在这里是选择连词，相当于"还是、或者"，连接"求"和"与之"两个选项。' },
+    { q: '子贡用哪五个字概括孔子品德？', opts: ['仁义礼智信', '温良恭俭让', '忠孝节义勇', '刚毅木讷仁'], ans: 1, exp: '子贡说"夫子温、良、恭、俭、让以得之"——这五字成为孔子人格魅力的经典概括，千古流传。' },
+    { q: '"温"在五德中形容什么品质？', opts: ['温暖、热心助人', '温和、平和，如春风化雨', '温度、热情', '温习、复习'], ans: 1, exp: '温是温和、平和，与人相处如春风化雨，不冷峻不偏激。孔子面见任何人都让人如沐春风。' },
+    { q: '子贡说"夫子之求之也，其诸异乎人之求之与"是什么意思？', opts: ['孔子求人的方法和别人一样', '孔子求得的方式与别人不同，他是凭品德自然获得的', '孔子从来不求人', '孔子求人的方式很奇怪'], ans: 1, exp: '子贡指出，孔子表面上也是"求"，但他是以德服人，让人主动来请教，与别人钻营打听完全不同。' },
+    { q: '"让"作为五德之一的核心含义是？', opts: ['退让、软弱', '忍让、委屈', '谦让、不争——内心充实的人无需争抢证明自己', '礼让、给人让座'], ans: 2, exp: '让的核心是自信——内心充实的人不需要通过争抢来证明自己。"让"是一种以退为进的智慧。' },
+    { q: '子贡是孔子的哪位弟子？', opts: ['以武力闻名的弟子', '以口才和经商闻名的弟子，孔门十哲之一', '以孝行闻名的弟子', '以文学闻名的弟子'], ans: 1, exp: '子贡（端木赐）是孔门十哲之一，以卓越的口才和经商才能闻名，是孔子最出色的弟子之一。' },
+    { q: '本章核心思想可以概括为什么？', opts: ['学而优则仕', '三人行必有我师', '以德服人——人格魅力自然赢得信任', '学而不思则罔'], ans: 2, exp: '本章核心是以德服人——孔子不需要刻意"求"取政闻，他的品格本身就是最大的感召力，让人愿意亲近他、信任他。' },
+    { q: '"俭"在五德中不仅指物质节俭，更包含什么？', opts: ['吝啬小气', '欲望上的克制和节制', '只穿朴素衣服', '不吃好的食物'], ans: 1, exp: '"俭"不仅是物质层面的节约，更是内心欲望的克制和自律。节俭不仅是美德，也是现代环保理念的体现。' }
+];
+window.GUOXUE_COURSE_ID = 'wen-liang-gong-jian-rang';
 </script>
+<script src="../../assets/js/slide-engine.js?v=29f633f"></script>
+<script src="../../assets/js/auth-email.js" defer></script>
+<script src="../../assets/js/auth.js" defer></script>
+<script src="../../assets/js/api-client.js" defer></script>
 
 </body>
 </html>
