@@ -4,14 +4,19 @@ function setAuthToken(token, username) {
   localStorage.setItem('guoxue_token', token);
   localStorage.setItem('guoxue_username', username);
   localStorage.setItem('casdoor_access_token', token);
+  // 始终设置过期时间，避免 expiresAt=0 导致 isLoggedIn() 永远返回 false
+  // 优先从 JWT payload.exp 取，否则默认 24 小时
+  let expiresAt = Date.now() + 86400000; // fallback: 24h
   try {
-    const payload = JSON.parse(atob(token.split('.')[1]));
-    if (payload.exp) {
-      localStorage.setItem('casdoor_expires_at', String(payload.exp * 1000));
+    const parts = token.split('.');
+    if (parts.length === 3) {
+      const payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')));
+      if (payload.exp && payload.exp > 0) {
+        expiresAt = payload.exp * 1000;
+      }
     }
-  } catch (e) {
-    localStorage.setItem('casdoor_expires_at', String(Date.now() + 86400000));
-  }
+  } catch (e) { /* ignore, use fallback */ }
+  localStorage.setItem('casdoor_expires_at', String(expiresAt));
 }
 
 const MODAL_HTML = `
