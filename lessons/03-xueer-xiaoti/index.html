@@ -14,7 +14,7 @@
 <link rel="icon" href="../../assets/img/favicon.svg?v=26c14a3" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="../../assets/css/ds-design-system.css?v=26c14a3">
+  <link rel="stylesheet" href="../../assets/css/ds-design-system.css">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
         <li><a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html#lesson-cards">课程</a></li>
         <li><a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html#sidebar-nav">门类</a></li>
     </ul>
-    <span style="flex:1"></span>
+    <span class="flex-spacer"></span>
     <a class="ds-btn-nav" href="../../about.html">关于本站</a>
     <div id="auth-nav"></div>
   </nav>
@@ -296,6 +296,7 @@
 
 <!-- 自定义测验题目 -->
 <script>
+window.GUOXUE_COURSE_ID = 'xueer-xiaoti';
 window.GUOXUE_QUIZ_OVERRIDE = [
     {
         q: '"孝弟也者，其为仁之本与"中的"弟"字在这里读什么？',
@@ -360,7 +361,7 @@ window.GUOXUE_QUIZ_OVERRIDE = [
 ];
 </script>
 
-<script src="../../assets/js/slide-engine.js?v=26c14a3"></script>
+<script src="../../assets/js/slide-engine.js"></script>
 <script src="../../assets/js/auth-email.js" defer></script>
 <script src="../../assets/js/auth.js" defer></script>
 
