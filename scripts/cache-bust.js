@@ -43,13 +43,13 @@ function updateVersionInHTML(filePath, version, injectAnalytics = true) {
     
     // 更新 href 属性（link, anchor 等）
     html = html.replace(
-        /href="(assets\/[^"]+)(?:\?v=[^"]*)?"/g,
+        /href="(assets\/[^"?]+)(?:\?v=[^"]*)?"/g,
         `href="$1?v=${version}"`
     );
     
     // 更新 src 属性（script 等）
     html = html.replace(
-        /src="(assets\/[^"]+)(?:\?v=[^"]*)?"/g,
+        /src="(assets\/[^"?]+)(?:\?v=[^"]*)?"/g,
         `src="$1?v=${version}"`
     );
     
