@@ -44,7 +44,11 @@
       })
 
       if (res.status === 401) {
-        console.warn('[API] Token 无效或已过期')
+        console.warn('[API] Token 无效或已过期，自动清除登录状态')
+        // 清除本地 token，让 auth UI 更新
+        if (typeof AUTH !== 'undefined' && typeof AUTH.logout === 'function') {
+          AUTH.logout()
+        }
         return { data: null, error: 'Token expired', status: 401 }
       }
 
@@ -61,7 +65,9 @@
       const data = await res.json()
       return { data, error: null, status: res.status }
     } catch (err) {
-      console.error('[API] 网络错误:', err)
+      // 网络不可用或请求被中止
+      const isNetworkError = err instanceof TypeError && err.message.includes('fetch')
+      console.warn('[API]', isNetworkError ? '网络不可用' : '请求异常', endpoint, err.message)
       return { data: null, error: err.message, status: 0 }
     }
   }
@@ -144,10 +150,15 @@
       return error ? null : data
     },
     async updateNote(noteId, updates) {
-      // 简单实现：DELETE + re-INSERT
-      // 完整实现需要 PATCH 路由，后续可加
-      console.warn('[API] updateNote 暂未实现')
-      return false
+      const { error } = await api('/api/notes/' + noteId, {
+        method: 'PATCH',
+        data: updates,
+      })
+      if (error) {
+        console.error('[API] updateNote 失败:', error)
+        return false
+      }
+      return true
     },
     async deleteNote(noteId) {
       const { error } = await api('/api/notes/' + noteId, { method: 'DELETE' })

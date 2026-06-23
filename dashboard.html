@@ -503,8 +503,45 @@
     }
 
     /**
-     * 加载用户信息
+     * 等待依赖模块（AUTH / SUPABASE）就绪
+     * 轮询替代 setTimeout(500ms) 兜底，更健壮
      */
+    async function waitForDeps(maxMs = 3000) {
+      const step = 50
+      let elapsed = 0
+      while (elapsed < maxMs) {
+        if (typeof AUTH !== 'undefined' && window.SUPABASE) return true
+        await new Promise(r => setTimeout(r, step))
+        elapsed += step
+      }
+      return false
+    }
+
+    /**
+     * 显示全局错误横幅（替代 alert）
+     */
+    function showErrorBanner(msg) {
+      const existing = document.getElementById('dashboard-error-banner')
+      if (existing) existing.remove()
+      const banner = document.createElement('div')
+      banner.id = 'dashboard-error-banner'
+      banner.setAttribute('role', 'alert')
+      banner.style.cssText = [
+        'background:var(--ds-color-error-bg)',
+        'color:var(--ds-color-error)',
+        'border:1px solid var(--ds-color-error)',
+        'border-radius:var(--ds-radius-lg)',
+        'padding:var(--ds-space-4) var(--ds-space-5)',
+        'margin-bottom:var(--ds-space-5)',
+        'font-size:0.875rem',
+        'display:flex',
+        'align-items:center',
+        'gap:var(--ds-space-3)',
+      ].join(';')
+      banner.innerHTML = '<span>⚠️</span><span>' + msg + '</span>'
+      const dash = document.getElementById('dashboard')
+      if (dash) dash.prepend(banner)
+    }
     async function loadUserInfo() {
       try {
         if (!AUTH || !AUTH.isLoggedIn()) {
@@ -711,52 +748,35 @@
      * 初始化
      */
     async function init() {
+      // 等待依赖就绪（defer 脚本在 DOMContentLoaded 后才运行完毕）
+      const ready = await waitForDeps(3000)
+      if (!ready) {
+        showErrorBanner('页面初始化超时，请刷新重试。')
+        return
+      }
+
+      // 未登录 → 跳回首页
+      if (!AUTH.isLoggedIn()) {
+        window.location.href = '/'
+        return
+      }
+
       try {
-        // 检查登录
-        if (!AUTH || !AUTH.isLoggedIn()) {
-          window.location.href = '/'
-          return
-        }
-
-        // 等待 Supabase 客户端加载
-        let retries = 0
-        while (!window.SUPABASE && retries < 20) {
-          await new Promise(resolve => setTimeout(resolve, 100))
-          retries++
-        }
-
-        if (!window.SUPABASE) {
-          throw new Error('Supabase 客户端未能加载')
-        }
-
-        // 加载数据
         await Promise.all([
           loadUserInfo(),
           loadProgress(),
           loadScores(),
-          loadNotes()
+          loadNotes(),
         ])
-
-        // 更新统计
         updateStats()
       } catch (err) {
         console.error('初始化失败:', err)
-        alert('⚠️ 加载失败: ' + err.message)
+        showErrorBanner('加载失败：' + err.message + '。请刷新页面重试。')
       }
     }
 
-    // 页面加载完成后初始化
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init)
-    } else {
-      setTimeout(init, 500)
-    }
-
-    // 监听用户同步事件
-    window.addEventListener('auth:user-synced', () => {
-      console.log('用户已同步，刷新数据')
-      init()
-    })
+    // DOMContentLoaded 时启动（defer 脚本此时已完成，AUTH / SUPABASE 已定义）
+    document.addEventListener('DOMContentLoaded', init)
   </script>
 </body>
 </html>

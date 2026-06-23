@@ -277,13 +277,18 @@ const AUTH = (function() {
   }
 
   /**
-   * 内部：仅清除 token，不触发 UI 更新（供 getAccessToken 调用，避免副作用）
+   * 内部：清除所有认证相关的 localStorage key
+   * 包含 Casdoor OAuth、邮件登录、微信 OAuth 三条路径写入的全部 key。
    */
   function _clearTokens() {
     [
+      // Casdoor / 邮件 JWT token
       "casdoor_access_token", "casdoor_id_token", "casdoor_token_type",
-      "casdoor_expires_at", "casdoor_refresh_token",
+      "casdoor_expires_at",   "casdoor_refresh_token",
+      // 邮件登录写入的用户信息
       "guoxue_token", "guoxue_username", "guoxue_email",
+      // WeChat / Casdoor OAuth 写入的用户信息（callback.html 设置）
+      "casdoor_user_name", "casdoor_user_avatar",
     ].forEach(k => localStorage.removeItem(k));
   }
 
@@ -324,14 +329,13 @@ const AUTH = (function() {
   }
 
   /**
-   * 退出登录（清除本地 + 通知服务端）
+   * 退出登录：清除所有本地 token。
+   * 邮件验证码登录使用无状态 JWT，无需服务端 session 失效，
+   * 直接清除本地存储即可完成登录态注销。
    */
   function logout() {
     _clearTokens();
     updateAuthUI();
-    // 通知服务端清除 session（非阻塞）
-    fetch(CONFIG.serverUrl + CONFIG.logoutEndpoint, { method: "GET", credentials: "include" })
-      .catch(() => {});
   }
 
   // ============ UI 相关 ============
@@ -361,12 +365,16 @@ const AUTH = (function() {
       const displayName = (user && user.name) ? user.name
         : localStorage.getItem("guoxue_username") || "用户";
       const initial = displayName.charAt(0).toUpperCase();
+      // 对 displayName 做 HTML 转义，防止 XSS（名称含 < > " 等字符时）
+      const safeName = displayName
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
       container.innerHTML = [
         '<div class="auth-user-dropdown">',
         '  <button class="ds-btn-nav auth-user-btn" id="auth-user-btn"',
-        '    aria-haspopup="true" aria-expanded="false" title="' + displayName + '">',
+        '    aria-haspopup="true" aria-expanded="false" title="' + safeName + '">',
         '    <span class="auth-avatar">' + initial + '</span>',
-        '    <span class="auth-name">' + displayName + '</span>',
+        '    <span class="auth-name">' + safeName + '</span>',
         '  </button>',
         '  <div class="auth-dropdown-menu" id="auth-dropdown-menu" hidden role="menu">',
         '    <a class="auth-dropdown-item" href="/dashboard.html" role="menuitem">📊 学习面板</a>',
