@@ -113,11 +113,12 @@
       transform: translateY(-2px);
     }
 
-    .note-card.yellow { border-left-color: #fbbf24; }
-    .note-card.green  { border-left-color: #10b981; }
-    .note-card.blue   { border-left-color: #3b82f6; }
-    .note-card.pink   { border-left-color: #ec4899; }
-    .note-card.red    { border-left-color: #ef4444; }
+    /* P1: 笔记颜色标签使用设计系统 token（含暗色模式覆盖），见 ds-design-system.css */
+    .note-card.yellow { border-left-color: var(--ds-color-note-yellow); }
+    .note-card.green  { border-left-color: var(--ds-color-note-green);  }
+    .note-card.blue   { border-left-color: var(--ds-color-note-blue);   }
+    .note-card.pink   { border-left-color: var(--ds-color-note-pink);   }
+    .note-card.red    { border-left-color: var(--ds-color-note-red);    }
 
     .note-header {
       padding: var(--ds-space-4);
@@ -304,15 +305,15 @@
 
     <!-- 选项卡 -->
     <div class="tabs" role="tablist">
-      <button class="tab active" role="tab" aria-selected="true"  aria-controls="notes-tab"     onclick="switchTab('notes', this)">📝 笔记</button>
-      <button class="tab"        role="tab" aria-selected="false" aria-controls="bookmarks-tab" onclick="switchTab('bookmarks', this)">🔖 书签</button>
+      <button class="tab active" role="tab" aria-selected="true"  aria-controls="notes-tab"     id="tab-notes">📝 笔记</button>
+      <button class="tab"        role="tab" aria-selected="false" aria-controls="bookmarks-tab" id="tab-bookmarks">🔖 书签</button>
     </div>
 
     <!-- 笔记标签页 -->
     <div id="notes-tab" class="tab-content">
       <div class="course-selector">
         <label for="notes-course-select">筛选课程：</label>
-        <select id="notes-course-select" onchange="filterNotes()">
+        <select id="notes-course-select">
           <option value="">所有课程</option>
         </select>
       </div>
@@ -326,7 +327,7 @@
     <div id="bookmarks-tab" class="tab-content" style="display:none" role="tabpanel" aria-labelledby="tab-bookmarks">
       <div class="course-selector">
         <label for="bookmarks-course-select">筛选课程：</label>
-        <select id="bookmarks-course-select" onchange="filterBookmarks()">
+        <select id="bookmarks-course-select">
           <option value="">所有课程</option>
         </select>
       </div>
@@ -498,7 +499,7 @@
                   </div>
                 </div>
                 <div class="note-actions">
-                  <button class="note-action-btn" onclick="deleteNote('${note.id}')" title="删除">🗑️</button>
+                  <button class="note-action-btn" data-note-id="${note.id}" aria-label="删除笔记">🗑️</button>
                 </div>
               </div>
               <div class="note-body">${escapeHtml(note.content || '')}</div>
@@ -622,7 +623,7 @@
               </div>
               <div class="bookmark-actions">
                 <div class="bookmark-icon">🔖</div>
-                <button class="delete-btn" onclick="removeBookmark('${bookmark.course_id}', ${bookmark.page})" title="删除书签">✕</button>
+                <button class="delete-btn" data-course="${bookmark.course_id}" data-page="${bookmark.page}" aria-label="删除书签">✕</button>
               </div>
             </div>
           `).join('')}
@@ -708,7 +709,47 @@
       loadNotes()
     }
 
-    document.addEventListener('DOMContentLoaded', init)
+    document.addEventListener('DOMContentLoaded', function () {
+      // P3: tab 按钮用 addEventListener 替代 onclick 属性
+      const tabNotes     = document.getElementById('tab-notes');
+      const tabBookmarks = document.getElementById('tab-bookmarks');
+      if (tabNotes)     tabNotes.addEventListener('click', function () { switchTab('notes', this); });
+      if (tabBookmarks) tabBookmarks.addEventListener('click', function () { switchTab('bookmarks', this); });
+
+      // P3: select 用 addEventListener 替代 onchange 属性
+      const notesSelect     = document.getElementById('notes-course-select');
+      const bookmarksSelect = document.getElementById('bookmarks-course-select');
+      if (notesSelect)     notesSelect.addEventListener('change', filterNotes);
+      if (bookmarksSelect) bookmarksSelect.addEventListener('change', filterBookmarks);
+
+      // P3: 事件委托 — 处理动态生成的笔记删除按钮（data-note-id）
+      const notesContainer = document.getElementById('notes-container');
+      if (notesContainer) {
+        notesContainer.addEventListener('click', function (e) {
+          const btn = e.target.closest('[data-note-id]');
+          if (btn) {
+            const noteId = btn.getAttribute('data-note-id');
+            if (noteId) deleteNote(noteId);
+          }
+        });
+      }
+
+      // P3: 事件委托 — 处理动态生成的书签删除按钮（data-course + data-page）
+      const bookmarksContainer = document.getElementById('bookmarks-container');
+      if (bookmarksContainer) {
+        bookmarksContainer.addEventListener('click', function (e) {
+          const btn = e.target.closest('[data-course][data-page]');
+          if (btn) {
+            const courseId = btn.getAttribute('data-course');
+            const page     = parseInt(btn.getAttribute('data-page'), 10);
+            if (courseId && !isNaN(page)) removeBookmark(courseId, page);
+          }
+        });
+      }
+
+      // 启动初始化
+      init();
+    });
   </script>
 </body>
 </html>

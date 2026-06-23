@@ -86,7 +86,7 @@ const MODAL_HTML = `
   gap: 0;
   background: var(--ds-color-bg);
   border-radius: var(--ds-radius-lg);
-  padding: 3px;
+  padding: var(--ds-space-1);
   margin-bottom: var(--ds-space-6);
 }
 .modal-tab {
@@ -95,7 +95,7 @@ const MODAL_HTML = `
   border: none;
   background: transparent;
   cursor: pointer;
-  border-radius: calc(var(--ds-radius-lg) - 2px);
+  border-radius: var(--ds-radius-md);
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--ds-color-muted);
