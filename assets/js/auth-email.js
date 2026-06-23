@@ -25,7 +25,7 @@ const MODAL_HTML = `
   display: none;
   position: fixed;
   inset: 0;
-  background: oklch(0 0 0 / 0.4);
+  background: var(--ds-color-overlay);
   z-index: 9999;
   align-items: center;
   justify-content: center;
@@ -58,8 +58,8 @@ const MODAL_HTML = `
   cursor: pointer;
   color: var(--ds-color-muted);
   font-size: 20px;
-  width: 32px;
-  height: 32px;
+  width: var(--ds-space-8);
+  height: var(--ds-space-8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,6 +69,10 @@ const MODAL_HTML = `
 .modal-close:hover {
   background: var(--ds-color-bg-hover);
   color: var(--ds-color-fg);
+}
+.modal-close:focus-visible {
+  outline: 2px solid var(--ds-accent);
+  outline-offset: 2px;
 }
 .modal-title {
   text-align: center;
@@ -127,10 +131,15 @@ const MODAL_HTML = `
 }
 .form-input:focus {
   border-color: var(--ds-accent);
-  box-shadow: 0 0 0 3px var(--ds-accent-soft);
+  box-shadow: var(--ds-focus-ring);
 }
 .form-input.error {
   border-color: var(--ds-color-error);
+}
+/* P2: 替代 hint spans 上的内联 style */
+.ds-form-hint {
+  font-weight: 400;
+  color: var(--ds-color-muted);
 }
 .form-row {
   display: flex;
@@ -248,12 +257,12 @@ const MODAL_HTML = `
         <div class="error-msg" id="reg-code-error"></div>
       </div>
       <div class="form-group">
-        <label class="form-label" for="reg-password">密码 <span style="font-weight:400;color:var(--ds-color-muted)">(至少6位)</span></label>
+        <label class="form-label" for="reg-password">密码 <span class="ds-form-hint">(至少6位)</span></label>
         <input class="form-input" id="reg-password" type="password" placeholder="设置密码" maxlength="50" autocomplete="new-password">
         <div class="error-msg" id="reg-password-error"></div>
       </div>
       <div class="form-group">
-        <label class="form-label" for="reg-username">用户名 <span style="font-weight:400;color:var(--ds-color-muted)">(3-30位，字母数字下划线)</span></label>
+        <label class="form-label" for="reg-username">用户名 <span class="ds-form-hint">(3-30位，字母数字下划线)</span></label>
         <input class="form-input" id="reg-username" type="text" placeholder="字母、数字、下划线" maxlength="30" autocomplete="username">
         <div class="error-msg" id="reg-username-error"></div>
       </div>
@@ -472,13 +481,35 @@ document.addEventListener('DOMContentLoaded', function() {
     clearAllErrors();
     modalOverlay.classList.add('open');
     document.body.style.overflow = 'hidden';
+    // P3: 保存打开前的焦点，关闭时还原
+    showLoginModal._previousFocus = document.activeElement;
     loginEmailInput.focus();
   }
 
   function hideLoginModal() {
     modalOverlay.classList.remove('open');
     document.body.style.overflow = '';
+    // P3: 还原焦点到触发按钮
+    if (showLoginModal._previousFocus && typeof showLoginModal._previousFocus.focus === 'function') {
+      showLoginModal._previousFocus.focus();
+    }
   }
+
+  // P3: 焦点陷阱 —— Tab/Shift+Tab 在 modal 内循环
+  modalOverlay.addEventListener('keydown', function(e) {
+    if (e.key !== 'Tab') return;
+    const focusableSelectors = 'button:not([disabled]), input:not([disabled]), [tabindex="0"]';
+    const focusables = Array.from(modalOverlay.querySelectorAll(focusableSelectors))
+      .filter(el => !el.closest('[style*="display:none"]') && !el.closest('.form-section:not(.active)'));
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
 
   window.showLoginModal = showLoginModal;
   window.hideLoginModal = hideLoginModal;
