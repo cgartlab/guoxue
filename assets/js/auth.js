@@ -195,11 +195,22 @@ const AUTH = (function() {
       }
 
       const tokenData = await resp.json();
-      localStorage.setItem("casdoor_access_token", tokenData.access_token || "");
+
+      // 校验：服务器正常响应但 access_token 为空（如账号被禁）
+      if (!tokenData.access_token) {
+        const serverMsg = tokenData.msg || tokenData.error || "服务器未返回 access_token";
+        showError("Token 无效: " + serverMsg);
+        return { success: false, error: serverMsg };
+      }
+
+      localStorage.setItem("casdoor_access_token", tokenData.access_token);
       localStorage.setItem("casdoor_id_token", tokenData.id_token || "");
       localStorage.setItem("casdoor_token_type", tokenData.token_type || "Bearer");
       if (tokenData.expires_in) {
         localStorage.setItem("casdoor_expires_at", String(Date.now() + tokenData.expires_in * 1000));
+      } else {
+        // 无过期信息时设默认 24 小时，避免 expiresAt=0 导致的 bug
+        localStorage.setItem("casdoor_expires_at", String(Date.now() + 86400000));
       }
       if (tokenData.refresh_token) {
         localStorage.setItem("casdoor_refresh_token", tokenData.refresh_token);
@@ -266,39 +277,65 @@ const AUTH = (function() {
   }
 
   /**
+   * 内部：清除所有认证相关的 localStorage key
+   * 包含 Casdoor OAuth、邮件登录、微信 OAuth 三条路径写入的全部 key。
+   */
+  function _clearTokens() {
+    [
+      // Casdoor / 邮件 JWT token
+      "casdoor_access_token", "casdoor_id_token", "casdoor_token_type",
+      "casdoor_expires_at",   "casdoor_refresh_token",
+      // 邮件登录写入的用户信息
+      "guoxue_token", "guoxue_username", "guoxue_email",
+      // WeChat / Casdoor OAuth 写入的用户信息（callback.html 设置）
+      "casdoor_user_name", "casdoor_user_avatar",
+    ].forEach(k => localStorage.removeItem(k));
+  }
+
+  /**
    * 获取 access token
+   *
+   * 修复：原代码 expiresAt=0 时 Date.now()>0 永远为 true，
+   * 导致每次调用都执行 logout() 清空刚保存的 token。
+   * 现在：仅当 expiresAt>0 且已过期时才清除。
    */
   function getAccessToken() {
+    const token = localStorage.getItem("casdoor_access_token");
+    if (!token) return null;
     const expiresAt = parseInt(localStorage.getItem("casdoor_expires_at") || "0", 10);
-    if (Date.now() > expiresAt) {
-      logout();
+    // expiresAt=0 表示无过期信息（邮件登录默认值），视为有效
+    if (expiresAt > 0 && Date.now() > expiresAt) {
+      _clearTokens();
+      updateAuthUI();
       return null;
     }
-    return localStorage.getItem("casdoor_access_token");
+    return token;
   }
 
   /**
    * 判断是否已登录
+   *
+   * 修复：原代码 expiresAt=0 时 Date.now()<0 永远为 false，
+   * 导致登录成功后用户状态始终显示未登录。
+   * 现在：expiresAt=0 表示无过期限制，只要有 token 即视为已登录。
    */
   function isLoggedIn() {
     const token = localStorage.getItem("casdoor_access_token");
+    if (!token) return false;
     const expiresAt = parseInt(localStorage.getItem("casdoor_expires_at") || "0", 10);
-    return !!token && Date.now() < expiresAt;
+    // expiresAt=0 → 无过期信息 → 视为有效
+    if (expiresAt === 0) return true;
+    return Date.now() < expiresAt;
   }
 
   /**
-   * 退出登录（清除本地 + Casdoor session）
+   * 退出登录：清除所有本地 token。
+   * 邮件验证码登录使用无状态 JWT，无需服务端 session 失效，
+   * 直接清除本地存储即可完成登录态注销。
    */
   function logout() {
-    const keys = [
-      "casdoor_access_token", "casdoor_id_token", "casdoor_token_type",
-      "casdoor_expires_at", "casdoor_refresh_token",
-    ];
-    keys.forEach(k => localStorage.removeItem(k));
+    _clearTokens();
     updateAuthUI();
-    // 真正通知 Casdoor 清除 session cookie
-    fetch(CONFIG.serverUrl + CONFIG.logoutEndpoint, { method: 'GET', credentials: 'include' })
-      .catch(() => {});
   }
 
   // ============ UI 相关 ============
@@ -325,37 +362,57 @@ const AUTH = (function() {
 
     if (isLoggedIn()) {
       const user = parseIdToken();
-      const displayName = user && user.name ? user.name : "用户";
+      const displayName = (user && user.name) ? user.name
+        : localStorage.getItem("guoxue_username") || "用户";
+      const initial = displayName.charAt(0).toUpperCase();
+      // 对 displayName 做 HTML 转义，防止 XSS（名称含 < > " 等字符时）
+      const safeName = displayName
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
       container.innerHTML = [
         '<div class="auth-user-dropdown">',
-        '  <button class="ds-btn-nav auth-user-btn" id="auth-user-btn" title="用户菜单">',
-        '    <span class="auth-avatar">', displayName.charAt(0), '</span>',
-        '    <span class="auth-name">', displayName, '</span>',
+        '  <button class="ds-btn-nav auth-user-btn" id="auth-user-btn"',
+        '    aria-haspopup="true" aria-expanded="false" title="' + safeName + '">',
+        '    <span class="auth-avatar">' + initial + '</span>',
+        '    <span class="auth-name">' + safeName + '</span>',
         '  </button>',
-        '  <div class="auth-dropdown-menu" id="auth-dropdown-menu" hidden>',
-        '    <a class="auth-dropdown-item" href="#" id="auth-logout-btn">退出登录</a>',
+        '  <div class="auth-dropdown-menu" id="auth-dropdown-menu" hidden role="menu">',
+        '    <a class="auth-dropdown-item" href="/dashboard.html" role="menuitem">📊 学习面板</a>',
+        '    <a class="auth-dropdown-item" href="/notes.html" role="menuitem">📝 笔记书签</a>',
+        '    <div class="auth-dropdown-divider"></div>',
+        '    <a class="auth-dropdown-item auth-dropdown-item--danger" href="#"',
+        '       id="auth-logout-btn" role="menuitem">退出登录</a>',
         '  </div>',
         '</div>',
       ].join("");
+
       const logoutBtn = document.getElementById("auth-logout-btn");
       if (logoutBtn) {
-        logoutBtn.addEventListener("click", function(e) {
-          e.preventDefault();
-          logout();
-        });
+        logoutBtn.addEventListener("click", function(e) { e.preventDefault(); logout(); });
       }
       const userBtn = document.getElementById("auth-user-btn");
       const dropdown = document.getElementById("auth-dropdown-menu");
       if (userBtn && dropdown) {
         userBtn.addEventListener("click", function(e) {
           e.stopPropagation();
-          dropdown.hidden = !dropdown.hidden;
+          const open = !dropdown.hidden;
+          dropdown.hidden = open;
+          userBtn.setAttribute("aria-expanded", String(!open));
         });
         document.addEventListener("click", function() {
-          if (dropdown) dropdown.hidden = true;
+          if (dropdown && !dropdown.hidden) {
+            dropdown.hidden = true;
+            userBtn && userBtn.setAttribute("aria-expanded", "false");
+          }
         });
-        dropdown.addEventListener("click", function(e) {
-          e.stopPropagation();
+        dropdown.addEventListener("click", function(e) { e.stopPropagation(); });
+        // ESC 关闭
+        document.addEventListener("keydown", function(e) {
+          if (e.key === "Escape" && !dropdown.hidden) {
+            dropdown.hidden = true;
+            userBtn && userBtn.setAttribute("aria-expanded", "false");
+            userBtn && userBtn.focus();
+          }
         });
       }
     } else {
@@ -366,10 +423,7 @@ const AUTH = (function() {
       ].join("");
       const loginBtn = document.getElementById("auth-login-btn");
       if (loginBtn) {
-        loginBtn.addEventListener("click", function(e) {
-          e.preventDefault();
-          login();
-        });
+        loginBtn.addEventListener("click", function(e) { e.preventDefault(); login(); });
       }
     }
   }

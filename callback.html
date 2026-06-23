@@ -4,142 +4,318 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>登录中 — 国学课堂</title>
-  <link rel="icon" href="assets/img/favicon.svg?v=9e67644" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/ds-design-system.css?v=9e67644">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/ds-design-system.css">
   <style>
-    .callback-container {
+    /* ── 布局 ─────────────────────────────────────────── */
+    .callback-wrap {
       max-width: 480px;
       margin: 120px auto;
       text-align: center;
-      padding: 40px;
+      padding: var(--ds-space-10) var(--ds-space-6);
     }
-    .callback-status {
-      margin-top: 20px;
-      padding: 16px;
-      border-radius: 12px;
-      font-size: 0.9375rem;
+    .callback-logo {
+      font-family: var(--ds-font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--ds-color-fg-strong);
+      margin-bottom: var(--ds-space-7);
     }
-    .callback-status.loading {
-      background: var(--ds-color-olive-50, #f5f7f0);
-      color: var(--ds-color-muted, #666);
-    }
-    .callback-status.success {
-      background: var(--ds-color-success-bg, #f0fae8);
-      color: var(--ds-color-success, #52c41a);
-    }
-    .callback-status.error {
-      background: var(--ds-color-error-bg, #fef2f2);
-      color: var(--ds-color-error, #ef4444);
-    }
+
+    /* ── Spinner ───────────────────────────────────────── */
+    /* P2: 尺寸改为 --ds-space-8；border 改为 --ds-space-1 (4px) 与设计系统对齐 */
     .spinner {
       display: inline-block;
-      width: 32px; height: 32px;
-      border: 3px solid var(--ds-color-border, #e5e5e5);
-      border-top-color: var(--ds-accent, #1677ff);
+      width: var(--ds-space-8); height: var(--ds-space-8);
+      border: var(--ds-space-1) solid var(--ds-color-border);
+      border-top-color: var(--ds-accent);
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
+      margin-bottom: var(--ds-space-4);
     }
     @keyframes spin { to { transform: rotate(360deg); } }
-    .auth-error { display: none; }
+
+    /* ── 状态框 ──────────────────────────────────────── */
+    .status-box {
+      margin-top: var(--ds-space-3);
+      padding: var(--ds-space-4) var(--ds-space-5);
+      border-radius: var(--ds-radius-xl);
+      font-size: 0.9375rem;
+      line-height: 1.5;
+    }
+    .status-box.loading {
+      background: var(--ds-color-olive-50);
+      color: var(--ds-color-muted);
+    }
+    .status-box.success {
+      background: var(--ds-color-success-bg);
+      color: var(--ds-color-success);
+    }
+    .status-box.error {
+      background: var(--ds-color-error-bg);
+      color: var(--ds-color-error);
+      text-align: left;
+    }
+
+    /* ── 错误详情 ─────────────────────────────────────── */
+    .error-title  { font-weight: 600; margin-bottom: var(--ds-space-2); }
+    .error-detail {
+      font-size: 0.8125rem;
+      background: var(--ds-color-error-bg);
+      border-radius: var(--ds-radius-lg);
+      padding: var(--ds-space-2) var(--ds-space-3);
+      word-break: break-all;
+      margin-top: var(--ds-space-2);
+      font-family: var(--ds-font-mono);
+      color: var(--ds-color-error);
+      /* P2: 使用局部 CSS 变量，无全局 max-h token 时提供可覆盖点 */
+      --_error-detail-max-h: 7.5rem;
+      max-height: var(--_error-detail-max-h);
+      overflow-y: auto;
+      opacity: 0.85;
+    }
+    .error-help {
+      font-size: 0.8125rem;
+      color: var(--ds-color-muted);
+      margin-top: var(--ds-space-2);
+    }
+
+    /* ── 操作按钮 ─────────────────────────────────────── */
+    .callback-actions {
+      margin-top: var(--ds-space-5);
+      display: flex;
+      gap: var(--ds-space-3);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-retry {
+      padding: var(--ds-space-2) var(--ds-space-5);
+      border-radius: var(--ds-radius-lg);
+      border: none;
+      background: var(--ds-accent);
+      color: var(--ds-color-on-accent);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background var(--ds-duration-150);
+    }
+    .btn-retry:hover          { background: var(--ds-accent-hover); }
+    .btn-retry:focus-visible  { outline: 2px solid var(--ds-accent); outline-offset: 2px; }
+    .btn-home {
+      padding: var(--ds-space-2) var(--ds-space-5);
+      border-radius: var(--ds-radius-lg);
+      border: 1.5px solid var(--ds-color-border);
+      background: transparent;
+      color: var(--ds-color-fg);
+      font-size: 0.875rem;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background var(--ds-duration-150);
+    }
+    .btn-home:hover          { background: var(--ds-color-bg-hover); }
+    .btn-home:focus-visible  { outline: 2px solid var(--ds-accent); outline-offset: 2px; }
+    .debug-toggle {
+      font-size: 0.75rem;
+      color: var(--ds-color-muted);
+      cursor: pointer;
+      margin-top: var(--ds-space-2);
+      text-decoration: underline;
+      background: none;
+      border: none;
+      font-family: inherit;
+    }
   </style>
 </head>
 <body>
-  <div class="callback-container">
-    <h1 class="ds-section-title">国学课堂</h1>
-    <div class="spinner" id="loading-spinner"></div>
-    <div id="status-message" class="callback-status loading">正在处理登录...</div>
-    <div id="auth-error" class="auth-error callback-status error"></div>
-    <p class="placeholder-center-sm"><a href="index.html" class="ds-accent-link">← 返回首页</a></p>
-  </div>
+  <!-- P3: <main> 地标元素，供辅助技术快速定位主内容 -->
+  <main id="main-content">
+    <div class="callback-wrap">
+      <div class="callback-logo">📚 国学课堂</div>
+      <div id="spinner" class="spinner" role="status" aria-label="加载中"></div>
+      <div id="status-box" class="status-box loading" role="alert" aria-live="polite">正在处理登录…</div>
+      <div id="callback-actions" class="callback-actions" style="display:none"></div>
+    </div>
+  </main>
 
-  <script src="assets/js/auth-email.js?v=9e67644" defer></script>
-<script src="assets/js/auth.js?v=9e67644" defer></script>
+  <script src="assets/js/auth-email.js" defer></script>
+  <script src="assets/js/auth.js" defer></script>
+  <script src="assets/js/api-client.js" defer></script>
 
-  <!-- Supabase 数据持久化 -->
-  <script src="assets/js/api-client.js?v=9e67644" defer></script>
   <script>
-  document.addEventListener("DOMContentLoaded", async function() {
-    const statusEl = document.getElementById("status-message");
-    const spinner = document.getElementById("loading-spinner");
-    const errorEl = document.getElementById("auth-error");
-    const urlParams = new URLSearchParams(window.location.search);
+  document.addEventListener("DOMContentLoaded", async function () {
+    const statusBox  = document.getElementById("status-box");
+    const spinner    = document.getElementById("spinner");
+    const actionsDiv = document.getElementById("callback-actions");
+    const urlParams  = new URLSearchParams(window.location.search);
 
-    // 检查是否是 WeChat OAuth 直接返回的 token
-    const directToken = urlParams.get("token");
+    /* ── P2 XSS 防护：转义用户可控字符串 ────────────── */
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    /* ── 工具 ─────────────────────────────────────────── */
+    function setStatus(type, safeHtml) {
+      statusBox.className = "status-box " + type;
+      statusBox.innerHTML = safeHtml; // safeHtml 由调用方保证安全
+    }
+
+    /* P3: 使用 DOM 构建按钮，不再用 innerHTML + inline onclick */
+    function showActions(showRetry) {
+      actionsDiv.innerHTML = "";
+      actionsDiv.style.display = "flex";
+      if (showRetry) {
+        const btnRetry = document.createElement("button");
+        btnRetry.className = "btn-retry";
+        btnRetry.textContent = "重新登录";
+        btnRetry.addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+        actionsDiv.appendChild(btnRetry);
+      }
+      const btnHome = document.createElement("button");
+      btnHome.className = "btn-home";
+      btnHome.textContent = "返回首页";
+      btnHome.addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+      actionsDiv.appendChild(btnHome);
+    }
+
+    function done() { spinner.style.display = "none"; }
+
+    /* ── 1. 错误参数（如 WeChat 授权失败）────────────── */
+    const errorParam    = urlParams.get("error");
+    const directToken   = urlParams.get("token");
     const redirectParam = urlParams.get("redirect");
-    const errorParam = urlParams.get("error");
 
     if (errorParam) {
-      spinner.style.display = "none";
-      statusEl.className = "callback-status error";
-      statusEl.textContent = "❌ 登录失败: " + (errorParam === 'wechat_token_failed' ? '微信授权失败' : errorParam);
+      done();
+      // P2 XSS: decodeURIComponent(errorParam) 是用户可控值，必须转义
+      const rawMsg = errorParam === "wechat_token_failed"
+        ? "微信授权失败，请重试"
+        : decodeURIComponent(errorParam);
+      setStatus("error",
+        '<div class="error-title">❌ 登录失败</div>' +
+        '<div class="error-detail">' + escapeHtml(rawMsg) + '</div>' +
+        '<div class="error-help">如多次失败请联系管理员</div>');
+      showActions(true);
       return;
     }
 
+    /* ── 2. 直接 token 回传（微信 / 第三方 OAuth）───── */
     if (directToken) {
-      // WeChat OAuth 直接返回 token - 直接存储并完成登录
       localStorage.setItem("casdoor_access_token", directToken);
       localStorage.setItem("casdoor_id_token", directToken);
-      localStorage.setItem("casdoor_expires_at", String(Date.now() + 7 * 24 * 60 * 60 * 1000));
-
-      // 解析 JWT payload 获取用户信息
+      let exp = Date.now() + 7 * 24 * 60 * 60 * 1000;
       try {
-        const payload = JSON.parse(atob(directToken.split('.')[1]));
-        localStorage.setItem("casdoor_user_name", payload.name || "");
-        localStorage.setItem("casdoor_user_avatar", payload.avatar || "");
-      } catch (e) {
-        console.warn("[Callback] Failed to parse token payload:", e);
+        const pl = JSON.parse(atob(directToken.split(".")[1].replace(/-/g,"+").replace(/_/g,"/")));
+        if (pl.exp && pl.exp > 0) exp = pl.exp * 1000;
+        if (pl.name)   localStorage.setItem("casdoor_user_name",   pl.name);
+        if (pl.avatar) localStorage.setItem("casdoor_user_avatar", pl.avatar);
+      } catch (e) { /* ignore */ }
+      localStorage.setItem("casdoor_expires_at", String(exp));
+
+      if (window.SUPABASE && window.SUPABASE.syncUser) {
+        setTimeout(() => window.SUPABASE.syncUser().catch(() => {}), 100);
       }
-
-      // 同步到 Supabase（非阻塞）
-      if (typeof window !== 'undefined' && window.SUPABASE && window.SUPABASE.syncUser) {
-        setTimeout(function() {
-          window.SUPABASE.syncUser().then(function() {
-            console.log('[Callback] User synced to Supabase');
-          }).catch(function(err) {
-            console.warn('[Callback] Supabase sync failed (non-fatal):', err);
-          });
-        }, 100);
-      }
-
-      spinner.style.display = "none";
-      statusEl.className = "callback-status success";
-      statusEl.textContent = "✅ 微信登录成功！即将跳转...";
-
-      // 跳转回来源页
-      const redirectBack = redirectParam || localStorage.getItem("casdoor_redirect_back") || "index.html";
+      done();
+      setStatus("success", "✅ 登录成功！即将跳转…");
+      const back = redirectParam || localStorage.getItem("casdoor_redirect_back") || "index.html";
       localStorage.removeItem("casdoor_redirect_back");
-      setTimeout(function() {
-        window.location.href = redirectBack;
-      }, 1500);
+      setTimeout(() => { window.location.href = back; }, 1200);
       return;
     }
 
-    // 标准 Casdoor OAuth 流程
-    const result = await AUTH.handleCallback();
+    /* ── 3. 无 code 参数，提前报错 ──────────────────── */
+    if (!urlParams.get("code")) {
+      done();
+      setStatus("error",
+        '<div class="error-title">❌ 无效的回调地址</div>' +
+        '<div class="error-help">请从首页重新点击登录按钮</div>');
+      showActions(true);
+      return;
+    }
+
+    /* ── 4. 标准 Casdoor PKCE 回调 ──────────────────── */
+    let result;
+    try {
+      result = await AUTH.handleCallback();
+    } catch (e) {
+      result = { success: false, error: e.message };
+    }
 
     if (result && result.success) {
-      spinner.style.display = "none";
-      statusEl.className = "callback-status success";
-      statusEl.textContent = "✅ 登录成功！即将跳转...";
+      done();
+      setStatus("success", "✅ 登录成功！即将跳转…");
+      try {
+        const userInfo = await AUTH.getUserInfo();
+        if (userInfo) {
+          localStorage.setItem("casdoor_user_name",   userInfo.name   || userInfo.displayName || "");
+          localStorage.setItem("casdoor_user_avatar", userInfo.avatar || "");
+        }
+      } catch (e) { /* 非关键，忽略 */ }
+      const back = localStorage.getItem("casdoor_redirect_back") || "index.html";
+      localStorage.removeItem("casdoor_redirect_back");
+      setTimeout(() => { window.location.href = back; }, 1200);
 
-      // 获取用户信息
-      const userInfo = await AUTH.getUserInfo();
-      if (userInfo) {
-        localStorage.setItem("casdoor_user_name", userInfo.name || userInfo.displayName || "");
-        localStorage.setItem("casdoor_user_avatar", userInfo.avatar || "");
+    } else {
+      done();
+      // P2 XSS: errStr 可能包含服务端 HTML，必须转义后才能插入 innerHTML
+      const errRaw = (result && result.error) ? result.error : "未知错误";
+      const errStr = typeof errRaw === "object" ? JSON.stringify(errRaw) : String(errRaw);
+
+      // 映射常见错误到中文友好提示
+      let friendlyMsg;
+      if      (errStr.includes("no_verifier") || errStr.includes("PKCE verifier"))
+        friendlyMsg = "登录会话已过期，请重新发起登录";
+      else if (errStr.includes("state_mismatch"))
+        friendlyMsg = "安全校验失败（state 不匹配），可能是跨 Tab 操作导致，请重试";
+      else if (errStr.includes("no_code"))
+        friendlyMsg = "未收到授权码，请从首页重新登录";
+      else if (errStr.toLowerCase().includes("network") || errStr.includes("fetch"))
+        friendlyMsg = "网络请求失败，请检查网络连接后重试";
+      else if (errStr.includes("HTTP 4"))
+        friendlyMsg = "服务器拒绝了请求，请联系管理员确认 Redirect URI 配置";
+
+      // P2 XSS: 所有用户可控值经过 escapeHtml 后才能拼入 innerHTML
+      const safeErrStr     = escapeHtml(errStr);
+      const safeFriendlyMsg = friendlyMsg ? escapeHtml(friendlyMsg) : null;
+
+      let html = '<div class="error-title">❌ 登录处理失败</div>';
+      if (safeFriendlyMsg) {
+        html += '<div>' + safeFriendlyMsg + '</div>';
+        // P3: 折叠按钮改用 DOM 构建（避免 onclick 内联属性）
+        html += '<div class="error-detail" id="err-detail-box" style="display:none">' + safeErrStr + '</div>';
+      } else {
+        html += '<div class="error-detail">' + safeErrStr + '</div>';
+      }
+      html += '<div class="error-help">如问题持续出现，请将上述信息反馈给技术支持</div>';
+      setStatus("error", html);
+
+      // P3: "查看技术详情"按钮用 addEventListener 绑定
+      if (safeFriendlyMsg) {
+        const toggle = document.createElement("button");
+        toggle.className = "debug-toggle";
+        toggle.textContent = "▸ 查看技术详情";
+        toggle.addEventListener("click", function () {
+          const detail = document.getElementById("err-detail-box");
+          if (detail) {
+            detail.style.display = detail.style.display === "none" ? "block" : "none";
+            toggle.textContent = detail.style.display === "none" ? "▸ 查看技术详情" : "▾ 隐藏技术详情";
+          }
+        });
+        // 插入到 error-help 前
+        const helpEl = statusBox.querySelector(".error-help");
+        if (helpEl) statusBox.insertBefore(toggle, helpEl);
       }
 
-      // 跳转回来源页
-      const redirectBack = localStorage.getItem("casdoor_redirect_back");
-      localStorage.removeItem("casdoor_redirect_back");
-      setTimeout(function() {
-        window.location.href = redirectBack || "index.html";
-      }, 1500);
-    } else {
-      spinner.style.display = "none";
-      statusEl.className = "callback-status error";
-      statusEl.textContent = "❌ 登录处理失败";
+      showActions(true);
     }
   });
   </script>
