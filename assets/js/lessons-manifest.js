@@ -228,6 +228,20 @@ window.GUOXUE_LESSONS = [
         subject: 'mengxue',
         tier: 'core',
         featured: false
+    },,
+    {
+        id: '14-ruqie-rucuo',
+        title: '如切如磋',
+        subtitle: '精益求精 · 学无止境',
+        path: 'lessons/14-ruqie-rucuo/index.html',
+        icon: '💎',
+        grade: '小学中高年级',
+        description: '《论语·学而》第十五章精讲：子贡问贫富——贫而无谄富而无骄何如？子曰未若贫而乐富而好礼。子贡引诗如切如磋如琢如磨，孔子赞其告往知来。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: false
     },
     // ----- 在此下方添加新课程 -----
     // {
