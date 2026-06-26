@@ -242,6 +242,20 @@ window.GUOXUE_LESSONS = [
         subject: 'mengxue',
         tier: 'core',
         featured: false
+    },,
+    {
+        id: '15-bu-huan-ren-zhi',
+        title: '患不知人',
+        subtitle: '自知知人 · 君子务本',
+        path: 'lessons/15-bu-huan-ren-zhi/index.html',
+        icon: '🧭',
+        grade: '小学中高年级',
+        description: '《论语·学而》终章精讲：不患人之不己知，患不知人也——孔子论为人处世的终极智慧，人生最深的认知转向。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: false
     },
     // ----- 在此下方添加新课程 -----
     // {
