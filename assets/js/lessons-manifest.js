@@ -271,6 +271,21 @@ window.GUOXUE_LESSONS = [
         tier: 'core',
         featured: true
     },
+,
+    {
+        id: '17-shi-sanbai-si-wu-xie',
+        title: '思无邪',
+        subtitle: '诗以言志 · 发乎情止乎礼',
+        path: 'lessons/17-shi-sanbai-si-wu-xie/index.html',
+        icon: '🎭',
+        grade: '小学高年级·初中',
+        description: '《论语·为政》第二章精讲：诗三百，一言以蔽之，曰思无邪——孔子论《诗经》的经典评论，文学批评的千古名言。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: true
+    },
     // ----- 在此下方添加新课程 -----
     // {
     //     id: '03-shijing',
