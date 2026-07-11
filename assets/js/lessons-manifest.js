@@ -256,6 +256,20 @@ window.GUOXUE_LESSONS = [
         subject: 'mengxue',
         tier: 'core',
         featured: false
+    },,
+    {
+        id: '16-wei-zheng-yi-de',
+        title: '为政以德',
+        subtitle: '德治天下 · 众星拱北',
+        path: 'lessons/16-wei-zheng-yi-de/index.html',
+        icon: '🏛️',
+        grade: '小学高年级·初中',
+        description: '《论语·为政》开篇精讲：为政以德，譬如北辰，居其所而众星共之——孔子论治国理政的最高智慧，仁政思想的千古明言。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: true
     },
     // ----- 在此下方添加新课程 -----
     // {
