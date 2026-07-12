@@ -254,6 +254,21 @@ const lessons = [
         tier: 'core',
         featured: true
     },
+,
+    {
+        id: '19-wu-shi-you-wu',
+        title: '从心所欲，不逾矩',
+        subtitle: '吾十有五而志于学',
+        path: 'lessons/19-wu-shi-you-wu/index.html',
+        icon: '🌌',
+        grade: '小学高年级·初中',
+        description: '《论语·为政》第四章精讲：吾十有五而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲不逾矩——孔子自述一生修行六阶段，人生境界的终极进阶路线图。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: true
+    },
     // ----- 在此下方添加新课程 -----
     // 格式示例（复制上方任一 ready 条目后修改 id、title、path 即可）:
     // status 可选值: "ready"（展示在课程列表）| "hidden"（隐藏）
