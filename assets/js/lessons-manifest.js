@@ -314,6 +314,21 @@ const lessons = [
         tier: 'core',
         featured: true
     },
+,
+    {
+        id: '23-zi-xia-wen-xiao',
+        title: '色难',
+        subtitle: '子夏问孝',
+        path: 'lessons/23-zi-xia-wen-xiao/index.html',
+        icon: '😊',
+        grade: '小学高年级·初中',
+        description: '《论语·为政》第八章精讲：子夏问孝，子曰色难有事弟子服其劳有酒食先生馔曾是以为孝乎——孝最难的考验是面对父母时始终保持和颜悦色。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'lunyu',
+        tier: 'core',
+        featured: true
+    },
     // ----- 在此下方添加新课程 -----
     // 格式示例（复制上方任一 ready 条目后修改 id、title、path 即可）:
     // status 可选值: "ready"（展示在课程列表）| "hidden"（隐藏）
