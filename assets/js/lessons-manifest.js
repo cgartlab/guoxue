@@ -284,6 +284,21 @@ const lessons = [
         tier: 'core',
         featured: true
     },
+,
+    {
+        id: '21-meng-wu-bo-wen-xiao',
+        title: '父母唯其疾之忧',
+        subtitle: '孟武伯问孝',
+        path: 'lessons/21-meng-wu-bo-wen-xiao/index.html',
+        icon: '🏥',
+        grade: '小学高年级·初中',
+        description: '《论语·为政》第六章精讲：孟武伯问孝，子曰父母唯其疾之忧——孝的最高境界不是为父母做多少事，而是不让自己成为父母的忧患。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'lunyu',
+        tier: 'core',
+        featured: true
+    },
     // ----- 在此下方添加新课程 -----
     // 格式示例（复制上方任一 ready 条目后修改 id、title、path 即可）:
     // status 可选值: "ready"（展示在课程列表）| "hidden"（隐藏）
