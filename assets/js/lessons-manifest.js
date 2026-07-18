@@ -329,6 +329,21 @@ const lessons = [
         tier: 'core',
         featured: true
     },
+,
+    {
+        id: '24-bu-wei-ru-yu',
+        title: '不违如愚',
+        subtitle: '颜回·大智若愚',
+        path: 'lessons/24-bu-wei-ru-yu/index.html',
+        icon: '🤫',
+        grade: '小学高年级·初中',
+        description: '《论语·为政》第九章精讲：子曰吾与回言终日不违如愚退而省其私亦足以发回也不愚——孔子盛赞颜回大智若愚默而识之的学习境界。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'lunyu',
+        tier: 'core',
+        featured: true
+    },
     // ----- 在此下方添加新课程 -----
     // 格式示例（复制上方任一 ready 条目后修改 id、title、path 即可）:
     // status 可选值: "ready"（展示在课程列表）| "hidden"（隐藏）
