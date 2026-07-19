@@ -15,6 +15,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="../../assets/css/ds-design-system.css?v=29f633f">
+
+<!-- [Auto-Fix] Issues #17 #19: mobile responsive + touch targets -->
+<style>
+@media (max-width: 767px) {
+  .slide-card--cover { padding: 1rem 0.75rem !important; }
+  .slide-card--cover .lesson-title { font-size: 1.4rem !important; }
+  .slide-card--cover .lesson-subtitle { font-size: 0.875rem !important; letter-spacing: 0.1em !important; }
+  .slide-card--cover .quote-block { margin-top: 1rem !important; }
+  .slide-card--cover .quote-block > p { font-size: 1rem !important; line-height: 1.8 !important; }
+  .slide-card--cover .lesson-number small { font-size: 0.75rem !important; }
+}
+@media (max-width: 767px) {
+  .ds-btn-nav { min-height: 44px !important; min-width: 44px !important; }
+  .ds-dot { min-width: 12px !important; min-height: 12px !important; padding: 3px !important; }
+  .ds-dot.active { min-width: 20px !important; }
+  .fullscreen-btn { width: 44px !important; height: 44px !important; }
+  .quiz-option { min-height: 44px !important; padding: 0.5rem 0.75rem !important; }
+  .ds-toolbar { min-height: 44px !important; }
+  .quiz-options-wrap { gap: 0.5rem !important; }
+}
+</style>
 </head>
 <body>
 
