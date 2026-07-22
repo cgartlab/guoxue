@@ -389,6 +389,21 @@ const lessons = [
         tier: 'core',
         featured: true
     },
+,
+    {
+        id: '28-zhi-zhi-wei-zhi-zhi',
+        title: '知之为知之',
+        subtitle: '诚实求学的大智慧',
+        path: 'lessons/28-zhi-zhi-wei-zhi-zhi/index.html',
+        icon: '🧠',
+        grade: '小学高年级·初中',
+        description: '《论语·为政》第十七章精讲：子曰由诲女知之乎知之为知之不知为不知是知也——孔子对仲由讲求知的态度：诚实面对所知与所不知，才是真正的智慧。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'lunyu',
+        tier: 'core',
+        featured: true
+    },
     // ----- 在此下方添加新课程 -----
     // 格式示例（复制上方任一 ready 条目后修改 id、title、path 即可）:
     // status 可选值: "ready"（展示在课程列表）| "hidden"（隐藏）
