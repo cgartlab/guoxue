@@ -374,6 +374,21 @@ const lessons = [
         tier: 'core',
         featured: true
     },
+,
+    {
+        id: '27-gong-hu-yi-duan',
+        title: '攻乎异端',
+        subtitle: '中道与极端的警示',
+        path: 'lessons/27-gong-hu-yi-duan/index.html',
+        icon: '⚖️',
+        grade: '小学高年级·初中',
+        description: '《论语·为政》第十六章精讲：子曰攻乎异端斯害也已——孔子关于如何对待不同学说、不同思想的态度与警示。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'lunyu',
+        tier: 'core',
+        featured: true
+    },
     // ----- 在此下方添加新课程 -----
     // 格式示例（复制上方任一 ready 条目后修改 id、title、path 即可）:
     // status 可选值: "ready"（展示在课程列表）| "hidden"（隐藏）
