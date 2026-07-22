@@ -359,6 +359,21 @@ const lessons = [
         tier: 'core',
         featured: true
     },
+,
+    {
+        id: '26-junzi-zhou-bi',
+        title: '君子周而不比',
+        subtitle: '公心与私心的分野',
+        path: 'lessons/26-junzi-zhou-bi/index.html',
+        icon: '⭕',
+        grade: '小学高年级·初中',
+        description: '《论语·为政》第十四章精讲：子曰君子周而不比小人比而不周——孔子以周与比辨析君子与小人的根本分野。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'lunyu',
+        tier: 'core',
+        featured: true
+    },
     // ----- 在此下方添加新课程 -----
     // 格式示例（复制上方任一 ready 条目后修改 id、title、path 即可）:
     // status 可选值: "ready"（展示在课程列表）| "hidden"（隐藏）
