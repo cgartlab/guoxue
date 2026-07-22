@@ -344,6 +344,21 @@ const lessons = [
         tier: 'core',
         featured: true
     },
+,
+    {
+        id: '25-xue-er-si-ze-wang',
+        title: '学而不思则罔',
+        subtitle: '学与思的辩证',
+        path: 'lessons/25-xue-er-si-ze-wang/index.html',
+        icon: '⚖️',
+        grade: '小学高年级·初中',
+        description: '《论语·为政》第十五章精讲：子曰学而不思则罔思而不学则殆——孔子揭示学与思辩证关系的第一原理。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'lunyu',
+        tier: 'core',
+        featured: true
+    },
     // ----- 在此下方添加新课程 -----
     // 格式示例（复制上方任一 ready 条目后修改 id、title、path 即可）:
     // status 可选值: "ready"（展示在课程列表）| "hidden"（隐藏）
