@@ -434,6 +434,21 @@ const lessons = [
         tier: 'core',
         featured: true
     },
+,
+    {
+        id: '32-fei-qi-gui-er-ji-zhi-chan',
+        title: '非其鬼而祭之',
+        subtitle: '谄与勇·修身治国',
+        path: 'lessons/32-fei-qi-gui-er-ji-zhi-chan/index.html',
+        icon: '⚔️',
+        grade: '小学高年级·初中',
+        description: '《论语·为政》第二十四章精讲：非其鬼而祭之谄也，见义不为无勇也——孔子论修身治国两大原则：不该祭的别谄媚，该做的事别懦弱。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'lunyu',
+        tier: 'core',
+        featured: false
+    },
     // ----- 在此下方添加新课程 -----
     // 格式示例（复制上方任一 ready 条目后修改 id、title、path 即可）:
     // status 可选值: "ready"（展示在课程列表）| "hidden"（隐藏）
