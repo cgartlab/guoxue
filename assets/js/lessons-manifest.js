@@ -419,6 +419,21 @@ const lessons = [
         tier: 'core',
         featured: true
     },
+,
+    {
+        id: '30-he-wei-ze-min-fu',
+        title: '举直错诸枉',
+        subtitle: '用人之道·民心向背',
+        path: 'lessons/30-he-wei-ze-min-fu/index.html',
+        icon: '🏛️',
+        grade: '小学高年级·初中',
+        description: '《论语·为政》第十九章精讲：哀公问何为则民服，孔子对曰举直错诸枉则民服举枉错诸直则民不服——孔子论用人之道：正直放在曲枉之上，民心自服。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'lunyu',
+        tier: 'core',
+        featured: true
+    },
     // ----- 在此下方添加新课程 -----
     // 格式示例（复制上方任一 ready 条目后修改 id、title、path 即可）:
     // status 可选值: "ready"（展示在课程列表）| "hidden"（隐藏）
