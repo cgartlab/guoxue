@@ -404,6 +404,21 @@ const lessons = [
         tier: 'core',
         featured: true
     },
+,
+    {
+        id: '29-zhang-xue-gan-lu',
+        title: '多闻阙疑',
+        subtitle: '求禄与修身之道',
+        path: 'lessons/29-zhang-xue-gan-lu/index.html',
+        icon: '🏛️',
+        grade: '小学高年级·初中',
+        description: '《论语·为政》第十八章精讲：子张学干禄——孔子告诉子张如何获得俸禄：多闻阙疑，慎言其余，则寡尤；多见阙殆，慎行其余，则寡悔。言寡尤，行寡悔，禄在其中矣。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'lunyu',
+        tier: 'core',
+        featured: true
+    },
     // ----- 在此下方添加新课程 -----
     // 格式示例（复制上方任一 ready 条目后修改 id、title、path 即可）:
     // status 可选值: "ready"（展示在课程列表）| "hidden"（隐藏）
