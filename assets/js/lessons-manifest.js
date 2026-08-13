@@ -449,7 +449,20 @@ const lessons = [
         tier: 'core',
         featured: false
     },
-    // ----- 在此下方添加新课程 -----
+    {
+        id: '33-ba-yi-wu-yu-ting',
+        title: '是可忍孰不可忍',
+        subtitle: '礼的底线·儒者之怒',
+        path: 'lessons/33-ba-yi-wu-yu-ting/index.html',
+        icon: '⚖️',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第一章精讲：孔子谓季氏八佾舞于庭是可忍也孰不可忍也——孔子论礼的底线与儒者的愤怒：名分不可僭越，秩序不可动摇。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'lunyu',
+        tier: 'core',
+        featured: true
+    },    // ----- 在此下方添加新课程 -----
     // 格式示例（复制上方任一 ready 条目后修改 id、title、path 即可）:
     // status 可选值: "ready"（展示在课程列表）| "hidden"（隐藏）
 ];
