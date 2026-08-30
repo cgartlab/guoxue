@@ -15,6 +15,37 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="../../assets/css/ds-design-system.css?v=29f633f">
+
+<style>
+/* Mobile Menu Overlay Fix - Issue #90 */
+@media (max-width: 767px) {
+    .ds-navbar--global {
+        position: relative;
+        z-index: 100;
+    }
+    
+    .ds-navbar__menu {
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+    }
+    
+    /* 确保内容可滚动 */
+    body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .ds-slide-container {
+        position: relative;
+        z-index: 1;
+    }
+}
+</style>
+
 </head>
 <body>
 

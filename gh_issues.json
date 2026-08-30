@@ -1,0 +1,76 @@
+[
+  {
+    "url": "https://api.github.com/repos/cgartlab/guoxue/issues/87",
+    "repository_url": "https://api.github.com/repos/cgartlab/guoxue",
+    "labels_url": "https://api.github.com/repos/cgartlab/guoxue/issues/87/labels{/name}",
+    "comments_url": "https://api.github.com/repos/cgartlab/guoxue/issues/87/comments",
+    "events_url": "https://api.github.com/repos/cgartlab/guoxue/issues/87/events",
+    "html_url": "https://github.com/cgartlab/guoxue/pull/87",
+    "id": 4922614421,
+    "node_id": "PR_kwDOSwQ5dc7zh-6z",
+    "number": 87,
+    "title": "fix: mobile cover responsive + touch targets (issues #17 #19)",
+    "user": {
+      "login": "cgartlab",
+      "id": 24720069,
+      "node_id": "MDQ6VXNlcjI0NzIwMDY5",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24720069?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/cgartlab",
+      "html_url": "https://github.com/cgartlab",
+      "followers_url": "https://api.github.com/users/cgartlab/followers",
+      "following_url": "https://api.github.com/users/cgartlab/following{/other_user}",
+      "gists_url": "https://api.github.com/users/cgartlab/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/cgartlab/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/cgartlab/subscriptions",
+      "organizations_url": "https://api.github.com/users/cgartlab/orgs",
+      "repos_url": "https://api.github.com/users/cgartlab/repos",
+      "events_url": "https://api.github.com/users/cgartlab/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/cgartlab/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2026-07-19T12:13:52Z",
+    "updated_at": "2026-07-19T12:16:12Z",
+    "closed_at": null,
+    "assignee": null,
+    "author_association": "OWNER",
+    "active_lock_reason": null,
+    "draft": false,
+    "pull_request": {
+      "url": "https://api.github.com/repos/cgartlab/guoxue/pulls/87",
+      "html_url": "https://github.com/cgartlab/guoxue/pull/87",
+      "diff_url": "https://github.com/cgartlab/guoxue/pull/87.diff",
+      "patch_url": "https://github.com/cgartlab/guoxue/pull/87.patch",
+      "merged_at": null
+    },
+    "body": "## Issues Fixed\n\n**#17**: cover-slide mobile responsiveness - .slide-card--cover responsive at 767px with smaller fonts/padding\n\n**#19**: mobile touch targets too small (WCAG 2.5.5) - all interactive elements min 44px\n\nModified 7 lesson files. CSS design system (ds-design-system.css) is hosted on Supabase Storage, not in this repo. Supabase Storage CSS update is separate.\n\nCloses #17\nCloses #19",
+    "closed_by": null,
+    "reactions": {
+      "url": "https://api.github.com/repos/cgartlab/guoxue/issues/87/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/cgartlab/guoxue/issues/87/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null
+  }
+]
