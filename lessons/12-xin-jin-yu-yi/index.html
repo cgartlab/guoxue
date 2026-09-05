@@ -44,7 +44,7 @@
     </div>
     <div class="ds-toolbar__right">
         <span class="page-indicator" id="page-indicator">1 / 22</span>
-        <div class="dots-row" id="dots-row"></div>
+        <div class="dots-row" id="dots-row" role="tablist" aria-label="课程页码"></div>
         <button class="ds-btn-nav" id="nav-prev" disabled>← 上一页</button>
         <button class="ds-btn-nav" id="nav-next">下一页 →</button>
         <button class="ds-btn-nav ds-btn-nav--icon" id="fullscreen-btn" title="切换全屏显示" aria-label="切换全屏显示"><span class="ds-btn-nav__icon">⛶</span><span class="ds-btn-nav__text">全屏</span></button>
@@ -145,7 +145,7 @@
             <p><strong>"远耻辱"：</strong></p>
             <p>如果恭敬过度（变成了谄媚阿谀），反而会招来耻辱——被人看不起。如果恭敬不足（傲慢无礼），也会招来怨恨和冲突。</p>
             <p><strong>生活中的例子：</strong></p>
-            <div class="contrast-box" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:var(--ds-space-3);">
+            <div class="contrast-box" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-space-4);margin-top:var(--ds-space-3);">
                 <div style="background:var(--ds-color-error-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <p style="font-weight:700;color:var(--ds-color-error);">❌ 恭敬过度=谄媚</p>
                     <p style="font-size:0.9rem;">一味迎合领导、说违心的恭维话——表面上很恭敬，实际上失去了人格尊严。这种"恭"不近礼，最终会被人轻视，招来耻辱。</p>
@@ -192,7 +192,7 @@
         <h2 class="slide-card__heading">📖 逐句解读 · 四：三句话的内在关联</h2>
         <div class="slide-card__body">
             <p>本章三句话看似各说各的，实际上有严密的逻辑结构：</p>
-            <div class="core-grid" style="display:grid;gap:0.8rem;">
+            <div class="core-grid" style="display:grid;gap:var(--ds-space-3);">
                 <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔗 句式一致：三段论</strong>
                     <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">每句话都是"条件 → 结果"结构：</p>
@@ -265,7 +265,7 @@
         <h2 class="slide-card__heading">🎯 核心思想 · 有子的德行分寸论</h2>
         <div class="slide-card__body">
             <p>本章的核心可以概括为<strong>四个字：以义制信</strong>。但更准确地说，是"<strong>以礼度行</strong>"——用礼义来为德行划定边界。</p>
-            <div class="core-grid" style="display:grid;gap:0.8rem;">
+            <div class="core-grid" style="display:grid;gap:var(--ds-space-3);">
                 <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 信与义</strong>
                     <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">守信不是最高原则，道义才是。所有承诺都要先经过道义的检验。这告诉我们：<strong>不要轻易承诺违背良心的事</strong>，承诺了也做不到。</p>
@@ -296,22 +296,22 @@
             <div class="quiz-question">
                 <p><strong>1. 本章是谁的言论？</strong></p>
                 <div class="quiz-options" style="margin-top:var(--ds-space-4);">
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 A" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">A</span>
                         <span class="quiz-option-text">孔子</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" role="button" tabindex="0" aria-label="选项 B" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">B</span>
                         <span class="quiz-option-text">有子（有若）</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 C" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">C</span>
                         <span class="quiz-option-text">曾子</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 D" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">D</span>
                         <span class="quiz-option-text">子夏</span>
-                    </div>
+                    </button>
                 </div>
                 <div class="quiz-feedback" role="status" aria-live="polite" style="margin-top:var(--ds-space-4);display:none;"></div>
             </div>
@@ -327,22 +327,22 @@
             <div class="quiz-question">
                 <p><strong>2. "信近于义，言可复也"中的"复"是什么意思？</strong></p>
                 <div class="quiz-options" style="margin-top:var(--ds-space-4);">
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 A" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">A</span>
                         <span class="quiz-option-text">重复、再说一遍</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 B" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">B</span>
                         <span class="quiz-option-text">恢复、复原</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" role="button" tabindex="0" aria-label="选项 C" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">C</span>
                         <span class="quiz-option-text">兑现、实践诺言</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 D" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">D</span>
                         <span class="quiz-option-text">回答、回复</span>
-                    </div>
+                    </button>
                 </div>
                 <div class="quiz-feedback" role="status" aria-live="polite" style="margin-top:var(--ds-space-4);display:none;"></div>
             </div>
@@ -358,22 +358,22 @@
             <div class="quiz-question">
                 <p><strong>3. "信近于义"这句话最核心的含义是什么？</strong></p>
                 <div class="quiz-options" style="margin-top:var(--ds-space-4);">
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 A" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">A</span>
                         <span class="quiz-option-text">守信要接近正义的人</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 B" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">B</span>
                         <span class="quiz-option-text">只要守信就好，不用管其他</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" role="button" tabindex="0" aria-label="选项 C" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">C</span>
                         <span class="quiz-option-text">守信要符合道义，承诺违背道义的事不该守信</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 D" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">D</span>
                         <span class="quiz-option-text">信和义是一样的</span>
-                    </div>
+                    </button>
                 </div>
                 <div class="quiz-feedback" role="status" aria-live="polite" style="margin-top:var(--ds-space-4);display:none;"></div>
             </div>
@@ -389,22 +389,22 @@
             <div class="quiz-question">
                 <p><strong>4. "恭近于礼，远耻辱也"告诉我们什么道理？</strong></p>
                 <div class="quiz-options" style="margin-top:var(--ds-space-4);">
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 A" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">A</span>
                         <span class="quiz-option-text">越恭敬越好，别人就越尊重你</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" role="button" tabindex="0" aria-label="选项 B" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">B</span>
                         <span class="quiz-option-text">恭敬要有分寸和礼节，过度恭敬会变成谄媚而招来耻辱</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 C" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">C</span>
                         <span class="quiz-option-text">恭敬别人是为了自己不丢脸</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 D" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">D</span>
                         <span class="quiz-option-text">不恭敬才会远离耻辱</span>
-                    </div>
+                    </button>
                 </div>
                 <div class="quiz-feedback" role="status" aria-live="polite" style="margin-top:var(--ds-space-4);display:none;"></div>
             </div>
@@ -420,22 +420,22 @@
             <div class="quiz-question">
                 <p><strong>5. "因不失其亲，亦可宗也"这句话中，"因"最可能的意思是？</strong></p>
                 <div class="quiz-options" style="margin-top:var(--ds-space-4);">
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 A" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">A</span>
                         <span class="quiz-option-text">因为</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" role="button" tabindex="0" aria-label="选项 B" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">B</span>
                         <span class="quiz-option-text">依靠、亲近（或通"姻"，指婚姻亲缘关系）</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 C" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">C</span>
                         <span class="quiz-option-text">因此</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 D" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">D</span>
                         <span class="quiz-option-text">因为原因</span>
-                    </div>
+                    </button>
                 </div>
                 <div class="quiz-feedback" role="status" aria-live="polite" style="margin-top:var(--ds-space-4);display:none;"></div>
             </div>
@@ -451,22 +451,22 @@
             <div class="quiz-question">
                 <p><strong>6. 本章三句话的共同逻辑结构是什么？</strong></p>
                 <div class="quiz-options" style="margin-top:var(--ds-space-4);">
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 A" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">A</span>
                         <span class="quiz-option-text">并列关系——三句各说各的</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 B" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">B</span>
                         <span class="quiz-option-text">递进关系——一句比一句重要</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" role="button" tabindex="0" aria-label="选项 C" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">C</span>
                         <span class="quiz-option-text">条件与结果的关系——A近于B → C可达成</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 D" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">D</span>
                         <span class="quiz-option-text">因果关系——A导致了B</span>
-                    </div>
+                    </button>
                 </div>
                 <div class="quiz-feedback" role="status" aria-live="polite" style="margin-top:var(--ds-space-4);display:none;"></div>
             </div>
@@ -482,22 +482,22 @@
             <div class="quiz-question">
                 <p><strong>7. 下面哪个故事最能体现"信近于义"的道理？</strong></p>
                 <div class="quiz-options" style="margin-top:var(--ds-space-4);">
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 A" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">A</span>
                         <span class="quiz-option-text">尾生抱柱——在桥下等恋人，水来了也不走</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" role="button" tabindex="0" aria-label="选项 B" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">B</span>
                         <span class="quiz-option-text">季札挂剑——答应把剑送给徐君，虽然徐君已死仍兑现诺言，但不违背道义</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 C" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">C</span>
                         <span class="quiz-option-text">曾子杀彘——为了教孩子守信，杀了猪兑现对孩子的承诺</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 D" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">D</span>
                         <span class="quiz-option-text">商鞅立木——搬木头就赏金，取信于民</span>
-                    </div>
+                    </button>
                 </div>
                 <div class="quiz-feedback" role="status" aria-live="polite" style="margin-top:var(--ds-space-4);display:none;"></div>
             </div>
@@ -513,22 +513,22 @@
             <div class="quiz-question">
                 <p><strong>8. "恭近于礼，远耻辱也"在生活中最恰当的例子是？</strong></p>
                 <div class="quiz-options" style="margin-top:var(--ds-space-4);">
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 A" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">A</span>
                         <span class="quiz-option-text">对上级过分恭维，说违心的赞美话</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 B" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">B</span>
                         <span class="quiz-option-text">对任何人都不理不睬，保持冷漠</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" role="button" tabindex="0" aria-label="选项 C" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">C</span>
                         <span class="quiz-option-text">对师长尊敬有礼但不卑不亢，既尊重又保持人格独立</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 D" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">D</span>
                         <span class="quiz-option-text">在公共场合大声喧哗以显示热情</span>
-                    </div>
+                    </button>
                 </div>
                 <div class="quiz-feedback" role="status" aria-live="polite" style="margin-top:var(--ds-space-4);display:none;"></div>
             </div>
@@ -544,22 +544,22 @@
             <div class="quiz-question">
                 <p><strong>9. 有子"信近于义"的思想和孔子哪句话一脉相承？</strong></p>
                 <div class="quiz-options" style="margin-top:var(--ds-space-4);">
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 A" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">A</span>
                         <span class="quiz-option-text">有教无类</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 B" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">B</span>
                         <span class="quiz-option-text">学而时习之</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" role="button" tabindex="0" aria-label="选项 C" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">C</span>
                         <span class="quiz-option-text">言必信，行必果，硁硁然小人哉</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 D" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">D</span>
                         <span class="quiz-option-text">己所不欲，勿施于人</span>
-                    </div>
+                    </button>
                 </div>
                 <div class="quiz-feedback" role="status" aria-live="polite" style="margin-top:var(--ds-space-4);display:none;"></div>
             </div>
@@ -575,22 +575,22 @@
             <div class="quiz-question">
                 <p><strong>10. 本章对有子思想的三个层面概括最准确的是？</strong></p>
                 <div class="quiz-options" style="margin-top:var(--ds-space-4);">
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 A" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">A</span>
                         <span class="quiz-option-text">学习、思考、实践</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 B" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">B</span>
                         <span class="quiz-option-text">仁、义、礼</span>
-                    </div>
-                    <div class="quiz-option" data-correct="true" role="button" tabindex="0" aria-label="选项 C" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">C</span>
                         <span class="quiz-option-text">言语（信与义）、态度（恭与礼）、社交（因与亲）</span>
-                    </div>
-                    <div class="quiz-option" role="button" tabindex="0" aria-label="选项 D" onclick="checkAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();checkAnswer(this)}">
+                    </button>
+                    <button class="quiz-option" onclick="checkAnswer(this)">
                         <span class="quiz-option-key">D</span>
                         <span class="quiz-option-text">修身、齐家、治国</span>
-                    </div>
+                    </button>
                 </div>
                 <div class="quiz-feedback" role="status" aria-live="polite" style="margin-top:var(--ds-space-4);display:none;"></div>
             </div>
@@ -627,7 +627,7 @@
         <h2 class="slide-card__heading">🌟 生活应用</h2>
         <div class="slide-card__body">
             <p>本章智慧在当今生活的启发：</p>
-            <div class="app-grid" style="display:grid;gap:0.8rem;">
+            <div class="app-grid" style="display:grid;gap:var(--ds-space-3);">
                 <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>📝 承诺之道（信近于义）</strong>
                     <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">答应别人之前先想三个问题：这事合理吗？我有能力做到吗？符合我的原则吗？如果答案都是肯定的，再慎重承诺。不轻易承诺，承诺必兑现。拒绝做一个"随便答应但总是做不到"的人。</p>
@@ -715,9 +715,15 @@ const dotsRow = document.getElementById('dots-row');
 // 生成页码点
 for (let i = 0; i < totalSlides; i++) {
     const dot = document.createElement('span');
-    dot.className = 'dot';
+    dot.className = 'ds-dot';
+    dot.setAttribute('role', 'tab');
+    dot.setAttribute('tabindex', '0');
+    dot.setAttribute('aria-label', '第 ' + (i + 1) + ' 页');
     dot.dataset.index = i;
     dot.addEventListener('click', function() { goToSlide(parseInt(this.dataset.index)); });
+    dot.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goToSlide(parseInt(this.dataset.index)); }
+    });
     dotsRow.appendChild(dot);
 }
 
@@ -753,7 +759,7 @@ function goToSlide(index) {
         tab.classList.toggle('active', tab.dataset.section === section);
     });
 
-    document.querySelectorAll('.dot').forEach((d, i) => {
+    document.querySelectorAll('.ds-dot').forEach((d, i) => {
         d.classList.toggle('active', i === index);
     });
 }
