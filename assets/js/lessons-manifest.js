@@ -202,6 +202,20 @@ window.GUOXUE_LESSONS = [
         featured: false
     },
     {
+        id: '12-xin-jin-yu-yi',
+        title: '信近于义',
+        subtitle: '信义 · 恭礼 · 亲仁',
+        path: 'lessons/12-xin-jin-yu-yi/index.html',
+        icon: '🤝',
+        grade: '小学中高年级',
+        description: '《论语·学而》第十三章精讲：有子论德行分寸——信近于义言可复，恭近于礼远耻辱，因不失其亲亦可宗。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'mengxue',
+        tier: 'core',
+        featured: false
+    },
+    {
         id: '13-junzi-hao-xue',
         title: '君子好学',
         subtitle: '敏于事而慎于言',
