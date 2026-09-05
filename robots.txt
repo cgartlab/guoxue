@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://guoxue.8023laozhanshi.cc/sitemap.xml

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>笔记和书签 - 国学课堂</title>
+  <link rel="stylesheet" href="/assets/css/ds-design-system.css">
+  <style>
+    /* ===== 布局 ===== */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: var(--ds-space-6);
+    }
+
+    /* ===== 头部 ===== */
+    .page-header {
+      margin-bottom: var(--ds-space-6);
+    }
+
+    .page-title {
+      font-family: var(--ds-font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--ds-color-fg-strong);
+      margin-bottom: var(--ds-space-2);
+    }
+
+    .page-subtitle {
+      font-size: 0.875rem;
+      color: var(--ds-color-muted);
+    }
+
+    /* ===== 选项卡 ===== */
+    .tabs {
+      display: flex;
+      gap: var(--ds-space-2);
+      margin-bottom: var(--ds-space-6);
+      border-bottom: 2px solid var(--ds-color-border);
+    }
+
+    .tab {
+      padding: var(--ds-space-3) var(--ds-space-4);
+      border: none;
+      background: none;
+      color: var(--ds-color-muted);
+      font-family: var(--ds-font-body);
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: all var(--ds-duration-200) var(--ds-ease-out);
+    }
+
+    .tab:hover {
+      color: var(--ds-color-fg);
+    }
+
+    .tab.active {
+      color: var(--ds-accent);
+      border-bottom-color: var(--ds-accent);
+      font-weight: 600;
+    }
+
+    /* ===== 课程选择器 ===== */
+    .course-selector {
+      margin-bottom: var(--ds-space-5);
+      display: flex;
+      gap: var(--ds-space-3);
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .course-selector label {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--ds-color-muted);
+    }
+
+    .course-selector select {
+      padding: var(--ds-space-2) var(--ds-space-3);
+      border: 1px solid var(--ds-color-border);
+      border-radius: var(--ds-radius-md);
+      font-family: var(--ds-font-body);
+      font-size: 0.8125rem;
+      color: var(--ds-color-fg);
+      cursor: pointer;
+      min-width: 200px;
+      background: var(--ds-color-surface);
+    }
+
+    /* ===== 笔记卡片 ===== */
+    .notes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--ds-space-5);
+    }
+
+    .note-card {
+      background: var(--ds-color-surface);
+      border-radius: var(--ds-radius-xl);
+      box-shadow: var(--ds-shadow-sm);
+      overflow: hidden;
+      border-left: 4px solid;
+      transition: all var(--ds-duration-200) var(--ds-ease-out);
+      border: 1px solid var(--ds-color-border);
+      border-left-width: 4px;
+    }
+
+    .note-card:hover {
+      box-shadow: var(--ds-shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .note-card.yellow { border-left-color: #fbbf24; }
+    .note-card.green  { border-left-color: #10b981; }
+    .note-card.blue   { border-left-color: #3b82f6; }
+    .note-card.pink   { border-left-color: #ec4899; }
+    .note-card.red    { border-left-color: #ef4444; }
+
+    .note-header {
+      padding: var(--ds-space-4);
+      border-bottom: 1px solid var(--ds-color-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .note-title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--ds-color-fg-strong);
+      margin-bottom: var(--ds-space-1);
+      flex: 1;
+      word-break: break-word;
+    }
+
+    .note-meta {
+      font-size: 0.6875rem;
+      color: var(--ds-color-muted);
+    }
+
+    .note-actions {
+      display: flex;
+      gap: var(--ds-space-1);
+    }
+
+    .note-action-btn {
+      background: none;
+      border: none;
+      color: var(--ds-color-muted);
+      cursor: pointer;
+      font-size: 1rem;
+      transition: color var(--ds-duration-150) var(--ds-ease-out);
+    }
+
+    .note-action-btn:hover {
+      color: var(--ds-accent);
+    }
+
+    .note-body {
+      padding: var(--ds-space-4);
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      color: var(--ds-color-fg);
+      max-height: 150px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    /* ===== 书签列表 ===== */
+    .bookmarks-list {
+      background: var(--ds-color-surface);
+      border-radius: var(--ds-radius-xl);
+      box-shadow: var(--ds-shadow-sm);
+      overflow: hidden;
+      border: 1px solid var(--ds-color-border);
+    }
+
+    .bookmark-item {
+      padding: var(--ds-space-4);
+      border-bottom: 1px solid var(--ds-color-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .bookmark-item:last-child {
+      border-bottom: none;
+    }
+
+    .bookmark-info {
+      flex: 1;
+    }
+
+    .bookmark-course {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--ds-color-fg-strong);
+      margin-bottom: var(--ds-space-1);
+    }
+
+    .bookmark-page {
+      font-size: 0.75rem;
+      color: var(--ds-color-muted);
+    }
+
+    .bookmark-actions {
+      display: flex;
+      gap: var(--ds-space-2);
+      align-items: center;
+    }
+
+    .bookmark-icon {
+      font-size: 1.125rem;
+    }
+
+    .delete-btn {
+      background: none;
+      border: none;
+      color: var(--ds-color-error);
+      cursor: pointer;
+      font-size: 1rem;
+      transition: opacity var(--ds-duration-150) var(--ds-ease-out);
+    }
+
+    .delete-btn:hover {
+      opacity: 0.7;
+    }
+
+    /* ===== 空状态 ===== */
+    .empty-state {
+      text-align: center;
+      padding: var(--ds-space-16) var(--ds-space-5);
+      color: var(--ds-color-muted);
+    }
+
+    .empty-icon {
+      font-size: 2.5rem;
+      margin-bottom: var(--ds-space-4);
+    }
+
+    .empty-text {
+      font-size: 1rem;
+      color: var(--ds-color-fg);
+      margin-bottom: var(--ds-space-2);
+    }
+
+    .empty-hint {
+      font-size: 0.8125rem;
+      color: var(--ds-color-muted);
+    }
+
+    /* ===== 加载状态 ===== */
+    .loading {
+      text-align: center;
+      padding: var(--ds-space-10) var(--ds-space-5);
+      color: var(--ds-color-muted);
+    }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 768px) {
+      .notes-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page-title {
+        font-size: 1.5rem;
+      }
+
+      .course-selector {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .course-selector select {
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="ds-navbar" aria-label="主导航">
+    <div class="ds-navbar__inner">
+      <a class="ds-btn-nav ds-btn-nav--brand" href="/">国学课堂</a>
+      <span class="flex-spacer"></span>
+      <a class="ds-btn-nav" href="/">首页</a>
+      <a class="ds-btn-nav ds-btn-nav--ghost" href="/dashboard.html">学习面板</a>
+      <a class="ds-btn-nav ds-btn-nav--ghost active" href="/notes.html" aria-current="page">笔记和书签</a>
+      <div id="auth-nav"></div>
+    </div>
+  </nav>
+
+  <!-- 主内容 -->
+  <div class="container">
+    <!-- 头部 -->
+    <div class="page-header">
+      <h1 class="page-title">📝 笔记和书签</h1>
+      <p class="page-subtitle">管理你的学习笔记和课程书签</p>
+    </div>
+
+    <!-- 选项卡 -->
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('notes')">📝 笔记</button>
+      <button class="tab" onclick="switchTab('bookmarks')">🔖 书签</button>
+    </div>
+
+    <!-- 笔记标签页 -->
+    <div id="notes-tab" class="tab-content">
+      <div class="course-selector">
+        <label for="notes-course-select">筛选课程：</label>
+        <select id="notes-course-select" onchange="filterNotes()">
+          <option value="">所有课程</option>
+        </select>
+      </div>
+
+      <div id="notes-container">
+        <div class="loading">加载中...</div>
+      </div>
+    </div>
+
+    <!-- 书签标签页 -->
+    <div id="bookmarks-tab" class="tab-content" hidden>
+      <div class="course-selector">
+        <label for="bookmarks-course-select">筛选课程：</label>
+        <select id="bookmarks-course-select" onchange="filterBookmarks()">
+          <option value="">所有课程</option>
+        </select>
+      </div>
+
+      <div id="bookmarks-container">
+        <div class="loading">加载中...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 脚本 -->
+  <script src="/assets/js/auth-email.js" defer></script>
+<script src="/assets/js/auth.js" defer></script>
+  <script src="/assets/js/api-client.js" defer></script>
+  <script src="/assets/js/navbar.js" defer></script>
+
+  <script>
+    // 课程映射
+    const COURSES = {
+      '01-lunyu': '《论语》选读',
+      '01-lunyu-mixed': '《论语》混合版',
+      '02-sanzijing': '《三字经》',
+      '02-xueer': '《学而篇》',
+      '03-xueer-xiaoti': '《学而篇·小题大做》',
+      '04-zengzi-sansheng': '《曾子三省》',
+      '05-dao-qiancheng-guo': '《道千乘之国》',
+      '06-dizi-ruze-xiao': '《弟子如彻小》',
+      '07-xianxian-yise': '《贤贤易色》',
+      '08-junzi-bu-zhong': '《君子不重则不威》'
+    }
+
+    let allNotes = []
+    let allBookmarks = []
+
+    /**
+     * 切换标签页
+     */
+    function switchTab(tabName) {
+      // 隐藏所有标签页
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.style.display = 'none'
+      })
+
+      // 移除所有活跃状态
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active')
+      })
+
+      // 显示选中的标签页
+      document.getElementById(tabName + '-tab').style.display = 'block'
+
+      // 标记选中的标签为活跃
+      event.target.classList.add('active')
+
+      // 加载数据
+      if (tabName === 'notes') {
+        loadNotes()
+      } else {
+        loadBookmarks()
+      }
+    }
+
+    /**
+     * 加载笔记
+     */
+    async function loadNotes() {
+      try {
+        const container = document.getElementById('notes-container')
+        container.innerHTML = '<div class="loading">加载中...</div>'
+
+        if (!window.SUPABASE) {
+          throw new Error('Supabase 未加载')
+        }
+
+        allNotes = []
+        const courseIds = Object.keys(COURSES)
+
+        for (const courseId of courseIds) {
+          const notes = await window.SUPABASE.getNotes(courseId)
+          if (notes && notes.length > 0) {
+            allNotes.push(...notes.map(n => ({ ...n, course_id: courseId })))
+          }
+        }
+
+        // 按创建时间排序（最新在前）
+        allNotes.sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+
+        // 更新课程选择器
+        const courseSelect = document.getElementById('notes-course-select')
+        const uniqueCourses = [...new Set(allNotes.map(n => n.course_id))]
+        courseSelect.innerHTML = '<option value="">所有课程</option>' +
+          uniqueCourses.map(cid => `<option value="${cid}">${COURSES[cid] || cid}</option>`).join('')
+
+        // 渲染笔记
+        renderNotes()
+      } catch (err) {
+        console.error('加载笔记失败:', err)
+        document.getElementById('notes-container').innerHTML = `
+          <div class="empty-state">
+            <div class="empty-icon">⚠️</div>
+            <div class="empty-text">加载失败</div>
+            <div class="empty-hint">${err.message}</div>
+          </div>
+        `
+      }
+    }
+
+    /**
+     * 渲染笔记
+     */
+    function renderNotes() {
+      const container = document.getElementById('notes-container')
+      const selectedCourse = document.getElementById('notes-course-select').value
+
+      let filteredNotes = allNotes
+      if (selectedCourse) {
+        filteredNotes = allNotes.filter(n => n.course_id === selectedCourse)
+      }
+
+      if (filteredNotes.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-icon">📝</div>
+            <div class="empty-text">还没有笔记</div>
+            <div class="empty-hint">在学习过程中创建笔记，它们会显示在这里</div>
+          </div>
+        `
+        return
+      }
+
+      container.innerHTML = `
+        <div class="notes-grid">
+          ${filteredNotes.map(note => `
+            <div class="note-card ${note.color_tag || 'yellow'}">
+              <div class="note-header">
+                <div>
+                  <div class="note-title">${escapeHtml(note.title || '无标题')}</div>
+                  <div class="note-meta">
+                    ${COURSES[note.course_id] || note.course_id} • 第 ${note.page} 页
+                  </div>
+                </div>
+                <div class="note-actions">
+                  <button class="note-action-btn" onclick="deleteNote('${note.id}')" title="删除">🗑️</button>
+                </div>
+              </div>
+              <div class="note-body">${escapeHtml(note.content || '')}</div>
+            </div>
+          `).join('')}
+        </div>
+      `
+    }
+
+    /**
+     * 过滤笔记
+     */
+    function filterNotes() {
+      renderNotes()
+    }
+
+    /**
+     * 删除笔记
+     */
+    async function deleteNote(noteId) {
+      if (!confirm('确定要删除这条笔记吗？')) return
+
+      try {
+        const success = await window.SUPABASE.deleteNote(noteId)
+        if (success) {
+          allNotes = allNotes.filter(n => n.id !== noteId)
+          renderNotes()
+          alert('✅ 笔记已删除')
+        } else {
+          throw new Error('删除失败')
+        }
+      } catch (err) {
+        console.error('删除笔记失败:', err)
+        alert('❌ 删除失败: ' + err.message)
+      }
+    }
+
+    /**
+     * 加载书签
+     */
+    async function loadBookmarks() {
+      try {
+        const container = document.getElementById('bookmarks-container')
+        container.innerHTML = '<div class="loading">加载中...</div>'
+
+        if (!window.SUPABASE) {
+          throw new Error('Supabase 未加载')
+        }
+
+        allBookmarks = []
+        const courseIds = Object.keys(COURSES)
+
+        for (const courseId of courseIds) {
+          const bookmarks = await window.SUPABASE.getBookmarks(courseId)
+          if (bookmarks && bookmarks.length > 0) {
+            allBookmarks.push(...bookmarks.map(b => ({ ...b, course_id: courseId })))
+          }
+        }
+
+        // 按页码排序
+        allBookmarks.sort((a, b) => {
+          if (a.course_id !== b.course_id) {
+            return a.course_id.localeCompare(b.course_id)
+          }
+          return a.page - b.page
+        })
+
+        // 更新课程选择器
+        const courseSelect = document.getElementById('bookmarks-course-select')
+        const uniqueCourses = [...new Set(allBookmarks.map(b => b.course_id))]
+        courseSelect.innerHTML = '<option value="">所有课程</option>' +
+          uniqueCourses.map(cid => `<option value="${cid}">${COURSES[cid] || cid}</option>`).join('')
+
+        // 渲染书签
+        renderBookmarks()
+      } catch (err) {
+        console.error('加载书签失败:', err)
+        document.getElementById('bookmarks-container').innerHTML = `
+          <div class="empty-state">
+            <div class="empty-icon">⚠️</div>
+            <div class="empty-text">加载失败</div>
+            <div class="empty-hint">${err.message}</div>
+          </div>
+        `
+      }
+    }
+
+    /**
+     * 渲染书签
+     */
+    function renderBookmarks() {
+      const container = document.getElementById('bookmarks-container')
+      const selectedCourse = document.getElementById('bookmarks-course-select').value
+
+      let filteredBookmarks = allBookmarks
+      if (selectedCourse) {
+        filteredBookmarks = allBookmarks.filter(b => b.course_id === selectedCourse)
+      }
+
+      if (filteredBookmarks.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-icon">🔖</div>
+            <div class="empty-text">还没有书签</div>
+            <div class="empty-hint">在课程中添加书签，重要的页面会被保存</div>
+          </div>
+        `
+        return
+      }
+
+      container.innerHTML = `
+        <div class="bookmarks-list">
+          ${filteredBookmarks.map(bookmark => `
+            <div class="bookmark-item">
+              <div class="bookmark-info">
+                <div class="bookmark-course">${COURSES[bookmark.course_id] || bookmark.course_id}</div>
+                <div class="bookmark-page">
+                  第 ${bookmark.page} 页
+                  ${bookmark.note ? ` • ${escapeHtml(bookmark.note)}` : ''}
+                </div>
+              </div>
+              <div class="bookmark-actions">
+                <div class="bookmark-icon">🔖</div>
+                <button class="delete-btn" onclick="removeBookmark('${bookmark.course_id}', ${bookmark.page})" title="删除书签">✕</button>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `
+    }
+
+    /**
+     * 过滤书签
+     */
+    function filterBookmarks() {
+      renderBookmarks()
+    }
+
+    /**
+     * 删除书签
+     */
+    async function removeBookmark(courseId, page) {
+      if (!confirm('确定要删除这个书签吗？')) return
+
+      try {
+        const success = await window.SUPABASE.removeBookmark(courseId, page)
+        if (success) {
+          allBookmarks = allBookmarks.filter(b => !(b.course_id === courseId && b.page === page))
+          renderBookmarks()
+          alert('✅ 书签已删除')
+        } else {
+          throw new Error('删除失败')
+        }
+      } catch (err) {
+        console.error('删除书签失败:', err)
+        alert('❌ 删除失败: ' + err.message)
+      }
+    }
+
+    /**
+     * 转义 HTML
+     */
+    function escapeHtml(text) {
+      const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      }
+      return text.replace(/[&<>"']/g, m => map[m])
+    }
+
+    /**
+     * 初始化
+     */
+    async function init() {
+      try {
+        // 检查登录
+        if (!AUTH || !AUTH.isLoggedIn()) {
+          window.location.href = '/'
+          return
+        }
+
+        // 等待 Supabase 加载
+        let retries = 0
+        while (!window.SUPABASE && retries < 20) {
+          await new Promise(resolve => setTimeout(resolve, 100))
+          retries++
+        }
+
+        if (!window.SUPABASE) {
+          throw new Error('Supabase 未能加载')
+        }
+
+        // 加载笔记
+        loadNotes()
+      } catch (err) {
+        console.error('初始化失败:', err)
+        alert('⚠️ 初始化失败: ' + err.message)
+      }
+    }
+
+    // 页面加载完成后初始化
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init)
+    } else {
+      setTimeout(init, 500)
+    }
+  </script>
+</body>
+</html>
