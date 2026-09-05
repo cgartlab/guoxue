@@ -285,6 +285,48 @@ window.GUOXUE_LESSONS = [
         tier: 'core',
         featured: false
     },
+    {
+        id: '42-di-zi-ji-guan-er-wang',
+        title: '禘自既灌而往',
+        subtitle: '礼贵诚敬',
+        path: 'lessons/42-di-zi-ji-guan-er-wang/index.html',
+        icon: '🏛️',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第十章精讲：禘自既灌而往者，吾不欲观之矣——孔子叹息行礼者诚敬流失，揭示礼贵诚敬、善始善终的真谛。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'lunyu',
+        tier: 'core',
+        featured: false
+    },
+    {
+        id: '43-huo-wen-di-zhi-shuo',
+        title: '或问禘之说',
+        subtitle: '不言之教',
+        path: 'lessons/43-huo-wen-di-zhi-shuo/index.html',
+        icon: '🏛️',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第十一章精讲：或问禘之说，子曰不知也——孔子不妄言、不僭言，以「指其掌」点破真理如示诸斯。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'lunyu',
+        tier: 'core',
+        featured: false
+    },
+    {
+        id: '44-ji-ru-zai',
+        title: '祭如在',
+        subtitle: '亲祭为贵',
+        path: 'lessons/44-ji-ru-zai/index.html',
+        icon: '🏛️',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第十二章精讲：祭如在，祭神如神在——孔子论祭祀之诚：心存如在之敬，亲历亲为，不可假手他人。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'lunyu',
+        tier: 'core',
+        featured: false
+    },
     // ----- 在此下方添加新课程 -----
     // {
     //     id: '03-shijing',
