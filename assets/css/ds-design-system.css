@@ -34,6 +34,9 @@
     --ds-color-warning-bg: oklch(95% 0.04 85);
     --ds-color-info: oklch(55% 0.12 240);
     --ds-color-info-bg: oklch(95% 0.03 240);
+    /* 第三方品牌色（需保持品牌原色，不在暗色模式下偏移） */
+    --ds-color-wechat: #07C160;
+    --ds-color-wechat-hover: #06AD56;
 
     /* ===== 字体 ===== */
     --ds-font-display: "Iowan Old Style","Charter","Georgia","Noto Serif SC",serif;
@@ -1326,6 +1329,9 @@ a { color: inherit; text-decoration: none; }
         --ds-color-warning-bg: oklch(25% 0.03 85);
         --ds-color-info: oklch(65% 0.12 240);
         --ds-color-info-bg: oklch(25% 0.03 240);
+        /* 微信品牌色在暗色模式下保持原色（品牌一致性）；若需提亮在此调整 */
+        --ds-color-wechat: #07C160;
+        --ds-color-wechat-hover: #12D66F;
         --ds-color-bg-hover: oklch(20% 0.02 80);
     }
     .cover-slide, .end-slide {
@@ -1849,7 +1855,7 @@ body.scroll-mode {
   min-width: 36px;
   padding: 0;
   border-radius: var(--ds-radius-md);
-  background: #07C160;
+  background: var(--ds-color-wechat);
   color: #fff;
   display: inline-flex;
   align-items: center;
@@ -1857,14 +1863,14 @@ body.scroll-mode {
   transition: background 0.15s, transform 0.1s;
 }
 .auth-wechat-btn:hover {
-  background: #06ad56;
+  background: var(--ds-color-wechat-hover);
   transform: scale(1.05);
 }
 .auth-wechat-btn:active {
   transform: scale(0.98);
 }
 .auth-wechat-btn:focus-visible {
-  outline: 2px solid #07C160;
+  outline: 2px solid var(--ds-color-wechat);
   outline-offset: 2px;
 }
 .auth-wechat-btn svg {
