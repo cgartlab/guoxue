@@ -1996,3 +1996,235 @@ body.scroll-mode {
 /* 链接颜色 */
 a.ds-accent-link { color: var(--ds-accent); }
 a.ds-accent-link:hover { color: var(--ds-accent-hover); }
+/* ============================================================
+ * 旧课程兼容层 (Legacy Lesson Components)
+ * 为 lessons/09-44 (旧标准课程) 的讲义/测验类补齐样式,
+ * 使其与设计系统 (ds-design-system.css) 视觉统一。
+ * 迁移完成后可随旧课一起逐步淘汰。
+ * ============================================================ */
+
+/* ---------- slide-card 卡片 ---------- */
+.slide-card {
+    background: var(--ds-color-surface);
+    border: 1px solid var(--ds-color-border);
+    border-radius: var(--ds-radius-xl);
+    padding: var(--ds-space-6) var(--ds-space-8);
+    box-shadow: var(--ds-shadow-sm);
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+}
+.slide-card--cover {
+    background: linear-gradient(135deg, var(--ds-color-surface) 0%, var(--ds-color-surface-raised) 100%);
+    border-color: var(--ds-color-border);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 70vh;
+    padding: var(--ds-space-12) var(--ds-space-10);
+}
+.slide-card--cover .lesson-number small {
+    font-size: 0.8125rem;
+    color: var(--ds-color-muted);
+    letter-spacing: 0.05em;
+}
+.slide-card--cover .lesson-title {
+    font-family: var(--ds-font-display);
+    font-size: 2rem;
+    color: var(--ds-color-fg-strong);
+    margin: var(--ds-space-4) 0 var(--ds-space-2);
+}
+.slide-card--cover .lesson-subtitle {
+    font-size: 1.1rem;
+    color: var(--ds-accent);
+    margin-bottom: var(--ds-space-6);
+}
+.slide-card--cover .quote-block {
+    max-width: 480px;
+    margin: 0 auto;
+}
+.slide-card__heading {
+    font-family: var(--ds-font-display);
+    font-size: 1.375rem;
+    color: var(--ds-color-fg-strong);
+    padding-bottom: var(--ds-space-3);
+    margin-bottom: var(--ds-space-4);
+    border-bottom: 2px solid var(--ds-color-border);
+}
+.slide-card__body {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--ds-color-fg);
+}
+.slide-card__body p { margin-bottom: var(--ds-space-3); }
+.slide-card__body ul, .slide-card__body ol { margin-bottom: var(--ds-space-3); padding-left: var(--ds-space-5); }
+.slide-card__body li { margin-bottom: var(--ds-space-1); }
+.slide-card__body strong { color: var(--ds-color-fg-strong); }
+.slide-card__body--center { text-align: center; }
+.slide-card__footer {
+    margin-top: var(--ds-space-5);
+    padding-top: var(--ds-space-4);
+    border-top: 1px solid var(--ds-color-border);
+    font-size: 0.8125rem;
+    color: var(--ds-color-muted);
+    text-align: center;
+}
+
+/* ---------- 讲义内容块 ---------- */
+/* 原文 */
+.original-text {
+    background: var(--ds-color-warning-bg);
+    border: 1px solid var(--ds-color-warning);
+    border-radius: var(--ds-radius-xl);
+    padding: var(--ds-space-6);
+    font-family: var(--ds-font-display);
+    color: var(--ds-color-fg-strong);
+    text-align: center;
+}
+/* 翻译 */
+.translation-box {
+    background: var(--ds-color-surface);
+    border: 1px solid var(--ds-color-border);
+    border-radius: var(--ds-radius-xl);
+    padding: var(--ds-space-5);
+    color: var(--ds-color-fg);
+}
+/* 提示框 */
+.tip-box, .example-box, .quote-box {
+    background: var(--ds-color-info-bg);
+    border: 1px solid var(--ds-color-info);
+    border-radius: var(--ds-radius-xl);
+    padding: var(--ds-space-3) var(--ds-space-4);
+    color: var(--ds-color-fg);
+}
+.tip-box strong, .example-box strong, .quote-box strong { color: var(--ds-color-fg-strong); }
+/* 逐句引用块 */
+.sentence-block {
+    background: var(--ds-color-warning-bg);
+    border: 1px solid var(--ds-color-warning);
+    border-radius: var(--ds-radius-xl);
+    padding: var(--ds-space-4);
+    text-align: center;
+    font-family: var(--ds-font-display);
+    color: var(--ds-color-fg-strong);
+}
+/* 对比框 (2列网格) */
+.contrast-box, .core-grid, .app-grid {
+    display: grid;
+    gap: var(--ds-space-3);
+}
+.contrast-box { grid-template-columns: 1fr 1fr; }
+.core-grid, .app-grid { grid-template-columns: 1fr; }
+@media (min-width: 640px) {
+    .core-grid, .app-grid { grid-template-columns: 1fr 1fr; }
+}
+.contrast-box > div, .core-grid > div, .app-grid > div {
+    background: var(--ds-color-surface);
+    border: 1px solid var(--ds-color-border);
+    border-radius: var(--ds-radius-xl);
+    padding: var(--ds-space-4);
+}
+/* FAQ */
+.faq-item {
+    padding-bottom: var(--ds-space-4);
+    margin-bottom: var(--ds-space-4);
+    border-bottom: 1px dashed var(--ds-color-border);
+}
+.faq-item:last-child { border-bottom: none; margin-bottom: 0; }
+.faq-item strong { color: var(--ds-color-fg-strong); }
+
+/* ---------- 测验 (旧硬编码模式, 迁移前兜底) ---------- */
+.quiz-question {
+    background: var(--ds-color-surface);
+    border: 1px solid var(--ds-color-border);
+    border-radius: var(--ds-radius-xl);
+    padding: var(--ds-space-5) var(--ds-space-6);
+    max-width: 520px;
+    margin: 0 auto;
+}
+.quiz-question > p { font-size: 1.0625rem; color: var(--ds-color-fg-strong); margin-bottom: var(--ds-space-4); }
+.quiz-options { display: flex; flex-direction: column; gap: var(--ds-space-3); }
+/* 旧 div 版 quiz-option (迁移后由引擎 button 版取代) */
+.quiz-option {
+    display: flex; align-items: flex-start; gap: var(--ds-space-3);
+    width: 100%; max-width: 520px; padding: var(--ds-space-4) var(--ds-space-5);
+    margin-bottom: var(--ds-space-3);
+    border: 1px solid var(--ds-color-border); border-radius: var(--ds-radius-xl);
+    background: var(--ds-color-surface); font-family: var(--ds-font-body);
+    font-size: 0.9375rem; font-weight: 400; color: var(--ds-color-fg); cursor: pointer;
+    transition: all var(--ds-duration-200) var(--ds-ease-out);
+    text-align: left; line-height: 1.6;
+}
+.quiz-option .quiz-option-key {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--ds-color-olive-50); color: var(--ds-color-olive-600);
+    font-weight: 700; font-size: 0.8125rem;
+    display: flex; justify-content: center; align-items: center; flex-shrink: 0;
+}
+.quiz-option:hover { border-color: var(--ds-accent); transform: translateX(4px); }
+.quiz-option.correct { border-color: var(--ds-color-success); background: var(--ds-color-success-bg); }
+.quiz-option.incorrect { border-color: var(--ds-color-error); background: var(--ds-color-error-bg); }
+.quiz-option .quiz-option-text { flex: 1; }
+.quiz-feedback {
+    margin-top: var(--ds-space-4);
+    padding: var(--ds-space-3) var(--ds-space-4);
+    border-radius: var(--ds-radius-lg);
+    font-weight: 600;
+    font-size: 0.9375rem;
+}
+.quiz-feedback:not([style*="display:none"]) {
+    background: var(--ds-color-surface-raised);
+    border: 1px solid var(--ds-color-border);
+}
+
+/* ---------- 暗色模式适配 ---------- */
+@media (prefers-color-scheme: dark) {
+    .slide-card { background: var(--ds-color-surface); border-color: var(--ds-color-border); }
+    .slide-card--cover { background: linear-gradient(135deg, var(--ds-color-surface) 0%, var(--ds-color-surface-raised) 100%); }
+    .slide-card__heading { border-bottom-color: var(--ds-color-border); }
+    .original-text, .sentence-block { background: var(--ds-color-warning-bg); border-color: var(--ds-color-warning); }
+    .translation-box { background: var(--ds-color-surface); border-color: var(--ds-color-border); }
+    .tip-box, .example-box, .quote-box { background: var(--ds-color-info-bg); border-color: var(--ds-color-info); }
+    .contrast-box > div, .core-grid > div, .app-grid > div { background: var(--ds-color-surface); border-color: var(--ds-color-border); }
+    .quiz-question { background: var(--ds-color-surface); border-color: var(--ds-color-border); }
+}
+
+/* ============================================================
+ * 成绩页 / 结束页组件 (quiz-score, end-slide)
+ * 供课程页骨架使用, 替代迁移脚本生成的内联样式
+ * ============================================================ */
+.score-page {
+    align-items: center; text-align: center;
+}
+.score-page h2 {
+    border: none; text-align: center; padding-bottom: 0;
+}
+.score-hero {
+    margin-top: var(--ds-space-10);
+}
+.score-hero__number {
+    font-size: 5rem; color: var(--ds-accent); font-weight: 700;
+    font-family: var(--ds-font-display); line-height: 1;
+}
+.score-hero__message {
+    font-size: 1.5rem; margin-top: var(--ds-space-4);
+    color: var(--ds-color-fg-strong); font-weight: 600;
+}
+.score-summary {
+    margin-top: var(--ds-space-8); font-size: 1.125rem;
+    color: var(--ds-color-fg); background: var(--ds-color-surface);
+    padding: var(--ds-space-6); border-radius: var(--ds-radius-xl);
+    display: inline-block; text-align: left;
+}
+.score-summary p { margin-bottom: var(--ds-space-3); }
+.score-summary p:last-child { margin-bottom: 0; }
+.score-summary b {
+    font-size: 1.25rem;
+}
+.score-summary .b-correct { color: var(--ds-color-success); }
+.score-summary .b-total { color: var(--ds-accent); }
+.score-summary .b-percent { color: var(--ds-color-info); }
+.retake-btn {
+    margin-top: var(--ds-space-6);
+}

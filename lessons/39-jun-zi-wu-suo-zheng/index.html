@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="../../assets/css/ds-design-system.css?v=29f633f">
 </head>
 <body>
+<a href="#slide-container" class="skip-link">跳转到主内容</a>
 
 <div class="bg-layer" aria-hidden="true"></div>
 <div class="ink-dot ink-dot-1" aria-hidden="true"></div>
@@ -49,18 +50,19 @@
     </div>
 </nav>
 
-<main class="ds-slide-container" id="slide-container">
+<div class="slide-viewport">
+<main class="slide-container" id="slide-container">
 
 <!-- ====== 讲义部分 ====== -->
 
 <!-- 1. 标题页 -->
-<section class="slide" data-section="lecture" data-index="0">
+<section class="slide active" data-section="lecture" data-index="0">
     <div class="slide-card slide-card--cover">
         <div class="slide-card__body slide-card__body--center">
             <div class="lesson-number"><small>第41课 · 《论语·八佾》第七章</small></div>
             <h1 class="lesson-title" style="font-size:1.3rem;">君子无所争<br><span style="font-size:0.85em;">其争也君子</span></h1>
-            <p class="lesson-subtitle" style="font-size:1.0rem;color:var(--blue-700);">射以礼成<br>君子不争</p>
-            <div class="quote-block" style="margin-top:1.5rem;">
+            <p class="lesson-subtitle" style="font-size:1.0rem;color:var(--ds-color-info);">射以礼成<br>君子不争</p>
+            <div class="quote-block" style="margin-top:var(--ds-space-6);">
                 <p style="font-size:0.88rem;line-height:2.2;">
                     子曰："君子无所争，必也射乎！<br>
                     揖让而升，下而饮，其争也君子。"
@@ -78,14 +80,14 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📜 原文呈现</h2>
         <div class="slide-card__body">
-            <div class="original-text" style="background:var(--amber-100);border-radius:12px;padding:1.5rem;text-align:center;">
-                <p style="font-size:1.2rem;font-weight:700;margin-bottom:1rem;">《论语·八佾》第七章</p>
+            <div class="original-text" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-6);text-align:center;">
+                <p style="font-size:1.2rem;font-weight:700;margin-bottom:var(--ds-space-4);">《论语·八佾》第七章</p>
                 <p style="font-size:1.0rem;line-height:2.0;">子曰："君子无所争，必也射乎！<br>揖让而升，下而饮，其争也君子。"</p>
             </div>
-            <div class="translation-box" style="background:var(--gray-100);border-radius:12px;padding:1.2rem;margin-top:1rem;">
+            <div class="translation-box" style="background:var(--ds-color-surface);border-radius:var(--ds-radius-xl);padding:var(--ds-space-5);margin-top:var(--ds-space-4);">
                 <p><strong>🔍 通译：</strong>孔子说："君子没有什么可与别人争的事情。如果一定有，那就是射箭比赛（射礼）了吧！比赛时，双方先相互作揖礼让，然后登堂比射；射毕下堂，再相互作揖对饮。这样的竞争，也是君子风度的竞争啊。"</p>
             </div>
-            <div class="tip-box" style="background:var(--blue-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>📌 <strong>本章特色：</strong>本章是八佾篇从"批判僭礼"转向"正面倡导"的重要转折——<strong>前六章（第一至六章）主要批评僭礼行为，本章则正面论述"君子之争"的应有风范。</strong>孔子借射礼说明：真正的竞争不必伤和气，竞争也可以是彬彬有礼的；竞争背后是"礼之用，和为贵"的精神——这与"友谊第一，比赛第二"的现代体育精神高度一致。</p>
             </div>
         </div>
@@ -97,23 +99,23 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 字词梳理 · 射、揖让、升、下而饮</h2>
         <div class="slide-card__body">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:1rem 0;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:0.9rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-space-3);margin:var(--ds-space-4) 0;">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">射（射礼）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>射，本义是射箭；此处指古代的射礼。</strong>射礼是"六艺"（礼、乐、射、御、书、数）之一，是将军事训练的射箭纳入礼仪程式的君子修身活动。<strong>儒家射礼不同于军事训练，不强调武力，而强调"饰之以礼乐"——以礼乐包装竞争，寓教于射。</strong></p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>射，本义是射箭；此处指古代的射礼。</strong>射礼是"六艺"（礼、乐、射、御、书、数）之一，是将军事训练的射箭纳入礼仪程式的君子修身活动。<strong>儒家射礼不同于军事训练，不强调武力，而强调"饰之以礼乐"——以礼乐包装竞争，寓教于射。</strong></p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;">
+                <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">揖让</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>揖，拱手行礼；让，互相谦让。</strong>射礼开始前，双方相互作揖，<strong>表现不是争强斗狠，而是雍容大方。</strong>射礼结束时，也要相互作揖，胜者说"承让"，负者说"佩服"——竞争结束，友谊仍在。</p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>揖，拱手行礼；让，互相谦让。</strong>射礼开始前，双方相互作揖，<strong>表现不是争强斗狠，而是雍容大方。</strong>射礼结束时，也要相互作揖，胜者说"承让"，负者说"佩服"——竞争结束，友谊仍在。</p>
                 </div>
             </div>
-            <div style="margin:0.5rem 0;">
-                <div style="background:var(--purple-100);border-radius:12px;padding:0.9rem;">
+            <div style="margin:var(--ds-space-2) 0;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">升（升堂）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>升堂，登上射箭的厅堂。</strong>射礼举行于堂上（或专门的射宫）。<strong>在登堂之前，先要相互作揖礼让——这是竞争开始前的相互尊重。</strong>《礼记·射义》说："射者，仁之道也。射者何以射？何以听？循声而发，发而不失正鹄者，其唯贤者乎？"——射礼的核心是"观盛德"，而不是单纯比胜负。</p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>升堂，登上射箭的厅堂。</strong>射礼举行于堂上（或专门的射宫）。<strong>在登堂之前，先要相互作揖礼让——这是竞争开始前的相互尊重。</strong>《礼记·射义》说："射者，仁之道也。射者何以射？何以听？循声而发，发而不失正鹄者，其唯贤者乎？"——射礼的核心是"观盛德"，而不是单纯比胜负。</p>
                 </div>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.7rem;">
+            <div class="tip-box" style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-2);">
                 <p>💡 <strong>下而饮：竞争后的温馨结局：</strong>射礼结束后，由胜者（免于饮酒者）为负者斟酒请饮。负者先饮，胜者陪饮——<strong>这不是"惩罚"，而是胜者对负者的关心和鼓励，期待日后加强锻炼、取得进步。</strong>在物资匮乏的春秋时期，酒是尊贵之物，胜者把喝酒的机会让给负者，体现了仁爱之心和谦逊之德。</p>
             </div>
         </div>
@@ -125,18 +127,18 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 一：射礼——六艺之一，礼乐文明的体现</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
-                <p style="font-size:1.05rem;font-weight:700;">"<ruby>君<rt>jun</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>无<rt>wu</rt></ruby>所<ruby>争<rt>zheng</rt></ruby>，<ruby>必<rt>bi</rt></ruby>也<ruby>射<rt>she</rt></ruby>乎！"</p>
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
+                <p style="font-size:1.05rem;font-weight:700;">"<ruby lang="zh-Hans">君<rt>jun</rt></ruby><ruby lang="zh-Hans">子<rt>zi</rt></ruby><ruby lang="zh-Hans">无<rt>wu</rt></ruby>所<ruby lang="zh-Hans">争<rt>zheng</rt></ruby>，<ruby lang="zh-Hans">必<rt>bi</rt></ruby>也<ruby lang="zh-Hans">射<rt>she</rt></ruby>乎！"</p>
             </div>
             <p><strong>什么是射礼？</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:var(--ds-space-2) 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>射礼是古代"六艺"（礼、乐、射、御、书、数）之一，是将军事训练的射箭纳入礼仪程式的君子修身活动。</strong><br><br>据文献记载，先秦有四种射礼：<br><br>① <strong>大射礼</strong>——天子、诸侯在祭祀或盟会前选定善射之人而举行，场面最宏大<br>② <strong>宾射礼</strong>——诸侯朝觐天子或诸侯之间互聘时举行<br>③ <strong>燕射礼</strong>——贵族平日娱乐宴饮时举行<br>④ <strong>乡射礼</strong>——地方官为荐贤举士而举行<br><br><strong>射礼的本质：</strong>不是比谁更能打，而是<strong>"饰之以礼乐"（语出《礼记·射义》），寓教于射，以竞争培养君子。</strong></p>
             </div>
             <p><strong>射礼的道德教育功能：</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin:var(--ds-space-2) 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>《礼记·射义》说："射者，仁之道也。"</strong><br><br>① <strong>正己而后发：</strong>射箭的人，首先要端正自身的道德；自身端正后，才把箭射出去。<br><br>② <strong>发而不中，不怨胜己者，反求诸己：</strong>射出后没有命中目标，不抱怨胜过自己的人，而是<strong>反省自己的不足</strong>（后来孟子发挥为"仁者如射，射者正己而后发，发而不中，不怨胜己者，反求诸己而已矣"）。<br><br>③ <strong>射以观盛德：</strong>射礼中，举动中礼、容仪合度至为重要——射箭只是外在表现，真正考察的是道德修养。</p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-2);margin-top:var(--ds-space-2);">
                 <p>📌 <strong>礼乐文明最令人感动之处：</strong>将斗战之工具（弓箭）引入礼仪的程式中，借以表达人之理性对于武器的制约和平衡——这就是中华礼乐文明最令人感动的地方。<strong>这与现代体育精神"友谊第一，比赛第二"若合符节、高度一致。</strong></p>
             </div>
         </div>
@@ -148,18 +150,18 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 二：君子为何"无所争"？</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
-                <p style="font-size:1.05rem;font-weight:700;">"<ruby>君<rt>jun</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>无<rt>wu</rt></ruby>所<ruby>争<rt>zheng</rt></ruby>"</p>
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
+                <p style="font-size:1.05rem;font-weight:700;">"<ruby lang="zh-Hans">君<rt>jun</rt></ruby><ruby lang="zh-Hans">子<rt>zi</rt></ruby><ruby lang="zh-Hans">无<rt>wu</rt></ruby>所<ruby lang="zh-Hans">争<rt>zheng</rt></ruby>"</p>
             </div>
             <p><strong>君子不争，避祸趋吉的智慧</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:var(--ds-space-2) 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>争强斗狠的危害：</strong><br><br>① 破坏风气——争名夺利、赞己毁他，破坏社会风气<br>② 结下冤仇——争强斗狠，容易与他人结怨<br>③ 亏损品德——争名夺利，亏损自己的品德<br>④ 失去助益——争强斗狠，失去良师益友的帮助<br><br><strong>君子不争的原因：</strong>真正的君子是胸襟开阔之人，有很强的自控力，能管住内心的欲望，享受生命本身的喜悦和满足——因此不必与他人争抢什么。<strong>子贡说："夫子温、良、恭、俭、让以得之"——有德行，自然有人把机会送给你，无需争抢。</strong></p>
             </div>
             <p><strong>君子也"争"什么？</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin:var(--ds-space-2) 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>君子虽不争名利，但有两件事必须争：</strong><br><br>① <strong>当仁不让</strong>——面对仁义之事，当仁不让，必须挺身而出<br>② <strong>见义勇为</strong>——面对正义之事，义不容辞，必须勇于担当<br><br><strong>这两件事不是"争利益"，而是"争道义"——这是君子的底线，也是君子的担当。</strong></p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-2);margin-top:var(--ds-space-2);">
                 <p>📌 <strong>与道家的暗合：</strong>"君子不争"不仅是儒家的观点，也与道家思想暗合——<strong>老子说："夫唯不争，故天下莫能与之争。"</strong>儒家和道家都认为：不争是一种高深的智慧，有"先予后取"的意味——不争名，反而得名；不争利，反而得利。<strong>但儒家的"不争"与道家不同：儒家不争是为了"和"，道家不争是为了"无为"——两者出发点不同。</strong></p>
             </div>
         </div>
@@ -171,18 +173,18 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 三：君子之争的三个规则</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
-                <p style="font-size:1.05rem;font-weight:700;">"<ruby>揖<rt>yi</rt></ruby><ruby>让<rt>rang</rt></ruby>而<ruby>升<rt>sheng</rt></ruby>，下而<ruby>饮<rt>yin</rt></ruby>，其<ruby>争<rt>zheng</rt></ruby>也<ruby>君<rt>jun</rt></ruby><ruby>子<rt>zi</rt></ruby>"</p>
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
+                <p style="font-size:1.05rem;font-weight:700;">"<ruby lang="zh-Hans">揖<rt>yi</rt></ruby><ruby lang="zh-Hans">让<rt>rang</rt></ruby>而<ruby lang="zh-Hans">升<rt>sheng</rt></ruby>，下而<ruby lang="zh-Hans">饮<rt>yin</rt></ruby>，其<ruby lang="zh-Hans">争<rt>zheng</rt></ruby>也<ruby lang="zh-Hans">君<rt>jun</rt></ruby><ruby lang="zh-Hans">子<rt>zi</rt></ruby>"</p>
             </div>
             <p><strong>如果非争不可，君子如何争？</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:var(--ds-space-2) 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>射礼中的三个规则，体现了君子之争的应有风范：</strong><br><br><strong>规则一：公开透明</strong><br>射礼在堂上进行，有见证人，有记录，胜负一目了然——<strong>君子之争，不在暗地里"下绊子"，而在公开公平的舞台上比试。</strong><br><br><strong>规则二：平等尊重</strong><br>比赛前，双方相互作揖行礼——<strong>比赛前相互尊重，承认对方是平等的竞争者，而不是敌人。</strong><br><br><strong>规则三：胜负有礼</strong><br>射毕，胜者请负者饮酒，负者先饮，胜者陪饮——<strong>胜者不傲慢（说"承让"），负者不气馁（说"佩服"），竞争结束，友谊仍在。</strong>这不是惩罚，而是胜者对负者的关怀和鼓励，期待对方日后进步。</p>
             </div>
             <p><strong>与现代体育精神的对应：</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin:var(--ds-space-2) 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>射礼的三个规则与现代体育精神高度一致：</strong><br><br>① <strong>公开透明</strong>——现代体育比赛有裁判、有观众、有记录，胜负有据可查<br>② <strong>平等尊重</strong>——现代体育赛前握手、赛后致敬，承认对方是平等的竞争者<br>③ <strong>胜负有礼</strong>——现代体育赛后握手致意，胜者不骄，负者不馁<br><br><strong>孔子2500年前提出的"君子之争"，与现代体育精神若合符节。</strong></p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-2);margin-top:var(--ds-space-2);">
                 <p>📌 <strong>射礼背后的哲学：</strong>射礼把"竞争"（射箭）和"礼让"（揖让）统一起来——竞争中有礼让，礼让中有竞争。<strong>这不是削弱竞争，而是用礼让规范竞争，使竞争不至于演变成斗争。</strong>《礼记·乡饮酒义》说："君子尊让则不争，絜敬则不慢，不慢不争，则远于斗辨矣，不斗辨则无暴乱之祸矣，斯君子所以免于人祸也。"——礼让，是避免暴乱的最好方式。</p>
             </div>
         </div>
@@ -195,14 +197,14 @@
         <h2 class="slide-card__heading">📖 逐句解读 · 四：反求诸己——竞争中的自我修养</h2>
         <div class="slide-card__body">
             <p><strong>射礼的核心教训：反求诸己</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:var(--ds-space-2) 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>孟子后来发挥射礼的精神（见《孟子·公孙丑上》）：</strong><br><br><strong>"仁者如射，射者正己而后发；发而不中，不怨胜己者，反求诸己而已矣。"</strong><br><br>① <strong>正己而后发：</strong>射箭之前，先要端正自己的心态和行为；心态端正了，箭才能射好。<strong>竞争的胜负，首先取决于自己的准备和修养，而不是对手的强弱。</strong><br><br>② <strong>不怨胜己者：</strong>失败后，不抱怨胜过自己的人。<strong>抱怨别人，是把自己的失败归咎于外部因素，是弱者的表现。</strong><br><br>③ <strong>反求诸己：</strong>失败后，反过来从自己身上找原因——是不是准备不够？是不是方法不对？是不是心态不好？<strong>这是强者的选择：每一次失败，都是自我提升的机会。</strong></p>
             </div>
             <p><strong>反求诸己的现代应用：</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin:var(--ds-space-2) 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>射礼的"反求诸己"精神，适用于现代生活的方方面面：</strong><br><br>① <strong>考试失利：</strong>不抱怨出题太难，而是反思自己是否复习到位、方法是否正确<br>② <strong>比赛失败：</strong>不抱怨裁判不公或对手太强，而是反思自己是否训练充分、心态是否稳定<br>③ <strong>职场受挫：</strong>不抱怨领导不公或同事排挤，而是反思自己是否能力不足、沟通是否到位<br><br><strong>每一次挫折，都是一面镜子；每一次失败，都是成长的机会。</strong>这就是"反求诸己"的智慧——不是消极认命，而是积极反思。</p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-2);margin-top:var(--ds-space-2);">
                 <p>📌 <strong>既能竞争，又能不争：</strong>孔子的高明之处在于：他不是要人放弃竞争，而是要人<strong>用正确的方式竞争——公开、平等、有礼；用正确的心态面对结果——不怨胜己者，反求诸己。</strong>既能竞争，又能不争；既能争胜，又能不失风度——这就是"其争也君子"。</p>
             </div>
         </div>
@@ -215,223 +217,61 @@
         <h2 class="slide-card__heading">🎯 核心思想 · 射以礼成，君子不争</h2>
         <div class="slide-card__body">
             <p>本章从三个角度阐述"君子之争"——</p>
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;"><p style="font-size:1.05rem;font-weight:700;">"其争也君子"</p></div>
-            <div class="core-grid" style="display:grid;gap:0.8rem;">
-                <div style="background:var(--red-100);border-radius:12px;padding:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);"><p style="font-size:1.05rem;font-weight:700;">"其争也君子"</p></div>
+            <div class="core-grid" style="display:grid;gap:var(--ds-space-3);">
+                <div style="background:var(--ds-color-error-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 君子不争，是胸襟开阔的体现</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;"><strong>君子不争名利，因为有更高级的快乐。</strong>真正的君子，有很强的自控力，能管住内心的欲望，享受生命本身的喜悦和满足——因此不必与他人争抢。"夫子温、良、恭、俭、让以得之"——有德行，自然有人把机会送给你，无需争抢。但君子也有"当仁不让""见义勇为"的时候——争道义，不争利益。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;"><strong>君子不争名利，因为有更高级的快乐。</strong>真正的君子，有很强的自控力，能管住内心的欲望，享受生命本身的喜悦和满足——因此不必与他人争抢。"夫子温、良、恭、俭、让以得之"——有德行，自然有人把机会送给你，无需争抢。但君子也有"当仁不让""见义勇为"的时候——争道义，不争利益。</p>
                 </div>
-                <div style="background:var(--purple-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 君子之争，必须遵循公开、平等、有礼的规则</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;"><strong>射礼把"竞争"和"礼让"统一起来。</strong>竞争前相互作揖（平等尊重），竞争中全力以赴（公平竞争），竞争后对饮（胜负有礼）。这与现代体育精神"友谊第一，比赛第二"高度一致。竞争结束，友谊仍在——这就是"其争也君子"。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;"><strong>射礼把"竞争"和"礼让"统一起来。</strong>竞争前相互作揖（平等尊重），竞争中全力以赴（公平竞争），竞争后对饮（胜负有礼）。这与现代体育精神"友谊第一，比赛第二"高度一致。竞争结束，友谊仍在——这就是"其争也君子"。</p>
                 </div>
-                <div style="background:var(--blue-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 竞争失败，反求诸己</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;"><strong>"仁者如射，射者正己而后发；发而不中，不怨胜己者，反求诸己而已矣。"</strong>竞争的胜负，首先取决于自己的准备和修养。失败后不抱怨别人，而是反思自己——每一次失败，都是自我提升的机会。这是射礼的哲学，也是儒家修身的方法论。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;"><strong>"仁者如射，射者正己而后发；发而不中，不怨胜己者，反求诸己而已矣。"</strong>竞争的胜负，首先取决于自己的准备和修养。失败后不抱怨别人，而是反思自己——每一次失败，都是自我提升的机会。这是射礼的哲学，也是儒家修身的方法论。</p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 礼乐制约武力——中华文明最令人感动之处</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;"><strong>将斗战的工具（弓箭）引入礼仪程式，借以表达理性对武器的制约和平衡。</strong>这就是中华礼乐文明最令人感动之处：<strong>不回避竞争，但用礼让规范竞争；不放弃力量，但用礼乐制约力量。</strong>既能竞争，又能不争；既能争胜，又能不失风度——这是孔子留给我们的宝贵智慧。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;"><strong>将斗战的工具（弓箭）引入礼仪程式，借以表达理性对武器的制约和平衡。</strong>这就是中华礼乐文明最令人感动之处：<strong>不回避竞争，但用礼让规范竞争；不放弃力量，但用礼乐制约力量。</strong>既能竞争，又能不争；既能争胜，又能不失风度——这是孔子留给我们的宝贵智慧。</p>
                 </div>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>📚 <strong>延伸思考：</strong>现代社会特别重视竞争，许多人把"不争"视为窝囊忍让的表现——这是对孔子思想的误解。<strong>孔子的"不争"不是放弃竞争，而是"以正确的方式竞争，以正确的心态面对结果"——公开公平、有礼有节、胜不骄败不馁、反求诸己。这才是"其争也君子"的真正含义。</strong></p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ====== 测验部分 ====== -->
+<!-- ====== 测验部分（slide-engine.js 渲染） ====== -->
 
-<!-- 9. 题1 -->
-<section class="slide" data-section="quiz" data-index="0">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第1题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>1. "君子无所争，必也射乎"是什么意思？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">A</span><span class="quiz-option-text">君子没有什么可与别人争的事情。如果一定要说有什么争的，那就是射箭比赛（射礼）了吧！射礼是古代六艺之一，是将军事训练的射箭纳入礼仪程式的君子修身活动——儒家认为，如果君子一定要竞争，那就是在射礼上堂堂正正地比试</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">B</span><span class="quiz-option-text">君子不应该争强好胜，所以射箭比赛不需要参加</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">君子之间的竞争主要是射箭比赛</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">君子不喜欢任何形式的竞争</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
+<section class="slide" data-section="quiz" id="quiz-0"></section>
+<section class="slide" data-section="quiz" id="quiz-1"></section>
+<section class="slide" data-section="quiz" id="quiz-2"></section>
+<section class="slide" data-section="quiz" id="quiz-3"></section>
+<section class="slide" data-section="quiz" id="quiz-4"></section>
+<section class="slide" data-section="quiz" id="quiz-5"></section>
+<section class="slide" data-section="quiz" id="quiz-6"></section>
+<section class="slide" data-section="quiz" id="quiz-7"></section>
+<section class="slide" data-section="quiz" id="quiz-8"></section>
+<section class="slide" data-section="quiz" id="quiz-9"></section>
+    <!-- ====== 测验得分页 ====== -->
+    <section class="slide score-page" data-section="quiz" id="quiz-score">
+        <span class="ds-badge ds-badge--success">测验得分</span>
+        <h2>测验完成！</h2>
+        <div class="score-hero">
+            <div class="score-hero__number" id="score-display">0</div>
+            <div class="score-hero__message" id="score-message">正在计算得分...</div>
+            <div class="score-summary">
+                <p>✅ 答对题数：<b class="b-correct" id="correct-count">0</b> / 10</p>
+                <p>📊 总得分：<b class="b-total" id="total-score">0</b> 分（满分 100 分）</p>
+                <p>📈 正确率：<b class="b-percent" id="score-percent">0%</b></p>
             </div>
+            <button class="retake-btn" id="retake-btn" aria-label="重新答题">↺ 重新答题</button>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- 10. 题2 -->
-<section class="slide" data-section="quiz" data-index="1">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第2题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>2. "揖让而升，下而饮"描述的是什么场景？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">朋友之间的饮酒礼节</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">射礼开始前，双方相互作揖礼让，然后登堂比射；射毕下堂，胜者请负者饮酒，负者先饮，胜者陪饮。揖让——比赛前相互尊重；下而饮——比赛后胜负有礼。这不是惩罚，而是胜者对负者的关心和鼓励，期待对方日后进步</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">宫廷宴会上的礼节</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">祭祀活动中的礼节</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- 11. 题3 -->
-<section class="slide" data-section="quiz" data-index="2">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第3题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>3. 射礼是六艺之一，与军事训练的射箭有什么不同？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">射礼比军事射箭更注重武力</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">军事射箭强调勇敢和武力；儒家射礼不强调武力，而是"饰之以礼乐"——以礼乐包装竞争，寓教于射。射礼的核心是"观盛德"：举动中礼、容仪合度至为重要。射箭只是外在表现，真正考察的是道德修养。《礼记·射义》说"射者，仁之道也"——射礼的本质是仁道，不是武力</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">射礼不需要任何技术</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">射礼是专门为战争训练的</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 12. 题4 -->
-<section class="slide" data-section="quiz" data-index="3">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第4题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>4. 为什么君子"无所争"？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">A</span><span class="quiz-option-text">君子不争名利，因为真正的君子有更强的自控力，能管住内心的欲望，享受生命本身的喜悦和满足——因此不必与他人争抢。子贡说"夫子温、良、恭、俭、让以得之"——有德行，自然有人把机会送给你，无需争抢。但君子也有"当仁不让""见义勇为"的时候——争道义，不争利益。这是不争的智慧，也是避祸趋吉的方法</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">B</span><span class="quiz-option-text">君子太弱了，不敢争</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">君子没有竞争的能力</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">君子认为竞争是错误的</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 13. 题5 -->
-<section class="slide" data-section="quiz" data-index="4">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第5题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>5. 射礼中"下而饮"的"饮"是什么意思？是惩罚吗？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">输的人必须喝酒作为惩罚</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">"下而饮"：射礼结束后，由胜者（免于饮酒者）为负者斟酒请饮，负者先饮，胜者陪饮。这不是"惩罚"，而是胜者对负者的关心和鼓励。在物资匮乏的春秋时期，酒是尊贵之物，胜者把喝酒的机会让给负者，体现了仁爱之心和谦逊之德——胜者说"承让"，负者说"佩服"，竞争结束，友谊仍在</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">喝酒是比赛的奖励</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">喝酒是比赛失败的耻辱</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 14. 题6 -->
-<section class="slide" data-section="quiz" data-index="5">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第6题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>6. "反求诸己"是什么意思？在射礼中如何体现？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">反省别人的错误</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">"反求诸己"：失败后不抱怨别人，而是反过来从自己身上找原因。孟子说："仁者如射，射者正己而后发；发而不中，不怨胜己者，反求诸己而已矣。"射礼中的体现：①正己而后发——射箭前先端正自己的心态和行为；②发而不中，不怨胜己者——失败后不抱怨胜过自己的人；③反求诸己——反思自己是否准备充分、方法是否正确。每一次失败，都是自我提升的机会</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">把责任推给自己</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">向别人请教射箭技术</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 15. 题7 -->
-<section class="slide" data-section="quiz" data-index="6">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第7题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>7. 射礼的哪一点与现代体育精神"友谊第一，比赛第二"高度一致？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">A</span><span class="quiz-option-text">射礼强调"竞争中有礼让，礼让中有竞争"——赛前相互作揖（尊重对手），赛中全力以赴（公平竞争），赛后对饮（胜负有礼）。竞争结束，友谊仍在——这与现代体育"友谊第一，比赛第二"高度一致。孔子2500年前提出的"君子之争"，与现代体育精神若合符节</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">B</span><span class="quiz-option-text">射礼不重视输赢</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">射礼没有竞争性</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">射礼与现代体育完全不同</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 16. 题8 -->
-<section class="slide" data-section="quiz" data-index="7">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第8题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>8. 本章在八佾篇中有什么特殊地位？与前几章有什么联系？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">本章与前几章一样，都是批评僭礼</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">本章是八佾篇从"批判僭礼"转向"正面倡导"的重要转折。前六章（第一至六章）主要批评僭礼行为：八佾舞于庭、三家以雍彻、人而不仁、林放问礼、夷狄之有君、季氏旅于泰山——都是批判礼崩乐坏。本章则正面论述"君子之争"的应有风范：君子不争名利，但有当仁不让、见义勇为之争；君子之争必须遵循公开、平等、有礼的规则；竞争失败则反求诸己。这是八佾篇从"破"到"立"的转折</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">本章与前几章完全无关</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">本章是八佾篇的结尾</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 17. 题9 -->
-<section class="slide" data-section="quiz" data-index="8">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第9题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>9. 君子"争"什么？"不争"什么？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">君子什么都争，什么都不争</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">君子"不争"名利、地位、权力——因为真正的君子有德行，自然有人把机会送给你，无需争抢；争强斗狠还会破坏风气、结下冤仇、亏损品德。君子"争"道义——当仁不让、见义勇为，这是君子的底线和担当。这与"争"利益不同：争利益是自私的，争道义是无私的。君子不争利益，但争道义——这才是"君子有所争，有所不争"</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">君子只争名，不争利</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">君子只争利，不争名</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 18. 题10 -->
-<section class="slide" data-section="quiz" data-index="9">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第10题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>10. 射礼将竞争的武器（弓箭）引入礼仪程式，有什么深刻含义？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">为了展示武力</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">将斗战之工具（弓箭）引入礼仪的程式中，借以表达人之理性对于武器的制约和平衡——这是中华礼乐文明最令人感动之处。射礼告诉人们：竞争不可回避，但可以用礼让规范竞争；力量不可放弃，但可以用礼乐制约力量。儒家的高明之处在于：不回避人性中的竞争本能，但用"礼"来引导它、规范它、升华它——使竞争不至于演变成斗争，使力量不至于沦为暴力。这就是"礼之用，和为贵"的精神</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">为了显示贵族的特权</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">为了训练士兵</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ====== 答疑解惑 ====== -->
 
@@ -440,11 +280,11 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">💬 常见问题</h2>
         <div class="slide-card__body">
-            <div class="faq-item" style="margin-bottom:1.2rem;">
+            <div class="faq-item" style="margin-bottom:var(--ds-space-5);">
                 <p><strong>❓ "君子不争"是不是太消极了？会不会让人失去进取心？</strong></p>
                 <p>孔子的"不争"不是放弃进取，而是<strong>换一种进取方式。</strong><br><br>① <strong>不争利益，争道义：</strong>君子不争名利，但争"当仁不让""见义勇为"——这是更高层次的进取。<br><br>② <strong>不争眼前，争长远：</strong>争名夺利可能短期有效，但会破坏关系、亏损品德；不争名利、专心修身，反而能得到真正的尊重和机会。<br><br>③ <strong>用正确的方式竞争：</strong>如果一定要竞争，君子"揖让而升，下而饮"——公开、公平、有礼地竞争，胜负都有风度。<strong>孔子的"不争"是积极的不争，不是消极退缩。</strong></p>
             </div>
-            <div class="faq-item" style="margin-bottom:1.2rem;">
+            <div class="faq-item" style="margin-bottom:var(--ds-space-5);">
                 <p><strong>❓ 现代社会强调竞争，"君子无所争"是否过时了？</strong></p>
                 <p>孔子的"君子无所争"不是反对竞争，而是<strong>反对无礼的、不公正的竞争。</strong><br><br>现代社会需要竞争——竞争促进创新，推动进步。但现代社会的竞争也出现了很多问题：<strong>暗箱操作、不公平竞争、赢了比赛输了人品……</strong>孔子的"君子之争"给我们提供了答案：竞争必须遵循公开、平等、有礼的规则；胜负必须有风度；失败后要反求诸己，而不是怨天尤人。<strong>"其争也君子"——这才是竞争中应有的风度。</strong></p>
             </div>
@@ -462,22 +302,22 @@
         <h2 class="slide-card__heading">🌟 生活应用</h2>
         <div class="slide-card__body">
             <p>孔子"君子之争"的思想，穿越2500年，对现代人依然有深刻启示——</p>
-            <div class="app-grid" style="display:grid;gap:0.8rem;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:1rem;">
+            <div class="app-grid" style="display:grid;gap:var(--ds-space-3);">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🏆 体育比赛：友谊第一，比赛第二</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">射礼的三个规则（公开透明、平等尊重、胜负有礼）与现代体育精神高度一致。现代比赛中，赛前握手、赛中公平、赛后致敬——这是"其争也君子"的现代版本。胜负是暂时的，风度是永久的。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">射礼的三个规则（公开透明、平等尊重、胜负有礼）与现代体育精神高度一致。现代比赛中，赛前握手、赛中公平、赛后致敬——这是"其争也君子"的现代版本。胜负是暂时的，风度是永久的。</p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>💼 职场竞争：公平竞争，反求诸己</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">职场竞争中，公开、公平、有序的竞争是健康的；但竞争失败后，不应该抱怨别人（"领导偏心""同事使绊子"），而应该反思自己是否准备充分、能力是否足够——这才是"反求诸己"的智慧。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">职场竞争中，公开、公平、有序的竞争是健康的；但竞争失败后，不应该抱怨别人（"领导偏心""同事使绊子"），而应该反思自己是否准备充分、能力是否足够——这才是"反求诸己"的智慧。</p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🎓 学业竞争：胜不骄，败不馁</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">考试、竞赛、评比——学业中处处有竞争。考好了不骄傲（"承让"），考不好不气馁（"反求诸己"）。每一次考试都是一面镜子：不是为了分出高下，而是为了发现自己不足、持续进步。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">考试、竞赛、评比——学业中处处有竞争。考好了不骄傲（"承让"），考不好不气馁（"反求诸己"）。每一次考试都是一面镜子：不是为了分出高下，而是为了发现自己不足、持续进步。</p>
                 </div>
-                <div style="background:var(--purple-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🤝 人际关系：有所争，有所不争</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">人际交往中，有些事值得争（真诚、尊严、正义），有些事不值得争（面子、输赢、意气）。"当仁不让"——涉及原则的事不退让；"揖让而升"——不涉及原则的事不计较。这才是"君子有所争，有所不争"的智慧。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">人际交往中，有些事值得争（真诚、尊严、正义），有些事不值得争（面子、输赢、意气）。"当仁不让"——涉及原则的事不退让；"揖让而升"——不涉及原则的事不计较。这才是"君子有所争，有所不争"的智慧。</p>
                 </div>
             </div>
         </div>
@@ -498,7 +338,7 @@
             <p><strong>竞争本能vs礼让精神。</strong><br>射礼把"竞争"和"礼让"统一起来：竞争前揖让（相互尊重），竞争中全力以赴（公平竞争），竞争后对饮（胜负有礼）。<strong>这不是削弱竞争，而是用礼让规范竞争——使竞争不至于演变成斗争。</strong></p>
             <p><strong>第四层辩证：结果vs过程</strong></p>
             <p><strong>重视结果（胜负）vs 重视过程（风度）。</strong><br>射礼不仅看结果（命中与否），更看过程（是否正己、是否中礼）。失败后"反求诸己"——重视从失败中学到什么，而不是纠结于失败本身。<strong>过程比结果更重要，风度比胜负更永久。</strong></p>
-            <p style="text-align:center;margin-top:0.5rem;"><strong>一句话归总：<br>君子无所争，必也射乎——<br>揖让而升，下而饮，其争也君子。<br><br>争与不争，是儒家的辩证智慧：<br>不争利益，争道义；<br>不争眼前，争长远；<br>不争胜负，争风度；<br>不争结果，争过程。<br><br>既能竞争，又能不争；<br>既能争胜，又能不失风度——<br>这就是"其争也君子"：<br>把竞争的武器引入礼仪的程式，<br>借以表达人之理性对武器的制约和平衡；<br>把好胜的本能升华为君子的人格，<br>借以实现从"小人"到"君子"的修养。<br>礼之用，和为贵；<br>射以礼成，君子不争。</strong></p>
+            <p style="text-align:center;margin-top:var(--ds-space-2);"><strong>一句话归总：<br>君子无所争，必也射乎——<br>揖让而升，下而饮，其争也君子。<br><br>争与不争，是儒家的辩证智慧：<br>不争利益，争道义；<br>不争眼前，争长远；<br>不争胜负，争风度；<br>不争结果，争过程。<br><br>既能竞争，又能不争；<br>既能争胜，又能不失风度——<br>这就是"其争也君子"：<br>把竞争的武器引入礼仪的程式，<br>借以表达人之理性对武器的制约和平衡；<br>把好胜的本能升华为君子的人格，<br>借以实现从"小人"到"君子"的修养。<br>礼之用，和为贵；<br>射以礼成，君子不争。</strong></p>
         </div>
     </div>
 </section>
@@ -509,104 +349,79 @@
         <h2 class="slide-card__heading">📖 课程总结</h2>
         <div class="slide-card__body">
             <p>今天我们一起品读了《八佾》篇的第七章——</p>
-            <p style="font-size:1.0rem;font-weight:700;text-align:center;margin:1rem 0;">
+            <p style="font-size:1.0rem;font-weight:700;text-align:center;margin:var(--ds-space-4) 0;">
                 "君子无所争，必也射乎！<br>揖让而升，下而饮，其争也君子。"
             </p>
             <p>回顾本课要点：</p>
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.4rem;margin:0.8rem 0;">
-                <div style="background:var(--red-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--ds-space-2);margin:var(--ds-space-3) 0;">
+                <div style="background:var(--ds-color-error-bg);border-radius:var(--ds-radius-lg);padding:var(--ds-space-2);text-align:center;font-size:0.82rem;">
                     <strong>君子不争名利</strong><br>但争当仁不让
                 </div>
-                <div style="background:var(--purple-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-lg);padding:var(--ds-space-2);text-align:center;font-size:0.82rem;">
                     <strong>其争也君子</strong><br>公开、平等、有礼
                 </div>
-                <div style="background:var(--green-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-lg);padding:var(--ds-space-2);text-align:center;font-size:0.82rem;">
                     <strong>反求诸己</strong><br>发而不中，不怨人
                 </div>
             </div>
             <p><strong>在八佾篇中的位置：</strong>本章为第七章，是八佾篇从"批判僭礼"转向"正面倡导"的重要转折。前六章（第一章至第六章）主要批评僭礼行为（八佾舞于庭、以雍彻、人而不仁、林放问礼、夷狄之有君、季氏旅于泰山）——都是"破"。本章则正面论述"君子之争"的应有风范——是"立"。<strong>从"破"到"立"，从批判到倡导，八佾篇完成了从"礼不容乱"到"礼以成君子"的升华。</strong></p>
-            <div class="original-text" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-top:1rem;text-align:center;">
+            <div class="original-text" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-top:var(--ds-space-4);text-align:center;">
                 <p style="font-size:1.1rem;font-weight:700;">📜 原文重温</p>
                 <p style="font-size:0.9rem;">子曰："君子无所争，必也射乎！<br>揖让而升，下而饮，其争也君子。"</p>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>✨ <strong>课后小挑战：</strong>想一想，在你的生活和学习中，有哪些竞争是"君子之争"？有哪些竞争是"小人之争"？下一次面临竞争时，试着用射礼的三个规则要求自己：<strong>赛前相互尊重（揖让），赛中全力以赴（正己），赛后有风度地面对结果（反求诸己）。</strong></p>
             </div>
         </div>
     </div>
 </section>
 
+    <!-- ====== 结束页 ====== -->
+    <section class="slide end-slide" data-section="review">
+        <div class="cover-ornament"></div>
+        <h2 class="ds-display">谢谢大家</h2>
+        <div class="cover-ornament"></div>
+        <div class="end-quote">
+            "学而时习之，不亦说乎"<br>
+            <span style="font-size:0.875rem;color:var(--ds-color-muted);">—— 孔子</span>
+        </div>
+        <div class="cover-seal">国学</div>
+    </section>
+
 </main>
+</div><!-- slide-viewport -->
 
 <script>
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-const pageIndicator = document.getElementById('page-indicator');
-const prevBtn = document.getElementById('nav-prev');
-const nextBtn = document.getElementById('nav-next');
-const dotsRow = document.getElementById('dots-row');
-
-for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('span');
-    dot.className = 'dot';
-    dot.dataset.index = i;
-    dot.addEventListener('click', function() { goToSlide(parseInt(this.dataset.index)); });
-    dotsRow.appendChild(dot);
-}
-
-function goToSlide(index) {
-    if (index < 0 || index >= totalSlides) return;
-    currentSlide = index;
-    slides.forEach((s, i) => { s.classList.toggle('active', i === index); });
-    const section = slides[index].dataset.section;
-    let actualPage = 0, totalInSection = 0;
-    slides.forEach((s, i) => {
-        if (s.dataset.section === section) { totalInSection++; if (i <= index) actualPage++; }
-    });
-    let label = ''; if (section === 'lecture') label = '📖 讲义'; else if (section === 'quiz') label = '✏️ 测验'; else label = '💬 答疑解惑';
-    pageIndicator.textContent = `${label} ${actualPage}/${totalInSection}`;
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index === totalSlides - 1;
-    document.querySelectorAll('.ds-tab').forEach(t => t.classList.toggle('active', t.dataset.section === section));
-    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === index));
-}
-
-prevBtn.addEventListener('click', function() { goToSlide(currentSlide - 1); });
-nextBtn.addEventListener('click', function() { goToSlide(currentSlide + 1); });
-document.querySelectorAll('.ds-tab').forEach(tab => {
-    tab.addEventListener('click', function() {
-        for (let i = 0; i < slides.length; i++) {
-            if (slides[i].dataset.section === this.dataset.section) { goToSlide(i); break; }
-        }
-    });
-});
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { if (currentSlide < totalSlides - 1) goToSlide(currentSlide + 1); }
-    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { if (currentSlide > 0) goToSlide(currentSlide - 1); }
-});
-document.getElementById('fullscreen-btn').addEventListener('click', function() {
-    if (!document.fullscreenElement) { document.documentElement.requestFullscreen(); this.querySelector('.ds-btn-nav__icon').textContent = '⛶✕'; this.querySelector('.ds-btn-nav__text').textContent = '退出'; }
-    else { document.exitFullscreen(); this.querySelector('.ds-btn-nav__icon').textContent = '⛶'; this.querySelector('.ds-btn-nav__text').textContent = '全屏'; }
-});
-
-function checkAnswer(el) {
-    const question = el.closest('.quiz-question');
-    const options = question.querySelectorAll('.quiz-option');
-    const feedback = question.querySelector('.quiz-feedback');
-    options.forEach(opt => { opt.style.pointerEvents = 'none'; if (opt.dataset.correct) opt.classList.add('correct'); });
-    el.classList.add(el.dataset.correct ? 'correct' : 'incorrect');
-
-    if (el.dataset.correct) { feedback.style.display = 'block'; feedback.style.color = 'var(--green-700)'; feedback.textContent = '✅ 回答正确！很棒！'; }
-    else {
-        feedback.style.display = 'block'; feedback.style.color = 'var(--red-700)';
-        let ct = ''; options.forEach(o => { if (o.dataset.correct) ct = o.querySelector('.quiz-option-text').textContent; });
-        feedback.textContent = `❌ 答错了。正确答案是：${ct}`;
-    }
-}
-
-goToSlide(0);
+    window.GUOXUE_COURSE_ID = '39-jun-zi-wu-suo-zheng';
+const QUIZ = [
+  {q: '1. "君子无所争，必也射乎"是什么意思？', opts: ['君子没有什么可与别人争的事情。如果一定要说有什么争的，那就是射箭比赛（射礼）了吧！射礼是古代六艺之一，是将军事训练的射箭纳入礼仪程式的君子修身活动——儒家认为，如果君子一定要竞争，那就是在射礼上堂堂正正地比试', '君子不应该争强好胜，所以射箭比赛不需要参加', '君子之间的竞争主要是射箭比赛', '君子不喜欢任何形式的竞争'], ans: 0, exp: '通译：孔子说："君子没有什么可与别人争的事情'},
+  {q: '2. "揖让而升，下而饮"描述的是什么场景？', opts: ['朋友之间的饮酒礼节', '射礼开始前，双方相互作揖礼让，然后登堂比射；射毕下堂，胜者请负者饮酒，负者先饮，胜者陪饮。揖让——比赛前相互尊重；下而饮——比赛后胜负有礼。这不是惩罚，而是胜者对负者的关心和鼓励，期待对方日后进步', '宫廷宴会上的礼节', '祭祀活动中的礼节'], ans: 1, exp: '负者先饮，胜者陪饮——这不是"惩罚"，而是胜者对负者的关心和鼓励，期待日后加强锻炼、取得进步'},
+  {q: '3. 射礼是六艺之一，与军事训练的射箭有什么不同？', opts: ['射礼比军事射箭更注重武力', '军事射箭强调勇敢和武力；儒家射礼不强调武力，而是"饰之以礼乐"——以礼乐包装竞争，寓教于射。射礼的核心是"观盛德"：举动中礼、容仪合度至为重要。射箭只是外在表现，真正考察的是道德修养。《礼记·射义》说"射者，仁之道也"——射礼的本质是仁道，不是武力', '射礼不需要任何技术', '射礼是专门为战争训练的'], ans: 1, exp: '射以观盛德：射礼中，举动中礼、容仪合度至为重要——射箭只是外在表现，真正考察的是道德修养'},
+  {q: '4. 为什么君子"无所争"？', opts: ['君子不争名利，因为真正的君子有更强的自控力，能管住内心的欲望，享受生命本身的喜悦和满足——因此不必与他人争抢。子贡说"夫子温、良、恭、俭、让以得之"——有德行，自然有人把机会送给你，无需争抢。但君子也有"当仁不让""见义勇为"的时候——争道义，不争利益。这是不争的智慧，也是避祸趋吉的方法', '君子太弱了，不敢争', '君子没有竞争的能力', '君子认为竞争是错误的'], ans: 0, exp: '君子无所争"君子不争，避祸趋吉的智慧争强斗狠的危害：①破坏风气——争名夺利、赞己毁他，破坏社会风气②结下冤仇——争强斗狠，容易与他人结怨③亏损品德——争名夺利，亏损自己的品德④失去助益……'},
+  {q: '5. 射礼中"下而饮"的"饮"是什么意思？是惩罚吗？', opts: ['输的人必须喝酒作为惩罚', '"下而饮"：射礼结束后，由胜者（免于饮酒者）为负者斟酒请饮，负者先饮，胜者陪饮。这不是"惩罚"，而是胜者对负者的关心和鼓励。在物资匮乏的春秋时期，酒是尊贵之物，胜者把喝酒的机会让给负者，体现了仁爱之心和谦逊之德——胜者说"承让"，负者说"佩服"，竞争结束，友谊仍在', '喝酒是比赛的奖励', '喝酒是比赛失败的耻辱'], ans: 1, exp: '负者先饮，胜者陪饮——这不是"惩罚"，而是胜者对负者的关心和鼓励，期待日后加强锻炼、取得进步'},
+  {q: '6. "反求诸己"是什么意思？在射礼中如何体现？', opts: ['反省别人的错误', '"反求诸己"：失败后不抱怨别人，而是反过来从自己身上找原因。孟子说："仁者如射，射者正己而后发；发而不中，不怨胜己者，反求诸己而已矣。"射礼中的体现：①正己而后发——射箭前先端正自己的心态和行为；②发而不中，不怨胜己者——失败后不抱怨胜过自己的人；③反求诸己——反思自己是否准备充分、方法是否正确。每一次失败，都是自我提升的机会', '把责任推给自己', '向别人请教射箭技术'], ans: 1, exp: '不怨胜己者：失败后，不抱怨胜过自己的人'},
+  {q: '7. 射礼的哪一点与现代体育精神"友谊第一，比赛第二"高度一致？', opts: ['射礼强调"竞争中有礼让，礼让中有竞争"——赛前相互作揖（尊重对手），赛中全力以赴（公平竞争），赛后对饮（胜负有礼）。竞争结束，友谊仍在——这与现代体育"友谊第一，比赛第二"高度一致。孔子2500年前提出的"君子之争"，与现代体育精神若合符节', '射礼不重视输赢', '射礼没有竞争性', '射礼与现代体育完全不同'], ans: 0, exp: '与现代体育精神的对应：射礼的三个规则与现代体育精神高度一致：①公开透明——现代体育比赛有裁判、有观众、有记录，胜负有据可查②平等尊重……'},
+  {q: '8. 本章在八佾篇中有什么特殊地位？与前几章有什么联系？', opts: ['本章与前几章一样，都是批评僭礼', '本章是八佾篇从"批判僭礼"转向"正面倡导"的重要转折。前六章（第一至六章）主要批评僭礼行为：八佾舞于庭、三家以雍彻、人而不仁、林放问礼、夷狄之有君、季氏旅于泰山——都是批判礼崩乐坏。本章则正面论述"君子之争"的应有风范：君子不争名利，但有当仁不让、见义勇为之争；君子之争必须遵循公开、平等、有礼的规则；竞争失败则反求诸己。这是八佾篇从"破"到"立"的转折', '本章与前几章完全无关', '本章是八佾篇的结尾'], ans: 1, exp: '君子之争，必须遵循公开、平等、有礼的规则射礼把"竞争"和"礼让"统一起来'},
+  {q: '9. 君子"争"什么？"不争"什么？', opts: ['君子什么都争，什么都不争', '君子"不争"名利、地位、权力——因为真正的君子有德行，自然有人把机会送给你，无需争抢；争强斗狠还会破坏风气、结下冤仇、亏损品德。君子"争"道义——当仁不让、见义勇为，这是君子的底线和担当。这与"争"利益不同：争利益是自私的，争道义是无私的。君子不争利益，但争道义——这才是"君子有所争，有所不争"', '君子只争名，不争利', '君子只争利，不争名'], ans: 1, exp: '子贡说："夫子温、良、恭、俭、让以得之"——有德行，自然有人把机会送给你，无需争抢'},
+  {q: '10. 射礼将竞争的武器（弓箭）引入礼仪程式，有什么深刻含义？', opts: ['为了展示武力', '将斗战之工具（弓箭）引入礼仪的程式中，借以表达人之理性对于武器的制约和平衡——这是中华礼乐文明最令人感动之处。射礼告诉人们：竞争不可回避，但可以用礼让规范竞争；力量不可放弃，但可以用礼乐制约力量。儒家的高明之处在于：不回避人性中的竞争本能，但用"礼"来引导它、规范它、升华它——使竞争不至于演变成斗争，使力量不至于沦为暴力。这就是"礼之用，和为贵"的精神', '为了显示贵族的特权', '为了训练士兵'], ans: 1, exp: '礼乐文明最令人感动之处：将斗战之工具（弓箭）引入礼仪的程式中，借以表达人之理性对于武器的制约和平衡——这就是中华礼乐文明最令人感动的地方'},
+];
+window.GUOXUE_QUIZ_OVERRIDE = QUIZ;
 </script>
+<script src="../../assets/js/slide-engine.js?v=29f633f"></script>
 
+<!-- 底部进度条 -->
+<div class="progress-bar-bottom">
+    <div class="progress-bar-fill" id="progress-fill" style="width:4%"></div>
+</div>
+
+<!-- 键盘提示 -->
+<div class="kbd-hint">
+    <span class="kbd">←</span><span class="kbd">→</span> 翻页
+    <span style="margin-left:8px"><span class="kbd">Space</span> 下一页</span>
+</div>
+
+<script src="../../assets/js/auth-email.js" defer></script>
+<script src="../../assets/js/auth.js" defer></script>
+<script src="../../assets/js/api-client.js" defer></script>
 </body>
 </html>

@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="../../assets/css/ds-design-system.css?v=29f633f">
 </head>
 <body>
+<a href="#slide-container" class="skip-link">跳转到主内容</a>
 
 <div class="bg-layer" aria-hidden="true"></div>
 <div class="ink-dot ink-dot-1" aria-hidden="true"></div>
@@ -49,22 +50,23 @@
     </div>
 </nav>
 
-<main class="ds-slide-container" id="slide-container">
+<div class="slide-viewport">
+<main class="slide-container" id="slide-container">
 
 <!-- ====== 讲义部分 ====== -->
 
 <!-- 1. 标题页 -->
-<section class="slide" data-section="lecture" data-index="0">
+<section class="slide active" data-section="lecture" data-index="0">
     <div class="slide-card slide-card--cover">
         <div class="slide-card__body slide-card__body--center">
             <div class="lesson-number"><small>第33课 · 《论语·为政》第二十章</small></div>
             <h1 class="lesson-title" style="font-size:1.3rem;">临之以庄<br>孝慈举善</h1>
-            <p class="lesson-subtitle" style="font-size:1.0rem;color:var(--blue-700);">使民敬忠以劝<br>为政者以身作则的三大要诀</p>
-            <div class="quote-block" style="margin-top:1.5rem;">
+            <p class="lesson-subtitle" style="font-size:1.0rem;color:var(--ds-color-info);">使民敬忠以劝<br>为政者以身作则的三大要诀</p>
+            <div class="quote-block" style="margin-top:var(--ds-space-6);">
                 <p style="font-size:0.88rem;line-height:2.2;">
-                    <ruby>季<rt>jì</rt></ruby><ruby>康<rt>kāng</rt></ruby><ruby>子<rt>zǐ</rt></ruby><ruby>问<rt>wèn</rt></ruby>：<br>
+                    <ruby lang="zh-Hans">季<rt>jì</rt></ruby><ruby lang="zh-Hans">康<rt>kāng</rt></ruby><ruby lang="zh-Hans">子<rt>zǐ</rt></ruby><ruby lang="zh-Hans">问<rt>wèn</rt></ruby>：<br>
                     "使民敬、忠以劝，如之何？"<br><br>
-                    <ruby>子<rt>zǐ</rt></ruby>曰：<br>
+                    <ruby lang="zh-Hans">子<rt>zǐ</rt></ruby>曰：<br>
                     "临之以庄，则敬；<br>孝慈，则忠；<br>举善而教不能，则劝。"
                 </p>
             </div>
@@ -80,14 +82,14 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📜 原文呈现</h2>
         <div class="slide-card__body">
-            <div class="original-text" style="background:var(--amber-100);border-radius:12px;padding:1.5rem;text-align:center;">
-                <p style="font-size:1.2rem;font-weight:700;margin-bottom:1rem;">《论语·为政》第二十章</p>
+            <div class="original-text" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-6);text-align:center;">
+                <p style="font-size:1.2rem;font-weight:700;margin-bottom:var(--ds-space-4);">《论语·为政》第二十章</p>
                 <p style="font-size:1.0rem;line-height:2.0;">季康子问："使民敬、忠以劝，如之何？"子曰："临之以庄，则敬；孝慈，则忠；举善而教不能，则劝。"</p>
             </div>
-            <div class="translation-box" style="background:var(--gray-100);border-radius:12px;padding:1.2rem;margin-top:1rem;">
+            <div class="translation-box" style="background:var(--ds-color-surface);border-radius:var(--ds-radius-xl);padding:var(--ds-space-5);margin-top:var(--ds-space-4);">
                 <p><strong>🔍 通译：</strong>季康子问："要让民众恭敬、忠诚而又互相劝勉向善，应该怎么做？"孔子说："你以庄重的态度面对民众，他们自然就恭敬；你孝顺父母、慈爱百姓，他们自然就忠诚；你举用善良的人、教育能力不足的人，民众自然就互相劝勉向善了。"</p>
             </div>
-            <div class="tip-box" style="background:var(--blue-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>📌 <strong>本章特色：</strong>季康子问的是<strong>"如何让民众……"</strong>（使），他想要的是<strong>控制民众的方法</strong>。但孔子的回答全部指向<strong>统治者自己应该怎么做</strong>——你庄重，民自敬；你孝慈，民自忠；你举善教不能，民自劝。<strong>你想要什么效果，就先把自己做成那个样子。</strong>这是孔子"为政以德"思想最具体的表达。</p>
             </div>
         </div>
@@ -100,33 +102,33 @@
         <h2 class="slide-card__heading">📖 字词梳理 · 季康子、敬、忠、劝、临、庄、孝慈、举善</h2>
         <div class="slide-card__body">
             <p><strong>本课字词：</strong></p>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:1rem 0;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:0.9rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-space-3);margin:var(--ds-space-4) 0;">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">季康子（jì kāng zǐ）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>季孙肥，谥号"康"</strong>，鲁国大夫，季氏家族的掌权者。<strong>"三桓"之一</strong>，身份敏感——上节课哀公问政是因为政权被三桓把持，而季康子正是三桓的核心人物。他多次向孔子问政（包括后面还有"季康子问政于孔子"）。孔子既为鲁哀公顾问，也回答季康子的问政，展现了<strong>因材施教、不偏不倚</strong>的态度。</p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>季孙肥，谥号"康"</strong>，鲁国大夫，季氏家族的掌权者。<strong>"三桓"之一</strong>，身份敏感——上节课哀公问政是因为政权被三桓把持，而季康子正是三桓的核心人物。他多次向孔子问政（包括后面还有"季康子问政于孔子"）。孔子既为鲁哀公顾问，也回答季康子的问政，展现了<strong>因材施教、不偏不倚</strong>的态度。</p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;">
+                <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">敬 / 忠 / 劝</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>敬：恭敬、尊重。</strong>不是表面服从，而是发自内心的敬意。<br><strong>忠：忠诚、尽心竭力。</strong>不是被迫顺从，而是心甘情愿为国家和共同利益努力。<br><strong>劝：劝勉、相互鼓励向善。</strong>注意这里的"劝"不是劝说的意思，而是<strong>互相勉励、自发向善</strong>——民众之间彼此鼓励去做好的事情。</p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>敬：恭敬、尊重。</strong>不是表面服从，而是发自内心的敬意。<br><strong>忠：忠诚、尽心竭力。</strong>不是被迫顺从，而是心甘情愿为国家和共同利益努力。<br><strong>劝：劝勉、相互鼓励向善。</strong>注意这里的"劝"不是劝说的意思，而是<strong>互相勉励、自发向善</strong>——民众之间彼此鼓励去做好的事情。</p>
                 </div>
             </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:0.5rem 0;">
-                <div style="background:var(--green-100);border-radius:12px;padding:0.9rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-space-3);margin:var(--ds-space-2) 0;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">临 / 庄</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>临：面对、对待。</strong><strong>庄：庄重、严肃。</strong><strong>"临之以庄"= 以庄重的态度面对民众。</strong>不是高高在上的威严，而是<strong>对自己身份和职责的郑重态度</strong>——认真对待每一件事、每一个人。</p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>临：面对、对待。</strong><strong>庄：庄重、严肃。</strong><strong>"临之以庄"= 以庄重的态度面对民众。</strong>不是高高在上的威严，而是<strong>对自己身份和职责的郑重态度</strong>——认真对待每一件事、每一个人。</p>
                 </div>
-                <div style="background:var(--purple-100);border-radius:12px;padding:0.9rem;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">孝慈（xiào cí）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>孝：孝顺父母；慈：慈爱子女/百姓。</strong>这里是<strong>两个层面的示范</strong>：对上尽孝（家庭伦理），对下施慈（治理伦理）。统治者自己做到孝慈，上行下效，民众自然感受得到这份真诚，从心底产生忠诚。</p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>孝：孝顺父母；慈：慈爱子女/百姓。</strong>这里是<strong>两个层面的示范</strong>：对上尽孝（家庭伦理），对下施慈（治理伦理）。统治者自己做到孝慈，上行下效，民众自然感受得到这份真诚，从心底产生忠诚。</p>
                 </div>
             </div>
-            <div style="margin:0.5rem 0;">
-                <div style="background:var(--red-100);border-radius:12px;padding:0.9rem;">
+            <div style="margin:var(--ds-space-2) 0;">
+                <div style="background:var(--ds-color-error-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">举善而教不能（jǔ shàn ér jiào bù néng）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>举善：选拔善良、有德行的人。</strong>与上节课"举直"意思相近。<strong>教不能：教育能力不足、德行不够的人。</strong>——不是只扶上好的人不理会其他人，而是<strong>提拔好人作为榜样，教育不够好的人让他们进步</strong>。这样一来，人人都有向上的动力（劝）。</p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>举善：选拔善良、有德行的人。</strong>与上节课"举直"意思相近。<strong>教不能：教育能力不足、德行不够的人。</strong>——不是只扶上好的人不理会其他人，而是<strong>提拔好人作为榜样，教育不够好的人让他们进步</strong>。这样一来，人人都有向上的动力（劝）。</p>
                 </div>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.7rem;">
+            <div class="tip-box" style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-2);">
                 <p>💡 <strong>结构之美：</strong>一问三答，一一对应——"敬↔庄"（态度对应）、"忠↔孝慈"（情感对应）、"劝↔举善教不能"（行动对应）。<strong>季康子问"使民"（让民众如何），孔子答的都是"为己"（自己应先如何）。</strong>三个回答层层递进：从外在态度（庄）→内在情感（孝慈）→具体行动（举善教不能）。</p>
             </div>
         </div>
@@ -138,18 +140,18 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 一：季康子是谁？他问这个问题有何深意？</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.05rem;font-weight:700;">"季康子问：'使民敬、忠以劝，如之何？'"</p>
             </div>
             <p><strong>季康子的身份非常特殊。</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:var(--ds-space-2) 0;">
                 <p style="margin:0;font-size:0.92rem;">季康子，姓季孙，名肥，"康"是谥号。他是鲁国大夫，<strong>季氏家族的掌权者</strong>。鲁国政权被"三桓"（孟孙氏、叔孙氏、季孙氏）把持，而季氏又是三桓中最强大的。季康子实际上是一个<strong>权臣</strong>——鲁哀公的权威旁落，真正的权力在季康子这样的大夫手中。<br><br>有意思的是，<strong>上一课的哀公刚刚问过"何为则民服"，现在季康子也来问"使民敬忠以劝"。</strong>两人问的都是"如何控制民众"，但立场完全不同：哀公是想恢复国君的权威，季康子是想强化大夫的统治。孔子对两人的回答也不同——对哀公讲"举直错枉"（用人之道），对季康子讲"临庄孝慈"（修身之道）。<strong>同一场合、同一问题，因人而异——这就是孔子的"因材施教"。</strong></p>
             </div>
             <p><strong>季康子的三个诉求：</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin:var(--ds-space-2) 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>使民敬→</strong> 让民众对当权者恭敬有礼<br><strong>使民忠→</strong> 让民众对当权者忠诚不二<br><strong>使民劝→</strong> 让民众之间互相劝勉向善、积极生产<br><br>季康子的这个问题，说到底是<strong>"我怎么才能更好地统治民众"</strong>。他想要的是操控之术，但孔子给的却是<strong>修身之道</strong>。</p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-2);">
                 <p>📌 <strong>对比上一课：</strong>哀公问"服"，孔子答"用人"；季康子问"敬忠劝"，孔子答"修身"——<strong>两人的身份不同，孔子的答案取向也不同。</strong>对国君讲用人（大局观），对权臣讲修身（自我约束）。这就是孔子作为教育家的高明之处——同一部《论语》，对不同的人说不同的话，但核心始终不变：<strong>先修己，后治人。</strong></p>
             </div>
         </div>
@@ -161,18 +163,18 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 二：「临之以庄，则敬」</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.0rem;font-weight:700;">"临之以庄，则敬"</p>
             </div>
             <p><strong>季康子想要"民敬"——民众的恭敬。孔子给他的方法：你先把姿态放"庄"。</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:var(--ds-space-2) 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>"临"：</strong>面对。统治者如何面对民众？<br><strong>"庄"：</strong>庄重。不是严厉，不是嬉笑，而是<strong>郑重其事、不轻浮、不随便</strong>。<br><br>孔子说：<strong>当你以庄重的态度面对民众时，民众自然就恭敬了。</strong><br><br>这个逻辑是：你对民众认真，民众对你认真；你把自己端起来了，民众自然就不敢轻视你。<strong>"敬"不是要求出来的，是你自己的态度换来的。</strong></p>
             </div>
             <p><strong>"庄"与"威"的不同：</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin:var(--ds-space-2) 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>"威"</strong>是刻意做出来的威严——板着脸、摆谱、让人害怕。<br><strong>"庄"</strong>是由内而外的庄重——认真对待自己的职责、尊重每一个人。<br><br>孔子说的是"临之以庄"而不是"临之以威"——<strong>民众敬你，不是因为你的官威，而是因为你对待事情的态度让人钦佩。</strong>庄重是一种品格，不是一种手段。</p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-2);margin-top:var(--ds-space-2);">
                 <p>📌 <strong>现代启示：</strong>老师、管理者、家长——想要获得别人的尊重，不是靠摆架子、发脾气，而是靠<strong>认真对待每一件小事、每一个人</strong>。你庄重了，别人自然就敬重你。</p>
             </div>
         </div>
@@ -184,21 +186,21 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 三：「孝慈，则忠」</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.05rem;font-weight:700;">"孝慈，则忠"</p>
             </div>
             <p><strong>季康子想要"民忠"——民众的忠诚。孔子给他的方法：你先做到"孝慈"。</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:var(--ds-space-2) 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>"孝"：</strong>你对自己的长辈孝顺，尽到为人子女的本分。<br><strong>"慈"：</strong>你对自己的下属/百姓慈爱，尽到为人上者的本分。<br><br>孔子说：<strong>当你在上尽孝、在下施慈时——民众看到你是这样一个有人情味的人，自然就忠诚于你了。</strong><br><br>这个逻辑是：<strong>忠诚不是靠利益收买或威胁强迫换来的，而是情感共鸣的结果。</strong>你对他人有孝有慈，他人感受到你的真诚，便以忠诚回报。</p>
             </div>
             <p><strong>为什么孝和慈能换来忠？</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin:var(--ds-space-2) 0;font-size:0.92rem;">
                 <p style="margin:0;">① <strong>上行下效——</strong>统治者孝于亲、慈于下，等于给全社会的伦理做了一次示范，民众自然效仿。<br>② <strong>情感纽带——</strong>你慈爱百姓，百姓感受到温暖，"士为知己者死"——这比任何制度都更能拴住人心。<br>③ <strong>信任根基——</strong>一个能对父母尽孝、对百姓施慈的人，不可能是个坏人。民众对他的信任建立在对他人格的认可上。<br><br>注意：孔子没有说"你用法令规定民众必须忠"——他说的是<strong>"你先孝慈，民众自然忠"</strong>。</p>
             </div>
-            <div style="background:var(--red-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;">
-                <p style="font-weight:700;color:var(--red-700);margin:0;font-size:0.9rem;">⚠️ <strong>常见误区：</strong>把"忠"理解成下级对上级的绝对服从、愚忠。孔子讲的"忠"更多是<strong>出于对共同价值的认同而心甘情愿地付出</strong>——不是因为怕你才忠，而是因为认同你才忠。统治者孝慈，是对这种认同最好的培养。</p>
+            <div style="background:var(--ds-color-error-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin:var(--ds-space-2) 0;">
+                <p style="font-weight:700;color:var(--ds-color-error);margin:0;font-size:0.9rem;">⚠️ <strong>常见误区：</strong>把"忠"理解成下级对上级的绝对服从、愚忠。孔子讲的"忠"更多是<strong>出于对共同价值的认同而心甘情愿地付出</strong>——不是因为怕你才忠，而是因为认同你才忠。统治者孝慈，是对这种认同最好的培养。</p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-2);margin-top:var(--ds-space-2);">
                 <p>📌 <strong>现代启示：</strong>做管理者、做领导——想让团队忠诚？先对团队成员有"慈"：关心他们的成长、体恤他们的困难、真诚对待每一个人。"孝"则是你在办公室外的为人——一个对父母不好的人，很难让人真心追随。</p>
             </div>
         </div>
@@ -210,18 +212,18 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 四：「举善而教不能，则劝」</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.05rem;font-weight:700;">"举善而教不能，则劝"</p>
             </div>
             <p><strong>季康子想要"民劝"——民众互相劝勉向善。孔子给他的方法：举善人和教不能。</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:var(--ds-space-2) 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>"举善"：</strong>选拔善良、有德行的人到管理岗位。这和上节课的"举直"一脉相承——用善人当榜样。<br><strong>"教不能"：</strong>教育能力不足、德行不够的人。注意这里不是"惩罚"不能的人，而是"教育"他们。<br><br><strong>举善+教不能，效果是什么？</strong><br>① 善人上位 = 正确的方向被标出来了——大家知道"什么样的人是受认可的"<br>② 不能者被教育 = 给落后的人一个出路和上升通道——"我不行，但老师愿意教我，我还可以进步"<br>③ 两者合一 = <strong>人人都有向上的动力</strong>——这就是"劝"（互相勉励、共同向善）</p>
             </div>
             <p><strong>"劝"的核心机制：</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin:var(--ds-space-2) 0;font-size:0.92rem;">
                 <p style="margin:0;">"劝"不是上面强迫下面做，而是<strong>上下之间、人与人之间形成了一种积极向上的氛围</strong>——大家看到好人得到重用、差的人还有机会被教育，就觉得："我也要努力，我也可以变好。"<br><br>这就是孔子理想中<strong>用教育代替惩罚、用激励代替强制</strong>的治理方式。</p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-2);margin-top:var(--ds-space-2);">
                 <p>📌 <strong>对比：</strong>第十九章"举直错诸枉"讲的是<strong>用人以正</strong>（压制坏人），本章"举善而教不能"讲的是<strong>用人以善和教化</strong>（引导善人、帮助不及的人）——<strong>一个是"正邪分明"，一个是"善能共进"</strong>，都是"举用好人"，但角度不同。</p>
             </div>
         </div>
@@ -234,222 +236,60 @@
         <h2 class="slide-card__heading">🎯 核心思想 · 以身作则：你想要什么，先成为什么</h2>
         <div class="slide-card__body">
             <p>本章以简洁的三段式回答，揭示了为政者<strong>以身作则</strong>的深层逻辑——</p>
-            <div class="core-grid" style="display:grid;gap:0.8rem;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:1rem;">
+            <div class="core-grid" style="display:grid;gap:var(--ds-space-3);">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 临之以庄 → 敬</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">你想要民众对你恭敬？<strong>你先庄重起来。</strong>你对事情认真、对人郑重，民众自然不敢轻慢——"敬"不是求来的，是换来的。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">你想要民众对你恭敬？<strong>你先庄重起来。</strong>你对事情认真、对人郑重，民众自然不敢轻慢——"敬"不是求来的，是换来的。</p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 孝慈 → 忠</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">你想要民众对你忠诚？<strong>你先付出孝慈。</strong>你对上孝顺、对下慈爱，民众感受到这份真诚，自然以忠诚回报——"忠"不是强制出来的，是感化出来的。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">你想要民众对你忠诚？<strong>你先付出孝慈。</strong>你对上孝顺、对下慈爱，民众感受到这份真诚，自然以忠诚回报——"忠"不是强制出来的，是感化出来的。</p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 举善教不能 → 劝</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">你想要民众互相劝勉向善？<strong>先树立榜样、再帮助后进。</strong>善人上位是方向标，教育不能者是成长通道——两者结合，"劝"自然发生。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">你想要民众互相劝勉向善？<strong>先树立榜样、再帮助后进。</strong>善人上位是方向标，教育不能者是成长通道——两者结合，"劝"自然发生。</p>
                 </div>
-                <div style="background:var(--purple-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 总原则：为己而使人自化</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">季康子问<strong>"使民"（让别人如何）</strong>，孔子答<strong>"为己"（自己应先如何）</strong>。这一章是孔子政治哲学中最核心的"身教"原则：<strong>你期待别人做什么，你自己先做到。</strong>统治者的品格是政治最好的政策。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">季康子问<strong>"使民"（让别人如何）</strong>，孔子答<strong>"为己"（自己应先如何）</strong>。这一章是孔子政治哲学中最核心的"身教"原则：<strong>你期待别人做什么，你自己先做到。</strong>统治者的品格是政治最好的政策。</p>
                 </div>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>📚 <strong>延伸思考：</strong>孔子的三段论可以应用在任何关系里——老师对学生：庄重（认真备课）则敬、慈爱学生则忠（学生真心跟从）、表扬好学生+帮助后进生则劝（全班积极向上）。<strong>你希望别人怎么对你，你先怎么对别人。</strong></p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ====== 测验部分 ====== -->
+<!-- ====== 测验部分（slide-engine.js 渲染） ====== -->
 
-<!-- 9. 题1 -->
-<section class="slide" data-section="quiz" data-index="0">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第1题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>1. 本章中"季康子"是谁？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">A</span><span class="quiz-option-text">季孙肥，谥号康，鲁国大夫，"三桓"之一季氏家族的掌权者，多次向孔子问政</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">B</span><span class="quiz-option-text">鲁哀公的儿子</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">孔子的学生</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">齐国的大夫</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
+<section class="slide" data-section="quiz" id="quiz-0"></section>
+<section class="slide" data-section="quiz" id="quiz-1"></section>
+<section class="slide" data-section="quiz" id="quiz-2"></section>
+<section class="slide" data-section="quiz" id="quiz-3"></section>
+<section class="slide" data-section="quiz" id="quiz-4"></section>
+<section class="slide" data-section="quiz" id="quiz-5"></section>
+<section class="slide" data-section="quiz" id="quiz-6"></section>
+<section class="slide" data-section="quiz" id="quiz-7"></section>
+<section class="slide" data-section="quiz" id="quiz-8"></section>
+<section class="slide" data-section="quiz" id="quiz-9"></section>
+    <!-- ====== 测验得分页 ====== -->
+    <section class="slide score-page" data-section="quiz" id="quiz-score">
+        <span class="ds-badge ds-badge--success">测验得分</span>
+        <h2>测验完成！</h2>
+        <div class="score-hero">
+            <div class="score-hero__number" id="score-display">0</div>
+            <div class="score-hero__message" id="score-message">正在计算得分...</div>
+            <div class="score-summary">
+                <p>✅ 答对题数：<b class="b-correct" id="correct-count">0</b> / 10</p>
+                <p>📊 总得分：<b class="b-total" id="total-score">0</b> 分（满分 100 分）</p>
+                <p>📈 正确率：<b class="b-percent" id="score-percent">0%</b></p>
             </div>
+            <button class="retake-btn" id="retake-btn" aria-label="重新答题">↺ 重新答题</button>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- 10. 题2 -->
-<section class="slide" data-section="quiz" data-index="1">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第2题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>2. "使民敬、忠以劝"中"劝"是什么意思？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">劝说、说服</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">劝勉、互相鼓励向善——民众之间自发地积极向上、互相勉励</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">劝阻、禁止</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">劝告、提建议</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- 11. 题3 -->
-<section class="slide" data-section="quiz" data-index="2">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第3题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>3. "临之以庄"中"临"和"庄"分别是什么意思？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">临=临时；庄=村庄</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">临=面对、对待；庄=庄重、严肃——以庄重的态度面对民众（不是摆威严，而是认真对待）</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">临=监督；庄=庄严</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">临=统治；庄=恭敬</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 12. 题4 -->
-<section class="slide" data-section="quiz" data-index="3">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第4题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>4. 孔子说"孝慈，则忠"——为什么孝顺和慈爱民众能带来忠诚？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">因为统治者孝顺父母，民众就会害怕</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">因为统治者孝于亲（上行下效、伦理示范）、慈于下（情感纽带、信任根基）——民众感受到真诚，自然以忠诚回报；"忠"是"孝慈"的情感共鸣，不是靠强制得来的</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">因为不孝不慈会被惩罚</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">因为孝顺的父母会教孩子忠诚</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 13. 题5 -->
-<section class="slide" data-section="quiz" data-index="4">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第5题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>5. "举善而教不能，则劝"——孔子认为怎样才能让民众互相劝勉？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">多发奖金</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">举善（选拔善人做榜样）+ 教不能（教育能力不足的人，给后进者出路）——两者结合，人人都有向上的动力，自然互相勉励</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">严刑峻法</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">取消考试</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 14. 题6 -->
-<section class="slide" data-section="quiz" data-index="5">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第6题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>6. 季康子问的是"使民……"，孔子的回答全部指向什么方向？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">应该加强法令控制民众</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">全部指向"统治者自己应该怎么做"——你想要民敬，你先庄重；你想要民忠，你先孝慈；你想要民劝，你先举善教不能。核心：先修己，后治国</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">应该多给民众好处</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">应该让民众多学习法律</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 15. 题7 -->
-<section class="slide" data-section="quiz" data-index="6">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第7题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>7. 孔子的三段回答"临之以庄→敬 / 孝慈→忠 / 举善教不能→劝"有什么结构性特点？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">没有结构，随便说的</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">一问三答，一一对应，层层递进——从外在态度（庄）→内在情感（孝慈）→具体行动（举善教不能）；并且全是"你先做好自己→民众自然响应"的逻辑</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">三段对应三种不同的管理手段</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">三段是按照时间顺序排列的</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 16. 题8 -->
-<section class="slide" data-section="quiz" data-index="7">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第8题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>8. 本章与上一章（哀公问何为则民服）有什么联系？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">没有联系</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">B</span><span class="quiz-option-text">两章都在讲"使用暴力的方法"</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">C</span><span class="quiz-option-text">两章构成为政篇中"为政者修身"的核心——哀公（国君）问"民服"，孔子答"举直错枉"（用人）；季康子（大夫）问"敬忠劝"，孔子答"庄孝慈教"（修身）——身份不同，答案取向不同，但核心都是"先修己再治人"</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">两章都在讲如何惩罚犯人</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 17. 题9 -->
-<section class="slide" data-section="quiz" data-index="8">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第9题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>9. "举善而教不能"中的"教不能"体现了孔子什么思想？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">能力不行的人要淘汰</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">B</span><span class="quiz-option-text">能力不行的人只能干体力活</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">C</span><span class="quiz-option-text">有教无类、教化为先——对能力不足的人要教育而不是抛弃/惩罚，给后进者一个进步的通道，让每个人都有向上的机会</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">能力不行的人要自己负责</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 18. 题10 -->
-<section class="slide" data-section="quiz" data-index="9">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第10题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>10. 本章对当代管理者和教育者有什么核心启示？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">要严格管控下属</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">B</span><span class="quiz-option-text">多发奖金就能解决一切</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">C</span><span class="quiz-option-text">你想要什么效果，就先把自己做成那个样子——管理者庄重（临庄），下属自然会敬重；管理者关爱下属（慈），团队自然会忠诚；树立好榜样、帮助后进者（举善教不能），团队自然会积极向上、互相勉励。核心就是四个字：以身作则</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">要制定更严格的考核制度</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ====== 答疑解惑 ====== -->
 
@@ -458,11 +298,11 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">💬 常见问题</h2>
         <div class="slide-card__body">
-            <div class="faq-item" style="margin-bottom:1.2rem;">
+            <div class="faq-item" style="margin-bottom:var(--ds-space-5);">
                 <p><strong>❓ 季康子是权臣（三桓之一），孔子为什么还认真回答他？</strong></p>
                 <p>孔子对任何人都抱持<strong>"有教无类"</strong>的态度。季康子的身份确实敏感——他正是导致哀公"民不服"问题的根源之一。但孔子没有因为他是"三桓"就拒绝回答，而是<strong>因材施教：对哀公讲用人（大局观），对季康子讲修身（自我约束）。</strong>对谁都说该说的话、教该教的道理——这是孔子作为教育家的胸怀。孔子并不排斥与掌权者对话，他希望通过<strong>影响掌权者来改善政治</strong>。</p>
             </div>
-            <div class="faq-item" style="margin-bottom:1.2rem;">
+            <div class="faq-item" style="margin-bottom:var(--ds-space-5);">
                 <p><strong>❓ "临之以庄"和"摆架子"有什么区别？</strong></p>
                 <p><strong>"临庄"是由内而外的自重——</strong>我认真对待自己的工作，郑重对待每一个人，不敷衍、不随便。这是一种品格。<strong>"摆架子"是刻意的造作——</strong>我故意板着脸、端着姿态，让别人怕我。两者区别在于：<strong>临庄是为了尊重别人，摆架子是为了让别人尊重自己。</strong>临庄的人，别人真心敬重他；摆架子的人，别人表面敬而内心不以为然。孔子说的"庄"，是前者不是后者。</p>
             </div>
@@ -480,22 +320,22 @@
         <h2 class="slide-card__heading">🌟 生活应用</h2>
         <div class="slide-card__body">
             <p>孔子的三段论不仅是政治哲学，也是生活的智慧——</p>
-            <div class="app-grid" style="display:grid;gap:0.8rem;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:1rem;">
+            <div class="app-grid" style="display:grid;gap:var(--ds-space-3);">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>👔 管理：以身作则是最好的管理</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;"><strong>临庄→敬：</strong>你认真对待工作，下属自然敬重你，而不是靠发火立威。<br><strong>孝慈→忠：</strong>你关心下属的成长和生活，他们自然忠心追随。<br><strong>举善教不能→劝：</strong>你表扬优秀的、帮助后进的，团队自然积极向上。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;"><strong>临庄→敬：</strong>你认真对待工作，下属自然敬重你，而不是靠发火立威。<br><strong>孝慈→忠：</strong>你关心下属的成长和生活，他们自然忠心追随。<br><strong>举善教不能→劝：</strong>你表扬优秀的、帮助后进的，团队自然积极向上。</p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🏫 教育：老师先做到，学生自然学到</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;"><strong>临庄→敬：</strong>老师认真备课、庄重对待每一堂课，学生自然尊敬老师。<br><strong>慈→忠：</strong>老师关爱每一个学生，学生自然愿意听你的话。<br><strong>举善教不能→劝：</strong>表扬好学生、帮助后进生，全班形成积极向上的学风。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;"><strong>临庄→敬：</strong>老师认真备课、庄重对待每一堂课，学生自然尊敬老师。<br><strong>慈→忠：</strong>老师关爱每一个学生，学生自然愿意听你的话。<br><strong>举善教不能→劝：</strong>表扬好学生、帮助后进生，全班形成积极向上的学风。</p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>👨‍👩‍👧‍👦 家庭：榜样是最好的教育</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">想让孩子<strong>敬</strong>重你？你先做一个认真对待生活的人。<br>想让孩子<strong>忠</strong>（真诚）对待家庭？你先对家人尽孝慈爱。<br>想让孩子<strong>劝</strong>（积极向上）？你表扬他的优点、耐心教他不足。<br>——<strong>孩子是最好的镜子，你的样子就是他的方向。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">想让孩子<strong>敬</strong>重你？你先做一个认真对待生活的人。<br>想让孩子<strong>忠</strong>（真诚）对待家庭？你先对家人尽孝慈爱。<br>想让孩子<strong>劝</strong>（积极向上）？你表扬他的优点、耐心教他不足。<br>——<strong>孩子是最好的镜子，你的样子就是他的方向。</strong></p>
                 </div>
-                <div style="background:var(--purple-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🤝 人际关系：你想要什么，先给什么</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">想让朋友<strong>敬重</strong>你？你先庄重对待他们。<br>想获得<strong>忠诚</strong>的友谊？你先付出关怀。<br>想让周围氛围<strong>向上</strong>？你先做个积极的人，同时鼓励和帮助身边的人。<br>——<strong>这不是交易，这是以身作则的自然法则。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">想让朋友<strong>敬重</strong>你？你先庄重对待他们。<br>想获得<strong>忠诚</strong>的友谊？你先付出关怀。<br>想让周围氛围<strong>向上</strong>？你先做个积极的人，同时鼓励和帮助身边的人。<br>——<strong>这不是交易，这是以身作则的自然法则。</strong></p>
                 </div>
             </div>
         </div>
@@ -516,7 +356,7 @@
             <p>孔子在"举善"之外特意加上"教不能"，体现了<strong>不放弃任何一个落后者的理念</strong>。社会要进步，既需要标杆（善人），也需要给后进的人<strong>学习和进步的机会</strong>。如果只有"举善"没有"教不能"，优秀的人越优秀，落后的人越失落，社会反而会撕裂。孔子的<strong>教化思想</strong>在这里体现得淋漓尽致。</p>
             <p><strong>第四层辩证：三段共振（庄→敬 / 孝慈→忠 / 举善教不能→劝）</strong></p>
             <p>三个回答不是零散的，而是<strong>一个闭环</strong>：外在态度（庄→敬）是基础，内在情感（孝慈→忠）是纽带，具体行动（举善教不能→劝）是机制。三者合一，形成一个<strong>完整的治理结构</strong>——你做的、你表现的、你制度的，全都指向一个方向：<strong>为政以德，以身作则。</strong></p>
-            <p style="text-align:center;margin-top:0.5rem;"><strong>一句话归总：<br>季康问使民，孔子答修身：<br>临庄得敬，孝慈得忠，<br>举善教不能，则民劝勉相从。<br>——你想要什么效果，先把自己做成那个样子。</strong></p>
+            <p style="text-align:center;margin-top:var(--ds-space-2);"><strong>一句话归总：<br>季康问使民，孔子答修身：<br>临庄得敬，孝慈得忠，<br>举善教不能，则民劝勉相从。<br>——你想要什么效果，先把自己做成那个样子。</strong></p>
         </div>
     </div>
 </section>
@@ -527,103 +367,79 @@
         <h2 class="slide-card__heading">📖 课程总结</h2>
         <div class="slide-card__body">
             <p>今天我们一起品读了《为政》篇中孔子论为政者以身作则的经典——</p>
-            <p style="font-size:1.0rem;font-weight:700;text-align:center;margin:1rem 0;">
+            <p style="font-size:1.0rem;font-weight:700;text-align:center;margin:var(--ds-space-4) 0;">
                 "季康子问：'使民敬、忠以劝，如之何？'<br>子曰：'临之以庄，则敬；<br>孝慈，则忠；<br>举善而教不能，则劝。'"
             </p>
             <p>回顾本课要点：</p>
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.4rem;margin:0.8rem 0;">
-                <div style="background:var(--blue-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--ds-space-2);margin:var(--ds-space-3) 0;">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-lg);padding:var(--ds-space-2);text-align:center;font-size:0.82rem;">
                     <strong>庄→敬</strong><br>态度为先
                 </div>
-                <div style="background:var(--amber-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;">
+                <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-lg);padding:var(--ds-space-2);text-align:center;font-size:0.82rem;">
                     <strong>孝慈→忠</strong><br>情感为纽
                 </div>
-                <div style="background:var(--green-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-lg);padding:var(--ds-space-2);text-align:center;font-size:0.82rem;">
                     <strong>举善教不能→劝</strong><br>机制为基
                 </div>
             </div>
             <p><strong>在《为政》篇中的位置：</strong>本章为第二十章，紧接第十九章"举直错诸枉"之后——从"用人以正"（正直的人上位）推进到"身为表率"（你自己先做好）。两章构成"为政者"修身治人的完整画面。</p>
-            <div class="original-text" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-top:1rem;text-align:center;">
+            <div class="original-text" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-top:var(--ds-space-4);text-align:center;">
                 <p style="font-size:1.1rem;font-weight:700;">📜 原文重温</p>
                 <p style="font-size:0.9rem;">季康子问："使民敬、忠以劝，如之何？"子曰："临之以庄，则敬；孝慈，则忠；举善而教不能，则劝。"</p>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>✨ <strong>课后小挑战：</strong>这一周试一下"三段论"——对你身边的小伙伴（同学、同事、家人）：<strong>① 以庄重的态度对待他们（不敷衍）② 多一些关心和善意 ③ 看到好的行为就表扬、看到不足就耐心帮助。</strong>看看一周后，周围的气氛会不会更好？<strong>这就是你的"使民敬忠以劝"实验。</strong></p>
             </div>
         </div>
     </div>
 </section>
 
+    <!-- ====== 结束页 ====== -->
+    <section class="slide end-slide" data-section="review">
+        <div class="cover-ornament"></div>
+        <h2 class="ds-display">谢谢大家</h2>
+        <div class="cover-ornament"></div>
+        <div class="end-quote">
+            "学而时习之，不亦说乎"<br>
+            <span style="font-size:0.875rem;color:var(--ds-color-muted);">—— 孔子</span>
+        </div>
+        <div class="cover-seal">国学</div>
+    </section>
+
 </main>
+</div><!-- slide-viewport -->
 
 <script>
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-const pageIndicator = document.getElementById('page-indicator');
-const prevBtn = document.getElementById('nav-prev');
-const nextBtn = document.getElementById('nav-next');
-const dotsRow = document.getElementById('dots-row');
-
-for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('span');
-    dot.className = 'dot';
-    dot.dataset.index = i;
-    dot.addEventListener('click', function() { goToSlide(parseInt(this.dataset.index)); });
-    dotsRow.appendChild(dot);
-}
-
-function goToSlide(index) {
-    if (index < 0 || index >= totalSlides) return;
-    currentSlide = index;
-    slides.forEach((s, i) => { s.classList.toggle('active', i === index); });
-    const section = slides[index].dataset.section;
-    let actualPage = 0, totalInSection = 0;
-    slides.forEach((s, i) => {
-        if (s.dataset.section === section) { totalInSection++; if (i <= index) actualPage++; }
-    });
-    let label = ''; if (section === 'lecture') label = '📖 讲义'; else if (section === 'quiz') label = '✏️ 测验'; else label = '💬 答疑解惑';
-    pageIndicator.textContent = `${label} ${actualPage}/${totalInSection}`;
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index === totalSlides - 1;
-    document.querySelectorAll('.ds-tab').forEach(t => t.classList.toggle('active', t.dataset.section === section));
-    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === index));
-}
-
-prevBtn.addEventListener('click', function() { goToSlide(currentSlide - 1); });
-nextBtn.addEventListener('click', function() { goToSlide(currentSlide + 1); });
-document.querySelectorAll('.ds-tab').forEach(tab => {
-    tab.addEventListener('click', function() {
-        for (let i = 0; i < slides.length; i++) {
-            if (slides[i].dataset.section === this.dataset.section) { goToSlide(i); break; }
-        }
-    });
-});
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { if (currentSlide < totalSlides - 1) goToSlide(currentSlide + 1); }
-    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { if (currentSlide > 0) goToSlide(currentSlide - 1); }
-});
-document.getElementById('fullscreen-btn').addEventListener('click', function() {
-    if (!document.fullscreenElement) { document.documentElement.requestFullscreen(); this.querySelector('.ds-btn-nav__icon').textContent = '⛶✕'; this.querySelector('.ds-btn-nav__text').textContent = '退出'; }
-    else { document.exitFullscreen(); this.querySelector('.ds-btn-nav__icon').textContent = '⛶'; this.querySelector('.ds-btn-nav__text').textContent = '全屏'; }
-});
-
-function checkAnswer(el) {
-    const question = el.closest('.quiz-question');
-    const options = question.querySelectorAll('.quiz-option');
-    const feedback = question.querySelector('.quiz-feedback');
-    options.forEach(opt => { opt.style.pointerEvents = 'none'; if (opt.dataset.correct) opt.classList.add('correct'); });
-    el.classList.add(el.dataset.correct ? 'correct' : 'incorrect');
-    if (el.dataset.correct) { feedback.style.display = 'block'; feedback.style.color = 'var(--green-700)'; feedback.textContent = '✅ 回答正确！很棒！'; }
-    else {
-        feedback.style.display = 'block'; feedback.style.color = 'var(--red-700)';
-        let ct = ''; options.forEach(o => { if (o.dataset.correct) ct = o.querySelector('.quiz-option-text').textContent; });
-        feedback.textContent = `❌ 答错了。正确答案是：${ct}`;
-    }
-}
-
-goToSlide(0);
+    window.GUOXUE_COURSE_ID = '31-shi-min-jing-zhong-yi-quan';
+const QUIZ = [
+  {q: '1. 本章中"季康子"是谁？', opts: ['季孙肥，谥号康，鲁国大夫，"三桓"之一季氏家族的掌权者，多次向孔子问政', '鲁哀公的儿子', '孔子的学生', '齐国的大夫'], ans: 0, exp: '他多次向孔子问政（包括后面还有"季康子问政于孔子"）'},
+  {q: '2. "使民敬、忠以劝"中"劝"是什么意思？', opts: ['劝说、说服', '劝勉、互相鼓励向善——民众之间自发地积极向上、互相勉励', '劝阻、禁止', '劝告、提建议'], ans: 1, exp: '注意这里的"劝"不是劝说的意思，而是互相勉励、自发向善——民众之间彼此鼓励去做好的事情'},
+  {q: '3. "临之以庄"中"临"和"庄"分别是什么意思？', opts: ['临=临时；庄=村庄', '临=面对、对待；庄=庄重、严肃——以庄重的态度面对民众（不是摆威严，而是认真对待）', '临=监督；庄=庄严', '临=统治；庄=恭敬'], ans: 1, exp: '孔子说："你以庄重的态度面对民众，他们自然就恭敬'},
+  {q: '4. 孔子说"孝慈，则忠"——为什么孝顺和慈爱民众能带来忠诚？', opts: ['因为统治者孝顺父母，民众就会害怕', '因为统治者孝于亲（上行下效、伦理示范）、慈于下（情感纽带、信任根基）——民众感受到真诚，自然以忠诚回报；"忠"是"孝慈"的情感共鸣，不是靠强制得来的', '因为不孝不慈会被惩罚', '因为孝顺的父母会教孩子忠诚'], ans: 1, exp: '你对上孝顺、对下慈爱，民众感受到这份真诚，自然以忠诚回报——"忠"不是强制出来的，是感化出来的'},
+  {q: '5. "举善而教不能，则劝"——孔子认为怎样才能让民众互相劝勉？', opts: ['多发奖金', '举善（选拔善人做榜样）+ 教不能（教育能力不足的人，给后进者出路）——两者结合，人人都有向上的动力，自然互相勉励', '严刑峻法', '取消考试'], ans: 1, exp: '这样一来，人人都有向上的动力（劝）'},
+  {q: '6. 季康子问的是"使民……"，孔子的回答全部指向什么方向？', opts: ['应该加强法令控制民众', '全部指向"统治者自己应该怎么做"——你想要民敬，你先庄重；你想要民忠，你先孝慈；你想要民劝，你先举善教不能。核心：先修己，后治国', '应该多给民众好处', '应该让民众多学习法律'], ans: 1, exp: '但孔子的回答全部指向统治者自己应该怎么做——你庄重，民自敬'},
+  {q: '7. 孔子的三段回答"临之以庄→敬 / 孝慈→忠 / 举善教不能→劝"有什么结构性特点？', opts: ['没有结构，随便说的', '一问三答，一一对应，层层递进——从外在态度（庄）→内在情感（孝慈）→具体行动（举善教不能）；并且全是"你先做好自己→民众自然响应"的逻辑', '三段对应三种不同的管理手段', '三段是按照时间顺序排列的'], ans: 1, exp: '孔子直接给出答案：你先做好自己'},
+  {q: '8. 本章与上一章（哀公问何为则民服）有什么联系？', opts: ['没有联系', '两章都在讲"使用暴力的方法"', '两章构成为政篇中"为政者修身"的核心——哀公（国君）问"民服"，孔子答"举直错枉"（用人）；季康子（大夫）问"敬忠劝"，孔子答"庄孝慈教"（修身）——身份不同，答案取向不同，但核心都是"先修己再治人"', '两章都在讲如何惩罚犯人'], ans: 2, exp: '两章构成"为政者"修身治人的完整画面'},
+  {q: '9. "举善而教不能"中的"教不能"体现了孔子什么思想？', opts: ['能力不行的人要淘汰', '能力不行的人只能干体力活', '有教无类、教化为先——对能力不足的人要教育而不是抛弃/惩罚，给后进者一个进步的通道，让每个人都有向上的机会', '能力不行的人要自己负责'], ans: 2, exp: '孔子对任何人都抱持"有教无类"的态度'},
+  {q: '10. 本章对当代管理者和教育者有什么核心启示？', opts: ['要严格管控下属', '多发奖金就能解决一切', '你想要什么效果，就先把自己做成那个样子——管理者庄重（临庄），下属自然会敬重；管理者关爱下属（慈），团队自然会忠诚；树立好榜样、帮助后进者（举善教不能），团队自然会积极向上、互相勉励。核心就是四个字：以身作则', '要制定更严格的考核制度'], ans: 2, exp: '你想要什么效果，就先把自己做成那个样子'},
+];
+window.GUOXUE_QUIZ_OVERRIDE = QUIZ;
 </script>
+<script src="../../assets/js/slide-engine.js?v=29f633f"></script>
 
+<!-- 底部进度条 -->
+<div class="progress-bar-bottom">
+    <div class="progress-bar-fill" id="progress-fill" style="width:4%"></div>
+</div>
+
+<!-- 键盘提示 -->
+<div class="kbd-hint">
+    <span class="kbd">←</span><span class="kbd">→</span> 翻页
+    <span style="margin-left:8px"><span class="kbd">Space</span> 下一页</span>
+</div>
+
+<script src="../../assets/js/auth-email.js" defer></script>
+<script src="../../assets/js/auth.js" defer></script>
+<script src="../../assets/js/api-client.js" defer></script>
 </body>
 </html>
