@@ -49,18 +49,19 @@
     </div>
 </nav>
 
-<main class="ds-slide-container" id="slide-container">
+<div class="slide-viewport">
+<main class="slide-container" id="slide-container">
 
 <!-- ====== 讲义部分 ====== -->
 
 <!-- 1. 标题页 -->
-<section class="slide" data-section="lecture" data-index="0">
+<section class="slide active" data-section="lecture" data-index="0">
     <div class="slide-card slide-card--cover">
         <div class="slide-card__body slide-card__body--center">
             <div class="lesson-number"><small>第43课 · 《论语·八佾》第九章</small></div>
             <h1 class="lesson-title" style="font-size:2rem;"><ruby>夏<rt>xià</rt></ruby><ruby>礼<rt>lǐ</rt></ruby><ruby>吾<rt>wú</rt></ruby><ruby>能<rt>néng</rt></ruby><ruby>言<rt>yán</rt></ruby><ruby>之<rt>zhī</rt></ruby></h1>
-            <p class="lesson-subtitle" style="font-size:1.2rem;color:var(--blue-700);">言必有据 · 文献为证</p>
-            <div class="quote-block" style="margin-top:1.8rem;">
+            <p class="lesson-subtitle" style="font-size:1.2rem;color:var(--ds-color-info);">言必有据 · 文献为证</p>
+            <div class="quote-block" style="margin-top:var(--ds-space-7);">
                 <p style="font-size:1.2rem;font-weight:700;">子曰：</p>
                 <p style="font-size:1.1rem;line-height:2;">
                     "<ruby>夏<rt>xià</rt></ruby><ruby>礼<rt>lǐ</rt></ruby>，<ruby>吾<rt>wú</rt></ruby><ruby>能<rt>néng</rt></ruby><ruby>言<rt>yán</rt></ruby><ruby>之<rt>zhī</rt></ruby>，<ruby>杞<rt>qǐ</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>足<rt>zú</rt></ruby><ruby>征<rt>zhēng</rt></ruby><ruby>也<rt>yě</rt></ruby>；<br>
@@ -81,8 +82,8 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📜 原文呈现</h2>
         <div class="slide-card__body">
-            <div class="original-text" style="background:var(--amber-100);border-radius:12px;padding:1.5rem;text-align:center;">
-                <p style="font-size:1.2rem;font-weight:700;margin-bottom:1rem;">《论语·八佾》第九章</p>
+            <div class="original-text" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-6);text-align:center;">
+                <p style="font-size:1.2rem;font-weight:700;margin-bottom:var(--ds-space-4);">《论语·八佾》第九章</p>
                 <p style="font-size:1.2rem;line-height:2.2;">
                     子曰：<br>
                     "夏礼，吾能言之，杞不足征也；<br>
@@ -91,10 +92,10 @@
                     足，则吾能征之矣。"
                 </p>
             </div>
-            <div class="translation-box" style="background:var(--gray-100);border-radius:12px;padding:1.2rem;margin-top:1rem;">
+            <div class="translation-box" style="background:var(--ds-color-surface);border-radius:var(--ds-radius-xl);padding:var(--ds-space-5);margin-top:var(--ds-space-4);">
                 <p><strong>🔍 通译：</strong>孔子说："夏代的礼，我能够讲述；但它的后代杞国不足以作证明。殷代的礼，我也能讲述；但它的后代宋国不足以作证明。这是因为两国典籍和贤人不够充分的缘故。如果足够充分，我就可以用来引以为证了。"</p>
             </div>
-            <div class="tip-box" style="background:var(--blue-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>💡 <strong>本章特色：</strong>本章不同于前几章对僭礼的批判，也不同于对"礼之本"的正面回答，而是从<strong>知识论角度</strong>展现孔子治学态度——<strong>言必有据，实事求是。</strong>孔子学识渊博，却依然谨慎求证；没有充足证据，绝不妄下定论。这是做学问最珍贵的底色，也是做人最难得的品质。</p>
             </div>
         </div>
@@ -106,27 +107,27 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 字词梳理 · 杞、宋、征、文献</h2>
         <div class="slide-card__body">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:1rem 0;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:0.9rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-space-3);margin:var(--ds-space-4) 0;">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">杞（qǐ）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>杞国，夏朝后裔的封国。</strong>周武王灭商后，封夏禹的后代东楼公于杞，以延续夏朝祭祀（"兴灭国，继绝世"的仁政）。春秋时多次迁徙，国弱力薄，在礼乐文明上已无法承继祖制。</p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>杞国，夏朝后裔的封国。</strong>周武王灭商后，封夏禹的后代东楼公于杞，以延续夏朝祭祀（"兴灭国，继绝世"的仁政）。春秋时多次迁徙，国弱力薄，在礼乐文明上已无法承继祖制。</p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;">
+                <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">宋（sòng）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>宋国，殷商后裔的封国。</strong>武王伐纣后，封纣王庶兄微子启于商丘，建立宋国，奉殷商宗祀。宋国是殷商文化的主要继承者，但到孔子时代也已礼崩乐落。</p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>宋国，殷商后裔的封国。</strong>武王伐纣后，封纣王庶兄微子启于商丘，建立宋国，奉殷商宗祀。宋国是殷商文化的主要继承者，但到孔子时代也已礼崩乐落。</p>
                 </div>
             </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:0.5rem 0;">
-                <div style="background:var(--red-100);border-radius:12px;padding:0.9rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-space-3);margin:var(--ds-space-2) 0;">
+                <div style="background:var(--ds-color-error-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">征（zhēng）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>验证、证明。</strong>朱熹注："征，证也。"孔子说夏礼"吾能言之"，但要说准说对，需要"征"来证明。没有实证，知识就只是推测。</p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>验证、证明。</strong>朱熹注："征，证也。"孔子说夏礼"吾能言之"，但要说准说对，需要"征"来证明。没有实证，知识就只是推测。</p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:0.9rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">文献（wén xiàn）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>"文"=典籍，"献"=贤人。</strong>"文献"一词最早出自本章。两者缺一不可：只有典籍没有人才，礼的精神难以传承；只有人才没有典籍，礼的内容难以追溯。</p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>"文"=典籍，"献"=贤人。</strong>"文献"一词最早出自本章。两者缺一不可：只有典籍没有人才，礼的精神难以传承；只有人才没有典籍，礼的内容难以追溯。</p>
                 </div>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.7rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.7rem;">
                 <p>💡 <strong>核心关系：</strong>孔子能言夏礼、殷礼（知识储备），但杞、宋不足以为证（缺乏实证）。"文献不足"是根本原因——典籍散佚，贤人凋零，两者共同构成礼乐传承的根基。</p>
             </div>
         </div>
@@ -138,18 +139,18 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 一：孔子为何"能言之"？</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.3rem;font-weight:700;">"夏礼，吾能言之；殷礼，吾能言之"</p>
             </div>
             <p><strong>孔子凭什么说"能言之"？</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:0.6rem 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>孔子的博学不是空谈，而是有根底的。</strong><br><br>① <strong>周礼因于夏殷</strong>——"殷因于夏礼，所损益，可知也；周因于殷礼，所损益，可知也。"通过周礼反推，可以了解夏礼、殷礼的大概。<br><br>② <strong>实地考察过杞宋</strong>——《礼记·礼运》记载孔子曾亲自到杞国和宋国考察。<br><br>③ <strong>保存了珍贵典籍</strong>——在杞国得到《夏时》（夏代历法）；在宋国得到《坤乾》（殷商阴阳占卜之书）。这些都是研究夏殷之礼的重要文献。<br><br><strong>孔子说"吾能言之"，不是随口一说，而是有相当把握的。</strong></p>
             </div>
             <p><strong>为什么还要找杞、宋两国来"征"？</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>因为知识不能只有推理，必须有实证支撑。</strong><br><br>① <strong>杞、宋是夏殷后裔</strong>——武王封夏之后于杞、殷之后于宋，让他们保留对先祖的祭祀。按理说，他们最应该保存夏礼、殷礼。<br><br>② <strong>如果他们都不能证明，还有谁能？</strong>——如果连夏殷后裔都无法佐证，那说明夏殷之礼已经严重失传。<br><br>③ <strong>孔子治学必须"有据"</strong>——哪怕自己通晓，没有实证也不能定论。这正是"知之为知之，不知为不知"的体现。</p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.6rem;margin-top:var(--ds-space-2);">
                 <p>📌 <strong>深层含义：</strong>孔子"能言之"说明他有深厚学养；"不足征"说明他治学严谨。<strong>既有知识储备，又有求证意识——这是真正学者应有的态度。</strong></p>
             </div>
         </div>
@@ -161,18 +162,18 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 二：杞、宋为何"不足征"？</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.3rem;font-weight:700;">"杞不足征也；宋不足征也"</p>
             </div>
             <p><strong>杞、宋两国为何无力为夏礼、殷礼作证？</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:0.6rem 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>原因一：时代久远，文献散佚。</strong><br>夏、商距孔子时代已有千年以上，历经战乱、迁徙，典籍大量散失。《礼记·礼运》载孔子到杞国，只得到《夏时》；到宋国，只得到《坤乾》。<strong>两国所存文献极为有限。</strong><br><br><strong>原因二：国势衰弱，礼乐失传。</strong><br>杞国是个小国，多次被迫迁徙，国力衰弱。宋国虽为殷商后裔大国，但到春秋时也已礼崩乐落——<strong>国君不明古礼，贤人凋零，礼乐传统断裂。</strong><br><br><strong>原因三：贵族教育，人才断代。</strong><br>古代礼乐是贵族教育的重要内容，需要靠贤大夫把礼的内涵说明清楚，才能往下传承。杞宋两国既无典籍，又无人才。</p>
             </div>
             <p><strong>孔子对这种"不足征"作何感想？</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>深深的遗憾与忧虑。</strong><br><br>孔子感叹：不是我没有能力，是客观条件不允许——<strong>文献不足，故无所取证。</strong><br><br>这种遗憾背后是孔子对文明传承的深层忧虑：<br>① <strong>文化断层</strong>——即便夏殷后裔，也无法保存祖先文化<br>② <strong>礼崩乐坏</strong>——连礼乐的正统继承者都已衰落<br>③ <strong>文献之重</strong>——没有文献，文明就失去了根基<br><br><strong>这是孔子治学中的"遗憾"，也是他对文化传承最深刻的忧虑。</strong></p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.6rem;margin-top:var(--ds-space-2);">
                 <p>📌 <strong>与前章的联系：</strong>本章与"绘事后素"（八佾第八章）形成呼应——孔子两次强调文化传承需要根基（素=仁=忠信）。本章则从"文献"角度说明：没有文献的礼，连追溯都做不到。</p>
             </div>
         </div>
@@ -184,18 +185,18 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 三：什么是真正的"文献"？</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.3rem;font-weight:700;">"文献不足故也"</p>
             </div>
             <p><strong>"文献"为何如此重要？</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:0.6rem 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>"文献"包含两个维度，缺一不可：</strong><br><br>① <strong>"文"——典籍</strong><br>历史典籍、档案资料，是文明的"死材料"。有典籍，才能知道礼的具体规定、仪式程序。但只有典籍，没有人讲解，礼的精神难以领会。<br><br>② <strong>"献"——贤人</strong><br>通晓历史掌故的贤大夫、贤士，是文明的"活字典"。有贤人，才能理解典籍的时代背景、实践方法。但只有贤人，没有典籍，礼的内容难以准确追溯。<br><br><strong>"文"是知识的载体，"献"是知识的传承者。</strong><br><br>古代贵族垄断教育，礼乐的传承完全依赖"献"。到了春秋末年，这些贤人大量凋零，礼乐传承的链条断裂。</p>
             </div>
             <p><strong>"文献"与民族延续的关系：</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>文献是民族延续的根基。</strong><br><br>① <strong>朝代可更替</strong>——夏、商、周、秦、汉……王冠易主<br>② <strong>文献不能断</strong>——典籍在，文化就在；贤人在，道统就在<br>③ <strong>文献若足，民族不灭</strong>——文化不断，民族就不会消亡<br><br><strong>杞、宋两国作为夏殷后裔，本应承担文献传承之责，却因国力衰弱、礼乐失传，无力履行这一使命。</strong><br><br>孔子说"足，则吾能征之矣"——如果有足够的文献支持，他就能把夏礼、殷礼讲清楚。但现实是文献不足，孔子只能扼腕叹息。</p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.6rem;margin-top:var(--ds-space-2);">
                 <p>📌 <strong>历史印证：</strong>秦朝焚书坑儒后，汉初文化复兴靠的正是"献"（伏生等老先生口述背诵）和"文"（派人记录整理）的双重努力。文献之存亡，直接关系文化之兴衰。</p>
             </div>
         </div>
@@ -207,18 +208,18 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 四：言必有征，实事求是</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.3rem;font-weight:700;">"足，则吾能征之矣"</p>
             </div>
             <p><strong>本章的核心精神是什么？</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:0.6rem 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>言必有征，实事求是。</strong><br><br>孔子本章展示了一种珍贵的治学态度：<br>① <strong>知之为知之</strong>——我懂夏礼、殷礼，我能讲（坦诚自己的学识）<br>② <strong>不知为不知</strong>——但没有证据，我不能定论（坦然承认局限）<br>③ <strong>有据方为真</strong>——知识和真理之间，隔着证据这道门槛<br><br><strong>孔子明知自己懂夏礼殷礼，却不凭记忆定论，一定要找文献佐证。</strong>这种严谨态度，比"我能言之"更值得我们学习。</p>
             </div>
             <p><strong>孔子为何"吾从周"？</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>因为周礼"文献足"——理论与实践互相印证。</strong><br><br>《礼记·中庸》载孔子曰："吾说夏礼，杞不足征也。吾学殷礼，有宋存焉。吾学周礼，今用之。吾从周。"<br><br>① <strong>夏礼</strong>——"吾能言之，杞不足征"——有知识，无实证<br>② <strong>殷礼</strong>——"吾能言之，宋不足征"——有知识，无实证<br>③ <strong>周礼</strong>——"今用之"——有知识，有实证，理论与实践互相印证<br><br><strong>孔子推崇周礼，不仅因为"郁郁乎文哉"（文明灿烂），更因为周礼"今用之"——文献充足，事实俱在，可以验证。</strong></p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.6rem;margin-top:var(--ds-space-2);">
                 <p>📌 <strong>与前章的联系：</strong>前几章批判僭礼（礼的形式问题），本章转向知识论（礼的文献问题）——<strong>没有文献，礼就失去了根基；没有证据，知识就只是推测。</strong></p>
             </div>
         </div>
@@ -231,222 +232,60 @@
         <h2 class="slide-card__heading">🎯 核心思想 · 言必有据，文献为证</h2>
         <div class="slide-card__body">
             <p>本章从知识论角度，展现孔子最珍贵的治学品质——</p>
-            <div class="core-grid" style="display:grid;gap:0.8rem;">
-                <div style="background:var(--red-100);border-radius:12px;padding:1rem;">
+            <div class="core-grid" style="display:grid;gap:var(--ds-space-3);">
+                <div style="background:var(--ds-color-error-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 吾能言之</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;"><strong>博学而不自矜：</strong>孔子学识渊博，对夏礼、殷礼有相当了解，但他说"吾能言之"不是炫耀，而是坦诚自己有把握——这是真学者的自信，也是真学者的谦逊。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;"><strong>博学而不自矜：</strong>孔子学识渊博，对夏礼、殷礼有相当了解，但他说"吾能言之"不是炫耀，而是坦诚自己有把握——这是真学者的自信，也是真学者的谦逊。</p>
                 </div>
-                <div style="background:var(--purple-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 杞宋不足征</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;"><strong>求实而不臆断：</strong>即便自己懂，没有证据也不能定论。孔子明知夏礼殷礼，却依然要找杞宋作证——<strong>知识与真理之间，隔着证据这道门槛。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;"><strong>求实而不臆断：</strong>即便自己懂，没有证据也不能定论。孔子明知夏礼殷礼，却依然要找杞宋作证——<strong>知识与真理之间，隔着证据这道门槛。</strong></p>
                 </div>
-                <div style="background:var(--blue-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 文献不足故也</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;"><strong>传承需要根基：</strong>"文"（典籍）+ "献"（贤人），两者共同构成文化传承的根基。文献是民族延续的命脉——朝代可更替，文献不能断。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;"><strong>传承需要根基：</strong>"文"（典籍）+ "献"（贤人），两者共同构成文化传承的根基。文献是民族延续的命脉——朝代可更替，文献不能断。</p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 足，则吾能征之</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;"><strong>吾从周的真正原因：</strong>周礼"文献足，今用之"——理论与实践互相印证。孔子推崇周礼，不仅因为文明灿烂，更因为<strong>有据可查、有迹可循、可以验证。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;"><strong>吾从周的真正原因：</strong>周礼"文献足，今用之"——理论与实践互相印证。孔子推崇周礼，不仅因为文明灿烂，更因为<strong>有据可查、有迹可循、可以验证。</strong></p>
                 </div>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>📚 <strong>延伸思考：</strong>孔子的"言必有征"思想，对现代人依然有深刻启示——做学问要查文献、做决策要重调研、待人处世要"未知全貌不予置评"。<strong>真正的博学，不是夸夸其谈，而是有理可依、有据可查、实事求是。</strong></p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ====== 测验部分 ====== -->
+<!-- ====== 测验部分（slide-engine.js 渲染） ====== -->
 
-<!-- 9. 题1 -->
-<section class="slide" data-section="quiz" data-index="0">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第1题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>1. "杞"和"宋"分别是哪些朝代的后裔封国？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">A</span><span class="quiz-option-text">杞是商朝后裔，宋是夏朝后裔</span></div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)"><span class="quiz-option-key">B</span><span class="quiz-option-text">杞是夏朝后裔，宋是殷商后裔</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">C</span><span class="quiz-option-text">杞和宋都是夏朝后裔</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">D</span><span class="quiz-option-text">杞和宋都是周朝同姓诸侯</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
+<section class="slide" data-section="quiz" id="quiz-0"></section>
+<section class="slide" data-section="quiz" id="quiz-1"></section>
+<section class="slide" data-section="quiz" id="quiz-2"></section>
+<section class="slide" data-section="quiz" id="quiz-3"></section>
+<section class="slide" data-section="quiz" id="quiz-4"></section>
+<section class="slide" data-section="quiz" id="quiz-5"></section>
+<section class="slide" data-section="quiz" id="quiz-6"></section>
+<section class="slide" data-section="quiz" id="quiz-7"></section>
+<section class="slide" data-section="quiz" id="quiz-8"></section>
+<section class="slide" data-section="quiz" id="quiz-9"></section>
+    <!-- ====== 测验得分页 ====== -->
+    <section class="slide" data-section="quiz" id="quiz-score" style="align-items:center;text-align:center;">
+        <span class="ds-badge ds-badge--success">测验得分</span>
+        <h2 style="border:none;text-align:center;padding-bottom:0;">测验完成！</h2>
+        <div style="margin-top:var(--ds-space-10);">
+            <div style="font-size:5rem;color:var(--ds-accent);font-weight:700;font-family:var(--ds-font-display);line-height:1;" id="score-display">0</div>
+            <div style="font-size:1.5rem;margin-top:var(--ds-space-4);color:var(--ds-color-fg-strong);font-weight:600;" id="score-message">正在计算得分...</div>
+            <div style="margin-top:var(--ds-space-8);font-size:1.125rem;color:var(--ds-color-fg);background:var(--ds-color-surface);padding:var(--ds-space-6);border-radius:var(--ds-radius-xl);display:inline-block;text-align:left;">
+                <p style="margin-bottom:var(--ds-space-3);">✅ 答对题数：<b id="correct-count" style="color:var(--ds-color-success);font-size:1.25rem;">0</b> / 10</p>
+                <p style="margin-bottom:var(--ds-space-3);">📊 总得分：<b id="total-score" style="color:var(--ds-accent);font-size:1.25rem;">0</b> 分（满分 100 分）</p>
+                <p>📈 正确率：<b id="score-percent" style="color:var(--ds-color-info);font-size:1.25rem;">0%</b></p>
             </div>
+            <button class="retake-btn" id="retake-btn" aria-label="重新答题" style="margin-top:var(--ds-space-6);">↺ 重新答题</button>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- 10. 题2 -->
-<section class="slide" data-section="quiz" data-index="1">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第2题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>2. "文献"一词在本章中是什么意思？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">A</span><span class="quiz-option-text">"文献"就是历史书籍</span></div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)"><span class="quiz-option-key">B</span><span class="quiz-option-text">"文"指典籍，"献"指贤人。两者共同构成礼乐传承的根基</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">C</span><span class="quiz-option-text">"文献"是指杞国和宋国的史官记录</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">D</span><span class="quiz-option-text">"文献"是指孔子的著作</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- 11. 题3 -->
-<section class="slide" data-section="quiz" data-index="2">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第3题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>3. 孔子为什么说"杞不足征也，宋不足征也"？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">A</span><span class="quiz-option-text">因为杞国和宋国的国君不配合孔子</span></div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)"><span class="quiz-option-key">B</span><span class="quiz-option-text">因为两国典籍散佚、贤人凋零，"文献不足"导致无法引以为证</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">C</span><span class="quiz-option-text">因为杞国和宋国在孔子时代已经不存在了</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">D</span><span class="quiz-option-text">因为夏礼和殷礼根本不存在</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 12. 题4 -->
-<section class="slide" data-section="quiz" data-index="3">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第4题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>4. 《礼记·礼运》记载孔子到杞国和宋国考察，分别得到了什么书？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">A</span><span class="quiz-option-text">《诗经》和《尚书》</span></div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)"><span class="quiz-option-key">B</span><span class="quiz-option-text">在杞国得到《夏时》（夏代历法），在宋国得到《坤乾》（殷商阴阳占卜之书）</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">C</span><span class="quiz-option-text">《论语》和《春秋》</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">D</span><span class="quiz-option-text">两国都没有给孔子任何书</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 13. 题5 -->
-<section class="slide" data-section="quiz" data-index="4">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第5题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>5. 本章体现了孔子什么治学态度？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">A</span><span class="quiz-option-text">谦虚好学</span></div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)"><span class="quiz-option-key">B</span><span class="quiz-option-text">言必有征、实事求是的严谨态度——知识与真理之间，隔着证据这道门槛</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">C</span><span class="quiz-option-text">博学多才</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">D</span><span class="quiz-option-text">重视礼仪</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 14. 题6 -->
-<section class="slide" data-section="quiz" data-index="5">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第6题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>6. 孔子为什么"吾从周"？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">A</span><span class="quiz-option-text">因为周朝是孔子生活的时代</span></div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)"><span class="quiz-option-key">B</span><span class="quiz-option-text">因为周礼"文献足，今用之"——理论与实践互相印证，有据可查、可以验证</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">C</span><span class="quiz-option-text">因为周朝国势最强</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">D</span><span class="quiz-option-text">因为孔子是周朝人</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 15. 题7 -->
-<section class="slide" data-section="quiz" data-index="6">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第7题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>7. "文献不足"为何意味着文化传承的危机？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">A</span><span class="quiz-option-text">因为没有文献，国家就不能存在</span></div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)"><span class="quiz-option-key">B</span><span class="quiz-option-text">"文"是知识的载体，"献"是知识的传承者。两者任缺其一，礼乐传承的链条就会断裂</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">C</span><span class="quiz-option-text">因为没有文献就没有历史</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">D</span><span class="quiz-option-text">因为文献代表财富</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 16. 题8 -->
-<section class="slide" data-section="quiz" data-index="7">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第8题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>8. 孔子"知之为知之"的态度，在本章中如何体现？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">A</span><span class="quiz-option-text">孔子承认自己不懂夏礼殷礼</span></div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)"><span class="quiz-option-key">B</span><span class="quiz-option-text">孔子坦诚"吾能言之"，但不以此为定论，坚持"有据方为真"</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">C</span><span class="quiz-option-text">孔子完全不相信自己的判断</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">D</span><span class="quiz-option-text">孔子从不发表意见</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 17. 题9 -->
-<section class="slide" data-section="quiz" data-index="8">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第9题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>9. 本章与前几章（批判僭礼）有什么联系？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">A</span><span class="quiz-option-text">本章否定了前几章的观点</span></div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)"><span class="quiz-option-key">B</span><span class="quiz-option-text">前几章批判僭礼（礼的形式问题），本章转向知识论（礼的文献问题）——构成递进关系</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">C</span><span class="quiz-option-text">两章说的完全不同的内容</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">D</span><span class="quiz-option-text">本章与前几章没有任何联系</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 18. 题10 -->
-<section class="slide" data-section="quiz" data-index="9">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第10题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>10. 本章对现代人有什么启示？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">A</span><span class="quiz-option-text">要多读古书</span></div>
-                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)"><span class="quiz-option-key">B</span><span class="quiz-option-text">做学问要查文献、待人处世要"未知全貌不予置评"——言必有据，实事求是</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">C</span><span class="quiz-option-text">要重视历史</span></div>
-                    <div class="quiz-option" onclick="checkAnswer(this)"><span class="quiz-option-key">D</span><span class="quiz-option-text">要多研究古代礼仪</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ====== 答疑解惑 ====== -->
 
@@ -455,11 +294,11 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">💬 常见问题</h2>
         <div class="slide-card__body">
-            <div class="faq-item" style="margin-bottom:1.2rem;">
+            <div class="faq-item" style="margin-bottom:var(--ds-space-5);">
                 <p><strong>❓ 孔子既然"能言之"，为何还要杞宋作证？直接讲不就行了吗？</strong></p>
                 <p><strong>因为知识与真理之间，隔着证据这道门槛。</strong><br><br>孔子说"吾能言之"，是说他有把握、有学养，可以讲述夏礼殷礼的大概。但这不等于"这就是定论"——<br><br>① <strong>知识需要验证</strong>——哪怕是自己通晓的内容，如果没有实证，就只是推测，不是定论<br>② <strong>礼需要传承的载体</strong>——礼不是个人私见，而是公共规范，必须有据可查、有迹可循<br>③ <strong>孔子治学极为严谨</strong>——"多闻阙疑，多见阙殆"，有疑问的地方就保留，不轻易定论<br><br><strong>这是真正学者的态度：既有自信，又不自负；既有知识，又敬畏证据。</strong></p>
             </div>
-            <div class="faq-item" style="margin-bottom:1.2rem;">
+            <div class="faq-item" style="margin-bottom:var(--ds-space-5);">
                 <p><strong>❓ "文献"中为何"献"（贤人）如此重要？古代典籍难道还不够吗？</strong></p>
                 <p><strong>因为古代是贵族教育，口耳相传，典籍有限。</strong><br><br>上古时代书面材料不算丰富，许多内容靠口耳相传——贤大夫把礼的内涵说明清楚，才能往下传。<br><br>① <strong>只有典籍没有人才</strong>——礼的精神难以领会，典籍成了死文字<br>② <strong>只有人才没有典籍</strong>——礼的内容难以准确追溯，容易走样<br>③ <strong>两者兼有才能传承</strong>——典籍提供内容，贤人提供理解，缺一不可<br><br><strong>秦火之后，汉初文化复兴正是靠"献"（伏生等老先生口述）和"文"（派人记录整理）双重努力，才得以重建。</strong></p>
             </div>
@@ -477,22 +316,22 @@
         <h2 class="slide-card__heading">🌟 生活应用</h2>
         <div class="slide-card__body">
             <p>孔子"言必有征、实事求是"的思想，穿越2500年，对现代人依然有深刻启示——</p>
-            <div class="app-grid" style="display:grid;gap:0.8rem;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:1rem;">
+            <div class="app-grid" style="display:grid;gap:var(--ds-space-3);">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>💻 学习求知：不轻信，求实证</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">读书学习遇到疑问，要主动查文献、找出处，不轻信传言、不盲从碎片知识。网络时代信息爆炸，更要养成"查证"的习惯——<strong>言必有据，才是真的懂。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">读书学习遇到疑问，要主动查文献、找出处，不轻信传言、不盲从碎片知识。网络时代信息爆炸，更要养成"查证"的习惯——<strong>言必有据，才是真的懂。</strong></p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🏢 职场做事：讲依据，重调研</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">处理工作不凭经验臆断，不主观敷衍。凡事讲究依据、注重证据，数据落地、细节求实——<strong>决策之前先调研，结论得出需验证。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">处理工作不凭经验臆断，不主观敷衍。凡事讲究依据、注重证据，数据落地、细节求实——<strong>决策之前先调研，结论得出需验证。</strong></p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🤝 待人处世：不盲从，慎判断</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">道听途说不要随意传播，不随意评价他人、不盲目跟风站队。<strong>未知全貌，不予置评</strong>——这是对信息的尊重，也是对他人的尊重。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">道听途说不要随意传播，不随意评价他人、不盲目跟风站队。<strong>未知全貌，不予置评</strong>——这是对信息的尊重，也是对他人的尊重。</p>
                 </div>
-                <div style="background:var(--purple-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>📚 自我成长：正视局限，主动求证</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">正视自己的认知短板，不懂不装懂、不知不乱说。承认局限、主动查漏补缺——<strong>每查证一次，认知就深一层。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">正视自己的认知短板，不懂不装懂、不知不乱说。承认局限、主动查漏补缺——<strong>每查证一次，认知就深一层。</strong></p>
                 </div>
             </div>
         </div>
@@ -513,7 +352,7 @@
             <p><strong>"知之"是能力，"不知"是诚实。</strong><br>真正的学者既有"知之"的自信（吾能言之），又有承认"不知"的诚实（文献不足故也）。<strong>自信与谦逊并存，知识与敬畏共生。</strong></p>
             <p><strong>第四层辩证：传承vs创新</strong></p>
             <p><strong>传承需要根基（文献），创新需要继承（损益）。</strong><br>孔子说"殷因于夏礼，所损益，可知也"，说明礼的发展是传承与创新的统一——<strong>没有传承的创新是无源之水，没有创新的传承是固步自封。</strong></p>
-            <p style="text-align:center;margin-top:0.5rem;"><strong>一句话归总：<br>夏礼吾能言之，杞宋不足征——<br>能言是自信，不足征是诚实；<br>文献是根基，贤人是传承。<br>知识与真理之间，隔着证据这道门槛；<br>文化与民族之间，隔着文献这道命脉。<br>言必有征，实事求是——<br>这是孔子治学最珍贵的态度，<br>也是对一切"不知而作"者的永恒警示。</strong></p>
+            <p style="text-align:center;margin-top:var(--ds-space-2);"><strong>一句话归总：<br>夏礼吾能言之，杞宋不足征——<br>能言是自信，不足征是诚实；<br>文献是根基，贤人是传承。<br>知识与真理之间，隔着证据这道门槛；<br>文化与民族之间，隔着文献这道命脉。<br>言必有征，实事求是——<br>这是孔子治学最珍贵的态度，<br>也是对一切"不知而作"者的永恒警示。</strong></p>
         </div>
     </div>
 </section>
@@ -524,110 +363,73 @@
         <h2 class="slide-card__heading">📖 课程总结</h2>
         <div class="slide-card__body">
             <p>今天我们一起品读了《八佾》篇的第九章——</p>
-            <p style="font-size:1.1rem;font-weight:700;text-align:center;margin:1rem 0;">
+            <p style="font-size:1.1rem;font-weight:700;text-align:center;margin:var(--ds-space-4) 0;">
                 "夏礼吾能言之，杞不足征也；殷礼吾能言之，宋不足征也。文献不足故也。足，则吾能征之矣。"
             </p>
             <p>回顾本课要点：</p>
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.4rem;margin:0.8rem 0;">
-                <div style="background:var(--red-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;"><strong>吾能言之</strong><br>有据方自信</div>
-                <div style="background:var(--purple-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;"><strong>文献不足</strong><br>传承有危机</div>
-                <div style="background:var(--green-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;"><strong>言必有征</strong><br>求实方为真</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--ds-space-2);margin:var(--ds-space-3) 0;">
+                <div style="background:var(--ds-color-error-bg);border-radius:10px;padding:var(--ds-space-2);text-align:center;font-size:0.82rem;"><strong>吾能言之</strong><br>有据方自信</div>
+                <div style="background:var(--ds-accent-soft);border-radius:10px;padding:var(--ds-space-2);text-align:center;font-size:0.82rem;"><strong>文献不足</strong><br>传承有危机</div>
+                <div style="background:var(--ds-color-success-bg);border-radius:10px;padding:var(--ds-space-2);text-align:center;font-size:0.82rem;"><strong>言必有征</strong><br>求实方为真</div>
             </div>
             <p><strong>在八佾篇中的位置：</strong>本章为第九章，在八佾篇从批判僭礼（第一至七章）转向知识论思考（第八至九章）的关键位置。与第八章"绘事后素"（仁先礼后）呼应，本章从"文献"角度说明：<strong>没有文献的礼，连追溯都做不到；没有证据的知识，只是推测而非定论。</strong>两章合看，揭示礼乐文明的双重根基：仁（内在真诚）+ 文献（外在传承）。</p>
-            <div class="original-text" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-top:1rem;text-align:center;">
+            <div class="original-text" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-top:var(--ds-space-4);text-align:center;">
                 <p style="font-size:1.1rem;font-weight:700;">📜 原文重温</p>
                 <p style="font-size:0.9rem;">夏礼，吾能言之，杞不足征也；殷礼，吾能言之，宋不足征也。文献不足故也。足，则吾能征之矣。</p>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>✨ <strong>课后小挑战：</strong>想一想，在现代学习、工作中，有没有"不知而作"的现象？有没有人仅凭感觉就下结论、道听途说就做决策？<strong>孔子的提醒穿越2500年：知识与真理之间，隔着证据这道门槛；言必有征，实事求是——这是治学最珍贵的态度，也是做人最难得的品质。</strong></p>
             </div>
         </div>
     </div>
 </section>
 
+    <!-- ====== 结束页 ====== -->
+    <section class="slide end-slide" data-section="review">
+        <div class="cover-ornament"></div>
+        <h2 class="ds-display">谢谢大家</h2>
+        <div class="cover-ornament"></div>
+        <div class="end-quote">
+            "学而时习之，不亦说乎"<br>
+            <span style="font-size:0.875rem;color:var(--ds-color-muted);">—— 孔子</span>
+        </div>
+        <div class="cover-seal">国学</div>
+    </section>
+
 </main>
+</div><!-- slide-viewport -->
 
 <script>
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-const pageIndicator = document.getElementById('page-indicator');
-const prevBtn = document.getElementById('nav-prev');
-const nextBtn = document.getElementById('nav-next');
-const dotsRow = document.getElementById('dots-row');
-
-for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('span');
-    dot.className = 'dot';
-    dot.dataset.index = i;
-    dot.addEventListener('click', function() { goToSlide(parseInt(this.dataset.index)); });
-    dotsRow.appendChild(dot);
-}
-
-function goToSlide(index) {
-    if (index < 0 || index >= totalSlides) return;
-    currentSlide = index;
-    slides.forEach((s, i) => { s.classList.toggle('active', i === index); });
-    const section = slides[index].dataset.section;
-    let actualPage = 0, totalInSection = 0;
-    slides.forEach((s, i) => {
-        if (s.dataset.section === section) { totalInSection++; if (i <= index) actualPage++; }
-    });
-    let label = '';
-    if (section === 'lecture') label = '📖 讲义';
-    else if (section === 'quiz') label = '✏️ 测验';
-    else label = '💬 答疑解惑';
-    pageIndicator.textContent = `${label} ${actualPage}/${totalInSection}`;
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index === totalSlides - 1;
-    document.querySelectorAll('.ds-tab').forEach(t => t.classList.toggle('active', t.dataset.section === section));
-    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === index));
-}
-
-prevBtn.addEventListener('click', function() { goToSlide(currentSlide - 1); });
-nextBtn.addEventListener('click', function() { goToSlide(currentSlide + 1); });
-
-document.querySelectorAll('.ds-tab').forEach(tab => {
-    tab.addEventListener('click', function() {
-        const targetSection = this.dataset.section;
-        let targetIndex = -1;
-        slides.forEach((s, i) => {
-            if (s.dataset.section === targetSection && targetIndex === -1) targetIndex = i;
-        });
-        if (targetIndex !== -1) goToSlide(targetIndex);
-    });
-});
-
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); goToSlide(currentSlide + 1); }
-    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); goToSlide(currentSlide - 1); }
-});
-
-document.getElementById('fullscreen-btn').addEventListener('click', function() {
-    if (!document.fullscreenElement) { document.documentElement.requestFullscreen().catch(err => {}); }
-    else { document.exitFullscreen().catch(err => {}); }
-});
-
-function checkAnswer(el) {
-    const question = el.closest('.quiz-question');
-    const allOptions = question.querySelectorAll('.quiz-option');
-    allOptions.forEach(opt => {
-        opt.style.pointerEvents = 'none';
-        if (opt.dataset.correct === 'true') opt.style.background = 'var(--green-200)';
-        else opt.style.background = 'var(--gray-200)';
-    });
-    const feedback = question.querySelector('.quiz-feedback');
-    if (feedback) {
-        feedback.style.display = 'block';
-        const isCorrect = el.dataset.correct === 'true';
-        feedback.innerHTML = isCorrect
-            ? '<span style="color:var(--green-700);font-weight:700;">✅ 正确！</span>'
-            : '<span style="color:var(--red-700);font-weight:700;">❌ 再想想~</span>';
-    }
-}
-
-goToSlide(0);
+    window.GUOXUE_COURSE_ID = '41-xia-li-wu-neng-yan-zhi';
+const QUIZ = [
+  {q: '1. "杞"和"宋"分别是哪些朝代的后裔封国？', opts: ['杞是商朝后裔，宋是夏朝后裔', '杞是夏朝后裔，宋是殷商后裔', '杞和宋都是夏朝后裔', '杞和宋都是周朝同姓诸侯'], ans: 1, exp: '据史载，杞国是夏朝（大禹）的后裔封国，宋国是殷商（商纣王）的后裔封国，故孔子说"吾欲观夏道，是故之杞"、欲观殷道则之宋。'},
+  {q: '2. "文献"一词在本章中是什么意思？', opts: ['"文献"就是历史书籍', '"文"指典籍，"献"指贤人。两者共同构成礼乐传承的根基', '"文献"是指杞国和宋国的史官记录', '"文献"是指孔子的著作'], ans: 1, exp: '文献不足"是根本原因——典籍散佚，贤人凋零，两者共同构成礼乐传承的根基'},
+  {q: '3. 孔子为什么说"杞不足征也，宋不足征也"？', opts: ['因为杞国和宋国的国君不配合孔子', '因为两国典籍散佚、贤人凋零，"文献不足"导致无法引以为证', '因为杞国和宋国在孔子时代已经不存在了', '因为夏礼和殷礼根本不存在'], ans: 1, exp: '文献不足"是根本原因——典籍散佚，贤人凋零，两者共同构成礼乐传承的根基'},
+  {q: '4. 《礼记·礼运》记载孔子到杞国和宋国考察，分别得到了什么书？', opts: ['《诗经》和《尚书》', '在杞国得到《夏时》（夏代历法），在宋国得到《坤乾》（殷商阴阳占卜之书）', '《论语》和《春秋》', '两国都没有给孔子任何书'], ans: 1, exp: '在宋国得到《坤乾》（殷商阴阳占卜之书）'},
+  {q: '5. 本章体现了孔子什么治学态度？', opts: ['谦虚好学', '言必有征、实事求是的严谨态度——知识与真理之间，隔着证据这道门槛', '博学多才', '重视礼仪'], ans: 1, exp: '孔子本章展示了一种珍贵的治学态度：①知之为知之——我懂夏礼、殷礼，我能讲（坦诚自己的学识）②不知为不知——但没有证据，我不能定论（坦然承认局限）③有据方为真……'},
+  {q: '6. 孔子为什么"吾从周"？', opts: ['因为周朝是孔子生活的时代', '因为周礼"文献足，今用之"——理论与实践互相印证，有据可查、可以验证', '因为周朝国势最强', '因为孔子是周朝人'], ans: 1, exp: '因为周礼"文献足"——理论与实践互相印证'},
+  {q: '7. "文献不足"为何意味着文化传承的危机？', opts: ['因为没有文献，国家就不能存在', '"文"是知识的载体，"献"是知识的传承者。两者任缺其一，礼乐传承的链条就会断裂', '因为没有文献就没有历史', '因为文献代表财富'], ans: 1, exp: '文"是知识的载体，"献"是知识的传承者'},
+  {q: '8. 孔子"知之为知之"的态度，在本章中如何体现？', opts: ['孔子承认自己不懂夏礼殷礼', '孔子坦诚"吾能言之"，但不以此为定论，坚持"有据方为真"', '孔子完全不相信自己的判断', '孔子从不发表意见'], ans: 1, exp: '孔子本章展示了一种珍贵的治学态度：①知之为知之——我懂夏礼、殷礼，我能讲（坦诚自己的学识）②不知为不知——但没有证据，我不能定论（坦然承认局限）③有据方为真……'},
+  {q: '9. 本章与前几章（批判僭礼）有什么联系？', opts: ['本章否定了前几章的观点', '前几章批判僭礼（礼的形式问题），本章转向知识论（礼的文献问题）——构成递进关系', '两章说的完全不同的内容', '本章与前几章没有任何联系'], ans: 1, exp: '与前章的联系：前几章批判僭礼（礼的形式问题），本章转向知识论（礼的文献问题）——没有文献，礼就失去了根基'},
+  {q: '10. 本章对现代人有什么启示？', opts: ['要多读古书', '做学问要查文献、待人处世要"未知全貌不予置评"——言必有据，实事求是', '要重视历史', '要多研究古代礼仪'], ans: 1, exp: '延伸思考：孔子的"言必有征"思想，对现代人依然有深刻启示——做学问要查文献、做决策要重调研、待人处世要"未知全貌不予置评"'},
+];
+window.GUOXUE_QUIZ_OVERRIDE = QUIZ;
 </script>
+<script src="../../assets/js/slide-engine.js?v=29f633f"></script>
 
+<!-- 底部进度条 -->
+<div class="progress-bar-bottom">
+    <div class="progress-bar-fill" id="progress-fill" style="width:4%"></div>
+</div>
+
+<!-- 键盘提示 -->
+<div class="kbd-hint">
+    <span class="kbd">←</span><span class="kbd">→</span> 翻页
+    <span style="margin-left:8px"><span class="kbd">Space</span> 下一页</span>
+</div>
+
+<script src="../../assets/js/auth-email.js" defer></script>
+<script src="../../assets/js/auth.js" defer></script>
+<script src="../../assets/js/api-client.js" defer></script>
 </body>
 </html>

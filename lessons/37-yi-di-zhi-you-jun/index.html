@@ -49,18 +49,19 @@
     </div>
 </nav>
 
-<main class="ds-slide-container" id="slide-container">
+<div class="slide-viewport">
+<main class="slide-container" id="slide-container">
 
 <!-- ====== 讲义部分 ====== -->
 
 <!-- 1. 标题页 -->
-<section class="slide" data-section="lecture" data-index="0">
+<section class="slide active" data-section="lecture" data-index="0">
     <div class="slide-card slide-card--cover">
         <div class="slide-card__body slide-card__body--center">
             <div class="lesson-number"><small>第39课 · 《论语·八佾》第五章</small></div>
             <h1 class="lesson-title" style="font-size:1.3rem;">夷狄之有君<br><span style="font-size:0.85em;">不如诸夏之亡也</span></h1>
-            <p class="lesson-subtitle" style="font-size:1.0rem;color:var(--blue-700);">礼乐文明高于一切<br>文化传承重于权力</p>
-            <div class="quote-block" style="margin-top:1.5rem;">
+            <p class="lesson-subtitle" style="font-size:1.0rem;color:var(--ds-color-info);">礼乐文明高于一切<br>文化传承重于权力</p>
+            <div class="quote-block" style="margin-top:var(--ds-space-6);">
                 <p style="font-size:0.88rem;line-height:2.2;">
                     子曰："夷狄之有君，<br>
                     不如诸夏之亡也。"
@@ -78,14 +79,14 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📜 原文呈现</h2>
         <div class="slide-card__body">
-            <div class="original-text" style="background:var(--amber-100);border-radius:12px;padding:1.5rem;text-align:center;">
-                <p style="font-size:1.2rem;font-weight:700;margin-bottom:1rem;">《论语·八佾》第五章</p>
+            <div class="original-text" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-6);text-align:center;">
+                <p style="font-size:1.2rem;font-weight:700;margin-bottom:var(--ds-space-4);">《论语·八佾》第五章</p>
                 <p style="font-size:1.0rem;line-height:2.0;"><ruby>子<rt>zi</rt></ruby>曰："<ruby>夷<rt>yi</rt></ruby><ruby>狄<rt>di</rt></ruby>之有君，不如<ruby>诸<rt>zhu</rt></ruby><ruby>夏<rt>xia</rt></ruby>之<ruby>亡<rt>wu</rt></ruby>也。"</p>
             </div>
-            <div class="translation-box" style="background:var(--gray-100);border-radius:12px;padding:1.2rem;margin-top:1rem;">
+            <div class="translation-box" style="background:var(--ds-color-surface);border-radius:var(--ds-radius-xl);padding:var(--ds-space-5);margin-top:var(--ds-space-4);">
                 <p><strong>🔍 通译：</strong>孔子说："夷狄之地虽然有君主，还不如中原诸国没有君主的时候（因为中原诸国仍有礼乐文明传承）。"</p>
             </div>
-            <div class="tip-box" style="background:var(--blue-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>📌 <strong>本章特色：</strong>承接前章"礼之本在心"，本章进一步阐明<strong>礼乐文明高于政治形式</strong>。孔子用"夷狄vs诸夏"的对比，说明：<strong>有政权而无文化，等于无；无政权而有文化，仍可存。</strong>文明根基在礼乐，不在权力。</p>
             </div>
         </div>
@@ -97,23 +98,23 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 字词梳理 · 夷狄、诸夏、亡</h2>
         <div class="slide-card__body">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:1rem 0;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:0.9rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-space-3);margin:var(--ds-space-4) 0;">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">夷狄（yí dí）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>古代对中原周边民族的统称。</strong>东夷、西戎、南蛮、北狄。夷狄被视为"化外之民"——没有礼乐教化、没有伦常秩序。但孔子这里用"夷狄"，不是贬低某个民族，而是<strong>以"有无礼乐"为标准区分文明与野蛮</strong>。</p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>古代对中原周边民族的统称。</strong>东夷、西戎、南蛮、北狄。夷狄被视为"化外之民"——没有礼乐教化、没有伦常秩序。但孔子这里用"夷狄"，不是贬低某个民族，而是<strong>以"有无礼乐"为标准区分文明与野蛮</strong>。</p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;">
+                <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">诸夏（zhū xià）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>指中原地区的华夏诸侯国。</strong>周朝分封的诸侯国，有礼乐文明、有伦常秩序。"诸"=各，"夏"=华夏。诸夏是礼乐文明的发祥地，是文明的代表。<strong>孔子以"诸夏"自豪，因为诸夏有礼乐。</strong></p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>指中原地区的华夏诸侯国。</strong>周朝分封的诸侯国，有礼乐文明、有伦常秩序。"诸"=各，"夏"=华夏。诸夏是礼乐文明的发祥地，是文明的代表。<strong>孔子以"诸夏"自豪，因为诸夏有礼乐。</strong></p>
                 </div>
             </div>
-            <div style="margin:0.5rem 0;">
-                <div style="background:var(--purple-100);border-radius:12px;padding:0.9rem;">
+            <div style="margin:var(--ds-space-2) 0;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.9rem;">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">亡（wú）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>"亡"通"无"，读作wú。</strong>字面意思是"没有"，但这里不是真的"没有君主"，而是<strong>"君主名存实亡"</strong>——诸侯不听命于周天子，大夫专权，弑君篡位，君不君、臣不臣。<strong>虽然形式上有君，但实质上"无君"。</strong></p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>"亡"通"无"，读作wú。</strong>字面意思是"没有"，但这里不是真的"没有君主"，而是<strong>"君主名存实亡"</strong>——诸侯不听命于周天子，大夫专权，弑君篡位，君不君、臣不臣。<strong>虽然形式上有君，但实质上"无君"。</strong></p>
                 </div>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.7rem;">
+            <div class="tip-box" style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:0.7rem;">
                 <p>💡 <strong>核心对比：</strong>"夷狄之有君"vs"诸夏之亡也"——夷狄有君而无礼乐，诸夏有礼乐而无君。孔子认为：<strong>礼乐比君主更重要，文化比政权更根本。</strong>诸夏即使没有君主，礼乐文明仍在；夷狄虽有君主，但没有礼乐，仍是野蛮。</p>
             </div>
         </div>
@@ -125,18 +126,18 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 一：两种理解方式</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.05rem;font-weight:700;">"<ruby>夷<rt>yi</rt></ruby><ruby>狄<rt>di</rt></ruby>之有君，不如<ruby>诸<rt>zhu</rt></ruby><ruby>夏<rt>xia</rt></ruby>之<ruby>亡<rt>wu</rt></ruby>也"</p>
             </div>
             <p><strong>这句话历来有两种理解：</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:0.6rem 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>第一种：责夏——诸夏不如夷狄</strong><br><br>朱熹《四书章句集注》引程子："夷狄且有君长，不如诸夏之僭乱，反无上下之分也。"<br><br><strong>解读：</strong><br>① 夷狄虽然是外族，但还有君臣上下之分<br>② 诸夏虽有礼乐，但僭乱成风，君不君、臣不臣<br>③ <strong>诸夏的礼崩乐坏，还不如夷狄有秩序</strong><br><br>这是孔子的<strong>伤时之叹</strong>——痛心诸夏礼崩乐坏，连夷狄都不如。</p>
             </div>
             <p><strong>第二种：尊夏——诸夏胜过夷狄</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>皇侃《论语义疏》：</strong>"夷狄虽有君主，而不及中国无君也。"<br><br><strong>解读：</strong><br>① 夷狄虽然有君主，但没有礼乐文明<br>② 诸夏即使没有君主，但礼乐文明仍在传承<br>③ <strong>诸夏的礼乐文明，胜过夷狄的政治形式</strong><br><br>这是孔子的<strong>文明自信</strong>——文化传统比政治权力更重要。</p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.6rem;margin-top:var(--ds-space-2);">
                 <p>📌 <strong>两种理解都成立：</strong>责夏——痛心礼崩乐坏；尊夏——坚守文明信念。<strong>无论哪种，核心都在强调礼乐文明的重要性。</strong>孔子既痛心诸夏的堕落，又坚信礼乐文明的力量。</p>
             </div>
         </div>
@@ -148,18 +149,18 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 二：历史背景——礼崩乐坏的时代</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.05rem;font-weight:700;">"子曰：'夷狄之有君，不如诸夏之亡也。'"</p>
             </div>
             <p><strong>孔子时代发生了什么？</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:0.6rem 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>周天子名存实亡：</strong><br>① 诸侯不听命于周天子，各自为政<br>② 周朝曾经五年没有天子<br>③ 鲁国曾经九年没有国君<br><br><strong>大夫专权僭越：</strong><br>① 季氏八佾舞于庭、以《雍》彻<br>② 卿大夫架空国君，掌握实权<br>③ 弑君篡位、以下犯上成常态<br><br><strong>礼乐制度名存实亡：</strong><br>① 形式还在，但无人遵守<br>② 君不君、臣不臣、父不父、子不子<br>③ 整个社会秩序崩溃</p>
             </div>
             <p><strong>与此同时，夷狄的情况：</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>夷狄虽无礼乐，但有秩序：</strong><br>① 夷狄有君主，君臣关系明确<br>② 有长幼尊卑之分<br>③ 虽无礼乐教化，但社会秩序稳定<br><br><strong>孔子对比的用意：</strong><br>① 夷狄有君而无礼乐——形式完备，内核空虚<br>② 诸夏有礼乐而无君——内核尚存，形式崩坏<br>③ <strong>孔子的结论：礼乐比君主更重要，文化比政权更根本</strong></p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.6rem;margin-top:var(--ds-space-2);">
                 <p>📌 <strong>孔子不是贬低夷狄，而是警示诸夏：</strong>诸夏有礼乐文明，本应比夷狄更好，但现在礼崩乐坏，连夷狄都不如。<strong>这是痛心疾首的感叹，也是唤醒良知的呐喊。</strong></p>
             </div>
         </div>
@@ -171,18 +172,18 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 三：夷夏之辨的核心——以礼乐为标准</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.05rem;font-weight:700;">"<ruby>夷<rt>yi</rt></ruby><ruby>狄<rt>di</rt></ruby>进于中国，则中国之；中国而为<ruby>夷<rt>yi</rt></ruby><ruby>狄<rt>di</rt></ruby>，则<ruby>夷<rt>yi</rt></ruby><ruby>狄<rt>di</rt></ruby>之"</p>
             </div>
             <p><strong>什么是"夷夏之辨"？</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:0.6rem 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>"夷夏之辨"是古代区分文明与野蛮的标准。</strong><br><br><strong>华夏：</strong><br>① 有礼乐教化<br>② 有伦常秩序<br>③ 有仁义道德<br>④ 文明的代表<br><br><strong>夷狄：</strong><br>① 无礼乐教化<br>② 无伦常秩序<br>③ 无仁义道德<br>④ 野蛮的代表<br><br><strong>关键：</strong>夷夏之辨<strong>不以血缘、种族、地域为标准，而以礼乐文化为标准</strong>。</p>
             </div>
             <p><strong>孔子的夷夏观：</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>孔子不是狭隘的民族主义者。</strong><br><br>① <strong>"夷狄进于中国，则中国之"</strong>——夷狄学习礼乐，就变成华夏<br>② <strong>"中国而为夷狄，则夷狄之"</strong>——华夏丢失礼乐，就变成夷狄<br>③ <strong>标准是礼乐文化，不是血缘种族</strong><br><br><strong>孔子的信念：</strong>礼乐文明是区分文明与野蛮的唯一标准。<strong>有礼乐，就是华夏；无礼乐，就是夷狄。</strong>诸夏之所以是诸夏，因为有礼乐；夷狄之所以是夷狄，因为无礼乐。</p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.6rem;margin-top:var(--ds-space-2);">
                 <p>📌 <strong>本章的核心：</strong>诸夏即使没有君主，礼乐文明仍在，所以仍是文明；夷狄虽有君主，但无礼乐，所以仍是野蛮。<strong>文明根基在礼乐，不在权力。</strong></p>
             </div>
         </div>
@@ -195,14 +196,14 @@
         <h2 class="slide-card__heading">📖 逐句解读 · 四：道高于君，文化高于政权</h2>
         <div class="slide-card__body">
             <p><strong>孔子揭示的是什么道理？</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:0.6rem 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>第一层：礼乐高于君主</strong><br><br>君主是政治权力的象征，礼乐是文明秩序的象征。<br><br>① <strong>有君主而无礼乐</strong>——有政权而无文明，等于无<br>② <strong>无君主而有礼乐</strong>——无政权而有文明，仍可存<br>③ <strong>结论：</strong>礼乐比君主更重要，文明比权力更根本<br><br><strong>政权可以更替，但文明不能中断。</strong></p>
             </div>
             <p><strong>第二层：文化传承高于政治形式</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>政治形式（君主制度）vs 文化内核（礼乐文明）</strong><br><br>① 政治形式可以暂时缺失——周朝五年无天子，鲁国九年无国君<br>② 文化内核不能中断——礼乐文明仍在传承<br>③ <strong>只要礼乐文明在，诸夏仍是诸夏</strong><br><br><strong>历史印证：</strong>春秋礼崩乐坏，但礼乐文明传承下来；秦朝焚书坑儒，但经典文化保存下来；五胡乱华，但华夏文明延续下来。<strong>政权更替无数，文明传承不灭。</strong></p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.6rem;margin-top:var(--ds-space-2);">
                 <p>📌 <strong>孔子的远见：</strong>他看到了文明的力量——<strong>政治权力是暂时的，文化传承是永恒的。</strong>诸夏之所以能延续数千年，不是因为某个朝代、某个君主，而是因为礼乐文明的传承。</p>
             </div>
         </div>
@@ -215,223 +216,61 @@
         <h2 class="slide-card__heading">🎯 核心思想 · 礼乐文明高于政治权力</h2>
         <div class="slide-card__body">
             <p>本章承接前章，从"礼乐文明"角度进一步阐明——</p>
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;"><p style="font-size:1.05rem;font-weight:700;">"礼乐文明高于血统"</p></div>
-            <div class="core-grid" style="display:grid;gap:0.8rem;">
-                <div style="background:var(--red-100);border-radius:12px;padding:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);"><p style="font-size:1.05rem;font-weight:700;">"礼乐文明高于血统"</p></div>
+            <div class="core-grid" style="display:grid;gap:var(--ds-space-3);">
+                <div style="background:var(--ds-color-error-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 夷狄之有君</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;"><strong>有政权而无文明：</strong>夷狄虽有君主，但没有礼乐教化。形式完备，内核空虚。<strong>有权力而无文化，等于无。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;"><strong>有政权而无文明：</strong>夷狄虽有君主，但没有礼乐教化。形式完备，内核空虚。<strong>有权力而无文化，等于无。</strong></p>
                 </div>
-                <div style="background:var(--purple-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 诸夏之亡也</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;"><strong>无政权而有文明：</strong>诸夏虽无君主（名存实亡），但礼乐文明仍在传承。形式缺失，内核尚存。<strong>无权力而有文化，仍可存。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;"><strong>无政权而有文明：</strong>诸夏虽无君主（名存实亡），但礼乐文明仍在传承。形式缺失，内核尚存。<strong>无权力而有文化，仍可存。</strong></p>
                 </div>
-                <div style="background:var(--blue-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 夷夏之辨的核心</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;"><strong>以礼乐为标准：</strong>夷夏之辨不以血缘、种族、地域为标准，而以礼乐文化为标准。<strong>有礼乐就是华夏，无礼乐就是夷狄。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;"><strong>以礼乐为标准：</strong>夷夏之辨不以血缘、种族、地域为标准，而以礼乐文化为标准。<strong>有礼乐就是华夏，无礼乐就是夷狄。</strong></p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 文明高于政权</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;"><strong>文化传承高于政治形式：</strong>政权可以更替，但文明不能中断。政治权力是暂时的，文化传承是永恒的。<strong>诸夏之所以延续数千年，因为礼乐文明的传承。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;"><strong>文化传承高于政治形式：</strong>政权可以更替，但文明不能中断。政治权力是暂时的，文化传承是永恒的。<strong>诸夏之所以延续数千年，因为礼乐文明的传承。</strong></p>
                 </div>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>📚 <strong>延伸思考：</strong>孔子的思想穿越2500年，对现代仍有启示——一个国家、一个民族，最重要的是什么？不是政权更替，不是权力争夺，而是<strong>文化传承、文明积淀、精神内核</strong>。政权可以更迭，但文化不能断层；权力可以转移，但文明不能中断。<strong>这是孔子给后世最深刻的警示。</strong></p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ====== 测验部分 ====== -->
+<!-- ====== 测验部分（slide-engine.js 渲染） ====== -->
 
-<!-- 9. 题1 -->
-<section class="slide" data-section="quiz" data-index="0">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第1题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>1. 本章中"夷狄"和"诸夏"分别指什么？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">"夷狄"指北方，"诸夏"指南方</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">"夷狄"指古代对中原周边民族的统称（东夷、西戎、南蛮、北狄），被视为"化外之民"——无礼乐教化；"诸夏"指中原地区的华夏诸侯国，有礼乐文明、有伦常秩序，是文明的代表</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">"夷狄"指外国，"诸夏"指中国</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">"夷狄"指野蛮人，"诸夏"指文明人</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
+<section class="slide" data-section="quiz" id="quiz-0"></section>
+<section class="slide" data-section="quiz" id="quiz-1"></section>
+<section class="slide" data-section="quiz" id="quiz-2"></section>
+<section class="slide" data-section="quiz" id="quiz-3"></section>
+<section class="slide" data-section="quiz" id="quiz-4"></section>
+<section class="slide" data-section="quiz" id="quiz-5"></section>
+<section class="slide" data-section="quiz" id="quiz-6"></section>
+<section class="slide" data-section="quiz" id="quiz-7"></section>
+<section class="slide" data-section="quiz" id="quiz-8"></section>
+<section class="slide" data-section="quiz" id="quiz-9"></section>
+    <!-- ====== 测验得分页 ====== -->
+    <section class="slide" data-section="quiz" id="quiz-score" style="align-items:center;text-align:center;">
+        <span class="ds-badge ds-badge--success">测验得分</span>
+        <h2 style="border:none;text-align:center;padding-bottom:0;">测验完成！</h2>
+        <div style="margin-top:var(--ds-space-10);">
+            <div style="font-size:5rem;color:var(--ds-accent);font-weight:700;font-family:var(--ds-font-display);line-height:1;" id="score-display">0</div>
+            <div style="font-size:1.5rem;margin-top:var(--ds-space-4);color:var(--ds-color-fg-strong);font-weight:600;" id="score-message">正在计算得分...</div>
+            <div style="margin-top:var(--ds-space-8);font-size:1.125rem;color:var(--ds-color-fg);background:var(--ds-color-surface);padding:var(--ds-space-6);border-radius:var(--ds-radius-xl);display:inline-block;text-align:left;">
+                <p style="margin-bottom:var(--ds-space-3);">✅ 答对题数：<b id="correct-count" style="color:var(--ds-color-success);font-size:1.25rem;">0</b> / 10</p>
+                <p style="margin-bottom:var(--ds-space-3);">📊 总得分：<b id="total-score" style="color:var(--ds-accent);font-size:1.25rem;">0</b> 分（满分 100 分）</p>
+                <p>📈 正确率：<b id="score-percent" style="color:var(--ds-color-info);font-size:1.25rem;">0%</b></p>
             </div>
+            <button class="retake-btn" id="retake-btn" aria-label="重新答题" style="margin-top:var(--ds-space-6);">↺ 重新答题</button>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- 10. 题2 -->
-<section class="slide" data-section="quiz" data-index="1">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第2题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>2. "诸夏之亡也"中"亡"是什么意思？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">灭亡、消失</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">"亡"通"无"，读作wú。字面意思是"没有"，但这里不是真的"没有君主"，而是"君主名存实亡"——诸侯不听命于周天子，大夫专权，弑君篡位，君不君、臣不臣。虽然形式上有君，但实质上"无君"</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">逃亡、流亡</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">死亡</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- 11. 题3 -->
-<section class="slide" data-section="quiz" data-index="2">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第3题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>3. 这句话历来有两种理解，分别是什么？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">一种说夷狄好，一种说诸夏好</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">第一种"责夏"——诸夏礼崩乐坏，还不如夷狄有秩序（伤时之叹）；第二种"尊夏"——诸夏即使没有君主，但礼乐文明仍在传承，胜过夷狄的政治形式（文明自信）。两种都强调礼乐文明的重要性</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">一种说孔子对，一种说孔子错</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">一种说君主重要，一种说礼乐重要</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 12. 题4 -->
-<section class="slide" data-section="quiz" data-index="3">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第4题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>4. 孔子时代的"礼崩乐坏"是什么意思？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">音乐和舞蹈消失了</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">礼乐制度名存实亡：周天子名存实亡，诸侯不听命；大夫专权僭越，以下犯上；君不君、臣不臣、父不父、子不子；弑君篡位成常态，整个社会秩序崩溃。形式还在，但无人遵守</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">礼乐被人破坏了</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">礼乐过时了</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 13. 题5 -->
-<section class="slide" data-section="quiz" data-index="4">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第5题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>5. 什么是"夷夏之辨"？以什么为标准？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">以血缘、种族为标准区分</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">"夷夏之辨"是古代区分文明与野蛮的标准，不以血缘、种族、地域为标准，而以礼乐文化为标准。有礼乐就是华夏，无礼乐就是夷狄。夷狄学习礼乐，就变成华夏；华夏丢失礼乐，就变成夷狄</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">以地域为标准区分</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">以语言为标准区分</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 14. 题6 -->
-<section class="slide" data-section="quiz" data-index="5">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第6题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>6. 孔子为什么说"夷狄之有君，不如诸夏之亡也"？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">因为孔子歧视夷狄</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">孔子强调礼乐文明高于政治权力。夷狄有君而无礼乐——有政权而无文明，等于无；诸夏无君而有礼乐——无政权而有文明，仍可存。政权可以更替，但文明不能中断；政治权力是暂时的，文化传承是永恒的</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">因为孔子认为君主不重要</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">因为孔子想贬低夷狄抬高诸夏</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 15. 题7 -->
-<section class="slide" data-section="quiz" data-index="6">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第7题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>7. "夷狄进于中国，则中国之；中国而为夷狄，则夷狄之"是什么意思？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">夷狄搬到中国，就变成中国人</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">夷狄学习礼乐文明，就变成华夏；华夏丢失礼乐文明，就变成夷狄。这说明夷夏之辨不以血缘种族为标准，而以礼乐文化为标准。文明的标准是文化，不是种族</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">中国人搬到夷狄，就变成夷狄</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">夷狄和中国可以互相转化</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 16. 题8 -->
-<section class="slide" data-section="quiz" data-index="7">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第8题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>8. 本章与前几章有什么联系？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">没有联系</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">第三章"人而不仁，如礼何"——礼之本在仁；第四章"礼，与其奢也，宁俭"——礼之本在心；第五章"夷狄之有君"——礼乐文明高于政治权力。三章合看：礼之本在内不在外、在心不在形、在文明不在权力。八佾篇的核心：追问礼之本，揭示礼在仁、在心、在文明</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">都在批评季氏</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">都在讲君主</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 17. 题9 -->
-<section class="slide" data-section="quiz" data-index="8">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第9题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>9. 举例说明：什么是"有政权而无文明"？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">一个国家没有政权</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">一个政权只追求权力，不发展文化教育；只重视政治形式，不重视文明传承；只有统治手段，没有文化内核。比如秦朝焚书坑儒——有政权而摧毁文明。政权虽然强大，但文明被破坏，最终二世而亡。这就是"有政权而无文明"</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">一个国家文化发达</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">一个政权很文明</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 18. 题10 -->
-<section class="slide" data-section="quiz" data-index="9">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第10题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>10. 本章对现代人有什么启示？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">应该恢复古代的礼乐制度</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">核心启示：一个国家、一个民族，最重要的是文化传承、文明积淀、精神内核。政权可以更迭，但文化不能断层；权力可以转移，但文明不能中断。现代启示：重视文化教育、传承文明精神、培养人文素养——这些比权力和财富更重要，因为它们是文明的根基</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">君主制度比民主制度好</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">文化不重要，政权才重要</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ====== 答疑解惑 ====== -->
 
@@ -440,11 +279,11 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">💬 常见问题</h2>
         <div class="slide-card__body">
-            <div class="faq-item" style="margin-bottom:1.2rem;">
+            <div class="faq-item" style="margin-bottom:var(--ds-space-5);">
                 <p><strong>❓ 孔子是不是在歧视夷狄？</strong></p>
                 <p>不是。<strong>孔子不是狭隘的民族主义者。</strong><br><br>夷夏之辨不以血缘、种族、地域为标准，而以礼乐文化为标准。<br><br>① "夷狄进于中国，则中国之"——夷狄学习礼乐，就变成华夏<br>② "中国而为夷狄，则夷狄之"——华夏丢失礼乐，就变成夷狄<br>③ <strong>标准是礼乐文化，不是血缘种族</strong><br><br>孔子这里用"夷狄"，不是贬低某个民族，而是<strong>以"有无礼乐"为标准区分文明与野蛮</strong>。文明的标准是文化，不是种族。</p>
             </div>
-            <div class="faq-item" style="margin-bottom:1.2rem;">
+            <div class="faq-item" style="margin-bottom:var(--ds-space-5);">
                 <p><strong>❓ 这句话到底是在"责夏"还是"尊夏"？</strong></p>
                 <p>两种理解都成立。<br><br><strong>责夏：</strong>痛心诸夏礼崩乐坏，连夷狄都不如——这是伤时之叹。<br><br><strong>尊夏：</strong>坚信诸夏礼乐文明，胜过夷狄的政治形式——这是文明自信。<br><br><strong>无论哪种，核心都在强调礼乐文明的重要性。</strong>孔子既痛心诸夏的堕落，又坚信礼乐文明的力量。<br><br>他看到的是：<strong>文明根基在礼乐，不在权力；文化传承高于政治形式。</strong></p>
             </div>
@@ -462,22 +301,22 @@
         <h2 class="slide-card__heading">🌟 生活应用</h2>
         <div class="slide-card__body">
             <p>孔子"文明高于政权"的思想，穿越2500年，对现代人依然有深刻启示——</p>
-            <div class="app-grid" style="display:grid;gap:0.8rem;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:1rem;">
+            <div class="app-grid" style="display:grid;gap:var(--ds-space-3);">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>📚 个人：重视文化素养</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">比财富、地位、权力更重要的，是文化素养、精神境界、人格品质。政权可以更迭，权力可以转移，但文化素养是自己的。<strong>孔子的提醒：不要只追求物质，更要重视精神；不要只看重权力，更要看重文化。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">比财富、地位、权力更重要的，是文化素养、精神境界、人格品质。政权可以更迭，权力可以转移，但文化素养是自己的。<strong>孔子的提醒：不要只追求物质，更要重视精神；不要只看重权力，更要看重文化。</strong></p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🏫 教育：传承文明薪火</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">教育的本质是什么？不是培养会考试的人，而是<strong>传承文明薪火、培养人格品质</strong>。政权可以更替，但文化不能断层；权力可以转移，但文明不能中断。教育是文明传承的根本。<strong>孔子的提醒：教育要重视文化传承，不只是知识传授。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">教育的本质是什么？不是培养会考试的人，而是<strong>传承文明薪火、培养人格品质</strong>。政权可以更替，但文化不能断层；权力可以转移，但文明不能中断。教育是文明传承的根本。<strong>孔子的提醒：教育要重视文化传承，不只是知识传授。</strong></p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🏛️ 社会：重视文化价值</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">一个社会，不能只追求GDP、只看重经济指标，更要重视文化价值、文明积淀。政权可以更迭，但文化不能断层；权力可以转移，但文明不能中断。<strong>孔子的提醒：社会要重视文化，不只是追求物质。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">一个社会，不能只追求GDP、只看重经济指标，更要重视文化价值、文明积淀。政权可以更迭，但文化不能断层；权力可以转移，但文明不能中断。<strong>孔子的提醒：社会要重视文化，不只是追求物质。</strong></p>
                 </div>
-                <div style="background:var(--purple-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🌍 国家：文化是根本</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">一个国家、一个民族，最重要的是文化传承、文明积淀、精神内核。政权可以更迭，但文化不能断层；权力可以转移，但文明不能中断。<strong>孔子的远见：文化传承高于政治形式，文明根基高于政权更替。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">一个国家、一个民族，最重要的是文化传承、文明积淀、精神内核。政权可以更迭，但文化不能断层；权力可以转移，但文明不能中断。<strong>孔子的远见：文化传承高于政治形式，文明根基高于政权更替。</strong></p>
                 </div>
             </div>
         </div>
@@ -498,7 +337,7 @@
             <p><strong>夷夏之辨不以血缘种族为标准，而以礼乐文化为标准。</strong><br>有礼乐就是华夏，无礼乐就是夷狄。夷狄学习礼乐，就变成华夏；华夏丢失礼乐，就变成夷狄。<strong>文明的标准是文化，不是种族。</strong></p>
             <p><strong>第四层辩证：责夏与尊夏</strong></p>
             <p>两种理解都成立：<br>① <strong>责夏</strong>——痛心诸夏礼崩乐坏，连夷狄都不如（伤时之叹）<br>② <strong>尊夏</strong>——坚信诸夏礼乐文明，胜过夷狄的政治形式（文明自信）<br><br><strong>无论哪种，核心都在强调礼乐文明的重要性。</strong>孔子既痛心诸夏的堕落，又坚信礼乐文明的力量。</p>
-            <p style="text-align:center;margin-top:0.5rem;"><strong>一句话归总：<br>夷狄之有君，不如诸夏之亡也——<br>礼乐文明高于政治权力，文化传承重于政权更替。<br>政权可以更迭，但文明不能中断；<br>权力可以转移，但文化不能断层。<br>这是孔子对文明的坚守，<br>也是给后世最深刻的警示：<br>文明的根基在礼乐，不在权力；<br>民族的根本在文化，不在政权。</strong></p>
+            <p style="text-align:center;margin-top:var(--ds-space-2);"><strong>一句话归总：<br>夷狄之有君，不如诸夏之亡也——<br>礼乐文明高于政治权力，文化传承重于政权更替。<br>政权可以更迭，但文明不能中断；<br>权力可以转移，但文化不能断层。<br>这是孔子对文明的坚守，<br>也是给后世最深刻的警示：<br>文明的根基在礼乐，不在权力；<br>民族的根本在文化，不在政权。</strong></p>
         </div>
     </div>
 </section>
@@ -509,104 +348,79 @@
         <h2 class="slide-card__heading">📖 课程总结</h2>
         <div class="slide-card__body">
             <p>今天我们一起品读了《八佾》篇的第五章——</p>
-            <p style="font-size:1.0rem;font-weight:700;text-align:center;margin:1rem 0;">
+            <p style="font-size:1.0rem;font-weight:700;text-align:center;margin:var(--ds-space-4) 0;">
                 "子曰：'夷狄之有君，不如诸夏之亡也。'"
             </p>
             <p>回顾本课要点：</p>
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.4rem;margin:0.8rem 0;">
-                <div style="background:var(--red-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--ds-space-2);margin:var(--ds-space-3) 0;">
+                <div style="background:var(--ds-color-error-bg);border-radius:10px;padding:var(--ds-space-2);text-align:center;font-size:0.82rem;">
                     <strong>夷狄之有君</strong><br>有政权无文明
                 </div>
-                <div style="background:var(--purple-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;">
+                <div style="background:var(--ds-accent-soft);border-radius:10px;padding:var(--ds-space-2);text-align:center;font-size:0.82rem;">
                     <strong>诸夏之亡也</strong><br>无政权有文明
                 </div>
-                <div style="background:var(--green-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:10px;padding:var(--ds-space-2);text-align:center;font-size:0.82rem;">
                     <strong>文明高于政权</strong><br>文化传承永恒
                 </div>
             </div>
             <p><strong>在八佾篇中的位置：</strong>本章为第五章，紧承第三章"人而不仁，如礼何"、第四章"礼，与其奢也，宁俭"，从"礼乐文明高于政治权力"角度进一步阐明：礼之本在仁、在心、在文明，不在形式、不在权力、不在政权。三章合看，揭示八佾篇的核心主题：<strong>礼崩乐坏的时代，礼沦为形式；孔子追问礼之本，揭示礼在仁、在心、在文明。</strong></p>
-            <div class="original-text" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-top:1rem;text-align:center;">
+            <div class="original-text" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-top:var(--ds-space-4);text-align:center;">
                 <p style="font-size:1.1rem;font-weight:700;">📜 原文重温</p>
                 <p style="font-size:0.9rem;">子曰："夷狄之有君，不如诸夏之亡也。"</p>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>✨ <strong>课后小挑战：</strong>想一想，在现代社会，"有政权而无文明"的现象还有吗？有没有哪个国家、哪个政权，只追求权力，不重视文化？有没有哪个民族，只追求物质，不重视精神？<strong>孔子的警示穿越2500年：文明根基在礼乐，不在权力；民族根本在文化，不在政权。</strong></p>
             </div>
         </div>
     </div>
 </section>
 
+    <!-- ====== 结束页 ====== -->
+    <section class="slide end-slide" data-section="review">
+        <div class="cover-ornament"></div>
+        <h2 class="ds-display">谢谢大家</h2>
+        <div class="cover-ornament"></div>
+        <div class="end-quote">
+            "学而时习之，不亦说乎"<br>
+            <span style="font-size:0.875rem;color:var(--ds-color-muted);">—— 孔子</span>
+        </div>
+        <div class="cover-seal">国学</div>
+    </section>
+
 </main>
+</div><!-- slide-viewport -->
 
 <script>
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-const pageIndicator = document.getElementById('page-indicator');
-const prevBtn = document.getElementById('nav-prev');
-const nextBtn = document.getElementById('nav-next');
-const dotsRow = document.getElementById('dots-row');
-
-for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('span');
-    dot.className = 'dot';
-    dot.dataset.index = i;
-    dot.addEventListener('click', function() { goToSlide(parseInt(this.dataset.index)); });
-    dotsRow.appendChild(dot);
-}
-
-function goToSlide(index) {
-    if (index < 0 || index >= totalSlides) return;
-    currentSlide = index;
-    slides.forEach((s, i) => { s.classList.toggle('active', i === index); });
-    const section = slides[index].dataset.section;
-    let actualPage = 0, totalInSection = 0;
-    slides.forEach((s, i) => {
-        if (s.dataset.section === section) { totalInSection++; if (i <= index) actualPage++; }
-    });
-    let label = ''; if (section === 'lecture') label = '📖 讲义'; else if (section === 'quiz') label = '✏️ 测验'; else label = '💬 答疑解惑';
-    pageIndicator.textContent = `${label} ${actualPage}/${totalInSection}`;
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index === totalSlides - 1;
-    document.querySelectorAll('.ds-tab').forEach(t => t.classList.toggle('active', t.dataset.section === section));
-    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === index));
-}
-
-prevBtn.addEventListener('click', function() { goToSlide(currentSlide - 1); });
-nextBtn.addEventListener('click', function() { goToSlide(currentSlide + 1); });
-document.querySelectorAll('.ds-tab').forEach(tab => {
-    tab.addEventListener('click', function() {
-        for (let i = 0; i < slides.length; i++) {
-            if (slides[i].dataset.section === this.dataset.section) { goToSlide(i); break; }
-        }
-    });
-});
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { if (currentSlide < totalSlides - 1) goToSlide(currentSlide + 1); }
-    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { if (currentSlide > 0) goToSlide(currentSlide - 1); }
-});
-document.getElementById('fullscreen-btn').addEventListener('click', function() {
-    if (!document.fullscreenElement) { document.documentElement.requestFullscreen(); this.querySelector('.ds-btn-nav__icon').textContent = '⛶✕'; this.querySelector('.ds-btn-nav__text').textContent = '退出'; }
-    else { document.exitFullscreen(); this.querySelector('.ds-btn-nav__icon').textContent = '⛶'; this.querySelector('.ds-btn-nav__text').textContent = '全屏'; }
-});
-
-function checkAnswer(el) {
-    const question = el.closest('.quiz-question');
-    const options = question.querySelectorAll('.quiz-option');
-    const feedback = question.querySelector('.quiz-feedback');
-    options.forEach(opt => { opt.style.pointerEvents = 'none'; if (opt.dataset.correct) opt.classList.add('correct'); });
-    el.classList.add(el.dataset.correct ? 'correct' : 'incorrect');
-
-    if (el.dataset.correct) { feedback.style.display = 'block'; feedback.style.color = 'var(--green-700)'; feedback.textContent = '✅ 回答正确！很棒！'; }
-    else {
-        feedback.style.display = 'block'; feedback.style.color = 'var(--red-700)';
-        let ct = ''; options.forEach(o => { if (o.dataset.correct) ct = o.querySelector('.quiz-option-text').textContent; });
-        feedback.textContent = `❌ 答错了。正确答案是：${ct}`;
-    }
-}
-
-goToSlide(0);
+    window.GUOXUE_COURSE_ID = '37-yi-di-zhi-you-jun';
+const QUIZ = [
+  {q: '1. 本章中"夷狄"和"诸夏"分别指什么？', opts: ['"夷狄"指北方，"诸夏"指南方', '"夷狄"指古代对中原周边民族的统称（东夷、西戎、南蛮、北狄），被视为"化外之民"——无礼乐教化；"诸夏"指中原地区的华夏诸侯国，有礼乐文明、有伦常秩序，是文明的代表', '"夷狄"指外国，"诸夏"指中国', '"夷狄"指野蛮人，"诸夏"指文明人'], ans: 1, exp: '诸夏指中原地区的华夏诸侯国'},
+  {q: '2. "诸夏之亡也"中"亡"是什么意思？', opts: ['灭亡、消失', '"亡"通"无"，读作wú。字面意思是"没有"，但这里不是真的"没有君主"，而是"君主名存实亡"——诸侯不听命于周天子，大夫专权，弑君篡位，君不君、臣不臣。虽然形式上有君，但实质上"无君"', '逃亡、流亡', '死亡'], ans: 1, exp: '字面意思是"没有"，但这里不是真的"没有君主"，而是"君主名存实亡"——诸侯不听命于周天子，大夫专权，弑君篡位，君不君、臣不臣'},
+  {q: '3. 这句话历来有两种理解，分别是什么？', opts: ['一种说夷狄好，一种说诸夏好', '第一种"责夏"——诸夏礼崩乐坏，还不如夷狄有秩序（伤时之叹）；第二种"尊夏"——诸夏即使没有君主，但礼乐文明仍在传承，胜过夷狄的政治形式（文明自信）。两种都强调礼乐文明的重要性', '一种说孔子对，一种说孔子错', '一种说君主重要，一种说礼乐重要'], ans: 1, exp: '解读：①夷狄虽然有君主，但没有礼乐文明②诸夏即使没有君主，但礼乐文明仍在传承③诸夏的礼乐文明，胜过夷狄的政治形式这是孔子的文明自信——文化传统比政治权力更重要'},
+  {q: '4. 孔子时代的"礼崩乐坏"是什么意思？', opts: ['音乐和舞蹈消失了', '礼乐制度名存实亡：周天子名存实亡，诸侯不听命；大夫专权僭越，以下犯上；君不君、臣不臣、父不父、子不子；弑君篡位成常态，整个社会秩序崩溃。形式还在，但无人遵守', '礼乐被人破坏了', '礼乐过时了'], ans: 1, exp: '周天子名存实亡：①诸侯不听命于周天子，各自为政②周朝曾经五年没有天子③鲁国曾经九年没有国君大夫专权僭越：①季氏八佾舞于庭、以《雍》彻②卿大夫架空国君……'},
+  {q: '5. 什么是"夷夏之辨"？以什么为标准？', opts: ['以血缘、种族为标准区分', '"夷夏之辨"是古代区分文明与野蛮的标准，不以血缘、种族、地域为标准，而以礼乐文化为标准。有礼乐就是华夏，无礼乐就是夷狄。夷狄学习礼乐，就变成华夏；华夏丢失礼乐，就变成夷狄', '以地域为标准区分', '以语言为标准区分'], ans: 1, exp: '夷夏之辨"是古代区分文明与野蛮的标准'},
+  {q: '6. 孔子为什么说"夷狄之有君，不如诸夏之亡也"？', opts: ['因为孔子歧视夷狄', '孔子强调礼乐文明高于政治权力。夷狄有君而无礼乐——有政权而无文明，等于无；诸夏无君而有礼乐——无政权而有文明，仍可存。政权可以更替，但文明不能中断；政治权力是暂时的，文化传承是永恒的', '因为孔子认为君主不重要', '因为孔子想贬低夷狄抬高诸夏'], ans: 1, exp: '核心对比："夷狄之有君""诸夏之亡也"——夷狄有君而无礼乐，诸夏有礼乐而无君'},
+  {q: '7. "夷狄进于中国，则中国之；中国而为夷狄，则夷狄之"是什么意思？', opts: ['夷狄搬到中国，就变成中国人', '夷狄学习礼乐文明，就变成华夏；华夏丢失礼乐文明，就变成夷狄。这说明夷夏之辨不以血缘种族为标准，而以礼乐文化为标准。文明的标准是文化，不是种族', '中国人搬到夷狄，就变成夷狄', '夷狄和中国可以互相转化'], ans: 1, exp: '华夏：①有礼乐教化②有伦常秩序③有仁义道德④文明的代表夷狄：①无礼乐教化②无伦常秩序③无仁义道德④野蛮的代表关键：夷夏之辨不以血缘、种族、地域为标准，而以礼乐文化为标准'},
+  {q: '8. 本章与前几章有什么联系？', opts: ['没有联系', '第三章"人而不仁，如礼何"——礼之本在仁；第四章"礼，与其奢也，宁俭"——礼之本在心；第五章"夷狄之有君"——礼乐文明高于政治权力。三章合看：礼之本在内不在外、在心不在形、在文明不在权力。八佾篇的核心：追问礼之本，揭示礼在仁、在心、在文明', '都在批评季氏', '都在讲君主'], ans: 1, exp: '核心思想·礼乐文明高于政治权力本章承接前章，从"礼乐文明"角度进一步阐明——"礼乐文明高于血统"🔑夷狄之有君有政权而无文明：夷狄虽有君主，但没有礼乐教化'},
+  {q: '9. 举例说明：什么是"有政权而无文明"？', opts: ['一个国家没有政权', '一个政权只追求权力，不发展文化教育；只重视政治形式，不重视文明传承；只有统治手段，没有文化内核。比如秦朝焚书坑儒——有政权而摧毁文明。政权虽然强大，但文明被破坏，最终二世而亡。这就是"有政权而无文明"', '一个国家文化发达', '一个政权很文明'], ans: 1, exp: '有君主而无礼乐——有政权而无文明，等于无②无君主而有礼乐——无政权而有文明，仍可存③结论：礼乐比君主更重要，文明比权力更根本政权可以更替，但文明不能中断'},
+  {q: '10. 本章对现代人有什么启示？', opts: ['应该恢复古代的礼乐制度', '核心启示：一个国家、一个民族，最重要的是文化传承、文明积淀、精神内核。政权可以更迭，但文化不能断层；权力可以转移，但文明不能中断。现代启示：重视文化教育、传承文明精神、培养人文素养——这些比权力和财富更重要，因为它们是文明的根基', '君主制度比民主制度好', '文化不重要，政权才重要'], ans: 1, exp: '国家：文化是根本一个国家、一个民族，最重要的是文化传承、文明积淀、精神内核'},
+];
+window.GUOXUE_QUIZ_OVERRIDE = QUIZ;
 </script>
+<script src="../../assets/js/slide-engine.js?v=29f633f"></script>
 
+<!-- 底部进度条 -->
+<div class="progress-bar-bottom">
+    <div class="progress-bar-fill" id="progress-fill" style="width:4%"></div>
+</div>
+
+<!-- 键盘提示 -->
+<div class="kbd-hint">
+    <span class="kbd">←</span><span class="kbd">→</span> 翻页
+    <span style="margin-left:8px"><span class="kbd">Space</span> 下一页</span>
+</div>
+
+<script src="../../assets/js/auth-email.js" defer></script>
+<script src="../../assets/js/auth.js" defer></script>
+<script src="../../assets/js/api-client.js" defer></script>
 </body>
 </html>

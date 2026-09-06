@@ -49,18 +49,19 @@
     </div>
 </nav>
 
-<main class="ds-slide-container" id="slide-container">
+<div class="slide-viewport">
+<main class="slide-container" id="slide-container">
 
 <!-- ====== 讲义部分 ====== -->
 
 <!-- 1. 标题页 -->
-<section class="slide" data-section="lecture" data-index="0">
+<section class="slide active" data-section="lecture" data-index="0">
     <div class="slide-card slide-card--cover">
         <div class="slide-card__body slide-card__body--center">
             <div class="lesson-number"><small>第35课 · 《论语·八佾》第一章</small></div>
             <h1 class="lesson-title" style="font-size:1.3rem;">是可忍，孰不可忍<br><span style="font-size:0.85em;">八佾舞于庭</span></h1>
-            <p class="lesson-subtitle" style="font-size:1.0rem;color:var(--blue-700);">礼的底线<br>儒者的愤怒</p>
-            <div class="quote-block" style="margin-top:1.5rem;">
+            <p class="lesson-subtitle" style="font-size:1.0rem;color:var(--ds-color-info);">礼的底线<br>儒者的愤怒</p>
+            <div class="quote-block" style="margin-top:var(--ds-space-6);">
                 <p style="font-size:0.88rem;line-height:2.2;">
                     <ruby>孔<rt>kǒng</rt></ruby><ruby>子<rt>zǐ</rt></ruby><ruby>谓<rt>wèi</rt></ruby><ruby>季<rt>jì</rt></ruby><ruby>氏<rt>shì</rt></ruby>：<br>
                     "八佾舞于庭，<br>
@@ -79,16 +80,16 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📜 原文呈现</h2>
         <div class="slide-card__body">
-            <div class="original-text" style="background:var(--amber-100);border-radius:12px;padding:1.5rem;text-align:center;">
-                <p style="font-size:1.2rem;font-weight:700;margin-bottom:1rem;">《论语·八佾》第一章</p>
+            <div class="original-text" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-6);text-align:center;">
+                <p style="font-size:1.2rem;font-weight:700;margin-bottom:var(--ds-space-4);">《论语·八佾》第一章</p>
                 <p style="font-size:1.0rem;line-height:2.0;">
                     <ruby>孔<rt>kǒng</rt></ruby><ruby>子<rt>zǐ</rt></ruby><ruby>谓<rt>wèi</rt></ruby><ruby>季<rt>jì</rt></ruby><ruby>氏<rt>shì</rt></ruby>："<ruby>八<rt>bā</rt></ruby><ruby>佾<rt>yì</rt></ruby><ruby>舞<rt>wǔ</rt></ruby><ruby>于<rt>yú</rt></ruby><ruby>庭<rt>tíng</rt></ruby>，是<ruby>可<rt>kě</rt></ruby><ruby>忍<rt>rěn</rt></ruby>也，<ruby>孰<rt>shú</rt></ruby>不<ruby>可<rt>kě</rt></ruby><ruby>忍<rt>rěn</rt></ruby>也？"
                 </p>
             </div>
-            <div class="translation-box" style="background:var(--gray-100);border-radius:12px;padding:1.2rem;margin-top:1rem;">
+            <div class="translation-box" style="background:var(--ds-color-surface);border-radius:var(--ds-radius-xl);padding:var(--ds-space-5);margin-top:var(--ds-space-4);">
                 <p><strong>🔍 通译：</strong>孔子评论季氏说："（季氏）竟敢在自家的庭院里，用天子才配享用的八佾乐舞（八行六十四人）。这样的事如果都可以容忍，那还有什么事情不可以容忍呢？"</p>
             </div>
-            <div class="tip-box" style="background:var(--blue-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>📌 <strong>本章特色：</strong>这是《论语·八佾》篇的<strong>开篇第一章</strong>，也是整部《论语》中<strong>孔子情绪最激烈、最著名的愤怒表达之一</strong>。全篇以"礼"为主题，第一篇就抛出"礼坏乐崩"的时代病灶——鲁国权臣季氏，用天子的规格在自家院子里跳舞。孔子没有委婉，没有绕弯，一句反问斩钉截铁：<strong>这都能忍，还有什么不能忍？</strong></p>
             </div>
         </div>
@@ -100,33 +101,33 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 字词梳理 · 谓、季氏、佾、庭、忍</h2>
         <div class="slide-card__body">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:1rem 0;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:0.9rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-space-3);margin:var(--ds-space-4) 0;">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">谓（wèi）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>评论、议论。</strong>"孔子谓季氏"不是私下嘀咕，而是<strong>公开的评论与批评</strong>——孔子对季氏的行为直接表态。一个"谓"字，拉开了这场著名的"公开批评"：<strong>当众议论你的不是，本身就是态度。</strong></p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>评论、议论。</strong>"孔子谓季氏"不是私下嘀咕，而是<strong>公开的评论与批评</strong>——孔子对季氏的行为直接表态。一个"谓"字，拉开了这场著名的"公开批评"：<strong>当众议论你的不是，本身就是态度。</strong></p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;">
+                <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">季氏（jì shì）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>季孙氏，鲁国最有权势的大夫家族。</strong>与孟孙氏、叔孙氏合称"三桓"，世代把持鲁国朝政。季氏本是<strong>大夫</strong>（卿大夫），按礼制地位低于诸侯，更远低于天子——<strong>但他是鲁国实际的掌权者，权力膨胀到了目无王室的地步。</strong></p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>季孙氏，鲁国最有权势的大夫家族。</strong>与孟孙氏、叔孙氏合称"三桓"，世代把持鲁国朝政。季氏本是<strong>大夫</strong>（卿大夫），按礼制地位低于诸侯，更远低于天子——<strong>但他是鲁国实际的掌权者，权力膨胀到了目无王室的地步。</strong></p>
                 </div>
             </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:0.5rem 0;">
-                <div style="background:var(--red-100);border-radius:12px;padding:0.9rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--ds-space-3);margin:var(--ds-space-2) 0;">
+                <div style="background:var(--ds-color-error-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">佾（yì）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>古代乐舞的行列单位，一佾八人。</strong>"八佾"就是八行八列、共六十四人的大型乐舞。<strong>乐舞的规模不是随便定的，而是礼制等级的直接体现</strong>——你是什么身份，才能用多大的场面。规模本身就是"名分"。</p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>古代乐舞的行列单位，一佾八人。</strong>"八佾"就是八行八列、共六十四人的大型乐舞。<strong>乐舞的规模不是随便定的，而是礼制等级的直接体现</strong>——你是什么身份，才能用多大的场面。规模本身就是"名分"。</p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:0.9rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">庭（tíng）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>庭院。</strong>注意这个字的分量——季氏是在<strong>自己家的庭院</strong>里跳天子的舞。<strong>家</strong>，意味着私；<strong>天子之舞</strong>，意味着公与尊。<strong>把天子的规格搬进自家私宅，是一种赤裸裸的"僭越"（超越本分）。</strong></p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>庭院。</strong>注意这个字的分量——季氏是在<strong>自己家的庭院</strong>里跳天子的舞。<strong>家</strong>，意味着私；<strong>天子之舞</strong>，意味着公与尊。<strong>把天子的规格搬进自家私宅，是一种赤裸裸的"僭越"（超越本分）。</strong></p>
                 </div>
             </div>
-            <div style="margin:0.5rem 0;">
-                <div style="background:var(--purple-100);border-radius:12px;padding:0.9rem;">
+            <div style="margin:var(--ds-space-2) 0;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.9rem;">
                     <p style="font-weight:700;text-align:center;font-size:1.0rem;">忍（rěn）</p>
-                    <p style="font-size:0.86rem;margin:0.3rem 0 0;"><strong>本章最关键的争议字，有两种读法：</strong>①<strong>容忍</strong>——"如果这种事都能容忍，那还有什么不能容忍？"（强调僭越之严重，人人不该容忍）；②<strong>忍心</strong>——"他竟忍心做出这种事，那还有什么不敢做的？"（强调季氏胆大妄为）。<strong>朱熹《论语集注》两种解释都收录了，意思相通：孔子在说，这是绝对不能容忍、也绝不能姑息的行为。</strong></p>
+                    <p style="font-size:0.86rem;margin:var(--ds-space-1) 0 0;"><strong>本章最关键的争议字，有两种读法：</strong>①<strong>容忍</strong>——"如果这种事都能容忍，那还有什么不能容忍？"（强调僭越之严重，人人不该容忍）；②<strong>忍心</strong>——"他竟忍心做出这种事，那还有什么不敢做的？"（强调季氏胆大妄为）。<strong>朱熹《论语集注》两种解释都收录了，意思相通：孔子在说，这是绝对不能容忍、也绝不能姑息的行为。</strong></p>
                 </div>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.7rem;">
+            <div class="tip-box" style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:0.7rem;">
                 <p>💡 <strong>结构之美：</strong>本章虽短，句法极精——前句陈述事实（"八佾舞于庭"），后句连用两个反问（"是可忍也，孰不可忍也？"）。<strong>先摆事实，再表达态度；事实越具体，反问越有力。</strong>这是中国文学史上最著名的"愤怒句式"之一，两千年来被反复引用。</p>
             </div>
         </div>
@@ -138,11 +139,11 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 一：「八佾舞于庭」——僭越</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.05rem;font-weight:700;">"八佾舞于庭"</p>
             </div>
             <p><strong>先看礼制：乐舞的规模，就是身份的标尺。</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:0.6rem 0;">
                 <p style="margin:0;font-size:0.92rem;">按周代礼制（《左传》记载"天子用八，诸侯用六，大夫四，士二"）：<br><br>
                 👑 <strong>天子</strong>——八佾（8行×8人＝<strong>64人</strong>）<br>
                 🏯 <strong>诸侯</strong>——六佾（6行×6人＝<strong>36人</strong>）<br>
@@ -151,10 +152,10 @@
                 <strong>季氏是大夫，按礼制只能用四佾（16人），却动用了天子的八佾（64人）。</strong>多出来的不是48个人，而是<strong>整整四个等级的天堑</strong>。</p>
             </div>
             <p><strong>什么叫"僭越"？</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
                 <p style="margin:0;"><strong>僭（jiàn）越＝超越本分、冒用更高等级的规格。</strong><br><br>在礼制社会里，规格不是虚荣——<strong>规格就是秩序本身</strong>。什么身份用什么排场，背后是"名分"二字：你的地位决定你的权利边界。<strong>今天你敢用天子的舞，明天你就敢坐天子的位。</strong>僭越，是权力失控的第一声警报。</p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.6rem;">
                 <p>📌 <strong>延伸含义：</strong>孔子批判的从来不只是一场舞——而是<strong>"舞"背后那个"不把规矩当回事"的季氏</strong>。越礼用舞是表象，目无王法、目无秩序才是实质。儒者看问题，从来都是<strong>透过现象看本质</strong>。</p>
             </div>
         </div>
@@ -166,11 +167,11 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">📖 逐句解读 · 二：「是可忍也，孰不可忍也」</h2>
         <div class="slide-card__body">
-            <div class="sentence-block" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-bottom:1rem;">
+            <div class="sentence-block" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-bottom:var(--ds-space-4);">
                 <p style="font-size:1.05rem;font-weight:700;">"是可忍也，孰不可忍也？"</p>
             </div>
             <p><strong>拆开来看：</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:0.6rem 0;">
                 <p style="margin:0;font-size:0.92rem;">
                 <strong>"是"</strong>＝这（指"八佾舞于庭"这件事）<br>
                 <strong>"可忍"</strong>＝可以容忍 / 忍心去做<br>
@@ -179,10 +180,10 @@
                 连起来：<strong>这种事都能忍（或他都敢做），天下还有什么不能忍（不敢做）的事？</strong></p>
             </div>
             <p><strong>为什么用反问，而不是直接骂？</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
                 <p style="margin:0;">直接骂"季氏无礼"，只是一句批评；<strong>反问句却把愤怒推向无限大</strong>——"孰不可忍"四个字，等于说：这件事的性质已经严重到<strong>无法用语言形容</strong>的程度。<br><br>孔子平时温良恭俭让，极少动怒；正因为罕见，这一次的愤怒才格外震撼。<strong>越是平和的人，真怒起来越有分量。</strong>孔子的愤怒不是失态，而是<strong>原则被践踏时的必然反应</strong>。</p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.6rem;margin-top:var(--ds-space-2);">
                 <p>📌 <strong>语气的力量：</strong>这句话后来成为汉语中最有力的表达之一——"是可忍，孰不可忍"至今仍被用来形容<strong>忍无可忍、必须表态的严重事件</strong>。一句两千五百年前的话，生命力穿越了整个文明史。</p>
             </div>
         </div>
@@ -195,14 +196,14 @@
         <h2 class="slide-card__heading">📖 逐句解读 · 三：孔子为何如此愤怒</h2>
         <div class="slide-card__body">
             <p><strong>一场"舞蹈"，为什么值得孔子动雷霆之怒？</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:0.6rem 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>因为在孔子眼里，"礼"从来不是形式，而是秩序。</strong><br><br>① <strong>礼＝名分</strong>：每个人都有自己的位置和边界。天子有天子之礼，大夫有大夫之礼。<strong>名分一旦混乱，社会就失去坐标。</strong><br><br>② <strong>礼＝示范</strong>：上有好者，下必甚焉。季氏是鲁国最有权势的家族，<strong>他一越礼，全国都会跟着越礼</strong>——大夫敢用天子的舞，家臣就敢用大夫的舞。<br><br>③ <strong>礼＝安全阀</strong>：孔子说过"是可忍也，孰不可忍也"的潜台词是——<strong>今天容忍他僭越用舞，明天就会容忍他僭越用权，后天就是篡位夺国。</strong>僭越是一条滑坡，起点就是"小事"上的不守规矩。</p>
             </div>
             <p><strong>愤怒的背后是清醒：</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
                 <p style="margin:0;">孔子的愤怒不是"小题大做"，而是<strong>从一件小事里看见了时代的大病</strong>。<br><br>他生活的春秋末期，正是"礼坏乐崩"的时代：周天子权威扫地，诸侯互相兼并，大夫架空了国君……<strong>季氏用八佾，只是这个大时代的一个缩影。</strong><br><br>孔子愤怒，是因为他清楚地看见：<strong>当所有人都开始不守规矩的时候，天下就会大乱。</strong>他一生奔走呼号"克己复礼"，就是要<strong>把滑向混乱的世界，拉回秩序的轨道</strong>。</p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.6rem;margin-top:var(--ds-space-2);">
                 <p>📌 <strong>与"温良恭俭让"的矛盾？</strong>孔子平时温和，但温和不等于没有原则。<strong>温和是对人，愤怒是对事</strong>——对越礼乱纪的行为，孔子从来立场鲜明、绝不和稀泥。真正的儒者：<strong>温润如玉，但自有锋芒。</strong></p>
             </div>
         </div>
@@ -215,7 +216,7 @@
         <h2 class="slide-card__heading">📖 逐句解读 · 四：季氏是谁？鲁国的"三桓"</h2>
         <div class="slide-card__body">
             <p><strong>要读懂孔子的愤怒，先认识鲁国的权力格局。</strong></p>
-            <div style="background:var(--blue-100);border-radius:12px;padding:1rem;margin:0.6rem 0;">
+            <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin:0.6rem 0;">
                 <p style="margin:0;font-size:0.92rem;"><strong>"三桓"＝鲁桓公三个儿子的后代家族：</strong><br><br>
                 🏛️ <strong>孟孙氏</strong>（仲孙氏）<br>
                 🏛️ <strong>叔孙氏</strong><br>
@@ -223,10 +224,10 @@
                 这三个家族世代担任鲁国卿大夫，<strong>长期把持朝政，架空鲁国国君</strong>。其中季氏最强——世代为鲁国执政上卿，<strong>鲁国的实权实际上掌握在季氏手里</strong>。史载季氏还曾驱逐鲁昭公，国君流亡在外七年。<strong>面对这样"尾大不掉"的权臣，孔子当然不会客气。</strong></p>
             </div>
             <p><strong>八佾篇为何以此开篇？</strong></p>
-            <div style="background:var(--amber-100);border-radius:12px;padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
+            <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:0.9rem;margin:0.6rem 0;font-size:0.92rem;">
                 <p style="margin:0;">《八佾》全篇二十六章，主题是<strong>"礼"</strong>。<br><br>开篇第一句，孔子就给了这个时代一记响亮的耳光——<strong>你们看，这就是当下最大的问题：权臣僭越，礼坏乐崩。</strong><br><br>把最严重的问题放在最前面，是《论语》编者刻意的安排：<strong>谈"礼"，先看"礼被破坏成什么样"。</strong>于是全篇的基调就此定下——不是空谈礼数，而是直面现实的失序，然后一章一章地讲：礼到底应该是什么样子。</p>
             </div>
-            <div class="tip-box" style="background:var(--purple-100);border-radius:12px;padding:0.6rem;margin-top:0.5rem;">
+            <div class="tip-box" style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:0.6rem;margin-top:var(--ds-space-2);">
                 <p>📌 <strong>历史回响：</strong>孔子一生"知其不可而为之"，明知礼坏乐崩的大势难以挽回，依然坚持讲礼、行礼、传礼。<strong>正是这份"不可为而为之"的坚持，让礼乐文明的火种穿越了乱世。</strong></p>
             </div>
         </div>
@@ -239,222 +240,60 @@
         <h2 class="slide-card__heading">🎯 核心思想 · 礼的底线：名分不可僭越，秩序不可动摇</h2>
         <div class="slide-card__body">
             <p>本章以一句愤怒的反问，立起了孔子思想中的一块基石——</p>
-            <div class="core-grid" style="display:grid;gap:0.8rem;">
-                <div style="background:var(--red-100);border-radius:12px;padding:1rem;">
+            <div class="core-grid" style="display:grid;gap:var(--ds-space-3);">
+                <div style="background:var(--ds-color-error-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 礼＝秩序，不是形式</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">乐舞的规模、祭祀的等级、衣服的样式……礼制的每一个细节，都是<strong>秩序的刻度</strong>。破坏一个刻度，就是撬动整个秩序。<strong>孔子愤怒，因为他看见了撬动的那根杠杆。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">乐舞的规模、祭祀的等级、衣服的样式……礼制的每一个细节，都是<strong>秩序的刻度</strong>。破坏一个刻度，就是撬动整个秩序。<strong>孔子愤怒，因为他看见了撬动的那根杠杆。</strong></p>
                 </div>
-                <div style="background:var(--purple-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 名分不可僭越</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">大夫用天子的规格，叫僭越；臣子行国君的权力，叫篡逆。<strong>僭越的第一步，永远是从"小事"开始的</strong>——今天一场舞，明天一把椅子。守住名分，就是守住边界。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">大夫用天子的规格，叫僭越；臣子行国君的权力，叫篡逆。<strong>僭越的第一步，永远是从"小事"开始的</strong>——今天一场舞，明天一把椅子。守住名分，就是守住边界。</p>
                 </div>
-                <div style="background:var(--blue-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 原则问题不含糊</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">孔子平时温和，但<strong>面对原则问题，他愤怒得毫不掩饰</strong>。"是可忍，孰不可忍"——<strong>该表态的时候必须表态，该愤怒的时候必须愤怒。</strong>温润不等于无原则，宽容不等于无底线。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">孔子平时温和，但<strong>面对原则问题，他愤怒得毫不掩饰</strong>。"是可忍，孰不可忍"——<strong>该表态的时候必须表态，该愤怒的时候必须愤怒。</strong>温润不等于无原则，宽容不等于无底线。</p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🔑 时代的清醒者</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">所有人都习以为常的时候，孔子第一个站出来说"不"。<strong>清醒的愤怒，比麻木的宽容更接近正义。</strong>乱世中，总要有一个人先喊出那句"孰不可忍"。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">所有人都习以为常的时候，孔子第一个站出来说"不"。<strong>清醒的愤怒，比麻木的宽容更接近正义。</strong>乱世中，总要有一个人先喊出那句"孰不可忍"。</p>
                 </div>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>📚 <strong>延伸思考：</strong>今天我们读这一章，不必纠结于古代的乐舞规格——但要读懂孔子留下的问题：<strong>当有人开始"不守规矩"的时候，我们是像大多数人一样沉默、纵容，还是像孔子一样站出来说"不"？</strong>排队插队、考试作弊、以大欺小……每一件"小事"上的容忍，都在悄悄松动我们社会的秩序。孔子的愤怒，是对所有"僭越"的一声长鸣。</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ====== 测验部分 ====== -->
+<!-- ====== 测验部分（slide-engine.js 渲染） ====== -->
 
-<!-- 9. 题1 -->
-<section class="slide" data-section="quiz" data-index="0">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第1题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>1. "佾"（yì）在古礼中指什么？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">A</span><span class="quiz-option-text">古代乐舞的行列单位，一佾八人；八佾就是八行八列、共六十四人的大型乐舞</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">B</span><span class="quiz-option-text">一种乐器，类似编钟</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">一种祭服，天子专用</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">宫殿的名称</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
+<section class="slide" data-section="quiz" id="quiz-0"></section>
+<section class="slide" data-section="quiz" id="quiz-1"></section>
+<section class="slide" data-section="quiz" id="quiz-2"></section>
+<section class="slide" data-section="quiz" id="quiz-3"></section>
+<section class="slide" data-section="quiz" id="quiz-4"></section>
+<section class="slide" data-section="quiz" id="quiz-5"></section>
+<section class="slide" data-section="quiz" id="quiz-6"></section>
+<section class="slide" data-section="quiz" id="quiz-7"></section>
+<section class="slide" data-section="quiz" id="quiz-8"></section>
+<section class="slide" data-section="quiz" id="quiz-9"></section>
+    <!-- ====== 测验得分页 ====== -->
+    <section class="slide" data-section="quiz" id="quiz-score" style="align-items:center;text-align:center;">
+        <span class="ds-badge ds-badge--success">测验得分</span>
+        <h2 style="border:none;text-align:center;padding-bottom:0;">测验完成！</h2>
+        <div style="margin-top:var(--ds-space-10);">
+            <div style="font-size:5rem;color:var(--ds-accent);font-weight:700;font-family:var(--ds-font-display);line-height:1;" id="score-display">0</div>
+            <div style="font-size:1.5rem;margin-top:var(--ds-space-4);color:var(--ds-color-fg-strong);font-weight:600;" id="score-message">正在计算得分...</div>
+            <div style="margin-top:var(--ds-space-8);font-size:1.125rem;color:var(--ds-color-fg);background:var(--ds-color-surface);padding:var(--ds-space-6);border-radius:var(--ds-radius-xl);display:inline-block;text-align:left;">
+                <p style="margin-bottom:var(--ds-space-3);">✅ 答对题数：<b id="correct-count" style="color:var(--ds-color-success);font-size:1.25rem;">0</b> / 10</p>
+                <p style="margin-bottom:var(--ds-space-3);">📊 总得分：<b id="total-score" style="color:var(--ds-accent);font-size:1.25rem;">0</b> 分（满分 100 分）</p>
+                <p>📈 正确率：<b id="score-percent" style="color:var(--ds-color-info);font-size:1.25rem;">0%</b></p>
             </div>
+            <button class="retake-btn" id="retake-btn" aria-label="重新答题" style="margin-top:var(--ds-space-6);">↺ 重新答题</button>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- 10. 题2 -->
-<section class="slide" data-section="quiz" data-index="1">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第2题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>2. 按周代礼制，八佾（64人）是哪种身份的专属规格？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">A</span><span class="quiz-option-text">天子（周天子）——"天子用八，诸侯用六，大夫四，士二"</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">B</span><span class="quiz-option-text">诸侯</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">大夫</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">士</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- 11. 题3 -->
-<section class="slide" data-section="quiz" data-index="2">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第3题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>3. 季氏（季孙氏）在鲁国是什么身份？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">鲁国国君</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">鲁国大夫（卿大夫），"三桓"之一——世代把持朝政、架空国君的权臣家族</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">周天子的使者</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">孔子的学生</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 12. 题4 -->
-<section class="slide" data-section="quiz" data-index="3">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第4题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>4. 季氏按礼制最多能用几佾？他实际用了八佾，这叫什么行为？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">A</span><span class="quiz-option-text">大夫最多四佾（16人）；实际用天子的八佾（64人），这叫"僭越"——超越本分、冒用更高等级的规格</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">B</span><span class="quiz-option-text">大夫最多六佾；这叫奢侈</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">大夫最多八佾；这叫礼尚往来</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">大夫不能用乐舞；这叫铺张浪费</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 13. 题5 -->
-<section class="slide" data-section="quiz" data-index="4">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第5题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>5. "是可忍也，孰不可忍也"中的"孰"是什么意思？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">熟悉</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">什么、哪一个——"还有什么不可以容忍的呢？"</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">谁（指人）</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">于是</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 14. 题6 -->
-<section class="slide" data-section="quiz" data-index="5">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第6题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>6. 关于"忍"字，朱熹《论语集注》收录了哪两种解释？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">忍耐和残忍</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">①容忍——这种事都能容忍，还有什么不能容忍；②忍心——他竟忍心做出这种事，还有什么不敢做。两种解释意思相通：这是绝不能容忍、绝不能姑息的行为</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">宽容和严厉</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">柔软和坚硬</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 15. 题7 -->
-<section class="slide" data-section="quiz" data-index="6">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第7题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>7. 孔子为什么对"一场舞蹈"如此愤怒？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">因为孔子讨厌音乐和舞蹈</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">因为礼不是形式而是秩序：①僭越破坏名分体系②权臣带头越礼会引发全国效仿③僭越是一条滑坡——今天敢用天子的舞，明天就敢夺天子的位；季氏用八佾是"礼坏乐崩"时代的危险信号</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">因为季氏没有邀请孔子去看舞</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">因为跳舞太吵闹</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 16. 题8 -->
-<section class="slide" data-section="quiz" data-index="7">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第8题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>8. 《八佾》篇全篇的主题是什么？开篇用本章有什么用意？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">主题是战争；开篇讲季氏是为了介绍武将</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">主题是"礼"；开篇先亮出时代病灶——权臣僭越、礼坏乐崩，为全篇谈"礼应该是什么样"定下直面现实的基调</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">主题是音乐；开篇介绍古代的乐器</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">主题是舞蹈；开篇教大家跳舞</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 17. 题9 -->
-<section class="slide" data-section="quiz" data-index="8">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第9题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>9. "三桓"指哪三个家族？季氏在其中地位如何？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">三个诸侯国；季氏是其中最弱的</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">孟孙氏、叔孙氏、季孙氏——鲁桓公三子的后代家族，世代把持鲁国朝政；其中季孙氏（季氏）最强，世代为鲁国执政上卿，是架空国君的权臣之首</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">孔子的三个儿子</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">周天子的三个大臣家族</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 18. 题10 -->
-<section class="slide" data-section="quiz" data-index="9">
-    <div class="slide-card">
-        <h2 class="slide-card__heading">✏️ 测验 · 第10题</h2>
-        <div class="slide-card__body">
-            <div class="quiz-question">
-                <p><strong>10. 这一章对现代人最核心的启示是什么？</strong></p>
-                <div class="quiz-options" style="margin-top:1rem;">
-                    <div class="quiz-option"><span class="quiz-option-key">A</span><span class="quiz-option-text">要学会跳舞和音乐</span></div>
-                    <div class="quiz-option" data-correct="true"><span class="quiz-option-key">B</span><span class="quiz-option-text">规则意识和底线意识——规矩不是小事：插队、作弊、以大欺小这些"小事"上的容忍，都在松动社会秩序；面对越界行为，要像孔子一样立场鲜明地说"不"，而不是麻木地沉默纵容；温润待人，但对原则问题绝不含糊</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">C</span><span class="quiz-option-text">要尽量争取更高的地位</span></div>
-                    <div class="quiz-option"><span class="quiz-option-key">D</span><span class="quiz-option-text">不要随便生气</span></div>
-                </div>
-                <div class="quiz-feedback" style="margin-top:1rem;display:none;"></div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ====== 答疑解惑 ====== -->
 
@@ -463,11 +302,11 @@
     <div class="slide-card">
         <h2 class="slide-card__heading">💬 常见问题</h2>
         <div class="slide-card__body">
-            <div class="faq-item" style="margin-bottom:1.2rem;">
+            <div class="faq-item" style="margin-bottom:var(--ds-space-5);">
                 <p><strong>❓ 孔子平时那么温和，为什么因为"一场舞"发这么大的火？是不是小题大做？</strong></p>
                 <p><strong>不是小题大做。</strong>在礼制社会里，乐舞的规模是<strong>身份和秩序的标尺</strong>，不是娱乐排场。季氏以大夫身份用天子的八佾，等于公开宣布：<strong>我不把天子放在眼里，不把规矩放在眼里。</strong><br><br>孔子愤怒的不是"跳舞"本身，而是跳舞背后的<strong>僭越心态</strong>——一个人今天敢在"小事"上越礼，明天就敢在"大事"上越权。孔子说过"君子不重则不威"，礼就是那根"重"的标尺。<strong>温和是待人的态度，愤怒是护原则的立场，两者并不矛盾。</strong></p>
             </div>
-            <div class="faq-item" style="margin-bottom:1.2rem;">
+            <div class="faq-item" style="margin-bottom:var(--ds-space-5);">
                 <p><strong>❓ "是可忍也"的"忍"到底是"容忍"还是"忍心"？</strong></p>
                 <p><strong>两种解释都有道理，朱熹《论语集注》把两种都收录了：</strong><br><br>① <strong>"容忍"说</strong>：孔子站在"我们"的立场——这种事我们都能容忍的话，那还有什么事不能容忍？强调<strong>事件性质之严重</strong>。<br>② <strong>"忍心"说</strong>：孔子站在"季氏"的立场——他连这种事都忍心做得出来，还有什么事他不敢做？强调<strong>季氏胆量之狂妄</strong>。<br><br>两种读法殊途同归：<strong>季氏僭越是绝不能容忍、也绝不能姑息的严重事件。</strong>这就是"是可忍，孰不可忍"流传两千多年而不衰的原因——它把愤怒表达到了极致。</p>
             </div>
@@ -485,22 +324,22 @@
         <h2 class="slide-card__heading">🌟 生活应用</h2>
         <div class="slide-card__body">
             <p>孔子的愤怒背后，是现代人依然需要的"底线意识"——</p>
-            <div class="app-grid" style="display:grid;gap:0.8rem;">
-                <div style="background:var(--blue-100);border-radius:12px;padding:1rem;">
+            <div class="app-grid" style="display:grid;gap:var(--ds-space-3);">
+                <div style="background:var(--ds-color-info-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🚦 日常：规则不是小事</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">排队插队、闯红灯、考试作弊、抄袭作业……每一件"小事"上的容忍，都是在松动规则。<strong>孔子说：今天容忍一次，明天就习以为常。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">排队插队、闯红灯、考试作弊、抄袭作业……每一件"小事"上的容忍，都是在松动规则。<strong>孔子说：今天容忍一次，明天就习以为常。</strong></p>
                 </div>
-                <div style="background:var(--green-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🛡️ 校园：对越界说不</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">以大欺小、起侮辱性外号、作弊帮抄——这些"季氏式的越界"，需要有人像孔子一样站出来。<strong>沉默和纵容，就是另一种"孰不可忍也"的默许。</strong></p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">以大欺小、起侮辱性外号、作弊帮抄——这些"季氏式的越界"，需要有人像孔子一样站出来。<strong>沉默和纵容，就是另一种"孰不可忍也"的默许。</strong></p>
                 </div>
-                <div style="background:var(--amber-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>⚖️ 社会：各司其职</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">老师做好教学、学生做好学习、司机守好交规……<strong>每个人守住自己的本分，社会这台大机器才能正常运转。</strong>僭越的起点，往往是"我就破例一次"。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">老师做好教学、学生做好学习、司机守好交规……<strong>每个人守住自己的本分，社会这台大机器才能正常运转。</strong>僭越的起点，往往是"我就破例一次"。</p>
                 </div>
-                <div style="background:var(--purple-100);border-radius:12px;padding:1rem;">
+                <div style="background:var(--ds-accent-soft);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);">
                     <strong>🧭 做人：温润而有锋芒</strong>
-                    <p style="margin:0.3rem 0 0;font-size:0.9rem;">孔子教我们：<strong>对人温和，对事认真；宽容待人，严格护规。</strong>做一个"温润如玉、自有锋芒"的人——平时与人为善，但面对原则问题，敢于说出那句"孰不可忍"。</p>
+                    <p style="margin:var(--ds-space-1) 0 0;font-size:0.9rem;">孔子教我们：<strong>对人温和，对事认真；宽容待人，严格护规。</strong>做一个"温润如玉、自有锋芒"的人——平时与人为善，但面对原则问题，敢于说出那句"孰不可忍"。</p>
                 </div>
             </div>
         </div>
@@ -521,7 +360,7 @@
             <p>季氏有权有势，是鲁国实际的主宰者——但他依然是"大夫"，不是"天子"。<strong>名分是秩序的坐标：实力再强，也不能改变身份的边界。</strong>孔子维护的，正是"再强大也要守规矩"这一条。这与实力无关，与文明有关：<strong>没有边界的权力，最终会毁灭所有人。</strong></p>
             <p><strong>第四层：愤怒与清醒</strong></p>
             <p>孔子的愤怒不是情绪失控，而是<strong>清醒的判断</strong>：他清楚地看见僭越将带来的连锁后果——礼坏乐崩、天下大乱。<strong>真正有力量的愤怒，是看清了后果之后的坚定表态，而不是一时冲动的发泄。</strong>"是可忍，孰不可忍"，是两千五百年前，一个清醒者对时代病灶发出的最强警报。</p>
-            <p style="text-align:center;margin-top:0.5rem;"><strong>一句话归总：<br>一场舞，窥见一个时代的失序；<br>一句反问，立起一条不可逾越的底线。<br>礼，是秩序的刻度；<br>愤怒，是清醒者的立场。</strong></p>
+            <p style="text-align:center;margin-top:var(--ds-space-2);"><strong>一句话归总：<br>一场舞，窥见一个时代的失序；<br>一句反问，立起一条不可逾越的底线。<br>礼，是秩序的刻度；<br>愤怒，是清醒者的立场。</strong></p>
         </div>
     </div>
 </section>
@@ -532,103 +371,79 @@
         <h2 class="slide-card__heading">📖 课程总结</h2>
         <div class="slide-card__body">
             <p>今天我们一起品读了《八佾》篇的开篇之章——</p>
-            <p style="font-size:1.0rem;font-weight:700;text-align:center;margin:1rem 0;">
+            <p style="font-size:1.0rem;font-weight:700;text-align:center;margin:var(--ds-space-4) 0;">
                 "孔子谓季氏：'八佾舞于庭，<br>是可忍也，孰不可忍也？'"
             </p>
             <p>回顾本课要点：</p>
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.4rem;margin:0.8rem 0;">
-                <div style="background:var(--red-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--ds-space-2);margin:var(--ds-space-3) 0;">
+                <div style="background:var(--ds-color-error-bg);border-radius:10px;padding:var(--ds-space-2);text-align:center;font-size:0.82rem;">
                     <strong>八佾＝天子之舞</strong><br>大夫僭越用64人
                 </div>
-                <div style="background:var(--purple-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;">
+                <div style="background:var(--ds-accent-soft);border-radius:10px;padding:var(--ds-space-2);text-align:center;font-size:0.82rem;">
                     <strong>孰不可忍＝底线</strong><br>名分不可僭越
                 </div>
-                <div style="background:var(--green-100);border-radius:10px;padding:0.5rem;text-align:center;font-size:0.82rem;">
+                <div style="background:var(--ds-color-success-bg);border-radius:10px;padding:var(--ds-space-2);text-align:center;font-size:0.82rem;">
                     <strong>礼＝秩序</strong><br>原则问题不含糊
                 </div>
             </div>
             <p><strong>在《八佾》篇中的位置：</strong>本章为第一章（开篇）。全篇二十六章以"礼"为主题，开篇即亮出时代病灶——权臣僭越、礼坏乐崩；随后各章再一一讲明：礼到底应该是什么样子。</p>
-            <div class="original-text" style="background:var(--amber-100);border-radius:12px;padding:1rem;margin-top:1rem;text-align:center;">
+            <div class="original-text" style="background:var(--ds-color-warning-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-4);margin-top:var(--ds-space-4);text-align:center;">
                 <p style="font-size:1.1rem;font-weight:700;">📜 原文重温</p>
                 <p style="font-size:0.9rem;">孔子谓季氏："八佾舞于庭，是可忍也，孰不可忍也？"</p>
             </div>
-            <div class="tip-box" style="background:var(--green-100);border-radius:12px;padding:0.8rem;margin-top:0.8rem;">
+            <div class="tip-box" style="background:var(--ds-color-success-bg);border-radius:var(--ds-radius-xl);padding:var(--ds-space-3);margin-top:var(--ds-space-3);">
                 <p>✨ <strong>课后小挑战：</strong>观察你身边一周——有没有人正在"小事"上越界（插队、作弊、以大欺小）？你是像大多数人一样沉默，还是像孔子一样表明了立场？<strong>试着做一次"清醒者"：对一件越界的小事，勇敢说出你的"不"。一周后回来复盘：守住底线的那一刻，你的感受是什么？</strong></p>
             </div>
         </div>
     </div>
 </section>
 
+    <!-- ====== 结束页 ====== -->
+    <section class="slide end-slide" data-section="review">
+        <div class="cover-ornament"></div>
+        <h2 class="ds-display">谢谢大家</h2>
+        <div class="cover-ornament"></div>
+        <div class="end-quote">
+            "学而时习之，不亦说乎"<br>
+            <span style="font-size:0.875rem;color:var(--ds-color-muted);">—— 孔子</span>
+        </div>
+        <div class="cover-seal">国学</div>
+    </section>
+
 </main>
+</div><!-- slide-viewport -->
 
 <script>
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-const pageIndicator = document.getElementById('page-indicator');
-const prevBtn = document.getElementById('nav-prev');
-const nextBtn = document.getElementById('nav-next');
-const dotsRow = document.getElementById('dots-row');
-
-for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('span');
-    dot.className = 'dot';
-    dot.dataset.index = i;
-    dot.addEventListener('click', function() { goToSlide(parseInt(this.dataset.index)); });
-    dotsRow.appendChild(dot);
-}
-
-function goToSlide(index) {
-    if (index < 0 || index >= totalSlides) return;
-    currentSlide = index;
-    slides.forEach((s, i) => { s.classList.toggle('active', i === index); });
-    const section = slides[index].dataset.section;
-    let actualPage = 0, totalInSection = 0;
-    slides.forEach((s, i) => {
-        if (s.dataset.section === section) { totalInSection++; if (i <= index) actualPage++; }
-    });
-    let label = ''; if (section === 'lecture') label = '📖 讲义'; else if (section === 'quiz') label = '✏️ 测验'; else label = '💬 答疑解惑';
-    pageIndicator.textContent = `${label} ${actualPage}/${totalInSection}`;
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index === totalSlides - 1;
-    document.querySelectorAll('.ds-tab').forEach(t => t.classList.toggle('active', t.dataset.section === section));
-    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === index));
-}
-
-prevBtn.addEventListener('click', function() { goToSlide(currentSlide - 1); });
-nextBtn.addEventListener('click', function() { goToSlide(currentSlide + 1); });
-document.querySelectorAll('.ds-tab').forEach(tab => {
-    tab.addEventListener('click', function() {
-        for (let i = 0; i < slides.length; i++) {
-            if (slides[i].dataset.section === this.dataset.section) { goToSlide(i); break; }
-        }
-    });
-});
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { if (currentSlide < totalSlides - 1) goToSlide(currentSlide + 1); }
-    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { if (currentSlide > 0) goToSlide(currentSlide - 1); }
-});
-document.getElementById('fullscreen-btn').addEventListener('click', function() {
-    if (!document.fullscreenElement) { document.documentElement.requestFullscreen(); this.querySelector('.ds-btn-nav__icon').textContent = '⛶✕'; this.querySelector('.ds-btn-nav__text').textContent = '退出'; }
-    else { document.exitFullscreen(); this.querySelector('.ds-btn-nav__icon').textContent = '⛶'; this.querySelector('.ds-btn-nav__text').textContent = '全屏'; }
-});
-
-function checkAnswer(el) {
-    const question = el.closest('.quiz-question');
-    const options = question.querySelectorAll('.quiz-option');
-    const feedback = question.querySelector('.quiz-feedback');
-    options.forEach(opt => { opt.style.pointerEvents = 'none'; if (opt.dataset.correct) opt.classList.add('correct'); });
-    el.classList.add(el.dataset.correct ? 'correct' : 'incorrect');
-    if (el.dataset.correct) { feedback.style.display = 'block'; feedback.style.color = 'var(--green-700)'; feedback.textContent = '✅ 回答正确！很棒！'; }
-    else {
-        feedback.style.display = 'block'; feedback.style.color = 'var(--red-700)';
-        let ct = ''; options.forEach(o => { if (o.dataset.correct) ct = o.querySelector('.quiz-option-text').textContent; });
-        feedback.textContent = `❌ 答错了。正确答案是：${ct}`;
-    }
-}
-
-goToSlide(0);
+    window.GUOXUE_COURSE_ID = '33-ba-yi-wu-yu-ting';
+const QUIZ = [
+  {q: '1. "佾"（yì）在古礼中指什么？', opts: ['古代乐舞的行列单位，一佾八人；八佾就是八行八列、共六十四人的大型乐舞', '一种乐器，类似编钟', '一种祭服，天子专用', '宫殿的名称'], ans: 0, exp: '八佾"就是八行八列、共六十四人的大型乐舞'},
+  {q: '2. 按周代礼制，八佾（64人）是哪种身份的专属规格？', opts: ['天子（周天子）——"天子用八，诸侯用六，大夫四，士二"', '诸侯', '大夫', '士'], ans: 0, exp: '按周代礼制（《左传》记载"天子用八，诸侯用六，大夫四，士二"）：👑天子——八佾（8行×8人＝64人）🏯诸侯——六佾（6行×6人＝36人）🏠大夫——四佾（4行×4人＝16人）🎒士……'},
+  {q: '3. 季氏（季孙氏）在鲁国是什么身份？', opts: ['鲁国国君', '鲁国大夫（卿大夫），"三桓"之一——世代把持朝政、架空国君的权臣家族', '周天子的使者', '孔子的学生'], ans: 1, exp: '季氏季孙氏，鲁国最有权势的大夫家族'},
+  {q: '4. 季氏按礼制最多能用几佾？他实际用了八佾，这叫什么行为？', opts: ['大夫最多四佾（16人）；实际用天子的八佾（64人），这叫"僭越"——超越本分、冒用更高等级的规格', '大夫最多六佾；这叫奢侈', '大夫最多八佾；这叫礼尚往来', '大夫不能用乐舞；这叫铺张浪费'], ans: 0, exp: '僭越＝超越本分、冒用更高等级的规格'},
+  {q: '5. "是可忍也，孰不可忍也"中的"孰"是什么意思？', opts: ['熟悉', '什么、哪一个——"还有什么不可以容忍的呢？"', '谁（指人）', '于是'], ans: 1, exp: '原文呈现《论语·八佾》第一章孔子谓季氏："八佾舞于庭，是可忍也，孰不可忍也'},
+  {q: '6. 关于"忍"字，朱熹《论语集注》收录了哪两种解释？', opts: ['忍耐和残忍', '①容忍——这种事都能容忍，还有什么不能容忍；②忍心——他竟忍心做出这种事，还有什么不敢做。两种解释意思相通：这是绝不能容忍、绝不能姑息的行为', '宽容和严厉', '柔软和坚硬'], ans: 1, exp: '忍心——"他竟忍心做出这种事，那还有什么不敢做的'},
+  {q: '7. 孔子为什么对"一场舞蹈"如此愤怒？', opts: ['因为孔子讨厌音乐和舞蹈', '因为礼不是形式而是秩序：①僭越破坏名分体系②权臣带头越礼会引发全国效仿③僭越是一条滑坡——今天敢用天子的舞，明天就敢夺天子的位；季氏用八佾是"礼坏乐崩"时代的危险信号', '因为季氏没有邀请孔子去看舞', '因为跳舞太吵闹'], ans: 1, exp: '僭越是一条滑坡，起点就是"小事"上的不守规矩'},
+  {q: '8. 《八佾》篇全篇的主题是什么？开篇用本章有什么用意？', opts: ['主题是战争；开篇讲季氏是为了介绍武将', '主题是"礼"；开篇先亮出时代病灶——权臣僭越、礼坏乐崩，为全篇谈"礼应该是什么样"定下直面现实的基调', '主题是音乐；开篇介绍古代的乐器', '主题是舞蹈；开篇教大家跳舞'], ans: 1, exp: '开篇第一句，孔子就给了这个时代一记响亮的耳光——你们看，这就是当下最大的问题：权臣僭越，礼坏乐崩'},
+  {q: '9. "三桓"指哪三个家族？季氏在其中地位如何？', opts: ['三个诸侯国；季氏是其中最弱的', '孟孙氏、叔孙氏、季孙氏——鲁桓公三子的后代家族，世代把持鲁国朝政；其中季孙氏（季氏）最强，世代为鲁国执政上卿，是架空国君的权臣之首', '孔子的三个儿子', '周天子的三个大臣家族'], ans: 1, exp: '其中季氏最强——世代为鲁国执政上卿，鲁国的实权实际上掌握在季氏手里'},
+  {q: '10. 这一章对现代人最核心的启示是什么？', opts: ['要学会跳舞和音乐', '规则意识和底线意识——规矩不是小事：插队、作弊、以大欺小这些"小事"上的容忍，都在松动社会秩序；面对越界行为，要像孔子一样立场鲜明地说"不"，而不是麻木地沉默纵容；温润待人，但对原则问题绝不含糊', '要尽量争取更高的地位', '不要随便生气'], ans: 1, exp: '排队插队、考试作弊、以大欺小……每一件"小事"上的容忍，都在悄悄松动我们社会的秩序'},
+];
+window.GUOXUE_QUIZ_OVERRIDE = QUIZ;
 </script>
+<script src="../../assets/js/slide-engine.js?v=29f633f"></script>
 
+<!-- 底部进度条 -->
+<div class="progress-bar-bottom">
+    <div class="progress-bar-fill" id="progress-fill" style="width:4%"></div>
+</div>
+
+<!-- 键盘提示 -->
+<div class="kbd-hint">
+    <span class="kbd">←</span><span class="kbd">→</span> 翻页
+    <span style="margin-left:8px"><span class="kbd">Space</span> 下一页</span>
+</div>
+
+<script src="../../assets/js/auth-email.js" defer></script>
+<script src="../../assets/js/auth.js" defer></script>
+<script src="../../assets/js/api-client.js" defer></script>
 </body>
 </html>
