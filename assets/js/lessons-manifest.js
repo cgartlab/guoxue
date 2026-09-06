@@ -505,7 +505,7 @@ window.GUOXUE_LESSONS = [
         description: '《论语·八佾》第一章精讲：孔子谓季氏：八佾舞于庭，是可忍也，孰不可忍也——孔子论礼的底线与儒者的愤怒：名分不可僭越，秩序不可动摇。配套十道互动测验。',
         status: 'ready',
         duration: '约 12 分钟',
-        subject: 'lunyu',
+        subject: 'mengxue',
         tier: 'core',
         featured: false
     },
@@ -519,7 +519,7 @@ window.GUOXUE_LESSONS = [
         description: '《论语·八佾》第二章精讲：三家者以《雍》彻——孔子批判鲁国权臣僭越天子之礼，引用《诗经》质问：诸侯之堂何配天子之乐？配套十道互动测验。',
         status: 'ready',
         duration: '约 12 分钟',
-        subject: 'lunyu',
+        subject: 'mengxue',
         tier: 'core',
         featured: false
     },
@@ -533,7 +533,7 @@ window.GUOXUE_LESSONS = [
         description: '《论语·八佾》第三章精讲：人而不仁，如礼何？人而不仁，如乐何？——孔子论礼乐之本：无仁则礼乐空虚，外在形式若无内在真诚，毫无意义。配套十道互动测验。',
         status: 'ready',
         duration: '约 12 分钟',
-        subject: 'lunyu',
+        subject: 'mengxue',
         tier: 'core',
         featured: false
     },
@@ -547,7 +547,7 @@ window.GUOXUE_LESSONS = [
         description: '《论语·八佾》第四章精讲：林放问礼之本，子曰"大哉问！礼与其奢也宁俭，丧与其易也宁戚"——孔子论礼之本在内心真诚，不在外在形式。配套十道互动测验。',
         status: 'ready',
         duration: '约 12 分钟',
-        subject: 'lunyu',
+        subject: 'mengxue',
         tier: 'core',
         featured: false
     },
@@ -561,7 +561,7 @@ window.GUOXUE_LESSONS = [
         description: '《论语·八佾》第五章精讲：子曰"夷狄之有君，不如诸夏之亡也"——孔子论礼乐文明高于政治形式，文化传承重于权力更替。配套十道互动测验。',
         status: 'ready',
         duration: '约 12 分钟',
-        subject: 'lunyu',
+        subject: 'mengxue',
         tier: 'core',
         featured: false
     },
@@ -575,7 +575,7 @@ window.GUOXUE_LESSONS = [
         description: '《论语·八佾》第六章精讲：季氏旅于泰山，孔子叹道"曾谓泰山不如林放乎"——借泰山之神，批评大夫僭礼，责备弟子失职，揭示"神不享非礼，礼不容乱序"的道理。配套十道互动测验。',
         status: 'ready',
         duration: '约 12 分钟',
-        subject: 'lunyu',
+        subject: 'mengxue',
         tier: 'core',
         featured: false
     },
@@ -589,7 +589,7 @@ window.GUOXUE_LESSONS = [
         description: '《论语·八佾》第七章精讲：子曰"君子无所争，必也射乎！揖让而升，下而饮，其争也君子"——儒家射礼：把竞争的武器引入礼仪，以礼乐制约武力，培养彬彬有礼的君子风度。配套十道互动测验。',
         status: 'ready',
         duration: '约 12 分钟',
-        subject: 'lunyu',
+        subject: 'mengxue',
         tier: 'core',
         featured: false
     },
@@ -603,7 +603,7 @@ window.GUOXUE_LESSONS = [
         description: '《论语·八佾》第八章精讲：子夏问诗，孔子答以"绘事后素"，子夏悟"礼后乎"——孔子赞"起予者商也"！白底先于图画，仁心先于礼节，礼本于仁。配套十道互动测验。',
         status: 'ready',
         duration: '约 12 分钟',
-        subject: 'lunyu',
+        subject: 'mengxue',
         tier: 'core',
         featured: false
     },
@@ -617,7 +617,7 @@ window.GUOXUE_LESSONS = [
         description: '《论语·八佾》第九章精讲：夏礼吾能言之，杞不足征也——孔子言必有据、实事求是的治学态度，对文献传承的深刻思考。配套十道互动测验。',
         status: 'ready',
         duration: '约 12 分钟',
-        subject: 'lunyu',
+        subject: 'mengxue',
         tier: 'core',
         featured: false
     },
@@ -631,7 +631,7 @@ window.GUOXUE_LESSONS = [
         description: '《论语·八佾》第十章精讲：禘自既灌而往者，吾不欲观之矣——孔子叹息行礼者诚敬流失，揭示礼贵诚敬、善始善终的真谛。配套十道互动测验。',
         status: 'ready',
         duration: '约 12 分钟',
-        subject: 'lunyu',
+        subject: 'mengxue',
         tier: 'core',
         featured: false
     },
@@ -645,7 +645,7 @@ window.GUOXUE_LESSONS = [
         description: '《论语·八佾》第十一章精讲：或问禘之说，子曰不知也——孔子不妄言、不僭言，以「指其掌」点破真理如示诸斯。配套十道互动测验。',
         status: 'ready',
         duration: '约 12 分钟',
-        subject: 'lunyu',
+        subject: 'mengxue',
         tier: 'core',
         featured: false
     },
@@ -659,7 +659,7 @@ window.GUOXUE_LESSONS = [
         description: '《论语·八佾》第十二章精讲：祭如在，祭神如神在——孔子论祭祀之诚：心存如在之敬，亲历亲为，不可假手他人。配套十道互动测验。',
         status: 'ready',
         duration: '约 12 分钟',
-        subject: 'lunyu',
+        subject: 'mengxue',
         tier: 'core',
         featured: false
     },
