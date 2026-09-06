@@ -60,13 +60,13 @@
     <div class="slide-card slide-card--cover">
         <div class="slide-card__body slide-card__body--center">
             <div class="lesson-number"><small>第45课 · 《论语·八佾》第十一章</small></div>
-            <h1 class="lesson-title" style="font-size:2rem;"><ruby lang="zh">或<rt>huò</rt></ruby><ruby lang="zh">问<rt>wèn</rt></ruby><ruby lang="zh">禘<rt>dì</rt></ruby><ruby lang="zh">之<rt>zhī</rt></ruby><ruby lang="zh">说<rt>shuō</rt></ruby></h1>
+            <h1 class="lesson-title" style="font-size:2rem;"><ruby lang="zh-Hans">或<rt>huò</rt></ruby><ruby lang="zh-Hans">问<rt>wèn</rt></ruby><ruby lang="zh-Hans">禘<rt>dì</rt></ruby><ruby lang="zh-Hans">之<rt>zhī</rt></ruby><ruby lang="zh-Hans">说<rt>shuō</rt></ruby></h1>
             <p class="lesson-subtitle" style="font-size:1.2rem;color:var(--ds-color-info);">知之为知之 · 不言之教</p>
             <div class="quote-block" style="margin-top:var(--ds-space-7);">
                 <p style="font-size:1.2rem;font-weight:700;">或问禘之说</p>
                 <p style="font-size:1.1rem;line-height:2;">
-                    子曰：“<ruby lang="zh">不<rt>bù</rt></ruby><ruby lang="zh">知<rt>zhī</rt></ruby>也。<ruby lang="zh">知<rt>zhī</rt></ruby><ruby lang="zh">其<rt>qí</rt></ruby><ruby lang="zh">说<rt>shuō</rt></ruby><ruby lang="zh">者<rt>zhě</rt></ruby><ruby lang="zh">之<rt>zhī</rt></ruby><ruby lang="zh">于<rt>yú</rt></ruby><ruby lang="zh">天<rt>tiān</rt></ruby><ruby lang="zh">下<rt>xià</rt></ruby>也，<ruby lang="zh">其<rt>qí</rt></ruby><ruby lang="zh">如<rt>rú</rt></ruby><ruby lang="zh">示<rt>shì</rt></ruby><ruby lang="zh">诸<rt>zhū</rt></ruby><ruby lang="zh">斯<rt>sī</rt></ruby><ruby lang="zh">乎<rt>hū</rt></ruby>！”<br>
-                    <ruby lang="zh">指<rt>zhǐ</rt></ruby><ruby lang="zh">其<rt>qí</rt></ruby><ruby lang="zh">掌<rt>zhǎng</rt></ruby>。
+                    子曰：“<ruby lang="zh-Hans">不<rt>bù</rt></ruby><ruby lang="zh-Hans">知<rt>zhī</rt></ruby>也。<ruby lang="zh-Hans">知<rt>zhī</rt></ruby><ruby lang="zh-Hans">其<rt>qí</rt></ruby><ruby lang="zh-Hans">说<rt>shuō</rt></ruby><ruby lang="zh-Hans">者<rt>zhě</rt></ruby><ruby lang="zh-Hans">之<rt>zhī</rt></ruby><ruby lang="zh-Hans">于<rt>yú</rt></ruby><ruby lang="zh-Hans">天<rt>tiān</rt></ruby><ruby lang="zh-Hans">下<rt>xià</rt></ruby>也，<ruby lang="zh-Hans">其<rt>qí</rt></ruby><ruby lang="zh-Hans">如<rt>rú</rt></ruby><ruby lang="zh-Hans">示<rt>shì</rt></ruby><ruby lang="zh-Hans">诸<rt>zhū</rt></ruby><ruby lang="zh-Hans">斯<rt>sī</rt></ruby><ruby lang="zh-Hans">乎<rt>hū</rt></ruby>！”<br>
+                    <ruby lang="zh-Hans">指<rt>zhǐ</rt></ruby><ruby lang="zh-Hans">其<rt>qí</rt></ruby><ruby lang="zh-Hans">掌<rt>zhǎng</rt></ruby>。
                 </p>
             </div>
         </div>
@@ -267,18 +267,18 @@
 <section class="slide" data-section="quiz" id="quiz-8"></section>
 <section class="slide" data-section="quiz" id="quiz-9"></section>
     <!-- ====== 测验得分页 ====== -->
-    <section class="slide" data-section="quiz" id="quiz-score" style="align-items:center;text-align:center;">
+    <section class="slide score-page" data-section="quiz" id="quiz-score">
         <span class="ds-badge ds-badge--success">测验得分</span>
-        <h2 style="border:none;text-align:center;padding-bottom:0;">测验完成！</h2>
-        <div style="margin-top:var(--ds-space-10);">
-            <div style="font-size:5rem;color:var(--ds-accent);font-weight:700;font-family:var(--ds-font-display);line-height:1;" id="score-display">0</div>
-            <div style="font-size:1.5rem;margin-top:var(--ds-space-4);color:var(--ds-color-fg-strong);font-weight:600;" id="score-message">正在计算得分...</div>
-            <div style="margin-top:var(--ds-space-8);font-size:1.125rem;color:var(--ds-color-fg);background:var(--ds-color-surface);padding:var(--ds-space-6);border-radius:var(--ds-radius-xl);display:inline-block;text-align:left;">
-                <p style="margin-bottom:var(--ds-space-3);">✅ 答对题数：<b id="correct-count" style="color:var(--ds-color-success);font-size:1.25rem;">0</b> / 10</p>
-                <p style="margin-bottom:var(--ds-space-3);">📊 总得分：<b id="total-score" style="color:var(--ds-accent);font-size:1.25rem;">0</b> 分（满分 100 分）</p>
-                <p>📈 正确率：<b id="score-percent" style="color:var(--ds-color-info);font-size:1.25rem;">0%</b></p>
+        <h2>测验完成！</h2>
+        <div class="score-hero">
+            <div class="score-hero__number" id="score-display">0</div>
+            <div class="score-hero__message" id="score-message">正在计算得分...</div>
+            <div class="score-summary">
+                <p>✅ 答对题数：<b class="b-correct" id="correct-count">0</b> / 10</p>
+                <p>📊 总得分：<b class="b-total" id="total-score">0</b> 分（满分 100 分）</p>
+                <p>📈 正确率：<b class="b-percent" id="score-percent">0%</b></p>
             </div>
-            <button class="retake-btn" id="retake-btn" aria-label="重新答题" style="margin-top:var(--ds-space-6);">↺ 重新答题</button>
+            <button class="retake-btn" id="retake-btn" aria-label="重新答题">↺ 重新答题</button>
         </div>
     </section>
 

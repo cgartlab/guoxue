@@ -64,10 +64,10 @@
             <p class="lesson-subtitle" style="font-size:1.05rem;color:var(--ds-color-info);">孝最难的考验 · 和颜悦色侍奉父母</p>
             <div class="quote-block" style="margin-top:var(--ds-space-6);">
                 <p style="font-size:1.05rem;line-height:2.4;">
-                    <ruby lang="zh">子<rt>zǐ</rt></ruby><ruby lang="zh">夏<rt>xià</rt></ruby><ruby lang="zh">问<rt>wèn</rt></ruby><ruby lang="zh">孝<rt>xiào</rt></ruby>。<ruby lang="zh">子<rt>zǐ</rt></ruby><ruby lang="zh">曰<rt>yuē</rt></ruby>：<br>
-                    "<ruby lang="zh">色<rt>sè</rt></ruby><ruby lang="zh">难<rt>nán</rt></ruby>。<ruby lang="zh">有<rt>yǒu</rt></ruby><ruby lang="zh">事<rt>shì</rt></ruby>，<ruby lang="zh">弟<rt>dì</rt></ruby><ruby lang="zh">子<rt>zǐ</rt></ruby><ruby lang="zh">服<rt>fú</rt></ruby><ruby lang="zh">其<rt>qí</rt></ruby><ruby lang="zh">劳<rt>láo</rt></ruby>；<br>
-                    <ruby lang="zh">有<rt>yǒu</rt></ruby><ruby lang="zh">酒<rt>jiǔ</rt></ruby><ruby lang="zh">食<rt>sì</rt></ruby>，<ruby lang="zh">先<rt>xiān</rt></ruby><ruby lang="zh">生<rt>shēng</rt></ruby><ruby lang="zh">馔<rt>zhuàn</rt></ruby>，<br>
-                    <ruby lang="zh">曾<rt>céng</rt></ruby><ruby lang="zh">是<rt>shì</rt></ruby><ruby lang="zh">以<rt>yǐ</rt></ruby><ruby lang="zh">为<rt>wéi</rt></ruby><ruby lang="zh">孝<rt>xiào</rt></ruby><ruby lang="zh">乎<rt>hū</rt></ruby>？"</p>
+                    <ruby lang="zh-Hans">子<rt>zǐ</rt></ruby><ruby lang="zh-Hans">夏<rt>xià</rt></ruby><ruby lang="zh-Hans">问<rt>wèn</rt></ruby><ruby lang="zh-Hans">孝<rt>xiào</rt></ruby>。<ruby lang="zh-Hans">子<rt>zǐ</rt></ruby><ruby lang="zh-Hans">曰<rt>yuē</rt></ruby>：<br>
+                    "<ruby lang="zh-Hans">色<rt>sè</rt></ruby><ruby lang="zh-Hans">难<rt>nán</rt></ruby>。<ruby lang="zh-Hans">有<rt>yǒu</rt></ruby><ruby lang="zh-Hans">事<rt>shì</rt></ruby>，<ruby lang="zh-Hans">弟<rt>dì</rt></ruby><ruby lang="zh-Hans">子<rt>zǐ</rt></ruby><ruby lang="zh-Hans">服<rt>fú</rt></ruby><ruby lang="zh-Hans">其<rt>qí</rt></ruby><ruby lang="zh-Hans">劳<rt>láo</rt></ruby>；<br>
+                    <ruby lang="zh-Hans">有<rt>yǒu</rt></ruby><ruby lang="zh-Hans">酒<rt>jiǔ</rt></ruby><ruby lang="zh-Hans">食<rt>sì</rt></ruby>，<ruby lang="zh-Hans">先<rt>xiān</rt></ruby><ruby lang="zh-Hans">生<rt>shēng</rt></ruby><ruby lang="zh-Hans">馔<rt>zhuàn</rt></ruby>，<br>
+                    <ruby lang="zh-Hans">曾<rt>céng</rt></ruby><ruby lang="zh-Hans">是<rt>shì</rt></ruby><ruby lang="zh-Hans">以<rt>yǐ</rt></ruby><ruby lang="zh-Hans">为<rt>wéi</rt></ruby><ruby lang="zh-Hans">孝<rt>xiào</rt></ruby><ruby lang="zh-Hans">乎<rt>hū</rt></ruby>？"</p>
             </div>
         </div>
         <div class="slide-card__footer">
@@ -295,18 +295,18 @@
 <section class="slide" data-section="quiz" id="quiz-8"></section>
 <section class="slide" data-section="quiz" id="quiz-9"></section>
     <!-- ====== 测验得分页 ====== -->
-    <section class="slide" data-section="quiz" id="quiz-score" style="align-items:center;text-align:center;">
+    <section class="slide score-page" data-section="quiz" id="quiz-score">
         <span class="ds-badge ds-badge--success">测验得分</span>
-        <h2 style="border:none;text-align:center;padding-bottom:0;">测验完成！</h2>
-        <div style="margin-top:var(--ds-space-10);">
-            <div style="font-size:5rem;color:var(--ds-accent);font-weight:700;font-family:var(--ds-font-display);line-height:1;" id="score-display">0</div>
-            <div style="font-size:1.5rem;margin-top:var(--ds-space-4);color:var(--ds-color-fg-strong);font-weight:600;" id="score-message">正在计算得分...</div>
-            <div style="margin-top:var(--ds-space-8);font-size:1.125rem;color:var(--ds-color-fg);background:var(--ds-color-surface);padding:var(--ds-space-6);border-radius:var(--ds-radius-xl);display:inline-block;text-align:left;">
-                <p style="margin-bottom:var(--ds-space-3);">✅ 答对题数：<b id="correct-count" style="color:var(--ds-color-success);font-size:1.25rem;">0</b> / 10</p>
-                <p style="margin-bottom:var(--ds-space-3);">📊 总得分：<b id="total-score" style="color:var(--ds-accent);font-size:1.25rem;">0</b> 分（满分 100 分）</p>
-                <p>📈 正确率：<b id="score-percent" style="color:var(--ds-color-info);font-size:1.25rem;">0%</b></p>
+        <h2>测验完成！</h2>
+        <div class="score-hero">
+            <div class="score-hero__number" id="score-display">0</div>
+            <div class="score-hero__message" id="score-message">正在计算得分...</div>
+            <div class="score-summary">
+                <p>✅ 答对题数：<b class="b-correct" id="correct-count">0</b> / 10</p>
+                <p>📊 总得分：<b class="b-total" id="total-score">0</b> 分（满分 100 分）</p>
+                <p>📈 正确率：<b class="b-percent" id="score-percent">0%</b></p>
             </div>
-            <button class="retake-btn" id="retake-btn" aria-label="重新答题" style="margin-top:var(--ds-space-6);">↺ 重新答题</button>
+            <button class="retake-btn" id="retake-btn" aria-label="重新答题">↺ 重新答题</button>
         </div>
     </section>
 

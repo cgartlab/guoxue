@@ -2189,3 +2189,42 @@ a.ds-accent-link:hover { color: var(--ds-accent-hover); }
     .contrast-box > div, .core-grid > div, .app-grid > div { background: var(--ds-color-surface); border-color: var(--ds-color-border); }
     .quiz-question { background: var(--ds-color-surface); border-color: var(--ds-color-border); }
 }
+
+/* ============================================================
+ * 成绩页 / 结束页组件 (quiz-score, end-slide)
+ * 供课程页骨架使用, 替代迁移脚本生成的内联样式
+ * ============================================================ */
+.score-page {
+    align-items: center; text-align: center;
+}
+.score-page h2 {
+    border: none; text-align: center; padding-bottom: 0;
+}
+.score-hero {
+    margin-top: var(--ds-space-10);
+}
+.score-hero__number {
+    font-size: 5rem; color: var(--ds-accent); font-weight: 700;
+    font-family: var(--ds-font-display); line-height: 1;
+}
+.score-hero__message {
+    font-size: 1.5rem; margin-top: var(--ds-space-4);
+    color: var(--ds-color-fg-strong); font-weight: 600;
+}
+.score-summary {
+    margin-top: var(--ds-space-8); font-size: 1.125rem;
+    color: var(--ds-color-fg); background: var(--ds-color-surface);
+    padding: var(--ds-space-6); border-radius: var(--ds-radius-xl);
+    display: inline-block; text-align: left;
+}
+.score-summary p { margin-bottom: var(--ds-space-3); }
+.score-summary p:last-child { margin-bottom: 0; }
+.score-summary b {
+    font-size: 1.25rem;
+}
+.score-summary .b-correct { color: var(--ds-color-success); }
+.score-summary .b-total { color: var(--ds-accent); }
+.score-summary .b-percent { color: var(--ds-color-info); }
+.retake-btn {
+    margin-top: var(--ds-space-6);
+}

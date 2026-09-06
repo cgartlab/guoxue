@@ -67,10 +67,10 @@
             <p class="lesson-subtitle" style="font-size:1.2rem;color:var(--ds-color-info);">诗以言志 · 发乎情止乎礼</p>
             <div class="quote-block" style="margin-top:var(--ds-space-7);">
                 <p style="font-size:1.2rem;line-height:2;">
-                    <ruby lang="zh">子<rt>zǐ</rt></ruby><ruby lang="zh">曰<rt>yuē</rt></ruby>：<br>
-                    "<ruby lang="zh">《<rt></rt></ruby><ruby lang="zh">诗<rt>shī</rt></ruby><ruby lang="zh">》<rt></rt></ruby><ruby lang="zh">三<rt>sān</rt></ruby><ruby lang="zh">百<rt>bǎi</rt></ruby>，<br>
-                    <ruby lang="zh">一<rt>yī</rt></ruby><ruby lang="zh">言<rt>yán</rt></ruby><ruby lang="zh">以<rt>yǐ</rt></ruby><ruby lang="zh">蔽<rt>bì</rt></ruby><ruby lang="zh">之<rt>zhī</rt></ruby>，<br>
-                    <ruby lang="zh">曰<rt>yuē</rt></ruby>：<ruby lang="zh">思<rt>sī</rt></ruby>无<ruby lang="zh">邪<rt>xié</rt></ruby>。"</p>
+                    <ruby lang="zh-Hans">子<rt>zǐ</rt></ruby><ruby lang="zh-Hans">曰<rt>yuē</rt></ruby>：<br>
+                    "<ruby lang="zh-Hans">《<rt></rt></ruby><ruby lang="zh-Hans">诗<rt>shī</rt></ruby><ruby lang="zh-Hans">》<rt></rt></ruby><ruby lang="zh-Hans">三<rt>sān</rt></ruby><ruby lang="zh-Hans">百<rt>bǎi</rt></ruby>，<br>
+                    <ruby lang="zh-Hans">一<rt>yī</rt></ruby><ruby lang="zh-Hans">言<rt>yán</rt></ruby><ruby lang="zh-Hans">以<rt>yǐ</rt></ruby><ruby lang="zh-Hans">蔽<rt>bì</rt></ruby><ruby lang="zh-Hans">之<rt>zhī</rt></ruby>，<br>
+                    <ruby lang="zh-Hans">曰<rt>yuē</rt></ruby>：<ruby lang="zh-Hans">思<rt>sī</rt></ruby>无<ruby lang="zh-Hans">邪<rt>xié</rt></ruby>。"</p>
             </div>
         </div>
         <div class="slide-card__footer">
@@ -316,18 +316,18 @@
 <section class="slide" data-section="quiz" id="quiz-8"></section>
 <section class="slide" data-section="quiz" id="quiz-9"></section>
     <!-- ====== 测验得分页 ====== -->
-    <section class="slide" data-section="quiz" id="quiz-score" style="align-items:center;text-align:center;">
+    <section class="slide score-page" data-section="quiz" id="quiz-score">
         <span class="ds-badge ds-badge--success">测验得分</span>
-        <h2 style="border:none;text-align:center;padding-bottom:0;">测验完成！</h2>
-        <div style="margin-top:var(--ds-space-10);">
-            <div style="font-size:5rem;color:var(--ds-accent);font-weight:700;font-family:var(--ds-font-display);line-height:1;" id="score-display">0</div>
-            <div style="font-size:1.5rem;margin-top:var(--ds-space-4);color:var(--ds-color-fg-strong);font-weight:600;" id="score-message">正在计算得分...</div>
-            <div style="margin-top:var(--ds-space-8);font-size:1.125rem;color:var(--ds-color-fg);background:var(--ds-color-surface);padding:var(--ds-space-6);border-radius:var(--ds-radius-xl);display:inline-block;text-align:left;">
-                <p style="margin-bottom:var(--ds-space-3);">✅ 答对题数：<b id="correct-count" style="color:var(--ds-color-success);font-size:1.25rem;">0</b> / 10</p>
-                <p style="margin-bottom:var(--ds-space-3);">📊 总得分：<b id="total-score" style="color:var(--ds-accent);font-size:1.25rem;">0</b> 分（满分 100 分）</p>
-                <p>📈 正确率：<b id="score-percent" style="color:var(--ds-color-info);font-size:1.25rem;">0%</b></p>
+        <h2>测验完成！</h2>
+        <div class="score-hero">
+            <div class="score-hero__number" id="score-display">0</div>
+            <div class="score-hero__message" id="score-message">正在计算得分...</div>
+            <div class="score-summary">
+                <p>✅ 答对题数：<b class="b-correct" id="correct-count">0</b> / 10</p>
+                <p>📊 总得分：<b class="b-total" id="total-score">0</b> 分（满分 100 分）</p>
+                <p>📈 正确率：<b class="b-percent" id="score-percent">0%</b></p>
             </div>
-            <button class="retake-btn" id="retake-btn" aria-label="重新答题" style="margin-top:var(--ds-space-6);">↺ 重新答题</button>
+            <button class="retake-btn" id="retake-btn" aria-label="重新答题">↺ 重新答题</button>
         </div>
     </section>
 
