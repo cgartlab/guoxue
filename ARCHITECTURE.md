@@ -17,18 +17,20 @@
 │  └──────┬───────┘  └───────┬───────┘  └──────────────────┘  │
 └─────────┼──────────────────┼──────────────────────────────────┘
           │                  │
-          │  JWT Bearer      │  REST API
+          │  JWT Bearer      │  REST API（独立后端，当前域名下暂不可达）
           ▼                  ▼
 ┌─────────────────────────────────────────────────────────────┐
-│              guoxue.8023laozhanshi.cc  (后端)               │
-│  /api/auth/email/*   — 邮件验证码登录/注册                  │
+│          api/（Express + JWT + Postgres，独立部署）         │
 │  /api/users/me       — 获取当前用户                        │
 │  /api/progress/*     — 学习进度                            │
 │  /api/notes/*        — 学习笔记                            │
 │  /api/bookmarks/*    — 书签                                │
 │  /api/quiz-scores/*  — 测验成绩                            │
+│  /api/auth/email/*   — 邮件验证码登录/注册                 │
 └─────────────────────────────────────────────────────────────┘
 ```
+
+> ⚠️ 2026-09：域名 `guoxue.8023laozhanshi.cc` 已切回 GitHub Pages（DNS CNAME → `cgartlab.github.io`）。GitHub Pages 无法反代 `/casdoor` 与 `/api`，因此**登录与云同步功能当前不可用**；恢复需将后端移到独立子域（详见 AGENTS.md）。静态站 + 本地进度（localStorage）完全正常。
 
 ### 关键设计决策
 
@@ -127,6 +129,8 @@ slide-engine.js / homepage.js / navbar.js
 ---
 
 ## 4. 认证系统
+
+> ⚠️ **当前状态（2026-09）**：域名已切回 GitHub Pages（无法反代 `/casdoor` 与 `/api`），登录与云同步**暂不可用**；下方为设计实现，恢复需将后端移到独立子域（见 AGENTS.md「登录/云功能状态」）。
 
 ### 登录流程（邮件验证码）
 
@@ -234,6 +238,23 @@ auth.js: init() → updateAuthUI()
 
 ---
 
+## 5.5 课程样式规范（第一课标准）
+
+> 2026-09 起全部 46 门课已统一为**第一课扁平样式**（PR #100/#101），后续新增/修改一律按此标准。
+
+**标杆**：`lessons/_template.html`（唯一模板）、`lessons/01-lunyu`、`lessons/08-junzi-bu-zhong`。
+
+- **封面**：`.slide.cover-slide` = `cover-ornament`×2 + `h2.ds-display` + `cover-subtitle` + `cover-desc`（含篇章信息）+ `cover-seal`
+- **讲义/答疑**：`ds-badge ds-badge--accent` + `h2`；正文用 `h3/p/ul/ol` + `ds-highlight`/`ds-quote`/`ds-caption`
+- **内容映射**：原文→短句 `ds-quote`；通译→`<p><strong>通译：</strong>…`；字词→`ds-highlight` 行；短提示→`p.ds-caption`；FAQ→`h3❓+p`；长段/要点→普通段落或 `ul`（不设色块）
+- **编号**：`data-page` 从 0 连续；`data-section="lecture|quiz|review"`；tabs 无 emoji
+- **测验**：`GUOXUE_QUIZ_OVERRIDE` 引擎渲染（quiz-0…9 空容器）+ 测验说明页 + `quiz-score`，禁止内联测验
+- **结束页**：`.slide.end-slide`
+
+**❌ 禁用（历史遗留，勿复用）**：`slide-card` 系列、`original-text`、`translation-box`、`tip-box`、`sentence-block`、`core-grid`、`app-grid`、`data-index`、内联 `font-size/line-height`、手写 `?v=`。
+
+---
+
 ## 6. 新增课程 SOP（标准作业程序）
 
 ### 5 步添加新课程
@@ -242,11 +263,12 @@ auth.js: init() → updateAuthUI()
 # 步骤 1：复制模板
 cp lessons/_template.html lessons/13-new-lesson/index.html
 
-# 步骤 2：编辑内容（在文件中找标注的 【填写XXX】 位置）
+# 步骤 2：编辑内容（按第一课扁平标准，参照 5.5 节）
 # - 修改 <title>
-# - 填写讲义幻灯片（data-section="lecture"）
-# - 定义测验题目（window.GUOXUE_QUIZ_OVERRIDE）
-# - 填写答疑内容（data-section="qa"）
+# - 封面 cover-slide（标题/副标题/简介/印章）
+# - 讲义幻灯片（data-section="lecture"，data-page 连续）
+# - 定义测验题目（window.GUOXUE_QUIZ_OVERRIDE）+ 测验说明页 + quiz-score
+# - 填写答疑内容（data-section="review"）+ 结束页 end-slide
 
 # 步骤 3：注册到课程目录
 # 打开 assets/js/lessons-manifest.js，在 GUOXUE_LESSONS 数组末尾追加：

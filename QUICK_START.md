@@ -1,3 +1,5 @@
+> ⚠️ **已废弃（2026-09）**：本文档描述的是早期 Supabase 集成方案。当前已改用自建 API（`api/`，Express+JWT+Postgres），前端由 `api-client.js` 接管（`window.SUPABASE` 兼容接口）；`supabase/` 下 SQL 与相关文档仅作历史参考。部署与域名现状见 README「部署」与 AGENTS.md。
+
 # 国学课堂 Supabase 集成 - 快速开始指南
 
 ⏱️ **预计时间**: 15 分钟
