@@ -25,55 +25,277 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://guoxue.8023laozhanshi.cc/lessons/01-lunyu-mixed/index.html</loc>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/02-lunyu-mixed/index.html</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://guoxue.8023laozhanshi.cc/lessons/02-sanzijing/index.html</loc>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/03-sanzijing/index.html</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://guoxue.8023laozhanshi.cc/lessons/02-xueer/index.html</loc>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/04-xueer/index.html</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://guoxue.8023laozhanshi.cc/lessons/03-xueer-xiaoti/index.html</loc>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/05-xueer-xiaoti/index.html</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://guoxue.8023laozhanshi.cc/lessons/04-zengzi-sansheng/index.html</loc>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/06-zengzi-sansheng/index.html</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://guoxue.8023laozhanshi.cc/lessons/05-dao-qiancheng-guo/index.html</loc>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/07-dao-qiancheng-guo/index.html</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://guoxue.8023laozhanshi.cc/lessons/06-dizi-ruze-xiao/index.html</loc>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/08-dizi-ruze-xiao/index.html</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://guoxue.8023laozhanshi.cc/lessons/07-xianxian-yise/index.html</loc>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/09-xianxian-yise/index.html</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://guoxue.8023laozhanshi.cc/lessons/08-junzi-bu-zhong/index.html</loc>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/10-junzi-bu-zhong/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/11-wen-liang-gong-jian-rang/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/12-fu-zai-guan-qi-zhi/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/13-li-zhi-yong-he-wei-gui/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/14-xin-jin-yu-yi/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/15-junzi-hao-xue/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/16-ruqie-rucuo/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/17-bu-huan-ren-zhi/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/18-wei-zheng-yi-de/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/19-shi-sanbai-si-wu-xie/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/20-qi-zhi-yi-li/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/21-wu-shi-you-wu/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/22-meng-yi-zi-wen-xiao/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/23-meng-wu-bo-wen-xiao/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/24-zi-you-wen-xiao/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/25-zi-xia-wen-xiao/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/26-bu-wei-ru-yu/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/27-junzi-zhou-bi/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/28-xue-er-si-ze-wang/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/29-gong-hu-yi-duan/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/30-zhi-zhi-wei-zhi-zhi/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/31-zhang-xue-gan-lu/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/32-he-wei-ze-min-fu/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/33-shi-min-jing-zhong-yi-quan/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/34-fei-qi-gui-er-ji-zhi-chan/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/35-ba-yi-wu-yu-ting/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/36-san-jia-yong-che/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/37-ren-er-bu-ren-ru-li-he/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/38-lin-fang-wen-li-zhi-ben/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/39-yi-di-zhi-you-jun/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/40-ji-shi-lu-yu-tai-shan/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/41-jun-zi-wu-suo-zheng/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/42-hui-shi-hou-su/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/43-xia-li-wu-neng-yan-zhi/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/44-di-zi-ji-guan-er-wang/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/45-huo-wen-di-zhi-shuo/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/46-ji-ru-zai/index.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/47-wang-sun-jia-wen/index.html</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

@@ -501,6 +501,19 @@ a { color: inherit; text-decoration: none; }
     font-size: 1.875rem; margin-bottom: var(--ds-space-5);
     box-shadow: var(--ds-shadow-sm);
 }
+.ds-lesson-card .lesson-num {
+    width: 60px; height: 60px;
+    border-radius: var(--ds-radius-xl);
+    background: linear-gradient(135deg, var(--ds-color-olive-50), var(--ds-color-olive-100));
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: var(--ds-space-5);
+    box-shadow: var(--ds-shadow-sm);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--ds-font-display);
+    color: var(--ds-color-olive-700);
+    font-variant-numeric: tabular-nums;
+}
 .ds-lesson-card .lesson-grade {
     display: inline-block;
     padding: 3px 12px; border-radius: 100px;
@@ -721,19 +734,12 @@ a { color: inherit; text-decoration: none; }
   margin-top: 2px;
 }
 
-/* 门类缩写 — 收起时显示 */
+/* 门类缩写 — 收起时显示（新 5 门类） */
+.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="daolun"] .home-sidebar__category-icon::after { content: '导'; }
+.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="xueer"] .home-sidebar__category-icon::after { content: '学'; }
+.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="weizheng"] .home-sidebar__category-icon::after { content: '为'; }
+.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="bayi"] .home-sidebar__category-icon::after { content: '八'; }
 .home-sidebar.is-collapsed .home-sidebar__group[data-group-key="mengxue"] .home-sidebar__category-icon::after { content: '蒙'; }
-.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="jing"] .home-sidebar__category-icon::after { content: '经'; }
-.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="shi"] .home-sidebar__category-icon::after { content: '史'; }
-.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="zi"] .home-sidebar__category-icon::after { content: '子'; }
-.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="ji"] .home-sidebar__category-icon::after { content: '集'; }
-.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="shufa"] .home-sidebar__category-icon::after { content: '书'; }
-.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="guohua"] .home-sidebar__category-icon::after { content: '画'; }
-.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="zhongyi"] .home-sidebar__category-icon::after { content: '医'; }
-.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="wushu"] .home-sidebar__category-icon::after { content: '武'; }
-.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="mingsu"] .home-sidebar__category-icon::after { content: '俗'; }
-.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="guqin"] .home-sidebar__category-icon::after { content: '琴'; }
-.home-sidebar.is-collapsed .home-sidebar__group[data-group-key="qilei"] .home-sidebar__category-icon::after { content: '棋'; }
 
 /* L1: 侧栏头部（品牌标识 + 折叠按钮） */
 .home-sidebar__header {
@@ -945,6 +951,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 1rem;
   min-width: 20px;
   text-align: center;
+  font-variant-numeric: tabular-nums;
 }
 
 .home-sidebar__category-label {
@@ -1095,6 +1102,7 @@ a { color: inherit; text-decoration: none; }
   line-height: 1;
   margin-bottom: var(--ds-space-3);
   opacity: 0.55;
+  font-variant-numeric: tabular-nums;
 }
 
 .ds-coming-soon__heading {
@@ -1142,34 +1150,100 @@ a { color: inherit; text-decoration: none; }
   .home-wrapper {
     max-width: 100%;
     grid-template-columns: 1fr;
-    padding-top: calc(52px + var(--ds-space-4));
+    padding-top: calc(60px + var(--ds-space-8) + var(--ds-space-4));
     gap: var(--ds-space-4);
   }
+  /* 移动端：不再显示左侧抽屉，改用顶部横向「序号条」(见 .home-numstrip) */
   .home-sidebar {
-    position: fixed;
-    top: 52px;
-    left: 0;
-    bottom: 0;
-    width: 280px !important;
-    max-height: none;
-    overflow-y: auto;
-    z-index: 200;
-    background: var(--ds-color-bg);
+    display: none;
+  }
+}
+
+/* ===== 移动端顶部「序号条」 =====
+ * 仅 <768px 显示：横向可滑动胶囊条，sticky 于导航栏下方。
+ * 桌面端自动隐藏（默认不生成/隐藏）。
+ */
+.home-numstrip {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .home-numstrip {
+    display: flex;
+    gap: var(--ds-space-5);
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    position: sticky;
+    top: 60px;
+    z-index: 90;
+    padding: var(--ds-space-2) var(--ds-space-3);
+    background: oklch(99% 0.005 80 / 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--ds-color-border);
+    box-shadow: var(--ds-shadow-sm);
+  }
+  .home-numstrip::-webkit-scrollbar {
+    height: 6px;
+  }
+  .home-numstrip::-webkit-scrollbar-thumb {
+    background: var(--ds-color-border);
+    border-radius: var(--ds-radius-md);
+  }
+  /* 分组：门类标题 + 该门类下各章序号 */
+  .home-numstrip__group {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--ds-space-2);
+    flex: 0 0 auto;
+  }
+  .home-numstrip__label {
+    flex: 0 0 auto;
+    font-family: var(--ds-font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--ds-color-muted);
+    letter-spacing: 0.08em;
+    padding-right: var(--ds-space-1);
     border-right: 1px solid var(--ds-color-border);
-    box-shadow: var(--ds-shadow-lg);
-    transform: translateX(-100%);
-    transition: transform var(--ds-duration-300) var(--ds-ease-out);
-    padding-right: var(--ds-space-3);
   }
-  .home-sidebar.is-open {
-    transform: translateX(0);
+  .home-numstrip__chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    min-width: 40px;
+    height: 34px;
+    padding: 0 var(--ds-space-2);
+    border: 1px solid var(--ds-color-border);
+    border-radius: var(--ds-radius-2xl);
+    background: var(--ds-color-surface);
+    color: var(--ds-color-fg);
+    font-family: var(--ds-font-mono);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    -webkit-tap-highlight-color: transparent;
+    transition: all var(--ds-duration-150) var(--ds-ease-out);
   }
-  .home-sidebar.is-collapsed {
-    width: 48px !important;
-    transform: translateX(-100%);
+  .home-numstrip__chip:hover {
+    border-color: var(--ds-accent);
+    color: var(--ds-accent);
+    background: var(--ds-color-olive-50);
   }
-  .home-sidebar.is-collapsed.is-open {
-    transform: translateX(0);
+  .home-numstrip__chip:active {
+    background: var(--ds-accent);
+    color: var(--ds-color-on-accent);
+    border-color: var(--ds-accent);
+  }
+  .home-numstrip__chip:focus-visible {
+    outline: 2px solid var(--ds-accent);
+    outline-offset: 2px;
   }
 }
 
@@ -1345,6 +1419,7 @@ a { color: inherit; text-decoration: none; }
 
     /* ===== Dark mode: fix hardcoded backgrounds (wasn't using CSS variables) ===== */
     .ds-navbar { background: oklch(18% 0.02 80 / 0.92); }
+    .home-numstrip { background: oklch(18% 0.02 80 / 0.92); }
     .ds-navbar--global { background: oklch(18% 0.02 80 / 0.95); }
     .ds-toolbar { background: oklch(20% 0.02 80 / 0.95); }
     .ds-caption { background: oklch(22% 0.02 80); }
@@ -2003,74 +2078,6 @@ a.ds-accent-link:hover { color: var(--ds-accent-hover); }
  * 迁移完成后可随旧课一起逐步淘汰。
  * ============================================================ */
 
-/* ---------- slide-card 卡片 ---------- */
-.slide-card {
-    background: var(--ds-color-surface);
-    border: 1px solid var(--ds-color-border);
-    border-radius: var(--ds-radius-xl);
-    padding: var(--ds-space-6) var(--ds-space-8);
-    box-shadow: var(--ds-shadow-sm);
-    width: 100%;
-    max-width: 720px;
-    margin: 0 auto;
-}
-.slide-card--cover {
-    background: linear-gradient(135deg, var(--ds-color-surface) 0%, var(--ds-color-surface-raised) 100%);
-    border-color: var(--ds-color-border);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 70vh;
-    padding: var(--ds-space-12) var(--ds-space-10);
-}
-.slide-card--cover .lesson-number small {
-    font-size: 0.8125rem;
-    color: var(--ds-color-muted);
-    letter-spacing: 0.05em;
-}
-.slide-card--cover .lesson-title {
-    font-family: var(--ds-font-display);
-    font-size: 2rem;
-    color: var(--ds-color-fg-strong);
-    margin: var(--ds-space-4) 0 var(--ds-space-2);
-}
-.slide-card--cover .lesson-subtitle {
-    font-size: 1.1rem;
-    color: var(--ds-accent);
-    margin-bottom: var(--ds-space-6);
-}
-.slide-card--cover .quote-block {
-    max-width: 480px;
-    margin: 0 auto;
-}
-.slide-card__heading {
-    font-family: var(--ds-font-display);
-    font-size: 1.375rem;
-    color: var(--ds-color-fg-strong);
-    padding-bottom: var(--ds-space-3);
-    margin-bottom: var(--ds-space-4);
-    border-bottom: 2px solid var(--ds-color-border);
-}
-.slide-card__body {
-    font-size: 0.9375rem;
-    line-height: 1.7;
-    color: var(--ds-color-fg);
-}
-.slide-card__body p { margin-bottom: var(--ds-space-3); }
-.slide-card__body ul, .slide-card__body ol { margin-bottom: var(--ds-space-3); padding-left: var(--ds-space-5); }
-.slide-card__body li { margin-bottom: var(--ds-space-1); }
-.slide-card__body strong { color: var(--ds-color-fg-strong); }
-.slide-card__body--center { text-align: center; }
-.slide-card__footer {
-    margin-top: var(--ds-space-5);
-    padding-top: var(--ds-space-4);
-    border-top: 1px solid var(--ds-color-border);
-    font-size: 0.8125rem;
-    color: var(--ds-color-muted);
-    text-align: center;
-}
-
 /* ---------- 讲义内容块 ---------- */
 /* 原文 */
 .original-text {
@@ -2180,9 +2187,6 @@ a.ds-accent-link:hover { color: var(--ds-accent-hover); }
 
 /* ---------- 暗色模式适配 ---------- */
 @media (prefers-color-scheme: dark) {
-    .slide-card { background: var(--ds-color-surface); border-color: var(--ds-color-border); }
-    .slide-card--cover { background: linear-gradient(135deg, var(--ds-color-surface) 0%, var(--ds-color-surface-raised) 100%); }
-    .slide-card__heading { border-bottom-color: var(--ds-color-border); }
     .original-text, .sentence-block { background: var(--ds-color-warning-bg); border-color: var(--ds-color-warning); }
     .translation-box { background: var(--ds-color-surface); border-color: var(--ds-color-border); }
     .tip-box, .example-box, .quote-box { background: var(--ds-color-info-bg); border-color: var(--ds-color-info); }

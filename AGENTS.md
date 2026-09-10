@@ -29,24 +29,24 @@
 - **Slide engine**: `assets/js/slide-engine.js` — lecture/quiz/review navigation, keyboard + touch + swipe, localStorage progress
   - Custom quiz: set `window.GUOXUE_QUIZ_OVERRIDE` before engine loads
   - Custom course ID: set `window.GUOXUE_COURSE_ID` before engine loads
-- **Course manifest**: `assets/js/lessons-manifest.js` (`GUOXUE_LESSONS` array) — fields: `id`, `title`, `subtitle`, `path`, `icon`, `grade`, `description`, `status`, `subject`, `tier`, `featured`
-- **Categories**: `assets/data/categories.js` (`GUOXUE_CATEGORIES` array) — key, label, icon, description, status, order
-- **Navbar**: `assets/js/navbar.js` — drawer on desktop, collapsed on mobile; homepage uses `ds-navbar--simple` (brand + about link only)
+- **Course manifest**: `assets/js/lessons-manifest.js` (`GUOXUE_LESSONS` array, 47 entries `01`–`47`) — fields: `id`, `num`, `title`, `subtitle`, `path`, `grade`, `description`, `status`, `subject`, `tier`, `featured` (no `icon`; cards show the two-digit `num`)
+- **Categories**: `assets/data/categories.js` (`GUOXUE_CATEGORIES` array, 5 subjects all `ready`: `daolun`/`xueer`/`weizheng`/`bayi`/`mengxue`) — key, label, num, description, status, order
+- **Navbar**: `assets/js/navbar.js` — mobile drawer for pages with a sidebar; homepage renders a simplified `ds-navbar` (brand + about link) and its mobile sidebar drawer (`#drawer-toggle`) has been removed in favour of a top `.home-numstrip`
 - **API server** (separate, not deployed to Pages): `api/` — Express + JWT + Postgres; `api/package.json`
 
-## Supabase + Auth Integration
-- Supabase client: `assets/js/supabase-client.js` — user sync, progress save, notes/bookmarks
-- Auth patch: `assets/js/auth-supabase-patch.js` — syncs Casdoor login to Supabase users
+## Auth + Data Sync
+- API client: `assets/js/api-client.js` — replaced the old `supabase-client.js`; calls the self-hosted API (`https://guoxue.8023laozhanshi.cc`) while keeping the `window.SUPABASE` interface (user sync, progress save, notes/bookmarks)
+- Auth: `assets/js/auth.js` + `assets/js/auth-email.js` — Casdoor / email-code login
 - Dashboard: `dashboard.html` — study stats, progress, quiz scores
 - Notes: `notes.html` — learning notes and bookmarks management
-- DB setup: run `supabase/01-schema.sql` then `supabase/02-rls.sql` in Supabase SQL Editor
+- Legacy DB scripts: `supabase/01-schema.sql`, `supabase/02-rls.sql` (historical; current backend is the self-hosted API in `api/`)
 - Local-only operations always succeed; cloud ops may fail silently (no blocking)
 
 ## Adding a Course
-1. `cp lessons/_template.html lessons/XX-name/index.html`
+1. `cp lessons/_template.html lessons/XX-name/index.html` (next free two-digit number, currently `48`)
 2. Edit: `<title>`, cover slide, lecture slides (sequential `data-page="0,1,2..."`), quiz (`window.GUOXUE_QUIZ_OVERRIDE`), review slides
-3. Add entry to `assets/js/lessons-manifest.js` (include `subject` key matching a `GUOXUE_CATEGORIES` key)
-4. If new subject, add entry to `assets/data/categories.js`
+3. Add entry to `assets/js/lessons-manifest.js` with `num` (two-digit) and a `subject` matching a `GUOXUE_CATEGORIES` key (`daolun`/`xueer`/`weizheng`/`bayi`/`mengxue`)
+4. If new subject, add entry to `assets/data/categories.js` (`key` / `label` / `num` / `description` / `status` / `order`)
 5. For browser cache: `Ctrl+F5` or DevTools → Network → Disable cache
 
 ## Casdoor Email (SMTP) Configuration

@@ -54,10 +54,11 @@ guoxue/
 ├── notes.html              # 笔记和书签（需登录）
 ├── 404.html                # 自定义 404 页
 │
-├── lessons/
+├── lessons/                  # 47 门课程，目录名 NN-slug（编号 01–47）
 │   ├── _template.html      # ⭐ 新课程从这里复制
 │   ├── 01-lunyu/index.html
-│   ├── 02-sanzijing/index.html
+│   ├── 03-sanzijing/index.html
+│   ├── 47-wang-sun-jia-wen/index.html
 │   └── ...（每门课一个目录）
 │
 ├── assets/
@@ -67,20 +68,84 @@ guoxue/
 │   │   ├── auth.js                # 认证状态管理、UI 更新
 │   │   ├── auth-email.js          # 邮件登录弹窗 UI + API 调用
 │   │   ├── api-client.js          # 后端 API 客户端（window.SUPABASE）
-│   │   ├── homepage.js            # 首页：分类侧栏、课程卡片
+│   │   ├── homepage.js            # 首页：门类侧栏、课程卡片、移动端序号条
 │   │   ├── lessons-manifest.js    # 课程列表数据（window.GUOXUE_LESSONS）
-│   │   ├── navbar.js              # 顶栏 + 移动端抽屉
+│   │   ├── navbar.js              # 顶栏导航（移动端抽屉）
 │   │   └── slide-engine.js        # 课程幻灯片引擎
 │   ├── data/
-│   │   └── categories.js          # 门类数据（window.CATEGORIES）
+│   │   └── categories.js          # 门类数据（window.GUOXUE_CATEGORIES，5 大门类）
 │   └── img/
 │       └── favicon.svg
 │
+├── scripts/
+│   └── cache-bust.js       # 资源 URL 版本号注入
+│
+├── supabase/               # 数据库 schema / RLS / 测试页
+├── tests/                  # Playwright 端到端测试
+│
 ├── .github/workflows/
-│   └── deploy.yml          # 自动部署到 GitHub Pages
+│   ├── deploy.yml          # 自动部署到 GitHub Pages
+│   └── argus-review.yml    # PR 自动审查
 │
 └── ARCHITECTURE.md         # 本文档
 ```
+
+---
+
+### 2.1 课程数据模型（`lessons-manifest.js`）
+
+`window.GUOXUE_LESSONS` 数组,当前共 **47 项**,与 `lessons/` 下 47 个目录一一对应。
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `id` | string | 唯一标识,等于目录名(如 `01-lunyu`) |
+| `num` | string | 两位课程序号 `01`–`47`,显示在卡片左上角 |
+| `title` | string | 课程标题 |
+| `subtitle` | string | 副标题 |
+| `path` | string | 课程入口 HTML 相对路径 |
+| `grade` | string | 适用年级 |
+| `description` | string | 课程简介 |
+| `status` | string | `ready` 已上线 / `coming` 即将上线 |
+| `subject` | string | 所属门类 key,取自 `GUOXUE_CATEGORIES` |
+| `tier` | string | `core` / `advanced` / `supplement` |
+| `featured` | boolean | 是否标记为精选 |
+
+> 部分课程另带可选的 `duration`(预计学习时长)字段。**已无 `icon` 字段**——课程一律以两位序号 `num` 呈现。
+
+### 2.2 门类数据模型（`categories.js`）
+
+`window.GUOXUE_CATEGORIES` 数组,当前共 **5 个门类,全部 `ready`**:
+
+| key | label | num | 课程数 |
+|-----|-------|-----|:---:|
+| `daolun` | 导论 | `01` | 2 |
+| `xueer` | 学而 | `02` | 14 |
+| `weizheng` | 为政 | `03` | 17 |
+| `bayi` | 八佾 | `04` | 13 |
+| `mengxue` | 蒙学 | `05` | 1 |
+
+字段:`key` / `label` / `num` / `description` / `status` / `order`(无 `icon` 字段;门类同样以序号呈现)。
+
+### 2.3 课程模板与 slide-engine 版式
+
+所有课程页统一为 slide-engine 版式(`lessons/_template.html` 为基准):
+
+- 每张幻灯片:`<div class="slide" data-page="N" data-section="...">`,`data-page` 从 `0` 起连续编号
+- `data-section` 取值:`lecture` | `quiz` | `review`
+- 测验容器:`id="quiz-0"`、`id="quiz-1"` …(引擎依据 `window.GUOXUE_QUIZ_OVERRIDE` 自动渲染)
+- 得分页:`id="quiz-score"`,内含 `correct-count` / `total-score` / `score-percent` / `retake-btn`
+- 自定义课号:`window.GUOXUE_COURSE_ID`(用于 localStorage 进度键)
+- 引擎文件:`assets/js/slide-engine.js`(切页 / 答题评分 / 全屏 / 键盘 / 触屏 / 进度持久化)
+
+> 已废弃的旧结构(`data-index`、手写 `checkAnswer`、`.slide-card`)及其 CSS 均已移除。
+
+### 2.4 首页响应式结构
+
+`index.html` + `homepage.js` 构成首页的两栏布局,并针对移动端切换形态:
+
+- **桌面端(≥768px)**:左侧 `aside.home-sidebar` 目录**默认展开**,按门类分组,组内列出课程「序号 标题」;右侧 `main.home-content` 为课程卡片网格与筛选栏。
+- **移动端(<768px)**:隐藏左侧目录,顶部显示可横向滑动的 `.home-numstrip`,**按门类分组**(门类名 `.home-numstrip__label` + 组内课程序号 chip `.home-numstrip__chip`)。
+- 首页**已移除**旧的抽屉开关 `#drawer-toggle` 与遮罩;`navbar.js` 的抽屉仅服务于其他带侧栏的页面。
 
 ---
 
@@ -239,24 +304,25 @@ auth.js: init() → updateAuthUI()
 ### 5 步添加新课程
 
 ```bash
-# 步骤 1：复制模板
-cp lessons/_template.html lessons/13-new-lesson/index.html
+# 步骤 1：复制模板（编号接在现有 47 门之后，即 48）
+cp lessons/_template.html lessons/48-new-lesson/index.html
 
 # 步骤 2：编辑内容（在文件中找标注的 【填写XXX】 位置）
 # - 修改 <title>
 # - 填写讲义幻灯片（data-section="lecture"）
 # - 定义测验题目（window.GUOXUE_QUIZ_OVERRIDE）
-# - 填写答疑内容（data-section="qa"）
+# - 填写复习内容（data-section="review"）
 
 # 步骤 3：注册到课程目录
 # 打开 assets/js/lessons-manifest.js，在 GUOXUE_LESSONS 数组末尾追加：
-# { id: '13-new-lesson', title: '...', subject: 'jing', status: 'ready', ... }
+# { id: '48-new-lesson', num: '48', title: '...', subject: 'xueer', status: 'ready', ... }
+# subject 必须是 GUOXUE_CATEGORIES 中已有的 key（daolun/xueer/weizheng/bayi/mengxue）
 
-# 步骤 4：（可选）添加到 sitemap.xml
+# 步骤 4：（可选）将新课程 URL 追加到 sitemap.xml；资源版本号由 node scripts/cache-bust.js 统一处理
 
 # 步骤 5：提交并推送到 main 分支
-git add lessons/13-new-lesson/ assets/js/lessons-manifest.js
-git commit -m "feat(lesson): add 13-new-lesson"
+git add lessons/48-new-lesson/ assets/js/lessons-manifest.js
+git commit -m "feat(lesson): add 48-new-lesson"
 git push origin main
 # → GitHub Actions 自动部署
 ```
@@ -294,7 +360,6 @@ if (AUTH.isLoggedIn() && window.SUPABASE) {
 
 | 债务 | 风险 | 建议处理时间 |
 |------|------|-------------|
-| `dashboard.html` 和 `notes.html` 仍引用旧 `supabase-client.js` 接口（已不存在） | 中 | 下个迭代 |
 | `callback.html` 同时处理三种登录流程（邮件/微信/Casdoor PKCE），逻辑混杂 | 低 | 下个迭代 |
 | 课程页 `<script>` 标签里的 `v=9e67644` 版本参数需手动更新 | 低 | 接入 cache-bust 脚本自动化 |
 | `ds-design-system.css` 超过 1990 行，部分规则仅某页面使用 | 低 | 按需拆分为多文件 |
@@ -391,7 +456,7 @@ test(scope):   测试
 
 1. 检查 `window.GUOXUE_LESSONS` 是否已定义（`lessons-manifest.js` 是否加载）
 2. 检查 `window.AUTH` 是否已定义（`auth.js` 是否加载）
-3. 检查 `data-section` 属性是否正确：`lecture` / `quiz` / `qa`
+3. 检查 `data-section` 属性是否正确：`lecture` / `quiz` / `review`
 
 ### 样式错乱
 
@@ -400,4 +465,4 @@ test(scope):   测试
 
 ---
 
-*最后更新：2026-06 | 维护者：cgartlab*
+*最后更新：2026-09 | 维护者：cgartlab*

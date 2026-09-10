@@ -36,7 +36,7 @@ git add . && git commit -m "feat: ..." && git push
 - **Spacing**: 8px baseline grid (`--ds-space-1` through `--ds-space-20`)
 - **Typography**: `Noto Serif SC` / `Noto Sans SC` for Chinese
 - **Dark mode**: `@media (prefers-color-scheme: dark)` overrides in `:root`
-- **Responsive breakpoints**: 1100px / 768px / 480px / 374px
+- **Responsive breakpoints**: 1023px / 767px / 479px / 374px
 
 ### Slide Engine
 - **File**: `assets/js/slide-engine.js` — shared course engine (no build step)
@@ -46,9 +46,13 @@ git add . && git commit -m "feat: ..." && git push
 - **Custom course ID**: define `window.GUOXUE_COURSE_ID` before importing for per-course localStorage keys
 
 ### Course Manifest
-- **File**: `assets/js/lessons-manifest.js` — `GUOXUE_LESSONS` array
+- **File**: `assets/js/lessons-manifest.js` — `GUOXUE_LESSONS` array (47 entries, `01`–`47`)
 - Adding a new course: 1) copy `lessons/_template.html`, 2) edit content, 3) add entry to manifest, 4) refresh index.html
-- Fields: `id`, `title`, `subtitle`, `path`, `icon`, `grade`, `description`, `status` (`ready`/`coming`), `subject`, `tier` (`core`/`advanced`/`supplement`), `featured`
+- Fields: `id`, `num` (two-digit display index `01`–`47`), `title`, `subtitle`, `path`, `grade`, `description`, `status` (`ready`/`coming`), `subject`, `tier` (`core`/`advanced`/`supplement`), `featured` (no `icon` field — courses show `num` instead)
+
+### Categories
+- **File**: `assets/data/categories.js` — `GUOXUE_CATEGORIES` array, 5 subjects (all `ready`): `daolun` 导论, `xueer` 学而, `weizheng` 为政, `bayi` 八佾, `mengxue` 蒙学
+- Fields: `key`, `label`, `num`, `description`, `status`, `order`; a course's `subject` must match one of these `key`s
 
 ### Lesson Template
 - **File**: `lessons/_template.html` — copy this to create new courses
@@ -57,20 +61,20 @@ git add . && git commit -m "feat: ..." && git push
   - Every slide has `data-page="N"` (continuous from 0)
   - Section via `data-section="lecture|quiz|review"`
   - Quiz containers must have `id="quiz-0"`, `id="quiz-1"`, etc.
-  - Score page must have `id="quiz-score"`
+  - Score page must have `id="quiz-score"` (with `correct-count` / `total-score` / `score-percent` / `retake-btn`)
 
 ### Page Structure
-- `index.html` — course catalog (three-column layout: sidebar nav + main content + right panel)
+- `index.html` — course catalog (two-column layout on desktop: category sidebar + main content; on mobile the sidebar is replaced by a top horizontal `.home-numstrip` grouped by category, no drawer)
 - `about.html` — about page with teaching philosophy and teacher intro
-- `lessons/` — all course HTML files (each is a self-contained slide deck)
+- `lessons/` — 47 self-contained slide decks
 
 ---
 
 ## Adding a New Course (3-Step Method)
 
-1. **Copy template**: `cp lessons/_template.html lessons/XX-name/index.html`
+1. **Copy template**: `cp lessons/_template.html lessons/XX-name/index.html` (next free number, currently `48`)
 2. **Edit content**: title, slides, quiz questions (`window.GUOXUE_QUIZ_OVERRIDE`), review content
-3. **Register**: add entry to `assets/js/lessons-manifest.js`, then refresh `index.html`
+3. **Register**: add entry to `assets/js/lessons-manifest.js` with `num` and a `subject` matching a `GUOXUE_CATEGORIES` key, then refresh `index.html`
 
 ---
 

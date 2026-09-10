@@ -1,5 +1,10 @@
 // tests/homepage.spec.js
-// Playwright E2E tests for homepage v2.1 (drawer sidebar + series cover + collapsed categories)
+// Playwright E2E tests for homepage v3 (static sidebar + series cover + mobile numstrip)
+// Current structure facts:
+//   - 47 lessons (num 01..47, all status:'ready') in lessons-manifest.js
+//   - 5 categories (daolun/xueer/weizheng/bayi/mengxue, num 01..05, all ready)
+//   - Sidebar rendered by homepage.js: 5 groups, collapsed sub-navs, filter + reset links
+//   - Mobile (<768px): sidebar hidden, top numstrip visible (flat sorted chips, 47 in total)
 // Run: npx playwright test tests/homepage.spec.js --workers=1
 
 const { test, expect } = require('@playwright/test');
@@ -52,62 +57,68 @@ test.describe('Desktop (1440x900)', () => {
   test('two-column layout with series cover renders', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    // Sidebar visible (default expanded on desktop)
-    const sidebar = page.locator('.home-sidebar');
-    await expect(sidebar).toBeVisible();
+    // Sidebar visible (default expanded on desktop, no off-canvas)
+    await expect(page.locator('.home-sidebar')).toBeVisible();
 
     // Main content visible
-    const mainContent = page.locator('.home-content');
-    await expect(mainContent).toBeVisible();
-
-    // No right aside (removed)
-    const aside = page.locator('.home-aside');
-    await expect(aside).toHaveCount(0);
+    await expect(page.locator('.home-content')).toBeVisible();
 
     // Series cover visible
     const seriesCover = page.locator('.series-cover');
     await expect(seriesCover).toBeVisible();
     await expect(seriesCover.locator('.series-cover__title')).toContainText('系列课程总览');
 
-    // Stats visible
-    const stats = page.locator('.series-stat__value');
-    await expect(stats).toHaveCount(3); // 已上线 / 筹备中 / 门类
+    // No right aside
+    await expect(page.locator('.home-aside')).toHaveCount(0);
   });
 
-  test('top nav shows simple brand and about link without emoji', async ({ page }) => {
+  test('top nav shows simple brand and about link without menu/drawer toggles', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    // 首页导航条使用 ds-navbar--simple,仅含品牌+"关于本站"
+    // 首页导航条使用 ds-navbar--simple,仅含品牌 + "关于本站"
     const brand = page.locator('.ds-btn-nav--brand');
     await expect(brand).toHaveText('国学课堂');
-    await expect(brand.locator('.ds-btn-nav__icon')).toHaveCount(0);
 
-    // 关于本站链接（用 href 精确匹配，避免 auth 按钮干扰）
     const aboutLink = page.locator('.ds-navbar__inner a[href="about.html"]');
     await expect(aboutLink).toHaveText('关于本站');
 
-    // 首页无菜单/抽屉切换按钮(这些仅在课程页的 ds-navbar--global 中存在)
+    // 首页无菜单/抽屉切换按钮
     await expect(page.locator('#menu-toggle')).toHaveCount(0);
     await expect(page.locator('#drawer-toggle')).toHaveCount(0);
   });
 
-  test('sidebar renders 12 collapsible categories (default collapsed)', async ({ page }) => {
+  test('sidebar renders 5 ready categories (default collapsed)', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
+    // 5 category groups
     const groups = page.locator('.home-sidebar__group');
-    await expect(groups).toHaveCount(12);
+    await expect(groups).toHaveCount(5);
 
-    // Category headers visible
+    // 5 category headers
     const headers = page.locator('.home-sidebar__category-header');
-    await expect(headers).toHaveCount(12);
+    await expect(headers).toHaveCount(5);
 
-    // Sub navs should be hidden by default
+    // Header numbers 01..05 in order
+    const iconTexts = await page.locator('.home-sidebar__category-icon').allTextContents();
+    expect(iconTexts).toEqual(['01', '02', '03', '04', '05']);
+
+    // Header labels in order: 导论/学而/为政/八佾/蒙学
+    const labelTexts = await page.locator('.home-sidebar__category-label').allTextContents();
+    expect(labelTexts).toEqual(['导论', '学而', '为政', '八佾', '蒙学']);
+
+    // Sub-navs (non-all) hidden by default
     const subNavs = page.locator('.home-sidebar__nav:not(.home-sidebar__nav--all)');
+    await expect(subNavs).toHaveCount(5);
     for (let i = 0; i < await subNavs.count(); i++) {
-      const nav = subNavs.nth(i);
-      const isHidden = await nav.evaluate(el => el.hasAttribute('hidden'));
+      const isHidden = await subNavs.nth(i).evaluate(el => el.hasAttribute('hidden'));
       expect(isHidden).toBe(true);
     }
+
+    // Per-category filter links: 5
+    await expect(page.locator('.home-sidebar__link--filter')).toHaveCount(5);
+
+    // Course sub-links: 47 (one per ready lesson)
+    await expect(page.locator('.home-sidebar__link--sub')).toHaveCount(47);
 
     // "全部课程" reset link visible
     const allLink = page.locator('.home-sidebar__nav--all .home-sidebar__link');
@@ -115,7 +126,7 @@ test.describe('Desktop (1440x900)', () => {
     await expect(allLink).toContainText('全部课程');
   });
 
-  test('search box renders with L2 styling', async ({ page }) => {
+  test('search box renders with placeholder', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const searchInput = page.locator('#sidebar-search');
@@ -123,25 +134,27 @@ test.describe('Desktop (1440x900)', () => {
     await expect(searchInput).toHaveAttribute('placeholder', '搜索课程…');
   });
 
-  test('lesson cards render correctly', async ({ page }) => {
+  test('lesson cards render correctly (47 ready lessons)', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(12);
+    await expect(cards).toHaveCount(47);
 
     const firstCard = cards.first();
     await expect(firstCard.locator('.lesson-title')).toContainText('论语');
+    await expect(firstCard.locator('.lesson-num')).toBeVisible();
+    await expect(firstCard.locator('.lesson-num')).toHaveText('01');
   });
 
-  test('series cover stats show correct counts', async ({ page }) => {
+  test('series cover stats show correct counts (47/0/5)', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const values = page.locator('.series-stat__value');
+    await expect(values).toHaveCount(3); // 已上线 / 筹备中 / 学科门类
     const vals = await values.allTextContents();
-    // 12 ready lessons, 0 coming lessons, 12 categories
-    expect(vals[0]).toBe('12'); // 已上线
-    expect(vals[1]).toBe('0'); // 筹备中
-    expect(vals[2]).toBe('12'); // 门类
+    expect(vals[0]).toBe('47'); // 已上线
+    expect(vals[1]).toBe('0');  // 筹备中
+    expect(vals[2]).toBe('5');  // 学科门类
   });
 });
 
@@ -149,14 +162,13 @@ test.describe('Desktop (1440x900)', () => {
 test.describe('Tablet (768x1024)', () => {
   test.use({ viewport: { width: 768, height: 1024 } });
 
-  test('sidebar visible, cards in 2 columns', async ({ page }) => {
+  test('sidebar visible, 47 lesson cards', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    const sidebar = page.locator('.home-sidebar');
-    await expect(sidebar).toBeVisible();
+    await expect(page.locator('.home-sidebar')).toBeVisible();
 
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(12);
+    await expect(cards).toHaveCount(47);
   });
 });
 
@@ -164,71 +176,47 @@ test.describe('Tablet (768x1024)', () => {
 test.describe('Mobile (375x812)', () => {
   test.use({ viewport: { width: 375, height: 812 } });
 
-  test('simple navbar adapts to mobile viewport', async ({ page }) => {
+  test('sidebar hidden, numstrip visible with 47 chips and horizontal scroll', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    // 首页使用 ds-navbar--simple,无菜单切换按钮
+    // No menu/drawer toggles on homepage
     await expect(page.locator('#menu-toggle')).toHaveCount(0);
+    await expect(page.locator('#drawer-toggle')).toHaveCount(0);
 
-    // 品牌链接可见
-    const brand = page.locator('.ds-btn-nav--brand');
-    await expect(brand).toBeVisible();
-    await expect(brand).toHaveText('国学课堂');
+    // Sidebar hidden on mobile (<768px, display:none)
+    await expect(page.locator('.home-sidebar')).toBeHidden();
 
-    // 关于本站链接可见
-    const aboutLink = page.locator('.ds-navbar__inner .ds-btn-nav').last();
-    await expect(aboutLink).toBeVisible();
-  });
+    // 顶部序号条可见
+    const numstrip = page.locator('#home-numstrip');
+    await expect(numstrip).toBeVisible();
 
-  test('drawer toggle button visible on mobile', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/`);
+    // 按门类分组：5 组
+    const groups = page.locator('.home-numstrip__group');
+    await expect(groups).toHaveCount(5);
 
-    const drawerBtn = page.locator('#drawer-toggle');
-    await expect(drawerBtn).toBeVisible();
+    // 门类标签顺序：导论/学而/为政/八佾/蒙学
+    const labels = await page.locator('.home-numstrip__label').allTextContents();
+    expect(labels).toEqual(['导论', '学而', '为政', '八佾', '蒙学']);
 
-    // Sidebar hidden by default on mobile (transform: translateX(-100%) → matrix with negative tx)
-    const sidebar = page.locator('.home-sidebar');
-    const transform = await sidebar.evaluate(el => getComputedStyle(el).transform);
-    // matrix(1, 0, 0, 1, -260, 0) means translateX(-260px)
-    expect(transform).toMatch(/-\d+/);
+    // 组内 chip 数：导论=2、学而=14、为政=17、八佾=13、蒙学=1（合计 47）
+    const expectedChipCounts = [2, 14, 17, 13, 1];
+    for (let i = 0; i < expectedChipCounts.length; i++) {
+      await expect(groups.nth(i).locator('.home-numstrip__chip')).toHaveCount(expectedChipCounts[i]);
+    }
 
-    // Click drawer to open
-    await drawerBtn.click();
-    const isOpen = await sidebar.evaluate(el => el.classList.contains('is-open'));
-    expect(isOpen).toBe(true);
+    // 47 个序号 chip（01..47）
+    const chips = page.locator('.home-numstrip__chip');
+    await expect(chips).toHaveCount(47);
+    await expect(chips.first()).toHaveText('01');
+    await expect(chips.last()).toHaveText('47');
 
-    // 抽屉打开后,按钮文字变成"收起"
-    const text = page.locator('#drawer-toggle .ds-btn-nav__text');
-    // 移动端文字隐藏(只显示图标),所以通过 JS 检查
-    const textContent = await text.evaluate(el => el.textContent);
-    expect(textContent).toBe('收起');
-  });
+    // 横向可滑动
+    const overflowX = await numstrip.evaluate(el => getComputedStyle(el).overflowX);
+    expect(['auto', 'scroll']).toContain(overflowX);
 
-  test('search box hidden on mobile when drawer closed', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/`);
-
-    const searchBox = page.locator('.search-box');
-    const sidebar = page.locator('.home-sidebar');
-
-    // When drawer is closed (sidebar off-canvas), search box should not be interactable
-    const drawerClosed = await sidebar.evaluate(el => !el.classList.contains('is-open'));
-    expect(drawerClosed).toBe(true);
-
-    // Open drawer
-    const drawerBtn = page.locator('#drawer-toggle');
-    await drawerBtn.click();
-
-    // Now search box should be visible inside the opened drawer
-    const isOpen = await sidebar.evaluate(el => el.classList.contains('is-open'));
-    expect(isOpen).toBe(true);
-    await expect(searchBox).toBeVisible();
-  });
-
-  test('cards render in single column on mobile', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/`);
-
-    const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(12);
+    // 第一个 chip 指向第 01 课
+    await expect(chips.first()).toHaveAttribute('href', 'lessons/01-lunyu/index.html');
+    await expect(chips.first()).toHaveAttribute('aria-label', /01/);
   });
 });
 
@@ -239,101 +227,76 @@ test.describe('Interactions', () => {
   test('sidebar search filters sidebar links', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    // 先展开所有门类,让所有链接可见(默认是折叠的)
+    // 先展开所有门类,让链接可以被命中
     const allLink = page.locator('.home-sidebar__nav--all .home-sidebar__link');
     await allLink.click({ noWaitAfter: true });
-    await page.waitForTimeout(200);
 
     const searchInput = page.locator('#sidebar-search');
-    await searchInput.fill('诗书');
+    await searchInput.fill('三字经');
 
-    const jingLink = page.locator('.home-sidebar__link').filter({ hasText: '儒家经典' }).first();
-    await expect(jingLink).toBeVisible();
+    // 命中: 蒙学门类描述行 + 《三字经》课程行
+    const hit = page.locator('.home-sidebar__link').filter({ hasText: '三字经' }).first();
+    await expect(hit).toBeVisible();
 
-    const mengxueDescLink = page.locator('.home-sidebar__link').filter({ hasText: '三字经 · 百家姓' }).first();
-    await expect(mengxueDescLink).toBeHidden();
+    // 未命中: 学而门类下的课程被隐藏
+    const miss = page.locator('.home-sidebar__link').filter({ hasText: '温良恭俭让' }).first();
+    await expect(miss).toBeHidden();
   });
 
   test('click category header expands/collapses sub-items', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    const mengxueHeader = page.locator('.home-sidebar__category-header').filter({ hasText: '蒙学' }).first();
-    const mengxueNav = page.locator('.home-sidebar__nav').filter({ hasText: '论语' }).first();
+    const xueerHeader = page.locator('.home-sidebar__category-header').filter({ hasText: '学而' }).first();
+    const xueerNav = page.locator('.home-sidebar__nav[data-subject-group="xueer"]');
 
     // Initially hidden
-    let isHidden = await mengxueNav.evaluate(el => el.hasAttribute('hidden'));
-    expect(isHidden).toBe(true);
+    expect(await xueerNav.evaluate(el => el.hasAttribute('hidden'))).toBe(true);
 
     // Click to expand
-    await mengxueHeader.click();
-    isHidden = await mengxueNav.evaluate(el => el.hasAttribute('hidden'));
-    expect(isHidden).toBe(false);
-    // toHaveClass does exact match, use evaluate instead
-    let hasExpanded = await mengxueHeader.evaluate(el => el.classList.contains('is-expanded'));
-    expect(hasExpanded).toBe(true);
+    await xueerHeader.click();
+    expect(await xueerNav.evaluate(el => el.hasAttribute('hidden'))).toBe(false);
+    expect(await xueerHeader.evaluate(el => el.classList.contains('is-expanded'))).toBe(true);
 
     // Click to collapse
-    await mengxueHeader.click();
-    isHidden = await mengxueNav.evaluate(el => el.hasAttribute('hidden'));
-    expect(isHidden).toBe(true);
-    hasExpanded = await mengxueHeader.evaluate(el => el.classList.contains('is-expanded'));
-    expect(hasExpanded).toBe(false);
+    await xueerHeader.click();
+    expect(await xueerNav.evaluate(el => el.hasAttribute('hidden'))).toBe(true);
+    expect(await xueerHeader.evaluate(el => el.classList.contains('is-expanded'))).toBe(false);
   });
 
-  test('click on ready discipline filters cards', async ({ page }) => {
+  test('click on ready category filters cards', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    // Click the "蒙学" category header first to expand
-    const mengxueHeader = page.locator('.home-sidebar__category-header').filter({ hasText: '蒙学' }).first();
-    await mengxueHeader.click();
+    // 展开 八佾 门类
+    const bayiHeader = page.locator('.home-sidebar__category-header').filter({ hasText: '八佾' }).first();
+    await bayiHeader.click();
 
-    // Then click the filter link
-    const mengxueFilterLink = page.locator('.home-sidebar__link--filter').filter({ hasText: '三字经 · 百家姓' }).first();
-    await mengxueFilterLink.click({ noWaitAfter: true });
+    // 点击门类描述行触发过滤
+    const bayiFilter = page.locator('.home-sidebar__link--filter').filter({ hasText: '八佾' }).first();
+    await bayiFilter.click({ noWaitAfter: true });
 
-    const title = page.locator('#filter-title');
-    await expect(title).toContainText('蒙学');
+    await expect(page.locator('#filter-title')).toContainText('八佾');
 
-    // Should show 10 ready lessons in mengxue
+    // 八佾门类已有 13 门 ready 课程
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(12);
-  });
-
-  test('click on coming discipline shows placeholder', async ({ page }) => {
-    await page.goto(`http://localhost:${PORT}/`);
-
-    // Expand 经部 first
-    const jingHeader = page.locator('.home-sidebar__category-header').filter({ hasText: '经部' }).first();
-    await jingHeader.click();
-
-    // Click filter link
-    const jingFilterLink = page.locator('.home-sidebar__link--filter').filter({ hasText: '儒家经典' }).first();
-    await jingFilterLink.click({ noWaitAfter: true });
-
-    const comingEl = page.locator('#coming-soon');
-    await expect(comingEl).toBeVisible();
-    await expect(comingEl).toContainText('经部');
-    await expect(comingEl).toContainText('即将上线');
-
-    const grid = page.locator('#lesson-cards');
-    await expect(grid).toHaveAttribute('hidden');
+    await expect(cards).toHaveCount(13);
+    await expect(page.locator('#lesson-cards')).toBeVisible();
   });
 
   test('click "全部课程" resets to all', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    // Expand and click 经部
-    const jingHeader = page.locator('.home-sidebar__category-header').filter({ hasText: '经部' }).first();
-    await jingHeader.click();
-    const jingLink = page.locator('.home-sidebar__link--filter').filter({ hasText: '儒家经典' }).first();
-    await jingLink.click({ noWaitAfter: true });
-    await expect(page.locator('#coming-soon')).toBeVisible();
+    // 先过滤到 蒙学(1 门)
+    const mengxueHeader = page.locator('.home-sidebar__category-header').filter({ hasText: '蒙学' }).first();
+    await mengxueHeader.click();
+    const mengxueFilter = page.locator('.home-sidebar__link--filter').filter({ hasText: '蒙学' }).first();
+    await mengxueFilter.click({ noWaitAfter: true });
+    await expect(page.locator('#lesson-cards .ds-lesson-card')).toHaveCount(1);
 
-    // Click reset
-    const allLink = page.locator('.home-sidebar__nav--all .home-sidebar__link').first();
+    // 点「全部课程」重置
+    const allLink = page.locator('.home-sidebar__nav--all .home-sidebar__link');
     await allLink.click({ noWaitAfter: true });
 
-    await expect(page.locator('#lesson-cards')).toBeVisible();
+    await expect(page.locator('#lesson-cards .ds-lesson-card')).toHaveCount(47);
     await expect(page.locator('#filter-title')).toContainText('全部课程');
   });
 });
@@ -353,6 +316,7 @@ test.describe('Regression', () => {
 
     const title = page.locator('h1');
     await expect(title).toBeVisible();
+    await expect(title).toContainText('关于本站');
   });
 
   test('lesson page still works', async ({ page }) => {

@@ -1,5 +1,7 @@
 # 国学课堂 Supabase 集成指南
 
+> ⚠️ **历史快照说明**:本文档记录的是项目早期的 Supabase 集成方案。当前实现已改为自建 API——`assets/js/api-client.js`(替代原 `supabase-client.js`,保持 `window.SUPABASE` 接口,指向 `https://guoxue.8023laozhanshi.cc`),`supabase/*.sql` 仅作历史存档。文中课程 id 示例已按当前 **47 门新编号** 更新。
+
 这份文档将一步步指导你如何为国学课堂项目集成 Supabase 用户系统。
 
 ## 📋 目录
@@ -446,11 +448,12 @@ setInterval(() => {
 async function migrateLocalStorageToSupabase() {
   if (!AUTH.isLoggedIn()) return
   
+  // 课程 id 已按当前 47 门编号更新（完整清单见 assets/js/lessons-manifest.js）
   const courseIds = [
-    '01-lunyu', '02-sanzijing', '02-xueer', 
-    '03-xueer-xiaoti', '04-zengzi-sansheng', 
-    '05-dao-qiancheng-guo', '06-dizi-ruze-xiao', 
-    '07-xianxian-yise', '08-junzi-bu-zhong'
+    '01-lunyu', '03-sanzijing', '04-xueer',
+    '05-xueer-xiaoti', '06-zengzi-sansheng',
+    '07-dao-qiancheng-guo', '08-dizi-ruze-xiao',
+    '09-xianxian-yise', '10-junzi-bu-zhong'
   ]
   
   for (const courseId of courseIds) {

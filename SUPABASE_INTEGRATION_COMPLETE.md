@@ -3,7 +3,9 @@
 **项目**: 国学课堂  
 **集成**: Supabase + Casdoor OAuth2  
 **创建日期**: 2026年6月  
-**状态**: ✅ 完成
+**状态**: ✅ 完成(历史快照)
+
+> ⚠️ **历史快照说明**:本文档记录的是项目早期的 Supabase 集成方案。当前实现已改为自建 API——`assets/js/api-client.js`(替代原 `supabase-client.js`,保持 `window.SUPABASE` 接口,指向 `https://guoxue.8023laozhanshi.cc`),`supabase/*.sql` 仅作历史存档。文中课程 id 示例已按当前 **47 门新编号** 更新。
 
 ---
 
@@ -259,9 +261,9 @@ guoxue/
 │
 ├── index.html                  # 首页
 ├── callback.html               # OAuth 回调页面
-└── lessons/
+└── lessons/                     # 47 门课程（编号 01–47）
     ├── 01-lunyu/index.html
-    ├── 02-sanzijing/index.html
+    ├── 03-sanzijing/index.html
     └── ... 其他课程
 ```
 
@@ -607,8 +609,9 @@ AUTH.parseIdToken()  // 应该返回用户信息
 
 ```javascript
 async function migrateLocalStorage() {
+  // 课程 id 已按当前 47 门编号更新（完整清单见 assets/js/lessons-manifest.js）
   const courseIds = [
-    '01-lunyu', '02-sanzijing', '02-xueer',
+    '01-lunyu', '03-sanzijing', '04-xueer',
     // ... 其他课程
   ]
   
