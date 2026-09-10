@@ -10,11 +10,12 @@
 
 ## ✨ 当前内容
 
-* 🏠 **首页**(index.html)— 课程目录、教师信息
-* 📖 **《论语》国学问答**(01-lunyu)— 完整 26 页课件:讲义 10 页 + 测验 10 道 + 答疑 4 页
-* 📚 **《论语》问答课件 · 混合版**(01-lunyu-mixed)— 同主题拓展版,内容更详尽
+* 🏠 **首页**(index.html)— 课程目录、分类导航、搜索（由 homepage.js 渲染）
+* 📖 **46 门互动课件**（lessons/）— 《论语》学而 / 为政 / 八佾系列 44 门 + 三字经 + 拓展版，**样式统一为第一课扁平标准**（cover-slide / ds-quote / ds-caption）
 * 👩‍🏫 **关于本站**(about.html)— 教师寄语、教学理念
-* 🎓 **空白课程模板**(`lessons/\_template.html`)— 复制即可新建一门课
+* 🎓 **空白课程模板**(`lessons/_template.html`)— 复制即可新建一门课
+
+> 线上域名 `guoxue.8023laozhanshi.cc` 已直连 GitHub Pages（DNS CNAME → cgartlab.github.io）
 
 \---
 
@@ -124,35 +125,13 @@ python -m http.server 8000
 
 \---
 
-## 🌐 部署到 GitHub Pages
+## 🌐 部署
 
-### 一次性设置(5 分钟)
+本站已启用 GitHub Actions 自动部署（`.github/workflows/deploy.yml`）：
 
-1. **注册 GitHub 账号**(若没有):[https://github.com](https://github.com)
-2. **新建仓库**:
-
-   * 名称填 `guoxue`(或你喜欢的名字,后面 URL 会用到)
-   * 类型选 `Public`
-   * **不要**勾选 "Add a README file"(我们已有 README)
-3. **推送代码**:
-
-```bash
-   cd D:\\2-Area\\github-repos\\guoxue
-   git init
-   git add .
-   git commit -m "feat: 初始化国学课堂网站"
-   git branch -M main
-   git remote add origin https://github.com/你的用户名/guoxue.git
-   git push -u origin main
-   ```
-
-4. **开启 Pages**:
-
-   * 进入仓库 → `Settings` → 左侧 `Pages`
-   * `Source` 选 `Deploy from a branch`
-   * `Branch` 选 `main` / `(root)`
-   * 点 `Save`
-5. **等 1-2 分钟**,访问 `https://你的用户名.github.io/guoxue/` 即可
+1. 推送 `main` → Actions 运行 `node scripts/cache-bust.js`（给资源加 `?v=<hash>`）→ 上传 artifact → GitHub Pages
+2. 仓库根 `CNAME` = `guoxue.8023laozhanshi.cc`；该子域 DNS 为 **CNAME → `cgartlab.github.io`（灰云直连）**，勿改回 Cloudflare Tunnel/本地 nginx
+3. 访问 `https://guoxue.8023laozhanshi.cc/`（或 `https://cgartlab.github.io/guoxue/`，会自动跳转）
 
 ### 以后更新内容
 
@@ -162,7 +141,9 @@ git commit -m "feat: 新增《弟子规》课程"
 git push
 ```
 
-推送后,GitHub Pages 会在 1-2 分钟内自动重新部署。
+推送后约 1-2 分钟自动重新部署。
+
+> ⚠️ 登录（Casdoor/邮箱码）、dashboard、notes、进度/成绩云同步当前不可用——GitHub Pages 无法反代 `/casdoor` 与 `/api`。恢复方案见 AGENTS.md「登录/云功能状态」。课程浏览与本地进度（localStorage）不受影响。
 
 \---
 
