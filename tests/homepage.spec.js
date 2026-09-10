@@ -204,11 +204,12 @@ test.describe('Mobile (375x812)', () => {
       await expect(groups.nth(i).locator('.home-numstrip__chip')).toHaveCount(expectedChipCounts[i]);
     }
 
-    // 47 个序号 chip（01..47）
+    // 全部 47 个序号 chip，按门类顺序排列
     const chips = page.locator('.home-numstrip__chip');
     await expect(chips).toHaveCount(47);
+    // 首组「导论」首项 = 01；末组「蒙学」唯一项 = 03
     await expect(chips.first()).toHaveText('01');
-    await expect(chips.last()).toHaveText('47');
+    await expect(chips.last()).toHaveText('03');
 
     // 横向可滑动
     const overflowX = await numstrip.evaluate(el => getComputedStyle(el).overflowX);

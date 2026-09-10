@@ -66,27 +66,26 @@
     if (lesson.duration) {
       subtitleEl += ' · ' + esc(lesson.duration);
     }
-    var descEl     = '<p class="lesson-desc" style="margin-bottom:var(--ds-space-5)">' + esc(lesson.description || '') + '</p>';
+    var descEl     = '<p class="lesson-desc">' + esc(lesson.description || '') + '</p>';
     var ctaText    = isComing ? '即将上线' : '开始学习';
     var arrowText  = isComing ? '' : ' →';
     var ctaEl      = '<div class="lesson-cta"><span>' + esc(ctaText) + '</span><span class="arrow">' + esc(arrowText) + '</span></div>';
     var overlay    = '';
     if (isComing) {
-      overlay = '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:700;color:var(--ds-color-muted);background:oklch(100% 0 0 / 0.7);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);border-radius:var(--ds-radius-2xl);z-index:2;pointer-events:none;letter-spacing:0.1em;">即将上线</div>';
+      overlay = '<div class="ds-lesson-card__overlay-coming">即将上线</div>';
     }
-    return '<a class="ds-lesson-card" href="' + esc(lesson.path) + '"' +
-           (isComing ? ' style="pointer-events:none;opacity:0.5;"' : '') + '>' +
+    return '<a class="ds-lesson-card' + (isComing ? ' ds-lesson-card--coming' : '') + '" href="' + esc(lesson.path) + '">' +
            iconDiv + gradeBadge + titleEl + subtitleEl + descEl + ctaEl + overlay +
            '</a>';
   }
 
   function buildComingSoonCardHTML(lesson) {
-    return '<div class="ds-lesson-card" style="opacity:0.5;pointer-events:none;cursor:not-allowed;">' +
+    return '<div class="ds-lesson-card ds-lesson-card--coming">' +
            '<div class="lesson-num">' + esc(lesson.num || '') + '</div>' +
            '<span class="lesson-grade">' + esc(lesson.grade || '') + '</span>' +
            '<h3 class="lesson-title">' + esc(lesson.title || '') + '</h3>' +
            '<p class="lesson-subtitle">' + esc(lesson.subtitle || '') + '</p>' +
-           '<p class="lesson-desc" style="margin-bottom:var(--ds-space-5)">' + esc(lesson.description || '') + '</p>' +
+           '<p class="lesson-desc">' + esc(lesson.description || '') + '</p>' +
            '<div class="lesson-cta"><span>敬请期待</span></div>' +
            '</div>';
   }
@@ -379,9 +378,9 @@
       
       // 空课程列表友好提示
       if (filtered.length === 0) {
-        gridEl.innerHTML = '<div class=\"ds-empty-state\" role=\"status\" style=\"text-align:center;padding:var(--ds-space-12);color:var(--ds-color-muted);\">' +
+        gridEl.innerHTML = '<div class=\"ds-empty-state\" role=\"status\">' +
           '<p>暂无课程</p>' +
-          '<p style=\"font-size:0.875rem;margin-top:var(--ds-space-2);\">该门类课程正在筹备中，敬请期待。</p>' +
+          '<p class=\"ds-empty-state__hint\">该门类课程正在筹备中，敬请期待。</p>' +
           '</div>';
       } else {
         filtered.forEach(function (lesson) {
