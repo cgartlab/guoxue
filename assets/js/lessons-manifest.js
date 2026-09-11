@@ -718,6 +718,20 @@ window.GUOXUE_LESSONS = [
         subject: 'bayi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '51-gao-shuo-zhi-xi-yang',
+        num: '51',
+        title: '告朔之饩羊',
+        subtitle: '尔爱其羊 · 我爱其礼',
+        path: 'lessons/51-gao-shuo-zhi-xi-yang/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第十七章精讲：子贡欲去告朔之饩羊，子曰"赐也！尔爱其羊，我爱其礼"——羊为礼之载体，去羊则礼失依托；孔子力保礼的精神存续。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'bayi',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
 ];
