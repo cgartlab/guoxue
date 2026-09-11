@@ -704,6 +704,20 @@ window.GUOXUE_LESSONS = [
         subject: 'bayi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '50-she-bu-zhu-pi',
+        num: '50',
+        title: '射不主皮',
+        subtitle: '古之道也 · 不以力胜',
+        path: 'lessons/50-she-bu-zhu-pi/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第十六章精讲：子曰"射不主皮，为力不同科，古之道也"——射礼重在观德、中的与合礼，不在蛮力穿靶；承认个体差异，重德不重力，乃古之道。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'bayi',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
 ];
