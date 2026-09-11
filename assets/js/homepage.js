@@ -74,8 +74,16 @@
     if (isComing) {
       overlay = '<div class="ds-lesson-card__overlay-coming">即将上线</div>';
     }
+    // 免费/付费角标
+    var badge = '';
+    if (!isComing && typeof window.UNLOCK !== 'undefined') {
+      var isFree = window.UNLOCK.isCourseFree(lesson.id);
+      badge = isFree
+        ? '<span class="lesson-badge lesson-badge--free">免费</span>'
+        : '<span class="lesson-badge lesson-badge--paid">¥9.90</span>';
+    }
     return '<a class="ds-lesson-card' + (isComing ? ' ds-lesson-card--coming' : '') + '" href="' + esc(lesson.path) + '">' +
-           iconDiv + gradeBadge + titleEl + subtitleEl + descEl + ctaEl + overlay +
+           badge + iconDiv + gradeBadge + titleEl + subtitleEl + descEl + ctaEl + overlay +
            '</a>';
   }
 

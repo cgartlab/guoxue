@@ -2289,3 +2289,237 @@ a.ds-accent-link:hover { color: var(--ds-accent-hover); }
 .retake-btn {
     margin-top: var(--ds-space-6);
 }
+
+/* ============================================================
+ * 课程卡片: 免费/付费角标
+ * ============================================================ */
+.lesson-badge {
+    position: absolute;
+    top: var(--ds-space-3);
+    right: var(--ds-space-3);
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    z-index: 2;
+    pointer-events: none;
+}
+.lesson-badge--free {
+    background: var(--ds-color-success-bg);
+    color: var(--ds-color-success);
+    border: 1px solid var(--ds-color-success);
+}
+.lesson-badge--paid {
+    background: color-mix(in srgb, var(--ds-color-wechat) 10%, transparent);
+    color: var(--ds-color-wechat);
+    border: 1px solid var(--ds-color-wechat);
+}
+
+/* ============================================================
+ * 付费弹窗 (paywall modal)
+ * ============================================================ */
+.paywall-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.paywall-overlay--show {
+    opacity: 1;
+    visibility: visible;
+}
+.paywall-modal {
+    position: relative;
+    background: var(--ds-color-surface-raised, #fff);
+    border-radius: var(--ds-radius-2xl, 20px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    max-width: 420px;
+    width: calc(100vw - 32px);
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    padding: var(--ds-space-8, 32px);
+    animation: paywallSlideUp 0.35s var(--ds-ease-out, ease-out);
+}
+@keyframes paywallSlideUp {
+    from { opacity: 0; transform: translateY(30px) scale(0.96); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.paywall-close {
+    position: absolute;
+    top: var(--ds-space-3, 12px);
+    right: var(--ds-space-3, 12px);
+    width: 36px; height: 36px;
+    border: none; background: none;
+    font-size: 1.5rem; line-height: 1;
+    color: var(--ds-color-muted, #888);
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, color 0.2s;
+}
+.paywall-close:hover {
+    background: rgba(0,0,0,0.06);
+    color: var(--ds-color-fg-strong, #333);
+}
+.paywall-header {
+    text-align: center;
+    margin-bottom: var(--ds-space-6, 24px);
+}
+.paywall-title {
+    font-family: var(--ds-font-display, Georgia, serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ds-color-fg-strong, #1a1a1a);
+    margin: 0 0 var(--ds-space-2, 8px);
+}
+.paywall-subtitle {
+    font-size: 0.9375rem;
+    color: var(--ds-color-muted, #888);
+    margin: 0;
+}
+.paywall-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ds-space-5, 20px);
+}
+.paywall-qr-section {
+    text-align: center;
+}
+.paywall-qr-section--alt {
+    padding-top: var(--ds-space-4, 16px);
+    border-top: 1px solid var(--ds-color-border, #e5e5e5);
+}
+.paywall-qr-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--ds-color-fg, #333);
+    margin: 0 0 var(--ds-space-3, 12px);
+}
+.paywall-qr-wrapper {
+    display: inline-block;
+    padding: var(--ds-space-3, 12px);
+    background: #fff;
+    border-radius: var(--ds-radius-lg, 12px);
+    border: 1px solid var(--ds-color-border, #e5e5e5);
+    box-shadow: var(--ds-shadow-sm, 0 1px 3px rgba(0,0,0,0.08));
+}
+.paywall-qr-img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: var(--ds-radius-md, 8px);
+}
+.paywall-qr-wrapper--small .paywall-qr-img {
+    width: 140px;
+    height: 140px;
+}
+.paywall-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ds-color-wechat, #07C160);
+    margin: var(--ds-space-3, 12px) 0 0;
+}
+.paywall-code-section {
+    text-align: center;
+    padding-top: var(--ds-space-4, 16px);
+    border-top: 1px solid var(--ds-color-border, #e5e5e5);
+}
+.paywall-code-hint {
+    font-size: 0.875rem;
+    color: var(--ds-color-muted, #888);
+    margin: 0 0 var(--ds-space-3, 12px);
+}
+.paywall-code-row {
+    display: flex;
+    gap: var(--ds-space-2, 8px);
+    max-width: 300px;
+    margin: 0 auto;
+}
+.paywall-code-input {
+    flex: 1;
+    padding: var(--ds-space-3, 12px) var(--ds-space-4, 16px);
+    border: 1.5px solid var(--ds-color-border, #e5e5e5);
+    border-radius: var(--ds-radius-lg, 12px);
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--ds-color-fg, #333);
+    background: var(--ds-color-surface, #fafafa);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.paywall-code-input:focus {
+    border-color: var(--ds-accent, #5a8a5e);
+    box-shadow: 0 0 0 3px rgba(90, 138, 94, 0.15);
+}
+.paywall-code-input::placeholder {
+    color: var(--ds-color-muted, #aaa);
+}
+.paywall-code-btn {
+    padding: var(--ds-space-3, 12px) var(--ds-space-5, 20px);
+    background: var(--ds-accent, #5a8a5e);
+    color: var(--ds-color-on-accent, #fff);
+    border: none;
+    border-radius: var(--ds-radius-lg, 12px);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    white-space: nowrap;
+}
+.paywall-code-btn:hover {
+    background: var(--ds-accent-hover, #4a7a4e);
+}
+.paywall-code-btn:active {
+    transform: scale(0.97);
+}
+.paywall-code-msg {
+    font-size: 0.8125rem;
+    margin: var(--ds-space-2, 8px) 0 0;
+    min-height: 1.2em;
+    transition: color 0.2s;
+}
+.paywall-code-msg--error {
+    color: var(--ds-color-error, #d32f2f);
+}
+.paywall-code-msg--success {
+    color: var(--ds-color-success, #2e7d32);
+}
+.paywall-footer {
+    text-align: center;
+    margin-top: var(--ds-space-4, 16px);
+}
+.paywall-footer p {
+    font-size: 0.75rem;
+    color: var(--ds-color-muted, #aaa);
+    margin: 0;
+}
+
+/* 移动端适配 */
+@media (max-width: 480px) {
+    .paywall-modal {
+        padding: var(--ds-space-6, 24px);
+        border-radius: var(--ds-radius-xl, 16px);
+    }
+    .paywall-qr-img {
+        width: 180px;
+        height: 180px;
+    }
+    .paywall-qr-wrapper--small .paywall-qr-img {
+        width: 120px;
+        height: 120px;
+    }
+    .paywall-title {
+        font-size: 1.25rem;
+    }
+}

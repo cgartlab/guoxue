@@ -70,7 +70,7 @@
 
                 '<div class="paywall-header">' +
                     '<h2 class="paywall-title">解锁全部国学课程</h2>' +
-                    '<p class="paywall-subtitle">47 门精品课程，一次打赏，永久解锁</p>' +
+                    '<p class="paywall-subtitle">49 门精品课程，一次打赏，永久解锁</p>' +
                 '</div>' +
 
                 '<div class="paywall-body">' +

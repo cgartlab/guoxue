@@ -18,6 +18,15 @@
     /* ===== 课程配置(从 HTML 自动探测) ===== */
     var courseId = window.GUOXUE_COURSE_ID || document.title.replace(/[^a-z0-9]/gi, '_').toLowerCase().slice(0, 32);
 
+    /* ===== 付费墙检查 ===== */
+    if (typeof window.UNLOCK !== 'undefined' && !window.UNLOCK.isUnlocked() && !window.UNLOCK.isCourseFree(courseId)) {
+        // 课程需要付费，显示付费弹窗
+        document.addEventListener('DOMContentLoaded', function () {
+            window.UNLOCK.showPaywall();
+        });
+        return; // 阻止 slide engine 初始化
+    }
+
     /* ===== 默认测验数据 ===== */
     var DEFAULT_QUIZ = [
         { q: '"学而时习之,不亦说乎?"这句话出自哪部经典著作?', opts: ['《道德经》', '《论语》', '《诗经》'], ans: 1, exp: '出自《论语·学而》,是论语开篇第一句。"说"同"悦",意思是愉快。整句意思是:学了知识并经常复习,不也很愉快吗?' },
