@@ -41,9 +41,30 @@
         { q: '《论语》一共由多少篇组成?', opts: ['10 篇', '20 篇', '30 篇'], ans: 1, exp: '《论语》共 20 篇,492 章。每篇篇名取自开头第一句话中的两个字,如"学而""为政"等。' }
     ];
 
-    var quizData = Array.isArray(window.GUOXUE_QUIZ_OVERRIDE) && window.GUOXUE_QUIZ_OVERRIDE.length > 0
+    var rawQuiz = Array.isArray(window.GUOXUE_QUIZ_OVERRIDE) && window.GUOXUE_QUIZ_OVERRIDE.length > 0
         ? window.GUOXUE_QUIZ_OVERRIDE
         : DEFAULT_QUIZ;
+
+    /* ===== 随机打乱每题选项顺序 =====
+     * 原先大量题目的正确答案固定在第二个选项(ans:1)。此处每次加载页面,
+     * 对每题的选项做洗牌,并把正确答案索引重映射到新位置,避免位置被猜中。
+     */
+    function shuffleOptions(item) {
+        var order = [];
+        for (var k = 0; k < item.opts.length; k++) order.push(k);
+        for (var i = order.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = order[i]; order[i] = order[j]; order[j] = tmp;
+        }
+        return {
+            q: item.q,
+            exp: item.exp,
+            opts: order.map(function (o) { return item.opts[o]; }),
+            ans: order.indexOf(item.ans)
+        };
+    }
+
+    var quizData = rawQuiz.map(shuffleOptions);
 
     var quizCount = quizData.length;
 
