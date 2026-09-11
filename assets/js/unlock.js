@@ -78,17 +78,9 @@
                     '<div class="paywall-qr-section">' +
                         '<p class="paywall-qr-label">推荐使用微信支付</p>' +
                         '<div class="paywall-qr-wrapper">' +
-                            '<img class="paywall-qr-img" src="../../assets/img/wechat-qr.svg" alt="微信收款码">' +
+                            '<img class="paywall-qr-img" src="../../assets/img/wechat-qr.png" alt="微信收款码">' +
                         '</div>' +
                         '<p class="paywall-price">¥' + CONFIG.price + '</p>' +
-                    '</div>' +
-
-                    '<!-- 支付宝收款码(占位) -->' +
-                    '<div class="paywall-qr-section paywall-qr-section--alt">' +
-                        '<p class="paywall-qr-label">或使用支付宝</p>' +
-                        '<div class="paywall-qr-wrapper paywall-qr-wrapper--small">' +
-                            '<img class="paywall-qr-img" src="../../assets/img/alipay-qr.svg" alt="支付宝收款码">' +
-                        '</div>' +
                     '</div>' +
 
                     '<!-- 解锁码输入 -->' +
