@@ -1,0 +1,4 @@
+# 复制本文件为 .dev.vars 并填入真实面包多开发者密钥,用于本地 `wrangler dev` 调试。
+# 密钥格式: 整串即密钥(形如 6829852:xxxx:yyyy)。
+# 注意: 本文件已被 .gitignore 忽略,严禁提交真实密钥。
+MBD_DEVELOPER_KEY=你的面包多开发者密钥

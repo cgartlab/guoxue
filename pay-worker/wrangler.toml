@@ -1,0 +1,20 @@
+name = "guoxue-pay"
+main = "src/index.js"
+compatibility_date = "2025-03-01"
+
+# 自定义域名(workers.dev 在中国大陆被污染无法访问,故挂到自有域名)
+routes = [
+  { pattern = "pay.8023laozhanshi.cc", custom_domain = true }
+]
+
+# KV 命名空间:部署前先执行
+#   wrangler kv:namespace create CODES
+# 然后把返回的 namespace id 填入下面 id = "..."(当前为占位符)
+[[kv_namespaces]]
+binding = "CODES"
+id = "5282361fd299402ba9ae5789f9baf984"
+
+# 环境变量(不含密钥;密钥用 `wrangler secret put MBD_DEVELOPER_KEY` 注入)
+[vars]
+ALLOWED_ORIGIN = "https://guoxue.8023laozhanshi.cc"
+PRICE_YUAN = "9.9"

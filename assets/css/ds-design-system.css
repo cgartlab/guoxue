@@ -2523,3 +2523,97 @@ a.ds-accent-link:hover { color: var(--ds-accent-hover); }
         font-size: 1.25rem;
     }
 }
+
+/* ============================================================
+ * 面包多支付解锁 (paywall v2 · 订单号验单)
+ * 说明:新增样式全部使用 design token(OKLCH 变量),
+ *      随暗色模式(@media prefers-color-scheme: dark)自动切换
+ * ============================================================ */
+/* 去面包多支付主按钮 */
+.paywall-product-btn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 14px var(--ds-space-5, 20px);
+    background: var(--ds-accent, #5a8a5e);
+    color: var(--ds-color-on-accent, #fff);
+    border: none;
+    border-radius: var(--ds-radius-lg, 12px);
+    font-size: 1.125rem;
+    font-weight: 700;
+    font-family: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(90, 138, 94, 0.25);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.paywall-product-btn:hover {
+    background: var(--ds-accent-hover, #4a7a4e);
+    box-shadow: 0 6px 18px rgba(90, 138, 94, 0.3);
+}
+.paywall-product-btn:active {
+    transform: scale(0.98);
+}
+/* 操作说明文字 */
+.paywall-order-hint {
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    color: var(--ds-color-muted, #888);
+    margin: 0;
+}
+/* 订单号 / 邮箱输入框 */
+.paywall-order-input,
+.paywall-email-input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--ds-space-3, 12px) var(--ds-space-4, 16px);
+    border: 1.5px solid var(--ds-color-border, #e5e5e5);
+    border-radius: var(--ds-radius-lg, 12px);
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--ds-color-fg, #333);
+    background: var(--ds-color-surface, #fafafa);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.paywall-order-input:focus,
+.paywall-email-input:focus {
+    border-color: var(--ds-accent, #5a8a5e);
+    box-shadow: 0 0 0 3px rgba(90, 138, 94, 0.15);
+}
+.paywall-order-input::placeholder,
+.paywall-email-input::placeholder {
+    color: var(--ds-color-muted, #aaa);
+}
+/* 验单按钮禁用态(请求进行中) */
+.paywall-code-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+/* 状态提示(进行中 / 成功 / 错误) */
+.paywall-status {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    margin: var(--ds-space-2, 8px) 0 0;
+    min-height: 1.2em;
+    line-height: 1.6;
+    transition: color 0.2s;
+}
+.paywall-status--info {
+    color: var(--ds-color-muted, #888);
+}
+.paywall-status--error {
+    color: var(--ds-color-error, #d32f2f);
+}
+.paywall-status--success {
+    color: var(--ds-color-success, #2e7d32);
+}
+/* 移动端微调 */
+@media (max-width: 480px) {
+    .paywall-product-btn {
+        font-size: 1rem;
+        padding: 13px var(--ds-space-4, 16px);
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "guoxue-pay-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "国学课堂面包多验单解锁 Worker(ES module,详见 README.md)"
+}
