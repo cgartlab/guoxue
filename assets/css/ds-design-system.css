@@ -2391,78 +2391,10 @@ a.ds-accent-link:hover { color: var(--ds-accent-hover); }
     flex-direction: column;
     gap: var(--ds-space-5, 20px);
 }
-.paywall-qr-section {
-    text-align: center;
-}
-.paywall-qr-section--alt {
-    padding-top: var(--ds-space-4, 16px);
-    border-top: 1px solid var(--ds-color-border, #e5e5e5);
-}
-.paywall-qr-label {
-    font-size: 0.8125rem;
-    font-weight: 600;
-    color: var(--ds-color-fg, #333);
-    margin: 0 0 var(--ds-space-3, 12px);
-}
-.paywall-qr-wrapper {
-    display: inline-block;
-    padding: var(--ds-space-3, 12px);
-    background: #fff;
-    border-radius: var(--ds-radius-lg, 12px);
-    border: 1px solid var(--ds-color-border, #e5e5e5);
-    box-shadow: var(--ds-shadow-sm, 0 1px 3px rgba(0,0,0,0.08));
-}
-.paywall-qr-img {
-    display: block;
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-    border-radius: var(--ds-radius-md, 8px);
-}
-.paywall-qr-wrapper--small .paywall-qr-img {
-    width: 140px;
-    height: 140px;
-}
-.paywall-price {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--ds-color-wechat, #07C160);
-    margin: var(--ds-space-3, 12px) 0 0;
-}
 .paywall-code-section {
     text-align: center;
     padding-top: var(--ds-space-4, 16px);
     border-top: 1px solid var(--ds-color-border, #e5e5e5);
-}
-.paywall-code-hint {
-    font-size: 0.875rem;
-    color: var(--ds-color-muted, #888);
-    margin: 0 0 var(--ds-space-3, 12px);
-}
-.paywall-code-row {
-    display: flex;
-    gap: var(--ds-space-2, 8px);
-    max-width: 300px;
-    margin: 0 auto;
-}
-.paywall-code-input {
-    flex: 1;
-    padding: var(--ds-space-3, 12px) var(--ds-space-4, 16px);
-    border: 1.5px solid var(--ds-color-border, #e5e5e5);
-    border-radius: var(--ds-radius-lg, 12px);
-    font-size: 1rem;
-    font-family: inherit;
-    color: var(--ds-color-fg, #333);
-    background: var(--ds-color-surface, #fafafa);
-    outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-.paywall-code-input:focus {
-    border-color: var(--ds-accent, #5a8a5e);
-    box-shadow: 0 0 0 3px rgba(90, 138, 94, 0.15);
-}
-.paywall-code-input::placeholder {
-    color: var(--ds-color-muted, #aaa);
 }
 .paywall-code-btn {
     padding: var(--ds-space-3, 12px) var(--ds-space-5, 20px);
@@ -2483,18 +2415,6 @@ a.ds-accent-link:hover { color: var(--ds-accent-hover); }
 .paywall-code-btn:active {
     transform: scale(0.97);
 }
-.paywall-code-msg {
-    font-size: 0.8125rem;
-    margin: var(--ds-space-2, 8px) 0 0;
-    min-height: 1.2em;
-    transition: color 0.2s;
-}
-.paywall-code-msg--error {
-    color: var(--ds-color-error, #d32f2f);
-}
-.paywall-code-msg--success {
-    color: var(--ds-color-success, #2e7d32);
-}
 .paywall-footer {
     text-align: center;
     margin-top: var(--ds-space-4, 16px);
@@ -2510,14 +2430,6 @@ a.ds-accent-link:hover { color: var(--ds-accent-hover); }
     .paywall-modal {
         padding: var(--ds-space-6, 24px);
         border-radius: var(--ds-radius-xl, 16px);
-    }
-    .paywall-qr-img {
-        width: 180px;
-        height: 180px;
-    }
-    .paywall-qr-wrapper--small .paywall-qr-img {
-        width: 120px;
-        height: 120px;
     }
     .paywall-title {
         font-size: 1.25rem;
