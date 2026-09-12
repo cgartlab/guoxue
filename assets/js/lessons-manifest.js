@@ -760,6 +760,20 @@ window.GUOXUE_LESSONS = [
         subject: 'bayi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '54-guanju-le-er-bu-yin',
+        num: '54',
+        title: '乐而不淫，哀而不伤',
+        subtitle: '《关雎》之德 · 中和之美',
+        path: 'lessons/54-guanju-le-er-bu-yin/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第二十章精讲：子曰"《关雎》，乐而不淫，哀而不伤"——孔子评《诗经》首篇《关雎》，论情感快乐而不放纵、忧伤而不伤身的"中和之美"，是中国美学"发乎情，止乎礼"的源头。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'bayi',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
 ];
