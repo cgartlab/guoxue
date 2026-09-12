@@ -732,6 +732,20 @@ window.GUOXUE_LESSONS = [
         subject: 'bayi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '52-shi-jun-jin-li',
+        num: '52',
+        title: '事君尽礼',
+        subtitle: '人以为谄 · 守礼之难',
+        path: 'lessons/52-shi-jun-jin-li/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第十八章精讲：子曰"事君尽礼，人以为谄也"——以礼事君反被误为谄媚，孔子慨叹世俗不识礼、守礼之难；辨"敬"与"谄"，坚持原则不因误解改志。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'bayi',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
 ];
