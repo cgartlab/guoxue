@@ -17,4 +17,5 @@ id = "5282361fd299402ba9ae5789f9baf984"
 # 环境变量(不含密钥;密钥用 `wrangler secret put MBD_DEVELOPER_KEY` 注入)
 [vars]
 ALLOWED_ORIGIN = "https://guoxue.8023laozhanshi.cc"
-PRICE_YUAN = "9.9"
+# 最低可接受实付金额(元):需 <= 商品实际售价。当前商品有限时优惠 ¥7.92,故取 7.9。
+PRICE_YUAN = "7.9"
