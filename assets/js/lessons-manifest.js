@@ -746,6 +746,20 @@ window.GUOXUE_LESSONS = [
         subject: 'bayi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '53-jun-shi-chen-yi-li',
+        num: '53',
+        title: '君礼臣忠',
+        subtitle: '君使臣以礼 · 臣事君以忠',
+        path: 'lessons/53-jun-shi-chen-yi-li/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第十九章精讲：定公问"君使臣，臣事君，如之何"，孔子对曰"君使臣以礼，臣事君以忠"——孔子为君臣关系立下双向准则：君以礼待臣，臣以忠事君，各尽其道、对等相待。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'bayi',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
 ];
