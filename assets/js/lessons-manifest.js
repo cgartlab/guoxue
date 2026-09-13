@@ -802,6 +802,20 @@ window.GUOXUE_LESSONS = [
         subject: 'bayi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '57-zi-yu-lu-da-shi-yue',
+        num: '57',
+        title: '乐其可知也',
+        subtitle: '翕纯皦绎 · 乐之可知',
+        path: 'lessons/57-zi-yu-lu-da-shi-yue/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第二十三章精讲：子语鲁大师乐，曰"乐其可知也。始作，翕如也；从之，纯如也，皦如也，绎如也，以成。"——孔子向鲁国乐官讲论音乐由起至成的结构与境界，由合而纯、由纯而明、由明而续，体现儒家"和而有序"的乐教精神。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'bayi',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
 ];
