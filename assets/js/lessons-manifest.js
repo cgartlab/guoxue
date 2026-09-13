@@ -844,6 +844,20 @@ window.GUOXUE_LESSONS = [
         subject: 'bayi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '60-ju-shang-bu-kuan',
+        num: '60',
+        title: '居上不宽，吾何以观之',
+        subtitle: '宽敬哀 · 礼之本在真情',
+        path: 'lessons/60-ju-shang-bu-kuan/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第二十六章（终章）精讲：子曰"居上不宽，为礼不敬，临丧不哀，吾何以观之哉？"——孔子从"居上、为礼、临丧"三事，指出宽厚、诚敬、真情乃礼的根本；若徒有其位、有其礼、有其事而无其心，则"吾何以观之哉"。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'bayi',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
 ];
