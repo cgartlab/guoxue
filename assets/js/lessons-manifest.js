@@ -788,6 +788,20 @@ window.GUOXUE_LESSONS = [
         subject: 'bayi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '56-guan-zhong-zhi-qi-xiao',
+        num: '56',
+        title: '管仲之器小哉',
+        subtitle: '三归反坫 · 器小不知礼',
+        path: 'lessons/56-guan-zhong-zhi-qi-xiao/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第二十二章精讲：子曰"管仲之器小哉"，或曰"管仲俭乎"，孔子以"三归""官事不摄"答其不俭，又以"树塞门""反坫"论其不知礼，终言"管氏而知礼，孰不知礼"。孔子既肯定管仲之功，又批评其奢华与僭越——不以功业掩盖德行与礼制之失。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'bayi',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
 ];
