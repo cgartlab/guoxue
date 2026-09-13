@@ -830,6 +830,20 @@ window.GUOXUE_LESSONS = [
         subject: 'bayi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '59-zi-wei-shao-wu',
+        num: '59',
+        title: '尽善尽美',
+        subtitle: '韶武之评 · 美善相成',
+        path: 'lessons/59-zi-wei-shao-wu/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第二十五章精讲：子谓《韶》"尽美矣，又尽善也"，谓《武》"尽美矣，未尽善也"——孔子评论虞舜之乐《韶》与周武王之乐《武》，提出"美"与"善"两个尺度：形式之美与内容之善，二者兼备方为"尽善尽美"，是中国美学"美善统一"的经典表述。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'bayi',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
 ];
