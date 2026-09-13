@@ -17,7 +17,7 @@ const fs = require('fs');
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const PORT = 7891;
 const BASE = `http://localhost:${PORT}`;
-const PAID_LESSON = '/lessons/06-zengzi-sansheng/index.html';
+const PAID_LESSON = '/lessons/07-zengzi-sansheng/index.html';
 const FREE_LESSON = '/lessons/01-lunyu/index.html';
 const PRODUCT_URL = 'https://mbd.pub/o/bread/YZaVlJ5rag==';
 const DEFAULT_API = 'https://pay.8023laozhanshi.cc/api/redeem';
