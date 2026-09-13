@@ -774,6 +774,20 @@ window.GUOXUE_LESSONS = [
         subject: 'bayi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '55-ai-gong-wen-she',
+        num: '55',
+        title: '成事不说，既往不咎',
+        subtitle: '哀公问社 · 夫子之叹',
+        path: 'lessons/55-ai-gong-wen-she/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第二十一章精讲：哀公问社于宰我，宰我对曰"夏后氏以松，殷人以柏，周人以栗，曰使民战栗"；子闻之曰"成事不说，遂事不谏，既往不咎"——由一场"社主"之问，见言语之当慎，亦见夫子对既往之事的通达与宽容，留下成语"既往不咎"。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'bayi',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
 ];
