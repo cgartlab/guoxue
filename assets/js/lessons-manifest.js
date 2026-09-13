@@ -816,6 +816,20 @@ window.GUOXUE_LESSONS = [
         subject: 'bayi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '58-yi-feng-ren-qing-jian',
+        num: '58',
+        title: '天将以夫子为木铎',
+        subtitle: '仪封人请见 · 木铎警世',
+        path: 'lessons/58-yi-feng-ren-qing-jian/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·八佾》第二十四章精讲：仪封人请见，曰"君子之至于斯也，吾未尝不得见也"，从者见之，出曰"二三子何患于丧乎？天下之无道也久矣，天将以夫子为木铎"——仪地封人一见孔子便许之以"木铎"，道出孔子警世传道、教化天下的使命。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'bayi',
+        tier: 'core',
+        featured: false
     }
     // ----- 在此下方添加新课程 -----
 ];
