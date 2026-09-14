@@ -28,8 +28,10 @@
     --ds-color-olive-900: oklch(16% 0.035 115);
     --ds-color-success: oklch(55% 0.1 145);
     --ds-color-success-bg: oklch(95% 0.03 145);
+    --ds-color-success-border: oklch(80% 0.04 145);
     --ds-color-error: oklch(50% 0.14 30);
     --ds-color-error-bg: oklch(95% 0.03 30);
+    --ds-color-error-border: oklch(80% 0.04 30);
     --ds-color-warning: oklch(65% 0.1 85);
     --ds-color-warning-bg: oklch(95% 0.04 85);
     --ds-color-info: oklch(55% 0.12 240);
@@ -39,6 +41,7 @@
     --ds-color-wechat-hover: #06AD56;
 
     /* ===== 字体 ===== */
+    --ds-text-caption: 0.9rem;
     --ds-font-display: "Iowan Old Style","Charter","Georgia","Noto Serif SC",serif;
     --ds-font-body: "Noto Sans SC",-apple-system,system-ui,sans-serif;
     --ds-font-mono: "JetBrains Mono","IBM Plex Mono",monospace;
@@ -56,6 +59,11 @@
 
     /* ===== 交互态 ===== */
     --ds-color-bg-hover: oklch(92% 0.01 80);
+    --ds-color-navbar-bg: oklch(99% 0.005 80 / 0.92);
+    --ds-color-navbar-global-bg: oklch(99% 0.005 80 / 0.95);
+    --ds-color-toolbar-bg: oklch(98% 0.01 80 / 0.95);
+    --ds-color-olive-dark-gradient-end: oklch(98% 0.015 115);
+    --ds-color-olive-dark-border: oklch(92% 0.02 115 / 0.5);
 
     /* ===== 阴影 ===== */
     --ds-shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.06);
@@ -274,7 +282,7 @@ a { color: inherit; text-decoration: none; }
     gap: var(--ds-space-2);
     height: 48px;
     padding: 0 var(--ds-space-6);
-    background: oklch(99% 0.005 80 / 0.95);
+    background: var(--ds-color-navbar-global-bg);
     backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--ds-color-border);
     position: fixed;
@@ -292,7 +300,7 @@ a { color: inherit; text-decoration: none; }
     gap: var(--ds-space-2);
     height: 48px;
     padding: 0 var(--ds-space-4);
-    background: oklch(98% 0.01 80 / 0.95);
+    background: var(--ds-color-toolbar-bg);
     border-bottom: 1px solid var(--ds-color-border);
     position: fixed;
     top: 48px; left: 0; right: 0;
@@ -610,13 +618,13 @@ a { color: inherit; text-decoration: none; }
     border-left: 4px solid var(--ds-accent);
     padding: var(--ds-space-5) var(--ds-space-6);
     margin: var(--ds-space-6) 0;
-    background: linear-gradient(135deg, var(--ds-color-olive-50) 0%, oklch(98% 0.015 115) 100%);
+    background: linear-gradient(135deg, var(--ds-color-olive-50) 0%, var(--ds-color-olive-dark-gradient-end) 100%);
     border-radius: 0 var(--ds-radius-xl) var(--ds-radius-xl) 0;
     font-family: var(--ds-font-display);
     font-size: 1.125rem; line-height: 1.75;
     color: var(--ds-color-olive-800);
     font-style: italic; position: relative;
-    box-shadow: inset 0 0 0 1px oklch(92% 0.02 115 / 0.5);
+    box-shadow: inset 0 0 0 1px var(--ds-color-olive-dark-border);
 }
 .ds-quote::before {
     content: '\201C';
@@ -1325,6 +1333,8 @@ a { color: inherit; text-decoration: none; }
         --ds-color-success-bg: oklch(25% 0.03 145);
         --ds-color-error: oklch(65% 0.14 30);
         --ds-color-error-bg: oklch(25% 0.03 30);
+        --ds-color-success-border: oklch(40% 0.06 145);
+        --ds-color-error-border: oklch(40% 0.06 30);
         --ds-color-warning: oklch(75% 0.1 85);
         --ds-color-warning-bg: oklch(25% 0.03 85);
         --ds-color-info: oklch(65% 0.12 240);
@@ -1333,6 +1343,11 @@ a { color: inherit; text-decoration: none; }
         --ds-color-wechat: #07C160;
         --ds-color-wechat-hover: #12D66F;
         --ds-color-bg-hover: oklch(20% 0.02 80);
+        --ds-color-navbar-bg: oklch(18% 0.02 80 / 0.92);
+        --ds-color-navbar-global-bg: oklch(18% 0.02 80 / 0.95);
+        --ds-color-toolbar-bg: oklch(20% 0.02 80 / 0.95);
+        --ds-color-olive-dark-gradient-end: oklch(20% 0.02 115);
+        --ds-color-olive-dark-border: oklch(30% 0.03 115 / 0.5);
     }
     .cover-slide, .end-slide {
         background: linear-gradient(135deg, oklch(15% 0.02 80) 0%, oklch(22% 0.02 80) 100%);
@@ -1344,9 +1359,9 @@ a { color: inherit; text-decoration: none; }
     }
 
     /* ===== Dark mode: fix hardcoded backgrounds (wasn't using CSS variables) ===== */
-    .ds-navbar { background: oklch(18% 0.02 80 / 0.92); }
-    .ds-navbar--global { background: oklch(18% 0.02 80 / 0.95); }
-    .ds-toolbar { background: oklch(20% 0.02 80 / 0.95); }
+    .ds-navbar { background: var(--ds-color-navbar-bg); }
+    .ds-navbar--global { background: var(--ds-color-navbar-global-bg); }
+    .ds-toolbar { background: var(--ds-color-toolbar-bg); }
     .ds-caption { background: oklch(22% 0.02 80); }
 
     /* mobile dropdown menu */
@@ -1355,11 +1370,11 @@ a { color: inherit; text-decoration: none; }
 
     /* ===== Dark mode: fix hardcoded quote/border colors ===== */
     .ds-quote {
-        background: linear-gradient(135deg, var(--ds-color-olive-50) 0%, oklch(20% 0.02 115) 100%);
-        box-shadow: inset 0 0 0 1px oklch(30% 0.03 115 / 0.5);
+        background: linear-gradient(135deg, var(--ds-color-olive-50) 0%, var(--ds-color-olive-dark-gradient-end) 100%);
+        box-shadow: inset 0 0 0 1px var(--ds-color-olive-dark-border);
     }
-    .quiz-explain.correct-exp { border-color: oklch(40% 0.06 145); }
-    .quiz-explain.wrong-exp { border-color: oklch(40% 0.06 30); }
+    .quiz-explain.correct-exp { border-color: var(--ds-color-success-border); }
+    .quiz-explain.wrong-exp { border-color: var(--ds-color-error-border); }
 
     /* ===== Dark mode: visual quality tweaks ===== */
     .ink-dot { opacity: 0.12; }
@@ -1568,8 +1583,8 @@ a { color: inherit; text-decoration: none; }
     margin-left: auto; margin-right: auto;
 }
 .quiz-explain.show { display: block; }
-.quiz-explain.correct-exp { background: var(--ds-color-success-bg); border: 1px solid oklch(80% 0.04 145); }
-.quiz-explain.wrong-exp { background: var(--ds-color-error-bg); border: 1px solid oklch(80% 0.04 30); }
+.quiz-explain.correct-exp { background: var(--ds-color-success-bg); border: 1px solid var(--ds-color-success-border); }
+.quiz-explain.wrong-exp { background: var(--ds-color-error-bg); border: 1px solid var(--ds-color-error-border); }
 @keyframes fadeUp {
     from { opacity: 0; transform: translateY(8px); }
     to { opacity: 1; transform: translateY(0); }
