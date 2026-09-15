@@ -230,6 +230,26 @@
       opacity: 0.7;
     }
 
+    /* ===== 通知 ===== */
+    .notification {
+      position: fixed;
+      right: var(--ds-space-4);
+      bottom: var(--ds-space-4);
+      padding: var(--ds-space-3) var(--ds-space-4);
+      background: var(--ds-color-surface);
+      color: var(--ds-color-fg-strong);
+      border: 1px solid var(--ds-color-border);
+      border-radius: var(--ds-radius-md);
+      box-shadow: var(--ds-shadow-md);
+      font-size: 0.875rem;
+      max-width: 90vw;
+    }
+
+    .notification.error {
+      border-color: var(--ds-color-error);
+      color: var(--ds-color-error);
+    }
+
     /* ===== 空状态 ===== */
     .empty-state {
       text-align: center;
@@ -309,13 +329,13 @@
     </div>
 
     <!-- 选项卡 -->
-    <div class="tabs">
-      <button class="tab active" onclick="switchTab('notes', event)">📝 笔记</button>
-      <button class="tab" onclick="switchTab('bookmarks', event)">🔖 书签</button>
+    <div class="tabs" role="tablist" aria-label="笔记和书签切换">
+      <button class="tab active" type="button" data-tab="notes" role="tab" aria-selected="true" aria-controls="notes-tab">📝 笔记</button>
+      <button class="tab" type="button" data-tab="bookmarks" role="tab" aria-selected="false" aria-controls="bookmarks-tab">🔖 书签</button>
     </div>
 
     <!-- 笔记标签页 -->
-    <div id="notes-tab" class="tab-content">
+    <div id="notes-tab" class="tab-content" role="tabpanel">
       <div class="course-selector">
         <label for="notes-course-select">筛选课程：</label>
         <select id="notes-course-select" onchange="filterNotes()">
@@ -329,7 +349,7 @@
     </div>
 
     <!-- 书签标签页 -->
-    <div id="bookmarks-tab" class="tab-content" hidden>
+    <div id="bookmarks-tab" class="tab-content" role="tabpanel" hidden>
       <div class="course-selector">
         <label for="bookmarks-course-select">筛选课程：</label>
         <select id="bookmarks-course-select" onchange="filterBookmarks()">
@@ -352,8 +372,7 @@
 
   <script>
     // 从 manifest 动态构建课程映射
-    const COURSES = {};
-    (window.GUOXUE_LESSONS || []).forEach(l => { COURSES[l.id] = l.title; })
+    const COURSES = Object.fromEntries((window.GUOXUE_LESSONS || []).map(l => [l.id, l.title]))
 
     let allNotes = []
     let allBookmarks = []
@@ -364,19 +383,23 @@
     function switchTab(tabName, event) {
       // 隐藏所有标签页
       document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.hidden = true
         tab.style.display = 'none'
       })
 
       // 移除所有活跃状态
       document.querySelectorAll('.tab').forEach(tab => {
         tab.classList.remove('active')
+        tab.setAttribute('aria-selected', 'false')
       })
 
       // 显示选中的标签页
+      document.getElementById(tabName + '-tab').hidden = false
       document.getElementById(tabName + '-tab').style.display = 'block'
 
       // 标记选中的标签为活跃
-      event.target.classList.add('active')
+      document.querySelector(`.tab[data-tab="${tabName}"]`)?.classList.add('active')
+      document.querySelector(`.tab[data-tab="${tabName}"]`)?.setAttribute('aria-selected', 'true')
 
       // 加载数据
       if (tabName === 'notes') {
@@ -466,7 +489,7 @@
                   </div>
                 </div>
                 <div class="note-actions">
-                  <button class="note-action-btn" onclick="deleteNote('${note.id}')" title="删除">🗑️</button>
+                  <button class="note-action-btn" type="button" data-note-id="${note.id}" aria-label="删除笔记" title="删除">🗑️</button>
                 </div>
               </div>
               <div class="note-body">${escapeHtml(note.content || '')}</div>
@@ -494,13 +517,13 @@
         if (success) {
           allNotes = allNotes.filter(n => n.id !== noteId)
           renderNotes()
-          alert('✅ 笔记已删除')
+          showNotification('笔记已删除')
         } else {
           throw new Error('删除失败')
         }
       } catch (err) {
         console.error('删除笔记失败:', err)
-        alert('❌ 删除失败: ' + err.message)
+        showNotification('删除失败: ' + err.message, 'error')
       }
     }
 
@@ -590,7 +613,7 @@
               </div>
               <div class="bookmark-actions">
                 <div class="bookmark-icon">🔖</div>
-                <button class="delete-btn" onclick="removeBookmark('${bookmark.course_id}', ${bookmark.page})" title="删除书签">✕</button>
+                <button class="delete-btn" type="button" data-bookmark-course="${bookmark.course_id}" data-bookmark-page="${bookmark.page}" aria-label="删除书签" title="删除书签">✕</button>
               </div>
             </div>
           `).join('')}
@@ -616,14 +639,26 @@
         if (success) {
           allBookmarks = allBookmarks.filter(b => !(b.course_id === courseId && b.page === page))
           renderBookmarks()
-          alert('✅ 书签已删除')
+          showNotification('书签已删除')
         } else {
           throw new Error('删除失败')
         }
       } catch (err) {
         console.error('删除书签失败:', err)
-        alert('❌ 删除失败: ' + err.message)
+        showNotification('删除失败: ' + err.message, 'error')
       }
+    }
+
+    /**
+     * 页面内通知
+     */
+    function showNotification(message, type = 'info') {
+      const notification = document.createElement('div')
+      notification.className = `notification ${type}`
+      notification.role = 'alert'
+      notification.textContent = message
+      document.body.appendChild(notification)
+      setTimeout(() => notification.remove(), 5000)
     }
 
     /**
@@ -635,6 +670,7 @@
         '<': '&lt;',
         '>': '&gt;',
         '"': '&quot;',
+        "'": '&#x27;',
         "'": '&#039;'
       }
       return text.replace(/[&<>"']/g, m => map[m])
@@ -647,7 +683,7 @@
       try {
         // 检查登录
         if (!AUTH || !AUTH.isLoggedIn()) {
-          window.location.href = 'index.html'
+          window.location.href = new URL('index.html', window.location.origin).href
           return
         }
 
@@ -666,7 +702,7 @@
         loadNotes()
       } catch (err) {
         console.error('初始化失败:', err)
-        alert('⚠️ 初始化失败: ' + err.message)
+        showNotification('初始化失败: ' + err.message, 'error')
       }
     }
 
@@ -676,6 +712,23 @@
     } else {
       setTimeout(init, 500)
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('.tabs')?.addEventListener('click', event => {
+        const tab = event.target.closest('.tab')
+        if (tab) switchTab(tab.dataset.tab, event)
+      })
+
+      document.getElementById('notes-container')?.addEventListener('click', event => {
+        const deleteBtn = event.target.closest('[data-note-id]')
+        if (deleteBtn) deleteNote(deleteBtn.dataset.noteId)
+      })
+
+      document.getElementById('bookmarks-container')?.addEventListener('click', event => {
+        const deleteBtn = event.target.closest('[data-bookmark-course]')
+        if (deleteBtn) removeBookmark(deleteBtn.dataset.bookmarkCourse, Number(deleteBtn.dataset.bookmarkPage))
+      })
+    })
   </script>
 </body>
 </html>
