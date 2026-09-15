@@ -11,17 +11,17 @@
 ## ✨ 当前内容
 
 * 🏠 **首页**(`index.html`)— 课程目录、门类筛选、关键词搜索
-* 📖 **课程库**(`lessons/`)— **47 门**已上线课件,按 **5 大门类**组织:
+* 📖 **课程库**(`lessons/`)— **69 门**已上线课件,按 **5 大门类**组织:
 
   | 门类 | key | 课程数 | 说明 |
   |------|-----|:---:|------|
   | 导论 | `daolun` | 2 | 《论语》总述(01)与混合拓展版(02) |
-  | 学而 | `xueer` | 14 | 《论语·学而篇》各章精讲(04–17) |
-  | 为政 | `weizheng` | 17 | 《论语·为政篇》各章精讲(18–34) |
-  | 八佾 | `bayi` | 13 | 《论语·八佾篇》各章精讲(35–47) |
+  | 学而 | `xueer` | 16 | 《论语·学而篇》各章精讲(04–19) |
+  | 为政 | `weizheng` | 24 | 《论语·为政篇》各章精讲(20–43) |
+  | 八佾 | `bayi` | 26 | 《论语·八佾篇》各章精讲(44–69) |
   | 蒙学 | `mengxue` | 1 | 《三字经》国学启蒙(03) |
 
-  课程目录编号为 `01`–`47`,目录名形如 `NN-slug`(例如 `01-lunyu`、`47-wang-sun-jia-wen`)。
+  课程目录编号为 `01`–`69`,目录名形如 `NN-slug`(例如 `01-lunyu`、`69-ju-shang-bu-kuan`)。
 * 👩‍🏫 **关于本站**(`about.html`)— 教师寄语、教学理念
 * 🎓 **空白课程模板**(`lessons/_template.html`)— 复制即可新建一门课
 
@@ -47,46 +47,49 @@ guoxue/
 │   │   ├── lessons-manifest.js      ← 课程目录清单(添加新课要改这里)
 │   │   ├── slide-engine.js          ← 课件引擎(切页/答题/全屏/触屏)
 │   │   ├── homepage.js              ← 首页目录、门类筛选与移动端序号条
+│   │   ├── unlock.js                ← 付费解锁状态与 paywall UI
 │   │   ├── navbar.js                ← 顶栏导航
 │   │   └── auth.js / auth-email.js / api-client.js  ← 认证与云端数据
 │   └── img/
 │       └── favicon.svg
-├── lessons/                         ← 所有课程放这里(47 门)
+├── lessons/                         ← 所有课程放这里(69 门)
 │   ├── _template.html               ← 空白课程模板
 │   ├── 01-lunyu/
 │   │   └── index.html               ← 《论语》国学问答
 │   ├── 03-sanzijing/
 │   │   └── index.html               ← 《三字经》国学启蒙
-│   ├── 47-wang-sun-jia-wen/
-│   │   └── index.html               ← 王孙贾问曰
-│   └── ...                          ← 其余 44 门课程(编号 02、04–46)
+│   ├── 69-ju-shang-bu-kuan/
+│   │   └── index.html               ← 居上不宽，吾何以观之
+│   └── ...                          ← 其余 66 门课程(编号 02、04–68)
 ├── scripts/
 │   └── cache-bust.js                ← 给资源 URL 注入 ?v=<git-hash>
+├── pay-worker/                      ← 面包多订单号验单 Cloudflare Worker
 ├── supabase/                        ← 数据库 schema / RLS / 测试页
 └── tests/
-    └── homepage.spec.js             ← Playwright 端到端测试
+    ├── homepage.spec.js             ← 首页 Playwright 端到端测试
+    └── paywall.spec.js              ← 付费解锁 Playwright 端到端测试
 ```
 
 ---
 
 ## 🚀 三步法:添加一门新课
 
-> 假设你想加一门《弟子规》课程,编号接在现有 47 门之后,即 `48`。
+> 假设你想加一门《弟子规》课程,编号接在现有 69 门之后,即 `70`。
 
 ### 步骤 1 · 复制模板
 
-打开 `lessons/` 文件夹,把 `_template.html` 复制为 `48-dizigui/index.html`。
+打开 `lessons/` 文件夹,把 `_template.html` 复制为 `70-dizigui/index.html`。
 
 ```
 lessons/
 ├── _template.html          (不动)
 ├── 01-lunyu/index.html     (已有)
-└── 48-dizigui/index.html   (新)
+└── 70-dizigui/index.html   (新)
 ```
 
 ### 步骤 2 · 编辑新课程内容
 
-用任意文本编辑器(记事本、VS Code、Sublime 都行)打开 `lessons/48-dizigui/index.html`:
+用任意文本编辑器(记事本、VS Code、Sublime 都行)打开 `lessons/70-dizigui/index.html`:
 
 | 找什么 | 改成什么 |
 | - | - |
@@ -114,11 +117,11 @@ lessons/
 
 ```javascript
 {
-    id: '48-dizigui',
-    num: '48',                        // 两位序号,显示在卡片左上角
+    id: '70-dizigui',
+    num: '70',                        // 两位序号,显示在卡片左上角
     title: '《弟子规》全篇精讲',
     subtitle: '童蒙养正 · 循序致善',
-    path: 'lessons/48-dizigui/index.html',
+    path: 'lessons/70-dizigui/index.html',
     grade: '小学低年级',
     description: '从"首孝悌"到"泛爱众",在朗朗书声中养成好习惯。',
     status: 'ready',                  // 'ready' 已上线; 'coming' 即将上线(显示为灰色)
@@ -170,35 +173,13 @@ npx playwright test    # 运行全部测试(勿用 npm test)
 
 ---
 
-## 🌐 部署到 GitHub Pages
+## 🌐 部署
 
-### 一次性设置(5 分钟)
+本站已启用 GitHub Actions 自动部署（`.github/workflows/deploy.yml`）：
 
-1. **注册 GitHub 账号**(若没有):[https://github.com](https://github.com)
-2. **新建仓库**:
-
-   * 名称填 `guoxue`(或你喜欢的名字,后面 URL 会用到)
-   * 类型选 `Public`
-   * **不要**勾选 "Add a README file"(我们已有 README)
-3. **推送代码**:
-
-```bash
-   cd D:\2-Area\github-repos\guoxue
-   git init
-   git add .
-   git commit -m "feat: 初始化国学课堂网站"
-   git branch -M main
-   git remote add origin https://github.com/你的用户名/guoxue.git
-   git push -u origin main
-   ```
-
-4. **开启 Pages**:
-
-   * 进入仓库 → `Settings` → 左侧 `Pages`
-   * `Source` 选 `Deploy from a branch`
-   * `Branch` 选 `main` / `(root)`
-   * 点 `Save`
-5. **等 1-2 分钟**,访问 `https://你的用户名.github.io/guoxue/` 即可
+1. 推送 `main` → Actions 运行 `node scripts/cache-bust.js`（给资源加 `?v=<hash>`）→ 上传 artifact → GitHub Pages
+2. 仓库根 `CNAME` = `guoxue.8023laozhanshi.cc`；该子域 DNS 为 **CNAME → `cgartlab.github.io`（灰云直连）**，勿改回 Cloudflare Tunnel/本地 nginx
+3. 访问 `https://guoxue.8023laozhanshi.cc/`（或 `https://cgartlab.github.io/guoxue/`，会自动跳转）
 
 > 本仓库已配置 `.github/workflows/deploy.yml`:推送到 `main` 后会自动执行 cache-bust 并部署。
 
@@ -210,7 +191,9 @@ git commit -m "feat: 新增《弟子规》课程"
 git push
 ```
 
-推送后,GitHub Pages 会在 1-2 分钟内自动重新部署。
+推送后约 1-2 分钟自动重新部署。
+
+> ⚠️ 登录（Casdoor/邮箱码）、dashboard、notes、进度/成绩云同步当前不可用——GitHub Pages 无法反代 `/casdoor` 与 `/api`。恢复方案见 AGENTS.md「登录/云功能状态」。课程浏览与本地进度（localStorage）不受影响。
 
 ---
 

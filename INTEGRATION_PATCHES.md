@@ -1,3 +1,5 @@
+> ⚠️ **历史文档（已废弃）**：本文档为早期 Supabase 集成阶段的记录，当前方案已迁移至自建 API（`api/` + `api-client.js`）。仅作历史参考。
+
 # 国学课堂 Supabase 集成补丁
 
 > ⚠️ **历史快照说明**:本文档记录的是项目早期的 Supabase 集成补丁。当前实现已改为自建 API——`assets/js/api-client.js`(替代原 `supabase-client.js`,保持 `window.SUPABASE` 接口)。文中课程 id 示例已按当前 **47 门新编号** 更新。
