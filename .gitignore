@@ -29,3 +29,10 @@ test-results/
 .opencode/
 supabase-client.js
 auth-supabase-patch.js
+
+# Local scratch / one-off files (不纳入版本控制)
+tmp_*
+.git-upload-*
+deploy_*.ps1
+.trash/
+.playwright/

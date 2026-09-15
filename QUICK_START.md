@@ -1,5 +1,7 @@
 # 国学课堂 Supabase 集成 - 快速开始指南
 
+> ⚠️ **历史快照说明**:本文档记录的是项目早期的 Supabase 集成方案。当前实现已改为自建 API——`assets/js/api-client.js`(替代原 `supabase-client.js`,保持 `window.SUPABASE` 接口,指向 `https://guoxue.8023laozhanshi.cc`),`supabase/*.sql` 仅作历史存档。文中课程 id 示例已按当前 **47 门新编号** 更新。
+
 ⏱️ **预计时间**: 15 分钟
 
 ---
@@ -33,8 +35,8 @@ git clone https://github.com/cgartlab/guoxue.git
 cd guoxue
 
 # 1. 检查这些文件是否存在：
-ls assets/js/supabase-client.js       # ✅ 应该存在
-ls assets/js/auth-supabase-patch.js   # ✅ 应该存在
+ls assets/js/api-client.js            # ✅ 应该存在（当前 API 客户端）
+ls assets/js/auth.js                  # ✅ 应该存在
 ls dashboard.html                     # ✅ 应该存在
 ls notes.html                         # ✅ 应该存在
 
@@ -116,11 +118,11 @@ https://cgartlab.github.io/guoxue/supabase/test-integration.html
 - `supabase/02-rls.sql` - 配置安全策略
 
 ### 前端代码
-- `assets/js/supabase-client.js` - Supabase API 客户端（950+ 行）
-- `assets/js/auth-supabase-patch.js` - 自动同步用户
+- `assets/js/api-client.js` - 当前 API 客户端（替代原 `assets/js/supabase-client.js`，保持 `window.SUPABASE` 接口）
+- `assets/js/auth.js` / `assets/js/auth-email.js` - 认证与登录
 - `dashboard.html` - 学生个人面板
 - `notes.html` - 笔记和书签管理
-- `supabase/test-integration.html` - 测试工具
+- `supabase/test-integration.html` - 历史测试工具（原 Supabase 集成）
 
 ### 文档
 - `SUPABASE_INTEGRATION_COMPLETE.md` - 完整文档
@@ -256,7 +258,7 @@ SELECT AVG(score) FROM quiz_scores;
 ### 调试日志
 
 ```javascript
-// 在 supabase-client.js 中启用详细日志
+// 在 assets/js/api-client.js 中启用详细日志
 // 搜索 console.log 并取消注释
 
 // 或在控制台中：
