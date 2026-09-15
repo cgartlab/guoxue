@@ -18,6 +18,15 @@
     /* ===== 课程配置(从 HTML 自动探测) ===== */
     var courseId = window.GUOXUE_COURSE_ID || document.title.replace(/[^a-z0-9]/gi, '_').toLowerCase().slice(0, 32);
 
+    /* ===== 付费墙检查 ===== */
+    if (typeof window.UNLOCK !== 'undefined' && !window.UNLOCK.isUnlocked() && !window.UNLOCK.isCourseFree(courseId)) {
+        // 课程需要付费，显示付费弹窗
+        document.addEventListener('DOMContentLoaded', function () {
+            window.UNLOCK.showPaywall();
+        });
+        return; // 阻止 slide engine 初始化
+    }
+
     /* ===== 默认测验数据 ===== */
     var DEFAULT_QUIZ = [
         { q: '"学而时习之,不亦说乎?"这句话出自哪部经典著作?', opts: ['《道德经》', '《论语》', '《诗经》'], ans: 1, exp: '出自《论语·学而》,是论语开篇第一句。"说"同"悦",意思是愉快。整句意思是:学了知识并经常复习,不也很愉快吗?' },
@@ -32,9 +41,30 @@
         { q: '《论语》一共由多少篇组成?', opts: ['10 篇', '20 篇', '30 篇'], ans: 1, exp: '《论语》共 20 篇,492 章。每篇篇名取自开头第一句话中的两个字,如"学而""为政"等。' }
     ];
 
-    var quizData = Array.isArray(window.GUOXUE_QUIZ_OVERRIDE) && window.GUOXUE_QUIZ_OVERRIDE.length > 0
+    var rawQuiz = Array.isArray(window.GUOXUE_QUIZ_OVERRIDE) && window.GUOXUE_QUIZ_OVERRIDE.length > 0
         ? window.GUOXUE_QUIZ_OVERRIDE
         : DEFAULT_QUIZ;
+
+    /* ===== 随机打乱每题选项顺序 =====
+     * 原先大量题目的正确答案固定在第二个选项(ans:1)。此处每次加载页面,
+     * 对每题的选项做洗牌,并把正确答案索引重映射到新位置,避免位置被猜中。
+     */
+    function shuffleOptions(item) {
+        var order = [];
+        for (var k = 0; k < item.opts.length; k++) order.push(k);
+        for (var i = order.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = order[i]; order[i] = order[j]; order[j] = tmp;
+        }
+        return {
+            q: item.q,
+            exp: item.exp,
+            opts: order.map(function (o) { return item.opts[o]; }),
+            ans: order.indexOf(item.ans)
+        };
+    }
+
+    var quizData = rawQuiz.map(shuffleOptions);
 
     var quizCount = quizData.length;
 

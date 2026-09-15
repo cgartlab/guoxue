@@ -60,33 +60,40 @@
   function buildCardHTML(lesson) {
     var isComing = lesson.status === 'coming';
     var gradeBadge = '<span class="lesson-grade">' + esc(lesson.grade || '') + '</span>';
-    var iconDiv    = '<div class="lesson-icon">' + esc(lesson.icon || '📚') + '</div>';
+    var iconDiv    = '<div class="lesson-num">' + esc(lesson.num || '') + '</div>';
     var titleEl    = '<h3 class="lesson-title">' + esc(lesson.title || '') + '</h3>';
     var subtitleEl = '<p class="lesson-subtitle">' + esc(lesson.subtitle || '') + '</p>';
     if (lesson.duration) {
       subtitleEl += ' · ' + esc(lesson.duration);
     }
-    var descEl     = '<p class="lesson-desc" style="margin-bottom:var(--ds-space-5)">' + esc(lesson.description || '') + '</p>';
+    var descEl     = '<p class="lesson-desc">' + esc(lesson.description || '') + '</p>';
     var ctaText    = isComing ? '即将上线' : '开始学习';
     var arrowText  = isComing ? '' : ' →';
     var ctaEl      = '<div class="lesson-cta"><span>' + esc(ctaText) + '</span><span class="arrow">' + esc(arrowText) + '</span></div>';
     var overlay    = '';
     if (isComing) {
-      overlay = '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:700;color:var(--ds-color-muted);background:oklch(100% 0 0 / 0.7);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);border-radius:var(--ds-radius-2xl);z-index:2;pointer-events:none;letter-spacing:0.1em;">即将上线</div>';
+      overlay = '<div class="ds-lesson-card__overlay-coming">即将上线</div>';
     }
-    return '<a class="ds-lesson-card" href="' + esc(lesson.path) + '"' +
-           (isComing ? ' style="pointer-events:none;opacity:0.5;"' : '') + '>' +
-           iconDiv + gradeBadge + titleEl + subtitleEl + descEl + ctaEl + overlay +
+    // 免费/付费角标
+    var badge = '';
+    if (!isComing && typeof window.UNLOCK !== 'undefined') {
+      var isFree = window.UNLOCK.isCourseFree(lesson.id);
+      badge = isFree
+        ? '<span class="lesson-badge lesson-badge--free">免费</span>'
+        : '<span class="lesson-badge lesson-badge--paid">¥9.90</span>';
+    }
+    return '<a class="ds-lesson-card' + (isComing ? ' ds-lesson-card--coming' : '') + '" href="' + esc(lesson.path) + '">' +
+           badge + iconDiv + gradeBadge + titleEl + subtitleEl + descEl + ctaEl + overlay +
            '</a>';
   }
 
   function buildComingSoonCardHTML(lesson) {
-    return '<div class="ds-lesson-card" style="opacity:0.5;pointer-events:none;cursor:not-allowed;">' +
-           '<div class="lesson-icon">' + esc(lesson.icon || '📚') + '</div>' +
+    return '<div class="ds-lesson-card ds-lesson-card--coming">' +
+           '<div class="lesson-num">' + esc(lesson.num || '') + '</div>' +
            '<span class="lesson-grade">' + esc(lesson.grade || '') + '</span>' +
            '<h3 class="lesson-title">' + esc(lesson.title || '') + '</h3>' +
            '<p class="lesson-subtitle">' + esc(lesson.subtitle || '') + '</p>' +
-           '<p class="lesson-desc" style="margin-bottom:var(--ds-space-5)">' + esc(lesson.description || '') + '</p>' +
+           '<p class="lesson-desc">' + esc(lesson.description || '') + '</p>' +
            '<div class="lesson-cta"><span>敬请期待</span></div>' +
            '</div>';
   }
@@ -103,6 +110,41 @@
                '<div class="series-stat"><span class="series-stat__value">' + comingCount + '</span><span class="series-stat__label">筹备中</span></div>' +
                '<div class="series-stat"><span class="series-stat__value">' + catCount + '</span><span class="series-stat__label">学科门类</span></div>' +
                '</div>';
+    container.innerHTML = html;
+  }
+
+  /* ===== 渲染:移动端顶部目录条 =====
+   * 仅移动端(<768px)显示：按门类分组，组内按课程序号升序排列，
+   * 呈"一本目录"形态（门类标题 → 该门类下各章序号 chip）。
+   * 整条横向可滑动，置于导航栏下方、sticky 于顶部；点击 chip 跳转课程页。
+   */
+  function renderMobileNumStrip(container) {
+    if (!container) return;
+    var groups = buildSidebarGroups();
+    var html = '';
+
+    groups.forEach(function (g) {
+      var cat = g.category;
+      var ready = g.readyLessons.slice().sort(function (a, b) {
+        return (a.num || '').localeCompare(b.num || '0');
+      });
+      if (!ready.length) return; // 只展示有已上线课程的门类
+
+      html += '<div class="home-numstrip__group">';
+      html += '<span class="home-numstrip__label">' + esc(cat.label) + '</span>';
+
+      ready.forEach(function (l) {
+        var label = (l.num || '') + ' ' + (l.title || '');
+        html += '<a class="home-numstrip__chip" href="' + esc(l.path) + '" ' +
+                'title="' + esc(label) + '" ' +
+                'aria-label="' + esc(label) + '">' +
+                esc(l.num || '') +
+                '</a>';
+      });
+
+      html += '</div>';
+    });
+
     container.innerHTML = html;
   }
 
@@ -138,7 +180,7 @@
       html += '<div class="' + groupClass + '">';
       // 门类标题行 — 可点击折叠/展开
       html += '<div class="home-sidebar__category-header" data-group-key="' + esc(cat.key) + '">';
-      html += '<span class="home-sidebar__category-icon">' + esc(cat.icon) + '</span>';
+      html += '<span class="home-sidebar__category-icon">' + esc(cat.num) + '</span>';
       html += '<span class="home-sidebar__category-label">' + esc(cat.label) + '</span>';
       html += (isComing ? '<span class="home-sidebar__badge--coming">敬请期待</span>' : '');
       html += '<span class="home-sidebar__chevron" aria-hidden="true">›</span>';
@@ -155,15 +197,14 @@
       // ready 课程
       g.readyLessons.forEach(function (l) {
         html += '<li><a class="home-sidebar__link home-sidebar__link--sub" href="' + esc(l.path) + '" data-subject="' + esc(cat.key) + '" data-action="navigate">';
-        html += esc(l.icon || '📚') + ' ' + esc(l.title);
+        html += esc(l.num) + ' ' + esc(l.title);
         html += '</a></li>';
       });
 
       // planned 课程
       g.plannedLessons.forEach(function (l) {
         html += '<li><a class="home-sidebar__link home-sidebar__link--sub home-sidebar__link--planned" href="#" data-subject="' + esc(cat.key) + '" data-action="navigate">';
-        html += esc(l.icon || '📚') + ' ' + esc(l.title);
-        html += '<span class="home-sidebar__badge--coming">⏳</span>';
+        html += esc(l.num) + ' ' + esc(l.title);
         html += '</a></li>';
       });
 
@@ -263,55 +304,8 @@
 
     });
 
-    // ===== 移动端：在导航栏中添加侧栏开关按钮 =====
-    (function addMobileToggle() {
-      if (window.innerWidth >= 768) return;
-      var existingToggle = document.getElementById('drawer-toggle');
-      if (existingToggle) return;
-      var navbarInner = document.querySelector('.ds-navbar__inner');
-      if (!navbarInner) return;
-      var toggleBtn = document.createElement('button');
-      toggleBtn.id = 'drawer-toggle';
-      toggleBtn.className = 'ds-btn-nav ds-btn-nav--icon';
-      toggleBtn.setAttribute('type', 'button');
-      toggleBtn.setAttribute('aria-label', '打开课程导航');
-      toggleBtn.setAttribute('aria-expanded', 'false');
-      toggleBtn.innerHTML = '<span class="ds-btn-nav__icon" aria-hidden="true">☰</span><span class="ds-btn-nav__text">目录</span>';
-      function toggleMobileSidebar(open) {
-        var sidebar = document.getElementById('sidebar-nav');
-        if (!sidebar) return;
-        var overlay = document.getElementById('sidebar-overlay');
-        if (open === undefined) {
-          sidebar.classList.toggle('is-open');
-        } else {
-          if (open) sidebar.classList.add('is-open');
-          else sidebar.classList.remove('is-open');
-        }
-        var isOpen = sidebar.classList.contains('is-open');
-        toggleBtn.setAttribute('aria-label', isOpen ? '关闭课程导航' : '打开课程导航');
-        toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        toggleBtn.innerHTML = isOpen
-          ? '<span class="ds-btn-nav__icon" aria-hidden="true">✕</span><span class="ds-btn-nav__text">收起</span>'
-          : '<span class="ds-btn-nav__icon" aria-hidden="true">☰</span><span class="ds-btn-nav__text">目录</span>';
-        // 遮罩层
-        if (!overlay) {
-          overlay = document.createElement('div');
-          overlay.id = 'sidebar-overlay';
-          overlay.className = 'sidebar-overlay';
-          overlay.addEventListener('click', function () { toggleMobileSidebar(false); });
-          document.body.appendChild(overlay);
-        }
-        overlay.classList.toggle('is-visible', isOpen);
-      }
-      toggleBtn.addEventListener('click', function () { toggleMobileSidebar(); });
-      // 插入到品牌链接后面
-      var brand = navbarInner.querySelector('.ds-btn-nav--brand');
-      if (brand && brand.nextSibling) {
-        navbarInner.insertBefore(toggleBtn, brand.nextSibling);
-      } else {
-        navbarInner.appendChild(toggleBtn);
-      }
-    })();
+    // 注：移动端侧栏抽屉与 #drawer-toggle 已移除（改为顶部横向「序号条」，
+    // 见 renderMobileNumStrip）。桌面端侧栏折叠按钮仍在 #drawer-close-btn。
 
     // 搜索过滤 (带防抖)
     var searchInput = document.getElementById('sidebar-search');
@@ -353,7 +347,7 @@
       el.textContent = '全部课程';
     } else {
       var cat = getCategoryByKey(subjectKey);
-      el.textContent = cat ? (cat.icon + ' ' + cat.label) : '全部课程';
+      el.textContent = cat ? (cat.num + ' ' + cat.label) : '全部课程';
     }
   }
 
@@ -392,10 +386,9 @@
       
       // 空课程列表友好提示
       if (filtered.length === 0) {
-        gridEl.innerHTML = '<div class=\"ds-empty-state\" role=\"status\" style=\"text-align:center;padding:var(--ds-space-12);color:var(--ds-color-muted);\">' +
-          '<div style=\"font-size:3rem;margin-bottom:var(--ds-space-4);\" aria-hidden=\"true\">📚</div>' +
+        gridEl.innerHTML = '<div class=\"ds-empty-state\" role=\"status\">' +
           '<p>暂无课程</p>' +
-          '<p style=\"font-size:0.875rem;margin-top:var(--ds-space-2);\">该门类课程正在筹备中，敬请期待。</p>' +
+          '<p class=\"ds-empty-state__hint\">该门类课程正在筹备中，敬请期待。</p>' +
           '</div>';
       } else {
         filtered.forEach(function (lesson) {
@@ -412,7 +405,7 @@
     var el = document.getElementById('coming-soon');
     if (!el) return;
     var html = '<div class="ds-coming-soon" role="status">' +
-               '<div class="ds-coming-soon__icon" aria-hidden="true">' + esc(cat.icon) + '</div>' +
+               '<div class="ds-coming-soon__icon" aria-hidden="true">' + esc(cat.num) + '</div>' +
                '<h3 class="ds-coming-soon__heading">' + esc(cat.label) + ' · 即将上线</h3>' +
                '<p class="ds-coming-soon__desc">' + esc(cat.description || '本门类课程正在筹备中,敬请期待。') + '</p>';
 
@@ -439,6 +432,7 @@
       opts = opts || {};
       renderSeriesCover(document.getElementById('series-cover-stats'));
       renderSidebar(opts.sidebarContainer || document.getElementById('sidebar-nav'));
+      renderMobileNumStrip(document.getElementById('home-numstrip'));
       renderCards('all');
     },
     refreshCards: function (subject) {
@@ -465,20 +459,14 @@
       });
     })();
 
-    // ===== 功能增强：ESC 关闭移动端侧栏 =====
+    // ===== 功能增强：ESC 关闭移动端侧栏（保留：若存在历史遗留 is-open 状态） =====
     document.addEventListener('keydown', function (e) {
       if (e.key !== 'Escape') return;
       var sidebar = document.getElementById('sidebar-nav');
-      var toggleBtn = document.getElementById('drawer-toggle');
       if (sidebar && sidebar.classList.contains('is-open')) {
         sidebar.classList.remove('is-open');
         var overlay = document.getElementById('sidebar-overlay');
         if (overlay) overlay.classList.remove('is-visible');
-        if (toggleBtn) {
-          toggleBtn.setAttribute('aria-expanded', 'false');
-          toggleBtn.innerHTML = '<span class="ds-btn-nav__icon" aria-hidden="true">☰</span><span class="ds-btn-nav__text">目录</span>';
-          toggleBtn.focus();
-        }
       }
     });
 

@@ -5,7 +5,7 @@
 「国学课堂」——面向小学生的中华传统文化在线课件站。**纯静态 HTML/CSS/JS，零构建**，部署于 **GitHub Pages**；学习记录/登录为可选的自建后端（`api/`），与静态站分离。
 
 - 线上域名：`https://guoxue.8023laozhanshi.cc`（DNS：CNAME → `cgartlab.github.io`，灰云直连 GitHub Pages）
-- 课程规模：46 门课（《论语》学而 / 为政 / 八佾 系列 + 三字经/拓展版），样式全部统一为**第一课扁平标准**
+- 课程规模：69 门课（《论语》学而 / 为政 / 八佾 系列 + 蒙学），样式全部统一为**第一课扁平标准**
 - 未来架构：`feature/astro-unocss-refactor` 分支仅含 Astro+UnoCSS 重构设计稿（`docs/refactor-astro-unocss.md`），未实施，与当前线上无关
 
 ## Quick Start
@@ -20,8 +20,8 @@
 | 模块 | 文件 | 职责 |
 |---|---|---|
 | 首页渲染 | `assets/js/homepage.js` | 侧栏抽屉导航、门类折叠、搜索过滤、课程卡片、封面统计 |
-| 课程目录 | `assets/js/lessons-manifest.js` | `GUOXUE_LESSONS`（46 门课：id/title/path/icon/subject/tier/featured…） |
-| 学科门类 | `assets/data/categories.js` | `GUOXUE_CATEGORIES`（12 类：经史子集/蒙学/书法…） |
+| 课程目录 | `assets/js/lessons-manifest.js` | `GUOXUE_LESSONS`（69 门课：id/title/path/icon/subject/tier/featured…） |
+| 学科门类 | `assets/data/categories.js` | `GUOXUE_CATEGORIES`（5 类：导论/学而/为政/八佾/蒙学） |
 | 课程引擎 | `assets/js/slide-engine.js` | 讲义/测验/答疑导航、键盘/触屏/全屏、进度条、测验渲染判分、localStorage 进度 |
 | 设计系统 | `assets/css/ds-design-system.css` | OKLCH 令牌、8px 网格、暗色模式、打印；`ds-*` 组件 + 课程扁平样式 |
 | 登录 | `assets/js/auth.js` / `auth-email.js` | Casdoor OAuth2 PKCE / 邮箱验证码登录 |
