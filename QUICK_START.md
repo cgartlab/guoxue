@@ -1,3 +1,5 @@
+> ⚠️ **已废弃（2026-09）**：本文档描述的是早期 Supabase 集成方案。当前已改用自建 API（`api/`，Express+JWT+Postgres），前端由 `api-client.js` 接管（`window.SUPABASE` 兼容接口）；`supabase/` 下 SQL 与相关文档仅作历史参考。部署与域名现状见 README「部署」与 AGENTS.md。
+
 # 国学课堂 Supabase 集成 - 快速开始指南
 
 > ⚠️ **历史快照说明**:本文档记录的是项目早期的 Supabase 集成方案。当前实现已改为自建 API——`assets/js/api-client.js`(替代原 `supabase-client.js`,保持 `window.SUPABASE` 接口,指向 `https://guoxue.8023laozhanshi.cc`),`supabase/*.sql` 仅作历史存档。文中课程 id 示例已按当前 **47 门新编号** 更新。

@@ -17,18 +17,20 @@
 │  └──────┬───────┘  └───────┬───────┘  └──────────────────┘  │
 └─────────┼──────────────────┼──────────────────────────────────┘
           │                  │
-          │  JWT Bearer      │  REST API
+          │  JWT Bearer      │  REST API（独立后端，当前域名下暂不可达）
           ▼                  ▼
 ┌─────────────────────────────────────────────────────────────┐
-│              guoxue.8023laozhanshi.cc  (后端)               │
-│  /api/auth/email/*   — 邮件验证码登录/注册                  │
+│          api/（Express + JWT + Postgres，独立部署）         │
 │  /api/users/me       — 获取当前用户                        │
 │  /api/progress/*     — 学习进度                            │
 │  /api/notes/*        — 学习笔记                            │
 │  /api/bookmarks/*    — 书签                                │
 │  /api/quiz-scores/*  — 测验成绩                            │
+│  /api/auth/email/*   — 邮件验证码登录/注册                 │
 └─────────────────────────────────────────────────────────────┘
 ```
+
+> ⚠️ 2026-09：域名 `guoxue.8023laozhanshi.cc` 已切回 GitHub Pages（DNS CNAME → `cgartlab.github.io`）。GitHub Pages 无法反代 `/casdoor` 与 `/api`，因此**登录与云同步功能当前不可用**；恢复需将后端移到独立子域（详见 AGENTS.md）。静态站 + 本地进度（localStorage）完全正常。
 
 ### 关键设计决策
 
@@ -54,11 +56,11 @@ guoxue/
 ├── notes.html              # 笔记和书签（需登录）
 ├── 404.html                # 自定义 404 页
 │
-├── lessons/                  # 47 门课程，目录名 NN-slug（编号 01–47）
+├── lessons/                  # 69 门课程，目录名 NN-slug（编号 01–69）
 │   ├── _template.html      # ⭐ 新课程从这里复制
 │   ├── 01-lunyu/index.html
 │   ├── 03-sanzijing/index.html
-│   ├── 47-wang-sun-jia-wen/index.html
+│   ├── 69-ju-shang-bu-kuan/index.html
 │   └── ...（每门课一个目录）
 │
 ├── assets/
@@ -71,6 +73,7 @@ guoxue/
 │   │   ├── homepage.js            # 首页：门类侧栏、课程卡片、移动端序号条
 │   │   ├── lessons-manifest.js    # 课程列表数据（window.GUOXUE_LESSONS）
 │   │   ├── navbar.js              # 顶栏导航（移动端抽屉）
+│   │   ├── unlock.js              # 付费解锁状态与 paywall UI
 │   │   └── slide-engine.js        # 课程幻灯片引擎
 │   ├── data/
 │   │   └── categories.js          # 门类数据（window.GUOXUE_CATEGORIES，5 大门类）
@@ -80,8 +83,9 @@ guoxue/
 ├── scripts/
 │   └── cache-bust.js       # 资源 URL 版本号注入
 │
+├── pay-worker/             # 面包多订单号验单 Cloudflare Worker
 ├── supabase/               # 数据库 schema / RLS / 测试页
-├── tests/                  # Playwright 端到端测试
+├── tests/                  # Playwright 端到端测试（首页 + paywall）
 │
 ├── .github/workflows/
 │   ├── deploy.yml          # 自动部署到 GitHub Pages
@@ -94,12 +98,12 @@ guoxue/
 
 ### 2.1 课程数据模型（`lessons-manifest.js`）
 
-`window.GUOXUE_LESSONS` 数组,当前共 **47 项**,与 `lessons/` 下 47 个目录一一对应。
+`window.GUOXUE_LESSONS` 数组,当前共 **69 项**,与 `lessons/` 下 69 个目录一一对应。
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
 | `id` | string | 唯一标识,等于目录名(如 `01-lunyu`) |
-| `num` | string | 两位课程序号 `01`–`47`,显示在卡片左上角 |
+| `num` | string | 两位课程序号 `01`–`69`,显示在卡片左上角 |
 | `title` | string | 课程标题 |
 | `subtitle` | string | 副标题 |
 | `path` | string | 课程入口 HTML 相对路径 |
@@ -119,9 +123,9 @@ guoxue/
 | key | label | num | 课程数 |
 |-----|-------|-----|:---:|
 | `daolun` | 导论 | `01` | 2 |
-| `xueer` | 学而 | `02` | 14 |
-| `weizheng` | 为政 | `03` | 17 |
-| `bayi` | 八佾 | `04` | 13 |
+| `xueer` | 学而 | `02` | 16 |
+| `weizheng` | 为政 | `03` | 24 |
+| `bayi` | 八佾 | `04` | 26 |
 | `mengxue` | 蒙学 | `05` | 1 |
 
 字段:`key` / `label` / `num` / `description` / `status` / `order`(无 `icon` 字段;门类同样以序号呈现)。
@@ -165,6 +169,8 @@ api-client.js  (定义 window.SUPABASE, 依赖 localStorage 中的 token)
       ▼
 slide-engine.js / homepage.js / navbar.js
 (各自独立，按需调用 AUTH.isLoggedIn() / window.SUPABASE)
+unlock.js (定义 window.UNLOCK，调用 pay-worker 验单；01/02/03 等免费课跳过 paywall)
+pay-worker/ (Cloudflare Worker，向面包多验证订单号并返回解锁码)
 ```
 
 ### 加载顺序规范（所有页面必须遵守）
@@ -192,6 +198,8 @@ slide-engine.js / homepage.js / navbar.js
 ---
 
 ## 4. 认证系统
+
+> ⚠️ **当前状态（2026-09）**：域名已切回 GitHub Pages（无法反代 `/casdoor` 与 `/api`），登录与云同步**暂不可用**；下方为设计实现，恢复需将后端移到独立子域（见 AGENTS.md「登录/云功能状态」）。
 
 ### 登录流程（邮件验证码）
 
@@ -299,30 +307,48 @@ auth.js: init() → updateAuthUI()
 
 ---
 
+## 5.5 课程样式规范（第一课标准）
+
+> 2026-09 起全部 69 门课已统一为**第一课扁平样式**（PR #100/#101 及后续课程整理），后续新增/修改一律按此标准。
+
+**标杆**：`lessons/_template.html`（唯一模板）、`lessons/01-lunyu`、`lessons/11-junzi-bu-zhong`。
+
+- **封面**：`.slide.cover-slide` = `cover-ornament`×2 + `h2.ds-display` + `cover-subtitle` + `cover-desc`（含篇章信息）+ `cover-seal`
+- **讲义/答疑**：`ds-badge ds-badge--accent` + `h2`；正文用 `h3/p/ul/ol` + `ds-highlight`/`ds-quote`/`ds-caption`
+- **内容映射**：原文→短句 `ds-quote`；通译→`<p><strong>通译：</strong>…`；字词→`ds-highlight` 行；短提示→`p.ds-caption`；FAQ→`h3❓+p`；长段/要点→普通段落或 `ul`（不设色块）
+- **编号**：`data-page` 从 0 连续；`data-section="lecture|quiz|review"`；tabs 无 emoji
+- **测验**：`GUOXUE_QUIZ_OVERRIDE` 引擎渲染（quiz-0…9 空容器）+ 测验说明页 + `quiz-score`，禁止内联测验
+- **结束页**：`.slide.end-slide`
+
+**❌ 禁用（历史遗留，勿复用）**：`slide-card` 系列、`original-text`、`translation-box`、`tip-box`、`sentence-block`、`core-grid`、`app-grid`、`data-index`、内联 `font-size/line-height`、手写 `?v=`。
+
+---
+
 ## 6. 新增课程 SOP（标准作业程序）
 
 ### 5 步添加新课程
 
 ```bash
-# 步骤 1：复制模板（编号接在现有 47 门之后，即 48）
-cp lessons/_template.html lessons/48-new-lesson/index.html
+# 步骤 1：复制模板（编号接在现有 69 门之后，即 70）
+cp lessons/_template.html lessons/70-new-lesson/index.html
 
-# 步骤 2：编辑内容（在文件中找标注的 【填写XXX】 位置）
+# 步骤 2：编辑内容（按第一课扁平标准，参照 5.5 节）
 # - 修改 <title>
-# - 填写讲义幻灯片（data-section="lecture"）
-# - 定义测验题目（window.GUOXUE_QUIZ_OVERRIDE）
-# - 填写复习内容（data-section="review"）
+# - 封面 cover-slide（标题/副标题/简介/印章）
+# - 讲义幻灯片（data-section="lecture"，data-page 连续）
+# - 定义测验题目（window.GUOXUE_QUIZ_OVERRIDE）+ 测验说明页 + quiz-score
+# - 填写答疑内容（data-section="review"）+ 结束页 end-slide
 
 # 步骤 3：注册到课程目录
 # 打开 assets/js/lessons-manifest.js，在 GUOXUE_LESSONS 数组末尾追加：
-# { id: '48-new-lesson', num: '48', title: '...', subject: 'xueer', status: 'ready', ... }
+# { id: '70-new-lesson', num: '70', title: '...', subject: 'xueer', status: 'ready', ... }
 # subject 必须是 GUOXUE_CATEGORIES 中已有的 key（daolun/xueer/weizheng/bayi/mengxue）
 
 # 步骤 4：（可选）将新课程 URL 追加到 sitemap.xml；资源版本号由 node scripts/cache-bust.js 统一处理
 
 # 步骤 5：提交并推送到 main 分支
-git add lessons/48-new-lesson/ assets/js/lessons-manifest.js
-git commit -m "feat(lesson): add 48-new-lesson"
+git add lessons/70-new-lesson/ assets/js/lessons-manifest.js
+git commit -m "feat(lesson): add 70-new-lesson"
 git push origin main
 # → GitHub Actions 自动部署
 ```
