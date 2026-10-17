@@ -15,7 +15,7 @@ const http = require('http');
 const fs = require('fs');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
-const PORT = 7891;
+const PORT = Number(process.env.PAYWALL_PORT) || 7891;
 const BASE = `http://localhost:${PORT}`;
 const PAID_LESSON = '/lessons/07-zengzi-sansheng/index.html';
 const FREE_LESSON = '/lessons/01-lunyu/index.html';

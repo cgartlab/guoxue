@@ -14,7 +14,9 @@ const fs = require('fs');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const INDEX_PATH = path.join(PROJECT_ROOT, 'index.html');
-const PORT = 7890;
+// Port is configurable via PLAYWRIGHT_PORT so CI can pick a free port and
+// avoid clashes with other services (hardcoded 7890 was a CI flake source).
+const PORT = Number(process.env.PLAYWRIGHT_PORT || process.env.PORT) || 7890;
 
 let server;
 
