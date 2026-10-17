@@ -1,59 +1,48 @@
-name: Bug Report｜问题反馈
-description: Report a bug or unexpected behavior / 报告功能异常
-title: "[Bug] "
-labels: ["🐛 type:bug"]
-assignees: []
-
+name: Bug 报告
+description: 报告国学课堂站点的问题
+title: "[bug] "
+labels: ["bug"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ## Bug Report｜问题反馈
-
-        Thanks for taking the time to report a bug! / 感谢您抽出时间报告问题！
-
-        > Before reporting, try to reproduce the issue in a clean environment. / 报告前，尝试在干净环境中复现问题。
-
   - type: input
-    id: repo-version
+    id: url
     attributes:
-      label: Repository / Version｜仓库与版本
-      description: Which repository and version/commit? / 仓库与版本/提交
-      placeholder: e.g. cgartlab.github.io @ v1.2.3
+      label: 课程 / 页面 URL
+      description: 出问题的页面完整地址（如 https://guoxue.8023laozhanshi.cc/lessons/01-lunyu/）
+      placeholder: https://guoxue.8023laozhanshi.cc/...
     validations:
       required: true
-
-  - type: textarea
-    id: description
+  - type: input
+    id: device
     attributes:
-      label: Bug Description｜问题描述
-      description: Describe what happened / 描述发生了什么
-      placeholder: Describe the bug clearly...
+      label: 设备与浏览器
+      description: 例如 "Windows 11 + Chrome 120" 或 "iPad + Safari"
+      placeholder: 设备 / 浏览器 / 分辨率
     validations:
       required: true
-
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to Reproduce｜复现步骤
-      description: List the steps to reproduce the bug / 列出复现步骤
-      placeholder: |
-        1. Go to '...'
-        2. Click on '...'
-        3. See error
-    validations:
-      required: true
-
   - type: textarea
     id: expected
     attributes:
-      label: Expected Behavior｜预期行为
-      description: What did you expect to happen? / 预期发生什么
+      label: 期望行为
+      description: 应该发生什么？
+      placeholder: 描述预期结果
     validations:
       required: true
-
   - type: textarea
-    id: context
+    id: actual
     attributes:
-      label: Additional Context｜补充信息
-      description: Any other context about the problem / 其他相关信息（截图、浏览器、设备等）
+      label: 实际行为
+      description: 实际发生了什么？附截图或控制台报错更好。
+      placeholder: 描述实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 如何复现？
+      placeholder: |
+        1. 打开 ...
+        2. 点击 ...
+        3. 看到 ...
+    validations:
+      required: false
