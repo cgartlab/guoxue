@@ -984,5 +984,19 @@ window.GUOXUE_LESSONS = [
         subject: 'bayi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '70-li-ren-wei-bei',
+        num: '70',
+        title: '里仁为美',
+        subtitle: '择处即择人 · 择友即择境',
+        path: 'lessons/70-li-ren-wei-bei/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第一章精讲：子曰"里仁为美，择不处仁，焉得知？"——本章为里仁篇开篇，"里"作动词即"居住在仁厚之地"；孔子把"仁"从个人德性讲到生活环境：择居即择人，择处即择境，不亲近仁德便算不得明智。全篇二十六章由此发端，配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];

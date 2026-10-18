@@ -45,11 +45,19 @@ window.GUOXUE_CATEGORIES = [
         order: 4
     },
     {
-        key: 'mengxue',
-        label: '蒙学',
+        key: 'liren',
+        label: '里仁',
         num: '05',
-        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        description: '《论语·里仁篇》各章精讲',
         status: 'ready',
         order: 5
+    },
+    {
+        key: 'mengxue',
+        label: '蒙学',
+        num: '06',
+        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        status: 'ready',
+        order: 6
     }
 ];
