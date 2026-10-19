@@ -1012,5 +1012,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '72-wei-ren-zhe-neng-hao-ren',
+        num: '72',
+        title: '唯仁者能好人，能恶人',
+        subtitle: '好恶有准 · 爱憎不私',
+        path: 'lessons/72-wei-ren-zhe-neng-hao-ren/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第三章精讲：子曰"唯仁者能好人，能恶人。"——全章仅八字，却把"好恶"从情绪提到修养上：喜欢人、厌恶人人人都会，唯有仁者做得"得当"。仁者无私心，好不因私利、恶不因私怨，好而知其恶、恶而知其美。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
