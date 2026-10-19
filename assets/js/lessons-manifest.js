@@ -1068,5 +1068,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '76-wo-wei-jian-hao-ren-zhe',
+        num: '76',
+        title: '我未见好仁者，恶不仁者',
+        subtitle: '用力向仁 · 无力不足',
+        path: 'lessons/76-wo-wei-jian-hao-ren-zhe/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第六章精讲：子曰"我未见好仁者，恶不仁者。好仁者，无以尚之；恶不仁者，其为仁矣，不使不仁者加乎其身。有能一日用其力于仁矣乎？我未见力不足者。"——仁不难，难在肯用力：门槛低到一天，肯迈就能进门；力不会不足，心常会不足。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
