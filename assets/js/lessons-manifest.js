@@ -1026,5 +1026,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '73-gou-zhi-yu-ren-yi',
+        num: '73',
+        title: '苟志于仁矣，无恶也',
+        subtitle: '立志于仁 · 恶自不生',
+        path: 'lessons/73-gou-zhi-yu-ren-yi/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第四章精讲：子曰"苟志于仁矣，无恶也。"——孔子把话说到根上：一个人若真把心定在仁上，就不会去做恶事。"苟"是诚不是假如，"志"是方向不是念头；防恶靠守，去恶靠志。仁是一盏灯，不是一道墙。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
