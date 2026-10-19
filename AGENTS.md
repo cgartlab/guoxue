@@ -1,5 +1,7 @@
 # AGENTS.md
 
+> **会话约定**：开始任何工作前，先读根目录 `LESSONS.md`（本仓库从真实失误沉淀的「教训→规则」清单）并遵循其中所有规则；遇到新失误按其 §维护 追加。依据：Anthropic Claude Code memory/best practices + 社区 lessons.md 惯例。
+
 ## 项目定位
 
 「国学课堂」——面向小学生的中华传统文化在线课件站。**纯静态 HTML/CSS/JS，零构建**，部署于 **GitHub Pages**；学习记录/登录为可选的自建后端（`api/`），与静态站分离。
