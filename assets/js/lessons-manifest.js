@@ -1040,5 +1040,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '74-fu-yu-gui',
+        num: '74',
+        title: '富与贵，是人之所欲也',
+        subtitle: '不以其道 · 不处不去',
+        path: 'lessons/74-fu-yu-gui/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第五章精讲：子曰"富与贵，是人之所欲也；不以其道得之，不处也。贫与贱，是人之所恶也；不以其道得之，不去也。君子去仁，恶乎成名？君子无终食之间违仁，造次必于是，颠沛必于是。"——孔子把仁放到钱、位、穷、通上过秤：富贵可以求，求法不能歪；贫贱可以摆，摆法不能歪。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
