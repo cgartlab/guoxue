@@ -998,5 +998,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '71-ren-zhe-an-ren',
+        num: '71',
+        title: '仁者安仁，知者利仁',
+        subtitle: '安仁利仁 · 穷达皆守',
+        path: 'lessons/71-ren-zhe-an-ren/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第二章精讲：子曰"不仁者不可以久处约，不可以长处乐。仁者安仁，知者利仁。"——孔子以穷困与安乐两种境遇作试金石：不仁者穷久了守不住、富久了也守不住；仁者以仁为安身之处，知者见仁之利而力行。安仁与利仁，两条入仁之路，同归于仁。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
