@@ -1096,5 +1096,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '78-shi-zhi-yu-dao',
+        num: '78',
+        title: '士志于道，而耻恶衣恶食者',
+        subtitle: '志在道义 · 不耻粗衣',
+        path: 'lessons/78-shi-zhi-yu-dao/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第九章精讲：子曰"士志于道，而耻恶衣恶食者，未足与议也。"——全章十六字，说的是"志"和"耻"不能并存。一个人心里最在意什么，看他为什么脸红就知道。孔子不说他错，只说"未足与议"——没法谈了。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 13 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
