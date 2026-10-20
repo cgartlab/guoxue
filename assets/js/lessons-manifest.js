@@ -1082,5 +1082,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '77-zhao-wen-dao-xi-si-ke-yi',
+        num: '77',
+        title: '朝闻道，夕死可矣',
+        subtitle: '闻道此生 · 死亦无憾',
+        path: 'lessons/77-zhao-wen-dao-xi-si-ke-yi/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第八章精讲：子曰"朝闻道，夕死可矣。"——全章只有八个字，却是《论语》里分量最重的一句。"闻"不是听说，是真明白；"可矣"不是该死了，是这一生不亏了。孔子把"道"放在"命"的上头：生命的分量不在长短，在明白。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 12 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
