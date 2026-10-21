@@ -1110,5 +1110,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '79-jun-zi-zhi-yu-tian-xia',
+        num: '79',
+        title: '君子之于天下也 · 无适无莫',
+        subtitle: '无所偏主 · 唯义是从',
+        path: 'lessons/79-jun-zi-zhi-yu-tian-xia/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第十章精讲：子曰“君子之于天下也，无适也，无莫也，义之与比。”——全章十八字，说的是君子心里没有固定的人，只有固定的理。不预先亲近谁，也不预先排斥谁，只问这一件事该不该。无适无莫不是没立场，是立场只在义上。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
