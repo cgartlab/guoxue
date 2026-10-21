@@ -764,13 +764,13 @@ window.GUOXUE_LESSONS = [
     {
         id: '54-huo-wen-di-zhi-shuo',
         num: '54',
-        title: '或问禘之说',
-        subtitle: '不言之教',
+        title: '或问禘之说 · 指其掌',
+        subtitle: '知而不言 · 一指传心',
         path: 'lessons/54-huo-wen-di-zhi-shuo/index.html',
         grade: '小学高年级·初中',
-        description: '《论语·八佾》第十一章精讲：或问禘之说，子曰不知也——孔子不妄言、不僭言，以「指其掌」点破真理如示诸斯。配套十道互动测验。',
+        description: '《论语·八佾》第十一章精讲：或问禘之说。子曰“不知也。知其说者之于天下也，其如示诸斯乎！”指其掌。——全章三十二字，最要紧的是最后三个字“指其掌”。孔子说“不知”，是当着人把话收住；收住之后，他伸出了手。不是无知，是不说。配套十道互动测验。',
         status: 'ready',
-        duration: '约 12 分钟',
+        duration: '约 14 分钟',
         subject: 'bayi',
         tier: 'core',
         featured: false
