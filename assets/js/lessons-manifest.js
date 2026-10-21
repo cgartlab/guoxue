@@ -1124,5 +1124,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '80-jun-zi-huai-de',
+        num: '80',
+        title: '君子怀德，小人怀惠',
+        subtitle: '怀德怀刑 · 怀土怀惠',
+        path: 'lessons/80-jun-zi-huai-de/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第十一章精讲：子曰“君子怀德，小人怀土；君子怀刑，小人怀惠。”——四个“怀”字，两对镜子：德对土，刑对惠。前一对问心里装什么，后一对问心里怕什么。怀什么，成什么人。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
