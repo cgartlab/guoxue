@@ -1152,5 +1152,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '82-neng-yi-li-rang-wei-guo',
+        num: '82',
+        title: '能以礼让为国乎 · 何有',
+        subtitle: '礼以让为实 · 无让则礼虚',
+        path: 'lessons/82-neng-yi-li-rang-wei-guo/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第十三章精讲：子曰“能以礼让为国乎？何有？不能以礼让为国，如礼何？”——礼是壳，让是仁。朱熹注“让者，礼之实也”，礼没有让就成了挂在墙上的空架子。让不是软弱，是让得起。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
