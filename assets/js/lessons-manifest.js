@@ -1194,5 +1194,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '85-jun-zi-yu-yi',
+        num: '85',
+        title: '君子喻于义 · 小人喻于利',
+        subtitle: '义者天理之所宜 · 利者人情之所欲',
+        path: 'lessons/85-jun-zi-yu-yi/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第十六章精讲：子曰“君子喻于义，小人喻于利。”——君子心里通的是该不该，小人心里通的是划不划算。君子小人不在身份在存心；孔子不反对利，反对利做唯一的尺。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
