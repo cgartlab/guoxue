@@ -31,14 +31,16 @@ function updateVersionInHTML(filePath, version) {
     let html = fs.readFileSync(filePath, 'utf8');
     
     // 更新 href 属性（link, anchor 等）
+    // 支持 lessons/xx/index.html 这类页面里带 ../ 前缀的相对路径（如 ../../assets/css/...），
+    // 否则课程页的资源引用会漏掉版本号，改版后老访客可能拿到旧样式。
     html = html.replace(
-        /href="(assets\/[^"?]+)(?:\?v=[^"]*)?"/g,
+        /href="((?:\.\.\/)*assets\/[^"?]+)(?:\?v=[^"]*)?"/g,
         `href="$1?v=${version}"`
     );
     
     // 更新 src 属性（script 等）
     html = html.replace(
-        /src="(assets\/[^"?]+)(?:\?v=[^"]*)?"/g,
+        /src="((?:\.\.\/)*assets\/[^"?]+)(?:\?v=[^"]*)?"/g,
         `src="$1?v=${version}"`
     );
     
