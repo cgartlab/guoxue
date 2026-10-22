@@ -1138,5 +1138,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '81-fang-yu-li-er-xing',
+        num: '81',
+        title: '放于利而行，多怨',
+        subtitle: '依利行事 · 必招人怨',
+        path: 'lessons/81-fang-yu-li-er-xing/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第十二章精讲：子曰“放于利而行，多怨。”——凡事只按好处算，只问值不值，不问该不该。程子一语道破：欲利于己，必害于人，故多怨。便宜占尽之日，就是人心散尽之时。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
