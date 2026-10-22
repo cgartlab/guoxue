@@ -1166,5 +1166,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '83-bu-huan-wu-wei',
+        num: '83',
+        title: '不患无位 · 患所以立',
+        subtitle: '患所以立 · 求为可知',
+        path: 'lessons/83-bu-huan-wu-wei/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第十四章精讲：子曰“不患无位，患所以立；不患莫己知，求为可知也。”——别愁没有位置，愁的是凭什么立得住；别愁没人了解自己，要去求得那值得被人知道的才德。位子是别人给的，本事是自己长的。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
