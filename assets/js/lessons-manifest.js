@@ -1180,5 +1180,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '84-yi-yi-guan-zhi',
+        num: '84',
+        title: '一以贯之 · 忠恕而已',
+        subtitle: '吾道一以贯之 · 忠恕而已矣',
+        path: 'lessons/84-yi-yi-guan-zhi/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第十五章精讲：子曰“参乎！吾道一以贯之。”曾子曰：“唯。”子出，门人问曰：“何谓也？”曾子曰：“夫子之道，忠恕而已矣。”——千头万绪的教诲一根线穿着；忠是尽己，把事做到头，恕是推己，将心比心。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
