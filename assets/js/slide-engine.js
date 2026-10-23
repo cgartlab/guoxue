@@ -357,12 +357,22 @@
 
     function updateFullscreenBtn(isFullscreen) {
         if (!fullscreenBtn) return;
+        var label = isFullscreen ? '退出全屏' : '全屏';
         fullscreenBtn.classList.toggle('exit', isFullscreen);
-        fullscreenBtn.title = isFullscreen ? '退出全屏' : '切换全屏显示';
-        fullscreenBtn.innerHTML = '⛶';
+        fullscreenBtn.title = label;
+        fullscreenBtn.setAttribute('aria-label', label);
+        var textEl = fullscreenBtn.querySelector('.ds-btn-nav__text');
+        if (textEl) {
+            textEl.textContent = label;
+        } else {
+            var iconEl = fullscreenBtn.querySelector('.ds-btn-nav__icon');
+            if (iconEl) iconEl.textContent = '⛶';
+            else fullscreenBtn.textContent = '⛶';
+        }
     }
 
     if (fullscreenBtn) {
+        updateFullscreenBtn(false);
         fullscreenBtn.addEventListener('click', function (e) {
             e.preventDefault(); e.stopPropagation(); toggleFullscreen();
         });
