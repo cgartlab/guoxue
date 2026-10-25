@@ -1264,5 +1264,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '90-fu-mu-zhi-nian',
+        num: '90',
+        title: '父母之年 · 一则以喜 · 一则以惧',
+        subtitle: '知年在心 · 牵挂有两条腿',
+        path: 'lessons/90-fu-mu-zhi-nian/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第二十一章精讲：子曰“父母之年，不可不知也。一则以喜，一则以惧。”——父母的年纪，不能不记在心里。一方面为父母高寿欢喜，一方面为父母年高忧惧。喜与惧拧在一起，才是孝心的真滋味。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
