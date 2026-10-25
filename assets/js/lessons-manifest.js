@@ -1236,5 +1236,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '88-fu-mu-zai-bu-yuan-you',
+        num: '88',
+        title: '父母在 · 不远游',
+        subtitle: '游必有方 · 牵挂有处安放',
+        path: 'lessons/88-fu-mu-zai-bu-yuan-you/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第十九章精讲：子曰“父母在，不远游，游必有方。”——父母健在，不往远的地方去；一定要出门，也要有确定的去处。孔子不是不许出门，是怕父母的牵挂没处安放。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
