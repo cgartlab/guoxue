@@ -1222,5 +1222,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '87-shi-fu-mu-ji-jian',
+        num: '87',
+        title: '事父母几谏 · 劳而不怨',
+        subtitle: '几谏有度 · 敬爱不衰',
+        path: 'lessons/87-shi-fu-mu-ji-jian/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第十八章精讲：子曰“事父母几谏，见志不从，又敬不违，劳而不怨。”——父母有不对的地方，要委婉地劝；劝了不听，还是恭敬，不顶撞不埋怨。孝的功夫，全在这十六个字里。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
