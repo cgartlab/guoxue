@@ -1250,5 +1250,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '89-san-nian-wu-gai-yu-fu-zhi-dao',
+        num: '89',
+        title: '三年无改 · 可谓孝矣',
+        subtitle: '父没观行 · 恒守其正',
+        path: 'lessons/89-san-nian-wu-gai-yu-fu-zhi-dao/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第二十章精讲：子曰“三年无改于父之道，可谓孝矣。”——父母去世之后，长年不改变父亲留下的正道，这才称得上孝。怀念不是一两天的事，改与不改，尺子是“道”不是“人”。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
