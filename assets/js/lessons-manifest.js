@@ -1208,5 +1208,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '86-jian-xian-si-qi',
+        num: '86',
+        title: '见贤思齐焉 · 内自省也',
+        subtitle: '贤者是我师 · 不贤是我鉴',
+        path: 'lessons/86-jian-xian-si-qi/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第十七章精讲：子曰“见贤思齐焉，见不贤而内自省也。”——见到贤德的人，就想着向他看齐；见到不贤的人，就在心里反省自己有没有同样的毛病。贤与不贤，都是自己的镜子；天下处处是课堂。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
