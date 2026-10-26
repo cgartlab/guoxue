@@ -1,10 +1,10 @@
 // tests/homepage.spec.js
 // Playwright E2E tests for homepage v3 (static sidebar + series cover + mobile numstrip)
 // Current structure facts:
-//   - 90 lessons (num 01..90, all status:'ready') in lessons-manifest.js
+//   - 91 lessons (num 01..91, all status:'ready') in lessons-manifest.js
 //   - 5 categories (daolun/xueer/weizheng/bayi/mengxue, num 01..05, all ready)
 //   - Sidebar rendered by homepage.js: 5 groups, collapsed sub-navs, filter + reset links
-//   - Mobile (<778px): sidebar hidden, top numstrip visible (flat sorted chips, 90 in total)
+//   - Mobile (<778px): sidebar hidden, top numstrip visible (flat sorted chips, 91 in total)
 // Run: npx playwright test tests/homepage.spec.js --workers=1
 
 const { test, expect } = require('@playwright/test');
@@ -14,7 +14,7 @@ const fs = require('fs');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const INDEX_PATH = path.join(PROJECT_ROOT, 'index.html');
-const PORT = 7900;
+const PORT = 7910;
 
 let server;
 
@@ -50,9 +50,9 @@ test.afterAll(() => {
   server && server.close();
 });
 
-// ===== 桌面端测试 (1440x900) =====
-test.describe('Desktop (1440x900)', () => {
-  test.use({ viewport: { width: 1440, height: 900 } });
+// ===== 桌面端测试 (1440x910) =====
+test.describe('Desktop (1440x910)', () => {
+  test.use({ viewport: { width: 1440, height: 910 } });
 
   test('two-column layout with series cover renders', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
@@ -117,8 +117,8 @@ test.describe('Desktop (1440x900)', () => {
     // Per-category filter links: 6
     await expect(page.locator('.home-sidebar__link--filter')).toHaveCount(6);
 
-    // Course sub-links: 90 (one per ready lesson)
-    await expect(page.locator('.home-sidebar__link--sub')).toHaveCount(90);
+    // Course sub-links: 91 (one per ready lesson)
+    await expect(page.locator('.home-sidebar__link--sub')).toHaveCount(91);
 
     // "全部课程" reset link visible
     const allLink = page.locator('.home-sidebar__nav--all .home-sidebar__link');
@@ -134,11 +134,11 @@ test.describe('Desktop (1440x900)', () => {
     await expect(searchInput).toHaveAttribute('placeholder', '搜索课程…');
   });
 
-  test('lesson cards render correctly (90 ready lessons)', async ({ page }) => {
+  test('lesson cards render correctly (91 ready lessons)', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(90);
+    await expect(cards).toHaveCount(91);
 
     const firstCard = cards.first();
     await expect(firstCard.locator('.lesson-title')).toContainText('论语');
@@ -146,13 +146,13 @@ test.describe('Desktop (1440x900)', () => {
     await expect(firstCard.locator('.lesson-num')).toHaveText('01');
   });
 
-  test('series cover stats show correct counts (90/0/6)', async ({ page }) => {
+  test('series cover stats show correct counts (91/0/6)', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const values = page.locator('.series-stat__value');
     await expect(values).toHaveCount(3); // 已上线 / 筹备中 / 学科门类
     const vals = await values.allTextContents();
-    expect(vals[0]).toBe('90'); // 已上线
+    expect(vals[0]).toBe('91'); // 已上线
     expect(vals[1]).toBe('0');  // 筹备中
     expect(vals[2]).toBe('6');  // 学科门类
   });
@@ -162,12 +162,12 @@ test.describe('Desktop (1440x900)', () => {
 test.describe('Tablet (778x1024)', () => {
   test.use({ viewport: { width: 778, height: 1024 } });
 
-  test('sidebar visible, 90 lesson cards', async ({ page }) => {
+  test('sidebar visible, 91 lesson cards', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     await expect(page.locator('.home-sidebar')).toBeVisible();
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(90);
+    await expect(cards).toHaveCount(91);
   });
 });
 
@@ -175,7 +175,7 @@ test.describe('Tablet (778x1024)', () => {
 test.describe('Mobile (375x812)', () => {
   test.use({ viewport: { width: 375, height: 812 } });
 
-  test('sidebar hidden, numstrip visible with 90 chips and horizontal scroll', async ({ page }) => {
+  test('sidebar hidden, numstrip visible with 91 chips and horizontal scroll', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     // No menu/drawer toggles on homepage
@@ -197,15 +197,15 @@ test.describe('Mobile (375x812)', () => {
     const labels = await page.locator('.home-numstrip__label').allTextContents();
     expect(labels).toEqual(['导论', '学而', '为政', '八佾', '里仁', '蒙学']);
 
-    // 组内 chip 数：导论=2、学而=16、为政=24、八佾=26、里仁=21、蒙学=1（合计 90）
-    const expectedChipCounts = [2, 16, 24, 26, 21, 1];
+    // 组内 chip 数：导论=2、学而=16、为政=24、八佾=26、里仁=22、蒙学=1（合计 91）
+    const expectedChipCounts = [2, 16, 24, 26, 22, 1];
     for (let i = 0; i < expectedChipCounts.length; i++) {
       await expect(groups.nth(i).locator('.home-numstrip__chip')).toHaveCount(expectedChipCounts[i]);
     }
 
-    // 全部 90 个序号 chip，按门类顺序排列
+    // 全部 91 个序号 chip，按门类顺序排列
     const chips = page.locator('.home-numstrip__chip');
-    await expect(chips).toHaveCount(90);
+    await expect(chips).toHaveCount(91);
     // 首组「导论」首项 = 01；末组「蒙学」唯一项 = 03
     await expect(chips.first()).toHaveText('01');
     await expect(chips.last()).toHaveText('03');
@@ -222,7 +222,7 @@ test.describe('Mobile (375x812)', () => {
 
 // ===== 交互测试 =====
 test.describe('Interactions', () => {
-  test.use({ viewport: { width: 1440, height: 900 } });
+  test.use({ viewport: { width: 1440, height: 910 } });
 
   test('sidebar search filters sidebar links', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
@@ -296,14 +296,14 @@ test.describe('Interactions', () => {
     const allLink = page.locator('.home-sidebar__nav--all .home-sidebar__link');
     await allLink.click({ noWaitAfter: true });
 
-    await expect(page.locator('#lesson-cards .ds-lesson-card')).toHaveCount(90);
+    await expect(page.locator('#lesson-cards .ds-lesson-card')).toHaveCount(91);
     await expect(page.locator('#filter-title')).toContainText('全部课程');
   });
 });
 
 // ===== 回归测试 =====
 test.describe('Regression', () => {
-  test.use({ viewport: { width: 1440, height: 900 } });
+  test.use({ viewport: { width: 1440, height: 910 } });
 
   test('about.html still works', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/about.html`);

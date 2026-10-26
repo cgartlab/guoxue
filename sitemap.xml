@@ -554,7 +554,13 @@
   </url>
   <url>
     <loc>https://guoxue.8023laozhanshi.cc/lessons/90-fu-mu-zhi-nian/index.html</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/91-gu-zhe-yan-zhi-bu-chu/index.html</loc>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

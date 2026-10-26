@@ -1278,5 +1278,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '91-gu-zhe-yan-zhi-bu-chu',
+        num: '91',
+        title: '古者言之不出 · 耻躬之不逮',
+        subtitle: '话出口是责任 · 做不到是羞耻',
+        path: 'lessons/91-gu-zhe-yan-zhi-bu-chu/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第二十二章精讲：子曰“古者言之不出，耻躬之不逮也。”——古时候的人不轻易把话说出口，因为他们以自己的行动赶不上所说的话为羞耻。话一出口就是责任，把羞耻心放在嘴上，管住嘴，也就守住了信。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
