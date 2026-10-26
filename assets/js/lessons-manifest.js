@@ -1376,5 +1376,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '98-zi-wei-zi-jian',
+        num: '98',
+        title: '子谓子贱 · 君子哉若人',
+        subtitle: '夸的是人 · 点破的是环境',
+        path: 'lessons/98-zi-wei-zi-jian/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第三章精讲：子谓子贱“君子哉若人！鲁无君子者，斯焉取斯？”——孔子夸子贱真是君子，又点破：这股君子气是从鲁国君子环境里学来的。好人出自好环境，跟君子在一起才学得成君子。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
