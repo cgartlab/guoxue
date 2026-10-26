@@ -1320,5 +1320,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '94-de-bu-gu',
+        num: '94',
+        title: '德不孤 · 必有邻',
+        subtitle: '德如灯火 · 自有人来',
+        path: 'lessons/94-de-bu-gu/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第二十五章精讲：子曰“德不孤，必有邻。”——有道德的人不会孤单，一定会有志同道合的人来和他做伴。德像灯火，自己不灭，就有人来借光；人心看得见，路走得正，就有人愿意同行。里仁篇收尾一章。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
