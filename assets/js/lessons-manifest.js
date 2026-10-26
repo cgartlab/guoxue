@@ -1390,5 +1390,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '99-ci-ye-he-ru',
+        num: '99',
+        title: '赐也何如 · 瑚琏之器',
+        subtitle: '成材之贵 · 犹有所限',
+        path: 'lessons/99-ci-ye-he-ru/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第四章精讲：子贡问曰“赐也何如？”子曰“女，器也。”曰“何器也？”曰“瑚琏也。”——孔子先说子贡是“器”，子贡追着问，才问出“瑚琏”二字。是成材，也是限：器有所用，犹未到“君子不器”。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
