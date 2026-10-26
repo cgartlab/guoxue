@@ -1334,5 +1334,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '95-shi-jun-shu-si-ru',
+        num: '95',
+        title: '事君数 · 斯辱矣',
+        subtitle: '关心也要有个度',
+        path: 'lessons/95-shi-jun-shu-si-ru/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第二十六章精讲：子游曰“事君数，斯辱矣；朋友数，斯疏矣。”——劝上级劝得太频繁会招来羞辱，对朋友劝得太频繁会被疏远。再好的关系也要留个度：说一遍是心意，说三遍是压力。里仁篇收尾章。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
