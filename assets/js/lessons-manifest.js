@@ -1348,5 +1348,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '96-zi-wei-gong-ye-chang',
+        num: '96',
+        title: '子谓公冶长 · 非其罪也',
+        subtitle: '看人不看标签 · 是非分清罪与难',
+        path: 'lessons/96-zi-wei-gong-ye-chang/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第一章精讲：子谓公冶长“可妻也，虽在缧绁之中，非其罪也”，以其子妻之。——孔子把女儿嫁给坐过牢的公冶长：坐牢是遭遇，不是品德。看人不看标签，信任要用行动表态。公冶长篇开篇。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];

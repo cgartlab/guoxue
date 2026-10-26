@@ -53,11 +53,19 @@ window.GUOXUE_CATEGORIES = [
         order: 5
     },
     {
-        key: 'mengxue',
-        label: '蒙学',
+        key: 'gongyechang',
+        label: '公冶长',
         num: '06',
-        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        description: '《论语·公冶长篇》各章精讲',
         status: 'ready',
         order: 6
+    },
+    {
+        key: 'mengxue',
+        label: '蒙学',
+        num: '07',
+        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        status: 'ready',
+        order: 7
     }
 ];
