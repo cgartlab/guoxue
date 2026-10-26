@@ -1292,5 +1292,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '92-yi-yue-shi-zhi',
+        num: '92',
+        title: '以约失之 · 者鲜矣',
+        subtitle: '约束自己 · 少走弯路',
+        path: 'lessons/92-yi-yue-shi-zhi/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第二十三章精讲：子曰“以约失之者鲜矣。”——因为懂得约束自己而犯过失的人很少。约是给自己立个分寸：话不多说、欲不多纵、用度不铺张。放纵的人后悔多，守约的人后悔少。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
