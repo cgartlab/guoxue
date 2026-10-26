@@ -1306,5 +1306,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '93-nuo-yan-min-xing',
+        num: '93',
+        title: '君子欲讷于言而敏于行',
+        subtitle: '嘴慢一分 · 手快一分',
+        path: 'lessons/93-nuo-yan-min-xing/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·里仁》第二十四章精讲：子曰“君子欲讷于言而敏于行。”——君子说话要迟钝些，做事要敏捷些。嘴慢一分，手快一分：话不抢着说，事抢着做。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'liren',
+        tier: 'core',
+        featured: false
     }
 ];
