@@ -1362,5 +1362,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '97-zi-wei-nan-rong',
+        num: '97',
+        title: '子谓南容 · 邦有道不废',
+        subtitle: '治世能做事 · 乱世能保身',
+        path: 'lessons/97-zi-wei-nan-rong/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第二章精讲：子谓南容“邦有道不废；邦无道免于刑戮”，以其兄之子妻之。——孔子把侄女嫁给南容：治世他接得住机会，乱世他守得住自己。进退有度的根子是德——“三复白圭”，慎言守本分。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];

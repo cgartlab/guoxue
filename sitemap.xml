@@ -590,7 +590,13 @@
   </url>
   <url>
     <loc>https://guoxue.8023laozhanshi.cc/lessons/96-zi-wei-gong-ye-chang/index.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxue.8023laozhanshi.cc/lessons/97-zi-wei-nan-rong/index.html</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
