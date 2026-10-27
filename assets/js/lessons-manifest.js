@@ -1446,5 +1446,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '103-meng-wu-bo-wen',
+        num: '103',
+        title: '可使治其赋 · 不知其仁',
+        subtitle: '才干说得清 · 仁字不肯许',
+        path: 'lessons/103-meng-wu-bo-wen/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第八章精讲：孟武伯问“子路仁乎？”子曰“不知也。”又问，子曰“由也，千乘之国，可使治其赋也，不知其仁也。”再问冉求、公西赤，各说其才，三次都答“不知其仁”。——才干一件一件说得清，偏偏“仁”这个字不肯许人：本事可以评价，人品只能见证。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
