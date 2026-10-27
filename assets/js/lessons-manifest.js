@@ -1474,5 +1474,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '105-zai-yu-zhou-qin',
+        num: '105',
+        title: '朽木不可雕 · 听言观行',
+        subtitle: '骂得最狠的一次 · 改得最实的一回',
+        path: 'lessons/105-zai-yu-zhou-qin/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第十章精讲：宰予昼寝。子曰“朽木不可雕也，粪土之墙不可杇也，于予与何诛？”子曰“始吾于人也，听其言而信其行；今吾于人也，听其言而观其行。于予与改是。”——孔门里最会说话的学生白天睡了一觉，老师骂得极狠，随后却改了自己看人的规矩。骂人是火气，改自己是本事。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
