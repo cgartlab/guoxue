@@ -1558,5 +1558,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '111-zi-chan-jun-zi-zhi-dao',
+        num: '111',
+        title: '子产 · 君子之道四',
+        subtitle: '行己恭事上敬 · 养民惠使民义',
+        path: 'lessons/111-zi-chan-jun-zi-zhi-dao/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第十六章精讲：子谓子产：有君子之道四焉：其行己也恭，其事上也敬，其养民也惠，其使民也义。——君子不是一句空话，是四件可以检查的事：对自己庄重，对事认真，对百姓给实惠，用民力有分寸。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
