@@ -1432,5 +1432,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '102-cheng-fu-fu-yu-hai',
+        num: '102',
+        title: '乘桴浮于海 · 好勇过我',
+        subtitle: '最重的信重，常常长着拦阻的样子',
+        path: 'lessons/102-cheng-fu-fu-yu-hai/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第七章精讲：子曰“道不行，乘桴浮于海。从我者，其由与？”子路闻之喜。子曰“由也好勇过我，无所取材。”——老师一句伤心话，学生听成了请帖；那一盆冷水，其实是为他好。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
