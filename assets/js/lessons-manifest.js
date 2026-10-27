@@ -1516,5 +1516,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '108-fu-zi-zhi-wen-zhang',
+        num: '108',
+        title: '夫子之文章 · 性与天道',
+        subtitle: '最高的道理 · 穿最朴素的衣裳',
+        path: 'lessons/108-fu-zi-zhi-wen-zhang/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第十三章精讲：子贡曰“夫子之文章，可得而闻也；夫子之言性与天道，不可得而闻也。”——学生听了几十年课，说出一句最深的佩服：老师把最高的道理，都放在最低的日子里讲。讲性就讲天然的孝心爱心，讲天道就指流水四季；不是不讲，是不空讲。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
