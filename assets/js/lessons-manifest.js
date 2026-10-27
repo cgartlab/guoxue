@@ -1544,5 +1544,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '110-min-er-hao-xue',
+        num: '110',
+        title: '敏而好学 · 不耻下问',
+        subtitle: '聪明人肯用功 · 当官的肯低头',
+        path: 'lessons/110-min-er-hao-xue/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第十五章精讲：子贡问曰：孔文子何以谓之文也？子曰：敏而好学，不耻下问，是以谓之文也。——天资好不算本事，肯学肯问才算。孔子评人有分寸：该给的给，多的不给。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
