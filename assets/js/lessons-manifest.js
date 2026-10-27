@@ -1502,5 +1502,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '107-bu-yu-ren-jia-zhu-wo',
+        num: '107',
+        title: '不欲人加诸我 · 非尔所及也',
+        subtitle: '孔子否掉的 · 是一句好话',
+        path: 'lessons/107-bu-yu-ren-jia-zhu-wo/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第十二章精讲：子贡曰“我不欲人之加诸我也，吾亦欲无加诸人。”子曰“赐也，非尔所及也。”——子贡是孔门首富、言语科高徒，一句话把“恕”推到了“仁”的高度，孔子却泼了盆冷水。差的这一层，是“恕”与“仁”的分别：恕要勉强去做，仁不用勉强。志气可以高过脚，话不能高过脚。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
