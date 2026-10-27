@@ -1488,5 +1488,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '106-wu-wei-jian-gang-zhe',
+        num: '106',
+        title: '吾未见刚者 · 无欲则刚',
+        subtitle: '二十个字 · 量出一个立不立得住',
+        path: 'lessons/106-wu-wei-jian-gang-zhe/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第十一章精讲：子曰“吾未见刚者。”或对曰“申枨。”子曰“枨也欲，焉得刚？”——孔子说没见过刚强的人，有人举荐以“硬”著称的申枨，一句“他欲望多”就挡了回去。不刚的根子不在骨头软，在放不下；有所求就有所畏，软肋不在身上，在心上。“无欲则刚”不是绝欲，是减欲：能放下多少，就能直起多少。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
