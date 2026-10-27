@@ -1418,5 +1418,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '101-qi-diao-kai-shi',
+        num: '101',
+        title: '吾斯之未能信 · 心里没底',
+        subtitle: '先问自己有没有底',
+        path: 'lessons/101-qi-diao-kai-shi/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第六章精讲：子使漆雕开仕。对曰“吾斯之未能信。”子说。——老师举荐他去做官，他却说“我对这件事还没有真切的把握”，孔子听了不但不恼，反倒高兴。十六个字里，一半是本事，一半是诚实。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
