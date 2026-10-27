@@ -1460,5 +1460,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '104-nv-yu-hui-shu-yu',
+        num: '104',
+        title: '闻一以知十 · 吾与女弗如',
+        subtitle: '认输认得最快 · 往往本事最大',
+        path: 'lessons/104-nv-yu-hui-shu-yu/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第九章精讲：子谓子贡曰“女与回也孰愈？”对曰“赐也何敢望回？回也闻一以知十，赐也闻一以知二。”子曰“弗如也；吾与女弗如也。”——孔门里最有底气的弟子，当面把位置摆低了，还给出十对二的具体数目；老师不但没安慰他，反而把这句话坐实。真谦虚有数目，肯说“我不如他”，是因为见过高处。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
