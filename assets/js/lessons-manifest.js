@@ -1404,5 +1404,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '100-yong-ye-ren-er-bu-ning',
+        num: '100',
+        title: '雍也仁而不佞 · 焉用佞',
+        subtitle: '仁在心上 · 不在嘴上',
+        path: 'lessons/100-yong-ye-ren-er-bu-ning/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第五章精讲：或曰“雍也仁而不佞。”子曰“焉用佞？御人以口给，屡憎于人。不知其仁，焉用佞？”——有人夸冉雍有仁德、可惜口才差，孔子偏两次反问：哪里用得着口才？用伶牙俐齿对付人，只招人讨厌。仁在心上，不在嘴上。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
