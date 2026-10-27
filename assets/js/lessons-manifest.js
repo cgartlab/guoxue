@@ -1530,5 +1530,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '109-zi-lu-you-wen',
+        num: '109',
+        title: '子路有闻 · 未之能行',
+        subtitle: '听一句做一句 · 做不到不敢再听',
+        path: 'lessons/109-zi-lu-you-wen/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第十四章精讲：子路有闻，未之能行，唯恐有闻。——孔门最急的学生，下最慢的功夫：听一句就去做一句，做不到就不敢再听。听到的算欠账，做到的才算数。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
