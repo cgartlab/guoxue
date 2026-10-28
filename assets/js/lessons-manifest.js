@@ -1642,5 +1642,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '117-zi-zai-chen-gui-yu',
+        num: '117',
+        title: '子在陈 · 归与归与',
+        subtitle: '狂简斐然 · 不知裁之',
+        path: 'lessons/117-zi-zai-chen-gui-yu/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第二十二章精讲：子在陈，曰：归与！归与！吾党之小子狂简，斐然成章，不知所以裁之。——周游十四年道不行，孔子转身回去教书。喜其才气斐然，忧其志大而略于事：布再好，不裁不成衣。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
