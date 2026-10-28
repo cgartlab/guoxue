@@ -1656,5 +1656,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '118-bo-yi-shu-qi-bu-nian-jiu-e',
+        num: '118',
+        title: '伯夷叔齐 · 不念旧恶',
+        subtitle: '怨是用希 · 求仁得仁',
+        path: 'lessons/118-bo-yi-shu-qi-bu-nian-jiu-e/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第二十三章精讲：子曰：伯夷、叔齐不念旧恶，怨是用希。——两个让出君位的兄弟，一辈子没赢过一次，孔子却把他们捧得最高。不念旧恶不是忘了，是不翻；怨是用希不是没有，是少了。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
