@@ -1614,5 +1614,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '115-ji-wen-zi-san-si',
+        num: '115',
+        title: '季文子三思而后行 · 再斯可矣',
+        subtitle: '谨慎有度 · 过犹不及',
+        path: 'lessons/115-ji-wen-zi-san-si/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第二十章精讲：季文子三思而后行，子闻之曰：再斯可矣。——“再”是两次，不是又一次。孔子不否定谨慎，只说想两遍就够；朱熹点破“多忧而少断”：想得太多，也是一种毛病。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
