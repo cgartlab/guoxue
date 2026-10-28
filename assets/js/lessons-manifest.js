@@ -1600,5 +1600,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '114-ling-yin-zi-wen',
+        num: '114',
+        title: '令尹子文 · 忠矣清矣',
+        subtitle: '三仕三已 · 未知焉得仁',
+        path: 'lessons/114-ling-yin-zi-wen/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第十九章精讲：子张问令尹子文三仕三已无喜无愠，孔子说忠矣；陈文子弃马出走，孔子说清矣——未知，焉得仁？单项的美德，没有智慧把关，够不上最高的仁。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
