@@ -1684,5 +1684,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '120-qiao-yan-ling-se-zu-gong',
+        num: '120',
+        title: '巧言令色足恭 · 匿怨而友其人',
+        subtitle: '左丘明耻之 · 丘亦耻之',
+        path: 'lessons/120-qiao-yan-ling-se-zu-gong/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第二十五章精讲：子曰：巧言、令色、足恭，左丘明耻之，丘亦耻之。匿怨而友其人，左丘明耻之，丘亦耻之。——话说得太好听、脸笑得太过、腰弯得太低，孔子说这三样丢人；心里记着仇、脸上称兄道弟，更丢人。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
