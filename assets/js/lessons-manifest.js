@@ -1670,5 +1670,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '119-wei-sheng-gao-bu-zhi',
+        num: '119',
+        title: '微生高 · 孰谓微生高直',
+        subtitle: '乞醯于邻 · 直者不绕',
+        path: 'lessons/119-wei-sheng-gao-bu-zhi/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第二十四章精讲：子曰：孰谓微生高直？或乞醯焉，乞诸其邻而与之。——一勺醋，孔子把当时公认的“直人”标签撕了下来。不是怪他帮忙，是怪他绕：没有不说没有，借邻居的醋，做自己的人情。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
