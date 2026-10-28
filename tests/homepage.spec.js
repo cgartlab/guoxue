@@ -4,7 +4,7 @@
 //   - 112 lessons (num 01..112, all status:'ready') in lessons-manifest.js
 //   - 7 categories (daolun/xueer/weizheng/bayi/liren/gongyechang/mengxue, num 01..07, all ready)
 //   - Sidebar rendered by homepage.js: 7 groups, collapsed sub-navs, filter + reset links
-//   - Mobile (<768px): sidebar hidden, top numstrip visible (flat sorted chips, 112 in total)
+//   - Mobile (<768px): sidebar hidden, top numstrip visible (flat sorted chips, 113 in total)
 // Run: npx playwright test tests/homepage.spec.js --workers=1
 
 const { test, expect } = require('@playwright/test');
@@ -117,8 +117,8 @@ test.describe('Desktop (1440x910)', () => {
     // Per-category filter links: 7
     await expect(page.locator('.home-sidebar__link--filter')).toHaveCount(7);
 
-    // Course sub-links: 112 (one per ready lesson)
-    await expect(page.locator('.home-sidebar__link--sub')).toHaveCount(112);
+    // Course sub-links: 113 (one per ready lesson)
+    await expect(page.locator('.home-sidebar__link--sub')).toHaveCount(113);
 
     // "全部课程" reset link visible
     const allLink = page.locator('.home-sidebar__nav--all .home-sidebar__link');
@@ -138,7 +138,7 @@ test.describe('Desktop (1440x910)', () => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(112);
+    await expect(cards).toHaveCount(113);
 
     const firstCard = cards.first();
     await expect(firstCard.locator('.lesson-title')).toContainText('论语');
@@ -152,7 +152,7 @@ test.describe('Desktop (1440x910)', () => {
     const values = page.locator('.series-stat__value');
     await expect(values).toHaveCount(3); // 已上线 / 筹备中 / 学科门类
     const vals = await values.allTextContents();
-    expect(vals[0]).toBe('112'); // 已上线
+    expect(vals[0]).toBe('113'); // 已上线
     expect(vals[1]).toBe('0');  // 筹备中
     expect(vals[2]).toBe('7');  // 学科门类
   });
@@ -167,7 +167,7 @@ test.describe('Tablet (778x1024)', () => {
 
     await expect(page.locator('.home-sidebar')).toBeVisible();
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(112);
+    await expect(cards).toHaveCount(113);
   });
 });
 

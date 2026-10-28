@@ -1586,5 +1586,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '113-zang-wen-zhong-ju-cai',
+        num: '113',
+        title: '臧文仲居蔡 · 何如其知',
+        subtitle: '山节藻棁 · 聪明与智慧',
+        path: 'lessons/113-zang-wen-zhong-ju-cai/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第十八章精讲：子曰：臧文仲居蔡，山节藻棁，何如其知也？——聪明人办蠢事：给大龟盖天子宗庙级别的房子。孔子的智：敬该敬的，把心思放在正事上。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
