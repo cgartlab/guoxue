@@ -1628,5 +1628,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '116-ning-wu-zi-bang-you-dao',
+        num: '116',
+        title: '宁武子 · 邦有道则知',
+        subtitle: '其知可及 · 其愚不可及',
+        path: 'lessons/116-ning-wu-zi-bang-you-dao/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第二十一章精讲：子曰：宁武子，邦有道则知，邦无道则愚。其知可及也，其愚不可及也。——好时代把本事拿出来，坏时代把锋芒收起来。聪明是技术，装傻是心地：孔子说“愚不可及”，不是骂人笨，是一声佩服。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
