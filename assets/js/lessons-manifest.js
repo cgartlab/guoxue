@@ -1572,5 +1572,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '112-yan-ping-zhong',
+        num: '112',
+        title: '晏平仲 · 善与人交',
+        subtitle: '久而敬之 · 交久弥敬',
+        path: 'lessons/112-yan-ping-zhong/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第十七章精讲：子曰：晏平仲善与人交，久而敬之。——朋友处得越久，敬意越不散。孔子夸的是交友的真本事：不因熟了就随便，不因久了就轻慢。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
