@@ -1698,5 +1698,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '121-yi-yi-hu-nei-zi-song',
+        num: '121',
+        title: '已矣乎 · 见其过而内自讼',
+        subtitle: '一声叹气 · 内心开法庭',
+        path: 'lessons/121-yi-yi-hu-nei-zi-song/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第二十六章精讲：子曰：已矣乎！吾未见能见其过而内自讼者也。——孔子叹气：罢了罢了！我从没见过能看见自己的过错、又在自己心里责备自己的人。看别人的错眼睛尖，看自己的错眼睛钝；心里开个法庭，自己审自己。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
