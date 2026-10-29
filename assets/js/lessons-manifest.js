@@ -1880,5 +1880,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '134-xi-hu-wu-jian-qi-jin',
+        num: '134',
+        title: '惜乎 · 吾见其进',
+        subtitle: '只见他往前走，没见他停下来',
+        path: 'lessons/134-xi-hu-wu-jian-qi-jin/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·雍也》第十一章精讲：子谓颜渊，曰：惜乎！吾见其进也，未见其止也。——颜回去世后，孔子回忆这位学生：只看见他不断前进，从没看见他停下来。进步不怕慢，就怕停。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
