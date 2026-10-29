@@ -1768,5 +1768,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '126-zhou-ji-bu-ji-fu',
+        num: '126',
+        title: '子华使于齐 · 周急不继富',
+        subtitle: '雪中送炭 · 不锦上添花',
+        path: 'lessons/126-zhou-ji-bu-ji-fu/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·雍也》第三章精讲：子华使于齐，冉子为其母请粟。子曰：君子周急不继富。原思为之宰，与之粟九百，辞。子曰：毋！以与尔邻里乡党乎！——雪中送炭，不锦上添花：给不缺的少给，给真需要的多给。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
