@@ -1796,5 +1796,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '128-hui-ye-san-yue-bu-wei-ren',
+        num: '128',
+        title: '三月不违仁 · 日月至焉',
+        subtitle: '仁是常住的家',
+        path: 'lessons/128-hui-ye-san-yue-bu-wei-ren/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·雍也》第五章精讲：子曰：回也，其心三月不违仁，其余则日月至焉而已矣。——颜回的心长久不离开仁，其他学生只是一天或一个月到达一次。孔子拿时间当尺子：仁不是偶尔做客，是常住的家。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
