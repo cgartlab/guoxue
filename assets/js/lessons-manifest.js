@@ -1824,5 +1824,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '130-ji-shi-shi-min-zi-qian',
+        num: '130',
+        title: '闵子辞费宰 · 汶上之志',
+        subtitle: '该辞的官，体面地辞',
+        path: 'lessons/130-ji-shi-shi-min-zi-qian/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·雍也》第七章精讲：季氏使闵子骞为费宰，闵子骞说“善为我辞焉！如有复我者，则吾必在汶上矣”。肥缺摆在眼前，一口辞掉——话说得体面，志守得干净；有所不为，才有所为。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
