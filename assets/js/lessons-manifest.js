@@ -1754,5 +1754,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '125-ai-gong-wen-hao-xue',
+        num: '125',
+        title: '哀公问好学 · 不迁怒不贰过',
+        subtitle: '有颜回者好学',
+        path: 'lessons/125-ai-gong-wen-hao-xue/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·雍也》第二章精讲：哀公问：弟子孰为好学？孔子对曰：有颜回者好学，不迁怒，不贰过。不幸短命死矣。今也则亡，未闻好学者也。——好学不只是读书：管住脾气不撒人，同一个错不犯第二回。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
