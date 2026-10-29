@@ -1782,5 +1782,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '127-li-niu-zhi-zi',
+        num: '127',
+        title: '犁牛之子 · 山川其舍诸',
+        subtitle: '英雄不问出处',
+        path: 'lessons/127-li-niu-zhi-zi/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·雍也》第四章精讲：子谓仲弓曰：犁牛之子骍且角，虽欲勿用，山川其舍诸？——耕牛生的小牛犊毛色赤红、双角端正，就算有人嫌它出身、不想用它做祭祀，山川之神也不会舍弃它。孔子拿牛打比方替穷学生仲弓撑腰：看人看品行，不看出身。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
