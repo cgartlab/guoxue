@@ -1,9 +1,10 @@
-const { chromium } = require('playwright');
+const { chromium } = require('playwright-core');
 const path = require('path');
 
 const targets = [
-  ['117', 'lessons/117-zi-zai-chen-gui-yu/index.html'],
-  ['118', 'lessons/118-bo-yi-shu-qi-bu-nian-jiu-e/index.html'],
+  ['122', 'lessons/122-yan-yuan-ji-lu-shi/index.html'],
+  ['123', 'lessons/123-shi-shi-zhi-yi/index.html'],
+  ['124', 'lessons/124-yong-ye-ke-shi-nan-mian/index.html'],
 ];
 
 (async () => {

@@ -1740,5 +1740,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '124-yong-ye-ke-shi-nan-mian',
+        num: '124',
+        title: '雍也可使南面',
+        subtitle: '仲弓之器 · 可当大任',
+        path: 'lessons/124-yong-ye-ke-shi-nan-mian/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·雍也》第一章精讲：子曰：雍也可使南面。——孔子说：冉雍这个人，可以让他面朝南坐、主政一方。南面是天子诸侯的位子，一句话把学生推到最高处——看人看德行器量，不看出身。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
