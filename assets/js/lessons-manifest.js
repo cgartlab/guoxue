@@ -1726,5 +1726,19 @@ window.GUOXUE_LESSONS = [
         subject: 'gongyechang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '123-shi-shi-zhi-yi',
+        num: '123',
+        title: '十室之邑 · 必有忠信',
+        subtitle: '不如丘之好学也',
+        path: 'lessons/123-shi-shi-zhi-yi/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·公冶长》第二十八章精讲：子曰：十室之邑，必有忠信如丘者焉，不如丘之好学也。——十户人家的小村子，也有像孔子一样忠信的人；差别只在好学。忠信是天生的好底子，好学是后天的真功夫。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'gongyechang',
+        tier: 'core',
+        featured: false
     }
 ];
