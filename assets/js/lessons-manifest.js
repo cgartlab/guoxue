@@ -1838,5 +1838,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '131-bo-niu-you-ji',
+        num: '131',
+        title: '伯牛有疾 · 命矣夫',
+        subtitle: '隔窗握手，一句话说两遍',
+        path: 'lessons/131-bo-niu-you-ji/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·雍也》第八章精讲：伯牛有疾，子问之，自牖执其手，曰：亡之，命矣夫！斯人也而有斯疾也！斯人也而有斯疾也！——德行科的好学生得了恶疾，孔子隔窗握手，一句话说了两遍。真关心要到跟前；退一步是分寸，伸一手是情分。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
