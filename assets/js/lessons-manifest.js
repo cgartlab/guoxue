@@ -1866,5 +1866,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '133-yuan-si-wei-zhi-zai',
+        num: '133',
+        title: '原思为宰 · 邻里乡党',
+        subtitle: '该拿的拿，该分的分',
+        path: 'lessons/133-yuan-si-wei-zhi-zai/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·雍也》第十章精讲：原思为之宰，与之粟九百，辞。子曰：毋！以与尔邻里乡党乎！——学生当管家，给俸禄他推辞，孔子说别推，分给街坊邻居吧。当得的别假清高，多余的别独吞。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
