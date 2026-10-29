@@ -1810,5 +1810,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '129-ji-kang-zi-wen-cong-zheng',
+        num: '129',
+        title: '季康问从政 · 果达艺',
+        subtitle: '三个人，三把好手',
+        path: 'lessons/129-ji-kang-zi-wen-cong-zheng/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·雍也》第六章精讲：季康子问从政——仲由果决，端木赐通达，冉求多艺，孔子连答三遍：于从政乎何有！果是胆气，达是见识，艺是才干；人人有长处，用人如配钥匙。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
