@@ -1852,5 +1852,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '132-xian-zai-hui-ye',
+        num: '132',
+        title: '贤哉回也 · 不改其乐',
+        subtitle: '一箪食 一瓢饮，穷不夺乐',
+        path: 'lessons/132-xian-zai-hui-ye/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·雍也》第九章精讲：贤哉回也！一箪食，一瓢饮，在陋巷，人不堪其忧，回也不改其乐。贤哉回也！——一竹筒饭、一瓢水、一条破巷子，别人受不了的苦，颜回照样高兴。东西可以少，人不能跟着矮。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
