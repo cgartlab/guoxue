@@ -2118,5 +2118,47 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '151-zhi-sheng-wen-ze-ye',
+        num: '151',
+        title: '质胜文则野 · 文质彬彬，然后君子',
+        subtitle: '里子要厚，面子要正',
+        path: 'lessons/151-zhi-sheng-wen-ze-ye/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第二十八章精讲：子曰：质胜文则野，文胜质则史。文质彬彬，然后君子。底子太实在、不会修饰，人就粗野；表面太讲究、里面没东西，人就浮华。两样配得上，才叫君子——孔子看人只看两头：里头有没有真东西，外头有没有个样子。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
+    },
+    {
+        id: '152-zhong-yong-zhi-wei-de',
+        num: '152',
+        title: '中庸之为德 · 民鲜久矣',
+        subtitle: '不偏不倚最难',
+        path: 'lessons/152-zhong-yong-zhi-wei-de/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第二十九章精讲：子曰：中庸之为德也，其至矣乎！民鲜久矣。中是不偏不倚、恰好，庸是平常、常道。孔子把中庸夸成最高的德行，又叹气说人们缺少它很久了——走极端多省力，拿捏火候最费劲；中庸不是和稀泥，是该多少就多少。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
+    },
+    {
+        id: '153-bo-shi-yu-min',
+        num: '153',
+        title: '博施于民 · 己欲立而立人',
+        subtitle: '仁从身边做起',
+        path: 'lessons/153-bo-shi-yu-min/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第三十章精讲（雍也篇收官）：子贡问博施济众算不算仁，孔子说那已是圣，连尧舜都难。仁其实很近——己欲立而立人，己欲达而达人；能近取譬，从身边做起，就是行仁的方法。道不远人，仁在手上。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
