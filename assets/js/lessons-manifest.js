@@ -1950,5 +1950,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '139-bu-you-zhu-tuo-zhi-ning',
+        num: '139',
+        title: '不有祝鮀之佞 · 难乎免于今之世',
+        subtitle: '光有嘴皮子不够，立身靠品行',
+        path: 'lessons/139-bu-you-zhu-tuo-zhi-ning/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第十六章精讲：不有祝鮀之佞，而有宋朝之美，难乎免于今之世矣。巧嘴和俊脸轮流吃香，老实人反倒难立足——孔子一声叹气，是给整个时代把脉。光有嘴皮子不够，立身靠品行。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
