@@ -1978,5 +1978,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '141-ren-zhi-sheng-ye-zhi',
+        num: '141',
+        title: '人之生也直 · 罔之生也幸而免',
+        subtitle: '立身靠正直，侥幸不长久',
+        path: 'lessons/141-ren-zhi-sheng-ye-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第十八章精讲：人之生也直，罔之生也幸而免。人立身处世靠的是正直；不正直的人也能活下去，那不过是侥幸躲过祸害。正直不是吃亏，是立身的根——侥幸是借来的运气，迟早要还。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
