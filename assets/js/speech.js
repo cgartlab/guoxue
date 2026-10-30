@@ -18,7 +18,7 @@
 
     /* ---------- 状态 ---------- */
     var state = 'idle';            // idle | playing | paused
-    var RATE_STEPS = [0.8, 1.0, 1.25];
+    var RATE_STEPS = [0.75, 0.9, 1.05];
     var rateIdx = 1;
     var voice = null;
     var cur = null;                // { slide, list:[{text,els,blockId,si}], i }
