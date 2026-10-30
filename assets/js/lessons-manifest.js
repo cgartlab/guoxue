@@ -2006,5 +2006,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '143-zhong-ren-yi-shang-ke-yi-yu-shang',
+        num: '143',
+        title: '中人以上可以语上也 · 中人以下不可以语上也',
+        subtitle: '不是看不起人，是话要说到人心里',
+        path: 'lessons/143-zhong-ren-yi-shang-ke-yi-yu-shang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第二十章精讲：中人以上，可以语上也；中人以下，不可以语上也。资质中等以上的，可以跟他讲高深的道理；中等以下的，讲了也接不住。这不是把人分三六九等，是教学的火候——话要说到对方接得住的地方。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
