@@ -1894,5 +1894,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '135-li-bu-zu-zhong-dao-er-fei',
+        num: '135',
+        title: '力不足者 · 今女画',
+        subtitle: '不是没力气，是自己先画了条线',
+        path: 'lessons/135-li-bu-zu-zhong-dao-er-fei/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·雍也》第十二章精讲：冉求曰：非不说子之道，力不足也。子曰：力不足者，中道而废。今女画。——学生说不是不喜欢老师的道，是力气不够。孔子说：真力气不够的人走到半路才停下；你今天是还没走，自己先画了条线。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
