@@ -2034,5 +2034,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '145-zhi-zhe-le-shui-ren-zhe-le-shan',
+        num: '145',
+        title: '知者乐水 · 仁者乐山',
+        subtitle: '一个爱水的活，一个爱山的稳',
+        path: 'lessons/145-zhi-zhe-le-shui-ren-zhe-le-shan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第二十二章精讲：知者乐水，仁者乐山。知者动，仁者静。知者乐，仁者寿。水能变、能容、流得远，像明智的人；山不动、厚重、立得久，像仁厚的人。孔子拿山水说人，两种好品格都在里面。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
