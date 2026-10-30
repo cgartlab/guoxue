@@ -1936,5 +1936,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '138-meng-zhi-fan-bu-fa',
+        num: '138',
+        title: '孟之反不伐 · 非敢后也马不进也',
+        subtitle: '最险的活抢着干，功劳推给马',
+        path: 'lessons/138-meng-zhi-fan-bu-fa/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第十五章精讲：孟之反不伐，奔而殿，将入门，策其马，曰：非敢后也，马不进也。败仗殿后有大功，城门口一鞭自嘲把功劳推给马。最险的活抢着干，到手的功劳让出去。——本章讲的是自己成了有功之人该怎么办。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
