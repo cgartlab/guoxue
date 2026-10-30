@@ -1922,5 +1922,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '137-zi-you-wei-wu-cheng-zai',
+        num: '137',
+        title: '行不由径 · 非公事不至偃之室',
+        subtitle: '看人看小节，举人不看虚',
+        path: 'lessons/137-zi-you-wei-wu-cheng-zai/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第十四章精讲：子游为武城宰，孔子问"女得人焉耳乎"，子游举澹台灭明——行不由径，非公事未尝至于偃之室。选修人看小事，做人走正路，公私留条线。——本章讲的是怎么看出别人是不是明白人。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
