@@ -1964,5 +1964,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '140-shui-neng-chu-bu-you-hu',
+        num: '140',
+        title: '谁能出不由户 · 何莫由斯道也',
+        subtitle: '正道像家门，人人必经',
+        path: 'lessons/140-shui-neng-chu-bu-you-hu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第十七章精讲：谁能出不由户？何莫由斯道也？孔子拿出门必经门户打比方，感叹正道明明人人找得到，却少有人肯走。道不远人就在眼前，难的不是懂，是走。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
