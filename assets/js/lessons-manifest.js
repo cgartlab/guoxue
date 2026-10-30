@@ -2202,5 +2202,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '157-zhi-yu-dao-ju-yu-de',
+        num: '157',
+        title: '志于道 · 据于德 · 依于仁 · 游于艺',
+        subtitle: '人生四个支点',
+        path: 'lessons/157-zhi-yu-dao-ju-yu-de/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第四章精讲：子曰：志于道，据于德，依于仁，游于艺。立志要朝着道，站稳要站稳在德，待人要依傍着仁，本事要练到从容自在。十二个字，方向、根基、依傍、涵泳——孔子给学生开的一张人生课表，四个支点一步挨一步。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
