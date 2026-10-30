@@ -26,6 +26,7 @@ const targets = [
   ['143', 'lessons/143-zhong-ren-yi-shang-ke-yi-yu-shang/index.html'],
   ['144', 'lessons/144-fan-chi-wen-zhi-wu-min-zhi-yi/index.html'],
   ['145', 'lessons/145-zhi-zhe-le-shui-ren-zhe-le-shan/index.html'],
+  ['146', 'lessons/146-qi-yi-bian-zhi-yu-lu/index.html'],
 ];
 
 (async () => {

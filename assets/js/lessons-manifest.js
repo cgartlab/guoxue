@@ -2048,5 +2048,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '146-qi-yi-bian-zhi-yu-lu',
+        num: '146',
+        title: '齐一变，至于鲁 · 鲁一变，至于道',
+        subtitle: '改事情要一层一层来',
+        path: 'lessons/146-qi-yi-bian-zhi-yu-lu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第二十三章精讲：齐一变，至于鲁；鲁一变，至于道。齐富强而少礼，补一步就到鲁的火候；鲁礼乐齐备却走了样，整一步就回先王之道。好事情都有台阶，一步跨不到。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
