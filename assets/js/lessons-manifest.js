@@ -2188,5 +2188,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '156-de-zhi-bu-xiu',
+        num: '156',
+        title: '德之不修 · 学之不讲 · 是吾忧也',
+        subtitle: '孔子只怕四件事',
+        path: 'lessons/156-de-zhi-bu-xiu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第三章精讲：子曰：德之不修，学之不讲，闻义不能徙，不善不能改，是吾忧也。德要天天修，学要讲得明，该做的别拖，有错就改——四件事，四个“不”字，全在说自己。孔子忧的不是穷、不是没人用，是自己这四样没做到。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
