@@ -22,6 +22,7 @@ const targets = [
   ['139', 'lessons/139-bu-you-zhu-tuo-zhi-ning/index.html'],
   ['140', 'lessons/140-shui-neng-chu-bu-you-hu/index.html'],
   ['141', 'lessons/141-ren-zhi-sheng-ye-zhi/index.html'],
+  ['142', 'lessons/142-zhi-zhi-zhe-bu-ru-hao-zhi-zhe/index.html'],
 ];
 
 (async () => {

@@ -1992,5 +1992,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '142-zhi-zhi-zhe-bu-ru-hao-zhi-zhe',
+        num: '142',
+        title: '知之者不如好之者 · 好之者不如乐之者',
+        subtitle: '喜欢是第一步，乐在其中是真功夫',
+        path: 'lessons/142-zhi-zhi-zhe-bu-ru-hao-zhi-zhe/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第十九章精讲：知之者不如好之者，好之者不如乐之者。孔子把求学的劲头搭成三级台阶——知、好、乐：懂是入脑，好是入心，乐是长久。兴趣是最好的老师，但老师也得起步。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
