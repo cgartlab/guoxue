@@ -2090,5 +2090,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '149-jun-zi-bo-xue-yu-wen',
+        num: '149',
+        title: '博学于文 · 约之以礼',
+        subtitle: '学问要广，做人要收',
+        path: 'lessons/149-jun-zi-bo-xue-yu-wen/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第二十六章精讲：子曰：君子博学于文，约之以礼，亦可以弗畔矣夫！孔子说：把书读广，再用礼把自己收住，就不会走偏。学得广是开眼界，约以礼是定分寸——只博不约人就飘，只约不博人就窄。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
