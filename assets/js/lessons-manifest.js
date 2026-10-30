@@ -1908,5 +1908,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '136-jun-zi-ru-xiao-ren-ru',
+        num: '136',
+        title: '君子儒 · 小人儒',
+        subtitle: '同样读书，心要往大处长',
+        path: 'lessons/136-jun-zi-ru-xiao-ren-ru/index.html',
+        grade: '小学高年级·初中',
+        description: '《论语·雍也》第十三章精讲：子谓子夏曰：女为君子儒，无为小人儒。——同样读书，为明理、帮人而学的，心越读越宽；为显摆、换饭而学的，书越读人越小。决定读成哪种人的，不是书，是心。配套十道互动测验。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
