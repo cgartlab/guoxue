@@ -69,11 +69,19 @@ window.GUOXUE_CATEGORIES = [
         order: 7
     },
     {
-        key: 'mengxue',
-        label: '蒙学',
+        key: 'shuer',
+        label: '述而',
         num: '08',
-        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        description: '《论语·述而篇》各章精讲',
         status: 'ready',
         order: 8
+    },
+    {
+        key: 'mengxue',
+        label: '蒙学',
+        num: '09',
+        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        status: 'ready',
+        order: 9
     }
 ];

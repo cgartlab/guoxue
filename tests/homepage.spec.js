@@ -1,10 +1,10 @@
 // tests/homepage.spec.js
 // Playwright E2E tests for homepage v3 (static sidebar + series cover + mobile numstrip)
 // Current structure facts:
-//   - 153 lessons (num 01..153, all status:'ready') in lessons-manifest.js
-//   - 8 categories (daolun/xueer/weizheng/bayi/liren/gongyechang/yongye/mengxue, num 01..08, all ready)
-//   - Sidebar rendered by homepage.js: 8 groups, collapsed sub-navs, filter + reset links
-//   - Mobile (<768px): sidebar hidden, top numstrip visible (flat sorted chips, 153 in total)
+//   - 154 lessons (num 01..154, all status:'ready') in lessons-manifest.js
+//   - 9 categories (daolun/xueer/weizheng/bayi/liren/gongyechang/yongye/shuer/mengxue, num 01..09, all ready)
+//   - Sidebar rendered by homepage.js: 9 groups, collapsed sub-navs, filter + reset links
+//   - Mobile (<768px): sidebar hidden, top numstrip visible (flat sorted chips, 154 in total)
 // Run: npx playwright test tests/homepage.spec.js --workers=1
 
 const { test, expect } = require('@playwright/test');
@@ -87,38 +87,38 @@ test.describe('Desktop (1470x910)', () => {
     await expect(page.locator('#drawer-toggle')).toHaveCount(0);
   });
 
-  test('sidebar renders 8 ready categories (default collapsed)', async ({ page }) => {
+  test('sidebar renders 9 ready categories (default collapsed)', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
-    // 8 category groups
+    // 9 category groups
     const groups = page.locator('.home-sidebar__group');
-    await expect(groups).toHaveCount(8);
+    await expect(groups).toHaveCount(9);
 
-    // 8 category headers
+    // 9 category headers
     const headers = page.locator('.home-sidebar__category-header');
-    await expect(headers).toHaveCount(8);
+    await expect(headers).toHaveCount(9);
 
     // Header numbers 01..08 in order
     const iconTexts = await page.locator('.home-sidebar__category-icon').allTextContents();
-    expect(iconTexts).toEqual(['01', '02', '03', '04', '05', '06', '07', '08']);
+    expect(iconTexts).toEqual(['01', '02', '03', '04', '05', '06', '07', '08', '09']);
 
-    // Header labels in order: 导论/学而/为政/八佾/里仁/公冶长/雍也/蒙学
+    // Header labels in order: 导论/学而/为政/八佾/里仁/公冶长/雍也/述而/蒙学
     const labelTexts = await page.locator('.home-sidebar__category-label').allTextContents();
-    expect(labelTexts).toEqual(['导论', '学而', '为政', '八佾', '里仁', '公冶长', '雍也', '蒙学']);
+    expect(labelTexts).toEqual(['导论', '学而', '为政', '八佾', '里仁', '公冶长', '雍也', '述而', '蒙学']);
 
     // Sub-navs (non-all) hidden by default
     const subNavs = page.locator('.home-sidebar__nav:not(.home-sidebar__nav--all)');
-    await expect(subNavs).toHaveCount(8);
+    await expect(subNavs).toHaveCount(9);
     for (let i = 0; i < await subNavs.count(); i++) {
       const isHidden = await subNavs.nth(i).evaluate(el => el.hasAttribute('hidden'));
       expect(isHidden).toBe(true);
     }
 
-    // Per-category filter links: 8
-    await expect(page.locator('.home-sidebar__link--filter')).toHaveCount(8);
+    // Per-category filter links: 9
+    await expect(page.locator('.home-sidebar__link--filter')).toHaveCount(9);
 
-    // Course sub-links: 153 (one per ready lesson)
-    await expect(page.locator('.home-sidebar__link--sub')).toHaveCount(153);
+    // Course sub-links: 154 (one per ready lesson)
+    await expect(page.locator('.home-sidebar__link--sub')).toHaveCount(154);
 
     // "全部课程" reset link visible
     const allLink = page.locator('.home-sidebar__nav--all .home-sidebar__link');
@@ -134,11 +134,11 @@ test.describe('Desktop (1470x910)', () => {
     await expect(searchInput).toHaveAttribute('placeholder', '搜索课程…');
   });
 
-  test('lesson cards render correctly (153 ready lessons)', async ({ page }) => {
+  test('lesson cards render correctly (154 ready lessons)', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(153);
+    await expect(cards).toHaveCount(154);
 
     const firstCard = cards.first();
     await expect(firstCard.locator('.lesson-title')).toContainText('论语');
@@ -146,15 +146,15 @@ test.describe('Desktop (1470x910)', () => {
     await expect(firstCard.locator('.lesson-num')).toHaveText('01');
   });
 
-  test('series cover stats show correct counts (153/0/8)', async ({ page }) => {
+  test('series cover stats show correct counts (154/0/9)', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     const values = page.locator('.series-stat__value');
     await expect(values).toHaveCount(3); // 已上线 / 筹备中 / 学科门类
     const vals = await values.allTextContents();
-    expect(vals[0]).toBe('153'); // 已上线
+    expect(vals[0]).toBe('154'); // 已上线
     expect(vals[1]).toBe('0');  // 筹备中
-    expect(vals[2]).toBe('8');  // 学科门类
+    expect(vals[2]).toBe('9');  // 学科门类
   });
 });
 
@@ -162,12 +162,12 @@ test.describe('Desktop (1470x910)', () => {
 test.describe('Tablet (778x1024)', () => {
   test.use({ viewport: { width: 778, height: 1024 } });
 
-  test('sidebar visible, 153 lesson cards', async ({ page }) => {
+  test('sidebar visible, 154 lesson cards', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     await expect(page.locator('.home-sidebar')).toBeVisible();
     const cards = page.locator('#lesson-cards .ds-lesson-card');
-    await expect(cards).toHaveCount(153);
+    await expect(cards).toHaveCount(154);
   });
 });
 
@@ -175,7 +175,7 @@ test.describe('Tablet (778x1024)', () => {
 test.describe('Mobile (375x812)', () => {
   test.use({ viewport: { width: 375, height: 812 } });
 
-  test('sidebar hidden, numstrip visible with 153 chips and horizontal scroll', async ({ page }) => {
+  test('sidebar hidden, numstrip visible with 154 chips and horizontal scroll', async ({ page }) => {
     await page.goto(`http://localhost:${PORT}/`);
 
     // No menu/drawer toggles on homepage
@@ -189,23 +189,23 @@ test.describe('Mobile (375x812)', () => {
     const numstrip = page.locator('#home-numstrip');
     await expect(numstrip).toBeVisible();
 
-    // 按门类分组：8 组
+    // 按门类分组：9 组
     const groups = page.locator('.home-numstrip__group');
-    await expect(groups).toHaveCount(8);
+    await expect(groups).toHaveCount(9);
 
-    // 门类标签顺序：导论/学而/为政/八佾/里仁/公冶长/雍也/蒙学
+    // 门类标签顺序：导论/学而/为政/八佾/里仁/公冶长/雍也/述而/蒙学
     const labels = await page.locator('.home-numstrip__label').allTextContents();
-    expect(labels).toEqual(['导论', '学而', '为政', '八佾', '里仁', '公冶长', '雍也', '蒙学']);
+    expect(labels).toEqual(['导论', '学而', '为政', '八佾', '里仁', '公冶长', '雍也', '述而', '蒙学']);
 
-    // 组内 chip 数：导论=2、学而=16、为政=24、八佾=26、里仁=26、公冶长=28、雍也=30、蒙学=1（合计 153）
-    const expectedChipCounts = [2, 16, 24, 26, 26, 28, 30, 1];
+    // 组内 chip 数：导论=2、学而=16、为政=24、八佾=26、里仁=26、公冶长=28、雍也=30、述而=1、蒙学=1（合计 154）
+    const expectedChipCounts = [2, 16, 24, 26, 26, 28, 30, 1, 1];
     for (let i = 0; i < expectedChipCounts.length; i++) {
       await expect(groups.nth(i).locator('.home-numstrip__chip')).toHaveCount(expectedChipCounts[i]);
     }
 
-    // 全部 153 个序号 chip，按门类顺序排列
+    // 全部 154 个序号 chip，按门类顺序排列
     const chips = page.locator('.home-numstrip__chip');
-    await expect(chips).toHaveCount(153);
+    await expect(chips).toHaveCount(154);
     // 首组「导论」首项 = 01；末组「蒙学」唯一项 = 03
     await expect(chips.first()).toHaveText('01');
     await expect(chips.last()).toHaveText('03');
@@ -296,7 +296,7 @@ test.describe('Interactions', () => {
     const allLink = page.locator('.home-sidebar__nav--all .home-sidebar__link');
     await allLink.click({ noWaitAfter: true });
 
-    await expect(page.locator('#lesson-cards .ds-lesson-card')).toHaveCount(153);
+    await expect(page.locator('#lesson-cards .ds-lesson-card')).toHaveCount(154);
     await expect(page.locator('#filter-title')).toContainText('全部课程');
   });
 });

@@ -2160,5 +2160,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '154-shu-er-bu-zuo',
+        num: '154',
+        title: '述而不作 · 信而好古',
+        subtitle: '把好东西传下去',
+        path: 'lessons/154-shu-er-bu-zuo/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第一章精讲（述而篇开篇）：子曰：述而不作，信而好古，窃比于我老彭。孔子说自己只把前人的好东西讲清楚、传下去，不另造一套；相信并喜爱古代的东西，私下把自己比作老彭。能创而不创，是更大的分寸——传，也是本事。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
