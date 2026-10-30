@@ -2216,5 +2216,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '158-tian-sheng-de-yu-yu',
+        num: '158',
+        title: '天生德于予 · 桓魋其如予何',
+        subtitle: '一句话的底气',
+        path: 'lessons/158-tian-sheng-de-yu-yu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第五章精讲：子曰：天生德于予，桓魋其如予何？在宋国被司马桓魋追害，孔子一句安安静静的话稳住弟子，随后又悄悄离开——心里不怕，脚下灵活。平时积的德，急时是胆；正气是最硬的护身符。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
