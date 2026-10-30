@@ -2062,5 +2062,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '147-gu-bu-gu-gu-zai-gu-zai',
+        num: '147',
+        title: '觚不觚 · 觚哉！觚哉！',
+        subtitle: '名字还在，样子没了',
+        path: 'lessons/147-gu-bu-gu-gu-zai-gu-zai/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第二十四章精讲：觚不觚，觚哉！觚哉！觚本是上圆下方、有棱角的酒器，后来被改得没了棱，名字却还叫觚。孔子捧着它连声叹气——一只酒器走样没人管，礼崩乐坏就是从名不副实开始的。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
