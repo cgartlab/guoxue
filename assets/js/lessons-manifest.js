@@ -2104,5 +2104,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '150-zi-jian-nan-zi',
+        num: '150',
+        title: '子见南子 · 予所否者，天厌之',
+        subtitle: '被误会了，说清楚',
+        path: 'lessons/150-zi-jian-nan-zi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第二十七章精讲：子见南子，子路不说。夫子矢之曰：予所否者，天厌之！天厌之！孔子去拜见把持卫国朝政的南子，子路当场沉下脸，孔子急得赌咒发誓。绕不开的人也得去见，那是为了办事；被最亲的学生误会，才最难受——问心无愧的人，才敢把话说到底。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
