@@ -2174,5 +2174,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '155-mo-er-shi-zhi',
+        num: '155',
+        title: '默而识之 · 学而不厌 · 诲人不倦',
+        subtitle: '三件事做一辈子',
+        path: 'lessons/155-mo-er-shi-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第二章精讲：子曰：默而识之，学而不厌，诲人不倦，何有于我哉？记在心里是自己知道，学不够是自己要求自己，教不烦是对别人负责。三件事没有一件靠天分，全靠在日子里熬。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
