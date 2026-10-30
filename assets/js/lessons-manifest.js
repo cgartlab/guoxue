@@ -2076,5 +2076,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '148-zai-wo-wen-jing-you-ren',
+        num: '148',
+        title: '井有仁焉 · 君子可逝不可陷',
+        subtitle: '好心也得带脑子',
+        path: 'lessons/148-zai-wo-wen-jing-you-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第二十五章精讲：宰我问曰：仁者，虽告之曰：井有仁焉，其从之也？子曰：何为其然也？君子可逝也，不可陷也；可欺也，不可罔也。宰我拿“井里有人你跳不跳”考老师，孔子说：可以跑过去，不能把自己搭进去；可以被人骗，不能被绕糊涂——好心也得带脑子。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
