@@ -2020,5 +2020,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yongye',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '144-fan-chi-wen-zhi-wu-min-zhi-yi',
+        num: '144',
+        title: '樊迟问知 · 务民之义，敬鬼神而远之',
+        subtitle: '力气花在人事上，难事抢在前头',
+        path: 'lessons/144-fan-chi-wen-zhi-wu-min-zhi-yi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·雍也》第二十一章精讲：樊迟问知。子曰：务民之义，敬鬼神而远之，可谓知矣。问仁。曰：仁者先难而后获，可谓仁矣。明智就是把该做的事做实、不靠求来的运气；仁就是难事抢先、好处退后。孔子把大道理讲成了家常话。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'yongye',
+        tier: 'core',
+        featured: false
     }
 ];
