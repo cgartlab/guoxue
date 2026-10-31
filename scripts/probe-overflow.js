@@ -44,6 +44,7 @@ const targets = [
   ['161', 'lessons/161-sheng-ren-wu-bu-de-er-jian/index.html'],
   ['162', 'lessons/162-diao-er-bu-gang/index.html'],
   ['163', 'lessons/163-bu-zhi-er-zuo-zhi/index.html'],
+  ['164', 'lessons/164-hu-xiang-tong-zi/index.html'],
 ];
 
 (async () => {

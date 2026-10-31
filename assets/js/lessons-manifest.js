@@ -2300,5 +2300,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '164-hu-xiang-tong-zi',
+        num: '164',
+        title: '互乡童子 · 与人为善',
+        subtitle: '看进步，不揪老底',
+        path: 'lessons/164-hu-xiang-tong-zi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第二十九章精讲：互乡难与言，童子见，门人惑。子曰：与其进也，不与其退也，唯何甚！人洁己以进，与其洁也，不保其往也。孔子接纳一个出了名“难说话”地方来的孩子——看今天的干净，不揪过去的老底。对己要诚，待人要宽，与人为善是待人的仁厚。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
