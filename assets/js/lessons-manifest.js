@@ -2244,5 +2244,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '160-zi-yi-si-jiao',
+        num: '160',
+        title: '子以四教 · 文行忠信',
+        subtitle: '孔子开的四门课',
+        path: 'lessons/160-zi-yi-si-jiao/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第二十五章精讲：子以四教：文，行，忠，信。八个字，一份最简的课表——文管脑子、行管手脚、忠管心、信管嘴，四样齐全才是一个完整的人。读书是为了做事，做事要靠尽心，说话必须算数。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
