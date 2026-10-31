@@ -2258,5 +2258,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '161-sheng-ren-wu-bu-de-er-jian',
+        num: '161',
+        title: '圣人吾不得而见之 · 有恒者斯可矣',
+        subtitle: '见不到圣人，见个有恒的也行',
+        path: 'lessons/161-sheng-ren-wu-bu-de-er-jian/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第二十六章精讲：圣人，吾不得而见之矣；得见君子者，斯可矣。善人，吾不得而见之矣；得见有恒者，斯可矣。亡而为有，虚而为盈，约而为泰，难乎有恒矣。孔子把标准一层层往下退，退到普通人也走得动的地方——有恒。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
