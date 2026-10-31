@@ -2286,5 +2286,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '163-bu-zhi-er-zuo-zhi',
+        num: '163',
+        title: '不知而作 · 多闻多见',
+        subtitle: '不懂不装懂，老实求知',
+        path: 'lessons/163-bu-zhi-er-zuo-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第二十八章精讲：盖有不知而作之者，我无是也。多闻，择其善者而从之；多见而识之，知之次也。孔子先破“装懂乱编”，再立“多听多看多记”——承认自己不是天才，把功夫下在耳朵和眼睛上。老实，是最好的学问路。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
