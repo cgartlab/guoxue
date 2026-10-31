@@ -2230,5 +2230,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '159-er-san-zi-yi-wo-wei-yin',
+        num: '159',
+        title: '二三子以我为隐乎 · 吾无隐乎尔',
+        subtitle: '老师没有留一手',
+        path: 'lessons/159-er-san-zi-yi-wo-wei-yin/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第二十四章精讲：子曰：二三子以我为隐乎？吾无隐乎尔。吾无行而不与二三子者，是丘也。弟子疑心老师藏了一手，孔子不生气、不辩解，只把话摊开——学问没有秘传，我的一举一动全在你们眼前，这就是我孔丘。教一百句，不如做一件。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];

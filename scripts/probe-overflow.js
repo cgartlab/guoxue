@@ -39,6 +39,7 @@ const targets = [
   ['156', 'lessons/156-de-zhi-bu-xiu/index.html'],
   ['157', 'lessons/157-zhi-yu-dao-ju-yu-de/index.html'],
   ['158', 'lessons/158-tian-sheng-de-yu-yu/index.html'],
+  ['159', 'lessons/159-er-san-zi-yi-wo-wei-yin/index.html'],
 ];
 
 (async () => {
