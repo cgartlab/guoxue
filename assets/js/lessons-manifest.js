@@ -2272,5 +2272,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '162-diao-er-bu-gang',
+        num: '162',
+        title: '钓而不纲 · 弋不射宿',
+        subtitle: '取用有度，才是仁',
+        path: 'lessons/162-diao-er-bu-gang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第二十七章精讲：子钓而不纲，弋不射宿。孔子钓鱼不用大网把河截起来捞，射鸟不射已经归巢歇下的鸟。两个“不”——不赶尽杀绝，不趁危下手。能而不为，才是修养。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
