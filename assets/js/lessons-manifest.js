@@ -2314,5 +2314,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '165-wo-yu-ren-si-ren-zhi-yi',
+        num: '165',
+        title: '我欲仁 · 斯仁至矣',
+        subtitle: '仁在己心，不远人',
+        path: 'lessons/165-wo-yu-ren-si-ren-zhi-yi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第三十章精讲：子曰：仁远乎哉？我欲仁，斯仁至矣。孔子一句反问，把“仁”从天上请到地上——仁不是圣人才能做到的高标准，你真心想要，它当下就到。仁不在天边，在自己心上；难的不是能不能，是肯不肯。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
