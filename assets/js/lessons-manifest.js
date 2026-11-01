@@ -2356,5 +2356,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '168-wen-mo-wu-you-ren',
+        num: '168',
+        title: '文莫吾犹人 · 会说不如会做',
+        subtitle: '知道容易，做到难',
+        path: 'lessons/168-wen-mo-wu-you-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第三十三章精讲：子曰：文，莫吾犹人也。躬行君子，则吾未之有得。书本上的学问，我大概跟别人差不多；可要做一个身体力行的君子，我还没有做到。孔子把“知”和“行”分开算账——知道的不少，做到的还空着。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];

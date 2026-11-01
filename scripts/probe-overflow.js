@@ -48,6 +48,7 @@ const targets = [
   ['165', 'lessons/165-wo-yu-ren-si-ren-zhi-yi/index.html'],
   ['166', 'lessons/166-chen-si-bai-wen-zhao-gong/index.html'],
   ['167', 'lessons/167-yu-ren-ge-er-shan/index.html'],
+  ['168', 'lessons/168-wen-mo-wu-you-ren/index.html'],
 ];
 
 (async () => {
@@ -65,6 +66,7 @@ const targets = [
   page.setDefaultTimeout(5000);
 
   for (const [label, rel] of targets) {
+    if (process.argv[2] && label !== process.argv[2]) continue;
     const url = 'file:///' + path.resolve(__dirname, '..', rel).replace(/\\/g, '/');
     await page.goto(url, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(800);
