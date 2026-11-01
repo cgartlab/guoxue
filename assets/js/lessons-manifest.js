@@ -2370,5 +2370,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '169-ruo-sheng-yu-ren',
+        num: '169',
+        title: '若圣与仁 · 名声不要，功夫照做',
+        subtitle: '把两件平常事做一辈子',
+        path: 'lessons/169-ruo-sheng-yu-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第三十四章精讲：子曰：若圣与仁，则吾岂敢？抑为之不厌，诲人不倦，则可谓云尔已矣。公西华曰：正唯弟子不能学也。圣与仁两顶帽子孔子一口推开，却接下了“做起来不厌烦、教人不知疲倦”这两件事。名号是虚的，功夫是实的。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
