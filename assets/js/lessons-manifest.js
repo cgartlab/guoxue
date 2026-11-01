@@ -2328,5 +2328,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '166-chen-si-bai-wen-zhao-gong',
+        num: '166',
+        title: '陈司败问礼 · 敢认错才是真懂礼',
+        subtitle: '讳是礼，认也是礼',
+        path: 'lessons/166-chen-si-bai-wen-zhao-gong/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第三十一章精讲：陈司败问昭公知礼乎，孔子曰知礼。陈司败指出昭公娶同姓之女违礼，君子也偏袒吗？孔子听说后说：丘也幸，苟有过，人必知之。为尊者讳是礼，被人指出过错就坦然承认，也是礼——护人的面子，不护自己的错。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
