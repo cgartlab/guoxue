@@ -55,6 +55,7 @@ const targets = [
   ['172', 'lessons/172-jun-zi-tan-dang-dang/index.html'],
   ['173', 'lessons/173-wen-er-li/index.html'],
   ['174', 'lessons/174-tai-bo-san-rang/index.html'],
+  ['175', 'lessons/175-gong-er-wu-li-ze-lao/index.html'],
 ];
 
 (async () => {

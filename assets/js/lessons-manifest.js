@@ -2454,5 +2454,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '175-gong-er-wu-li-ze-lao',
+        num: '175',
+        title: '恭而无礼则劳 · 好心也要有分寸',
+        subtitle: '四样好品质，各有各的走偏',
+        path: 'lessons/175-gong-er-wu-li-ze-lao/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第二章精讲：子曰：恭而无礼则劳，慎而无礼则葸，勇而无礼则乱，直而无礼则绞。君子笃于亲，则民兴于仁；故旧不遗，则民不偷。恭、慎、勇、直四样都是好品质，缺了礼这把尺，就一样样走偏：恭敬变白费，谨慎变胆小，勇敢变闯祸，直率变伤人。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
