@@ -2440,5 +2440,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '174-tai-bo-san-rang',
+        num: '174',
+        title: '泰伯 · 三让天下，没人能称他',
+        subtitle: '真让不响，真好不留名',
+        path: 'lessons/174-tai-bo-san-rang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第一章精讲：泰伯，其可谓至德也已矣。三以天下让，民无得而称焉。孔子说泰伯算是德行到了顶点的人——他一次次把天下让出去，百姓却找不到具体的事来称赞他。让的是本该属于自己的君位，让到退无可退，也干净得没有痕迹。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
