@@ -2426,5 +2426,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '173-wen-er-li',
+        num: '173',
+        title: '温而厉 · 三对分寸，一个人的样子',
+        subtitle: '好，还要好得不偏',
+        path: 'lessons/173-wen-er-li/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第三十八章精讲（全篇末章）：子温而厉，威而不猛，恭而安。孔子温和而严肃，有威仪而不凶猛，恭敬而安详。这不是孔子说的话，是弟子记下的他的样子——三对分寸，每一样都往回收一分。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
