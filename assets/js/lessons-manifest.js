@@ -2384,5 +2384,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '170-qiu-zhi-dao-jiu-yi',
+        num: '170',
+        title: '丘之祷久矣 · 平时行得正，就是祈祷',
+        subtitle: '别把功夫留到最后一刻',
+        path: 'lessons/170-qiu-zhi-dao-jiu-yi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第三十五章精讲：子疾病，子路请祷。子曰：有诸？子路对曰：有之。《诔》曰：祷尔于上下神祇。子曰：丘之祷久矣。孔子病重，弟子要替他求神，他说“我祈祷已经很久了”——一辈子的言行就是祈祷，不必临时抱佛脚。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];

@@ -50,6 +50,7 @@ const targets = [
   ['167', 'lessons/167-yu-ren-ge-er-shan/index.html'],
   ['168', 'lessons/168-wen-mo-wu-you-ren/index.html'],
   ['169', 'lessons/169-ruo-sheng-yu-ren/index.html'],
+  ['170', 'lessons/170-qiu-zhi-dao-jiu-yi/index.html'],
 ];
 
 (async () => {
