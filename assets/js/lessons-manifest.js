@@ -2342,5 +2342,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '167-yu-ren-ge-er-shan',
+        num: '167',
+        title: '与人歌而善 · 听见好的，跟着学',
+        subtitle: '听得见别人的好，才长得好',
+        path: 'lessons/167-yu-ren-ge-er-shan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第三十二章精讲：子与人歌而善，必使反之，而后和之。孔子跟人一起唱歌，那人唱得好，他一定请人家再唱一遍，然后自己跟着唱。听得见别人的好、肯低下头再听一遍、最后跟上去——欣赏、求教、同乐，三样都在这一件小事里。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
