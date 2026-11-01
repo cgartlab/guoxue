@@ -2468,5 +2468,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '176-zeng-zi-you-ji',
+        num: '176',
+        title: '启予手 · 一辈子不敢松的一口气',
+        subtitle: '学生来看的是手脚，也是这一辈子',
+        path: 'lessons/176-zeng-zi-you-ji/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第三章精讲：曾子有疾，召门弟子曰：启予足！启予手！《诗》云：战战兢兢，如临深渊，如履薄冰。而今而后，吾知免夫！小子！曾子病重，让学生看自己的手脚完好，讲的是护住父母给的身子、一生不敢亏欠，临了才敢松一口气。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
