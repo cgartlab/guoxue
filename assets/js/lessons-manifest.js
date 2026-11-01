@@ -2398,5 +2398,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '171-she-ze-bu-xun',
+        num: '171',
+        title: '奢则不孙 · 宁可寒酸，不可傲慢',
+        subtitle: '两个毛病，挑轻的那个',
+        path: 'lessons/171-she-ze-bu-xun/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第三十六章精讲：子曰：奢则不孙，俭则固。与其不孙也，宁固。太铺张就会傲慢不逊，太省钱又会显得寒酸固陋——两样都是毛病，可要挑一个，宁可寒酸。孔子没给完美答案，只给了一把秤。',
+        status: 'ready',
+        duration: '约 14 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
