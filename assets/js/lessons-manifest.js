@@ -2412,5 +2412,19 @@ window.GUOXUE_LESSONS = [
         subject: 'shuer',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '172-jun-zi-tan-dang-dang',
+        num: '172',
+        title: '君子坦荡荡 · 心里没亏欠，人就舒展',
+        subtitle: '坦荡不是性格，是账清了',
+        path: 'lessons/172-jun-zi-tan-dang-dang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·述而》第三十七章精讲：子曰：君子坦荡荡，小人长戚戚。君子的心地平坦宽广，小人的心里总是忧愁局促。不是君子没遇上难事，是心里没有亏欠；不是小人日子难过，是心里那本账太满。',
+        status: 'ready',
+        duration: '约 13 分钟',
+        subject: 'shuer',
+        tier: 'core',
+        featured: false
     }
 ];
