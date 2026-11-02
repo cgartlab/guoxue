@@ -2580,5 +2580,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '184-zhou-gong-zhi-cai',
+        num: '184',
+        title: '周公之才 · 骄且吝',
+        subtitle: '本事再大，一骄一吝全废',
+        path: 'lessons/184-zhou-gong-zhi-cai/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第十一章精讲：子曰：如有周公之才之美，使骄且吝，其余不足观也已。孔子把本事最大的周公摆出来做样板，却说只要一骄一吝，剩下的长处全不值得看。骄是看不起人，吝是不肯给人——德行是前面的“1”，才华是后面的“0”。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
