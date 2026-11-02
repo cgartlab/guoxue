@@ -2524,5 +2524,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '180-ren-zhong-er-dao-yuan',
+        num: '180',
+        title: '任重道远 · 把仁扛在肩上走到最后',
+        subtitle: '担子重，路远，死而后已',
+        path: 'lessons/180-ren-zhong-er-dao-yuan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第七章精讲：曾子曰：士不可以不弘毅，任重而道远。仁以为己任，不亦重乎？死而后已，不亦远乎？曾子给挑担子的人配齐了装备——弘是装得下，毅是撑得住；担子重，因为挑的是仁；路途远，因为到死才停。接得过来，还要走得下去。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
