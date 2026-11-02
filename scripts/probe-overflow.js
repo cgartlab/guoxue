@@ -63,6 +63,7 @@ const targets = [
   ['180', 'lessons/180-ren-zhong-er-dao-yuan/index.html'],
   ['181', 'lessons/181-xing-yu-shi-li-yu-yue/index.html'],
   ['182', 'lessons/182-min-ke-shi-you-zhi/index.html'],
+  ['183', 'lessons/183-hao-yong-ji-pin/index.html'],
 ];
 
 (async () => {
