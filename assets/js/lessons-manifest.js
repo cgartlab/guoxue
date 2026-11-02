@@ -2622,5 +2622,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '187-bu-zai-qi-wei',
+        num: '187',
+        title: '不在其位 · 不谋其政',
+        subtitle: '守好本分，不越边界，各尽其责',
+        path: 'lessons/187-bu-zai-qi-wei/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第十四章精讲：子曰：不在其位，不谋其政。八个字管一条边界：位和责绑在一起，有权必有责；不越位拍板，不失本分职责；提意见是本分，拍板子是职权——不越别人的位，不失自己的责。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
