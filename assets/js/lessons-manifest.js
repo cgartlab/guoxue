@@ -2636,5 +2636,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '188-shi-zhi-zhi-shi',
+        num: '188',
+        title: '师挚之始 · 洋洋盈耳',
+        subtitle: '一场有头有尾的音乐会，一句真心实意的赞叹',
+        path: 'lessons/188-shi-zhi-zhi-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第十五章精讲：子曰：师挚之始，《关雎》之乱，洋洋乎盈耳哉！开场领得起，结尾收得住，才算完整；孔子懂音乐也整理过音乐，他的赞叹是行家的满分评价——把本分做到极致，就是最好的作品。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
