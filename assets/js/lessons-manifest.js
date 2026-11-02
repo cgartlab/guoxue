@@ -2566,5 +2566,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '183-hao-yong-ji-pin',
+        num: '183',
+        title: '好勇疾贫 · 疾之已甚',
+        subtitle: '两种乱，一个“过”字',
+        path: 'lessons/183-hao-yong-ji-pin/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第十章精讲：子曰：好勇疾贫，乱也。人而不仁，疾之已甚，乱也。两种乱，一个从底下闹上来，一个从上面逼出来——胆子大又心里不平的人会闹，被恨得太狠、逼到墙角的人会反。病根都在一个“过”字：勇要给正路，恨要留余地。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
