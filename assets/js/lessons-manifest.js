@@ -2510,5 +2510,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '179-tuo-liu-chi-zhi-gu',
+        num: '179',
+        title: '托孤寄命 · 临大节才见真君子',
+        subtitle: '接得住，顶得住，靠得住',
+        path: 'lessons/179-tuo-liu-chi-zhi-gu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第六章精讲：曾子曰：可以托六尺之孤，可以寄百里之命，临大节而不可夺也。君子人与？君子人也。曾子给君子画了一张像——把年幼的君主托给他，把一国的政令交给他，到了生死存亡的大关节他也摇不动。接得住、靠得住、顶得住，先修好自己，才接得住别人的重托。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
