@@ -2496,5 +2496,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '178-you-ruo-wu',
+        num: '178',
+        title: '有若无 · 本事越大越像没有',
+        subtitle: '问得下，空得起，忍得住',
+        path: 'lessons/178-you-ruo-wu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第五章精讲：曾子曰：以能问于不能，以多问于寡；有若无，实若虚，犯而不校。昔者吾友尝从事于斯矣。曾子夸他那位老朋友（历来注家指颜回）——有本事却向没本事的人请教，装满了像空着，被人冒犯也不计较。三样功夫，根子都在把“我”往小处放。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
