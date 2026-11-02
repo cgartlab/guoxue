@@ -2608,5 +2608,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '186-du-xin-hao-xue',
+        num: '186',
+        title: '笃信好学 · 守死善道',
+        subtitle: '信要笃，学要真，进退两头问心无愧',
+        path: 'lessons/186-du-xin-hao-xue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第十三章精讲：子曰：笃信好学，守死善道。危邦不入，乱邦不居。天下有道则见，无道则隐。信是骨，学是肉；不把自己白扔在救不了的地方，有道就出来担当，无道就退身自守——进要进得干净，退要退得清白。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
