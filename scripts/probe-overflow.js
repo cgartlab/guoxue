@@ -61,6 +61,8 @@ const targets = [
   ['178', 'lessons/178-you-ruo-wu/index.html'],
   ['179', 'lessons/179-tuo-liu-chi-zhi-gu/index.html'],
   ['180', 'lessons/180-ren-zhong-er-dao-yuan/index.html'],
+  ['181', 'lessons/181-xing-yu-shi-li-yu-yue/index.html'],
+  ['182', 'lessons/182-min-ke-shi-you-zhi/index.html'],
 ];
 
 (async () => {
