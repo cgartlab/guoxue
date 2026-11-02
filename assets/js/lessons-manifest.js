@@ -2482,5 +2482,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '177-zeng-zi-meng-jing-zi',
+        num: '177',
+        title: '三样功夫 · 一句遗言里的待人之道',
+        subtitle: '神情、脸色、说话的口气',
+        path: 'lessons/177-zeng-zi-meng-jing-zi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第四章精讲：曾子有疾，孟敬子问之。曾子言曰：鸟之将死，其鸣也哀；人之将死，其言也善。君子所贵乎道者三：动容貌，斯远暴慢矣；正颜色，斯近信矣；出辞气，斯远鄙倍矣。笾豆之事，则有司存。曾子临终只交代三件事——身上、脸上、嘴上，讲的是敬人不用花钱，全在这三处。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
