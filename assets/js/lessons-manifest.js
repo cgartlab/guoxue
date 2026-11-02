@@ -2594,5 +2594,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '185-san-nian-xue',
+        num: '185',
+        title: '三年学 · 不至于谷',
+        subtitle: '读书三年，心里不惦记那份俸禄',
+        path: 'lessons/185-san-nian-xue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第十二章精讲：子曰：三年学，不至于谷，不易得也。读了三年书，心里不惦记那份俸禄，这样的人难得。孔子不反对俸禄，他自己就做过官——他说的是初心：先长本事，饭碗跟着来，别让饭碗领着走。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
