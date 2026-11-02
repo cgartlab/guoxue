@@ -2538,5 +2538,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '181-xing-yu-shi-li-yu-yue',
+        num: '181',
+        title: '兴于诗 · 立于礼 · 成于乐',
+        subtitle: '九个字，一条长大成人的路',
+        path: 'lessons/181-xing-yu-shi-li-yu-yue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第八章精讲：子曰：兴于诗，立于礼，成于乐。九个字，三个“于”字，像三个站牌——诗让人醒，礼让人立，乐让人成。先动心，再正身，最后养心，被点着、站得直、养得和，走完这三步，人才算“成”了。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
