@@ -2776,5 +2776,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '198-zi-jue-si',
+        num: '198',
+        title: '子绝四 · 四种毛病不沾',
+        subtitle: '不瞎猜，不说死，不固执，不自大',
+        path: 'lessons/198-zi-jue-si/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第四章精讲：子绝四——毋意，毋必，毋固，毋我。不凭空猜、不把话说死、不固执己见、不自以为是。四条其实是一条链，最要紧的是头一条：先问“我凭什么这么想”。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
