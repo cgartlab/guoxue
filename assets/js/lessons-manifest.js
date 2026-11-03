@@ -2664,5 +2664,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '190-xue-ru-bu-ji',
+        num: '190',
+        title: '学如不及 · 犹恐失之',
+        subtitle: '孔子的学习心法：抓紧、上心、常温习',
+        path: 'lessons/190-xue-ru-bu-ji/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第十七章精讲：子曰：学如不及，犹恐失之。学习像追赶怕追不上，追上了又怕丢；不是焦虑，是珍惜——追着学、抓着不放、常温习用一次，把学习当回事。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
