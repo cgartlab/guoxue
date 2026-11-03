@@ -2720,5 +2720,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '194-yu-wu-jian-ran-yi',
+        num: '194',
+        title: '无间然 · 挑不出一点毛病',
+        subtitle: '自己省到极处，公事厚到极处',
+        path: 'lessons/194-yu-wu-jian-ran-yi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第二十一章精讲（本篇末章）：子曰：禹，吾无间然矣。菲饮食，而致孝乎鬼神；恶衣服，而致美乎黻冕；卑宫室，而尽力乎沟洫。自己省到极处，公事厚到极处——孔子一生唯一一次，一句毛病都挑不出来。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
