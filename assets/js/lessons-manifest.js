@@ -2790,5 +2790,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '199-zi-wei-yu-kuang',
+        num: '199',
+        title: '子畏于匡 · 匡人其如予何',
+        subtitle: '一场围困里的底气',
+        path: 'lessons/199-zi-wei-yu-kuang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第五章精讲：子畏于匡。孔子在匡地被围五天，说：文王既没，文不在兹乎？上天要灭这文化，我就学不到；我学到了，说明天不想灭——那匡人能把我怎么样？底气不是胆子大，是手里有该做的事。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
