@@ -2832,5 +2832,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '202-wu-you-zhi-hu-zai',
+        num: '202',
+        title: '叩其两端 · 吾有知乎哉',
+        subtitle: '他说自己什么都不懂，办法只有一条',
+        path: 'lessons/202-wu-you-zhi-hu-zai/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第八章精讲：吾有知乎哉？无知也。有鄙夫问于我，空空如也，我叩其两端而竭焉。孔子说自己没有现成的答案，办法只有一条——从问题的两头问起，一直问到底。方法比知识更要紧。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
