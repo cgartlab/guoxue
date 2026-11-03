@@ -2692,5 +2692,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '192-da-zai-yao-wei-jun',
+        num: '192',
+        title: '大哉尧 · 唯天为大',
+        subtitle: '效法上天，功劳没法夸，规矩留得下',
+        path: 'lessons/192-da-zai-yao-wei-jun/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第十九章精讲：子曰：大哉，尧之为君也！巍巍乎！唯天为大，唯尧则之。荡荡乎！民无能名焉。焕乎，其有文章！天不表功、有恒心、不偏心，尧三样都学会了；功业看得见，规矩留得下。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
