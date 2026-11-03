@@ -2742,7 +2742,7 @@ window.GUOXUE_LESSONS = [
         subtitle: '少算得失，多想该不该',
         path: 'lessons/195-zi-han-yan-li/index.html',
         grade: '小学高年级·初中文言',
-        description: '《论语·子罕》第一章精讲：子罕言利，与命与仁。孔子很少谈利，却赞许命和仁——利可以要不能当尺子，命让人知边界，仁让人有温度。九个字，是《子罕》全篇的开场白。',
+        description: '《论语·子罕》第一章精讲：子罕言利，与命与仁。孔子很少谈利，却赞许命和仁——利可以要不能当尺子，命让人知边界，仁让人有温度。八个字，是《子罕》全篇的开场白。',
         status: 'ready',
         duration: '约 15 分钟',
         subject: 'zihan',
