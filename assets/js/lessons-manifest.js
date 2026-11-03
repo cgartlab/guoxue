@@ -2762,5 +2762,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '197-ma-mian-bai-xia',
+        num: '197',
+        title: '麻冕拜下 · 从众与违众',
+        subtitle: '俭可以从，敬不可改',
+        path: 'lessons/197-ma-mian-bai-xia/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第三章精讲：麻冕，礼也；今也纯，俭，吾从众。拜下，礼也；今拜乎上，泰也。虽违众，吾从下。礼帽省工他跟大家一起改，跪拜省了敬意他一个人守老规矩——改不改，就看省的是花费还是敬意。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
