@@ -2804,5 +2804,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '200-tai-zai-wen-sheng',
+        num: '200',
+        title: '多能鄙事 · 吾少也贱',
+        subtitle: '一身本事，是苦日子逼出来的',
+        path: 'lessons/200-tai-zai-wen-sheng/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第六章精讲：太宰问于子贡曰——夫子圣者与？何其多能也？子贡说“天纵之将圣”，孔子却说：吾少也贱，故多能鄙事。我这些本事，是苦日子里逼出来的，不是天生的。君子多乎哉？不多也。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
