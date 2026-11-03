@@ -2748,5 +2748,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '196-da-xiang-dang-ren',
+        num: '196',
+        title: '达巷党人 · 大哉孔子',
+        subtitle: '博学无成名，一技亦从容',
+        path: 'lessons/196-da-xiang-dang-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第二章精讲：达巷党人曰：大哉孔子！博学而无所成名。子闻之，谓门弟子曰：吾何执？执御乎？执射乎？吾执御矣。半夸半惜的一句评语，孔子不辩不怒，只笑着说：我赶车吧。名声是别人给的，本事是自己长的。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
