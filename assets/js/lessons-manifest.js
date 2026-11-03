@@ -2706,5 +2706,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '193-shun-you-chen-wu-ren',
+        num: '193',
+        title: '才难 · 周之至德',
+        subtitle: '人才难得，三分有其二仍守本分',
+        path: 'lessons/193-shun-you-chen-wu-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第二十章精讲：舜有臣五人而天下治。武王曰：予有乱臣十人。孔子曰：才难，不其然乎？三分天下有其二，以服事殷。周之德，其可谓至德也已矣——人才难得，本事大还守本分，就是最高的德。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
