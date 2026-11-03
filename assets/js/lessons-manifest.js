@@ -2678,5 +2678,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '191-wei-wei-shun-yu',
+        num: '191',
+        title: '巍巍乎 · 舜禹有天下',
+        subtitle: '位子是担子，不是享受',
+        path: 'lessons/191-wei-wei-shun-yu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第十八章精讲：子曰：巍巍乎！舜、禹之有天下也，而不与焉。拥有天下却不放在心上享受——权力是担子不是享受；舜靠德行接住天下，禹为治水三过家门而不入，天下为公才是真伟大。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
