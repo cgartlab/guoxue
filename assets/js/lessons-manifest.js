@@ -2846,5 +2846,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '203-feng-niao-bu-zhi',
+        num: '203',
+        title: '凤鸟不至 · 吾已矣夫',
+        subtitle: '他长叹一声，叹完照样接着走',
+        path: 'lessons/203-feng-niao-bu-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第九章精讲：凤鸟不至，河不出图，吾已矣夫！孔子等了一辈子的太平盛世没有来，他长叹一声——叹气不丢人，叹完接着走。看清失望，才见真执着。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
