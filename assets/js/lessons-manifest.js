@@ -2650,5 +2650,19 @@ window.GUOXUE_LESSONS = [
         subject: 'taibo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '189-kuang-er-bu-zhi',
+        num: '189',
+        title: '狂而不直 · 吾不知之',
+        subtitle: '三种拧巴的样子，一声无奈的叹息',
+        path: 'lessons/189-kuang-er-bu-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·泰伯》第十六章精讲：子曰：狂而不直，侗而不愿，悾悾而不信，吾不知之矣。狂、侗、悾悾本各有好搭档——直、愿、信，三个"不"字把搭档全拆了；缺点不可怕，装样子骗人才最误人——做一个表里如一的人。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'taibo',
+        tier: 'core',
+        featured: false
     }
 ];
