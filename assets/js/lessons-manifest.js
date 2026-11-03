@@ -2860,5 +2860,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '204-zi-jian-zi-cui-zhe',
+        num: '204',
+        title: '虽少必作 · 过之必趋',
+        subtitle: '见了这三种人，他起身，他快步',
+        path: 'lessons/204-zi-jian-zi-cui-zhe/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第十章精讲：子见齐衰者、冕衣裳者与瞽者，见之，虽少必作；过之，必趋。孔子见了三种人就起身、就快步——礼不在表面，在心里装着别人。尊重是做出来的，不是说出来的。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
