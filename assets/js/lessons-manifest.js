@@ -2874,5 +2874,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '205-yang-zhi-mi-gao',
+        num: '205',
+        title: '仰之弥高 · 钻之弥坚',
+        subtitle: '最优秀的学生，给老师的一声长叹',
+        path: 'lessons/205-yang-zhi-mi-gao/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第十一章精讲：颜渊喟然叹曰：仰之弥高，钻之弥坚。瞻之在前，忽焉在后。夫子循循然善诱人，博我以文，约我以礼，欲罢不能。真学问越学越深，好老师一步一步领着走——循循善诱、欲罢不能两个成语都出自这一章。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
