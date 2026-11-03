@@ -2818,5 +2818,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '201-wu-bu-shi-gu-yi',
+        num: '201',
+        title: '吾不试 · 故艺',
+        subtitle: '没做上官，才学了一身本事',
+        path: 'lessons/201-wu-bu-shi-gu-yi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第七章精讲：牢曰：子云：吾不试，故艺。孔子说自己没被朝廷任用，所以学成了一身技艺。一句听着像遗憾的话，他讲得很坦然——没做上官，却做成了一件事。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
