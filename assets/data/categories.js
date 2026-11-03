@@ -85,11 +85,19 @@ window.GUOXUE_CATEGORIES = [
         order: 9
     },
     {
-        key: 'mengxue',
-        label: '蒙学',
+        key: 'zihan',
+        label: '子罕',
         num: '10',
-        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        description: '《论语·子罕篇》各章精讲',
         status: 'ready',
         order: 10
+    },
+    {
+        key: 'mengxue',
+        label: '蒙学',
+        num: '11',
+        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        status: 'ready',
+        order: 11
     }
 ];
