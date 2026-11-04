@@ -2930,5 +2930,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '209-wu-zi-wei-fan-lu',
+        num: '209',
+        title: '吾自卫反鲁 · 雅颂各得其所',
+        subtitle: '路走不通，就把手里能做的事做到底',
+        path: 'lessons/209-wu-zi-wei-fan-lu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第十五章精讲：子曰：吾自卫反鲁，然后乐正，雅颂各得其所。孔子六十八岁从卫国回到鲁国，不再求官，把乱了几十年的音乐一节节校正，《雅》归朝廷、《颂》归宗庙。这一章讲的是：路走不通，不等于事做不成。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
