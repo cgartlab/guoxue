@@ -3084,5 +3084,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '220-yi-bi-yun-pao',
+        num: '220',
+        title: '衣敝缊袍 · 不忮不求',
+        subtitle: '穿得破，不算丢人',
+        path: 'lessons/220-yi-bi-yun-pao/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第二十七章精讲：子曰：衣敝缊袍，与衣狐貉者立，而不耻者，其由也与？不忮不求，何用不臧？子路终身诵之。子曰：是道也，何足以臧？穿破棉袍跟穿狐皮貉皮的人站一起而不觉得丢人，孔子点名夸子路；不嫉妒、不贪求，是这份底气的根。可夸完又压一句：这只是本分，哪里就够好了。这一章教的是：穿得破不丢人，心里贪才丢人；可光做到不贪不妒，还只是及格。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
