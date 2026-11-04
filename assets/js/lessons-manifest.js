@@ -3014,5 +3014,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '215-miao-er-bu-xiu',
+        num: '215',
+        title: '苗而不秀 · 秀而不实',
+        subtitle: '一株庄稼的三道坎',
+        path: 'lessons/215-miao-er-bu-xiu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第二十二章精讲：子曰：苗而不秀者有矣夫！秀而不实者有矣夫！出了苗不吐穗，有吧！吐了穗不结实，有吧！孔子借庄稼说人：出苗、开花、结果三道坎，每过一道淘汰一批。长出来不算数，结出果才算数。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
