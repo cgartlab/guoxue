@@ -3140,5 +3140,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '224-tang-di-zhi-hua',
+        num: '224',
+        title: '唐棣之华 · 心近就不远',
+        subtitle: '说远是借口，真想就不远',
+        path: 'lessons/224-tang-di-zhi-hua/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第三十一章精讲：唐棣之华，偏其反而；岂不尔思？室是远而。子曰：未之思也，夫何远之有。古诗说：唐棣树的花，翩翩地摇摆；难道我不想念你？只是你家住得太远。孔子说：他是不去想念罢了——真的想念，有什么远的呢？这一章教的是：说远是借口，真想就不远；心里真想，路就在脚下。这也是《子罕》篇的收官之章。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
