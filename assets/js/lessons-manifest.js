@@ -3070,5 +3070,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '219-san-jun-ke-duo-shuai',
+        num: '219',
+        title: '三军可夺帅 · 匹夫不可夺志',
+        subtitle: '能被人夺走的，都不是最后的',
+        path: 'lessons/219-san-jun-ke-duo-shuai/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第二十六章精讲：子曰：三军可夺帅也，匹夫不可夺志也。一支大军能被人夺走主帅，一个普通百姓只要自己不肯松，谁也没法把他的志夺走。三军最硬，匹夫最小；大的被夺，小的守得住——这是孔子给普通人撑的腰。这一章教的是：外力能夺走的东西都不是最后的，最后那一件在心里，钥匙在自己手上。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
