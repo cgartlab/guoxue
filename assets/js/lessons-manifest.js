@@ -2874,5 +2874,47 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '205-yang-zhi-mi-gao',
+        num: '205',
+        title: '仰之弥高 · 钻之弥坚',
+        subtitle: '最优秀的学生，给老师的一声长叹',
+        path: 'lessons/205-yang-zhi-mi-gao/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第十一章精讲：颜渊喟然叹曰：仰之弥高，钻之弥坚。瞻之在前，忽焉在后。夫子循循然善诱人，博我以文，约我以礼，欲罢不能。真学问越学越深，好老师一步一步领着走——循循善诱、欲罢不能两个成语都出自这一章。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
+    },
+    {
+        id: '206-wu-shui-qi',
+        num: '206',
+        title: '吾谁欺 · 欺天乎',
+        subtitle: '病重时的一场安排，病好时的一句实话',
+        path: 'lessons/206-wu-shui-qi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第十二章精讲：子疾病，子路使门人为臣。病间，曰：久矣哉，由之行诈也！无臣而为有臣，吾谁欺？欺天乎？病重时子路想替他撑一场体面，孔子病一好就说破——没有的排场不要装，宁可真，不装假。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
+    },
+    {
+        id: '207-you-mei-yu-yu-si',
+        num: '207',
+        title: '有美玉于斯 · 待贾而沽',
+        subtitle: '一块美玉的两个问法，问出了老师的心里话',
+        path: 'lessons/207-you-mei-yu-yu-si/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第十三章精讲：子贡曰：有美玉于斯，韫椟而藏诸？求善贾而沽诸？子曰：沽之哉！沽之哉！我待贾者也。子贡拿美玉打比方问老师要不要出来做事，孔子连说两遍"卖掉吧"——有本事不藏着，但等的是识货的人，不藏着，也不贱卖。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
