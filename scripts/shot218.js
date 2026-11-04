@@ -9,7 +9,7 @@ const path = require('path');
   const p = await b.newPage({ viewport: { width: 1440, height: 900 } });
   await p.route('**/*', (r) => (r.request().url().startsWith('file://') ? r.continue() : r.abort()));
   await p.addInitScript(() => localStorage.setItem('guoxue_unlocked', '1'));
-  const abs = path.resolve(__dirname, '../lessons/218-zhu-zhong-xin/index.html');
+  const abs = path.resolve(__dirname, '../lessons/219-san-jun-ke-duo-shuai/index.html');
   const url = 'file:///' + abs.split(path.sep).join('/');
   await p.goto(url, { waitUntil: 'domcontentloaded' });
   await p.waitForTimeout(900);
@@ -20,7 +20,7 @@ const path = require('path');
       s[n].classList.add('active');
     }, i);
     await p.waitForTimeout(250);
-    await p.screenshot({ path: `C:/Users/Chenzhigang/WorkBuddy/国学课堂/网站/test-results/l218-${i}.png` });
+    await p.screenshot({ path: `C:/Users/Chenzhigang/WorkBuddy/国学课堂/网站/test-results/l219-${i}.png` });
   }
   await b.close();
   console.log('shots ok');

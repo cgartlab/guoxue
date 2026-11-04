@@ -99,6 +99,7 @@ const targets = [
   ['216', 'lessons/216-hou-sheng-ke-wei/index.html'],
   ['217', 'lessons/217-fa-yu-zhi-yan/index.html'],
   ['218', 'lessons/218-zhu-zhong-xin/index.html'],
+  ['219', 'lessons/219-san-jun-ke-duo-shuai/index.html'],
 ];
 
 (async () => {
