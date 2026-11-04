@@ -3182,5 +3182,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '227-jun-zhao-shi-bin',
+        num: '227',
+        title: '君召使摈 · 迎宾尽礼',
+        subtitle: '接到任务上心，办完事情有回音',
+        path: 'lessons/227-jun-zhao-shi-bin/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第三章精讲：君召使摈，色勃如也，足躩如也。揖所与立，左右手，衣前后，襜如也。趋进，翼如也。宾退，必复命曰：宾客不顾矣。国君召孔子接待外宾，他脸色立刻庄重、脚步轻快；与同事作揖接力，衣裳摆动却整齐不乱；快步向前像鸟儿舒展翅膀；客人走了必回来报告。这一章教的是：接到任务就上心，做事有礼又有序，办完事情有回音。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
