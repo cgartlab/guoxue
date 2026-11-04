@@ -2916,5 +2916,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '208-zi-yu-ju-jiu-yi',
+        num: '208',
+        title: '君子居之 · 何陋之有',
+        subtitle: '地方陋不陋，不看房子，看住的是谁',
+        path: 'lessons/208-zi-yu-ju-jiu-yi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第十四章精讲：子欲居九夷。或曰：陋，如之何？子曰：君子居之，何陋之有？孔子想搬到偏远的九夷去住，有人劝他那儿太简陋，孔子只回八个字——君子住在那里，还有什么简陋的？这一章讲的是：地方陋不陋，看住的是谁。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
