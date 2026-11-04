@@ -2944,5 +2944,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '210-chu-ze-shi-gong-qing',
+        num: '210',
+        title: '日用之间 · 何有于我',
+        subtitle: '四件家常事，一句自问',
+        path: 'lessons/210-chu-ze-shi-gong-qing/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第十六章精讲：子曰：出则事公卿，入则事父兄，丧事不敢不勉，不为酒困，何有于我哉？出门做事尽心、回家孝悌尽心、办丧事不敢不尽力、喝酒不被酒管住——四件全是日常小事，末尾一句反问把尺子对准自己。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
