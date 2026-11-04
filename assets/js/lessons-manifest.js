@@ -3042,5 +3042,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '217-fa-yu-zhi-yan',
+        num: '217',
+        title: '法语之言 · 绎之为贵',
+        subtitle: '硬话要真改，软话要细想',
+        path: 'lessons/217-fa-yu-zhi-yan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第二十四章精讲：子曰：法语之言，能无从乎？改之为贵。巽与之言，能无说乎？绎之为贵。说而不绎，从而不改，吾末如之何也已矣。合乎规矩的严肃话能不听从吗？贵在听了真能改；恭顺委婉的好听话能不高兴吗？贵在听了能细细琢磨。光高兴不琢磨、光听从不改正，孔子也只能叹气。这一章教的是：话听没听进去，不看耳朵看手脚。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
