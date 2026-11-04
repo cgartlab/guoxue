@@ -3098,5 +3098,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '221-sui-han-song-bai',
+        num: '221',
+        title: '岁寒松柏 · 冷了才看得出',
+        subtitle: '冷的时候，才认出谁挺得住',
+        path: 'lessons/221-sui-han-song-bai/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第二十八章精讲：子曰：岁寒，然后知松柏之后凋也。到了一年最冷的时候，才看得出松树柏树是最后落叶的。暖天里满山都是绿的，看不出谁经冻；冷日子一来，叶子落光了，谁还站着，一眼就看见了。松柏也冻，只是不掉叶——装出来的坚强一冷就落，长在里面的青谁也吹不掉。这一章教的是：平常看不出人，冷的时候才认得出来；别怕日子冷，也别急着在冷天里表白自己。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
