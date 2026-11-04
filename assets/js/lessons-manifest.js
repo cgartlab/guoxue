@@ -3196,5 +3196,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '228-ru-gong-men',
+        num: '228',
+        title: '入公门 · 步步有敬',
+        subtitle: '心里有敬，一举一动都有分寸',
+        path: 'lessons/228-ru-gong-men/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第四章精讲：入公门，鞠躬如也，如不容。立不中门，行不履阈。过位，色勃如也，足躩如也，其言似不足者。摄齐升堂，鞠躬如也，屏气似不息者。出，降一等，逞颜色，怡怡如也。没阶，趋进，翼如也。复其位，踧踖如也。孔子走进国君的大门弯着身子恭敬向前，不站门中间、不踩门槛；经过国君的空位脸色立刻庄重；提起衣摆上堂屏住呼吸；走下台阶脸色才舒展；回到位置依然恭敬小心。这一章教的是：心里有敬，一举一动都有分寸——该庄重时庄重，该放松时放松。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
