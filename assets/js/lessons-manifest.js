@@ -2972,5 +2972,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '212-hao-de-ru-hao-se',
+        num: '212',
+        title: '好德如好色 · 未见者也',
+        subtitle: '一杆量人心的尺，一声诚实的长叹',
+        path: 'lessons/212-hao-de-ru-hao-se/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第十八章精讲：子曰：吾未见好德如好色者也。喜欢好看的东西不用教，一看见就动心；喜爱德行却要天天修炼。这一章讲三层：天性不用教、德行要修炼、把对德行的喜欢练成跟天性一样自动。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
