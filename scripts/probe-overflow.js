@@ -95,6 +95,8 @@ const targets = [
   ['212', 'lessons/212-hao-de-ru-hao-se/index.html'],
   ['213', 'lessons/213-pi-ru-wei-shan/index.html'],
   ['214', 'lessons/214-yu-zhi-bu-duo/index.html'],
+  ['215', 'lessons/215-miao-er-bu-xiu/index.html'],
+  ['216', 'lessons/216-hou-sheng-ke-wei/index.html'],
 ];
 
 (async () => {
