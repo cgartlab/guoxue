@@ -3000,5 +3000,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '214-yu-zhi-bu-duo',
+        num: '214',
+        title: '语之不惰 · 其回也与',
+        subtitle: '一句表扬，夸的是耳朵后面的那双手',
+        path: 'lessons/214-yu-zhi-bu-duo/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第二十章精讲：子曰：语之而不惰者，其回也与！听我讲话始终不懈怠的，大概只有颜回吧！听懂只是开始，听完照着做、一直做不停，这才叫真学——学不靠耳朵灵，靠不停手。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
