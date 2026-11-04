@@ -3112,5 +3112,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '222-zhi-zhe-bu-huo',
+        num: '222',
+        title: '知者不惑 · 三样好东西',
+        subtitle: '看得清，放得下，顶得住',
+        path: 'lessons/222-zhi-zhe-bu-huo/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第二十九章精讲：子曰：知者不惑，仁者不忧，勇者不惧。聪明的人不迷惑，仁德的人不忧愁，勇敢的人不害怕。智者脑子亮，看得清；仁者心里稳，放得下；勇者腿脚硬，顶得住。惑、忧、惧，正好是人最容易掉进去的三个坑。这一章教的是：人活一辈子要过三关——看得清是聪明，放得下是仁德，顶得住是勇敢；三样都不是天生的，是一样一样练出来的。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
