@@ -2958,5 +2958,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '211-shi-zhe-ru-si',
+        num: '211',
+        title: '逝者如斯 · 不舍昼夜',
+        subtitle: '河边一声长叹，说尽了两千年的时间',
+        path: 'lessons/211-shi-zhe-ru-si/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第十七章精讲：子在川上曰：逝者如斯夫！不舍昼夜。孔子站在河边看着流水说：消逝的东西就像这样啊，日夜不停。这一章讲三层：时间留不住、流水不停歇、君子自强也不该停。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
