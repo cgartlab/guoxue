@@ -2902,5 +2902,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '207-you-mei-yu-yu-si',
+        num: '207',
+        title: '有美玉于斯 · 待贾而沽',
+        subtitle: '一块美玉的两个问法，问出了老师的心里话',
+        path: 'lessons/207-you-mei-yu-yu-si/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第十三章精讲：子贡曰：有美玉于斯，韫椟而藏诸？求善贾而沽诸？子曰：沽之哉！沽之哉！我待贾者也。子贡拿美玉打比方问老师要不要出来做事，孔子连说两遍"卖掉吧"——有本事不藏着，但等的是识货的人，不藏着，也不贱卖。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
