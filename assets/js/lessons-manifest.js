@@ -2986,5 +2986,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '213-pi-ru-wei-shan',
+        num: '213',
+        title: '为山平地 · 进止由己',
+        subtitle: '两筐土，一个讲停，一个讲走',
+        path: 'lessons/213-pi-ru-wei-shan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第十九章精讲：子曰：譬如为山，未成一篑，止，吾止也；譬如平地，虽覆一篑，进，吾往也。堆山差一筐土停下，是我自己停的；填地才倒一筐土还往前，也是我自己往前。成和不成，钥匙都在自己手里。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
