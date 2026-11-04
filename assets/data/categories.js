@@ -93,11 +93,19 @@ window.GUOXUE_CATEGORIES = [
         order: 10
     },
     {
-        key: 'mengxue',
-        label: '蒙学',
+        key: 'xiangdang',
+        label: '乡党',
         num: '11',
-        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        description: '《论语·乡党篇》各章精讲',
         status: 'ready',
         order: 11
+    },
+    {
+        key: 'mengxue',
+        label: '蒙学',
+        num: '12',
+        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        status: 'ready',
+        order: 12
     }
 ];

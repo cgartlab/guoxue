@@ -3154,5 +3154,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '225-kong-zi-yu-xiang-dang',
+        num: '225',
+        title: '恂恂如也 · 说话看场合',
+        subtitle: '该谦和时谦和，该表达时表达',
+        path: 'lessons/225-kong-zi-yu-xiang-dang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第一章精讲：孔子于乡党，恂恂如也，似不能言者。其在宗庙朝廷，便便言，唯谨尔。孔子在家乡恭顺温谨，好像不太会说话；在宗庙朝廷却明白流畅，只是很谨慎。这一章教的是：说话看场合——该谦和时谦和，该表达时表达，无论何处，谨慎不变。这也是《乡党》篇的开篇之章。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
