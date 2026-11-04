@@ -2888,5 +2888,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '206-wu-shui-qi',
+        num: '206',
+        title: '吾谁欺 · 欺天乎',
+        subtitle: '病重时的一场安排，病好时的一句实话',
+        path: 'lessons/206-wu-shui-qi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第十二章精讲：子疾病，子路使门人为臣。病间，曰：久矣哉，由之行诈也！无臣而为有臣，吾谁欺？欺天乎？病重时子路想替他撑一场体面，孔子病一好就说破——没有的排场不要装，宁可真，不装假。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
