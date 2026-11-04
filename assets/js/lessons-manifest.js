@@ -3168,5 +3168,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '226-chao-yu-xia-da-fu-yan',
+        num: '226',
+        title: '侃侃訚訚 · 说话看对象',
+        subtitle: '该从容时从容，该恭敬时恭敬',
+        path: 'lessons/226-chao-yu-xia-da-fu-yan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第二章精讲：朝，与下大夫言，侃侃如也；与上大夫言，訚訚如也。君在，踧踖如也，与与如也。孔子上朝时，跟下大夫说话和乐从容；跟上大夫说话正直和悦；国君在场时恭敬小心，步态却安详自然。这一章教的是：说话看对象——该从容时从容，该恭敬时恭敬，敬心始终不变。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
