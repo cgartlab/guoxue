@@ -3098,5 +3098,47 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '221-sui-han-song-bai',
+        num: '221',
+        title: '岁寒松柏 · 冷了才看得出',
+        subtitle: '冷的时候，才认出谁挺得住',
+        path: 'lessons/221-sui-han-song-bai/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第二十八章精讲：子曰：岁寒，然后知松柏之后凋也。到了一年最冷的时候，才看得出松树柏树是最后落叶的。暖天里满山都是绿的，看不出谁经冻；冷日子一来，叶子落光了，谁还站着，一眼就看见了。松柏也冻，只是不掉叶——装出来的坚强一冷就落，长在里面的青谁也吹不掉。这一章教的是：平常看不出人，冷的时候才认得出来；别怕日子冷，也别急着在冷天里表白自己。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
+    },
+    {
+        id: '222-zhi-zhe-bu-huo',
+        num: '222',
+        title: '知者不惑 · 三样好东西',
+        subtitle: '看得清，放得下，顶得住',
+        path: 'lessons/222-zhi-zhe-bu-huo/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第二十九章精讲：子曰：知者不惑，仁者不忧，勇者不惧。聪明的人不迷惑，仁德的人不忧愁，勇敢的人不害怕。智者脑子亮，看得清；仁者心里稳，放得下；勇者腿脚硬，顶得住。惑、忧、惧，正好是人最容易掉进去的三个坑。这一章教的是：人活一辈子要过三关——看得清是聪明，放得下是仁德，顶得住是勇敢；三样都不是天生的，是一样一样练出来的。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
+    },
+    {
+        id: '223-ke-yu-gong-xue',
+        num: '223',
+        title: '可与共学 · 四级台阶',
+        subtitle: '同学容易，同路难',
+        path: 'lessons/223-ke-yu-gong-xue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第三十章精讲：子曰：可与共学，未可与适道；可与适道，未可与立；可与立，未可与权。可以一起学习的，未必能一起走向道；能一起走向道的，未必能一起坚守；能一起坚守的，未必能一起通权达变。这一章教的是：四级台阶——共学、适道、立、权，一关比一关难；同学容易，同路难；学到是本事，守到是品格，变通是智慧。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
