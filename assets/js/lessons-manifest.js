@@ -3056,5 +3056,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '218-zhu-zhong-xin',
+        num: '218',
+        title: '主忠信 · 过则勿惮改',
+        subtitle: '心里的主，身边的人，脚下的路',
+        path: 'lessons/218-zhu-zhong-xin/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第二十五章精讲：子曰：主忠信，毋友不如己者，过则勿惮改。做人以忠信为主——对人尽心、说话算数，把这两样请进心里当主人；不要跟不肯向善的人学，交朋友要交能提着你往上走的；有了过错，不要怕改。三句话、三根柱子：心里的主（忠信）、身边的人（择友）、脚下的路（改过）。这一章与《学而》第八章重出，孔子讲了两遍。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
