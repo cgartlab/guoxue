@@ -3028,5 +3028,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zihan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '216-hou-sheng-ke-wei',
+        num: '216',
+        title: '后生可畏 · 来者不如今',
+        subtitle: '一句夸人的话，一句敲钟的话',
+        path: 'lessons/216-hou-sheng-ke-wei/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子罕》第二十三章精讲：子曰：后生可畏，焉知来者之不如今也？四十、五十而无闻焉，斯亦不足畏也已。年轻人是值得敬重的，怎么知道后来的人不如现在的人呢？可一个人到了四五十岁还没什么名声学问，那也就不值得敬重了。前半句堵住年长者的傲慢，后半句堵住年轻人的懈怠。值得畏的不是岁数，是那股还在往上长的劲。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zihan',
+        tier: 'core',
+        featured: false
     }
 ];
