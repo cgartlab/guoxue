@@ -3364,5 +3364,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '240-kang-zi-kui-yao',
+        num: '240',
+        title: '康子馈药 · 未达不尝',
+        subtitle: '礼要领，话要实',
+        path: 'lessons/240-kang-zi-kui-yao/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第十六章精讲：康子馈药，拜而受之，曰：丘未达，不敢尝。鲁国执政的季康子送来药，孔子先拜谢收下，然后说一句实话——我不懂这药性，不敢尝。收下是敬人家的心，不尝是守自己的身；既不拂好意，也不冒风险，还把话说在明处。这一章教的是：受礼要敬，说话要实。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
