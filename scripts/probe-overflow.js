@@ -136,6 +136,7 @@ const targets = [
   ['253', 'lessons/253-si-ke-shi-zhe/index.html'],
   ['254', 'lessons/254-hui-fei-zhu-wo/index.html'],
   ['255', 'lessons/255-xiao-zai-min-zi-qian/index.html'],
+  ['256', 'lessons/256-nan-rong-san-fu-bai-gui/index.html'],
 ];
 
 (async () => {

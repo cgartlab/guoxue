@@ -3588,5 +3588,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '256-nan-rong-san-fu-bai-gui',
+        num: '256',
+        title: '南容三复白圭 · 孔子以其兄之子妻之',
+        subtitle: '说出去的话，磨不掉',
+        path: 'lessons/256-nan-rong-san-fu-bai-gui/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第六章精讲：南容三复白圭，孔子以其兄之子妻之。南容天天念叨两句诗——白圭之玷，尚可磨也；斯言之玷，不可为也。玉上的污点能磨掉，话说错了收不回来。孔子挑侄女婿，不看才华，只看这一件事。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
