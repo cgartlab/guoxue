@@ -3210,5 +3210,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '229-zhi-gui',
+        num: '229',
+        title: '执圭 · 敬而能舒',
+        subtitle: '变的是样子，不变的是心',
+        path: 'lessons/229-zhi-gui/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第五章精讲：执圭，鞠躬如也，如不胜。上如揖，下如授。勃如战色，足蹜蹜如有循。享礼，有容色。私觌，愉愉如也。孔子出使外国手捧玉圭，弯着身子恭敬向前像举不动一样；举高像作揖、放低像交递；脸色庄重、脚步细碎像沿着一条线走；献礼时满脸和气；私下相见时轻松愉快。这一章教的是：敬不僵化——场合变了样子跟着变，心里的敬不变。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
