@@ -3294,5 +3294,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '235-shu-shi-bi-ji',
+        num: '235',
+        title: '疏食必祭 · 敬同斋戒',
+        subtitle: '感恩在心，不在饭',
+        path: 'lessons/235-shu-shi-bi-ji/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第十一章精讲：虽疏食菜羹，瓜祭，必齐如也。哪怕是粗米饭、菜汤，吃饭前也要先祭一祭——拿出一点点食物，感念最初发明饮食的先人；而且神情必定像斋戒一样恭敬。再简单的饭，敬意不打折。这一章教的是：感恩不在饭的贵贱，在心里有没有那一份郑重。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];

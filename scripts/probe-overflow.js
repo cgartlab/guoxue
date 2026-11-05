@@ -115,6 +115,7 @@ const targets = [
   ['232', 'lessons/232-shi-bu-yan-jing/index.html'],
   ['233', 'lessons/233-ji-rou-you-qi/index.html'],
   ['234', 'lessons/234-shi-bu-yu-qin-bu-yan/index.html'],
+  ['235', 'lessons/235-shu-shi-bi-ji/index.html'],
 ];
 
 (async () => {
