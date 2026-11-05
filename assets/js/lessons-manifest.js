@@ -3224,5 +3224,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '230-jun-zi-bu-yi-gan-zou',
+        num: '230',
+        title: '衣冠有敬 · 穿衣见礼',
+        subtitle: '颜色分正邪，场合有分别',
+        path: 'lessons/230-jun-zi-bu-yi-gan-zou/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第六章精讲：君子不以绀緅饰，红紫不以为亵服。当暑，袗絺绤，必表而出之。缁衣，羔裘；素衣，麑裘；黄衣，狐裘。亵裘长，短右袂。必有寝衣，长一身有半。狐貉之厚以居。去丧，无所不佩。非帷裳，必杀之。羔裘玄冠不以吊。吉月，必朝服而朝。孔子穿衣也有一套讲究：颜色分正邪、配色成套、家常讲实用、吉凶不混淆。这一章教的是：穿衣也是礼——细节里全是敬。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
