@@ -3532,5 +3532,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '252-cong-wo-yu-chen-cai',
+        num: '252',
+        title: '从我陈蔡 · 皆不及门',
+        subtitle: '一起吃过苦的人，如今都不在门下',
+        path: 'lessons/252-cong-wo-yu-chen-cai/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第二章精讲：子曰：从我于陈、蔡者，皆不及门也。当年跟着孔子在陈蔡之间受困断粮的弟子，如今都不在门下了。这是《先进》里最动情的一句——念的不是道理，是一起吃过苦的人。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
