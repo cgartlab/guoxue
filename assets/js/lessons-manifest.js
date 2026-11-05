@@ -3308,5 +3308,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '236-xi-bu-zheng-bu-zuo',
+        num: '236',
+        title: '席正心正 · 坐有坐相',
+        subtitle: '位要正，身才端',
+        path: 'lessons/236-xi-bu-zheng-bu-zuo/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第十二章精讲：席不正，不坐。古人席地而坐，坐席要摆得端端正正；席子歪了、摆得不合规矩，孔子就不坐。一是不将就——坐有坐相；二是不越位——不是自己的位子不坐；三是席正而后身正，坐得正，心才正。这一章教的是：位置摆正，人才立得住。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
