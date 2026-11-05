@@ -3420,5 +3420,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '244-jun-ming-zhao-bu-si-jia',
+        num: '244',
+        title: '君命召 · 不俟驾行矣',
+        subtitle: '命令一到，抬脚就走',
+        path: 'lessons/244-jun-ming-zhao-bu-si-jia/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第二十章精讲：君命召，不俟驾行矣。国君一声召唤，孔子不等车马套好，拔脚就走。九字一章，写尽一个"急"字。这一章教的是：礼不在排场，在乎不敢慢——车是排场，命是急事，礼有大小，先守大的。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
