@@ -3266,5 +3266,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '233-ji-rou-you-qi',
+        num: '233',
+        title: '祭肉有期 · 敬不隔宿',
+        subtitle: '敬要及时，福要分享',
+        path: 'lessons/233-ji-rou-you-qi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第九章精讲：祭于公，不宿肉。祭肉不出三日，出三日，不食之矣。孔子参加国君的祭祀，分到的祭肉不过夜；自家祭祖的肉，存放不超过三天，过了三天就不吃了。祭肉是“福”，要趁新鲜吃掉、分掉；放到变味，敬意就打了折扣。这一章教的是：敬要及时，福要分享——不拖，不剩，不将就。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
