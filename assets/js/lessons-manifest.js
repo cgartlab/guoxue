@@ -3252,5 +3252,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '232-shi-bu-yan-jing',
+        num: '232',
+        title: '食不厌精 · 饮食有节',
+        subtitle: '做要精，口要严，量有度',
+        path: 'lessons/232-shi-bu-yan-jing/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第八章精讲：食不厌精，脍不厌细。食饐而餲，鱼馁而肉败，不食。色恶，不食。臭恶，不食。失饪，不食。不时，不食。割不正，不食。不得其酱，不食。肉虽多，不使胜食气。唯酒无量，不及乱。沽酒市脯不食。不撤姜食，不多食。孔子吃饭有八条“不食”：变质的不吃、难看难闻的不吃、火候不对的不吃、不到饭点不吃、切得不正不吃、没有配酱不吃、买来的酒肉不吃。肉再多不压过饭，酒不限量但不喝醉。这一章教的是：吃饭最见分寸——做要精、口要严、量有度。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
