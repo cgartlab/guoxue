@@ -3490,5 +3490,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '249-sheng-che-zhi-sui',
+        num: '249',
+        title: '升车执绥 · 车中三不',
+        subtitle: '登车有礼，坐车有静',
+        path: 'lessons/249-sheng-che-zhi-sui/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第二十六章精讲：升车，必正立执绥；车中不内顾，不疾言，不亲指。上车站稳、车上不乱看、不急说、不指指点点——一车之内的小分寸，照见一个人平日的样子。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
