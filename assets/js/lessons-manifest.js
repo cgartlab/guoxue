@@ -3280,5 +3280,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '234-shi-bu-yu-qin-bu-yan',
+        num: '234',
+        title: '食不语 · 寝不言',
+        subtitle: '嘴上安静，身心安顿',
+        path: 'lessons/234-shi-bu-yu-qin-bu-yan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第十章精讲：食不语，寝不言。吃饭的时候不交谈，睡觉的时候不说话。吃饭说话容易呛着噎着，也吃不出饭菜的味道；睡前说话心思兴奋，翻来覆去睡不着。吃饭、睡觉也是正经事——嘴上安静下来，身体和心才都安顿好。这一章教的是：静，是一种本事。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
