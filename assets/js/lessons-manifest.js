@@ -3462,5 +3462,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '247-qin-bu-shi-ju-bu-ke',
+        num: '247',
+        title: '寝不尸 · 居不客',
+        subtitle: '躺不僵直，闲不放纵',
+        path: 'lessons/247-qin-bu-shi-ju-bu-ke/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第二十四章精讲：寝不尸，居不客。睡觉不像尸体那样直挺挺摊着，在家闲居也不摆出做客那副端着的仪态。六个字讲的是：没人看见的时候，最见修养——不松垮到失形，不紧绷到失真。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
