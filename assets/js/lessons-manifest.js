@@ -3476,5 +3476,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '248-jian-qi-cui-zhe',
+        num: '248',
+        title: '见齐衰者 · 式负版者',
+        subtitle: '敬在脸上，敬在车上',
+        path: 'lessons/248-jian-qi-cui-zhe/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第二十五章精讲：见齐衰者，虽狎必变；见冕者与瞽者，虽亵必以貌；凶服者式之，式负版者；有盛馔，必变色而作；迅雷风烈必变。一章五个“变”，讲的都是同一件事：敬不是心里默念，是脸色上、身体上藏不住的那一下。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
