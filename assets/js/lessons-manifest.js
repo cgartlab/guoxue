@@ -3560,5 +3560,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '254-hui-fei-zhu-wo',
+        num: '254',
+        title: '回非助我 · 无所不说',
+        subtitle: '听懂了的那种高兴',
+        path: 'lessons/254-hui-fei-zhu-wo/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第四章精讲：子曰：回也非助我者也，于吾言无所不说。颜回从不反问，帮不上老师；可他对老师的话没有一句不高兴。这不是盲从，是听懂了的喜悦——孔子最疼的，正是这个“不吭声”的学生。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
