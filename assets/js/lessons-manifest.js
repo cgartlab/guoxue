@@ -3406,5 +3406,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '243-ji-jun-shi-zhi',
+        num: '243',
+        title: '疾君视之 · 卧亦朝服',
+        subtitle: '病榻之上，不失君臣之礼',
+        path: 'lessons/243-ji-jun-shi-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第十九章精讲：疾，君视之，东首，加朝服，拖绅。孔子病倒在床，国君亲自来探望。他起不了身、穿不上朝服，就把头朝东躺着、把朝服盖在身上、把大带垂下来。穿不上，就盖上；系不了，就垂着。这一章教的是：身子由不得自己，礼由得自己。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
