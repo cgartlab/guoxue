@@ -3378,5 +3378,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '241-jiu-fen-wen-ren',
+        num: '241',
+        title: '厩焚问人 · 不问马',
+        subtitle: '火起先问人，轻重自分明',
+        path: 'lessons/241-jiu-fen-wen-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第十七章精讲：厩焚。子退朝，曰：伤人乎？不问马。孔子家的马棚失火，他从朝堂回来第一句问的是伤了人没有，不问马。马是家产，人是性命——一场火烧出一个人心里的轻重。这一章教的是：急难处，先问人。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
