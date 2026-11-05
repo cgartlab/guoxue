@@ -3574,5 +3574,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '255-xiao-zai-min-zi-qian',
+        num: '255',
+        title: '孝哉闵子骞 · 人不间言',
+        subtitle: '挑不出缝的一家人',
+        path: 'lessons/255-xiao-zai-min-zi-qian/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第五章精讲：子曰：孝哉闵子骞！人不间于其父母昆弟之言。全章十个字，关口在一个“间”字——读 jiàn，挑毛病的意思。芦花为絮，他冻得掉了缰绳；父亲要休后母，他跪着说“母在一子寒，母去三子单”。里外对得上，才挑不出缝。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
