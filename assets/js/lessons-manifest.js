@@ -3448,5 +3448,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '246-peng-you-zhi-kui',
+        num: '246',
+        title: '朋友之馈 · 非祭肉不拜',
+        subtitle: '车马不拜，一块肉必拜',
+        path: 'lessons/246-peng-you-zhi-kui/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第二十三章精讲：朋友之馈，虽车马，非祭肉，不拜。朋友送的车马再贵重，孔子也不拜谢；一块祭肉不值几个钱，他却必定行拜礼。这一章教的是：礼看的是义，不是价——钱归钱，敬归敬。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
