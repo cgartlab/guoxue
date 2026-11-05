@@ -3546,5 +3546,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '253-si-ke-shi-zhe',
+        num: '253',
+        title: '四科十哲 · 德行第一',
+        subtitle: '四条路，十个名字',
+        path: 'lessons/253-si-ke-shi-zhe/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第三章精讲：德行：颜渊、闵子骞、冉伯牛、仲弓。言语：宰我、子贡。政事：冉有、季路。文学：子游、子夏。德行、言语、政事、文学四科，十位弟子——这是孔子门下的人才榜。四条路，十个名字，德行排在第一位。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
