@@ -101,11 +101,19 @@ window.GUOXUE_CATEGORIES = [
         order: 11
     },
     {
-        key: 'mengxue',
-        label: '蒙学',
+        key: 'xianjin',
+        label: '先进',
         num: '12',
-        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        description: '《论语·先进篇》各章精讲',
         status: 'ready',
         order: 12
+    },
+    {
+        key: 'mengxue',
+        label: '蒙学',
+        num: '13',
+        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        status: 'ready',
+        order: 13
     }
 ];

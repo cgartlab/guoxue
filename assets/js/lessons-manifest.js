@@ -3518,5 +3518,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '251-xian-jin-yu-li-yue',
+        num: '251',
+        title: '先进于礼乐 · 吾从先进',
+        subtitle: '先学本事，再论出身',
+        path: 'lessons/251-xian-jin-yu-li-yue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第一章精讲（全篇开篇）：子曰：先进于礼乐，野人也；后进于礼乐，君子也。如用之，则吾从先进。先学礼乐再出来做事的是在野平民，先占位子再补学问的是贵族子弟。要用人，孔子选前者——用人问学问，不问门第。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
