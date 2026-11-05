@@ -3238,5 +3238,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '231-zhai-bi-you-ming-yi',
+        num: '231',
+        title: '斋戒洁清 · 敬事先净心',
+        subtitle: '身要净，口要淡，处要静',
+        path: 'lessons/231-zhai-bi-you-ming-yi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第七章精讲：齐，必有明衣，布。齐必变食，居必迁坐。斋戒之前先沐浴更衣，贴身穿洁净的布内衣；斋戒时必须改变饮食，不饮酒、不吃荤、不吃气味重的菜；住处也要迁到外室，独自静心。孔子斋戒看三件事：身要净、口要淡、处要静。这一章教的是：斋戒不是形式——重大事情之前，先把心摆正。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
