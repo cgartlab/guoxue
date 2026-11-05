@@ -3336,5 +3336,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '238-xiang-ren-nuo',
+        num: '238',
+        title: '乡人驱傩 · 敬俗有度',
+        subtitle: '不轻慢，不乱入',
+        path: 'lessons/238-xiang-ren-nuo/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第十四章精讲：乡人傩，朝服而立于阼阶。乡里人举行驱除疫鬼的傩礼时，孔子穿上上朝的礼服，端端正正站在堂前东边的台阶上。不阻拦，也不掺和——穿礼服是敬乡里的风俗；站在东阶是守着自家的门庭与祖先。这一章教的是：对别人的风俗不轻慢，对自己守的分寸不乱。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
