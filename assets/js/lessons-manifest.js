@@ -3434,5 +3434,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '245-peng-you-si-yu-wo-bin',
+        num: '245',
+        title: '朋友死 · 于我殡',
+        subtitle: '没人管，我来管',
+        path: 'lessons/245-peng-you-si-yu-wo-bin/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第二十二章精讲：朋友死，无所归，曰：于我殡。朋友死了，没有家人来收殓，孔子说一句"由我来办"。十四个字，一句承诺，把一个人的身后事全担下来。这一章教的是：义之所在，不推不拖——最难的不是出钱，是站出来。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
