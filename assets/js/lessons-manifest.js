@@ -3504,5 +3504,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '250-shan-liang-ci-zhi',
+        num: '250',
+        title: '山梁雌雉 · 时哉时哉',
+        subtitle: '该飞就飞，该落就落',
+        path: 'lessons/250-shan-liang-ci-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第二十七章精讲（全篇终章）：色斯举矣，翔而后集。曰：山梁雌雉，时哉时哉！子路共之，三嗅而作。鸟见人神色不对就飞，盘旋一阵才落；孔子两叹“时哉”——该飞就飞，该落就落。《乡党》全篇，收在一个“时”字上。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
