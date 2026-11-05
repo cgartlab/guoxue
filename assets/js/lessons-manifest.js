@@ -3322,5 +3322,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '237-zhang-zhe-chu-si-chu',
+        num: '237',
+        title: '杖者先出 · 长幼有序',
+        subtitle: '老的在前，少的在后',
+        path: 'lessons/237-zhang-zhe-chu-si-chu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第十三章精讲：乡人饮酒，杖者出，斯出矣。行乡饮酒礼的时候，同乡的人聚在一起饮酒；等拄着拐杖的老人都出去了，孔子这才出去。不是等散场，是等老人先走。敬老不在嘴上，在先后次序里——把方便先给年长的人，把慢一步留给自己。这一章教的是：能让一步，才立得住。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
