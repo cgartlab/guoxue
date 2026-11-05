@@ -3350,5 +3350,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '239-zai-bai-song-zhi',
+        num: '239',
+        title: '再拜送使 · 敬不远人',
+        subtitle: '人虽远，礼不减',
+        path: 'lessons/239-zai-bai-song-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第十五章精讲：问人于他邦，再拜而送之。托人到自己国家以外去问候老朋友、送点东西，送使者出门的时候，孔子要拜两拜。拜的不是使者，是远在他乡的那位朋友——人不在眼前，礼一分不减。这一章教的是：敬不怕远，礼不因路远而薄。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
