@@ -3392,5 +3392,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xiangdang',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '242-jun-ci-shi-zheng-xi-xian-chang',
+        num: '242',
+        title: '君赐食 · 正席先尝',
+        subtitle: '三样赏赐，三种敬法',
+        path: 'lessons/242-jun-ci-shi-zheng-xi-xian-chang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·乡党》第十八章精讲：君赐食，必正席先尝之；君赐腥，必熟而荐之；君赐生，必畜之。国君赏下东西，三样东西三种收法：熟食摆正坐席先尝一口，生肉煮熟了先献给祖先，活的牲畜养起来不杀。赐的东西不同，礼数就不同，敬心却一样。这一章教的是：受人好意，要知道怎么待它。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xiangdang',
+        tier: 'core',
+        featured: false
     }
 ];
