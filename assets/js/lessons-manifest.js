@@ -3938,5 +3938,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '281-jin-run-zhi-zen',
+        num: '281',
+        title: '浸润之谮 · 肤受之诉',
+        subtitle: '慢慢渗进来的话，最伤人',
+        path: 'lessons/281-jin-run-zhi-zen/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第六章精讲：子张问明。孔子答「浸润之谮，肤受之诉，不行焉，可谓明也已矣」——像水慢慢浸透的谗言、贴着心口的告状，在你这儿行不通，才算看得清、看得远。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
