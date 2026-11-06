@@ -3644,5 +3644,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '260-yan-yuan-si-men-ren-hou-zang',
+        num: '260',
+        title: '门人厚葬 · 予不得视犹子也',
+        subtitle: '哭可以过，葬不能过',
+        path: 'lessons/260-yan-yuan-si-men-ren-hou-zang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第十章精讲：颜渊死，门人欲厚葬之。子曰不可。门人厚葬之。子曰回也视予犹父也，予不得视犹子也。非我也，夫二三子也。哭可以过，葬不能过——情再深，礼这一步一步不让。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];

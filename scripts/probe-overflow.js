@@ -140,6 +140,7 @@ const targets = [
   ['257', 'lessons/257-ji-kang-zi-wen-hao-xue/index.html'],
   ['258', 'lessons/258-yan-yuan-si-tian-sang-yu/index.html'],
   ['259', 'lessons/259-yan-yuan-si-zi-ku-zhi-tong/index.html'],
+  ['260', 'lessons/260-yan-yuan-si-men-ren-hou-zang/index.html'],
 ];
 
 (async () => {
