@@ -3728,5 +3728,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '266-ming-gu-er-gong-zhi',
+        num: '266',
+        title: '非吾徒也 · 鸣鼓而攻之',
+        subtitle: '有本事的人做错事，害更大',
+        path: 'lessons/266-ming-gu-er-gong-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第十六章精讲：季氏富于周公，而求也为之聚敛而附益之。子曰非吾徒也，小子鸣鼓而攻之可也。最坏的是替人办坏事的那只手；宽容有边，边就在伤人的地方。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];

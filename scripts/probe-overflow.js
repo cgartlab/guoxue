@@ -146,6 +146,7 @@ const targets = [
   ['263', 'lessons/263-lu-ren-wei-chang-fu/index.html'],
   ['264', 'lessons/264-you-ye-sheng-tang-yi-wei-ru-yu-shi/index.html'],
   ['265', 'lessons/265-guo-you-bu-ji/index.html'],
+  ['266', 'lessons/266-ming-gu-er-gong-zhi/index.html'],
 ];
 
 (async () => {
