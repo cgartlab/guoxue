@@ -3602,5 +3602,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '257-ji-kang-zi-wen-hao-xue',
+        num: '257',
+        title: '季康子问弟子孰为好学 · 今也则亡',
+        subtitle: '一个也没有了',
+        path: 'lessons/257-ji-kang-zi-wen-hao-xue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第七章精讲：季康子问弟子孰为好学，孔子对曰有颜回者好学，不幸短命死矣，今也则亡。鲁国执政来挑人，孔子答的是一个已经死了的学生。好学的标准不是分数，是不迁怒、不贰过。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
