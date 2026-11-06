@@ -3882,5 +3882,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '277-zhong-gong-wen-ren',
+        num: '277',
+        title: '出门如见大宾 · 己所不欲勿施于人',
+        subtitle: '敬一分，慎一分，恕一分',
+        path: 'lessons/277-zhong-gong-wen-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第二章精讲：仲弓问仁。孔子答「出门如见大宾，使民如承大祭；己所不欲，勿施于人；在邦无怨，在家无怨」。一句敬，一句慎，一句恕。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
