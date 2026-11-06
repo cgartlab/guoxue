@@ -109,11 +109,19 @@ window.GUOXUE_CATEGORIES = [
         order: 12
     },
     {
-        key: 'mengxue',
-        label: '蒙学',
+        key: 'yanyuan',
+        label: '颜渊',
         num: '13',
-        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        description: '《论语·颜渊篇》各章精讲',
         status: 'ready',
         order: 13
+    },
+    {
+        key: 'mengxue',
+        label: '蒙学',
+        num: '14',
+        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        status: 'ready',
+        order: 14
     }
 ];

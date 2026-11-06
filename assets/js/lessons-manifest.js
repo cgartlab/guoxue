@@ -3868,5 +3868,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '276-yan-yuan-wen-ren',
+        num: '276',
+        title: '克己复礼 · 天下归仁',
+        subtitle: '仁不在别处，在自己身上',
+        path: 'lessons/276-yan-yuan-wen-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第一章精讲：颜渊问仁，孔子答「克己复礼为仁」，又说「为仁由己，而由人乎哉」。颜渊追问条目，孔子给出四勿：非礼勿视，非礼勿听，非礼勿言，非礼勿动。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
