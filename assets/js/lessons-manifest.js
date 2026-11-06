@@ -3714,5 +3714,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '265-guo-you-bu-ji',
+        num: '265',
+        title: '过犹不及 · 师也过商也不及',
+        subtitle: '过头和不到，一样是没打中',
+        path: 'lessons/265-guo-you-bu-ji/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第十五章精讲：子贡问师与商也孰贤。子曰师也过商也不及。曰然则师愈与。子曰过犹不及。两个尖子两种偏，偏左偏右都是没打中；不排名次只量距离。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
