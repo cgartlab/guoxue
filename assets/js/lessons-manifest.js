@@ -3686,5 +3686,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '263-lu-ren-wei-chang-fu',
+        num: '263',
+        title: '仍旧贯 · 言必有中',
+        subtitle: '不轻易开口，开口就说到点上',
+        path: 'lessons/263-lu-ren-wei-chang-fu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第十三章精讲：鲁人为长府。闵子骞曰仍旧贯如之何何必改作。子曰夫人不言言必有中。能用就不必换，不折腾本身就是德政；话少而准，别人才肯听。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
