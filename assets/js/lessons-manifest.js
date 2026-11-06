@@ -3756,5 +3756,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '268-hui-ye-qi-shu-hu',
+        num: '268',
+        title: '回也其庶乎 · 屡空',
+        subtitle: '一个穷得干净，一个富得聪明',
+        path: 'lessons/268-hui-ye-qi-shu-hu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第十八章精讲：回也其庶乎，屡空。赐不受命，而货殖焉，亿则屡中。孔子夸颜回近道却常穷，说子贡不认命去做买卖、猜行情常中。守心的穷，顺势的达，两种活法他都认。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
