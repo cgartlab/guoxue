@@ -3784,5 +3784,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '270-lun-du-shi-yu',
+        num: '270',
+        title: '论笃是与 · 君子者乎 色庄者乎',
+        subtitle: '话说得实在，就一定是好人吗',
+        path: 'lessons/270-lun-du-shi-yu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第二十章精讲：子曰：论笃是与，君子者乎？色庄者乎？只凭话说得实在就赞许他，可他是真君子，还是脸上装得庄重？不以言取人，不以貌取人，要看他做什么。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
