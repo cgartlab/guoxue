@@ -3770,5 +3770,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '269-shan-ren-zhi-dao',
+        num: '269',
+        title: '子张问善人之道 · 不践迹',
+        subtitle: '天性好的人，为什么还差一步',
+        path: 'lessons/269-shan-ren-zhi-dao/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第十九章精讲：子张问善人之道。子曰：不践迹，亦不入于室。善人天性美而不学，不必踩前人脚印也不会作恶，可终究进不了里屋。好是底子，学是门。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
