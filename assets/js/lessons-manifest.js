@@ -3630,5 +3630,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '259-yan-yuan-si-zi-ku-zhi-tong',
+        num: '259',
+        title: '子哭之恸 · 非夫人之为恸而谁为',
+        subtitle: '这一次，他不管礼了',
+        path: 'lessons/259-yan-yuan-si-zi-ku-zhi-tong/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第九章精讲：颜渊死，子哭之恸。从者曰子恸矣！曰有恸乎？非夫人之为恸而谁为？旁人提醒他失态，他反问一句我真的过了吗——讲了一辈子礼的人，这一次不管礼了。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
