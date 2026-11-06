@@ -3910,5 +3910,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '279-si-ma-niu-wen-jun-zi',
+        num: '279',
+        title: '不忧不惧 · 内省不疚',
+        subtitle: '心里没有亏，就没什么可怕的',
+        path: 'lessons/279-si-ma-niu-wen-jun-zi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第四章精讲：司马牛问君子。孔子答「君子不忧不惧」。司马牛追问：不忧不惧就算君子了吗？孔子答「内省不疚，夫何忧何惧」——自己心里没有亏欠，还忧愁什么、畏惧什么。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
