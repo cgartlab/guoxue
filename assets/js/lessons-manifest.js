@@ -3854,5 +3854,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '275-shi-zuo-yan-zhi',
+        num: '275',
+        title: '侍坐言志 · 吾与点也',
+        subtitle: '四个人说志向，孔子只点头一个',
+        path: 'lessons/275-shi-zuo-yan-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第二十六章精讲：子路、曾皙、冉有、公西华陪孔子坐着各言其志。子路率尔而对，夫子哂之；冉有公西华谦退；曾皙说暮春浴沂风雩咏归，孔子喟然叹曰：吾与点也。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
