@@ -3658,5 +3658,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '261-wei-zhi-sheng-yan-zhi-si',
+        num: '261',
+        title: '未知生焉知死 · 未能事人焉能事鬼',
+        subtitle: '先把人做好，再谈鬼神',
+        path: 'lessons/261-wei-zhi-sheng-yan-zhi-si/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第十一章精讲：季路问事鬼神。子曰未能事人焉能事鬼。曰敢问死。曰未知生焉知死。连人都没侍奉好，谈什么鬼神；生的道理还没弄明白，问死做什么——先把人做好，再谈鬼神。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
