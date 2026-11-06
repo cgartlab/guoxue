@@ -153,6 +153,7 @@ const targets = [
   ['270', 'lessons/270-lun-du-shi-yu/index.html'],
   ['271', 'lessons/271-wen-si-xing-zhu/index.html'],
   ['272', 'lessons/272-zi-wei-yu-kuang/index.html'],
+  ['273', 'lessons/273-ji-zi-ran-wen/index.html'],
 ];
 
 (async () => {

@@ -3826,5 +3826,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '273-ji-zi-ran-wen',
+        num: '273',
+        title: '以道事君 · 具臣不是大臣',
+        subtitle: '够数的人，和担道的人',
+        path: 'lessons/273-ji-zi-ran-wen/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第二十三章精讲：季子然问仲由冉求算不算大臣。孔子答：大臣以道事君，不可则止；他们只算备数的具臣。但弑父与君，亦不从也——底线还在。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
