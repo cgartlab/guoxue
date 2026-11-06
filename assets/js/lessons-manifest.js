@@ -3798,5 +3798,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '271-wen-si-xing-zhu',
+        num: '271',
+        title: '闻斯行诸 · 求也退故进之 由也兼人故退之',
+        subtitle: '同一个问题，两个相反的答法',
+        path: 'lessons/271-wen-si-xing-zhu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第二十一章精讲：子路问闻斯行诸，孔子说有父兄在；冉有问同一句，孔子说闻斯行之。公西华疑惑，孔子答：求也退，故进之；由也兼人，故退之。因材施教最生动的一章。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
