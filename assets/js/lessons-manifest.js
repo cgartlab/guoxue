@@ -3616,5 +3616,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '258-yan-yuan-si-tian-sang-yu',
+        num: '258',
+        title: '颜渊死 · 天丧予',
+        subtitle: '老天要我的命',
+        path: 'lessons/258-yan-yuan-si-tian-sang-yu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第八章精讲：颜渊死，子曰噫！天丧予！天丧予！十个字，两句一样的话。孔子没哭学生死了，他说老天要我的命。为什么一个学生的死等于自己的死？因为道没人接了。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
