@@ -3840,5 +3840,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '274-zei-fu-ren-zhi-zi',
+        num: '274',
+        title: '贼夫人之子 · 是故恶夫佞者',
+        subtitle: '没学透就让他去管人，是害他',
+        path: 'lessons/274-zei-fu-ren-zhi-zi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第二十四章精讲：子路让年轻的子羔去做费邑长官，孔子说这是害了人家的孩子。子路强辩「何必读书然后为学」，孔子答「是故恶夫佞者」——不驳道理，驳态度。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
