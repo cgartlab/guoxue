@@ -3952,5 +3952,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '282-zu-shi-zu-bing',
+        num: '282',
+        title: '足食足兵 · 民无信不立',
+        subtitle: '三样东西，最后只剩一样',
+        path: 'lessons/282-zu-shi-zu-bing/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第七章精讲：子贡问政。孔子答「足食，足兵，民信之矣」，子贡连问两次非砍一样不可，孔子说先去兵、再去食——自古皆有死，民无信不立。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
