@@ -3742,5 +3742,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '267-chai-ye-yu',
+        num: '267',
+        title: '柴也愚 · 参也鲁',
+        subtitle: '四个学生，四个字，一个比一个不留情',
+        path: 'lessons/267-chai-ye-yu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第十七章精讲：柴也愚，参也鲁，师也辟，由也喭。孔子给四个学生各下一个字的评语，四个字没一个好听的，四个人后来都是栋梁。看得准缺点，还愿意教，这才是老师。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
