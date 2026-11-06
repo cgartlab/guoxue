@@ -3812,5 +3812,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '272-zi-wei-yu-kuang',
+        num: '272',
+        title: '子畏于匡 · 吾以女为死矣 子在回何敢死',
+        subtitle: '乱中失散，重逢一句真心话',
+        path: 'lessons/272-zi-wei-yu-kuang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第二十二章精讲：孔子在匡地被围五日，颜回掉队失散。重逢时孔子脱口一句「吾以女为死矣」，颜回答「子在，回何敢死」。患难之中师生的真情与担当。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
