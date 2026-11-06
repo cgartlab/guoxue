@@ -3924,5 +3924,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '280-si-hai-zhi-nei-jie-xiong-di',
+        num: '280',
+        title: '四海之内皆兄弟',
+        subtitle: '命的事交给天，人的事交给自己',
+        path: 'lessons/280-si-hai-zhi-nei-jie-xiong-di/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第五章精讲：司马牛忧曰「人皆有兄弟，我独亡」。子夏答「死生有命，富贵在天」，又说「君子敬而无失，与人恭而有礼，四海之内，皆兄弟也」——命的事愁不来，人的事做得到。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
