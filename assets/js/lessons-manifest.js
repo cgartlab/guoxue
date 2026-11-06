@@ -3672,5 +3672,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '262-min-zi-shi-ce',
+        num: '262',
+        title: '訚訚行行侃侃 · 若由也不得其死然',
+        subtitle: '各人的样子，各人的命',
+        path: 'lessons/262-min-zi-shi-ce/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第十二章精讲：闵子侍侧，訚訚如也；子路，行行如也；冉有子贡，侃侃如也。子乐。若由也，不得其死然。四副性情，老师全看在眼里——性情成全人，也能送走人。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
