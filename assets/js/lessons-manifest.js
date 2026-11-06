@@ -3700,5 +3700,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianjin',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '264-you-ye-sheng-tang-yi-wei-ru-yu-shi',
+        num: '264',
+        title: '升堂入室 · 由之瑟',
+        subtitle: '批评一句，也要托住一句',
+        path: 'lessons/264-you-ye-sheng-tang-yi-wei-ru-yu-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·先进》第十四章精讲：子曰由之瑟奚为于丘之门。门人不敬子路。子曰由也升堂矣未入于室也。嫌的是声护的是道；批评一句也要托住一句，差一等不是差一辈。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianjin',
+        tier: 'core',
+        featured: false
     }
 ];
