@@ -3896,5 +3896,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '278-si-ma-niu-wen-ren',
+        num: '278',
+        title: '其言也讱 · 为之难',
+        subtitle: '说话慢一点，做事稳一点',
+        path: 'lessons/278-si-ma-niu-wen-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第三章精讲：司马牛问仁。孔子答「仁者，其言也讱」。司马牛追问：说话谨慎就算仁了吗？孔子答「为之难，言之得无讱乎」——做起来难，说起来能不谨慎吗。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
