@@ -3968,6 +3968,20 @@ window.GUOXUE_LESSONS = [
         featured: false
     },
     {
+        id: '283-ji-zi-cheng-yue',
+        num: '283',
+        title: '驷不及舌 · 文犹质也',
+        subtitle: '虎豹去了毛，跟狗羊一样',
+        path: 'lessons/283-ji-zi-cheng-yue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第八章精讲：棘子成说君子只要本质，要文采做什么。子贡答「惜乎！驷不及舌」——话一出口，四匹马也追不回。文犹质也，质犹文也：两样是一件事的两头。虎豹之鞟犹犬羊之鞟，去了毛就分不出高下。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
+    },
+    {
         id: '284-bai-xing-zu',
         num: '284',
         title: '盍彻乎 · 百姓足君孰与足',
@@ -3982,13 +3996,13 @@ window.GUOXUE_LESSONS = [
         featured: false
     },
     {
-        id: '283-ji-zi-cheng-yue',
-        num: '283',
-        title: '驷不及舌 · 文犹质也',
-        subtitle: '虎豹去了毛，跟狗羊一样',
-        path: 'lessons/283-ji-zi-cheng-yue/index.html',
+        id: '285-qi-jing-gong-wen-zheng',
+        num: '285',
+        title: '君君臣臣 · 父父子子',
+        subtitle: '各守其位，才有饭吃',
+        path: 'lessons/285-qi-jing-gong-wen-zheng/index.html',
         grade: '小学高年级·初中文言',
-        description: '《论语·颜渊》第八章精讲：棘子成说君子只要本质，要文采做什么。子贡答「惜乎！驷不及舌」——话一出口，四匹马也追不回。文犹质也，质犹文也：两样是一件事的两头。虎豹之鞟犹犬羊之鞟，去了毛就分不出高下。',
+        description: '《论语·颜渊》第十章精讲：齐景公问政于孔子。孔子只答八个字——君君，臣臣，父父，子子。齐景公听懂了，说若真是君不君、臣不臣、父不父、子不子，虽有粟，吾得而食诸？这是儒家的正名之学：各守其位，各尽其分。',
         status: 'ready',
         duration: '约 15 分钟',
         subject: 'yanyuan',
