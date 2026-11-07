@@ -4050,5 +4050,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '289-bo-wen-yue-li',
+        num: '289',
+        title: '博文约礼 · 亦可以弗畔矣夫',
+        subtitle: '这句话，孔子说了两遍',
+        path: 'lessons/289-bo-wen-yue-li/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第十四章精讲：博学于文，约之以礼，亦可以弗畔矣夫。这句《雍也》篇也有一句，只多「君子」二字。去掉它，道理就从「君子的功课」变成「人人可为」。博是开眼界，约是定分寸，一开一收人才立得住。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
