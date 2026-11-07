@@ -4106,5 +4106,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '293-zi-wei-zheng-yan-yong-sha',
+        num: '293',
+        title: '子为政 · 焉用杀 · 君子之德风',
+        subtitle: '草往哪边倒，看风从哪边来',
+        path: 'lessons/293-zi-wei-zheng-yan-yong-sha/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第十九章精讲：季康子想杀坏人、成全好人，来问孔子何如。孔子答：您治国，何必用杀？您想好，百姓就好了。上面的德像风，下面的德像草，风吹草上，草一定倒。这是季康子三问的最后一问，还是答在他自己身上。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
