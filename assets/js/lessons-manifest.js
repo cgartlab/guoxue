@@ -4400,5 +4400,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '314-jin-zhe-yue',
+        num: '314',
+        title: '近者说 · 远者来',
+        subtitle: '把眼前人安顿好，远处的人自己会来',
+        path: 'lessons/314-jin-zhe-yue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第十六章精讲：叶公问政。子曰「近者说，远者来」。孔子只答六个字——让近处的人心悦诚服，远处的人自然来归。不问兵、不问税、不问法令，只问身边人过得好不好；成语「近悦远来」就出自这里。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
