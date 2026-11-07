@@ -4344,5 +4344,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '310-ru-you-wang-zhe',
+        num: '310',
+        title: '如有王者 · 必世而后仁',
+        subtitle: '三张时间表，一个假如',
+        path: 'lessons/310-ru-you-wang-zhe/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第十二章精讲：子曰「如有王者，必世而后仁」。纵有圣王兴起，也要经过一代人三十年，仁道才能行于天下；与一年三年、百年连读——三张时间表，一个没等来的假如。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
