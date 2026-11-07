@@ -4162,5 +4162,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '297-zhong-gao-shan-dao',
+        num: '297',
+        title: '忠告善道 · 不可则止',
+        subtitle: '劝得住就劝，劝不住就停',
+        path: 'lessons/297-zhong-gao-shan-dao/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第二十三章精讲：子贡问友。孔子答「忠告而善道之，不可则止，毋自辱焉」——劝朋友要诚心，也要会劝；他不听就停下来，别自讨没趣。劝到份上是本分，劝个没完是越界。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
