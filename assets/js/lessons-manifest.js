@@ -4330,5 +4330,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '309-shan-ren-wei-bang',
+        num: '309',
+        title: '善人为邦 · 胜残去杀',
+        subtitle: '一句古话，孔子点头',
+        path: 'lessons/309-shan-ren-wei-bang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第十一章精讲：子曰「善人为邦百年，亦可以胜残去杀矣。诚哉是言也！」。善人接连治理百年，才能化掉残暴、把刑杀搁起来；孔子引古话郑重点头——一年立样子，百年换人心。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
