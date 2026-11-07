@@ -4386,5 +4386,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '313-yi-yan-xing-bang',
+        num: '313',
+        title: '一言兴邦 · 一言丧邦',
+        subtitle: '一句话没那么大的力，人心才有',
+        path: 'lessons/313-yi-yan-xing-bang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第十五章精讲：定公问「一言而可以兴邦，有诸？」……「一言而丧邦，有诸？」孔子两次都答「不能说得这么近乎」，却各留一句老话——「为君难」与「莫予违」。一句话不兴邦，知难的心才兴邦；一句话不丧邦，没人敢说不才丧邦。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
