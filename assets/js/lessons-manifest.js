@@ -4204,5 +4204,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '300-xian-you-si',
+        num: '300',
+        title: '先有司 · 赦小过 · 举贤才',
+        subtitle: '一个人挑不动的担子，交给大家',
+        path: 'lessons/300-xian-you-si/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第二章精讲：仲弓为季氏宰，问政。子曰「先有司，赦小过，举贤才」——各部门先动起来，小的过错别揪，有德有才的提上来。仲弓问怎么知道谁是贤才，孔子答：举你所知；你不知道的，别人也不会埋没他。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
