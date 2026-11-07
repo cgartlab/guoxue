@@ -4176,5 +4176,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '298-yi-wen-hui-you',
+        num: '298',
+        title: '以文会友 · 以友辅仁',
+        subtitle: '交朋友，要有由头，也要有用处',
+        path: 'lessons/298-yi-wen-hui-you/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第二十四章精讲：曾子曰「君子以文会友，以友辅仁」——靠学问结交朋友，再靠朋友帮着把仁德做成。文是路，友是伴，仁是目的地。这是颜渊篇最后一章。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
