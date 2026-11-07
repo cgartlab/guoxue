@@ -4414,5 +4414,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '315-yu-su-bu-da',
+        num: '315',
+        title: '欲速则不达 · 不贪小利',
+        subtitle: '越急越到不了：慢下来，才走得远',
+        path: 'lessons/315-yu-su-bu-da/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第十七章精讲：子夏为莒父宰问政，孔子只给两句叮嘱「无欲速，无见小利」——求快反而达不到，只顾小利就办不成大事。成语「欲速则不达」就出自这里，与 308/309/310/313/314 连读，整篇都在说慢功夫。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
