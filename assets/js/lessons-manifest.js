@@ -3966,5 +3966,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '283-ji-zi-cheng-yue',
+        num: '283',
+        title: '驷不及舌 · 文犹质也',
+        subtitle: '虎豹去了毛，跟狗羊一样',
+        path: 'lessons/283-ji-zi-cheng-yue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第八章精讲：棘子成说君子只要本质，要文采做什么。子贡答「惜乎！驷不及舌」——话一出口，四匹马也追不回。文犹质也，质犹文也：两样是一件事的两头。虎豹之鞟犹犬羊之鞟，去了毛就分不出高下。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
