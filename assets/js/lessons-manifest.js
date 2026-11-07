@@ -4232,5 +4232,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '302-fan-chi-qing-xue-jia',
+        num: '302',
+        title: '小人哉 · 樊须也',
+        subtitle: '眼光太小，学错了地方',
+        path: 'lessons/302-fan-chi-qing-xue-jia/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第四章精讲：樊迟请学稼，孔子说我不如老农；请学为圃，说我不如老圃。樊迟出去后，孔子叹「小人哉，樊须也」——上好礼则民敬，上好义则民服，上好信则民用心，四方百姓背着孩子就来投奔，哪里用得着自己种地。位置不同，该学的也不同。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
