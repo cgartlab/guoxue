@@ -4078,5 +4078,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '291-zheng-zhe-zheng-ye',
+        num: '291',
+        title: '政者正也 · 子帅以正孰敢不正',
+        subtitle: '政这个字，就是正',
+        path: 'lessons/291-zheng-zhe-zheng-ye/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第十六章精讲：季康子问政于孔子，孔子对曰：政者，正也。子帅以正，孰敢不正？政这个字就是正，您带头行得正，谁还敢不正。这是孔子对鲁国当权者说的话——治国的第一件事，是治自己。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
