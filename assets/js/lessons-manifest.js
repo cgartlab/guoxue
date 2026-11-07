@@ -4218,5 +4218,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '301-bi-ye-zheng-ming',
+        num: '301',
+        title: '必也正名 · 名正言顺',
+        subtitle: '名字摆不正，事情就办不成',
+        path: 'lessons/301-bi-ye-zheng-ming/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第三章精讲：子路问，卫君等着您执政，先做什么？子曰「必也正名乎」——名不正，则言不顺；言不顺，则事不成；一路下去，礼乐不兴、刑罚不中，百姓手足无措。凡事从把话说清楚开始。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
