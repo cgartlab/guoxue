@@ -4134,5 +4134,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '295-chong-de-xiu-te-bian-huo',
+        num: '295',
+        title: '崇德 · 修慝 · 辨惑',
+        subtitle: '先做事，后问收获',
+        path: 'lessons/295-chong-de-xiu-te-bian-huo/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第二十一章精讲：樊迟跟着孔子在舞雩台下闲游，问怎么崇德、修慝、辨惑。孔子说问得好：先做事、后讲收获就是崇德；改自己的毛病、不挑别人的毛病就是修慝；一时火起忘了自己、连爹娘也捎带进去就是惑。三问一副药：凡事从自己身上做起。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
