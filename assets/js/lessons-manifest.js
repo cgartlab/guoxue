@@ -4358,5 +4358,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '311-gou-zheng-qi-shen',
+        num: '311',
+        title: '苟正其身 · 如正人何',
+        subtitle: '先把自己摆正，再谈管别人',
+        path: 'lessons/311-gou-zheng-qi-shen/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第十三章精讲：子曰「苟正其身矣，于从政乎何有？不能正其身，如正人何？」。真能把自己摆正了，从政有什么难？自己摆不正，拿什么去端正别人——正人先正己。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
