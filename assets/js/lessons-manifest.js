@@ -4302,5 +4302,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '307-zi-shi-wei',
+        num: '307',
+        title: '庶矣哉 · 富之 · 教之',
+        subtitle: '人多了，然后呢',
+        path: 'lessons/307-zi-shi-wei/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第九章精讲：子适卫，冉有仆。子曰「庶矣哉」！冉有问人多了再做什么，孔子答「富之」；又问富了再做什么，答「教之」。先安顿日子，再教明白道理——庶、富、教三步，一步也不能倒。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
