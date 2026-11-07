@@ -4316,5 +4316,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '308-qi-yue-you-cheng',
+        num: '308',
+        title: '期月而已 · 三年有成',
+        subtitle: '给我一年，给我三年',
+        path: 'lessons/308-qi-yue-you-cheng/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第十章精讲：子曰「苟有用我者，期月而已可也，三年有成」。孔子周游列国无人肯用，却把时间表说得清清楚楚：一年理出头绪，三年扎下根来——短的不虚夸，长的不含糊。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
