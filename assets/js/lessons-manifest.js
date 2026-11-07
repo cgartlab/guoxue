@@ -4190,5 +4190,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '299-xian-zhi-lao-zhi',
+        num: '299',
+        title: '先之劳之 · 无倦',
+        subtitle: '自己先干，才叫带头',
+        path: 'lessons/299-xian-zhi-lao-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第一章精讲：子路问政。子曰「先之劳之」——自己先做，再让百姓跟着干。子路嫌少请益，孔子只给两个字：无倦。带头、心疼人、坚持下去，一样不能少。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];

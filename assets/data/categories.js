@@ -117,11 +117,19 @@ window.GUOXUE_CATEGORIES = [
         order: 13
     },
     {
-        key: 'mengxue',
-        label: '蒙学',
+        key: 'zilu',
+        label: '子路',
         num: '14',
-        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        description: '《论语·子路篇》各章精讲',
         status: 'ready',
         order: 14
+    },
+    {
+        key: 'mengxue',
+        label: '蒙学',
+        num: '15',
+        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        status: 'ready',
+        order: 15
     }
 ];
