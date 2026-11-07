@@ -4022,5 +4022,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '287-ting-song-wu-song',
+        num: '287',
+        title: '听讼 · 必也使无讼乎',
+        subtitle: '断得清，不如断得少',
+        path: 'lessons/287-ting-song-wu-song/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第十二章精讲：孔子说，审理案件我和别人差不多；一定要说有什么不同，那就是我要让百姓不再打官司吧。这是儒家德治最要紧的一句：断得清不如断得少，治标不如治本。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
