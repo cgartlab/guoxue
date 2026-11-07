@@ -4428,5 +4428,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '316-fu-wei-zi-yin',
+        num: '316',
+        title: '父为子隐 · 直在其中',
+        subtitle: '正直，不是把家里人推出去',
+        path: 'lessons/316-fu-wei-zi-yin/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第十八章精讲：叶公夸「直躬者」告发父亲攘羊，孔子却说「吾党之直者异于是：父为子隐，子为父隐，直在其中矣」。孔子不评论那个人，只换一把尺子量「直」——不拿揭发亲人当招牌，也不说错处不用补。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
