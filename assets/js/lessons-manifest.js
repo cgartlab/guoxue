@@ -4064,5 +4064,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '290-cheng-ren-zhi-mei',
+        num: '290',
+        title: '成人之美 · 不成人之恶',
+        subtitle: '看你在别人的事上，出的是什么力',
+        path: 'lessons/290-cheng-ren-zhi-mei/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第十五章精讲：君子成全别人的好事，不促成别人的坏事，小人却与此相反。孔子没讲大道理，只给了一把尺——不看你怎么说，只看你怎么对待别人的事。能真心替人高兴，比能帮人出力更难。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
