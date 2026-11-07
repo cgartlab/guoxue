@@ -4246,5 +4246,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '303-song-shi-san-bai',
+        num: '303',
+        title: '诵诗三百 · 亦奚以为',
+        subtitle: '背得多，不如用得上',
+        path: 'lessons/303-song-shi-san-bai/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第五章精讲：诵诗三百，授之以政，不达；使于四方，不能专对。虽多，亦奚以为？把《诗》背得滚瓜烂熟，交给他政事却办不通，派他出使又不能独当一面地应答——背得再多有什么用？学问的账，要在事上算。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
