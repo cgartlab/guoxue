@@ -4036,5 +4036,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '288-ju-zhi-wu-juan',
+        num: '288',
+        title: '居之无倦 · 行之以忠',
+        subtitle: '坐上那位子，别松劲，别有私心',
+        path: 'lessons/288-ju-zhi-wu-juan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第十三章精讲：子张问政。孔子只答八个字——居之无倦，行之以忠。心里存着这份职守不能松劲，办起事来要尽心尽力。为政不难在多才多能，难在始终如一、表里如一。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
