@@ -4288,5 +4288,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '306-shan-ju-shi',
+        num: '306',
+        title: '善居室 · 苟合矣',
+        subtitle: '差不多，就够了',
+        path: 'lessons/306-shan-ju-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第八章精讲：子谓卫公子荆，善居室。始有，曰「苟合矣」；少有，曰「苟完矣」；富有，曰「苟美矣」。刚有一点说差不多够了，多些说差不多齐了，富了说差不多美了——三个「苟」字，讲的是知足不贪。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
