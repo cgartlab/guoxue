@@ -4092,5 +4092,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '292-gou-zi-zhi-bu-yu',
+        num: '292',
+        title: '苟子之不欲 · 虽赏之不窃',
+        subtitle: '盗的根子，在上头',
+        path: 'lessons/292-gou-zi-zhi-bu-yu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第十七章精讲：季康子苦于盗贼太多，来问孔子。孔子不教他怎么抓，只说：您自己不贪，就是奖赏他去偷，他也不会偷。这是把盗的根子挖到了上头——上面不贪，下面不偷。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
