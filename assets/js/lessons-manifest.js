@@ -4260,5 +4260,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '304-qi-shen-zheng',
+        num: '304',
+        title: '其身正 · 不令而行',
+        subtitle: '自己站得直，不用喊',
+        path: 'lessons/304-qi-shen-zheng/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第六章精讲：子曰「其身正，不令而行；其身不正，虽令不从」——自己行得正，不用下令，事情也行得通；自己不正，下了令也没人听。管人先管自己，从自己这一处改起。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
