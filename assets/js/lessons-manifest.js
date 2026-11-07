@@ -4008,5 +4008,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '286-pian-yan-zhe-yu',
+        num: '286',
+        title: '片言折狱 · 子路无宿诺',
+        subtitle: '话算数的人，一句顶十句',
+        path: 'lessons/286-pian-yan-zhe-yu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第十一章精讲：孔子说，凭一两句话就能断案的人，大概只有仲由吧。下一句给出原因——子路无宿诺，答应的事从不过夜。这是儒家讲「信」最实在的一段：话说到做到，人才肯跟你说真话。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
