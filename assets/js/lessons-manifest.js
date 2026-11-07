@@ -4372,5 +4372,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '312-ran-zi-tui-chao',
+        num: '312',
+        title: '冉子退朝 · 其事也',
+        subtitle: '国事家事，名分要分清',
+        path: 'lessons/312-ran-zi-tui-chao/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第十四章精讲：冉子退朝。子曰：何晏也？对曰：有政。子曰：其事也。如有政，虽不吾以，吾其与闻之。一句问晚，一个「事」字——国事家事，名分要分清。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
