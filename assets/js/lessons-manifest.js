@@ -4148,5 +4148,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '296-ai-ren-zhi-ren',
+        num: '296',
+        title: '爱人 · 知人 · 举直错诸枉',
+        subtitle: '认得清人，才爱得对人',
+        path: 'lessons/296-ai-ren-zhi-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第二十二章精讲：樊迟问仁，孔子说爱人；问智，孔子说知人。樊迟没懂，孔子补一句：把正直的人扶上来，放在歪的人上面，歪的也就直了。樊迟退下去问子夏，子夏举舜举皋陶、汤举伊尹作证——挑出一个人，不仁的人就远了。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
