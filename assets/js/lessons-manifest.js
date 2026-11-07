@@ -4442,5 +4442,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '317-fan-chi-wen-ren',
+        num: '317',
+        title: '居处恭 · 执事敬 · 与人忠',
+        subtitle: '仁不在远处，就在三件日常事里',
+        path: 'lessons/317-fan-chi-wen-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第十九章精讲：樊迟问仁，孔子答「居处恭，执事敬，与人忠。虽之夷狄，不可弃也」。不讲大道理，只给三件日常事——独处端正、办事认真、待人尽心；换了地方也别丢。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
