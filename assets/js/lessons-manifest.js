@@ -4120,5 +4120,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanyuan',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '294-zi-zhang-wen-da',
+        num: '294',
+        title: '子张问达 · 闻与达',
+        subtitle: '名声是回声，不是本事',
+        path: 'lessons/294-zi-zhang-wen-da/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第二十章精讲：子张问读书人怎样才算“达”，孔子先问他怎么理解。子张答“在国里出名，在家乡也出名”。孔子说：那是“闻”，不是“达”。达是为人正直、爱好道义、会听人说话会看人脸色、凡事想着让着别人。闻是脸上做出仁的样子，做的却是另一套。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
     }
 ];
