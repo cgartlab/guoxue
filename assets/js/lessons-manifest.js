@@ -4274,5 +4274,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '305-lu-wei-zhi-zheng',
+        num: '305',
+        title: '鲁卫之政 · 兄弟也',
+        subtitle: '一样的好底子，一样的一身病',
+        path: 'lessons/305-lu-wei-zhi-zheng/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第七章精讲：子曰「鲁卫之政，兄弟也」。鲁是周公之后，卫是康叔之后，开国的两位本是亲兄弟，两国同承周礼；到孔子这时候，鲁三家专权、卫父子争位，连乱都乱得像一家。一句「兄弟也」，不是夸，是叹。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
