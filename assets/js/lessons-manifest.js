@@ -3968,6 +3968,20 @@ window.GUOXUE_LESSONS = [
         featured: false
     },
     {
+        id: '284-bai-xing-zu',
+        num: '284',
+        title: '盍彻乎 · 百姓足君孰与足',
+        subtitle: '减一分税，多一分国',
+        path: 'lessons/284-bai-xing-zu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·颜渊》第九章精讲：鲁哀公问有若，年成不好用度不够怎么办。有若答「盍彻乎」——减税。哀公说我抽两分还不够，抽一分怎么够？有若答：百姓足，君孰与不足？百姓不足，君孰与足？这是儒家的财政总纲——藏富于民。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanyuan',
+        tier: 'core',
+        featured: false
+    },
+    {
         id: '283-ji-zi-cheng-yue',
         num: '283',
         title: '驷不及舌 · 文犹质也',
