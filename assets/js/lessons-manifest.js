@@ -4470,5 +4470,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '319-kuang-juan',
+        num: '319',
+        title: '狂者进取 · 狷者有所不为',
+        subtitle: '中行难得，就交这两种人',
+        path: 'lessons/319-kuang-juan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第二十一章精讲：子曰「不得中行而与之，必也狂狷乎！狂者进取，狷者有所不为也」。找不到言行恰到好处的人，孔子宁可交两种真性情：敢往前冲的狂者，与守得住底线的狷者。做人不必十全十美，但要肯向前、守得住。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
