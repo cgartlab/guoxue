@@ -4652,5 +4652,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '332-wei-yan-wei-xing',
+        num: '332',
+        title: '危言危行 · 危行言孙',
+        subtitle: '话可以收着说，事不能打折做',
+        path: 'lessons/332-wei-yan-wei-xing/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第四章精讲：子曰「邦有道，危言危行；邦无道，危行言孙」。世道清明，话与事都要正；世道昏乱，事仍要正，话收着说。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
