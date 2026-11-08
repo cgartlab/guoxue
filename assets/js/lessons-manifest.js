@@ -4540,5 +4540,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '324-jun-zi-tai-er-bu-jiao',
+        num: '324',
+        title: '君子泰而不骄 · 小人骄而不泰',
+        subtitle: '心里踏实，不用摆架子',
+        path: 'lessons/324-jun-zi-tai-er-bu-jiao/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第二十六章精讲：子曰「君子泰而不骄，小人骄而不泰」。君子安详舒泰，却不傲慢自大；小人傲慢自大，却安详不起来。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
