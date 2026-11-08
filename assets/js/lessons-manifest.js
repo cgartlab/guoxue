@@ -4666,5 +4666,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '333-you-de-zhe-bi-you-yan',
+        num: '333',
+        title: '有德者必有言 · 仁者必有勇',
+        subtitle: '里子生得出面子，面子保不了里子',
+        path: 'lessons/333-you-de-zhe-bi-you-yan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第五章精讲：子曰「有德者必有言，有言者不必有德。仁者必有勇，勇者不必有仁」。德与仁是根，生得出言与勇；倒过来推，孔子不肯许。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
