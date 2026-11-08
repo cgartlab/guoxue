@@ -4596,5 +4596,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '328-yi-bu-jiao-min-zhan',
+        num: '328',
+        title: '以不教民战 · 是谓弃之',
+        subtitle: '没教过就送去，等于把人扔了',
+        path: 'lessons/328-yi-bu-jiao-min-zhan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第三十章精讲：子曰「以不教民战，是谓弃之」。没教过就送去上阵，等于把人扔了；与上一章正反连读，这是《子路》篇收官一句。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
