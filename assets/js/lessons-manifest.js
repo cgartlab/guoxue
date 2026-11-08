@@ -4526,5 +4526,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '323-jun-zi-yi-shi-nan-yue',
+        num: '323',
+        title: '君子易事而难说 · 小人难事而易说',
+        subtitle: '按长处用人，不挑毛病',
+        path: 'lessons/323-jun-zi-yi-shi-nan-yue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第二十五章精讲：子曰「君子易事而难说也……及其使人也，器之；小人难事而易说也……及其使人也，求备焉」。君子好共事、难讨好，用人按长处；小人难共事、易讨好，用人却求全责备。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
