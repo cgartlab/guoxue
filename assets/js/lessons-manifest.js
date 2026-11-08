@@ -4680,5 +4680,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '334-nan-gong-kuo',
+        num: '334',
+        title: '君子哉若人 · 尚德哉若人',
+        subtitle: '力气赢一时，德行赢得久',
+        path: 'lessons/334-nan-gong-kuo/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第六章精讲：南宫适问于孔子曰「羿善射，奡荡舟，俱不得其死然。禹、稷躬稼而有天下。夫子不答。南宫适出，子曰：君子哉若人！尚德哉若人」。两对古人比结局，孔子不答，背后连夸两句。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
