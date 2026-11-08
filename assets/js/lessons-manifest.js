@@ -4484,5 +4484,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '320-ren-er-wu-heng',
+        num: '320',
+        title: '人而无恒 · 不可以作巫医',
+        subtitle: '做事不怕慢，就怕断',
+        path: 'lessons/320-ren-er-wu-heng/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第二十二章精讲：子曰「南人有言曰：人而无恒，不可以作巫医。善夫！」「不恒其德，或承之羞。」子曰：「不占而已矣。」没有恒心，连最需要熬的手艺都做不成；德行守不长久，就会招来难堪。孔子把算卦拉回做人——先问自己能不能坚持。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
