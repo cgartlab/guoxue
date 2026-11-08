@@ -4638,5 +4638,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '331-shi-er-huai-ju',
+        num: '331',
+        title: '士而怀居 · 不足以为士矣',
+        subtitle: '心里只惦着舒服，担不起「士」',
+        path: 'lessons/331-shi-er-huai-ju/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第三章精讲：子曰「士而怀居，不足以为士矣」。一个士若只留恋家里的安逸，就够不上叫士；不是不许过日子，是心里不能只装着自己的舒坦。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
