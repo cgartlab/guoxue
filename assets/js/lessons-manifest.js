@@ -4722,5 +4722,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '337-wei-ming',
+        num: '337',
+        title: '裨谌草创之 · 子产润色之',
+        subtitle: '别急着交卷，也别一个人硬扛',
+        path: 'lessons/337-wei-ming/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第九章精讲：子曰「为命，裨谌草创之，世叔讨论之，行人子羽修饰之，东里子产润色之」。四双手四道工序，各用所长、一道不省，见郑国做事的郑重。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
