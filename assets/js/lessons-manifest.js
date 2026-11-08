@@ -4582,5 +4582,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '327-shan-ren-jiao-min',
+        num: '327',
+        title: '善人教民七年 · 亦可以即戎矣',
+        subtitle: '先教后战，才是爱民',
+        path: 'lessons/327-shan-ren-jiao-min/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第二十九章精讲：子曰「善人教民七年，亦可以即戎矣」。善人长久教化百姓，才敢把兵事交出去；先教后战，才是不把人往险处推。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
