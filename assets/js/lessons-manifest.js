@@ -4624,5 +4624,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '330-ke-fa-yuan-yu',
+        num: '330',
+        title: '克伐怨欲不行 · 可以为难矣',
+        subtitle: '管住自己很难，还不等于仁',
+        path: 'lessons/330-ke-fa-yuan-yu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第二章精讲：「克、伐、怨、欲不行焉，可以为仁矣？」子曰「可以为难矣，仁则吾不知也」。压住四样毛病很难得，但还不等于仁。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
