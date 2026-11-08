@@ -4498,5 +4498,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '321-jun-zi-he-er-bu-tong',
+        num: '321',
+        title: '君子和而不同 · 小人同而不和',
+        subtitle: '能一起做事，不必一个模样',
+        path: 'lessons/321-jun-zi-he-er-bu-tong/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第二十三章精讲：子曰「君子和而不同，小人同而不和。」能一起做事，不必一个模样；一味附和，反而凑不到一条心上。孔子用八个字，把真和睦与假一致分得清清楚楚。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
