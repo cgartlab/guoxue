@@ -4512,5 +4512,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '322-xiang-ren-jie-hao-zhi',
+        num: '322',
+        title: '乡人皆好之 · 其不善者恶之',
+        subtitle: '看人别只数人头',
+        path: 'lessons/322-xiang-ren-jie-hao-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第二十四章精讲：子贡问「乡人皆好之，何如？」孔子答「未可也」；「乡人皆恶之」也「未可也」。不如乡人之善者好之，其不善者恶之。看人不能只数人头，要看是谁在说他好。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
