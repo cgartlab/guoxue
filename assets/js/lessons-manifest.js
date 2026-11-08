@@ -4568,5 +4568,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '326-qie-qie-si-si',
+        num: '326',
+        title: '切切偲偲 · 怡怡如也',
+        subtitle: '对朋友肯直说，对兄弟要和气',
+        path: 'lessons/326-qie-qie-si-si/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第二十八章精讲：子路问「何如斯可谓之士矣」，子曰「切切偲偲，怡怡如也，可谓士矣。朋友切切偲偲，兄弟怡怡」。对朋友肯说真话，对兄弟要和和气气。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
