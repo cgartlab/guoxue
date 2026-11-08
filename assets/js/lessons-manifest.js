@@ -4554,5 +4554,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '325-gang-yi-mu-ne',
+        num: '325',
+        title: '刚毅木讷 · 近仁',
+        subtitle: '四样笨功夫，离仁最近',
+        path: 'lessons/325-gang-yi-mu-ne/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第二十七章精讲：子曰「刚、毅、木、讷，近仁」。刚是不被压弯，毅是能撑到底，木是质朴不花巧，讷是说话不抢；四样都不讨喜，却最接近仁。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
