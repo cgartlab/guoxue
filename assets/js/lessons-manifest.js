@@ -4736,5 +4736,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '338-huo-wen-zi-chan',
+        num: '338',
+        title: '或问子产 · 没齿无怨言',
+        subtitle: '办事公道，人心自服',
+        path: 'lessons/338-huo-wen-zi-chan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第十章精讲：或问子产，子曰「惠人也」；问子西，曰「彼哉！彼哉！」；问管仲，曰「人也。夺伯氏骈邑三百，饭疏食，没齿无怨言」。三问三答，轻重自分，见公道最能服人。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
