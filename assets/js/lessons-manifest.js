@@ -4456,5 +4456,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '318-xing-ji-you-chi',
+        num: '318',
+        title: '行己有耻 · 不辱君命',
+        subtitle: '孔子把「士」分了三等',
+        path: 'lessons/318-xing-ji-you-chi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子路》第二十章精讲：子贡问「何如斯可谓之士矣」，孔子把「士」分三等——行己有耻、使于四方不辱君命；宗族称孝、乡党称弟；言必信、行必果。末了评「今之从政者」是「斗筲之人，何足算也」。士不看位子，看担待。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zilu',
+        tier: 'core',
+        featured: false
     }
 ];
