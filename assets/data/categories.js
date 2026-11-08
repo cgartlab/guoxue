@@ -125,11 +125,19 @@ window.GUOXUE_CATEGORIES = [
         order: 14
     },
     {
-        key: 'mengxue',
-        label: '蒙学',
+        key: 'xianwen',
+        label: '宪问',
         num: '15',
-        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        description: '《论语·宪问篇》各章精讲',
         status: 'ready',
         order: 15
+    },
+    {
+        key: 'mengxue',
+        label: '蒙学',
+        num: '16',
+        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        status: 'ready',
+        order: 16
     }
 ];

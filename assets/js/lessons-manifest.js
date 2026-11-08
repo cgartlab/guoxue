@@ -4610,5 +4610,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zilu',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '329-xian-wen-chi',
+        num: '329',
+        title: '宪问耻 · 邦有道，谷',
+        subtitle: '禄看世道，耻问自己',
+        path: 'lessons/329-xian-wen-chi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第一章精讲：宪问耻。子曰「邦有道，谷；邦无道，谷，耻也」。清明之世出来做事拿俸禄是本分，世道坏了还只管领薪，才可耻。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
