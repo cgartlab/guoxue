@@ -4694,5 +4694,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '335-jun-zi-bu-ren',
+        num: '335',
+        title: '君子而不仁者有矣夫 · 未有小人而仁者也',
+        subtitle: '君子偶尔失足，小人根本没上路',
+        path: 'lessons/335-jun-zi-bu-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第七章精讲：子曰「君子而不仁者有矣夫，未有小人而仁者也」。孔子肯直说君子也会失手，却说小人里一个仁者也没有；仁看的是心朝哪边、看长久。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
