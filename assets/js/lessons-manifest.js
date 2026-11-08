@@ -4750,5 +4750,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '339-pin-er-wu-yuan',
+        num: '339',
+        title: '贫而无怨难 · 富而无骄易',
+        subtitle: '不怨比不骄，难得多',
+        path: 'lessons/339-pin-er-wu-yuan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第十一章精讲：子曰「贫而无怨难，富而无骄易」。一个「难」一个「易」，量出两样功夫的分量；穷时不怨靠修心，富时不骄靠自持。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
