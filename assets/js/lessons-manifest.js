@@ -4708,5 +4708,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '336-ai-zhi-wu-lao',
+        num: '336',
+        title: '爱之能勿劳乎 · 忠焉能勿诲乎',
+        subtitle: '真爱不惯着，真忠不顺着',
+        path: 'lessons/336-ai-zhi-wu-lao/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第八章精讲：子曰「爱之，能勿劳乎？忠焉，能勿诲乎？」。两句都是反问，答案都藏在问里：真疼他就肯给担子，真为他好就肯说真话。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
