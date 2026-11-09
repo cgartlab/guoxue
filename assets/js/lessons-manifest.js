@@ -4820,5 +4820,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '344-jin-wen-gong-jue',
+        num: '344',
+        title: '晋文公谲而不正 · 齐桓公正而不谲',
+        subtitle: '赢，也要赢得正派',
+        path: 'lessons/344-jin-wen-gong-jue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第十六章精讲：子曰「晋文公谲而不正，齐桓公正而不谲」。两位霸主都尊王攘夷，孔子却只比做事的路子：一个爱用巧劲，一个把话摆到明处。赢，也要赢得正派。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
