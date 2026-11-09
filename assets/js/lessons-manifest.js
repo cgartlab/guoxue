@@ -4792,5 +4792,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '342-shi-ran-hou-yan',
+        num: '342',
+        title: '子问公叔文子 · 时然后言，义然后取',
+        subtitle: '不是不说话，是说得正是时候',
+        path: 'lessons/342-shi-ran-hou-yan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第十四章精讲：子问公叔文子于公明贾。传话说他「不言、不笑、不取」，公明贾纠正为「时然后言、乐然后笑、义然后取」；孔子末了一句「其然？岂其然乎」留下疑问。不是不说话，是说得正是时候。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
