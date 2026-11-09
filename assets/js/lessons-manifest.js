@@ -4890,5 +4890,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '349-qi-yan-zhi-bu-zuo',
+        num: '349',
+        title: '其言之不怍 · 为之也难 · 大言不惭',
+        subtitle: '大话好说，实事难做',
+        path: 'lessons/349-qi-yan-zhi-bu-zuo/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第二十一章精讲：孔子说一个人说话不觉得惭愧，真要照着做就难了；朱熹说大言不惭，则无必为之志。大话好说，实事难做，答应之前先掂量自己。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
