@@ -4876,5 +4876,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '348-xi-er-bu-sang',
+        num: '348',
+        title: '奚而不丧 · 宾客宗庙军旅 · 各当其才',
+        subtitle: '人用对了，国就垮不了',
+        path: 'lessons/348-xi-er-bu-sang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第二十章精讲：孔子说卫灵公无道，季康子问他为何不失位；孔子答：仲叔圉治宾客、祝鮀治宗庙、王孙贾治军旅，三个人各当其才，所以国不亡。人用对了，国就垮不了。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
