@@ -4834,5 +4834,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '345-jiu-he-zhu-hou',
+        num: '345',
+        title: '桓公九合诸侯 · 不以兵车 · 如其仁',
+        subtitle: '功在天下，也是仁',
+        path: 'lessons/345-jiu-he-zhu-hou/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第十七章精讲：子路疑管仲不死公子纠，算不得仁；孔子却答「桓公九合诸侯，不以兵车，管仲之力也。如其仁！如其仁！」。不靠刀兵，天下少死人，这份功就在仁里。功在天下，也是仁。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
