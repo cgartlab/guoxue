@@ -5114,5 +5114,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '365-mo-wo-zhi-ye-fu',
+        num: '365',
+        title: '莫我知也夫 · 下学而上达',
+        subtitle: '不怨人，往上走',
+        path: 'lessons/365-mo-wo-zhi-ye-fu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第三十七章精讲：子曰：莫我知也夫！子贡曰：何为其莫知子也？子曰：不怨天，不尤人，下学而上达。知我者其天乎！孔子叹没人懂他，子贡不服气，孔子答：不埋怨天，不责怪人，从平常处学起，往上通到高处。不怨人，往上走。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
