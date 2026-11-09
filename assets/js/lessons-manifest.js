@@ -4974,5 +4974,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '355-bu-zai-qi-wei-bu-mou-qi-zheng',
+        num: '355',
+        title: '不在其位 · 不谋其政 · 重出章',
+        subtitle: '手不越位，心也不越位',
+        path: 'lessons/355-bu-zai-qi-wei-bu-mou-qi-zheng/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第二十七章精讲：子曰：不在其位，不谋其政。这句《泰伯》篇已讲过，朱熹注「重出」；后面曾子接一句君子思不出其位。手不越位，心也不越位。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
