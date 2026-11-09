@@ -5044,5 +5044,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '360-bu-huan-ren-zhi-bu-ji-zhi',
+        num: '360',
+        title: '不患人之不己知 · 患其不能也',
+        subtitle: '不怕人不知，就怕己不能',
+        path: 'lessons/360-bu-huan-ren-zhi-bu-ji-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第三十二章精讲：子曰：不患人之不己知，患其不能也。朱熹说此章凡四见而文皆有异，圣人屡言丁宁之意可见；其字指己，把患的对象从外面挪回自己。不怕人不知，就怕己不能。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
