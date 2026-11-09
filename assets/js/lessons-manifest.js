@@ -4778,5 +4778,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '341-zi-lu-wen-cheng-ren',
+        num: '341',
+        title: '子路问成人 · 见利思义，见危授命',
+        subtitle: '不必样样都全，要紧处站得住',
+        path: 'lessons/341-zi-lu-wen-cheng-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第十三章精讲：子路问成人。孔子先举臧武仲之知、公绰之不欲、卞庄子之勇、冉求之艺，文之以礼乐；又自己退一步说「见利思义，见危授命，久要不忘平生之言」。先立一根高标杆，再给一条人人够得着的路。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
