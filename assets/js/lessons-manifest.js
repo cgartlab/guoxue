@@ -5002,5 +5002,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '357-jun-zi-chi-qi-yan-er-guo-qi-xing',
+        num: '357',
+        title: '君子耻其言而过其行 · 言行相顾',
+        subtitle: '话留三分，事做十分',
+        path: 'lessons/357-jun-zi-chi-qi-yan-er-guo-qi-xing/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第二十九章精讲：子曰：君子耻其言而过其行。朱熹说耻者不敢尽之意，过者欲有余之辞；张居正说人之言行贵于相顾。话留三分，事做十分。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
