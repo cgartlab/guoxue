@@ -4904,5 +4904,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '350-gan-bu-gao-ye',
+        num: '350',
+        title: '陈成子弑简公 · 告夫三子 · 不敢不告也',
+        subtitle: '该说的话，一定要说到',
+        path: 'lessons/350-gan-bu-gao-ye/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第二十二章精讲：陈成子杀了齐简公，孔子沐浴上朝请鲁哀公讨伐；哀公让他去告三家，三家不许，孔子仍说以吾从大夫之后，不敢不告也。该说的话，一定要说到。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
