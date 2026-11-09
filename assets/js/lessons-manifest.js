@@ -5016,5 +5016,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '358-jun-zi-dao-zhe-san',
+        num: '358',
+        title: '君子道者三 · 夫子自道也',
+        subtitle: '一句谦辞，三面镜子',
+        path: 'lessons/358-jun-zi-dao-zhe-san/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第三十章精讲：子曰：君子道者三，我无能焉：仁者不忧，知者不惑，勇者不惧。子贡曰：夫子自道也。朱熹说自责以勉人也，自道犹云谦辞。一句谦辞，三面镜子。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
