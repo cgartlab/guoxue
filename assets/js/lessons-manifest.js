@@ -4946,5 +4946,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '353-gu-zhi-xue-zhe-wei-ji',
+        num: '353',
+        title: '古之学者为己 · 今之学者为人 · 成己成物',
+        subtitle: '学给自己，不学给人看',
+        path: 'lessons/353-gu-zhi-xue-zhe-wei-ji/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第二十五章精讲：孔子说古之学者为己，今之学者为人；程子说为己欲得之于己，为人欲见知于人，其终至于成物与丧己。学给自己，不学给人看。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
