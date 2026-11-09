@@ -4988,5 +4988,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '356-jun-zi-si-bu-chu-qi-wei',
+        num: '356',
+        title: '君子思不出其位 · 艮卦之象辞',
+        subtitle: '心在一处，事才做实',
+        path: 'lessons/356-jun-zi-si-bu-chu-qi-wei/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第二十八章精讲：曾子曰：君子思不出其位。朱熹说此艮卦之象辞也，记者因上章之语而类记之；范氏说物各止其所而天下之理得矣。心在一处，事才做实。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
