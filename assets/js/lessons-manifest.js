@@ -4932,5 +4932,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '352-jun-zi-shang-da',
+        num: '352',
+        title: '君子上达 · 小人下达 · 日进乎高明',
+        subtitle: '心往高处，日子往上走',
+        path: 'lessons/352-jun-zi-shang-da/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第二十四章精讲：孔子说君子日日向上通达，小人日日向下沉溺；朱熹说君子循天理故日进乎高明，小人殉人欲故日究乎污下。心往高处，日子往上走。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
