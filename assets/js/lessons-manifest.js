@@ -5086,5 +5086,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '363-ji-bu-cheng-qi-li',
+        num: '363',
+        title: '骥不称其力 · 称其德也',
+        subtitle: '好马看脾气，看人看德行',
+        path: 'lessons/363-ji-bu-cheng-qi-li/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第三十五章精讲：子曰：骥不称其力，称其德也。朱熹说骥是善马之名，德是调良，一匹好马被人称道的不是力气，是听调教的性子。借马说人，看人先看靠不靠得住，再看本事大不大。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
