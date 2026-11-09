@@ -5030,5 +5030,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '359-zi-gong-fang-ren',
+        num: '359',
+        title: '子贡方人 · 夫我则不暇',
+        subtitle: '少评别人，多省自己',
+        path: 'lessons/359-zi-gong-fang-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第三十一章精讲：子贡方人。子曰：赐也贤乎哉？夫我则不暇。朱熹说方，比也，专务方人则心驰于外而自治者疏；谢氏说圣人责人辞不迫切。少评别人，多省自己。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
