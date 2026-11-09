@@ -4960,5 +4960,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '354-qu-bo-yu-shi-ren',
+        num: '354',
+        title: '欲寡其过而未能也 · 使乎使乎 · 省身克己',
+        subtitle: '有过就改，还嫌不够',
+        path: 'lessons/354-qu-bo-yu-shi-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第二十六章精讲：蘧伯玉派使者见孔子，使者答夫子欲寡其过而未能也；孔子连赞使乎使乎。朱熹说使者之言愈自卑约，而其主之贤益彰。有过就改，还嫌不够。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
