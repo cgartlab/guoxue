@@ -4848,5 +4848,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '346-yi-kuang-tian-xia',
+        num: '346',
+        title: '一匡天下 · 被发左衽 · 民到于今受其赐',
+        subtitle: '大节在天下，不在一死',
+        path: 'lessons/346-yi-kuang-tian-xia/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第十八章精讲：子贡疑管仲不为公子纠死，还去辅佐桓公，算不得仁；孔子却答「管仲相桓公，霸诸侯，一匡天下，民到于今受其赐」，又说「微管仲，吾其被发左衽矣」。大节在天下，不在一死。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
