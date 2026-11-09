@@ -5100,5 +5100,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '364-yi-zhi-bao-yuan',
+        num: '364',
+        title: '以直报怨 · 以德报德',
+        subtitle: '恩要还，怨要公道',
+        path: 'lessons/364-yi-zhi-bao-yuan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第三十六章精讲：或曰：以德报怨，何如？子曰：何以报德？以直报怨，以德报德。有人主张用恩德回报怨恨，孔子反问：那恩德拿什么报？怨要有公道，恩要有还报，恩要还，怨要公道。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
