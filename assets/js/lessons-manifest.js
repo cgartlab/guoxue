@@ -4806,5 +4806,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '343-zang-wu-zhong-yi-fang',
+        num: '343',
+        title: '臧武仲以防 · 虽曰不要君，吾不信也',
+        subtitle: '话说得客气，事做得不客气',
+        path: 'lessons/343-zang-wu-zhong-yi-fang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第十五章精讲：臧武仲以防求为后于鲁，虽曰不要君，吾不信也。卑辞请立后，脚下却据着自己的封邑；孔子一句「吾不信也」看的是心意，不是话。话说得客气，事做得不客气。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
