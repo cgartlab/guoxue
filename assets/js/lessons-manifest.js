@@ -4764,5 +4764,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '340-meng-gong-chuo',
+        num: '340',
+        title: '孟公绰为赵魏老则优 · 不可以为滕薛大夫',
+        subtitle: '不是能不能干，是放在哪儿',
+        path: 'lessons/340-meng-gong-chuo/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第十二章精讲：子曰「孟公绰，为赵、魏老则优，不可以为滕、薛大夫」。同一个人，两处差事，一个「优」一个「不可」——用人要量才，放对地方才是本事。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
