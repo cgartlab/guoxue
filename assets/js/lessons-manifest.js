@@ -5072,5 +5072,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '362-wei-sheng-mu-wei-kong-zi-yue',
+        num: '362',
+        title: '非敢为佞 · 疾固也',
+        subtitle: '不是嘴甜，是心急',
+        path: 'lessons/362-wei-sheng-mu-wei-kong-zi-yue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第三十四章精讲：微生亩谓孔子曰：丘何为是栖栖者与？无乃为佞乎？孔子曰：非敢为佞也，疾固也。朱熹说疾固是病其固，孔子不敢逞口才，只恨世人固执不化。不是嘴甜，是心急。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
