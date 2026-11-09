@@ -5058,5 +5058,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '361-bu-ni-zha-bu-yi-bu-xin',
+        num: '361',
+        title: '不逆诈 · 不亿不信 · 先觉者贤',
+        subtitle: '不猜人，也不糊涂',
+        path: 'lessons/361-bu-ni-zha-bu-yi-bu-xin/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第三十三章精讲：子曰：不逆诈，不亿不信，抑亦先觉者，是贤乎！朱熹说不逆诈是未至而不迎，不亿不信是未见而不意，于人情真伪自然先觉乃为贤。不猜人，也不糊涂。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
