@@ -4918,5 +4918,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '351-wu-qi-ye-er-fan-zhi',
+        num: '351',
+        title: '子路问事君 · 勿欺也 · 而犯之',
+        subtitle: '不骗人，也敢直说',
+        path: 'lessons/351-wu-qi-ye-er-fan-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第二十三章精讲：子路问怎样侍奉君主，孔子只答六个字：勿欺也，而犯之。不欺瞒，也敢当面直说；朱熹说犯，谓犯颜谏争。不骗人，也敢直说。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
