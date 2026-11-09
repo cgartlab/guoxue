@@ -4862,5 +4862,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '347-tong-sheng-zhu-gong',
+        num: '347',
+        title: '同升诸公 · 可以为文 · 荐贤不妒',
+        subtitle: '能抬举人，才配称文',
+        path: 'lessons/347-tong-sheng-zhu-gong/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第十九章精讲：公叔文子把自己的家臣大夫僎荐到公朝，与自己同列为大夫；孔子听说后只说一句「可以为文矣」。知人、忘己、事君，能抬举人，才配称文。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
