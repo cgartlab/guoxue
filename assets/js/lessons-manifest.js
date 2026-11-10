@@ -5254,5 +5254,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '375-wei-ling-gong-wen-chen',
+        num: '375',
+        title: '卫灵公问陈 · 道不同不必留',
+        subtitle: '话不投机，第二天就走',
+        path: 'lessons/375-wei-ling-gong-wen-chen/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第一章精讲：卫灵公问陈于孔子。孔子对曰：俎豆之事，则尝闻之矣；军旅之事，未之学也。明日遂行。卫灵公问孔子怎么排兵布阵，孔子回答说：祭祀礼仪的事，我听说过；打仗的事，我没学过。第二天他就离开了卫国。答得软，立场硬：不合就明说，说完就走，不敷衍也不将就。道不同，不必勉强凑在一起。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
