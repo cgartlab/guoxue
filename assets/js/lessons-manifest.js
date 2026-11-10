@@ -5156,5 +5156,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '368-zi-lu-su-yu-shi-men',
+        num: '368',
+        title: '子路宿于石门 · 知其不可而为之',
+        subtitle: '做不成也做',
+        path: 'lessons/368-zi-lu-su-yu-shi-men/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第四十章精讲：子路宿于石门。晨门曰：奚自？子路曰：自孔氏。曰：是知其不可而为之者与？子路在城门外过夜，守门人问他从哪来，他说从孔家来；守门人说：就是那个明知做不成还偏要做的人吗？一句话把孔子的一生说透了。做不成也做。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
