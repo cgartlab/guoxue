@@ -5478,5 +5478,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '391-jun-zi-bing-wu-neng',
+        num: '391',
+        title: '君子病无能焉 · 怕自己不行，不怕别人不识',
+        subtitle: '本事在身上，不在别人嘴里',
+        path: 'lessons/391-jun-zi-bing-wu-neng/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第十七章精讲：子曰：君子病无能焉，不病人之不己知也。君子只担心自己没本事，不担心别人不了解自己——本事长在身上，名声才跟得上。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
