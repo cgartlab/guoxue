@@ -5394,5 +5394,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '385-ren-wu-yuan-lu-bi-you-jin-you',
+        num: '385',
+        title: '人无远虑 · 早想一步，少慌十步',
+        subtitle: '不想远的，近的就会找上门',
+        path: 'lessons/385-ren-wu-yuan-lu-bi-you-jin-you/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第十一章精讲：子曰：人无远虑，必有近忧。八个字说透一件事——今天不往远处想，明天就得低头补窟窿。远虑不是发愁，是提前一步动手；近忧多半不是倒霉，是自己一天一天攒出来的。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
