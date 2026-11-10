@@ -5170,5 +5170,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '369-zi-ji-qing-yu-wei',
+        num: '369',
+        title: '子击磬于卫 · 深则厉浅则揭',
+        subtitle: '好意领了，方向不改',
+        path: 'lessons/369-zi-ji-qing-yu-wei/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第四十一章精讲：子击磬于卫。有荷蒉而过孔氏之门者，曰：有心哉，击磬乎！既而曰：鄙哉！硁硁乎！莫己知也，斯己而已矣。深则厉，浅则揭。子曰：果哉！末之难矣。背草筐的隐士从磬声里听出孔子的心事，劝他看深浅、别硬撑；孔子说：说得真干脆，没什么可辩驳的。好意领了，方向不改。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
