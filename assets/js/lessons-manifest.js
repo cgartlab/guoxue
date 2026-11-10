@@ -5338,5 +5338,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '381-bu-shi-ren-bu-shi-yan',
+        num: '381',
+        title: '不失人，不失言 · 话是看人说的',
+        subtitle: '话有两头，都别漏',
+        path: 'lessons/381-bu-shi-ren-bu-shi-yan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第七章精讲：子曰：可与言而不与之言，失人；不可与言而与之言，失言。知者不失人，亦不失言。该说的时候不说，就漏掉一个人；说不进去的时候硬说，就白费一句话。真正明白的人，一头不漏人，一头不漏嘴。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
