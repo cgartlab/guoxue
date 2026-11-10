@@ -5212,5 +5212,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '372-xiu-ji-yi-jing',
+        num: '372',
+        title: '修己以敬 · 先把自己修好',
+        subtitle: '修好自己，才安得住人',
+        path: 'lessons/372-xiu-ji-yi-jing/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第四十四章精讲：子路问君子。子曰：修己以敬。曰：如斯而已乎？曰：修己以安人。曰：如斯而已乎？曰：修己以安百姓。修己以安百姓，尧舜其犹病诸？子路问怎样才算君子，孔子只答四个字：用敬来修自己。子路嫌少，追问两次，孔子把话说到底：修好自己，身边人先安，再往外才谈得上天下；连尧舜都觉得安百姓难。刀口朝里，先改自己。修好自己，才安得住人。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
