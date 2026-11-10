@@ -5240,5 +5240,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '374-que-dang-tong-zi',
+        num: '374',
+        title: '阙党童子 · 欲速成者也',
+        subtitle: '越想快，越长不成',
+        path: 'lessons/374-que-dang-tong-zi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第四十六章精讲：阙党童子将命。或问之曰：益者与？子曰：吾见其居于位也，见其与先生并行也。非求益者也，欲速成者也。阙党有个少年来传话，有人问孔子：这孩子是求上进的吗？孔子说：我看见他大模大样坐在大人的位子上，又看见他跟长辈并肩走路。他不是求上进的，是急着长大的。礼不在大场面，就在坐哪儿、怎么走。越想快，越长不成。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
