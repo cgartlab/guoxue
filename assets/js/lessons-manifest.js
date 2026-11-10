@@ -5128,5 +5128,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '366-gong-bo-liao-su-zi-lu',
+        num: '366',
+        title: '公伯寮愬子路 · 道之将行命也',
+        subtitle: '不跟小人较劲',
+        path: 'lessons/366-gong-bo-liao-su-zi-lu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第三十八章精讲：公伯寮愬子路于季孙。子服景伯以告，曰：夫子固有惑志于公伯寮，吾力犹能肆诸市朝。子曰：道之将行也与，命也；道之将废也与，命也。公伯寮其如命何！有人在季孙面前告子路的状，子服景伯说要替他除掉这人，孔子不许：道能不能行是命，一个小人挡不住。不跟小人较劲。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
