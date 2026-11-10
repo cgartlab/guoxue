@@ -5520,5 +5520,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '394-jun-zi-qiu-zhu-ji',
+        num: '394',
+        title: '君子求诸己 · 出了事，先看自己',
+        subtitle: '向内一步，往上一步',
+        path: 'lessons/394-jun-zi-qiu-zhu-ji/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第二十章精讲：子曰：君子求诸己，小人求诸人。出了事，君子先从自己身上找原因、找办法；小人张口就怪别人——答案先往自己身上找，才改得了事。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
