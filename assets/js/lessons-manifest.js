@@ -5310,5 +5310,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '379-wu-wei-er-zhi',
+        num: '379',
+        title: '无为而治 · 把自己站正',
+        subtitle: '不用忙，也能治',
+        path: 'lessons/379-wu-wei-er-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第五章精讲：子曰：无为而治者，其舜也与？夫何为哉？恭己正南面而已矣。不用忙忙碌碌就把天下治理好的，大概只有舜吧？他做了什么？只是把自己端正了，面朝南坐着罢了。真正的管，不是事事插手，是自己站得正。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
