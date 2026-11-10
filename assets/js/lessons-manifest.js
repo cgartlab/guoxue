@@ -5380,5 +5380,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '384-xing-xia-zhi-shi',
+        num: '384',
+        title: '行夏之时 · 挑对的用，丢坏的走',
+        subtitle: '四样照好的来，两样赶紧躲',
+        path: 'lessons/384-xing-xia-zhi-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第十章精讲：颜渊问为邦。子曰：行夏之时，乘殷之辂，服周之冕，乐则韶舞。放郑声，远佞人。郑声淫，佞人殆。治国不难，就看你会不会挑：历法挑合农时的，车子挑结实的，帽子挑庄重的，音乐挑正经的；花哨的曲子丢开，油嘴的人离远。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
