@@ -5184,5 +5184,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '370-gao-zong-liang-yin',
+        num: '370',
+        title: '子张问书 · 高宗谅阴',
+        subtitle: '守孝三年，天下不乱',
+        path: 'lessons/370-gao-zong-liang-yin/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第四十二章精讲：子张曰：书云：高宗谅阴，三年不言。何谓也？子曰：何必高宗，古之人皆然。君薨，百官总己以听于冢宰三年。子张问《尚书》里「高宗守丧三年不说话」是什么意思，孔子说：何必只说高宗，古时候的人都这样；君主去世，百官各守其职，听命于宰相三年。守孝三年，天下不乱。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
