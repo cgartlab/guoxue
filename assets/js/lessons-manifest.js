@@ -5506,5 +5506,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '393-ji-mo-shi',
+        num: '393',
+        title: '君子疾没世而名不称 · 怕的不是死，是白活',
+        subtitle: '实是根，名是叶',
+        path: 'lessons/393-ji-mo-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第十九章精讲：子曰：君子疾没世而名不称焉。君子最怕的，是离开人世时名字没有真东西可称道——实是根，名是叶；趁活着，把每件小事做实，留下真东西。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
