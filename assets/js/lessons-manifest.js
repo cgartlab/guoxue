@@ -5422,5 +5422,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '387-qie-wei-zhe-yu',
+        num: '387',
+        title: '窃位者与 · 占着位子，不用好人',
+        subtitle: '位子是担子，不是脸面',
+        path: 'lessons/387-qie-wei-zhe-yu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第十三章精讲：子曰：臧文仲其窃位者与！知柳下惠之贤而不与立也。孔子点了臧文仲的名——不是骂他偷东西，是说他占着大位子，明知柳下惠有本事，却不给他一个位置。知道好还压着不用，就是偷。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
