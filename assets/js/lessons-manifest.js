@@ -5408,5 +5408,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '386-hao-de-ru-hao-se',
+        num: '386',
+        title: '好德如好色 · 真心喜欢什么，就往哪儿长',
+        subtitle: '叹的是人心，不是骂哪个人',
+        path: 'lessons/386-hao-de-ru-hao-se/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第十二章精讲：子曰：已矣乎！吾未见好德如好色者也。孔子叹了一声：算了吧！我没见过爱德行，像爱好看那样真心的人。好看的一眼就见，德行要日久才见；不是不许爱美，是不能只爱美。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
