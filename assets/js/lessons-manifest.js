@@ -5352,5 +5352,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '382-zhi-shi-ren-ren',
+        num: '382',
+        title: '志士仁人 · 有些东西比命重',
+        subtitle: '命可以舍，仁不能卖',
+        path: 'lessons/382-zhi-shi-ren-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第八章精讲：子曰：志士仁人，无求生以害仁，有杀身以成仁。有志向、有仁心的人，不会为了活命去做伤仁的事，宁可舍掉自己，也要把仁成全。这不是叫人不要命，是叫人心里有一件比命更重的事。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
