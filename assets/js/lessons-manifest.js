@@ -5226,5 +5226,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '373-yuan-rang-yi-si',
+        num: '373',
+        title: '原壤夷俟 · 老而不死是为贼',
+        subtitle: '不长进，就白活',
+        path: 'lessons/373-yuan-rang-yi-si/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第四十五章精讲：原壤夷俟。子曰：幼而不孙弟，长而无述焉，老而不死，是为贼。以杖叩其胫。老朋友原壤蹲在门口等孔子，孔子一句一句数落他：小时候不敬兄长，长大了没有可称道的事，老了还不死，这是害人。说着用拐杖敲了敲他的小腿。这是老朋友之间的责备——话说到透，手还是轻的。一辈子不长进，就是白活。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
