@@ -5436,5 +5436,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '388-gong-zi-hou-er-bo-ze-yu-ren',
+        num: '388',
+        title: '躬自厚 · 多怪自己，少怪别人',
+        subtitle: '严自己一分，怨少十分',
+        path: 'lessons/388-gong-zi-hou-er-bo-ze-yu-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第十四章精讲：子曰：躬自厚而薄责于人，则远怨矣。对自己要求厚一点，对别人责备薄一点，怨气就离得远。出了事，先看看自己哪没做好；别人的过失，说一句就放下。能改的在自己这头，改起来最快。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
