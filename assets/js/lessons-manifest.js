@@ -5534,5 +5534,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '395-jin-er-bu-zheng-qun-er-bu-dang',
+        num: '395',
+        title: '君子矜而不争 · 站得住，合得来，不结派',
+        subtitle: '合群不拉帮',
+        path: 'lessons/395-jin-er-bu-zheng-qun-er-bu-dang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第二十一章精讲：子曰：君子矜而不争，群而不党。君子庄重自持，跟人没有什么好争的；跟大伙合得来，但不拉帮结派——合群是敞开的，拉帮是关门的。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
