@@ -5142,5 +5142,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '367-xian-zhe-bi-shi',
+        num: '367',
+        title: '贤者辟世 · 辟地辟色辟言',
+        subtitle: '不对头就躲开',
+        path: 'lessons/367-xian-zhe-bi-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第三十九章精讲：子曰：贤者辟世，其次辟地，其次辟色，其次辟言。子曰：作者七人矣。贤人躲开乱世，次一等换个地方，再次一等看人脸色不对就走开，最下一等听到话头不对就不再接话。不是怕事，是看得早。不对头就躲开。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
