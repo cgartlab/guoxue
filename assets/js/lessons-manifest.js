@@ -5366,5 +5366,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '383-gong-yu-shan-qi-shi',
+        num: '383',
+        title: '工欲善其事 · 先磨刀，再干活',
+        subtitle: '活儿要好，家伙先快',
+        path: 'lessons/383-gong-yu-shan-qi-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第九章精讲：子贡问为仁。子曰：工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。工匠要把活干好，先得把家伙磨快；人要把仁做出来，先得跟对的人在一起。工具是手边的家伙，贤者是身边的帮手。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
