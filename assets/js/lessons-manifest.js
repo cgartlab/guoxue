@@ -5282,5 +5282,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '377-yi-yi-guan-zhi',
+        num: '377',
+        title: '一以贯之 · 学得多不如理得清',
+        subtitle: '一条线串起来',
+        path: 'lessons/377-yi-yi-guan-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第三章精讲：子曰：赐也，女以予为多学而识之者与？对曰：然，非与？曰：非也，予一以贯之。孔子问子贡：你以为我是学得多、记得多吗？子贡说：是啊，难道不是？孔子说：不是，我是一条道贯下来的。学问不在记多少条，在能不能用一条理串起来。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
