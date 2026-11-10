@@ -5268,5 +5268,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '376-zai-chen-jue-liang',
+        num: '376',
+        title: '在陈绝粮 · 穷时见人',
+        subtitle: '饿着，也不乱来',
+        path: 'lessons/376-zai-chen-jue-liang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第二章精讲：在陈绝粮，从者病，莫能兴。子路愠见曰：君子亦有穷乎？子曰：君子固穷，小人穷斯滥矣。孔子一行在陈国断了粮，跟随的弟子饿病了，爬不起来。子路带着气来见孔子，问：君子也会落到这个地步吗？孔子说：君子穷也守得住，小人一穷就什么都干得出来。日子难过的时候，才看得出一个人是什么成色。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
