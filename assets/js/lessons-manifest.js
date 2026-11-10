@@ -5450,5 +5450,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '389-bu-yue-ru-zhi-he',
+        num: '389',
+        title: '不曰如之何 · 肯问怎么办，才有办法',
+        subtitle: '不问办法的人，谁也帮不上',
+        path: 'lessons/389-bu-yue-ru-zhi-he/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第十五章精讲：子曰：不曰「如之何，如之何」者，吾末如之何也已矣。遇事不肯问一句「怎么办」的人，孔子说我也拿他没办法。先问自己卡在哪，再问别人为什么；肯琢磨、肯请教，办法才出得来。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
