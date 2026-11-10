@@ -5464,5 +5464,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '390-jun-zi-yi-yi-wei-zhi',
+        num: '390',
+        title: '君子义以为质 · 心里有该不该，手上才有分寸',
+        subtitle: '义是根，礼是路，逊是口，信是手',
+        path: 'lessons/390-jun-zi-yi-yi-wei-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第十六章精讲：子曰：君子义以为质，礼以行之，孙以出之，信以成之。心里先分清该不该，做得有分寸，话说得谦和，事办得牢靠。四样齐了，才叫君子。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
