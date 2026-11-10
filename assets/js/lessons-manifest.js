@@ -5198,5 +5198,19 @@ window.GUOXUE_LESSONS = [
         subject: 'xianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '371-shang-hao-li-ze-min-yi-shi',
+        num: '371',
+        title: '上好礼 · 则民易使也',
+        subtitle: '上面守礼，下面肯干',
+        path: 'lessons/371-shang-hao-li-ze-min-yi-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·宪问》第四十三章精讲：子曰：上好礼，则民易使也。孔子说：上位的人看重礼、按礼做事，百姓就容易听从差遣。「易使」不是好欺负、好支使，而是心里服了、愿意出力。礼是两头的：上对下有分寸，下对上有敬意。想让人服你，先自己做正。上守礼，下肯干。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'xianwen',
+        tier: 'core',
+        featured: false
     }
 ];
