@@ -5296,5 +5296,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '378-zhi-de-zhe-xian-yi',
+        num: '378',
+        title: '知德者鲜 · 认得字，未必懂得德',
+        subtitle: '七个字里的一声叹',
+        path: 'lessons/378-zhi-de-zhe-xian-yi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第四章精讲：子曰：由！知德者鲜矣。孔子对子路说：由啊！真正懂得德的人太少了。认得「德」这个字不难，难的是真明白德好在哪儿、真肯照着做。这一章只有七个字，是叹气，也是当面提醒。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
