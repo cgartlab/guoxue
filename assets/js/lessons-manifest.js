@@ -5324,5 +5324,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '380-zhi-zai-shi-yu',
+        num: '380',
+        title: '直哉史鱼 · 直有直的好，藏有藏的好',
+        subtitle: '两种活法，都算好',
+        path: 'lessons/380-zhi-zai-shi-yu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第六章精讲：子曰：直哉史鱼！邦有道，如矢；邦无道，如矢。君子哉蘧伯玉！邦有道，则仕；邦无道，则可卷而怀之。史鱼真直，国家清明时像箭，国家昏暗时还像箭。蘧伯玉真是君子，清明时出来做事，昏暗时把本事收起来。两个人孔子都夸，两种活法各有各的好。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
