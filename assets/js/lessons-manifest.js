@@ -5716,5 +5716,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '408-min-zhi-yu-ren-ye',
+        num: '408',
+        title: '甚于水火 · 民之于仁也',
+        subtitle: '仁，比水火还急',
+        path: 'lessons/408-min-zhi-yu-ren-ye/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第三十四章精讲：民之于仁也，甚于水火。水火，吾见蹈而死者矣，未见蹈仁而死者也。人需要仁，比需要水火还急；行仁却不会让人送命。仁比水火还急，行仁不吃亏。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
