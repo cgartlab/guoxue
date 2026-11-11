@@ -5646,5 +5646,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '403-ren-neng-hong-dao',
+        num: '403',
+        title: '人能弘道 · 非道弘人',
+        subtitle: '道要靠人走，人不能靠道撑',
+        path: 'lessons/403-ren-neng-hong-dao/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第二十八章精讲：子曰：人能弘道，非道弘人。道要靠人去走、去传，不是挂个道的名头人就自动高贵。人是活的，道才活得起来。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
