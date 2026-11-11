@@ -5758,5 +5758,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '411-jing-qi-shi-hou-qi-shi',
+        num: '411',
+        title: '敬其事而后其食 · 事君敬其事',
+        subtitle: '先把事办好，再谈饭碗',
+        path: 'lessons/411-jing-qi-shi-hou-qi-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第三十七章精讲：事君，敬其事而后其食。给人办事，先把交办的职事认真办好，再谈俸禄吃饭。敬是把事当事，不是嘴上恭敬；后是次序，不是不要。先做事，后吃饭。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
