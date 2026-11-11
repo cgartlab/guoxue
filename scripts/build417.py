@@ -1,0 +1,221 @@
+# -*- coding: utf-8 -*-
+"""生成第 417 课《季氏》第二章「天下有道，则礼乐征伐自天子出」课件。
+原文逐字 ruby 由拼音表生成，避免手写漏字。
+"""
+import io
+import os
+import re
+
+PY = """
+孔kǒng 子zǐ 曰yuē ： 「 天tiān 下xià 有yǒu 道dào ， 则zé 礼lǐ 乐yuè 征zhēng 伐fá 自zì 天tiān 子zǐ 出chū ； 天tiān 下xià 无wú 道dào ， 则zé 礼lǐ 乐yuè 征zhēng 伐fá 自zì 诸zhū 侯hóu 出chū 。
+||
+自zì 诸zhū 侯hóu 出chū ， 盖gài 十shí 世shì 希xī 不bù 失shī 矣yǐ ； 自zì 大dà 夫fū 出chū ， 五wǔ 世shì 希xī 不bù 失shī 矣yǐ ； 陪péi 臣chén 执zhí 国guó 命mìng ， 三sān 世shì 希xī 不bù 失shī 矣yǐ 。
+||
+天tiān 下xià 有yǒu 道dào ， 则zé 政zhèng 不bù 在zài 大dà 夫fū ； 天tiān 下xià 有yǒu 道dào ， 则zé 庶shù 人rén 不bù 议yì 。 」
+"""
+
+HAN_RT = re.compile(r'^([\u4e00-\u9fff])([a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜüńňǹ]+)$')
+
+FS = '1.55rem'
+LH = '2.15'
+
+
+def build_ruby_paragraphs():
+    out = []
+    for idx, para in enumerate(PY.strip().split('||')):
+        html = []
+        for tok in para.split():
+            tok = tok.strip()
+            if not tok:
+                continue
+            m = HAN_RT.match(tok)
+            if m:
+                html.append('<ruby lang="zh-Hans">%s<rt>%s</rt></ruby>' % (m.group(1), m.group(2)))
+            else:
+                html.append(tok)
+        if idx == 0:
+            style = ('padding-top:0;text-align:left;text-indent:0;font-size:%s;'
+                     'line-height:%s;width:100%%;max-width:none;margin:0' % (FS, LH))
+        else:
+            style = ('text-align:left;text-indent:0;font-size:%s;line-height:%s;'
+                     'width:100%%;max-width:none;margin:0.2em 0 0' % (FS, LH))
+        out.append('<p style="%s">%s</p>' % (style, ''.join(html)))
+    return '\n'.join(out)
+
+
+TEMPLATE = r'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="《论语·季氏》第二章精讲：天下有道，则礼乐征伐自天子出。孔子讲权力往下漏一层的后果——诸侯出十世、大夫出五世、陪臣执国命三世，越往下越短。收尾两句：政不在大夫，庶人不议。" name="description"/>
+<meta content="天下有道 · 礼乐征伐自天子出 · 国学课堂" property="og:title"/>
+<meta content="《论语·季氏》第二章精讲：规矩要从上面立起" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://guoxue.8023laozhanshi.cc/lessons/417-tian-xia-you-dao/index.html" property="og:url"/>
+<link href="https://guoxue.8023laozhanshi.cc/lessons/417-tian-xia-you-dao/index.html" rel="canonical"/>
+<title>天下有道 · 礼乐征伐自天子出 ·《论语》国学问答 · 国学课堂</title>
+<link href="../../assets/img/favicon.svg?v=jishi417" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="../../assets/css/ds-design-system.css?v=jishi417" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#slide-container">跳转到主内容</a>
+<div aria-hidden="true" class="bg-layer"></div>
+<div aria-hidden="true" class="ink-dot ink-dot-1"></div>
+<div aria-hidden="true" class="ink-dot ink-dot-2"></div>
+<div aria-hidden="true" class="ink-dot ink-dot-3"></div>
+<nav aria-label="主导航" class="ds-navbar ds-navbar--global">
+<a class="ds-btn-nav ds-btn-nav--brand" href="../../index.html">国学课堂</a>
+<a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html">首页</a>
+<ul class="ds-navbar__menu" id="primary-menu">
+<li><a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html#lesson-cards">课程</a></li>
+<li><a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html#sidebar-nav">门类</a></li>
+</ul>
+<a class="ds-btn-nav" href="../../about.html">关于本站</a>
+</nav>
+<nav aria-label="课程工具栏" class="ds-toolbar">
+<a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html">← 返回目录</a>
+<div class="ds-tabs">
+<button class="ds-tab active" data-section="lecture">讲义</button>
+<button class="ds-tab" data-section="quiz">测验</button>
+<button class="ds-tab" data-section="review">答疑解惑</button>
+</div>
+<div class="ds-toolbar__right">
+<span class="page-indicator" id="page-indicator">1 / 24</span>
+<div class="dots-row" id="dots-row"></div>
+<button class="ds-btn-nav" disabled="" id="nav-prev">← 上一页</button>
+<button class="ds-btn-nav" id="nav-next">下一页 →</button>
+<button aria-label="切换全屏显示" class="ds-btn-nav ds-btn-nav--icon" id="fullscreen-btn" title="切换全屏显示"><span class="ds-btn-nav__icon">⛶</span><span class="ds-btn-nav__text">全屏</span></button>
+</div>
+</nav>
+<div class="slide-viewport">
+<div class="slide-container" id="slide-container">
+<!-- ====== 讲义部分 ====== -->
+<!-- 1. 标题页 -->
+<div class="slide active cover-slide" data-page="0" data-section="lecture"><div class="cover-ornament"></div><h2 class="ds-display">天下有道</h2><div class="cover-ornament"></div><p class="cover-subtitle">规矩要从上面立起</p><p class="cover-desc">这是<strong>《论语·季氏》第二章</strong>。孔子讲一件事：<strong>天下有道，礼乐征伐自天子出</strong>；天下无道，就落到诸侯手里、大夫手里，甚至<strong>家臣把持国政</strong>。权力往下漏一层，能撑的世代就少一层——<strong>十世、五世、三世</strong>，一代比一代短。</p><div class="cover-seal">论语</div></div>
+<!-- 2. 原文呈现 -->
+<div class="slide" data-page="1" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2 style="margin-bottom:8px;">原文呈现</h2><div class="ds-quote" style="margin:10px 0;padding:24px 30px 22px;line-height:1.7;">
+{{RUBY}}
+</div><p style="font-size:0.85rem;line-height:1.55;width:100%;max-width:none;margin-top:var(--ds-space-1)"><strong>通译</strong>：<strong>天下政治清明，制礼作乐、出兵打仗都由天子决定；天下不清明，这些就由诸侯决定。由诸侯决定，大概十代很少不丢；由大夫决定，五代很少不丢；家臣把持国政，三代很少不丢。天下清明，政令就不在大夫手里；天下清明，老百姓也不会议论朝政</strong>。</p><p style="font-size:0.85rem;line-height:1.55;width:100%;max-width:none"><strong>背景</strong>：<strong>按站内分法，这是《季氏》第二章</strong>；<strong>合章本多作 16.2</strong>；<strong>孔子说的是鲁国的实情：政权早已落到季氏这类大夫手里，家臣也起来了</strong>；<strong>上一章讲一家之内，这一章讲一国之内</strong>。</p><p style="font-size:0.85rem;line-height:1.55;width:100%;max-width:none"><strong>小记</strong>：<strong>上面立不住，下面就乱套</strong>。</p></div>
+<!-- 3. 字词梳理 -->
+<div class="slide" data-page="2" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>字词梳理 · 七个关节</h2><p><span class="ds-highlight">有道 / 无道</span>：<strong>政治清明 / 不清明</strong>——<strong>不是"有路走""没路走"</strong>。</p><p><span class="ds-highlight">礼乐征伐</span>：<strong>制礼作乐、出兵打仗</strong>——<strong>国家最大的两件事</strong>。</p><p><span class="ds-highlight">自……出</span>：<strong>由谁决定、从哪里发出</strong>。</p><p><span class="ds-highlight">世</span>：<strong>一代人叫一世</strong>——<strong>父子相继为一世</strong>。</p><p><span class="ds-highlight">希不失矣</span>：<strong>很少不丢掉</strong>——<strong>希＝稀，少</strong>。</p><p><span class="ds-highlight">陪臣</span>：<strong>大夫的家臣</strong>——<strong>低一层的人</strong>。</p><p><span class="ds-highlight">庶人不议</span>：<strong>老百姓不议论朝政</strong>——<strong>政事清明，才没人说闲话</strong>。</p><p class="ds-caption"><strong>一句话记：</strong><strong>规矩要从上面立起</strong>。</p></div>
+<!-- 4. 解读一 -->
+<div class="slide" data-page="3" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>逐句解读 · 一：天下有道</h2><h3>“ 礼 乐 征 伐 自 天 子 出 ”</h3><p style="margin:0"><strong>「礼乐征伐」为什么单点这两样？</strong><br/><br/>① <strong>制礼作乐＝定规矩；出兵打仗＝定生死</strong><br/>② <strong>这两样谁说了算，谁就是真掌权的</strong><br/><br/><strong>一句话：最大的两件事，看出权力在哪。</strong></p><p><strong>「天下有道」是什么样子？</strong><br/><br/>① <strong>名分有序：该谁定的谁定</strong><br/>② <strong>不是太平没吵架，是规矩不乱</strong><br/><br/><strong>一句话：位置对了，天下就稳。</strong></p><p><strong>「无道」从哪儿开始坏？</strong><br/><br/>① <strong>从诸侯自己作主开始</strong><br/>② <strong>不是百姓先乱，是上头先越位</strong><br/><br/><strong>一句话：乱从上头起。</strong></p></div>
+<!-- 5. 解读二 -->
+<div class="slide" data-page="4" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>逐句解读 · 二：十世、五世、三世</h2><h3>“ 盖 十 世 希 不 失 矣 ”</h3><p style="margin:0"><strong>这三个数字在算什么？</strong><br/><br/>① <strong>诸侯作主，十代很少不丢</strong><br/>② <strong>大夫作主，五代很少不丢</strong><br/>③ <strong>家臣掌权，三代很少不丢</strong><br/><br/><strong>一句话：越往下漏，垮得越快。</strong></p><p><strong>「盖」和「希」要紧吗？</strong><br/><br/>① <strong>盖＝大概，希＝少：说的是常理，不是算卦</strong><br/><br/><strong>一句话：估量之词，不是铁定的预言。</strong></p><p><strong>为什么越往下越短？</strong><br/><br/>① <strong>没名分，只能靠实力压人</strong><br/>② <strong>底下的人照着学，一层压一层</strong><br/><br/><strong>一句话：坏样子学得快。</strong></p></div>
+<!-- 6. 解读三 -->
+<div class="slide" data-page="5" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>逐句解读 · 三：陪臣执国命</h2><h3>“ 陪 臣 执 国 命 ”</h3><p style="margin:0"><strong>「陪臣」是什么人？</strong><br/><br/>① <strong>大夫家里的家臣，身份更低一层</strong><br/>② <strong>本该管一家的事，却把一国政令抓在手里</strong><br/><br/><strong>一句话：最低的人，掌最大的权。</strong></p><p><strong>为什么说这是最坏的局面？</strong><br/><br/>① <strong>名分彻底断了，谁也不服谁</strong><br/>② <strong>再到下一代，就没人能收拾</strong><br/><br/><strong>一句话：规矩散到底，只剩拳头。</strong></p><p><strong>孔子是在骂人吗？</strong><br/><br/>① <strong>他讲的是鲁国实情，不是编的</strong><br/>② <strong>说清后果，是让人回头，不是看笑话</strong><br/><br/><strong>一句话：话说透了，才有人肯改。</strong></p></div>
+<!-- 7. 解读四 -->
+<div class="slide" data-page="6" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>逐句解读 · 四：政不在大夫</h2><h3>“ 庶 人 不 议 ”</h3><p style="margin:0"><strong>「政不在大夫」在重申什么？</strong><br/><br/>① <strong>政令该从该出的地方出</strong><br/>② <strong>大夫可以有位子，不能有国政</strong><br/><br/><strong>一句话：有位子，不等于有权力。</strong></p><p><strong>「庶人不议」是不让百姓说话吗？</strong><br/><br/>① <strong>不是堵嘴，是描述一个好局面</strong><br/>② <strong>政事清明，百姓没什么可议论的</strong><br/><br/><strong>一句话：做得正，闲话自然少。</strong></p><p><strong>三句「天下有道」为什么重复？</strong><br/><br/>① <strong>一句说礼乐，一句说政令，一句说人心</strong><br/>② <strong>从上往下，一层层落到百姓身上</strong><br/><br/><strong>一句话：上头正，下头才静。</strong></p></div>
+<!-- 8. 核心思想 -->
+<div class="slide" data-page="7" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>核心思想 · 三层看权力</h2><p>这一章说的是名分，一层比一层实——</p><h3>“天下有道 · 政不在大夫”</h3>
+<p style="margin:var(--ds-space-1) 0 0"><strong>名分：</strong>该谁定的谁定。</p><p>📜 礼乐征伐自天子出，位置一乱，天下就散</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>递衰：</strong>越往下漏，垮得越快。</p><p>⏳ 诸侯十世、大夫五世、陪臣三世，一代比一代短</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>安静：</strong>上头正，下头才静。</p><p>🤐 政不在大夫，庶人不议，闲话少了才是真好</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>位置：</strong>《季氏》第二章，<strong>承上章讲一国之事</strong>。</p></div>
+<!-- ====== 测验部分（slide-engine.js 渲染） ====== -->
+<div class="slide" data-page="8" data-section="quiz"><span class="ds-badge ds-badge--success">测验</span><h2 style="border:none;text-align:center;padding-bottom:0;">测验说明</h2><ul style="text-align:left;margin-top:var(--ds-space-6);display:inline-block;"><li>共 10 道选择题，每题 3 个选项</li><li>每题 10 分，满分 100 分</li><li>点击选项即可作答，选择后会显示讲解</li><li>可以随时返回讲义部分复习</li></ul><p style="margin-top:var(--ds-space-10);text-align:center;font-size:1.25rem;color:var(--ds-accent);font-weight:700;">准备好了吗？</p></div>
+<div class="slide" data-page="9" data-section="quiz" id="quiz-0"></div>
+<div class="slide" data-page="10" data-section="quiz" id="quiz-1"></div>
+<div class="slide" data-page="11" data-section="quiz" id="quiz-2"></div>
+<div class="slide" data-page="12" data-section="quiz" id="quiz-3"></div>
+<div class="slide" data-page="13" data-section="quiz" id="quiz-4"></div>
+<div class="slide" data-page="14" data-section="quiz" id="quiz-5"></div>
+<div class="slide" data-page="15" data-section="quiz" id="quiz-6"></div>
+<div class="slide" data-page="16" data-section="quiz" id="quiz-7"></div>
+<div class="slide" data-page="17" data-section="quiz" id="quiz-8"></div>
+<div class="slide" data-page="18" data-section="quiz" id="quiz-9"></div>
+<!-- ====== 测验得分页 ====== -->
+<div class="slide score-page" data-page="19" data-section="quiz" id="quiz-score">
+<span class="ds-badge ds-badge--success">测验得分</span>
+<h2>测验完成！</h2>
+<div class="score-hero">
+<div class="score-hero__number" id="score-display">0</div>
+<div class="score-hero__message" id="score-message">正在计算得分...</div>
+<div class="score-summary">
+<p>✅ 答对题数：<b class="b-correct" id="correct-count">0</b> / 10</p>
+<p>📊 总得分：<b class="b-total" id="total-score">0</b> 分（满分 100 分）</p>
+<p>📈 正确率：<b class="b-percent" id="score-percent">0%</b></p>
+</div>
+<button aria-label="重新答题" class="retake-btn" id="retake-btn">↺ 重新答题</button>
+</div>
+</div>
+<!-- ====== 答疑解惑 ====== -->
+<!-- 20. FAQ -->
+<div class="slide" data-page="20" data-section="review"><span class="ds-badge ds-badge--accent">答疑解惑</span><h2>常见问题</h2><h3>❓ 这是不是在讲天子最大、别人都得听？</h3><p><strong>讲的是名分，不是讲谁威风。</strong><br/><br/>① <strong>重点是"该谁定的事谁定"，别越位</strong><br/>② <strong>越一层，下面就要再越一层，最后没人服</strong><br/>③ <strong>记住：权力要有出处</strong><br/><br/><strong>记法：讲名分，不讲威风。</strong></p><h3>❓ 十世、五世、三世，是算好的年数吗？</h3><p><strong>不是算卦，是常理估量。</strong><br/><br/>① <strong>一世约一代人，二三十年</strong><br/>② <strong>「盖」是大概，「希」是很少，都不说死</strong><br/>③ <strong>要紧的是趋势：越往下漏，撑得越短</strong><br/><br/><strong>记法：看趋势，别抠数字。</strong></p><h3>❓ 小孩怎么用这一章？</h3><p><strong>从"不越位"三个字学起。</strong><br/><br/>① <strong>班里的事，该谁定就别抢着定</strong><br/>② <strong>越了一次，别人也跟着越，规矩就松了</strong><br/>③ <strong>自己该管的那一格，管好</strong><br/><br/><strong>记法：守好自己那一格。</strong></p></div>
+<!-- 21. 生活应用 -->
+<div class="slide" data-page="21" data-section="review"><span class="ds-badge ds-badge--accent">答疑解惑</span><h2>生活应用</h2><p>这一章，给我们的日子三样提醒——</p><p>📜 该谁定的事谁定</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>开会谁主持、家里谁作主，先分清</strong>；<strong>分清了，事才办得下去</strong>。</p><p>⏳ 越权一次，规矩松一寸</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>今天替人拍板，明天就有人替你拍板</strong>；<strong>松了口子，一层层往下漏</strong>。</p><p>🤐 上头正了，闲话自然少</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>把事做在明处，比堵人的嘴管用</strong>；<strong>做得正，背后的话就少</strong><br/><br/><strong>本章的落点：规矩要从上面立起。</strong></p></div>
+<!-- 22. 课程总结 -->
+<div class="slide" data-page="22" data-section="review"><span class="ds-badge ds-badge--accent">答疑解惑</span><h2>课程总结</h2><p>今天学了《季氏》「天下有道」。记牢：<strong>规矩要从上面立起。</strong></p><p style="text-align:center;margin:var(--ds-space-4) 0">
+                天下有道，则礼乐征伐自天子出。
+            </p><p>回顾本课要点:</p><p>礼乐征伐自天子出 · 名分有序</p><br/><p><strong>位置一乱，天下就散。</strong></p><p>十世五世三世 · 越漏越短</p><br/><p><strong>坏样子学得快，撑得短。</strong></p><p>政不在大夫 · 庶人不议</p><br/><p><strong>上头正，下头才静。</strong></p><p><strong>在全篇中的位置:</strong>这是<strong>《季氏》第二章</strong>；与 416 课连读——<strong>那课讲一家之内，这课讲一国之内</strong>。</p><div class="ds-quote">
+<p>📜 原文重温</p>
+<p>天下有道，则政不在大夫；天下有道，则庶人不议。</p>
+</div><p><strong>课后小挑战:</strong>① 今天守好自己那一格，不替别人拍板。② 背一句：天下有道，则礼乐征伐自天子出。</p><p><strong>把这一章记在心里:</strong><strong>规矩要从上面立起。</strong></p></div>
+<!-- ====== 结束页 ====== -->
+<div class="slide end-slide" data-page="23" data-section="review">
+<div class="cover-ornament"></div>
+<h2 class="ds-display">谢谢大家</h2>
+<div class="cover-ornament"></div>
+<div class="end-quote">
+            “天下有道，则礼乐征伐自天子出！”<br/>
+<span style="font-size:0.875rem;color:var(--ds-color-muted);">—— 《论语·季氏》</span>
+</div>
+<div class="cover-seal">国学</div>
+</div>
+</div>
+</div><!-- slide-viewport -->
+<script>
+    window.GUOXUE_COURSE_ID = '417-tian-xia-you-dao';
+const QUIZ = [
+  {q: '1. 本章出自《论语》的哪一篇？', opts: ['《季氏》', '《卫灵公》', '《阳货》'], ans: 0, exp: '按站内分法，这是《季氏》第二章'},
+  {q: '2. 「礼乐征伐」指的是什么？', opts: ['制礼作乐、出兵打仗这两件大事', '礼仪和音乐表演', '收税和征兵'], ans: 0, exp: '国家最大的两件事，谁说了算谁就掌权'},
+  {q: '3. 「天下有道」时，礼乐征伐由谁决定？', opts: ['天子', '诸侯', '大夫'], ans: 0, exp: '天下有道，则礼乐征伐自天子出'},
+  {q: '4. 「盖十世希不失矣」的「希」是什么意思？', opts: ['少、很少', '希望', '稀罕的宝贝'], ans: 0, exp: '希＝稀，很少保住'},
+  {q: '5. 「陪臣」是什么身份？', opts: ['大夫的家臣', '陪国君的臣子', '退休的老臣'], ans: 0, exp: '低一层的人，却把持国政'},
+  {q: '6. 权力往下漏，能保住的时间怎么变？', opts: ['越往下越短：十世、五世、三世', '越往下越长', '都一样长'], ans: 0, exp: '越没有名分，越只能靠实力压人'},
+  {q: '7. 「盖十世希不失矣」的「盖」是什么意思？', opts: ['大概、大约，是估量', '遮盖', '因为'], ans: 0, exp: '说的是常理，不是算卦'},
+  {q: '8. 「政不在大夫」强调什么？', opts: ['大夫可以有位子，不能掌国政', '大夫不能上朝', '大夫不许说话'], ans: 0, exp: '有位子，不等于有权力'},
+  {q: '9. 「庶人不议」该怎么理解？', opts: ['政事清明，百姓没什么可议论的', '不许百姓说话', '百姓不敢说话'], ans: 0, exp: '做得正，闲话自然少'},
+  {q: '10. 本章最该记住的一句话是什么？', opts: ['天下有道，则礼乐征伐自天子出', '陪臣执国命', '自大夫出，五世希不失矣'], ans: 0, exp: '规矩要从上面立起'},
+];
+window.GUOXUE_QUIZ_OVERRIDE = QUIZ;
+</script>
+<script src="../../assets/js/unlock.js?v=jishi417"></script><script src="../../assets/js/slide-engine.js?v=jishi417"></script>
+<script src="../../assets/js/speech.js?v=jishi417"></script>
+<!-- 底部进度条 -->
+<div class="progress-bar-bottom">
+<div class="progress-bar-fill" id="progress-fill" style="width:4%"></div>
+</div>
+<!-- 键盘提示 -->
+<div class="kbd-hint">
+<span class="kbd">←</span><span class="kbd">→</span> 翻页
+    <span style="margin-left:8px"><span class="kbd">Space</span> 下一页</span>
+  </div>
+<script defer="" src="../../assets/js/auth-email.js?v=jishi417"></script>
+<script defer="" src="../../assets/js/auth.js?v=jishi417"></script>
+<script defer="" src="../../assets/js/api-client.js?v=jishi417"></script>
+</body>
+</html>
+'''
+
+
+def main():
+    here = os.path.dirname(os.path.abspath(__file__))
+    root = os.path.dirname(here)
+    outdir = os.path.join(root, 'lessons', '417-tian-xia-you-dao')
+    if not os.path.isdir(outdir):
+        os.makedirs(outdir)
+    html = TEMPLATE.replace('{{RUBY}}', build_ruby_paragraphs())
+    path = os.path.join(outdir, 'index.html')
+    io.open(path, 'w', encoding='utf-8', newline='\n').write(html)
+    print('written', path, len(html))
+
+
+if __name__ == '__main__':
+    main()

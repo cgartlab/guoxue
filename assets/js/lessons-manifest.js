@@ -5842,5 +5842,19 @@ window.GUOXUE_LESSONS = [
         subject: 'jishi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '417-tian-xia-you-dao',
+        num: '417',
+        title: '天下有道 · 礼乐征伐自天子出',
+        subtitle: '规矩要从上面立起',
+        path: 'lessons/417-tian-xia-you-dao/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·季氏》第二章精讲：天下有道，则礼乐征伐自天子出。孔子讲权力往下漏一层的后果——诸侯十世、大夫五世、陪臣执国命三世，越往下越短。收尾两句：政不在大夫，庶人不议。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'jishi',
+        tier: 'core',
+        featured: false
     }
 ];
