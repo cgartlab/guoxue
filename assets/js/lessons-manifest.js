@@ -5702,5 +5702,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '407-zhi-ji-zhi-ren-shou-zhi',
+        num: '407',
+        title: '得与守 · 知及之仁守之',
+        subtitle: '守得住，才算真得',
+        path: 'lessons/407-zhi-ji-zhi-ren-shou-zhi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第三十二章精讲：知及之，仁不能守之，虽得之，必失之。聪明能拿到，仁德守住，庄重待人，行事合礼——四步缺一步都不算圆。得难，守更难。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
