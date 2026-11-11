@@ -5548,5 +5548,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '396-bu-yi-yan-ju-ren-bu-yi-ren-fei-yan',
+        num: '396',
+        title: '君子不以言举人 · 话归话，人归人',
+        subtitle: '对事不对人',
+        path: 'lessons/396-bu-yi-yan-ju-ren-bu-yi-ren-fei-yan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第二十二章精讲：子曰：君子不以言举人，不以人废言。不因为话说得好听就抬举谁，也不因为谁有毛病就不听他的好话——话归话，人归人，对事不对人。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
