@@ -5856,5 +5856,19 @@ window.GUOXUE_LESSONS = [
         subject: 'jishi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '418-lu-qu-gong-shi',
+        num: '418',
+        title: '禄去公室 · 越权得来的守不住',
+        subtitle: '怎么拿来的，怎么被拿走',
+        path: 'lessons/418-lu-qu-gong-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·季氏》第三章精讲：禄之去公室五世矣，政逮于大夫四世矣，故夫三桓之子孙微矣。孔子数着年头讲鲁国实情——赏官之权离开国君已五代，政权落到大夫手里已四代，所以三桓的子孙也衰微了。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'jishi',
+        tier: 'core',
+        featured: false
     }
 ];
