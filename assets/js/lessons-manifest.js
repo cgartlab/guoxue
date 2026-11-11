@@ -5618,5 +5618,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '401-qiao-yan-luan-de',
+        num: '401',
+        title: '巧言乱德 · 小忍成大谋',
+        subtitle: '忍一时，成大事',
+        path: 'lessons/401-qiao-yan-luan-de/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第二十六章精讲：子曰：巧言乱德。小不忍，则乱大谋。花言巧语会败坏德行；小事上忍不住，就会坏了大事。话说得漂亮不如做得实在，脾气压得住才成得了事。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
