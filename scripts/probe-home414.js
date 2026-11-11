@@ -1,0 +1,21 @@
+const { chromium } = require('playwright');
+(async () => {
+  const b = await chromium.launch();
+  const page = await b.newPage({ viewport: { width: 1440, height: 900 } });
+  const errs = [];
+  page.on('pageerror', e => errs.push(String(e)));
+  await page.goto('http://localhost:8899/index.html', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(800);
+  const cards = await page.locator('#lesson-cards .ds-lesson-card').count();
+  const subs = await page.locator('.home-sidebar__link--sub').count();
+  const stats = await page.locator('.series-stat__value').allTextContents();
+  const groups = page.locator('.home-numstrip__group');
+  const gcount = await groups.count();
+  const counts = [];
+  for (let i = 0; i < gcount; i++) counts.push(await groups.nth(i).locator('.home-numstrip__chip').count());
+  const chips = await page.locator('.home-numstrip__chip').count();
+  const lastChip = await page.locator('.home-numstrip__chip').last().innerText();
+  const filtered = -1;
+  console.log(JSON.stringify({ cards, subs, stats, counts, chips, lastChip, filtered, errs }, null, 1));
+  await b.close();
+})();

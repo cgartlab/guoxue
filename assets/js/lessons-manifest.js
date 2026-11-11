@@ -5800,5 +5800,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '414-ci-da-er-yi-yi',
+        num: '414',
+        title: '辞达而已 · 辞达而已矣',
+        subtitle: '话说到就行，不必花哨',
+        path: 'lessons/414-ci-da-er-yi-yi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第四十一章精讲：辞达而已矣。说话、写文章，把意思说明白就够了，不必堆辞藻、绕圈子。话说到就行，不必花哨。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
