@@ -5688,5 +5688,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '406-jun-zi-mou-dao-bu-mou-shi',
+        num: '406',
+        title: '谋道不谋食 · 忧道不忧贫',
+        subtitle: '愁的是道，不是穷',
+        path: 'lessons/406-jun-zi-mou-dao-bu-mou-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第三十一章精讲：子曰：君子谋道不谋食。耕也，馁在其中矣；学也，禄在其中矣。君子忧道不忧贫。心思放在正路和本事上，别把一口饭当全部。愁的是自己不够正，不愁口袋空。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
