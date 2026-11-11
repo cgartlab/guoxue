@@ -5814,5 +5814,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '415-xiang-shi-zhi-dao',
+        num: '415',
+        title: '相师之道 · 师冕见',
+        subtitle: '把看不见的说给他听',
+        path: 'lessons/415-xiang-shi-zhi-dao/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第四十二章精讲：师冕见。盲人乐师来见孔子，孔子一路提醒——台阶、坐席、谁在座。把看不见的说给他听，这是本来就该有的待人之道。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
