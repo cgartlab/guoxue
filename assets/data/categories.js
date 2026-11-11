@@ -141,11 +141,19 @@ window.GUOXUE_CATEGORIES = [
         order: 16
     },
     {
-        key: 'mengxue',
-        label: '蒙学',
+        key: 'jishi',
+        label: '季氏',
         num: '17',
-        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        description: '《论语·季氏篇》各章精讲',
         status: 'ready',
         order: 17
+    },
+    {
+        key: 'mengxue',
+        label: '蒙学',
+        num: '18',
+        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        status: 'ready',
+        order: 18
     }
 ];

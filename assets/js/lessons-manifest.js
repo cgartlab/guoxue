@@ -5828,5 +5828,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '416-ji-shi-jiang-fa-zhuan-yu',
+        num: '416',
+        title: '均无贫 · 不患寡而患不均',
+        subtitle: '不怕少，就怕不公',
+        path: 'lessons/416-ji-shi-jiang-fa-zhuan-yu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·季氏》第一章精讲：季氏将伐颛臾。孔子先责冉有、子路失职，再讲治国之道——不患寡而患不均，不患贫而患不安；远人不服则修文德以来之，既来之则安之。最后点破：季孙之忧不在颛臾，而在萧墙之内。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'jishi',
+        tier: 'core',
+        featured: false
     }
 ];
