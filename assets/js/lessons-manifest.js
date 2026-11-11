@@ -5674,5 +5674,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '405-wu-chang-zhong-ri-bu-shi',
+        num: '405',
+        title: '空想不如真学',
+        subtitle: '想一百遍，不如学一遍',
+        path: 'lessons/405-wu-chang-zhong-ri-bu-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第三十章精讲：子曰：吾尝终日不食，终夜不寝，以思，无益，不如学也。孔子说自己不吃不睡地空想，白费工夫；不如去学。先学后想，想才有用。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
