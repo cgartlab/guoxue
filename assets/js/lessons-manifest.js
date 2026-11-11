@@ -5772,5 +5772,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '412-you-jiao-wu-lei',
+        num: '412',
+        title: '有教无类 · 有教无类',
+        subtitle: '只要肯学，谁都能教',
+        path: 'lessons/412-you-jiao-wu-lei/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第三十八章精讲：有教无类。教人，不分门第贵贱、不分贫富资质，谁来学都教。无类去掉的是出身门槛，不是该有的要求；因材施教讲方法，有教无类讲态度。不分门第，只看肯学。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
