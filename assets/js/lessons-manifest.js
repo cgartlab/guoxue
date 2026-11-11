@@ -5884,5 +5884,19 @@ window.GUOXUE_LESSONS = [
         subject: 'jishi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '420-yi-zhe-san-le',
+        num: '420',
+        title: '益者三乐 · 什么乐子养人，什么乐子耗人',
+        subtitle: '玩完更足是养，玩完更空是耗',
+        path: 'lessons/420-yi-zhe-san-le/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·季氏》第五章精讲：益者三乐，损者三乐。乐节礼乐，乐道人之善，乐多贤友，益矣；乐骄乐，乐佚游，乐宴乐，损矣。孔子把乐子分两类各三样——有节制、说人好、多贤友的三种养人，骄纵享乐、放纵游荡、宴饮作乐的三种耗人。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'jishi',
+        tier: 'core',
+        featured: false
     }
 ];
