@@ -5744,5 +5744,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '410-zhen-er-bu-liang',
+        num: '410',
+        title: '贞而不谅 · 君子贞而不谅',
+        subtitle: '守大节，不死守小信',
+        path: 'lessons/410-zhen-er-bu-liang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第三十六章精讲：君子贞而不谅。君子守得住正道大节，却不死守一句小信用。贞是守正不是贞节，谅是小信不是原谅；话要算数，话不合义就得改。守大节，不死守小信。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
