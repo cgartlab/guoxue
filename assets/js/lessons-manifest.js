@@ -5870,5 +5870,19 @@ window.GUOXUE_LESSONS = [
         subject: 'jishi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '419-yi-zhe-san-you',
+        num: '419',
+        title: '益者三友 · 跟谁在一起，就成什么人',
+        subtitle: '益友敢说真话，损友专说好话',
+        path: 'lessons/419-yi-zhe-san-you/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·季氏》第四章精讲：益者三友，损者三友。友直，友谅，友多闻，益矣；友便辟，友善柔，友便佞，损矣。孔子把朋友分两类各三样——正直、诚信、见闻广的三种交得，逢迎、顺从、花言巧语的三种交不得。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'jishi',
+        tier: 'core',
+        featured: false
     }
 ];
