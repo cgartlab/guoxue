@@ -5912,5 +5912,19 @@ window.GUOXUE_LESSONS = [
         subject: 'jishi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '422-jun-zi-you-san-jie',
+        num: '422',
+        title: '君子有三戒 · 什么年纪，戒什么',
+        subtitle: '少年戒色，壮年戒斗，老年戒贪',
+        path: 'lessons/422-jun-zi-you-san-jie/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·季氏》第七章精讲：君子有三戒。少之时，血气未定，戒之在色；及其壮也，血气方刚，戒之在斗；及其老也，血气既衰，戒之在得。孔子按人生三段各点一戒，什么年纪有力气，就容易栽在哪儿。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'jishi',
+        tier: 'core',
+        featured: false
     }
 ];
