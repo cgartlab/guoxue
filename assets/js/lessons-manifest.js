@@ -5786,5 +5786,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '413-dao-bu-tong-bu-xiang-wei-mou',
+        num: '413',
+        title: '不相为谋 · 道不同不相为谋',
+        subtitle: '路不一样，难共一事',
+        path: 'lessons/413-dao-bu-tong-bu-xiang-wei-mou/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第三十九章精讲：道不同，不相为谋。主张、根本方向不一样的人，没法凑在一起谋划同一件事。这不是教人翻脸绝交，是提醒找对同路人。路不一样，难共一事。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
