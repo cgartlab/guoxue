@@ -5898,5 +5898,19 @@ window.GUOXUE_LESSONS = [
         subject: 'jishi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '421-shi-yu-jun-zi-you-san-qian',
+        num: '421',
+        title: '侍于君子有三愆 · 话不看时候，就是病',
+        subtitle: '抢话是躁，藏话是隐，不看脸是瞽',
+        path: 'lessons/421-shi-yu-jun-zi-you-san-qian/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·季氏》第六章精讲：侍于君子有三愆。言未及之而言谓之躁，言及之而不言谓之隐，未见颜色而言谓之瞽。孔子点出说话的三种病——抢话、藏话、瞎说，三样都不错在话上，错在时候上。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'jishi',
+        tier: 'core',
+        featured: false
     }
 ];
