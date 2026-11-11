@@ -5632,5 +5632,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '402-zhong-e-zhi-bi-cha-yan',
+        num: '402',
+        title: '众恶之 · 必察焉',
+        subtitle: '都说好、都说坏，都要自己看',
+        path: 'lessons/402-zhong-e-zhi-bi-cha-yan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第二十七章精讲：子曰：众恶之，必察焉；众好之，必察焉。大家都讨厌他，要考察；大家都喜欢他，也要考察。好话坏话都只是话，看人得用自己的眼睛。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
