@@ -5730,5 +5730,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '409-dang-ren-bu-rang-yu-shi',
+        num: '409',
+        title: '不让于师 · 当仁不让于师',
+        subtitle: '该做就做，不必推让',
+        path: 'lessons/409-dang-ren-bu-rang-yu-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第三十五章精讲：当仁，不让于师。遇上该行仁的事，就是老师在跟前，也不必谦让退避，自己先担起来。让的是位子，不让的是仁。该做就做，不必推让。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
