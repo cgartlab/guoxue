@@ -5604,5 +5604,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '400-shi-zhi-que-wen',
+        num: '400',
+        title: '史之阙文 · 不懂就留空',
+        subtitle: '空着也比乱写强',
+        path: 'lessons/400-shi-zhi-que-wen/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第二十五章精讲：子曰：吾犹及史之阙文也，有马者，借人乘之。今亡矣夫！不懂就留空，不硬编；有好东西肯借人。两种老实风气，孔子说他快见不到了。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
