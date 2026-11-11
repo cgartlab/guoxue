@@ -5590,5 +5590,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '399-shui-hui-shui-yu',
+        num: '399',
+        title: '谁毁谁誉 · 好话坏话都要有凭据',
+        subtitle: '如有所誉者，其有所试矣',
+        path: 'lessons/399-shui-hui-shui-yu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第二十四章精讲：子曰：吾之于人也，谁毁谁誉？如有所誉者，其有所试矣。斯民也，三代之所以直道而行也。好话坏话都要有凭据——夸人之前，先看他做过什么。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
