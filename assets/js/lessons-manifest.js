@@ -5562,5 +5562,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '397-jun-zi-bu-ke-xiao-zhi-er-ke-da-shou',
+        num: '397',
+        title: '君子可大受 · 人各有所长',
+        subtitle: '用人各得其所',
+        path: 'lessons/397-jun-zi-bu-ke-xiao-zhi-er-ke-da-shou/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第二十三章精讲：子曰：君子不可小知，而可大受也；小人不可大受，而可小知也。大材担当大事，小材干好小事——让合适的人干合适的事。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
