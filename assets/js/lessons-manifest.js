@@ -5660,5 +5660,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weilinggong',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '404-guo-er-bu-gai',
+        num: '404',
+        title: '过而不改 · 是谓过矣',
+        subtitle: '改了，才算过去',
+        path: 'lessons/404-guo-er-bu-gai/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·卫灵公》第二十九章精讲：子曰：过而不改，是谓过矣。犯了错不算真错，犯了错还不改，这才真叫错。先认下来，改掉，这道坎就过去了。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weilinggong',
+        tier: 'core',
+        featured: false
     }
 ];
