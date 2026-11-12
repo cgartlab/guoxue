@@ -6108,5 +6108,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '436-fo-xi-zhao-zi-yu-wang',
+        num: '436',
+        title: '佛肸召，子欲往 · 磨不薄，染不黑',
+        subtitle: '磨不薄，染不黑',
+        path: 'lessons/436-fo-xi-zhao-zi-yu-wang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第七章精讲：佛肸召，子欲往。子路拦住说：做过坏事的人那儿，君子不去。孔子说：这话我说过。可硬东西磨不薄，白东西染不黑——我难道是个挂着不吃的葫芦吗？讲的是人正不怕地方脏。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
