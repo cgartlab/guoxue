@@ -5926,5 +5926,19 @@ window.GUOXUE_LESSONS = [
         subject: 'jishi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '423-jun-zi-you-san-wei',
+        num: '423',
+        title: '君子有三畏 · 怕该怕的',
+        subtitle: '畏天命，畏大人，畏圣人之言',
+        path: 'lessons/423-jun-zi-you-san-wei/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·季氏》第八章精讲：君子有三畏。畏天命，畏大人，畏圣人之言。小人不知天命而不畏也，狎大人，侮圣人之言。孔子说君子心里有三样该敬的，小人正相反——该怕的不怕，该敬的不敬。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'jishi',
+        tier: 'core',
+        featured: false
     }
 ];
