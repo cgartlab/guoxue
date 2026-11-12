@@ -6290,5 +6290,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '449-zai-wo-wen-san-nian-zhi-sang',
+        num: '449',
+        title: '宰我问三年之丧',
+        subtitle: '三年的丧，还的是三年怀里抱',
+        path: 'lessons/449-zai-wo-wen-san-nian-zhi-sang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第二十章精讲：宰我问三年之丧。宰我算了一笔账，说一年就够；孔子不跟他辩账，只问一句「你心安吗」。这一章讲的是——有些账，不是拿算盘算的。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
