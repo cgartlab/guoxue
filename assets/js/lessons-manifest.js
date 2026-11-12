@@ -5968,5 +5968,19 @@ window.GUOXUE_LESSONS = [
         subject: 'jishi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '426-jian-shan-ru-bu-ji',
+        num: '426',
+        title: '见善如不及 · 学好要急，避恶要快',
+        subtitle: '见善如不及，见不善如探汤',
+        path: 'lessons/426-jian-shan-ru-bu-ji/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·季氏》第十一章精讲：见善如不及，见不善如探汤。见到好人好事，像赶不上一样急着去学；见到坏事，像手伸进滚水一样马上缩回。后段隐居以求其志、行义以达其道，孔子坦言这话听过，做到的人却没见过。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'jishi',
+        tier: 'core',
+        featured: false
     }
 ];
