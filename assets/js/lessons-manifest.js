@@ -6010,5 +6010,19 @@ window.GUOXUE_LESSONS = [
         subject: 'jishi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '429-bang-jun-zhi-qi',
+        num: '429',
+        title: '邦君之妻 · 一个人，五种叫法',
+        subtitle: '君称之曰夫人，夫人自称曰小童',
+        path: 'lessons/429-bang-jun-zhi-qi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·季氏》第十四章精讲：邦君之妻，君称之曰夫人，夫人自称曰小童；邦人称之曰君夫人，称诸异邦曰寡小君；异邦人称之亦曰君夫人。国君的正妻，国君叫她夫人，她自己称小童，本国人叫君夫人，对别国叫寡小君，别国人也叫君夫人。一个人五种叫法，各有各的分寸，这就是名分。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'jishi',
+        tier: 'core',
+        featured: false
     }
 ];
