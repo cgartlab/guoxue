@@ -6094,5 +6094,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '435-neng-xing-wu-zhe',
+        num: '435',
+        title: '能行五者于天下 · 五样待人，五样回响',
+        subtitle: '五样待人，五样回响',
+        path: 'lessons/435-neng-xing-wu-zhe/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第六章精讲：子张问仁于孔子。孔子曰：能行五者于天下，为仁矣。恭、宽、信、敏、惠——恭敬就不被轻慢，宽厚就得到人心，守信就有人依靠，勤敏就能成事，给人实惠就使得动人。讲的是仁不在嘴上，在待人上。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
