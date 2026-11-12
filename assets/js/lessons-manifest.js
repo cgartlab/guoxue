@@ -6416,5 +6416,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weizi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '458-he-diao-zhang-ren',
+        num: '458',
+        title: '荷蓧丈人',
+        subtitle: '留你一夜好饭，不认你那条路',
+        path: 'lessons/458-he-diao-zhang-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·微子》第七章精讲：子路从而后，遇丈人，以杖荷蓧。子路问曰：子见夫子乎？丈人曰：四体不勤，五谷不分，孰为夫子？植其杖而芸。子路拱而立。止子路宿，杀鸡为黍而食之，见其二子焉。明日，子路行以告。子曰：隐者也。使子路反见之。至，则行矣。子路曰：不仕无义……道之不行，已知之矣。老人骂他不干活，却杀鸡做饭留他住一夜，第二天自己走了：留你一夜好饭，不认你那条路。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'weizi',
+        tier: 'core',
+        featured: false
     }
 ];
