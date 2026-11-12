@@ -6220,5 +6220,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '444-huan-de-huan-shi',
+        num: '444',
+        title: '鄙夫可与事君也与哉',
+        subtitle: '怕丢的人，什么都干得出',
+        path: 'lessons/444-huan-de-huan-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第十五章精讲：鄙夫可与事君也与哉。心里只装着得失的人，没得着时怕得不着，得着了又怕丢；怕到极处，什么手段都使得出来。孔子说：这样的人，不能托事。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
