@@ -6458,5 +6458,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weizi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '461-zhou-gong-xun-zi',
+        num: '461',
+        title: '周公训子',
+        subtitle: '不放老臣，不求全人',
+        path: 'lessons/461-zhou-gong-xun-zi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·微子》第十章精讲：周公谓鲁公曰：君子不施其亲，不使大臣怨乎不以。故旧无大故，则不弃也。无求备于一人。周公送儿子伯禽去鲁国上任，临行交代四句话：不冷落亲族、不让大臣寒心、老臣没大错就别丢、别对一个人求全责备。不放老臣，不求全人。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'weizi',
+        tier: 'core',
+        featured: false
     }
 ];
