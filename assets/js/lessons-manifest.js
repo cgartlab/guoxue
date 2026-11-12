@@ -6444,5 +6444,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weizi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '460-yue-shi-si-san',
+        num: '460',
+        title: '乐师四散',
+        subtitle: '人走了，调子就散了',
+        path: 'lessons/460-yue-shi-si-san/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·微子》第九章精讲：大师挚适齐，亚饭干适楚，三饭缭适蔡，四饭缺适秦，鼓方叔入于河，播鼗武入于汉，少师阳、击磬襄入于海。八位乐师八个方向，一个不漏记下来。礼乐之邦的乐师都走了，礼乐就只剩个名：人走了，调子就散了。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'weizi',
+        tier: 'core',
+        featured: false
     }
 ];
