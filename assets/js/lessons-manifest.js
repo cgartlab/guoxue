@@ -6248,5 +6248,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '446-e-zi-duo-zhu',
+        num: '446',
+        title: '恶紫之夺朱也',
+        subtitle: '假的真不了，最怕它装得像',
+        path: 'lessons/446-e-zi-duo-zhu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第十七章精讲：恶紫之夺朱也。紫抢了朱的正位，郑声搅了雅乐，利嘴翻了国家；三件事看着不搭界，病根只有一个——假的东西挤掉了真的。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
