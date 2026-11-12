@@ -6304,5 +6304,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '450-bao-shi-zhong-ri',
+        num: '450',
+        title: '饱食终日，无所用心',
+        subtitle: '人不怕忙，怕空着',
+        path: 'lessons/450-bao-shi-zhong-ri/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第二十一章精讲：饱食终日，无所用心。吃饱了、闲一天、心没处使，这种人最难办。孔子退一步说——不是有下棋吗？下棋也比空着强。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
