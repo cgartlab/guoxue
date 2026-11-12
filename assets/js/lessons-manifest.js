@@ -5982,5 +5982,19 @@ window.GUOXUE_LESSONS = [
         subject: 'jishi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '427-qi-jing-gong-you-ma-qian-si',
+        num: '427',
+        title: '齐景公有马千驷 · 有钱没念想，饿死有人记',
+        subtitle: '齐景公有马千驷，死之日，民无德而称焉',
+        path: 'lessons/427-qi-jing-gong-you-ma-qian-si/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·季氏》第十二章精讲：齐景公有马千驷，死之日，民无德而称焉。伯夷、叔齐饿于首阳之下，民到于今称之。齐景公富到四千匹马，死了没人念他好；伯夷叔齐饿死在山下，百姓到今天还称赞。孔子比的不是钱，是人留下什么。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'jishi',
+        tier: 'core',
+        featured: false
     }
 ];
