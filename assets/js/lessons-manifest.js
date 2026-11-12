@@ -6374,5 +6374,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weizi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '455-qi-ren-gui-nv-yue',
+        num: '455',
+        title: '齐人归女乐',
+        subtitle: '三天不上朝，就是一个国家的样子',
+        path: 'lessons/455-qi-ren-gui-nv-yue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·微子》第四章精讲：齐人归女乐，季桓子受之，三日不朝，孔子行。齐国送来一批歌舞女子，鲁国执政的季桓子收下了，连着三天不上朝。孔子看见这三天，就知道这个朝廷不管事了——什么也没说，收拾行李就走。这一走，就是十四年。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weizi',
+        tier: 'core',
+        featured: false
     }
 ];
