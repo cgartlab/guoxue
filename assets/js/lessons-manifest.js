@@ -6388,5 +6388,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weizi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '456-chu-kuang-jie-yu',
+        num: '456',
+        title: '楚狂接舆',
+        subtitle: '唱完就走，不跟你多说一句',
+        path: 'lessons/456-chu-kuang-jie-yu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·微子》第五章精讲：楚狂接舆歌而过孔子曰：凤兮凤兮，何德之衰？往者不可谏，来者犹可追。已而已而，今之从政者殆而！孔子下，欲与之言。趋而辟之，不得与之言。楚国一个装疯的隐士唱着歌劝孔子别再干了，孔子下车想跟他谈，他快步躲开——话说到就够了，多一句都成争。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weizi',
+        tier: 'core',
+        featured: false
     }
 ];
