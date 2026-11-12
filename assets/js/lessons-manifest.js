@@ -6192,5 +6192,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '442-xiang-yuan-de-zhi-zei',
+        num: '442',
+        title: '乡原，德之贼也',
+        subtitle: '谁都夸的人，未必靠得住',
+        path: 'lessons/442-xiang-yuan-de-zhi-zei/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第十三章精讲：乡原，德之贼也。有一种人，全乡都夸他厚道，挑不出一点错——可他谁也不得罪、什么也不坚持，好也点头、坏也点头，把是非搅成一锅。孔子说：这种人才是品行的害人虫。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
