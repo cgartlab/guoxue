@@ -6164,5 +6164,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '440-li-yun-li-yun',
+        num: '440',
+        title: '礼云礼云，玉帛云乎哉 · 排场不是真心',
+        subtitle: '排场不是真心',
+        path: 'lessons/440-li-yun-li-yun/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第十一章精讲：礼云礼云，玉帛云乎哉？乐云乐云，钟鼓云乎哉？礼不在玉帛，乐不在钟鼓——礼在心里那份敬，乐在心里那份和。讲的是别把排场当真心。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
