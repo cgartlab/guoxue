@@ -6402,5 +6402,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weizi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '457-chang-ju-jie-ni-ou-er-geng',
+        num: '457',
+        title: '长沮桀溺耦而耕',
+        subtitle: '躲得开这个天下，躲不开自己是个人',
+        path: 'lessons/457-chang-ju-jie-ni-ou-er-geng/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·微子》第六章精讲：长沮、桀溺耦而耕，孔子过之，使子路问津焉……桀溺曰：滔滔者天下皆是也，而谁以易之？且而与其从辟人之士也，岂若从辟世之士哉？耰而不辍。夫子怃然曰：鸟兽不可与同群，吾非斯人之徒与而谁与？天下有道，丘不与易也。两个种地的隐士当面劝孔子别改了，孔子说：正因为天下无道，我才不能走。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'weizi',
+        tier: 'core',
+        featured: false
     }
 ];
