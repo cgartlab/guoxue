@@ -5996,5 +5996,19 @@ window.GUOXUE_LESSONS = [
         subject: 'jishi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '428-chen-kang-wen-yu-bo-yu',
+        num: '428',
+        title: '陈亢问于伯鱼 · 问一句，得三样',
+        subtitle: '不学诗，无以言；不学礼，无以立',
+        path: 'lessons/428-chen-kang-wen-yu-bo-yu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·季氏》第十三章精讲：陈亢问于伯鱼曰：子亦有异闻乎？对曰：未也。尝独立，鲤趋而过庭。曰：学诗乎？不学诗，无以言。不学礼，无以立。陈亢退而喜曰：问一得三，闻诗，闻礼，又闻君子之远其子也。陈亢以为老师的儿子有私房话，结果发现孔子教儿子跟教学生一样。学诗才会说话，学礼才站得住，好家教不偏私。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'jishi',
+        tier: 'core',
+        featured: false
     }
 ];
