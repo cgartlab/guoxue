@@ -6276,5 +6276,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '448-ru-bei-yu-jian-kong-zi',
+        num: '448',
+        title: '孺悲欲见孔子',
+        subtitle: '不想见你，也不肯撒谎',
+        path: 'lessons/448-ru-bei-yu-jian-kong-zi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第十九章精讲：孺悲欲见孔子。孔子推说有病不见，传话的人刚出门，他就拿起瑟边弹边唱，故意让人听见。这一课讲的不是装病，是拒绝也要拒得干净。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
