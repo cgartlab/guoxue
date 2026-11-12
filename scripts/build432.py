@@ -1,0 +1,217 @@
+# -*- coding: utf-8 -*-
+"""生成第 432 课《阳货》第三章「唯上知与下愚不移」课件。
+原文仅一句十字，字号放大作单页主打；逐字 ruby 由拼音表生成。
+"""
+import io
+import os
+import re
+
+PY = """
+子zǐ 曰yuē ： 「 唯wéi 上shàng 知zhì 与yǔ 下xià 愚yú 不bù 移yí 。 」
+"""
+
+HAN_RT = re.compile(r'^([\u4e00-\u9fff])([a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜüńňǹ]+)$')
+
+FS = '1.8rem'   # 本科仅一句十字，字号放大；须左对齐，居中会让 ruby 拼音错位
+LH = '1.95'
+
+
+def build_ruby_paragraphs():
+    out = []
+    for idx, para in enumerate(PY.strip().split('||')):
+        html = []
+        for tok in para.split():
+            tok = tok.strip()
+            if not tok:
+                continue
+            m = HAN_RT.match(tok)
+            if m:
+                html.append('<ruby lang="zh-Hans">%s<rt>%s</rt></ruby>' % (m.group(1), m.group(2)))
+            else:
+                html.append(tok)
+        if idx == 0:
+            style = ('padding-top:0;text-align:left;text-indent:0;font-size:%s;'
+                     'line-height:%s;width:100%%;max-width:none;margin:0' % (FS, LH))
+        else:
+            style = ('text-align:left;text-indent:0;font-size:%s;line-height:%s;'
+                     'width:100%%;max-width:none;margin:0.12em 0 0' % (FS, LH))
+        out.append('<p style="%s">%s</p>' % (style, ''.join(html)))
+    return '\n'.join(out)
+
+
+TEMPLATE = r'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="《论语·阳货》第三章精讲：子曰，唯上知与下愚不移。只有最聪明的人和最不开窍的人，是教也改不动的。上一章说性相近、习相远，这一句补上两个极端：中间大多数人都靠后天。全章只有十个字，讲的是教育到底对谁有用。" name="description"/>
+<meta content="唯上知与下愚不移 · 两头改不动，中间靠教养 · 国学课堂" property="og:title"/>
+<meta content="《论语·阳货》第三章精讲：两头改不动，中间靠教养" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://guoxue.8023laozhanshi.cc/lessons/432-wei-shang-zhi-yu-xia-yu-bu-yi/index.html" property="og:url"/>
+<link href="https://guoxue.8023laozhanshi.cc/lessons/432-wei-shang-zhi-yu-xia-yu-bu-yi/index.html" rel="canonical"/>
+<title>唯上知与下愚不移 · 两头改不动，中间靠教养 ·《论语》国学问答 · 国学课堂</title>
+<link href="../../assets/img/favicon.svg?v=yanghuo432" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="../../assets/css/ds-design-system.css?v=yanghuo432" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#slide-container">跳转到主内容</a>
+<div aria-hidden="true" class="bg-layer"></div>
+<div aria-hidden="true" class="ink-dot ink-dot-1"></div>
+<div aria-hidden="true" class="ink-dot ink-dot-2"></div>
+<div aria-hidden="true" class="ink-dot ink-dot-3"></div>
+<nav aria-label="主导航" class="ds-navbar ds-navbar--global">
+<a class="ds-btn-nav ds-btn-nav--brand" href="../../index.html">国学课堂</a>
+<a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html">首页</a>
+<ul class="ds-navbar__menu" id="primary-menu">
+<li><a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html#lesson-cards">课程</a></li>
+<li><a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html#sidebar-nav">门类</a></li>
+</ul>
+<a class="ds-btn-nav" href="../../about.html">关于本站</a>
+</nav>
+<nav aria-label="课程工具栏" class="ds-toolbar">
+<a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html">← 返回目录</a>
+<div class="ds-tabs">
+<button class="ds-tab active" data-section="lecture">讲义</button>
+<button class="ds-tab" data-section="quiz">测验</button>
+<button class="ds-tab" data-section="review">答疑解惑</button>
+</div>
+<div class="ds-toolbar__right">
+<span class="page-indicator" id="page-indicator">1 / 24</span>
+<div class="dots-row" id="dots-row"></div>
+<button class="ds-btn-nav" disabled="" id="nav-prev">← 上一页</button>
+<button class="ds-btn-nav" id="nav-next">下一页 →</button>
+<button aria-label="切换全屏显示" class="ds-btn-nav ds-btn-nav--icon" id="fullscreen-btn" title="切换全屏显示"><span class="ds-btn-nav__icon">⛶</span><span class="ds-btn-nav__text">全屏</span></button>
+</div>
+</nav>
+<div class="slide-viewport">
+<div class="slide-container" id="slide-container">
+<!-- ====== 讲义部分 ====== -->
+<!-- 1. 标题页 -->
+<div class="slide active cover-slide" data-page="0" data-section="lecture"><div class="cover-ornament"></div><h2 class="ds-display">唯上知与下愚不移</h2><div class="cover-ornament"></div><p class="cover-subtitle">两头改不动，中间靠教养</p><p class="cover-desc">这是<strong>《论语·阳货》第三章</strong>，接着上一句讲，也只有<strong>十个字</strong>。孔子说：只有<strong>最聪明的人</strong>和<strong>最不开窍的人</strong>，是改不动的。上一章讲「性相近，习相远」——那是说<strong>中间的大多数</strong>；这一句补上<strong>两个极端</strong>。</p><div class="cover-seal">论语</div></div>
+<!-- 2. 原文呈现 -->
+<div class="slide" data-page="1" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2 style="margin-bottom:6px;">原文呈现</h2><div class="ds-quote" style="margin:6px 0;padding:14px 22px 12px;line-height:1.7;">
+{{RUBY}}
+</div><p style="font-size:0.78rem;line-height:1.5;width:100%;max-width:none;margin-top:var(--ds-space-1)"><strong>通译</strong>：<strong>孔子说：只有最上等的聪明人，和最下等的愚人，是改变不了的</strong>。</p><p style="font-size:0.78rem;line-height:1.5;width:100%;max-width:none"><strong>背景</strong>：<strong>按站内分法，这是《阳货》第三章</strong>；<strong>合章本作 17.3</strong>；<strong>「知」通「智」，读 zhì</strong>；<strong>紧接上一章「性相近也，习相远也」，是那一句的补充</strong>。</p><p style="font-size:0.78rem;line-height:1.5;width:100%;max-width:none"><strong>小记</strong>：<strong>两头差不多定了，中间靠教养</strong>。</p></div>
+<!-- 3. 字词梳理 -->
+<div class="slide" data-page="2" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>字词梳理 · 六个关节</h2><p><span class="ds-highlight">唯</span>：<strong>只有</strong>——<strong>把范围收到最小，只点两类人</strong>。</p><p><span class="ds-highlight">上知</span>：<strong>「知」通「智」，读 zhì</strong>——<strong>最聪明的那一等</strong>。</p><p><span class="ds-highlight">下愚</span>：<strong>最不开窍的那一等</strong>——<strong>不是骂人，是分等</strong>。</p><p><span class="ds-highlight">不移</span>：<strong>改不动、变不了</strong>——<strong>「移」是挪动、转变</strong>。</p><p><span class="ds-highlight">上知与下愚</span>：<strong>一头一尾，两个极端</strong>。</p><p><span class="ds-highlight">承上章</span>：<strong>上章「习相远」讲大多数，这一句讲两个例外</strong>。</p><p class="ds-caption"><strong>一句话记：</strong><strong>两头定死了，中间才有得教</strong>。</p></div>
+<!-- 4. 解读一 -->
+<div class="slide" data-page="3" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>逐句解读 · 一：唯</h2><h3>“ 唯 上 知 与 下 愚 不 移 ”</h3><p style="margin:0"><strong>「唯」这个字在干什么？</strong><br/><br/>① <strong>只有、仅仅</strong><br/>② <strong>先把范围收到最小</strong><br/><br/><strong>一句话：开口就划圈子，只点两类人。</strong></p><p><strong>为什么先划圈子？</strong><br/><br/>① <strong>不划圈子，就成了「人都改不了」</strong><br/>② <strong>一划圈子，其余的人就都留了余地</strong><br/><br/><strong>一句话：这一句不是关门，是留门。</strong></p><p><strong>那中间的人呢？</strong><br/><br/>① <strong>孔子没提，因为上一章刚讲过</strong><br/>② <strong>中间的大多数，靠「习」</strong><br/><br/><strong>一句话：没被点到的，正是能变的。</strong></p></div>
+<!-- 5. 解读二 -->
+<div class="slide" data-page="4" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>逐句解读 · 二：上知与下愚</h2><h3>“ 上 知 与 下 愚 ”</h3><p style="margin:0"><strong>「上知」是什么人？</strong><br/><br/>① <strong>「知」通「智」，最聪明的一等</strong><br/>② <strong>不用人教，自己就明白</strong><br/><br/><strong>一句话：生来就透亮，少数里的少数。</strong></p><p><strong>「下愚」是什么人？</strong><br/><br/>① <strong>最不开窍的一等</strong><br/>② <strong>怎么教也进不去</strong><br/><br/><strong>一句话：不是笨一点，是堵住了。</strong></p><p><strong>为什么把这两头放一起？</strong><br/><br/>① <strong>一头不用教，一头教不进</strong><br/>② <strong>看着相反，其实一样：都不靠后天</strong><br/><br/><strong>一句话：一头顶一头底，中间才是人待的地方。</strong></p></div>
+<!-- 6. 解读三 -->
+<div class="slide" data-page="5" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>逐句解读 · 三：不移</h2><h3>“ 不 移 ”</h3><p style="margin:0"><strong>「不移」是改不了什么？</strong><br/><br/>① <strong>「移」是挪动、转变</strong><br/>② <strong>不移，就是挪不动</strong><br/><br/><strong>一句话：不是不肯改，是改不动。</strong></p><p><strong>上知为什么不用移？</strong><br/><br/>① <strong>本来就在正处，没什么可挪</strong><br/>② <strong>教他，他也只是点点头</strong><br/><br/><strong>一句话：不用教，不是教不了。</strong></p><p><strong>下愚为什么移不了？</strong><br/><br/>① <strong>说不进，劝不动，撞了墙也不回头</strong><br/>② <strong>孔子说得冷静，不是瞧不起人</strong><br/><br/><strong>一句话：认清这个，才不会白费力气。</strong></p></div>
+<!-- 7. 解读四 -->
+<div class="slide" data-page="6" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>逐句解读 · 四：这一句的分量</h2><h3>“ 性 相 近 也 ， 习 相 远 也 …… 唯 上 知 与 下 愚 不 移 ”</h3><p style="margin:0"><strong>这两句是什么关系？</strong><br/><br/>① <strong>上一句讲常态，这一句讲例外</strong><br/>② <strong>合起来才完整</strong><br/><br/><strong>一句话：先讲大多数，再圈出两个极端。</strong></p><p><strong>会不会被人拿去做借口？</strong><br/><br/>① <strong>会——「我天生就这样」</strong><br/>② <strong>可孔子只说两头，没说中间</strong><br/><br/><strong>一句话：多数人不在这个圈里。</strong></p><p><strong>对教书的人有什么用？</strong><br/><br/>① <strong>力气花在中间大多数人身上</strong><br/>② <strong>对下愚不强求，对上知不啰嗦</strong><br/><br/><strong>一句话：认人下功夫，才不白忙。</strong></p></div>
+<!-- 8. 核心思想 -->
+<div class="slide" data-page="7" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>核心思想 · 三层看「移」与「不移」</h2><p>十个字，把人都分了位置——</p><h3>“唯上知与下愚不移”</h3>
+<p style="margin:var(--ds-space-1) 0 0"><strong>上知：</strong>不用教。</p><p>💡 生来透亮，少数里的少数</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>下愚：</strong>教不进。</p><p>🧱 堵住了，劝也白劝</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>中间：</strong>靠习。</p><p>🌱 大多数人都在这儿，教就有用</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>位置：</strong>《阳货》第三章，<strong>紧接上章，把「性相近、习相远」补完整</strong>。</p></div>
+<!-- ====== 测验部分（slide-engine.js 渲染） ====== -->
+<div class="slide" data-page="8" data-section="quiz"><span class="ds-badge ds-badge--success">测验</span><h2 style="border:none;text-align:center;padding-bottom:0;">测验说明</h2><ul style="text-align:left;margin-top:var(--ds-space-6);display:inline-block;"><li>共 10 道选择题，每题 3 个选项</li><li>每题 10 分，满分 100 分</li><li>点击选项即可作答，选择后会显示讲解</li><li>可以随时返回讲义部分复习</li></ul><p style="margin-top:var(--ds-space-10);text-align:center;font-size:1.25rem;color:var(--ds-accent);font-weight:700;">准备好了吗？</p></div>
+<div class="slide" data-page="9" data-section="quiz" id="quiz-0"></div>
+<div class="slide" data-page="10" data-section="quiz" id="quiz-1"></div>
+<div class="slide" data-page="11" data-section="quiz" id="quiz-2"></div>
+<div class="slide" data-page="12" data-section="quiz" id="quiz-3"></div>
+<div class="slide" data-page="13" data-section="quiz" id="quiz-4"></div>
+<div class="slide" data-page="14" data-section="quiz" id="quiz-5"></div>
+<div class="slide" data-page="15" data-section="quiz" id="quiz-6"></div>
+<div class="slide" data-page="16" data-section="quiz" id="quiz-7"></div>
+<div class="slide" data-page="17" data-section="quiz" id="quiz-8"></div>
+<div class="slide" data-page="18" data-section="quiz" id="quiz-9"></div>
+<!-- ====== 测验得分页 ====== -->
+<div class="slide score-page" data-page="19" data-section="quiz" id="quiz-score">
+<span class="ds-badge ds-badge--success">测验得分</span>
+<h2>测验完成！</h2>
+<div class="score-hero">
+<div class="score-hero__number" id="score-display">0</div>
+<div class="score-hero__message" id="score-message">正在计算得分...</div>
+<div class="score-summary">
+<p>✅ 答对题数：<b class="b-correct" id="correct-count">0</b> / 10</p>
+<p>📊 总得分：<b class="b-total" id="total-score">0</b> 分（满分 100 分）</p>
+<p>📈 正确率：<b class="b-percent" id="score-percent">0%</b></p>
+</div>
+<button aria-label="重新答题" class="retake-btn" id="retake-btn">↺ 重新答题</button>
+</div>
+</div>
+<!-- ====== 答疑解惑 ====== -->
+<!-- 20. FAQ -->
+<div class="slide" data-page="20" data-section="review"><span class="ds-badge ds-badge--accent">答疑解惑</span><h2>常见问题</h2><h3>❓ 「上知」的「知」怎么读？</h3><p><strong>读 zhì，通「智」。</strong><br/><br/>① <strong>不是「知道」的知</strong><br/>② <strong>上知，就是上等的智慧</strong><br/>③ <strong>跟「下愚」对着说</strong><br/><br/><strong>记法：这里说的是聪明，不是说知道。</strong></p><h3>❓ 孔子是不是瞧不起「下愚」？</h3><p><strong>他是在说实情，不是骂人。</strong><br/><br/>① <strong>「下愚」是分等，不是骂人的话</strong><br/>② <strong>说不进、劝不动，这是真有的</strong><br/>③ <strong>认清了，才不会跟这种人硬耗</strong><br/><br/><strong>记法：认清人，不是看轻人。</strong></p><h3>❓ 小孩怎么用这一章？</h3><p><strong>学三样。</strong><br/><br/>① <strong>别拿「我天生就笨」当借口——多数人不在这一等</strong><br/>② <strong>也别指望不用学就明白——那是极少数</strong><br/>③ <strong>普通人靠的是天天用功</strong><br/><br/><strong>记法：你多半在中间，中间靠教养。</strong></p></div>
+<!-- 21. 生活应用 -->
+<div class="slide" data-page="21" data-section="review"><span class="ds-badge ds-badge--accent">答疑解惑</span><h2>生活应用</h2><p>这一句，给我们的日子三样提醒——</p><p>🌱 先认清自己在哪一段</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>多数人都在中间</strong>；<strong>中间这段，学就有用、不学就退</strong>。</p><p>🧱 劝不动的人，别硬耗</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>说三遍不进，就收住</strong>；<strong>力气留给肯动的人</strong>。</p><p>💡 对本事大的人，少啰嗦</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>上知不用教</strong>；<strong>点到就够，多说反成絮叨</strong><br/><br/><strong>本章的落点：两头定死了，中间才有得教。</strong></p></div>
+<!-- 22. 课程总结 -->
+<div class="slide" data-page="22" data-section="review"><span class="ds-badge ds-badge--accent">答疑解惑</span><h2>课程总结</h2><p>今天学了「唯上知与下愚不移」。记牢：<strong>两头定死了，中间才有得教。</strong></p><p style="text-align:center;margin:var(--ds-space-4) 0">
+                唯上知与下愚不移。
+            </p><p>回顾本课要点:</p><p>唯 · 只点两类</p><br/><p><strong>先划圈子，其余都留了余地。</strong></p><p>上知 · 下愚</p><br/><p><strong>一头不用教，一头教不进。</strong></p><p>不移 · 改不动</p><br/><p><strong>认清这个，才不白费力气。</strong></p><p><strong>在全篇中的位置:</strong>这是<strong>《阳货》第三章</strong>；承 431 课——<strong>那课讲大多数，这课圈两个例外</strong>。</p><div class="ds-quote">
+<p>📜 原文重温</p>
+<p>唯上知与下愚不移。</p>
+</div><p><strong>课后小挑战:</strong>① 想一想：你劝过谁三遍还是没动。② 背一句：唯上知与下愚不移。</p><p><strong>把这一章记在心里:</strong><strong>中间靠教养。</strong></p></div>
+<!-- ====== 结束页 ====== -->
+<div class="slide end-slide" data-page="23" data-section="review">
+<div class="cover-ornament"></div>
+<h2 class="ds-display">谢谢大家</h2>
+<div class="cover-ornament"></div>
+<div class="end-quote">
+            “唯上知与下愚不移。”<br/>
+<span style="font-size:0.875rem;color:var(--ds-color-muted);">—— 《论语·阳货》</span>
+</div>
+<div class="cover-seal">国学</div>
+</div>
+</div>
+</div><!-- slide-viewport -->
+<script>
+    window.GUOXUE_COURSE_ID = '432-wei-shang-zhi-yu-xia-yu-bu-yi';
+const QUIZ = [
+  {q: '1. 本章出自《论语》的哪一篇？', opts: ['《阳货》', '《季氏》', '《卫灵公》'], ans: 0, exp: '这是《阳货》第三章'},
+  {q: '2. 「上知」的「知」怎么读、什么意思？', opts: ['读 zhì，通「智」，智慧', '读 zhī，知道', '读 zhì，记住'], ans: 0, exp: '上知，就是上等的智慧'},
+  {q: '3. 「唯」在这里是什么意思？', opts: ['只有', '唯一', '思考'], ans: 0, exp: '先把范围收到最小，只点两类人'},
+  {q: '4. 「上知」指哪一类人？', opts: ['最聪明的一等', '地位最高的人', '年纪最大的人'], ans: 0, exp: '不用人教，自己就明白'},
+  {q: '5. 「下愚」指哪一类人？', opts: ['最不开窍的一等', '最穷的人', '最笨的小孩'], ans: 0, exp: '不是骂人，是分等'},
+  {q: '6. 「不移」是什么意思？', opts: ['改不动、变不了', '不肯搬家', '不移动位置'], ans: 0, exp: '「移」是挪动、转变'},
+  {q: '7. 「上知」为什么也「不移」？', opts: ['本来就在正处，没什么可挪', '他脾气倔', '没人教得了他'], ans: 0, exp: '不用教，不是教不了'},
+  {q: '8. 本章和上一章「性相近也，习相远也」是什么关系？', opts: ['上一句讲常态，这一句讲例外', '两句说的是同一件事', '两句互相矛盾'], ans: 0, exp: '先讲大多数，再圈出两个极端'},
+  {q: '9. 这一句对教书的人有什么用？', opts: ['力气花在中间大多数人身上', '只教聪明的孩子', '谁的不用教'], ans: 0, exp: '对下愚不强求，对上知不啰嗦'},
+  {q: '10. 本章最该记住的一句话是什么？', opts: ['两头定死了，中间才有得教', '人天生分明', '上知不用学'], ans: 0, exp: '多数人在中间，中间靠教养'},
+];
+window.GUOXUE_QUIZ_OVERRIDE = QUIZ;
+</script>
+<script src="../../assets/js/unlock.js?v=yanghuo432"></script><script src="../../assets/js/slide-engine.js?v=yanghuo432"></script>
+<script src="../../assets/js/speech.js?v=yanghuo432"></script>
+<!-- 底部进度条 -->
+<div class="progress-bar-bottom">
+<div class="progress-bar-fill" id="progress-fill" style="width:4%"></div>
+</div>
+<!-- 键盘提示 -->
+<div class="kbd-hint">
+<span class="kbd">←</span><span class="kbd">→</span> 翻页
+    <span style="margin-left:8px"><span class="kbd">Space</span> 下一页</span>
+  </div>
+<script defer="" src="../../assets/js/auth-email.js?v=yanghuo432"></script>
+<script defer="" src="../../assets/js/auth.js?v=yanghuo432"></script>
+<script defer="" src="../../assets/js/api-client.js?v=yanghuo432"></script>
+</body>
+</html>
+'''
+
+
+def main():
+    here = os.path.dirname(os.path.abspath(__file__))
+    root = os.path.dirname(here)
+    outdir = os.path.join(root, 'lessons', '432-wei-shang-zhi-yu-xia-yu-bu-yi')
+    if not os.path.isdir(outdir):
+        os.makedirs(outdir)
+    html = TEMPLATE.replace('{{RUBY}}', build_ruby_paragraphs())
+    path = os.path.join(outdir, 'index.html')
+    io.open(path, 'w', encoding='utf-8', newline='\n').write(html)
+    print('written', path, len(html))
+
+
+if __name__ == '__main__':
+    main()
