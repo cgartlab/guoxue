@@ -6430,5 +6430,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weizi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '459-yi-min',
+        num: '459',
+        title: '逸民',
+        subtitle: '各有各的硬，各有各的让',
+        path: 'lessons/459-yi-min/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·微子》第八章精讲：逸民：伯夷、叔齐、虞仲、夷逸、朱张、柳下惠、少连。子曰：不降其志，不辱其身，伯夷、叔齐与！谓柳下惠、少连：降志辱身矣，言中伦，行中虑，其斯而已矣。谓虞仲、夷逸：隐居放言，身中清，废中权。我则异于是，无可无不可。七个不被朝廷收用的人，孔子一个一个评过去：各有各的硬，各有各的让。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'weizi',
+        tier: 'core',
+        featured: false
     }
 ];
