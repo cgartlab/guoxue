@@ -6262,5 +6262,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '447-tian-he-yan-zai',
+        num: '447',
+        title: '天何言哉',
+        subtitle: '天不说话，事都做了',
+        path: 'lessons/447-tian-he-yan-zai/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第十八章精讲：天何言哉。孔子说不想说话了，子贡慌了：您不说，我们传什么？孔子一指天——天一个字都没说，四季照走，万物照长。这一课讲的不是闭嘴，是分量。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
