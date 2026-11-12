@@ -5954,5 +5954,19 @@ window.GUOXUE_LESSONS = [
         subject: 'jishi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '425-jun-zi-you-jiu-si',
+        num: '425',
+        title: '君子有九思 · 起念之前，先想一想',
+        subtitle: '视思明，听思聪，色思温，貌思恭，言思忠，事思敬',
+        path: 'lessons/425-jun-zi-you-jiu-si/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·季氏》第十章精讲：君子有九思。视思明，听思聪，色思温，貌思恭，言思忠，事思敬，疑思问，忿思难，见得思义。孔子说君子在九个地方都要先过一遍心，九条路一个理——别急着来，先想一想。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'jishi',
+        tier: 'core',
+        featured: false
     }
 ];
