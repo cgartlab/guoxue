@@ -6346,5 +6346,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weizi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '453-liu-xia-hui-wei-shi-shi',
+        num: '453',
+        title: '柳下惠三黜',
+        subtitle: '弯不下的腰，走哪儿都一样',
+        path: 'lessons/453-liu-xia-hui-wei-shi-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·微子》第二章精讲：柳下惠为士师，三黜。人曰：子未可以去乎？曰：直道而事人，焉往而不三黜？枉道而事人，何必去父母之邦？法官当得正，官丢了好几回，人家劝他走，他反问：走能走到哪儿去？换个门牌，换不掉自己——弯不下的腰，走到哪儿都一样。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weizi',
+        tier: 'core',
+        featured: false
     }
 ];
