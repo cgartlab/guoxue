@@ -6318,5 +6318,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '451-nian-si-shi-er-jian-wu',
+        num: '451',
+        title: '年四十而见恶焉',
+        subtitle: '四十还招人嫌，样子就定了',
+        path: 'lessons/451-nian-si-shi-er-jian-wu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第二十二章精讲：年四十而见恶焉，其终也已。人活到四十岁还让人讨厌，这一辈子也就这样了。这话不是算年龄，是说脾气做派都定了形，再改就难了。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
