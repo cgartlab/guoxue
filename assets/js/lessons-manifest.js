@@ -6360,5 +6360,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weizi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '454-qi-jing-gong-dai-kong-zi',
+        num: '454',
+        title: '齐景公待孔子',
+        subtitle: '话说得客气，事没打算办',
+        path: 'lessons/454-qi-jing-gong-dai-kong-zi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·微子》第三章精讲：齐景公待孔子曰：若季氏则吾不能，以季孟之间待之。曰：吾老矣，不能用也。孔子行。待遇谈得仔细——比季氏低一点，比孟氏高一点，取个中间；可位置一直没给。一句「吾老矣」把话说到底，孔子听懂了，收拾东西就走。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weizi',
+        tier: 'core',
+        featured: false
     }
 ];
