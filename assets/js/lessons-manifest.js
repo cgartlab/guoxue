@@ -6136,5 +6136,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '438-xiao-zi-he-mo-xue-fu-shi',
+        num: '438',
+        title: '小子何莫学夫诗 · 诗，能让人长本事',
+        subtitle: '诗，能让人长本事',
+        path: 'lessons/438-xiao-zi-he-mo-xue-fu-shi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第九章精讲：子曰：小子何莫学夫诗？诗，可以兴，可以观，可以群，可以怨。迩之事父，远之事君，多识于鸟兽草木之名。讲的是读诗能让人心里起劲、长见识、会合群、会把怨气说得有分寸。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
