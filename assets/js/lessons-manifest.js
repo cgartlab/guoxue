@@ -6024,5 +6024,19 @@ window.GUOXUE_LESSONS = [
         subject: 'jishi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '430-yang-huo-yu-jian-kong-zi',
+        num: '430',
+        title: '阳货欲见孔子 · 躲不开的一场见面',
+        subtitle: '日月逝矣，岁不我与',
+        path: 'lessons/430-yang-huo-yu-jian-kong-zi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第一章精讲：阳货欲见孔子，孔子不见，归孔子豚。孔子时其亡也，而往拜之，遇诸涂。阳货拿话堵他：怀其宝而迷其邦，可谓仁乎？好从事而亟失时，可谓知乎？日月逝矣，岁不我与。孔子只答：诺，吾将仕矣。这一章讲的是躲不开的见面，和一个不硬顶的回答。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
