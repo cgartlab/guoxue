@@ -6122,5 +6122,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '437-liu-yan-liu-bi',
+        num: '437',
+        title: '六言六蔽 · 六样好处，六样毛病',
+        subtitle: '六样好处，六样毛病',
+        path: 'lessons/437-liu-yan-liu-bi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第八章精讲：子曰：由也，女闻六言六蔽矣乎？仁、知、信、直、勇、刚，六样都是好品行，可只要不好学，就各自走偏：仁变愚，知变荡，信变贼，直变绞，勇变乱，刚变狂。讲的是好性子也要靠学来收。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
