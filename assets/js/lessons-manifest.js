@@ -6080,5 +6080,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '434-gong-shan-fu-rao-yi-fei-pan',
+        num: '434',
+        title: '公山弗扰以费畔 · 有个地方用我，我就去',
+        subtitle: '有个地方用我，我就去',
+        path: 'lessons/434-gong-shan-fu-rao-yi-fei-pan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第五章精讲：公山弗扰以费畔，召，子欲往。叛臣来请，孔子动了心；子路不高兴，说没地方去就算了，何必去他那儿。孔子答：肯召我的人，难道是白召？真有人用我，我就在东方把周道做起来。讲的是想做事的心，和护名声的理。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
