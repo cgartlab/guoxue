@@ -6066,5 +6066,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '433-zi-zhi-wu-cheng',
+        num: '433',
+        title: '子之武城 · 小地方也配讲礼乐',
+        subtitle: '小地方也配讲礼乐',
+        path: 'lessons/433-zi-zhi-wu-cheng/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第四章精讲：子之武城，闻弦歌之声。孔子到武城，听见弹琴唱歌，笑着说「割鸡焉用牛刀」；学生子游拿老师自己的话回他，孔子当场认了——前言戏之耳。讲的是礼乐教化不分地方大小，说错了也要认。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
