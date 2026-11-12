@@ -6038,5 +6038,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '431-xing-xiang-jin-xi-xiang-yuan',
+        num: '431',
+        title: '性相近也，习相远也 · 天生的差不多，后来的差很多',
+        subtitle: '起点差不多，路自己走',
+        path: 'lessons/431-xing-xiang-jin-xi-xiang-yuan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第二章精讲：子曰，性相近也，习相远也。人的天性是相近的，后来习惯不同，就相差很远了。这一句只有十个字，却讲清了人的差别从哪儿来：起点差不多，差距靠后天攒。全篇最短的一章，讲人的同与不同。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
