@@ -6332,5 +6332,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '452-yin-you-san-ren-yan',
+        num: '452',
+        title: '殷有三仁焉',
+        subtitle: '三个人的活法，一个仁字',
+        path: 'lessons/452-yin-you-san-ren-yan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·微子》第一章精讲：微子去之，箕子为之奴，比干谏而死。孔子曰：殷有三仁焉。同是一个烂摊子，一个走了，一个装疯忍下来，一个把命送了。三条路做法全不一样，孔子一个都没挑毛病——他认的是那颗不肯跟着坏的心。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'weizi',
+        tier: 'core',
+        featured: false
     }
 ];

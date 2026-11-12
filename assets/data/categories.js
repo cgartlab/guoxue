@@ -157,11 +157,19 @@ window.GUOXUE_CATEGORIES = [
         order: 18
     },
     {
-        key: 'mengxue',
-        label: '蒙学',
+        key: 'weizi',
+        label: '微子',
         num: '19',
-        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        description: '《论语·微子篇》各章精讲',
         status: 'ready',
         order: 19
+    },
+    {
+        key: 'mengxue',
+        label: '蒙学',
+        num: '20',
+        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        status: 'ready',
+        order: 20
     }
 ];
