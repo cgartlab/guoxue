@@ -5940,5 +5940,19 @@ window.GUOXUE_LESSONS = [
         subject: 'jishi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '424-xue-yu-bu-xue',
+        num: '424',
+        title: '学与不学 · 四等人，差在哪儿',
+        subtitle: '生而知之，学而知之，困而学之，困而不学',
+        path: 'lessons/424-xue-yu-bu-xue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·季氏》第九章精讲：生而知之者，上也；学而知之者，次也；困而学之，又其次也；困而不学，民斯为下矣。孔子按学不学分四等，顶上的那一等是理想，学而知之才是常路，只有困而不学才落到下等。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'jishi',
+        tier: 'core',
+        featured: false
     }
 ];
