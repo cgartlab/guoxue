@@ -6206,5 +6206,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '443-dao-ting-er-tu-shuo',
+        num: '443',
+        title: '道听而涂说，德之弃也',
+        subtitle: '听来的话，别急着传',
+        path: 'lessons/443-dao-ting-er-tu-shuo/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第十四章精讲：道听而涂说，德之弃也。在路上听到一句没根没据的话，转身就到处传——孔子说，这不是嘴快，是把品行往外扔。话一出口，干系就落在自己身上；听话要问来路，传话要担干系。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
