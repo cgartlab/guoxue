@@ -6150,5 +6150,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '439-nv-wei-zhou-nan-shao-nan',
+        num: '439',
+        title: '女为周南召南矣乎 · 面朝墙壁站着',
+        subtitle: '面朝墙壁站着',
+        path: 'lessons/439-nv-wei-zhou-nan-shao-nan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第十章精讲：子谓伯鱼曰：女为周南召南矣乎？人而不为周南召南，其犹正墙面而立也与？讲的是不学这两篇，就像面朝墙壁站着——眼前一堵墙，什么也看不见，一步也走不出去。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
