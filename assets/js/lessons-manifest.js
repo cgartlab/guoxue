@@ -6234,5 +6234,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '445-gu-zhe-min-you-san-ji',
+        num: '445',
+        title: '古者民有三疾',
+        subtitle: '毛病不怕有，怕的是装的',
+        path: 'lessons/445-gu-zhe-min-you-san-ji/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第十六章精讲：古者民有三疾。古人也有狂、矜、愚三种毛病，可那毛病里还有真；今人这三种毛病，只剩装。孔子叹的不是毛病多，是人心假。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
