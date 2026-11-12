@@ -6178,5 +6178,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yanghuo',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '441-se-li-er-nei-ren',
+        num: '441',
+        title: '色厉而内荏 · 装得凶，心里虚',
+        subtitle: '装得凶，心里虚',
+        path: 'lessons/441-se-li-er-nei-ren/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·阳货》第十二章精讲：色厉而内荏，譬诸小人，其犹穿窬之盗也与？外面凶巴巴，里头虚得很，这种人就像钻洞翻墙的贼——装得厉害，心里最怕人看见。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yanghuo',
+        tier: 'core',
+        featured: false
     }
 ];
