@@ -6892,5 +6892,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yaoyue',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '492-bing-si-e',
+        num: '492',
+        title: '屏四恶',
+        subtitle: '四样坏样子，别沾手',
+        path: 'lessons/492-bing-si-e/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·尧曰》第二章下段精讲：不教而杀谓之虐；不戒视成谓之暴；慢令致期谓之贼；犹之与人也，出纳之吝谓之有司。四恶详解：四样坏样子，共同点是平时不做功课，事到临头才算账。',
+        status: 'ready',
+        duration: '约 20 分钟',
+        subject: 'yaoyue',
+        tier: 'core',
+        featured: false
     }
 ];
