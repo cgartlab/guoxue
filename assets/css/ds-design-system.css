@@ -2550,3 +2550,9 @@ a.ds-accent-link:hover { color: var(--ds-accent-hover); }
         padding: 13px var(--ds-space-4, 16px);
     }
 }
+/* 拼音标注：避免带声调字母（如 ǎ ǒ）落到宽字形备用字体，导致拼音裂开 */
+ruby rt {
+    font-family: "Segoe UI", -apple-system, system-ui, "Noto Sans SC", Arial, sans-serif;
+    font-style: normal;
+    letter-spacing: 0;
+}

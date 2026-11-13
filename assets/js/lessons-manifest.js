@@ -6738,5 +6738,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '481-jun-zi-zhi-guo',
+        num: '481',
+        title: '君子之过',
+        subtitle: '日食月食，暗一阵就过去了',
+        path: 'lessons/481-jun-zi-zhi-guo/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第二十章精讲：子贡曰：君子之过也，如日月之食焉。过也，人皆见之；更也，人皆仰之。君子的过错像日食月食，站在明处藏不住；改过之后，人人照样敬重。认错不丢人，遮错才丢人。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
