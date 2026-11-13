@@ -6472,5 +6472,19 @@ window.GUOXUE_LESSONS = [
         subject: 'weizi',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '462-shi-jian-wei-zhi-ming',
+        num: '462',
+        title: '士见危致命',
+        subtitle: '危险敢拼命，好处先想想',
+        path: 'lessons/462-shi-jian-wei-zhi-ming/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第一章精讲：子张曰：士见危致命，见得思义，祭思敬，丧思哀，其可已矣。子张给士立了四条关头上的标准：危险时敢把命交出去，见到好处先想合不合义，祭祀时心存敬意，办丧事时心存哀痛。四个关头守住，士就立住了。危险敢拼命，好处先想想。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
