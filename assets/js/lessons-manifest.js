@@ -6710,5 +6710,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '479-ai-jin-er-wu-xi',
+        num: '479',
+        title: '哀矜而勿喜',
+        subtitle: '查明了，也别得意',
+        path: 'lessons/479-ai-jin-er-wu-xi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第十八章精讲：孟氏使阳肤为士师，问于曾子。曾子曰：上失其道，民散久矣。如得其情，则哀矜而勿喜。断案的人查清实情，不该得意，该心疼——法要严，心要软。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
