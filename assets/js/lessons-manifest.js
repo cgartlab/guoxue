@@ -6696,5 +6696,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '478-bu-gai-fu-zhi-zheng',
+        num: '478',
+        title: '不改父之政',
+        subtitle: '人留着，规矩也别动',
+        path: 'lessons/478-bu-gai-fu-zhi-zheng/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第十七章精讲：曾子曰：孟庄子之孝也，其他可能也；其不改父之臣与父之政，是难能也。「可能」是做得到，「难能」是少有人做到。孝不只在哭那几天，还在往后不折腾——守住好东西，比推倒重来难。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
