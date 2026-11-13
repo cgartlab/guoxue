@@ -6486,5 +6486,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '463-zhi-de-bu-hong',
+        num: '463',
+        title: '执德不弘',
+        subtitle: '有他不算多，没他不算少',
+        path: 'lessons/463-zhi-de-bu-hong/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第二章精讲：子张曰：执德不弘，信道不笃，焉能为有？焉能为亡？子张说：守着一份德行却不能把它做宽，相信一个道理却不能信得厚实，这样的人，有他算得了什么？没他又算少了什么？说白了就是可有可无。学了道理要用在宽处、站得稳，人才有分量。有他不算多，没他不算少。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
