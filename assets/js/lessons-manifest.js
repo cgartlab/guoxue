@@ -6906,5 +6906,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yaoyue',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '493-bu-zhi-ming',
+        num: '493',
+        title: '不知命',
+        subtitle: '三个「不知」，一个都少不得',
+        path: 'lessons/493-bu-zhi-ming/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·尧曰》第三章精讲（全篇收官）：孔子曰：不知命，无以为君子也；不知礼，无以立也；不知言，无以知人也。知命安身、知礼立身、知言知人——《论语》二十篇至此收官。',
+        status: 'ready',
+        duration: '约 20 分钟',
+        subject: 'yaoyue',
+        tier: 'core',
+        featured: false
     }
 ];
