@@ -6836,5 +6836,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yaoyue',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '488-shan-ren-shi-fu',
+        num: '488',
+        title: '善人是富',
+        subtitle: '好人先富，人心才服',
+        path: 'lessons/488-shan-ren-shi-fu/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·尧曰》第一章后段精讲：周有大赉，善人是富。虽有周亲，不如仁人。百姓有过，在予一人。周武王打下天下，先赏好人、再任仁人、最后把百姓的过错揽在自己身上。三句话，排出一条治国先后的次第。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'yaoyue',
+        tier: 'core',
+        featured: false
     }
 ];
