@@ -6752,5 +6752,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '482-zhong-ni-yan-xue',
+        num: '482',
+        title: '仲尼焉学',
+        subtitle: '处处能学，人人是师',
+        path: 'lessons/482-zhong-ni-yan-xue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第二十一章精讲：卫公孙朝问于子贡曰：仲尼焉学？子贡曰：文武之道，未坠于地，在人。贤者识其大者，不贤者识其小者，莫不有文武之道焉。夫子焉不学？而亦何常师之有？学问不在名师门下，道活在人间。道在人间，学无定师。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
