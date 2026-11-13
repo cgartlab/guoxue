@@ -6668,5 +6668,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '476-tang-tang-hu-zhang-ye',
+        num: '476',
+        title: '堂堂乎张也',
+        subtitle: '气派太大，人难同行',
+        path: 'lessons/476-tang-tang-hu-zhang-ye/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第十五章精讲：曾子曰：堂堂乎张也，难与并为仁矣。「堂堂」是仪表气派、气象盛大，不是德行。一个人派头太足，别人就跟不上、也搭不上手；仁是众人的事，得有人并肩走。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
