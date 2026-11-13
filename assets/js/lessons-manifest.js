@@ -6556,5 +6556,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '468-xiao-ren-zhi-guo',
+        num: '468',
+        title: '小人之过也必文',
+        subtitle: '有错就遮，越遮越丑',
+        path: 'lessons/468-xiao-ren-zhi-guo/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第七章精讲：子夏曰：小人之过也必文。子夏说：小人有了过错，一定要加以掩饰。「文」读 wén，是掩饰、修饰。错不会因为遮住就消失，遮一层，错就多一层。认错不丢人，遮错才丢人。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
