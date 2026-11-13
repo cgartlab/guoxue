@@ -6878,5 +6878,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yaoyue',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '491-hui-er-bu-fei',
+        num: '491',
+        title: '惠而不费',
+        subtitle: '好处顺着给，活儿挑着派',
+        path: 'lessons/491-hui-er-bu-fei/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·尧曰》第二章中段精讲：因民之所利而利之，斯不亦惠而不费乎？择可劳而劳之，又谁怨？欲仁而得仁，又焉贪？君子无众寡，无小大，无敢慢，斯不亦泰而不骄乎？君子正其衣冠，尊其瞻视，俨然人望而畏之，斯不亦威而不猛乎？五美详解：好处顺着给，活儿挑着派。',
+        status: 'ready',
+        duration: '约 20 分钟',
+        subject: 'yaoyue',
+        tier: 'core',
+        featured: false
     }
 ];
