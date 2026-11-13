@@ -6864,5 +6864,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yaoyue',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '490-zun-wu-mei-bing-si-e',
+        num: '490',
+        title: '尊五美，屏四恶',
+        subtitle: '五样立起来，四样扔出去',
+        path: 'lessons/490-zun-wu-mei-bing-si-e/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·尧曰》第二章上段精讲：子张问于孔子曰：何如斯可以从政矣？子曰：尊五美，屏四恶，斯可以从政矣。子张曰：何谓五美？子曰：君子惠而不费，劳而不怨，欲而不贪，泰而不骄，威而不猛。问政的总纲：五样好样子立起来，四样坏样子扔出去。',
+        status: 'ready',
+        duration: '约 20 分钟',
+        subject: 'yaoyue',
+        tier: 'core',
+        featured: false
     }
 ];
