@@ -6584,5 +6584,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '470-xin-er-hou-lao-qi-min',
+        num: '470',
+        title: '信而后劳其民',
+        subtitle: '先让人信你，再让人听你',
+        path: 'lessons/470-xin-er-hou-lao-qi-min/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第九章精讲：子夏曰：君子信而后劳其民；未信，则以为厉己也。信而后谏；未信，则以为谤己也。要先取得信任，再派活、再劝谏；没取得信任就动手，人家以为你在坑他、在毁他。「厉」在这里是折磨，「谏」是下级劝上级。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
