@@ -6780,5 +6780,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '484-qiu-ling-yu-ri-yue',
+        num: '484',
+        title: '丘陵与日月',
+        subtitle: '毁不掉，也逾不过',
+        path: 'lessons/484-qiu-ling-yu-ri-yue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第二十三章精讲：叔孙武叔毁仲尼。子贡曰：无以为也！仲尼不可毁也。他人之贤者，丘陵也，犹可逾也；仲尼，日月也，无得而逾焉。人虽欲自绝，其何伤于日月乎？多见其不知量也。丘陵翻得过去，日月翻不过去。骂不倒的东西，只照出骂的人。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
