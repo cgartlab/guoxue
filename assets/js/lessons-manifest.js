@@ -6850,5 +6850,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yaoyue',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '489-kuan-ze-de-zhong',
+        num: '489',
+        title: '宽则得众',
+        subtitle: '宽一分，人心多一分',
+        path: 'lessons/489-kuan-ze-de-zhong/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·尧曰》第一章后段精讲：谨权量，审法度，修废官，四方之政行焉。兴灭国，继绝世，举逸民，天下之民归心焉。所重：民、食、丧、祭。宽则得众，信则民任焉，敏则有功，公则说。周初治国：先把尺子和秤弄齐，再给断了的人心接上，最后落到宽、信、敏、公四条。',
+        status: 'ready',
+        duration: '约 20 分钟',
+        subject: 'yaoyue',
+        tier: 'core',
+        featured: false
     }
 ];
