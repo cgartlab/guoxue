@@ -6640,5 +6640,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '474-sang-zhi-hu-ai',
+        num: '474',
+        title: '丧致乎哀',
+        subtitle: '哀到了就够，别伤了身子',
+        path: 'lessons/474-sang-zhi-hu-ai/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第十三章精讲：子游曰：丧致乎哀而止。「致」是尽，把心里那份哀实实在在做出来；「止」是收住，不再往上加排场、不再哀到伤身。哀要真，事要当：别拿场面代替心意，也别拿悲伤拖垮自己。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
