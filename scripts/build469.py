@@ -1,0 +1,221 @@
+# -*- coding: utf-8 -*-
+"""生成第 469 课《子张》第八章「君子有三变：望之俨然，即之也温，听其言也厉。」课件。
+全章约 26 字、四段；短章大字版式（与 467/468 同基准）。
+"""
+import io
+import os
+import re
+
+PY = """
+子zǐ 夏xià 曰yuē ： ||
+君jūn 子zǐ 有yǒu 三sān 变biàn ： ||
+望wàng 之zhī 俨yǎn 然rán ， ||
+即jí 之zhī 也yě 温wēn ， ||
+听tīng 其qí 言yán 也yě 厉lì 。 ||
+"""
+
+HAN_RT = re.compile(r'^([\u4e00-\u9fff])([a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜüńňǹ]+)$')
+
+FS = '1.85rem'
+LH = '1.8'
+
+
+def build_ruby_paragraphs():
+    out = []
+    for idx, para in enumerate(PY.strip().split('||')):
+        html = []
+        for tok in para.split():
+            tok = tok.strip()
+            if not tok:
+                continue
+            m = HAN_RT.match(tok)
+            if m:
+                html.append('<ruby lang="zh-Hans">%s<rt>%s</rt></ruby>' % (m.group(1), m.group(2)))
+            else:
+                html.append(tok)
+        if idx == 0:
+            style = ('padding-top:0;text-align:left;text-indent:0;letter-spacing:0.06em;font-size:%s;'
+                     'line-height:%s;width:100%%;max-width:none;margin:0' % (FS, LH))
+        else:
+            style = ('text-align:left;text-indent:0;letter-spacing:0.06em;font-size:%s;line-height:%s;'
+                     'width:100%%;max-width:none;margin:0.1em 0 0' % (FS, LH))
+        out.append('<p style="%s">%s</p>' % (style, ''.join(html)))
+    return '\n'.join(out)
+
+
+TEMPLATE = r'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="《论语·子张》第八章精讲：子夏曰：君子有三变：望之俨然，即之也温，听其言也厉。君子给人三种印象：远远望他，庄重严肃；走近他，温和可亲；听他说话，严格有分量。「俨」读 yǎn、「即」读 jí、「厉」读 lì。这不是变来变去，是一个有修养的人的三副本相。" name="description"/>
+<meta content="君子有三变 · 望着庄严，挨着温和，听着严厉 · 国学课堂" property="og:title"/>
+<meta content="《论语·子张》第八章精讲：君子的三副本相" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://guoxue.8023laozhanshi.cc/lessons/469-jun-zi-you-san-bian/index.html" property="og:url"/>
+<link href="https://guoxue.8023laozhanshi.cc/lessons/469-jun-zi-you-san-bian/index.html" rel="canonical"/>
+<title>君子有三变 · 望着庄严，挨着温和，听着严厉 ·《论语》国学问答 · 国学课堂</title>
+<link href="../../assets/img/favicon.svg?v=zhangz469" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="../../assets/css/ds-design-system.css?v=zhangz469" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#slide-container">跳转到主内容</a>
+<div aria-hidden="true" class="bg-layer"></div>
+<div aria-hidden="true" class="ink-dot ink-dot-1"></div>
+<div aria-hidden="true" class="ink-dot ink-dot-2"></div>
+<div aria-hidden="true" class="ink-dot ink-dot-3"></div>
+<nav aria-label="主导航" class="ds-navbar ds-navbar--global">
+<a class="ds-btn-nav ds-btn-nav--brand" href="../../index.html">国学课堂</a>
+<a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html">首页</a>
+<ul class="ds-navbar__menu" id="primary-menu">
+<li><a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html#lesson-cards">课程</a></li>
+<li><a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html#sidebar-nav">门类</a></li>
+</ul>
+<a class="ds-btn-nav" href="../../about.html">关于本站</a>
+</nav>
+<nav aria-label="课程工具栏" class="ds-toolbar">
+<a class="ds-btn-nav ds-btn-nav--ghost" href="../../index.html">← 返回目录</a>
+<div class="ds-tabs">
+<button class="ds-tab active" data-section="lecture">讲义</button>
+<button class="ds-tab" data-section="quiz">测验</button>
+<button class="ds-tab" data-section="review">答疑解惑</button>
+</div>
+<div class="ds-toolbar__right">
+<span class="page-indicator" id="page-indicator">1 / 24</span>
+<div class="dots-row" id="dots-row"></div>
+<button class="ds-btn-nav" disabled="" id="nav-prev">← 上一页</button>
+<button class="ds-btn-nav" id="nav-next">下一页 →</button>
+<button aria-label="切换全屏显示" class="ds-btn-nav ds-btn-nav--icon" id="fullscreen-btn" title="切换全屏显示"><span class="ds-btn-nav__icon">⛶</span><span class="ds-btn-nav__text">全屏</span></button>
+</div>
+</nav>
+<div class="slide-viewport">
+<div class="slide-container" id="slide-container">
+<!-- ====== 讲义部分 ====== -->
+<!-- 1. 标题页 -->
+<div class="slide active cover-slide" data-page="0" data-section="lecture"><div class="cover-ornament"></div><h2 class="ds-display">君子有三变</h2><div class="cover-ornament"></div><p class="cover-subtitle">望着庄严，挨着温和，听着严厉</p><p class="cover-desc">这是<strong>《论语·子张》第八章</strong>。<strong>子夏</strong>说：<strong>君子</strong>给人<strong>三种印象</strong>：远远望他，<strong>庄重严肃</strong>；走近他，<strong>温和可亲</strong>；听他说话，<strong>严格有分量</strong>。<strong>这不是变来变去，是一个有修养的人的三副本相。</strong></p><div class="cover-seal">论语</div></div>
+<!-- 2. 原文呈现 -->
+<div class="slide" data-page="1" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2 style="margin-bottom:6px;">原文呈现</h2><div class="ds-quote" style="margin:6px 0;padding:20px 18px 16px;line-height:1.7;">
+{{RUBY}}
+</div><p style="font-size:0.78rem;line-height:1.5;width:100%;max-width:none;margin-top:var(--ds-space-1)"><strong>通译</strong>：<strong>子夏说：君子给人三种印象——远远望他，庄重严肃；走近他，温和可亲；听他说话，严格不苟。</strong></p><p style="font-size:0.78rem;line-height:1.5;width:100%;max-width:none"><strong>背景</strong>：<strong>这是《子张》第八章</strong>；<strong>合章本作 19.8</strong>；<strong>「俨」读 yǎn、「即」读 jí、「厉」读 lì</strong>；<strong>「变」指三副样子，不是变来变去</strong>。</p><p style="font-size:0.78rem;line-height:1.5;width:100%;max-width:none"><strong>小记</strong>：<strong>一副骨头，三种温度。</strong></p></div>
+<!-- 3. 字词梳理 -->
+<div class="slide" data-page="2" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>字词梳理 · 六个关节</h2><p><span class="ds-highlight">君子</span>：<strong>有学问修养的人</strong>——<strong>不是指地位高、官大</strong>。</p><p><span class="ds-highlight">三变</span>：<strong>三副样子</strong>——<strong>不是变来变去，是同一人的三面</strong>。</p><p><span class="ds-highlight">望之俨然</span>：<strong>俨 读 yǎn，庄严整齐</strong>——<strong>远看不敢随便</strong>。</p><p><span class="ds-highlight">即之也温</span>：<strong>即 读 jí，走近、靠近</strong>——<strong>挨着他觉得温和</strong>。</p><p><span class="ds-highlight">听其言也厉</span>：<strong>厉 读 lì，严格、有分量</strong>——<strong>不是凶，是话有斤两</strong>。</p><p><span class="ds-highlight">也</span>：<strong>语气词，停一顿</strong>——<strong>三个面，一处一停慢慢说</strong>。</p><p class="ds-caption"><strong>一句话记：</strong><strong>远看立得住，近看暖人心，听话有分量。</strong></p></div>
+<!-- 4. 解读一 -->
+<div class="slide" data-page="3" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>逐句解读 · 一：望之俨然</h2><h3>“ 望 之 俨 然 ”</h3><p style="margin:0"><strong>为什么远看庄严？</strong><br/><br/>① <strong>他自己先立得住，坐正站直</strong><br/>② <strong>衣冠整齐，神情不散漫</strong><br/><br/><strong>一句话：庄严是自己撑起来的。</strong></p><p><strong>「俨然」是装出来的吗？</strong><br/><br/>① <strong>不是摆架子，是心里有敬</strong><br/>② <strong>对人对自己都认真</strong><br/><br/><strong>一句话：装出来的是凶，撑出来的是庄。</strong></p><p><strong>庄严有什么用？</strong><br/><br/>① <strong>让人一看就不敢轻慢</strong><br/>② <strong>规矩先立在样子上</strong><br/><br/><strong>一句话：样子正，事情才有正的样子。</strong></p></div>
+<!-- 5. 解读二 -->
+<div class="slide" data-page="4" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>逐句解读 · 二：即之也温</h2><h3>“ 即 之 也 温 ”</h3><p style="margin:0"><strong>走近了为什么温和？</strong><br/><br/>① <strong>他心里有诚意，不摆架子</strong><br/>② <strong>对人亲切，说话不高声</strong><br/><br/><strong>一句话：庄是外壳，温是里子。</strong></p><p><strong>庄严和温和矛盾吗？</strong><br/><br/>① <strong>不矛盾——远看是敬，近看是亲</strong><br/>② <strong>该立规矩时立规矩，该相处时好相处</strong><br/><br/><strong>一句话：严对事，温对人。</strong></p><p><strong>温和是不是没原则？</strong><br/><br/>① <strong>温是态度软，不是道理软</strong><br/>② <strong>他该坚持的，一步不让</strong><br/><br/><strong>一句话：脾气好，不等于好说话。</strong></p></div>
+<!-- 6. 解读三 -->
+<div class="slide" data-page="5" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>逐句解读 · 三：听其言也厉</h2><h3>“ 听 其 言 也 厉 ”</h3><p style="margin:0"><strong>说话「厉」是什么样？</strong><br/><br/>① <strong>字字有分量，不含糊</strong><br/>② <strong>说的是实理，听完忘不掉</strong><br/><br/><strong>一句话：厉是话有斤两，不是嗓门大。</strong></p><p><strong>温和的人怎么又严厉？</strong><br/><br/>① <strong>待人温和，对道理严格</strong><br/>② <strong>话一出口，就说到点子上</strong><br/><br/><strong>一句话：心热，话准。</strong></p><p><strong>三样连起来是什么人？</strong><br/><br/>① <strong>远看敬他，近看亲他</strong><br/>② <strong>听完他的话，服他</strong><br/><br/><strong>一句话：敬、亲、服，三样全了。</strong></p></div>
+<!-- 7. 解读四 -->
+<div class="slide" data-page="6" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>逐句解读 · 四：整章连起来读</h2><h3>“ 君 子 有 三 变 ”</h3><p style="margin:0"><strong>一句话讲什么？</strong><br/><br/>① <strong>君子的修养，别人一眼就能感受</strong><br/>② <strong>望、即、听——越靠近越有体会</strong><br/><br/><strong>一句话：好样子，经得起凑近看。</strong></p><p><strong>和 468 课怎么呼应？</strong><br/><br/>① <strong>468 讲小人错了就遮</strong><br/>② <strong>这章讲君子本来的样子</strong><br/><br/><strong>一句话：小人遮丑，君子有真样子。</strong></p><p><strong>整章记一句什么？</strong><br/><br/>① <strong>远看庄重，近看温和，听话有分量</strong><br/>② <strong>三样不是装，是修养露出来的</strong><br/><br/><strong>一句话：修在里面，露在外面。</strong></p></div>
+<!-- 8. 核心思想 -->
+<div class="slide" data-page="7" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span><h2>核心思想 · 三层看「三变」</h2><p>一句话，三层意思——</p><h3>“远看立得住，近看暖人心，听话有分量。”</h3>
+<p style="margin:var(--ds-space-1) 0 0"><strong>看表面：</strong>望之俨然——自己先立得住，别人才敬你。</p><p>🏛 庄严撑门面</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>看内里：</strong>即之也温——心里有诚意，凑近才不冷。</p><p>🔥 温和是里子</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>落点：</strong>听其言也厉——肚里有真学问，话才有斤两。</p><p>⚖ 落点是「话有分量」</p>
+<p>接 468 课：<strong>上一章讲小人错了就遮，这一章讲君子本来的三副样子</strong>。</p></div>
+<!-- ====== 测验部分（slide-engine.js 渲染） ====== -->
+<div class="slide" data-page="8" data-section="quiz"><span class="ds-badge ds-badge--success">测验</span><h2 style="border:none;text-align:center;padding-bottom:0;">测验说明</h2><ul style="text-align:left;margin-top:var(--ds-space-6);display:inline-block;"><li>共 10 道选择题，每题 3 个选项</li><li>每题 10 分，满分 100 分</li><li>点击选项即可作答，选择后会显示讲解</li><li>可以随时返回讲义部分复习</li></ul><p style="margin-top:var(--ds-space-10);text-align:center;font-size:1.25rem;color:var(--ds-accent);font-weight:700;">准备好了吗？</p></div>
+<div class="slide" data-page="9" data-section="quiz" id="quiz-0"></div>
+<div class="slide" data-page="10" data-section="quiz" id="quiz-1"></div>
+<div class="slide" data-page="11" data-section="quiz" id="quiz-2"></div>
+<div class="slide" data-page="12" data-section="quiz" id="quiz-3"></div>
+<div class="slide" data-page="13" data-section="quiz" id="quiz-4"></div>
+<div class="slide" data-page="14" data-section="quiz" id="quiz-5"></div>
+<div class="slide" data-page="15" data-section="quiz" id="quiz-6"></div>
+<div class="slide" data-page="16" data-section="quiz" id="quiz-7"></div>
+<div class="slide" data-page="17" data-section="quiz" id="quiz-8"></div>
+<div class="slide" data-page="18" data-section="quiz" id="quiz-9"></div>
+<!-- ====== 测验得分页 ====== -->
+<div class="slide score-page" data-page="19" data-section="quiz" id="quiz-score">
+<span class="ds-badge ds-badge--success">测验得分</span>
+<h2>测验完成！</h2>
+<div class="score-hero">
+<div class="score-hero__number" id="score-display">0</div>
+<div class="score-hero__message" id="score-message">正在计算得分...</div>
+<div class="score-summary">
+<p>✅ 答对题数：<b class="b-correct" id="correct-count">0</b> / 10</p>
+<p>📊 总得分：<b class="b-total" id="total-score">0</b> 分（满分 100 分）</p>
+<p>📈 正确率：<b class="b-percent" id="score-percent">0%</b></p>
+</div>
+<button aria-label="重新答题" class="retake-btn" id="retake-btn">↺ 重新答题</button>
+</div>
+</div>
+<!-- ====== 答疑解惑 ====== -->
+<!-- 20. FAQ -->
+<div class="slide" data-page="20" data-section="review"><span class="ds-badge ds-badge--accent">答疑解惑</span><h2>常见问题</h2><h3>❓ 「三变」是变来变去吗？</h3><p><strong>不是。三变是三副样子，同时都在他身上。</strong><br/><br/>① <strong>远看是庄，近看是温，听话是厉</strong><br/>② <strong>不是今天一变明天一变</strong><br/>③ <strong>是你离他远近不同，看到的面不同</strong><br/><br/><strong>记法：不是他变，是你看的距离变。</strong></p><h3>❓ 「厉」是凶吗？</h3><p><strong>不是凶，是话有分量。</strong><br/><br/>① <strong>他不说空话，字字落在实处</strong><br/>② <strong>听的人不敢当耳旁风</strong><br/>③ <strong>凶是脾气大，厉是道理硬</strong><br/><br/><strong>记法：厉在理上，不在嗓门上。</strong></p><h3>❓ 三样我能学哪一样？</h3><p><strong>先学「望之俨然」最实惠。</strong><br/><br/>① <strong>站正坐直，先把样子立起来</strong><br/>② <strong>再学待人温和，不冷脸对人</strong><br/>③ <strong>最后学说话算话，句句有斤两</strong><br/><br/><strong>记法：先立样子，再暖人心，后炼话。</strong></p></div>
+<!-- 21. 生活应用 -->
+<div class="slide" data-page="21" data-section="review"><span class="ds-badge ds-badge--accent">答疑解惑</span><h2>生活应用</h2><p>这一章，给我们的日子三样提醒——</p><p>🏛 立样子</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>站有站相，坐有坐相</strong>；<strong>自己先正，别人才正眼看你</strong>。</p><p>🔥 暖人心</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>对人有温度，不冷脸、不摆架子</strong>；<strong>庄严不是拿来看不起人的</strong>。</p><p>⚖ 说话有斤两</p>
+<p style="margin:var(--ds-space-1) 0 0"><strong>不说空话大话</strong>；<strong>说出来的话，让人记得住、靠得住</strong><br/><br/><strong>本章的落点：远看立得住，近看暖人心，听话有分量。</strong></p></div>
+<!-- 22. 课程总结 -->
+<div class="slide" data-page="22" data-section="review"><span class="ds-badge ds-badge--accent">答疑解惑</span><h2>课程总结</h2><p>今天学了「君子有三变」。记牢：<strong>远看立得住，近看暖人心，听话有分量。</strong></p><p style="text-align:center;margin:var(--ds-space-4) 0">
+                君子有三变：望之俨然，即之也温，听其言也厉。
+            </p><p>回顾本课要点:</p><p>望之俨然 · 远看庄重</p><br/><p><strong>庄严是自己撑起来的。</strong></p><p>即之也温 · 近看温和</p><br/><p><strong>庄是外壳，温是里子。</strong></p><p>听其言也厉 · 听话有斤两</p><br/><strong>厉在理上，不在嗓门上。</strong><p><strong>在全篇中的位置:</strong>这是<strong>《子张》第八章</strong>。接 468 课：上一章讲小人错了就遮，这一章讲君子本来的三副样子。</p><div class="ds-quote">
+<p>📜 原文重温</p>
+<p>君子有三变：望之俨然，即之也温，听其言也厉。</p>
+</div><p><strong>课后小挑战:</strong>① 今天站正坐直半小时，体会「俨然」。② 背一句：望之俨然，即之也温，听其言也厉。</p><p><strong>把这一章记在心里:</strong><strong>修在里面，露在外面。</strong></p></div>
+<!-- ====== 结束页 ====== -->
+<div class="slide end-slide" data-page="23" data-section="review">
+<div class="cover-ornament"></div>
+<h2 class="ds-display">谢谢大家</h2>
+<div class="cover-ornament"></div>
+<div class="end-quote">
+            “君子有三变：望之俨然，即之也温，听其言也厉。”<br/>
+<span style="font-size:0.875rem;color:var(--ds-color-muted);">—— 《论语·子张》</span>
+</div>
+<div class="cover-seal">国学</div>
+</div>
+</div>
+</div><!-- slide-viewport -->
+<script>
+    window.GUOXUE_COURSE_ID = '469-jun-zi-you-san-bian';
+const QUIZ = [
+  {q: '1. 本章出自《论语》的哪一篇？', opts: ['《子张》', '《子路》', '《宪问》'], ans: 0, exp: '这是《子张》第八章，子夏的话'},
+  {q: '2. 「望之俨然」的「俨」读什么？', opts: ['yǎn', 'yán', 'yàn'], ans: 0, exp: '俨读 yǎn，是庄严整齐'},
+  {q: '3. 「即之也温」的「即」是什么意思？', opts: ['走近、靠近', '就是', '立即'], ans: 0, exp: '即读 jí，是走近、靠近的意思'},
+  {q: '4. 「听其言也厉」的「厉」指什么？', opts: ['话严格、有分量', '凶狠', '厉害、本事大'], ans: 0, exp: '厉是话有斤两，不是嗓门大'},
+  {q: '5. 「三变」的意思是？', opts: ['君子的三副样子', '变来变去', '三次改变主意'], ans: 0, exp: '三变不是变化，是同一人的三个面'},
+  {q: '6. 君子远看给人什么印象？', opts: ['庄重严肃', '随随便便', '笑呵呵没规矩'], ans: 0, exp: '望之俨然——远看不敢随便'},
+  {q: '7. 君子走近了给人什么印象？', opts: ['温和可亲', '冷冰冰', '爱答不理'], ans: 0, exp: '即之也温——挨着他觉得温和'},
+  {q: '8. 庄严和温和矛盾吗？', opts: ['不矛盾：严对事，温对人', '矛盾，只能选一样', '书里没说'], ans: 0, exp: '远看是敬，近看是亲，本来就在一人身上'},
+  {q: '9. 本章与 468 课的关系是？', opts: ['468 讲小人遮错，469 讲君子本相', '是同一章的两半', '都在讲认错'], ans: 0, exp: '小人遮丑，君子有真样子，正好对照'},
+  {q: '10. 这一章给我们的提醒是？', opts: ['先立样子，再暖人心，后炼话', '越凶越有威信', '笑嘻嘻最好'], ans: 0, exp: '望之俨然、即之也温、听其言也厉，三样都能学'},
+];
+window.GUOXUE_QUIZ_OVERRIDE = QUIZ;
+</script>
+<script src="../../assets/js/unlock.js?v=zhangz469"></script><script src="../../assets/js/slide-engine.js?v=zhangz469"></script>
+<script src="../../assets/js/speech.js?v=zhangz469"></script>
+<!-- 底部进度条 -->
+<div class="progress-bar-bottom">
+<div class="progress-bar-fill" id="progress-fill" style="width:4%"></div>
+</div>
+<!-- 键盘提示 -->
+<div class="kbd-hint">
+<span class="kbd">←</span><span class="kbd">→</span> 翻页
+    <span style="margin-left:8px"><span class="kbd">Space</span> 下一页</span>
+  </div>
+<script defer="" src="../../assets/js/auth-email.js?v=zhangz469"></script>
+<script defer="" src="../../assets/js/auth.js?v=zhangz469"></script>
+<script defer="" src="../../assets/js/api-client.js?v=zhangz469"></script>
+</body>
+</html>
+'''
+
+
+def main():
+    here = os.path.dirname(os.path.abspath(__file__))
+    root = os.path.dirname(here)
+    outdir = os.path.join(root, 'lessons', '469-jun-zi-you-san-bian')
+    if not os.path.isdir(outdir):
+        os.makedirs(outdir)
+    html = TEMPLATE.replace('{{RUBY}}', build_ruby_paragraphs())
+    path = os.path.join(outdir, 'index.html')
+    io.open(path, 'w', encoding='utf-8', newline='\n').write(html)
+    print('written', path, len(html))
+
+
+if __name__ == '__main__':
+    main()

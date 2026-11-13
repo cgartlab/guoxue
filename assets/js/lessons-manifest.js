@@ -6570,5 +6570,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '469-jun-zi-you-san-bian',
+        num: '469',
+        title: '君子有三变',
+        subtitle: '望着庄严，挨着温和，听着严厉',
+        path: 'lessons/469-jun-zi-you-san-bian/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第八章精讲：子夏曰：君子有三变：望之俨然，即之也温，听其言也厉。君子给人三种印象：远远望他，庄重严肃；走近他，温和可亲；听他说话，严格有分量。「俨」读 yǎn、「即」读 jí、「厉」读 lì。这不是变来变去，是一个有修养的人的三副本相。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
