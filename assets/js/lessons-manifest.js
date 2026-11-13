@@ -6542,5 +6542,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '467-bai-gong-ju-yi',
+        num: '467',
+        title: '百工居肆',
+        subtitle: '手艺人守铺子，君子守功课',
+        path: 'lessons/467-bai-gong-ju-yi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第六章精讲：子夏曰：百工居肆以成其事，君子学以致其道。子夏说：各种手艺人守在作坊里，把手艺练成；君子通过学习，把道理学到手。「肆」读 sì，是作坊、铺子。手艺要在作坊里练，学问要在功课里磨。守着本业，才能成事。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
