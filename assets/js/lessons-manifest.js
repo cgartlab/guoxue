@@ -6528,5 +6528,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '466-ri-zhi-qi-suo-wang',
+        num: '466',
+        title: '日知其所亡',
+        subtitle: '天天学新的，月月别丢旧的',
+        path: 'lessons/466-ri-zhi-qi-suo-wang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第五章精讲：子夏曰：日知其所亡，月无忘其所能，可谓好学也已矣。子夏说：每天知道自己所没有学会的东西，每月不忘记已经学会的东西，这样就可以称得上好学了。「亡」通「无」读 wú，指还没学会的。天天进一点新的，月月守一点旧的，学问才留得住。学新如进账，温故如存钱。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
