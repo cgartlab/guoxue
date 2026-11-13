@@ -6514,5 +6514,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '465-zhi-yuan-kong-ni',
+        num: '465',
+        title: '致远恐泥',
+        subtitle: '小处有可观，大处要走远',
+        path: 'lessons/465-zhi-yuan-kong-ni/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第四章精讲：子夏曰：虽小道，必有可观者焉；致远恐泥，是以君子不为也。子夏说：哪怕是小的技艺，也一定有它值得看的地方；但要拿它去走远路、成大事，怕就怕陷在里面出不来，所以君子不把心思放在小道上。小处有可观，大处要走远。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
