@@ -6500,5 +6500,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '464-zun-xian-er-rong-zhong',
+        num: '464',
+        title: '尊贤而容众',
+        subtitle: '该交的交，该容的容',
+        path: 'lessons/464-zun-xian-er-rong-zhong/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第三章精讲：子夏之门人问交于子张。子夏教的是「可者与之，其不可者拒之」；子张说：君子尊贤而容众，嘉善而矜不能。我若是大贤，什么人容不下？我若不贤，别人先拒绝我，哪还轮得到我挑人。该交的交，该容的容。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
