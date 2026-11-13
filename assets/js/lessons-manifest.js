@@ -6612,5 +6612,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '472-sa-sao-ying-dui',
+        num: '472',
+        title: '洒扫应对',
+        subtitle: '扫地也是功课，先后不是高低',
+        path: 'lessons/472-sa-sao-ying-dui/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第十一章精讲：子游曰：子夏之门人小子，当洒扫应对进退，则可矣，抑末也。本之则无，如之何？子夏闻之，曰：噫！言游过矣！君子之道，孰先传焉？孰后倦焉？譬诸草木，区以别矣。君子之道，焉可诬也？有始有卒者，其惟圣人乎！扫地答话是基本功，不是低学问；先教后教，不等于谁高谁低。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
