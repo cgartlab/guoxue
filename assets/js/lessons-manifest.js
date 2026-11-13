@@ -6766,5 +6766,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '483-shu-ren-zhi-qiang',
+        num: '483',
+        title: '数仞之墙',
+        subtitle: '看不进去，别急着评',
+        path: 'lessons/483-shu-ren-zhi-qiang/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第二十二章精讲：叔孙武叔语大夫于朝曰：子贡贤于仲尼。子服景伯以告子贡。子贡曰：譬之宫墙，赐之墙也及肩，窥见室家之好。夫子之墙数仞，不得其门而入，不见宗庙之美，百官之富。得其门者或寡矣。夫子之云，不亦宜乎！墙矮看得见，墙高看不见。看不进去，别急着评。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
