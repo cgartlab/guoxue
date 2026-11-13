@@ -6808,5 +6808,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '486-yun-zhi-qi-zhong',
+        num: '486',
+        title: '允执其中',
+        subtitle: '守住中间，不偏不倚',
+        path: 'lessons/486-yun-zhi-qi-zhong/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·尧曰》开篇精讲：尧曰：咨！尔舜！天之历数在尔躬，允执其中。四海困穷，天禄永终。舜亦以命禹。「允」是诚，「执」是拿住，「中」是不偏不倚的分寸——过一点是过，欠一点是不及。底下人过不下去，位子自己就空了。守得住中，才守得住人。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'yaoyue',
+        tier: 'core',
+        featured: false
     }
 ];

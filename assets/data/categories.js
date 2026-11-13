@@ -173,11 +173,19 @@ window.GUOXUE_CATEGORIES = [
         order: 20
     },
     {
-        key: 'mengxue',
-        label: '蒙学',
+        key: 'yaoyue',
+        label: '尧曰',
         num: '21',
-        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        description: '《论语·尧曰篇》各章精讲',
         status: 'ready',
         order: 21
+    },
+    {
+        key: 'mengxue',
+        label: '蒙学',
+        num: '22',
+        description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
+        status: 'ready',
+        order: 22
     }
 ];
