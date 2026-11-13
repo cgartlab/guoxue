@@ -6794,5 +6794,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '485-tian-zhi-wu-jie',
+        num: '485',
+        title: '天之不可阶',
+        subtitle: '没有台阶，上不去',
+        path: 'lessons/485-tian-zhi-wu-jie/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第二十四章精讲：陈子禽谓子贡曰：子为恭也，仲尼岂贤于子乎？子贡曰：君子一言以为知，一言以为不知，言不可不慎也。夫子之不可及也，犹天之不可阶而升也。夫子之得邦家者，所谓立之斯立，道之斯行，绥之斯来，动之斯和。其生也荣，其死也哀，如之何其可及也？天没有台阶，本事没有捷径。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
