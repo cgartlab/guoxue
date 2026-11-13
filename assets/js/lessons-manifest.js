@@ -6724,5 +6724,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '480-zhou-zhi-bu-shan',
+        num: '480',
+        title: '纣之不善',
+        subtitle: '脏水都往低处流',
+        path: 'lessons/480-zhou-zhi-bu-shan/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第十九章精讲：子贡曰：纣之不善，不如是之甚也。是以君子恶居下流，天下之恶皆归焉。纣王的坏没有传说的那么过分，是坏名声一传再传越传越重。君子不愿落在名声的低洼处——脏水都往低处流。管好自己，也放过别人。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
