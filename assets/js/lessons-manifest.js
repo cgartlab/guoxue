@@ -6682,5 +6682,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '477-wu-wen-zhu-fu-zi',
+        num: '477',
+        title: '吾闻诸夫子',
+        subtitle: '真情到那一刻，才全掏出来',
+        path: 'lessons/477-wu-wen-zhu-fu-zi/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第十六章精讲：曾子曰：吾闻诸夫子：人未有自致者也，必也亲丧乎！「自致」是自己把心力尽到极处。人平时的心都收着一层，只有父母去世那一刻，不由你不全掏出来。真情不用装，孝要趁人还在。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
