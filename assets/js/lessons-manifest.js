@@ -6822,5 +6822,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yaoyue',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '487-zui-zai-zhen-gong',
+        num: '487',
+        title: '罪在朕躬',
+        subtitle: '担子先往自己身上揽',
+        path: 'lessons/487-zui-zai-zhen-gong/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·尧曰》第一章中段精讲：曰：予小子履，敢用玄牡，敢昭告于皇皇后帝：有罪不敢赦。帝臣不蔽，简在帝心。朕躬有罪，无以万方；万方有罪，罪在朕躬。商汤祭天，先放低自己，再把天下人的账全揽到身上。担得起，才坐得稳。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'yaoyue',
+        tier: 'core',
+        featured: false
     }
 ];

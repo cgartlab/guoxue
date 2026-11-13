@@ -2556,3 +2556,9 @@ ruby rt {
     font-style: normal;
     letter-spacing: 0;
 }
+
+/* 原文注音：给每个注音字留一点横向间隙，避免相邻长拼音粘连
+   （如「朕躬」的 zhèn gōng 粘成 zhèng ōng、「用玄」的 yòng xuán 粘成 yòngxuán） */
+.ds-quote ruby {
+    margin-right: 0.16em;
+}
