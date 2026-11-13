@@ -6654,5 +6654,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '475-wu-you-zhang-ye',
+        num: '475',
+        title: '吾友张也',
+        subtitle: '本事难得，仁还差一层',
+        path: 'lessons/475-wu-you-zhang-ye/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第十四章精讲：子游曰：吾友张也，为难能也，然而未仁。子张能做到别人难做到的地步，是难得的；可「仁」还差一层。能是手，仁是心——才高不等于德厚。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
