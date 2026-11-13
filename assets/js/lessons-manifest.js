@@ -6626,5 +6626,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '473-shi-er-you-ze-xue',
+        num: '473',
+        title: '仕而优则学',
+        subtitle: '有余力才学，学有余力再做',
+        path: 'lessons/473-shi-er-you-ze-xue/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第十二章精讲：子夏曰：仕而优则学，学而优则仕。「优」不是优秀，是有余力。做事做完了还有力气，就回头读书；读书读通了还有余力，就去做事。学和做不是两截，是来回倒的两条腿。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
