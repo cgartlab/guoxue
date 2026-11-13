@@ -6598,5 +6598,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zhangz',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '471-da-de-bu-yu-xian',
+        num: '471',
+        title: '大德不逾闲',
+        subtitle: '大原则守住，小节可宽松',
+        path: 'lessons/471-da-de-bu-yu-xian/index.html',
+        grade: '小学高年级·初中文言',
+        description: '《论语·子张》第十章精讲：子夏曰：大德不逾闲，小德出入可也。大节上不能越过界限；小节上有点出入，是可以的。「闲」在这里是栅栏、界限，不是悠闲。大原则一条不让，小毛病可以容——这是待人处事的分寸。',
+        status: 'ready',
+        duration: '约 18 分钟',
+        subject: 'zhangz',
+        tier: 'core',
+        featured: false
     }
 ];
