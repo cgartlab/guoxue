@@ -7172,5 +7172,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '512-wo-zhou-gong',
+        num: '512',
+        title: '我周公',
+        subtitle: '作周礼，礼乐备',
+        path: 'lessons/512-wo-zhou-gong/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第十九课精讲：我周公，作周礼。著六官，存治体。大小戴，注礼记。述圣言，礼乐备。上一课讲了「六经」里的《易》与《书》，这一课讲其中的《礼》——先说《周礼》相传是周公所作，设立了六官、定下治国的体制；再说西汉大戴小戴两家人给《礼记》作注，把圣人的言论传了下来，礼和乐就都齐备了。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
