@@ -6976,5 +6976,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '498-xiang-jiu-ling',
+        num: '498',
+        title: '香九龄',
+        subtitle: '暖席让梨，孝弟为先',
+        path: 'lessons/498-xiang-jiu-ling/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第五课精讲：香九龄，能温席。孝于亲，所当执。融四岁，能让梨。弟于长，宜先知。九岁黄香替父亲焐暖被窝，四岁孔融把大梨让给哥哥——孝对父母，悌对兄长，都从小事上练起。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
