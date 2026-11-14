@@ -7102,5 +7102,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '507-ci-shi-yi',
+        num: '507',
+        title: '此十义',
+        subtitle: '十义人同，读书有法',
+        path: 'lessons/507-ci-shi-yi/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第十四课精讲：此十义，人所同。凡训蒙，须讲究。详训诂，明句读。为学者，必有初。前两句收住上一课的十义、转入启蒙教学；后两句讲清字义、学会断句，读书都要从基础起步。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
