@@ -6990,5 +6990,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '499-shou-xiao-ti',
+        num: '499',
+        title: '首孝弟',
+        subtitle: '先做人，后长见识',
+        path: 'lessons/499-shou-xiao-ti/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第六课精讲：首孝弟，次见闻。知某数，识某文。一而十，十而百。百而千，千而万。孝弟排头一位，见闻排第二；见闻从认数认字起，数从一垒到万——顺序对了，路才走得远。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
