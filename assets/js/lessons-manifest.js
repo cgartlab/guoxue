@@ -7074,5 +7074,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '505-gao-zeng-zu',
+        num: '505',
+        title: '高曾祖',
+        subtitle: '一家九代，长幼有伦',
+        path: 'lessons/505-gao-zeng-zu/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第十二课精讲：高曾祖，父而身。身而子，子而孙。自子孙，至玄曾。乃九族，人之伦。前两句从高祖数到自己、再往下数到子孙；后两句把上下九代合起来叫九族，讲的就是一家人的辈分次序。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
