@@ -6962,5 +6962,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '497-yu-bu-zhuo',
+        num: '497',
+        title: '玉不琢',
+        subtitle: '好料子也要下刀',
+        path: 'lessons/497-yu-bu-zhuo/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第四课精讲：玉不琢，不成器。人不学，不知义。好玉靠琢磨才成器，好人靠学习才懂道理；成器是先做减法，受得住琢才成得了器。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
