@@ -19,6 +19,7 @@ const PORT = Number(process.env.PAYWALL_PORT) || 7891;
 const BASE = `http://localhost:${PORT}`;
 const PAID_LESSON = '/lessons/07-zengzi-sansheng/index.html';
 const FREE_LESSON = '/lessons/01-lunyu/index.html';
+const FREE_SUBJECT_LESSON = '/lessons/494-ren-zhi-chu/index.html'; // 三字经课堂(整门免费)
 const PRODUCT_URL = 'https://mbd.pub/o/bread/YZaVlJ5rag==';
 const DEFAULT_API = 'https://pay.8023laozhanshi.cc/api/redeem';
 const VALID_ORDER = 'abcd1234abcd1234abcd1234abcd1234';
@@ -99,6 +100,14 @@ test.describe('付费墙 — 面包多解锁', () => {
     await expect(page.locator('.paywall-overlay--show')).toHaveCount(0);
     await expect(page.locator('.slide-viewport')).toBeVisible();
     // quiz-0 位于第 13 页(初始只显示封面页),断言引擎已填充测验内容(attached 而非 visible)
+    await expect(page.locator('#quiz-0 .quiz-option').first()).toBeAttached();
+  });
+
+  test('三字经课堂整门免费:494 课件不弹窗,可直接学习', async ({ page }) => {
+    await page.goto(`${BASE}${FREE_SUBJECT_LESSON}`, { waitUntil: 'domcontentloaded' });
+
+    await expect(page.locator('.paywall-overlay--show')).toHaveCount(0);
+    await expect(page.locator('#page-indicator')).toHaveText('1 / 24');
     await expect(page.locator('#quiz-0 .quiz-option').first()).toBeAttached();
   });
 

@@ -26,13 +26,18 @@
         // 验单接口:部署 Cloudflare Worker 后,把下方占位地址替换成真实 Worker URL;
         // 或在页面加载前设置 window.GUOXUE_REDEEM_API = 'https://xxx.workers.dev/api/redeem'
         redeemApi: (window.GUOXUE_REDEEM_API) || 'https://pay.8023laozhanshi.cc/api/redeem',
-        // 免费课程 ID 列表(前 5 课)
+        // 免费课程 ID 列表
         freeCourses: [
             '01-lunyu',
             '02-lunyu-mixed',
             '03-sanzijing',
             '04-xueer',
-            '05-xueer-xiaoti'
+            '05-xueer-xiaoti',
+            '494-ren-zhi-chu'
+        ],
+        // 免费学科门类(该门类下所有课程一律免费,如「三字经课堂」)
+        freeSubjects: [
+            'sanzijing'
         ]
     };
 
@@ -51,9 +56,29 @@
         } catch (e) { /* ignore */ }
     }
 
+    /* ===== 课程所属门类(课件页可用 window.GUOXUE_COURSE_SUBJECT 直接声明,
+     *       首页等处则回查 lessons-manifest.js 的课程清单) ===== */
+    function getCourseSubject(courseId) {
+        if (window.GUOXUE_COURSE_SUBJECT) return window.GUOXUE_COURSE_SUBJECT;
+        var list = window.GUOXUE_LESSONS;
+        if (!Array.isArray(list)) return '';
+        for (var i = 0; i < list.length; i++) {
+            if (list[i] && list[i].id === courseId) return list[i].subject || '';
+        }
+        return '';
+    }
+
     function isCourseFree(courseId) {
+        // 1. 显式白名单
         for (var i = 0; i < CONFIG.freeCourses.length; i++) {
             if (CONFIG.freeCourses[i] === courseId) return true;
+        }
+        // 2. 免费门类:整门课程一律免费
+        var subject = getCourseSubject(courseId);
+        if (subject) {
+            for (var j = 0; j < CONFIG.freeSubjects.length; j++) {
+                if (CONFIG.freeSubjects[j] === subject) return true;
+            }
         }
         return false;
     }
