@@ -7116,5 +7116,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '508-lun-yu-zhe',
+        num: '508',
+        title: '论语者',
+        subtitle: '记善言，说仁义',
+        path: 'lessons/508-lun-yu-zhe/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第十五课精讲：论语者，二十篇。群弟子，记善言。孟子者，七篇止。讲道德，说仁义。前两句说《论语》二十篇，是弟子们记下的孔子善言；后两句说《孟子》只有七篇，讲的是道德仁义。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
