@@ -6934,5 +6934,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: true
+    },
+    {
+        id: '495-xi-meng-mu',
+        num: '495',
+        title: '昔孟母',
+        subtitle: '三迁择邻，一剪断机',
+        path: 'lessons/495-xi-meng-mu/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第二课精讲：昔孟母，择邻处。子不学，断机杼。窦燕山，有义方。教五子，名俱扬。孟母三迁、断机教子，窦氏五子登科——环境要选，规矩要立。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
