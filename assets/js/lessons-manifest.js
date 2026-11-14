@@ -7088,5 +7088,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '506-fu-zi-en',
+        num: '506',
+        title: '父子恩',
+        subtitle: '十义有序，相处有道',
+        path: 'lessons/506-fu-zi-en/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第十三课精讲：父子恩，夫妇从。兄则友，弟则恭。长幼序，友与朋。君则敬，臣则忠。前两句讲父子、夫妇、兄弟之间的相处；后两句讲长幼、朋友、君臣各有本分，合起来就是古人说的「十义」。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
