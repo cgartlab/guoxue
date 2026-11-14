@@ -7186,5 +7186,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '513-yue-guo-feng',
+        num: '513',
+        title: '曰国风',
+        subtitle: '曰雅颂，号四诗，当讽咏',
+        path: 'lessons/513-yue-guo-feng/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第二十课精讲：曰国风，曰雅颂。号四诗，当讽咏。诗既亡，春秋作。寓褒贬，别善恶。上一课讲了「六经」里的《礼》（《周礼》《礼记》），这一课讲其中的《诗》与《春秋》：先说《诗经》按体裁分国风、雅、颂，合称「四诗」，应当吟咏诵读；再说采诗制度消亡后，孔子据史作《春秋》，在字里行间暗含褒贬、分辨善恶。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
