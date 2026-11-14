@@ -7004,5 +7004,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '500-san-cai-zhe',
+        num: '500',
+        title: '三才者',
+        subtitle: '天地人，日月星',
+        path: 'lessons/500-san-cai-zhe/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第七课精讲：三才者，天地人。三光者，日月星。三纲者，君臣义。父子亲，夫妇顺。三才是天、地、人，三光是日、月、星；君臣讲义、父子讲亲、夫妇讲顺——各守本分，关系才牢。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
