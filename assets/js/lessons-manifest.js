@@ -7060,5 +7060,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '504-yue-xi-nu',
+        num: '504',
+        title: '曰喜怒',
+        subtitle: '人有七情，乐有八音',
+        path: 'lessons/504-yue-xi-nu/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第十一课精讲：曰喜怒，曰哀惧。爱恶欲，七情具。匏土革，木石金。丝与竹，乃八音。前两句讲人心里生来就有的七种情感；后两句讲做乐器的八种材料，合称八音。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
