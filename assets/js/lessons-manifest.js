@@ -7046,5 +7046,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '503-dao-liang-shu',
+        num: '503',
+        title: '稻粱菽',
+        subtitle: '田里长六谷，家里养六畜',
+        path: 'lessons/503-dao-liang-shu/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第十课精讲：稻粱菽，麦黍稷。此六谷，人所食。马牛羊，鸡犬豕。此六畜，人所饲。前两句讲田里长的六种粮食，是人天天吃的；后两句讲家里养的六种家畜，是人天天喂的。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
