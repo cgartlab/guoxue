@@ -7032,5 +7032,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '502-yue-shui-huo',
+        num: '502',
+        title: '曰水火',
+        subtitle: '五行有定数，相生又相克',
+        path: 'lessons/502-yue-shui-huo/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第九课精讲：曰水火，木金土。此五行，本乎数。水、火、木、金、土讲的是五种性子；木生火、火生土，五行相生相克；一水二火三木四金五土，各有定数。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
