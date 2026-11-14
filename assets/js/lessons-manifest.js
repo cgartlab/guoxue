@@ -6920,5 +6920,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yaoyue',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '494-ren-zhi-chu',
+        num: '494',
+        title: '人之初',
+        subtitle: '人刚生下来，都是好苗子',
+        path: 'lessons/494-ren-zhi-chu/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》开篇六句精讲：人之初，性本善。性相近，习相远。苟不教，性乃迁。教之道，贵以专。二十四个字讲透「本性都善、差别在习、教贵在专」。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: true
     }
 ];

@@ -187,5 +187,13 @@ window.GUOXUE_CATEGORIES = [
         description: '蒙学经典 · 三字经 · 百家姓 · 千字文',
         status: 'ready',
         order: 22
+    },
+    {
+        key: 'sanzijing',
+        label: '三字经课堂',
+        num: '23',
+        description: '《三字经》逐句精讲 · 独立课堂',
+        status: 'ready',
+        order: 23
     }
 ];
