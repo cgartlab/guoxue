@@ -7200,5 +7200,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '514-san-zhuan-zhe',
+        num: '514',
+        title: '三传者',
+        subtitle: '有公羊，有左氏，有谷梁',
+        path: 'lessons/514-san-zhuan-zhe/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第二十一课精讲：三传者，有公羊。有左氏，有谷梁。经既明，方读子。撮其要，记其事。上一课讲了《诗经》与《春秋》，这一课先把《春秋》说完整——《春秋》字句太简，必须靠「传」来讲解，解说《春秋》的有三部书：公羊、左氏、谷梁，合称「三传」；再讲六经读通之后，方才去读诸子百家，抓住要点、记住事迹。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
