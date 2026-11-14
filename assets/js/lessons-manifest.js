@@ -7144,5 +7144,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '510-xiao-jing-tong',
+        num: '510',
+        title: '孝经通',
+        subtitle: '四书熟，六经当讲求',
+        path: 'lessons/510-xiao-jing-tong/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第十七课精讲：孝经通，四书熟。如六经，始可读。诗书易，礼春秋。号六经，当讲求。前两句说把《孝经》读通、把「四书」读熟，才可以去读「六经」；后两句列出六经之名，说这六部书是读书人的根本，都要认真讲求。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
