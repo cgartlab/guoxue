@@ -6948,5 +6948,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '496-yang-bu-jiao',
+        num: '496',
+        title: '养不教',
+        subtitle: '养了不管，是父之过',
+        path: 'lessons/496-yang-bu-jiao/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第三课精讲：养不教，父之过。教不严，师之惰。养是本分，教才是尽责；严是认真，不是厉害。家管根，校管枝，两头都不许推。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
