@@ -7214,5 +7214,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '515-wu-zi-zhe',
+        num: '515',
+        title: '五子者',
+        subtitle: '有荀扬，文中子，及老庄',
+        path: 'lessons/515-wu-zi-zhe/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第二十二课精讲：五子者，有荀扬。文中子，及老庄。上一课讲了《春秋》三传与「经既明，方读子」的读书次第，这一课接着点出诸子百家中最重要的五位代表人物——荀况（荀子）、扬雄、文中子（王通）、老子、庄子。四句话，带我们认识「五子」。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
