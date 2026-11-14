@@ -7130,5 +7130,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '509-zuo-zhong-yong',
+        num: '509',
+        title: '作中庸',
+        subtitle: '中庸不偏，大学修齐',
+        path: 'lessons/509-zuo-zhong-yong/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第十六课精讲：作中庸，子思笔。中不偏，庸不易。作大学，乃曾子。自修齐，至平治。前两句说《中庸》是子思所作，讲不偏不倚、平常不变的道理；后两句说《大学》是曾子所作，从修养自身到家齐国治天下平。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
