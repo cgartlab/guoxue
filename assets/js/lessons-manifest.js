@@ -7158,5 +7158,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '511-you-lian-shan',
+        num: '511',
+        title: '有连山',
+        subtitle: '三易详，书之奥',
+        path: 'lessons/511-you-lian-shan/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第十八课精讲：有连山，有归藏。有周易，三易详。有典谟，有训诰。有誓命，书之奥。前两句说《易》有三种古本，连山、归藏、周易，都要详究；后两句列出《尚书》的六种文体，典、谟、训、诰、誓、命，这是《书经》的奥妙。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
