@@ -33,12 +33,18 @@
             '03-sanzijing',
             '04-xueer',
             '05-xueer-xiaoti',
-            '494-ren-zhi-chu'
+            // 三字经课堂前 7 课(494-500)保持免费试看;501 课起与《论语》课一致,需付费解锁
+            '494-ren-zhi-chu',
+            '495-xi-meng-mu',
+            '496-yang-bu-jiao',
+            '497-yu-bu-zhuo',
+            '498-xiang-jiu-ling',
+            '499-shou-xiao-ti',
+            '500-san-cai-zhe'
         ],
-        // 免费学科门类(该门类下所有课程一律免费,如「三字经课堂」)
-        freeSubjects: [
-            'sanzijing'
-        ]
+        // 免费学科门类(该门类下所有课程一律免费)
+        // 2026-11-14:三字经课堂取消整门免费,改为逐课白名单(见上),501 课起付费
+        freeSubjects: []
     };
 
     /* ===== 解锁状态管理 ===== */

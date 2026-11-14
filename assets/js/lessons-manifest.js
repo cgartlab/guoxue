@@ -7018,5 +7018,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '501-yue-chun-xia',
+        num: '501',
+        title: '曰春夏',
+        subtitle: '四时四方，都有个中',
+        path: 'lessons/501-yue-chun-xia/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第八课精讲：曰春夏，曰秋冬。此四时，运不穷。曰南北，曰西东。此四方，应乎中。四季轮转不停，四方围着一个中心——时有序，位有中，顺时定位，少走弯路。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];

@@ -19,7 +19,9 @@ const PORT = Number(process.env.PAYWALL_PORT) || 7891;
 const BASE = `http://localhost:${PORT}`;
 const PAID_LESSON = '/lessons/07-zengzi-sansheng/index.html';
 const FREE_LESSON = '/lessons/01-lunyu/index.html';
-const FREE_SUBJECT_LESSON = '/lessons/494-ren-zhi-chu/index.html'; // 三字经课堂(整门免费)
+const FREE_SUBJECT_LESSON = '/lessons/494-ren-zhi-chu/index.html'; // 三字经课堂第 1 课(免费试看)
+const FREE_SANZIJING_LAST = '/lessons/500-san-cai-zhe/index.html'; // 三字经课堂免费段最后一课
+const PAID_SANZIJING_LESSON = '/lessons/501-yue-chun-xia/index.html'; // 501 起与《论语》课一致,需付费
 const PRODUCT_URL = 'https://mbd.pub/o/bread/YZaVlJ5rag==';
 const DEFAULT_API = 'https://pay.8023laozhanshi.cc/api/redeem';
 const VALID_ORDER = 'abcd1234abcd1234abcd1234abcd1234';
@@ -103,12 +105,32 @@ test.describe('付费墙 — 面包多解锁', () => {
     await expect(page.locator('#quiz-0 .quiz-option').first()).toBeAttached();
   });
 
-  test('三字经课堂整门免费:494 课件不弹窗,可直接学习', async ({ page }) => {
+  test('三字经课堂免费段(494-500):不弹窗,可直接学习', async ({ page }) => {
     await page.goto(`${BASE}${FREE_SUBJECT_LESSON}`, { waitUntil: 'domcontentloaded' });
 
     await expect(page.locator('.paywall-overlay--show')).toHaveCount(0);
     await expect(page.locator('#page-indicator')).toHaveText('1 / 24');
     await expect(page.locator('#quiz-0 .quiz-option').first()).toBeAttached();
+  });
+
+  test('三字经课堂 500 课仍免费(白名单末课)', async ({ page }) => {
+    await page.goto(`${BASE}${FREE_SANZIJING_LAST}`, { waitUntil: 'domcontentloaded' });
+
+    await expect(page.locator('.paywall-overlay--show')).toHaveCount(0);
+    await expect(page.locator('#quiz-0 .quiz-option').first()).toBeAttached();
+  });
+
+  test('三字经课堂 501 课起付费:弹窗出现且引擎不初始化', async ({ page }) => {
+    await page.goto(`${BASE}${PAID_SANZIJING_LESSON}`, { waitUntil: 'domcontentloaded' });
+
+    await expect(page.locator('.paywall-overlay--show')).toBeVisible();
+    await expect(page.locator('.paywall-title')).toContainText('解锁全部国学课程');
+    await expect(page.locator('#paywall-product-btn')).toHaveAttribute('href', PRODUCT_URL);
+    // 引擎被阻断,测验未渲染
+    await expect(page.locator('#quiz-0 .quiz-option')).toHaveCount(0);
+
+    const isFree = await page.evaluate(() => window.UNLOCK.isCourseFree('501-yue-chun-xia'));
+    expect(isFree).toBe(false);
   });
 
   test('输入订单号解锁成功:提示解锁码、localStorage 记录、刷新后不再弹窗且测验可渲染', async ({ page }) => {
