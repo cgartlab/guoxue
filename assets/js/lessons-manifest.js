@@ -7578,5 +7578,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '541-dizigui-kaipian',
+        num: '541',
+        title: '走近弟子规 · 作者与时代',
+        subtitle: '李毓秀原著，康熙年间成书；先认书，再读书',
+        path: 'lessons/541-dizigui-kaipian/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第一课（导论）：先认书，不急着背句子。作者李毓秀（1647—1729），字子潜，号采三，山西绛州人，康熙年间的秀才，一生没做官，在乡里教书，人称李夫子，写下启蒙课本《训蒙文》；后来清代山西浮山人贾存仁修订改编，改名《弟子规》。时代背景是康熙年间天下初定、朝廷重教化，各地办社学义学，村塾需要浅近易诵的规矩书。全书三字一句、两句一韵，360 句 1080 字，分总叙与七门。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];

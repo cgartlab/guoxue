@@ -42,6 +42,8 @@
             '499-shou-xiao-ti',
             '500-san-cai-zhe'
         ],
+        // 弟子规课堂前 5 课(541-545)免费试看,与三字经课堂同一策略;546 课起付费
+        freePrefixes: ['541-', '542-', '543-', '544-', '545-'],
         // 免费学科门类(该门类下所有课程一律免费)
         // 2026-11-14:三字经课堂取消整门免费,改为逐课白名单(见上),501 课起付费
         freeSubjects: []
@@ -78,6 +80,11 @@
         // 1. 显式白名单
         for (var i = 0; i < CONFIG.freeCourses.length; i++) {
             if (CONFIG.freeCourses[i] === courseId) return true;
+        }
+        // 1b. 白名单前缀(按课程序号段免费,如弟子规 541-545)
+        var prefixes = CONFIG.freePrefixes || [];
+        for (var k = 0; k < prefixes.length; k++) {
+            if (courseId && courseId.indexOf(prefixes[k]) === 0) return true;
         }
         // 2. 免费门类:整门课程一律免费
         var subject = getCourseSubject(courseId);

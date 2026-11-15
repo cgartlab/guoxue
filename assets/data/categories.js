@@ -195,5 +195,13 @@ window.GUOXUE_CATEGORIES = [
         description: '《三字经》逐句精讲 · 独立课堂',
         status: 'ready',
         order: 23
+    },
+    {
+        key: 'dizigui',
+        label: '弟子规课堂',
+        num: '24',
+        description: '《弟子规》逐句精讲 · 先做人后学文',
+        status: 'ready',
+        order: 24
     }
 ];
