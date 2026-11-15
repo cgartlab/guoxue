@@ -7410,5 +7410,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '529-du-shi-zhe',
+        num: '529',
+        title: '读史者 · 考实录',
+        subtitle: '考实录，通古今，若亲目；口而诵，心而惟，朝于斯，夕于斯',
+        path: 'lessons/529-du-shi-zhe/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第三十六课精讲：读史者，考实录。通古今，若亲目。口而诵，心而惟。朝于斯，夕于斯。上一课讲完了从唐到清的朝代更替，这一课调转笔锋，教孩子怎样读书：读历史的人要查考真实可靠的记载（读史者，考实录）；把古今的事理贯通起来，就像亲眼见过一样明白（通古今，若亲目）；读书要口中诵读，心里同时思索（口而诵，心而惟）；从早到晚都专一用功，不肯松懈（朝于斯，夕于斯）。八句三言，从讲历史转到怎样学，是全篇由史入学的转折。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
