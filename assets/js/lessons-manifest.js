@@ -7284,5 +7284,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '520-ying-qin-shi',
+        num: '520',
+        title: '嬴秦氏 · 始兼并',
+        subtitle: '传二世，楚汉争；高祖兴，汉业建，至孝平，王莽篡',
+        path: 'lessons/520-ying-qin-shi/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第二十七课精讲：嬴秦氏，始兼并。传二世，楚汉争。高祖兴，汉业建。至孝平，王莽篡。上一课讲了战国七雄并出——东周乱世终结于秦。这一课接着讲：秦国（嬴秦氏）起兵吞并六国、统一天下（始兼并）；秦朝传到第二代便灭亡，随后项羽刘邦争夺天下（传二世，楚汉争）；汉高祖刘邦兴起，建立汉朝基业（高祖兴，汉业建）；传到汉平帝时，外戚王莽篡夺汉位（至孝平，王莽篡）。八句六言，讲完秦的统一与速亡、楚汉相争到汉朝兴起与王莽篡汉。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
