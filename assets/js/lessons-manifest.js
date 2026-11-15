@@ -7340,5 +7340,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '524-er-shi-chuan',
+        num: '524',
+        title: '二十传 · 三百载',
+        subtitle: '三百载，梁灭之，国乃改；梁唐晋，及汉周，称五代，皆有由',
+        path: 'lessons/524-er-shi-chuan/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第三十一课精讲：二十传，三百载。梁灭之，国乃改。梁唐晋，及汉周。称五代，皆有由。上一课讲了隋唐更替——隋文帝一统、隋祚短促、唐高祖建唐开基。这一课接着讲：唐朝传了二十代皇帝、约三百年（二十传，三百载），被朱温所灭、改朝换代（梁灭之，国乃改）；其后梁、唐、晋、汉、周五个朝代相继（梁唐晋，及汉周），称为五代，各有其因（称五代，皆有由）。八句三言，讲完唐朝世系与五代更替。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
