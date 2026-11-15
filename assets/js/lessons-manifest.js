@@ -7382,5 +7382,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '527-ming-tai-zu',
+        num: '527',
+        title: '明太祖 · 久亲师',
+        subtitle: '久亲师，传建文，方四祀；迁北京，永乐嗣，迨崇祯，煤山逝',
+        path: 'lessons/527-ming-tai-zu/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第三十四课精讲：明太祖，久亲师。传建文，方四祀。迁北京，永乐嗣。迨崇祯，煤山逝。上一课讲了金宋俱灭与元朝兴亡——蒙古兴起、金宋俱归于元，元朝统一中原，国祚约九十年而废。这一课接着讲：明太祖朱元璋出身布衣，多年亲自带兵打天下，推翻元朝、建立明朝（明太祖，久亲师）；帝位传给孙子建文帝，在位才四年（传建文，方四祀）；明成祖把都城迁到北京，以永乐为年号继承大统（迁北京，永乐嗣）；等到末帝崇祯，在煤山自尽殉国，明朝灭亡（迨崇祯，煤山逝）。八句三言，讲完明朝的兴与亡。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
