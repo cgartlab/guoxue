@@ -7452,5 +7452,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '532-ru-nang-ying',
+        num: '532',
+        title: '如囊萤 · 如映雪',
+        subtitle: '如映雪，家虽贫，学不辍；如负薪，如挂角，身虽劳，犹苦卓',
+        path: 'lessons/532-ru-nang-ying/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第三十九课精讲：如囊萤，如映雪。家虽贫，学不辍。如负薪，如挂角。身虽劳，犹苦卓。上一课讲古人无书、无人督促仍苦读，这一课再举四位在贫苦劳作中不废学的人：晋代车胤家贫买不起灯油，夏夜捉萤火虫装进纱袋照着读；孙康冬夜借雪地反光读书；家里虽穷，学习却不中断。西汉朱买臣靠砍柴为生，担柴时仍背书；隋代李密放牛把书挂在牛角上边走边读；身子虽然劳累，用功却格外超群。八句三言告诉孩子：穷与累，都挡不住真想读书的人。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
