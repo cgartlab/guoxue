@@ -7368,5 +7368,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '526-yuan-xing',
+        num: '526',
+        title: '至元兴 · 金绪歇',
+        subtitle: '金绪歇，有宋世，一同灭；并中国，兼戎狄，九十年，国祚废',
+        path: 'lessons/526-yuan-xing/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第三十三课精讲：至元兴，金绪歇。有宋世，一同灭。并中国，兼戎狄。九十年，国祚废。上一课讲了宋朝兴替与辽金并立——赵匡胤受禅建宋、南北两宋递嬗、辽金先后称帝。这一课接着讲：蒙古兴起，元世祖忽必烈定国号元、年号至元（至元兴）；金国被蒙古所灭、统绪断绝（金绪歇）；到了宋朝，宋也被元一同灭掉（有宋世，一同灭）；元朝兼并中原中国，兼有戎狄等边疆各族（并中国，兼戎狄）；元朝国祚约九十年就废亡了（九十年，国祚废）。八句三言，讲完金宋俱灭、元朝兴亡。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
