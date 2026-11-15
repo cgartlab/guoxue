@@ -7312,5 +7312,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '522-song-qi-ji',
+        num: '522',
+        title: '宋齐继 · 梁陈承',
+        subtitle: '为南朝，都金陵；北元魏，分东西，宇文周，与高齐',
+        path: 'lessons/522-song-qi-ji/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第二十九课精讲：宋齐继，梁陈承。为南朝，都金陵。北元魏，分东西。宇文周，与高齐。上一课讲了光武中兴、三国两晋——西晋东晋相承。这一课接着讲：南朝宋齐梁陈四代相承（宋齐继，梁陈承），统称南朝、都城建康即金陵（为南朝，都金陵）；北方北魏（元魏）立国，后来分裂为东魏西魏（北元魏，分东西），宇文氏建立北周、高氏建立北齐，与北周并立（宇文周，与高齐）。八句三言，讲完南北朝南北对峙。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
