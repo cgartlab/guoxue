@@ -7536,5 +7536,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '538-you-wei-zhe',
+        num: '538',
+        title: '有为者 · 亦若是',
+        subtitle: '亦若是，犬守夜；苟不学，曷为人，人不学，不如物',
+        path: 'lessons/538-you-wei-zhe/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第四十五课精讲：有为者，亦若是。犬守夜，鸡司晨。苟不学，曷为人。蚕吐丝，蜂酿蜜。人不学，不如物。上一课讲神童七岁任事、年少有为，这一课把话收到每个人身上：有作为的人也能像他那样；狗守夜、鸡报晓各守本分；人若不学习，怎么配叫人；蚕吐丝、蜂酿蜜，连小虫都做出有用的东西；所以不学的人连它们都不如。十句三言告诉孩子：万物都在尽本分，人更要学、更要有用。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
