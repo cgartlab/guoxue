@@ -7480,5 +7480,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '534-ruo-liang-hao',
+        num: '534',
+        title: '若梁灏 · 八十二',
+        subtitle: '八十二，对大廷，魁多士；彼既成，众称异，尔小生，宜立志',
+        path: 'lessons/534-ruo-liang-hao/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第四十一课精讲：若梁灏，八十二。对大廷，魁多士。彼既成，众称异。尔小生，宜立志。上一课讲晚学可成、劝人趁早，这一课换个角度讲立定志向，几岁开始都不晚：相传梁灏八十二岁对策大廷、压过众多读书人夺魁，学成之后人人称奇；所以《三字经》转过来叮嘱小孩子：你们该早早立下志向。八句三言告诉孩子：年纪不是借口，先立志再下功夫。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
