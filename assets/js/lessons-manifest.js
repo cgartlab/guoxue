@@ -7606,5 +7606,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '543-dong-wen-xia-qing',
+        num: '543',
+        title: '冬温夏凊 · 晨省昏定',
+        subtitle: '《弟子规》入则孝第二段：晨则省，昏则定',
+        path: 'lessons/543-dong-wen-xia-qing/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第三课，入则孝第二段。原文「冬则温，夏则凊。晨则省，昏则定。出必告，反必面。居有常，业无变。」讲四件事：冬天替父母暖、夏天替父母凉；早晨问安、晚上安顿；出门说一声、回来照个面；住处作息有定准、本业踏实做。上一课讲叫一声就应，这一课讲把父母放在心上。东汉黄香九岁温席，就是冬则温的来历。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
