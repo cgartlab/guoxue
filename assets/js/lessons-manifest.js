@@ -7326,5 +7326,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '523-dai-zhi-sui',
+        num: '523',
+        title: '迨至隋 · 一土宇',
+        subtitle: '不再传，失统绪；唐高祖，起义师，除隋乱，创国基',
+        path: 'lessons/523-dai-zhi-sui/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第三十课精讲：迨至隋，一土宇。不再传，失统绪。唐高祖，起义师。除隋乱，创国基。上一课讲了南北朝对峙——南朝宋齐梁陈、北朝魏周齐分治。这一课接着讲：等到隋朝统一天下（迨至隋，一土宇），但隋朝短祚、皇位没有长久传承、失去统治统系（不再传，失统绪）；唐高祖李渊起兵讨逆（唐高祖，起义师），平定隋末之乱、开创唐朝基业（除隋乱，创国基）。八句三言，讲完隋唐更替、鼎革相继。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
