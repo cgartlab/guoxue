@@ -7494,5 +7494,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '535-ying-ba-sui',
+        num: '535',
+        title: '莹八岁 · 能咏诗',
+        subtitle: '能咏诗，能赋棋；彼颖悟，人称奇，尔幼学，当效之',
+        path: 'lessons/535-ying-ba-sui/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第四十二课精讲：莹八岁，能咏诗。泌七岁，能赋棋。彼颖悟，人称奇。尔幼学，当效之。上一课讲高龄夺魁、立志不分早晚，这一课换个角度讲小小年纪也能有大学问：北魏祖莹八岁就能咏诗，唐代李泌七岁能以棋为题作赋；两人天资聪慧，人人称奇；所以《三字经》叮嘱幼年求学的人：应当效法他们。八句三言告诉孩子：聪明更要用功，从小把书读扎实。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
