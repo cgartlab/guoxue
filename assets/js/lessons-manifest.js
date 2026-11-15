@@ -7228,5 +7228,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '516-zi-xi-nong',
+        num: '516',
+        title: '自羲农 · 唐有虞',
+        subtitle: '至黄帝，号三皇，居上世；唐有虞，号二帝，相揖逊，称盛世',
+        path: 'lessons/516-zi-xi-nong/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第二十三课精讲：自羲农，至黄帝。号三皇，居上世。唐有虞，号二帝。相揖逊，称盛世。上一课讲了「考世系，知终始」，这一课顺着读史的开端，讲中华远古的圣王——伏羲、神农、黄帝号「三皇」，唐尧、虞舜号「二帝」，他们禅让天下、共创盛世。八句话，讲完远古的「三皇五帝」。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
