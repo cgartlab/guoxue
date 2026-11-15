@@ -7620,5 +7620,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '544-shi-sui-xiao',
+        num: '544',
+        title: '事虽小 · 勿擅为、勿私藏',
+        subtitle: '《弟子规》入则孝第三段：事虽小，勿擅为',
+        path: 'lessons/544-shi-sui-xiao/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第四课，入则孝第三段。原文「事虽小，勿擅为。苟擅为，子道亏。物虽小，勿私藏。苟私藏，亲心伤。」讲两个小：事再小也别自作主张，东西再小也别偷偷藏起来不说。前两句说擅，自作主张会让做子女的本分缺一块；后两句说私，瞒着父母，父母伤心的不是那件东西，是你不肯说。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
