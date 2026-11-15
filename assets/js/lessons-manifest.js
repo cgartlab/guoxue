@@ -7466,5 +7466,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '533-su-lao-quan',
+        num: '533',
+        title: '苏老泉 · 二十七',
+        subtitle: '二十七，始发愤，读书籍；彼既老，犹悔迟，尔小生，宜早思',
+        path: 'lessons/533-su-lao-quan/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第四十课精讲：苏老泉，二十七。始发愤，读书籍。彼既老，犹悔迟。尔小生，宜早思。上一课讲家贫身劳仍不废学，这一课换个角度讲什么时候开始读书：北宋苏洵号老泉，到二十七岁才下定决心发愤读书，后来成了大文章家；可他年纪大了，仍后悔起步太晚；所以《三字经》转过来叮嘱小孩子：你们该趁早想着用功。八句三言告诉孩子：晚学固然能成，早学更不辜负光阴。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
