@@ -7396,5 +7396,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '528-qing-tai-zu',
+        num: '528',
+        title: '清太祖 · 膺景命',
+        subtitle: '膺景命，靖四方，克大定；至世祖，乃大同，十二世，清祚终',
+        path: 'lessons/528-qing-tai-zu/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第三十五课精讲：清太祖，膺景命。靖四方，克大定。至世祖，乃大同。十二世，清祚终。上一课讲了明朝的兴与亡——布衣开国、传位建文、成祖迁都北京，到崇祯煤山殉国。这一课接着讲：清太祖努尔哈赤承受天命、统一女真，为清朝奠定基业（清太祖，膺景命）；平定四方，大局安定（靖四方，克大定）；到清世祖顺治入关定鼎，天下归一（至世祖，乃大同）；自太祖至宣统共传十二帝，清朝国祚终结（十二世，清祚终）。八句三言，讲完清朝的兴与亡，也为整段朝代更替收尾。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
