@@ -7564,5 +7564,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '540-ren-yi-zi',
+        num: '540',
+        title: '人遗子 · 金满籝',
+        subtitle: '金满籝，我教子；惟一经，勤有功，戏无益，宜勉力',
+        path: 'lessons/540-ren-yi-zi/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第四十七课精讲：人遗子，金满籝。我教子，惟一经。勤有功，戏无益。戒之哉，宜勉力。这是《三字经》的收尾一课：别人给子孙留满箱金银，我教子孙的只有一部经书；勤勉才有成效，嬉戏贪玩没有好处；所以要警戒自己，好好用功。八句三言告诉孩子：留给后人最要紧的不是钱财，是读书向学的道理。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
