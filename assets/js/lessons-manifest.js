@@ -7242,5 +7242,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '517-xia-you-yu',
+        num: '517',
+        title: '夏有禹 · 商有汤',
+        subtitle: '周文武，称三王；夏传子，家天下，四百载，迁夏社',
+        path: 'lessons/517-xia-you-yu/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第二十四课精讲：夏有禹，商有汤。周文武，称三王。夏传子，家天下。四百载，迁夏社。上一课讲了「三皇二帝」的禅让盛世，这一课顺着读史往下讲——夏商周三代的开国之君禹、汤、文王武王被称为「三王」；大禹把天下传给儿子启，「家天下」从此开始，夏朝四百年后社稷迁移。八句短语（四句六言），讲完三代的开端与「家天下」的由来。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
