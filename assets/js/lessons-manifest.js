@@ -7424,5 +7424,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '530-xi-zhong-ni',
+        num: '530',
+        title: '昔仲尼 · 师项橐',
+        subtitle: '师项橐，古圣贤，尚勤学；赵中令，读鲁论，彼既仕，学且勤',
+        path: 'lessons/530-xi-zhong-ni/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第三十七课精讲：昔仲尼，师项橐。古圣贤，尚勤学。赵中令，读鲁论。彼既仕，学且勤。上一课教了读书的方法，这一课举出勤学的榜样：从前孔子曾向七岁的项橐请教（昔仲尼，师项橐）；古代的圣贤尚且勤勉好学（古圣贤，尚勤学）；宋朝的赵普官至中书令，还常读《论语》（赵中令，读鲁论）；他已经做了大官，学习依旧勤勉（彼既仕，学且勤）。八句三言，用两位榜样告诉孩子：学问不问长幼，也不问忙闲。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
