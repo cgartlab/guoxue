@@ -7508,5 +7508,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '536-cai-wen-ji',
+        num: '536',
+        title: '蔡文姬 · 能辨琴',
+        subtitle: '能辨琴，能咏吟；彼女子，且聪敏，尔男子，当自警',
+        path: 'lessons/536-cai-wen-ji/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第四十三课精讲：蔡文姬，能辨琴。谢道韫，能咏吟。彼女子，且聪敏。尔男子，当自警。上一课讲神童颖悟、幼学当效，这一课换个角度讲有学问不分男女：东汉蔡文姬听琴能辨弦音，东晋谢道韫随口能吟诗句；两位女子尚且聪敏过人；所以《三字经》叮嘱求学的人：更该警醒自己别松劲。八句三言告诉孩子：才学靠用功，谁都别轻看谁，也别落下自己。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
