@@ -7550,5 +7550,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '539-you-er-xue',
+        num: '539',
+        title: '幼而学 · 壮而行',
+        subtitle: '壮而行，上致君；下泽民，扬名声，显父母，裕于后',
+        path: 'lessons/539-you-er-xue/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第四十六课精讲：幼而学，壮而行。上致君，下泽民。扬名声，显父母。光于前，裕于后。上一课讲万物各守本分、人不学不如物，这一课接着讲学了做什么用：小时候用功读书，长大把学的本事用出来；对上为国尽力、辅佐君上，对下施惠于百姓；名声传开，让父母也跟着荣耀；光耀先人，惠及后人。八句三言告诉孩子：读书不只是为自己，是立身的本分、做事的本事、对家国的担当。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
