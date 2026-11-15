@@ -7354,5 +7354,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '525-yan-song-xing',
+        num: '525',
+        title: '炎宋兴 · 受周禅',
+        subtitle: '受周禅，十八传，南北混；辽与金，帝号纷，迨灭辽，宋犹存',
+        path: 'lessons/525-yan-song-xing/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第三十二课精讲：炎宋兴，受周禅。十八传，南北混。辽与金，帝号纷。迨灭辽，宋犹存。上一课讲了五代更替——梁唐晋汉周相继、各有其由。这一课接着讲：赵匡胤陈桥兵变、受后周禅让建立宋朝（炎宋兴，受周禅）；宋朝传十八代皇帝，历经北宋、南宋（十八传，南北混）；契丹辽与女真金先后称帝（辽与金，帝号纷）；等到金灭了辽，宋朝还存在（迨灭辽，宋犹存）。八句三言，讲完宋朝兴替与辽金纷争。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
