@@ -7256,5 +7256,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '518-tang-fa-xia',
+        num: '518',
+        title: '汤伐夏 · 国号商',
+        subtitle: '六百载，至纣亡',
+        path: 'lessons/518-tang-fa-xia/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第二十五课精讲：汤伐夏，国号商。六百载，至纣亡。上一课讲了「家天下」——夏朝延续四百年后社稷迁移，亡于桀。这一课接着讲：商汤起兵讨伐夏桀，建立商朝；商朝历经约六百年，到纣王时灭亡。四句六言，讲完商朝的兴起与终结。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
