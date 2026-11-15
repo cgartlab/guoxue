@@ -7438,5 +7438,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '531-pi-pu-bian',
+        num: '531',
+        title: '披蒲编 · 削竹简',
+        subtitle: '削竹简，彼无书，且知勉；头悬梁，锥刺股，彼不教，自勤苦',
+        path: 'lessons/531-pi-pu-bian/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第三十八课精讲：披蒲编，削竹简。彼无书，且知勉。头悬梁，锥刺股。彼不教，自勤苦。上一课举出孔子与赵普勤学的榜样，这一课再讲四位在困苦里自学的人：西汉路温舒把蒲草编成席，借书抄在上头读；公孙弘削竹片抄书，边放猪边苦学；他们没有书，尚且知道勉力。东汉孙敬把头发系在屋梁上防打瞌睡；战国苏秦困倦时以锥刺大腿提神；没有人督促，全靠自己勤苦。八句三言告诉孩子：条件差、没人催，都不是不读书的理由。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
