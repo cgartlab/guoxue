@@ -7522,5 +7522,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '537-tang-liu-yan',
+        num: '537',
+        title: '唐刘晏 · 方七岁',
+        subtitle: '方七岁，作正字；彼虽幼，身已仕，尔幼学，勉而致',
+        path: 'lessons/537-tang-liu-yan/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第四十四课精讲：唐刘晏，方七岁。举神童，作正字。彼虽幼，身已仕。尔幼学，勉而致。上一课讲才女聪敏、人人自警，这一课讲年少有为：唐朝刘晏七岁就被举为神童，做了校正文字的正字官；他年纪虽小已经任职做事；所以《三字经》劝幼年求学的人：努力也能做到。八句三言告诉孩子：年纪小不是理由，肯用功就能早有作为。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
