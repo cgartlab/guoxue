@@ -7270,5 +7270,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '519-zhou-che-dong',
+        num: '519',
+        title: '周辙东 · 王纲坠',
+        subtitle: '逞干戈，尚游说；始春秋，终战国，五霸强，七雄出',
+        path: 'lessons/519-zhou-che-dong/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第二十六课精讲：周辙东，王纲坠。逞干戈，尚游说。始春秋，终战国。五霸强，七雄出。上一课讲了周朝八百年最长久——西周礼乐征伐自天子出。这一课接着讲：周平王东迁洛邑（辙东），王室衰微、纲纪坠落（王纲坠）；诸侯逞强动干戈、游说之士盛行（逞干戈，尚游说）；历史进入春秋（始春秋）到战国（终战国）；春秋五霸强盛（五霸强），战国七雄并出（七雄出）。八句六言，讲完东周衰微与春秋战国的乱象。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
