@@ -7298,5 +7298,19 @@ window.GUOXUE_LESSONS = [
         subject: 'sanzijing',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '521-guang-wu-xing',
+        num: '521',
+        title: '光武兴 · 为东汉',
+        subtitle: '四百年，终于献；蜀魏吴，争汉鼎，号三国，迄两晋',
+        path: 'lessons/521-guang-wu-xing/index.html',
+        grade: '小学低中年级',
+        description: '《三字经》第二十八课精讲：光武兴，为东汉。四百年，终于献。蜀魏吴，争汉鼎。号三国，迄两晋。上一课讲了秦汉更替、王莽篡汉——西汉终结于新莽。这一课接着讲：汉光武帝刘秀兴起，建立东汉（为东汉）；汉朝延续约四百年，到汉献帝时终结（四百年，终于献）；蜀汉、曹魏、东吴三国鼎立，争夺天下（蜀魏吴，争汉鼎）；称为三国时代，到西晋东晋（号三国，迄两晋）。八句三言，讲完东汉中兴与终结、三国鼎立到两晋承继。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'sanzijing',
+        tier: 'core',
+        featured: false
     }
 ];
