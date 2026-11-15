@@ -7592,5 +7592,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '542-ru-ze-xiao-fu-mu-hu',
+        num: '542',
+        title: '入则孝 · 父母呼，应勿缓',
+        subtitle: '《弟子规》正文第一门：父母呼，应勿缓',
+        path: 'lessons/542-ru-ze-xiao-fu-mu-hu/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第二课，进正文第一门入则孝。原文「父母呼，应勿缓。父母命，行勿懒。父母教，须敬听。父母责，须顺承。」讲孩子对父母的四种回应：父母叫，马上应一声，别拖着；父母交代事，赶紧去做，别偷懒；父母讲道理，恭敬地听进去；父母责备，先把话接下来，别顶嘴。呼、命、教、责是父母那边做的，应、行、听、承是我这边该做的。孝道不从大道理开始，从答应一声开始。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
