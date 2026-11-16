@@ -7634,5 +7634,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '545-qin-suo-hao',
+        num: '545',
+        title: '亲所好 · 力为具、谨为去',
+        subtitle: '《弟子规》入则孝第四段：亲所好，力为具',
+        path: 'lessons/545-qin-suo-hao/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第五课，入则孝第四段。原文「亲所好，力为具。亲所恶，谨为去。身有伤，贻亲忧。德有伤，贻亲羞。」讲两件事：父母喜欢的尽力备办，父母讨厌的小心避开；自己身上受伤，父母先忧愁，品行有亏，父母更羞愧。前一对顺着父母的心意，后一对护好自己的身心——孝不只是给吃给穿，还要不让父母操心、不让父母丢脸。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
