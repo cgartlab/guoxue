@@ -7816,5 +7816,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '558-bu-cong-rong',
+        num: '558',
+        title: '步从容 · 站走坐卧要端正（谨第四段）',
+        subtitle: '《弟子规》谨第四段：步从容，立端正',
+        path: 'lessons/558-bu-cong-rong/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第十八课，谨第四段。原文「步从容，立端正。揖深圆，拜恭敬。勿践阈，勿跛倚。勿箕踞，勿摇髀。」讲站走坐卧的姿势：走路从容、站得端正，作揖要深圆、行礼要恭敬；不踩门槛、不斜靠墙、不叉腿坐、不抖腿。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
