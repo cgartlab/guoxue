@@ -8068,5 +8068,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '576-yang-ren-e',
+        num: '576',
+        title: '扬人恶 · 不传人坏，肯劝人改（泛爱众第五段）',
+        subtitle: '《弟子规》泛爱众第五段：扬人恶，即是恶',
+        path: 'lessons/576-yang-ren-e/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第三十六课，泛爱众第五段。原文：「扬人恶，即是恶。疾之甚，祸且作。善相劝，德皆建。过不规，道两亏。」前两句讲到处宣扬别人的坏处，本身就是做坏事，恨得太狠，祸事就找上门；后两句讲见到好的互相勉励，双方的德行都立得住，有过错不规劝，两人的道义都亏损。合起来：扬恶招祸，规过成德。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
