@@ -7774,5 +7774,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '555-fan-chu-yan',
+        num: '555',
+        title: '信为先 · 开口不撒谎（信门开篇）',
+        subtitle: '《弟子规》信第一段：凡出言，信为先',
+        path: 'lessons/555-fan-chu-yan/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第十五课，信第一段（开篇）。原文「凡出言，信为先。诈与妄，奚可焉。」讲说话以守信为先：开口答应的事就要说到做到；骗人撒谎、瞎说胡说，怎么能行呢？上一门出则悌已收官，从这一课起开新的一门「信」。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
