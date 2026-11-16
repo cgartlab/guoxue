@@ -8054,5 +8054,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '575-ren-you-duan',
+        num: '575',
+        title: '人有短 · 不揭短不传私，多讲人好（泛爱众第四段）',
+        subtitle: '《弟子规》泛爱众第四段：人有短，切莫揭',
+        path: 'lessons/575-ren-you-duan/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第三十五课，泛爱众第四段。原文：「人有短，切莫揭。人有私，切莫说。道人善，即是善。人知之，愈思勉。」前两句讲别人有短处别当众揭，别人有私事别往外传；后两句讲多讲别人的好处，本身就是做好事，人家听见了会更想着往好里做。合起来：嘴上积德，揭短伤人，扬善养人。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
