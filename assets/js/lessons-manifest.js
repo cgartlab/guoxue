@@ -7704,5 +7704,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '550-zhang-zhe-xian',
+        num: '550',
+        title: '长者先 · 长幼有序、应对有礼',
+        subtitle: '《弟子规》出则悌第二段：或饮食，或坐走',
+        path: 'lessons/550-zhang-zhe-xian/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第十课，出则悌第二段。原文「或饮食，或坐走。长者先，幼者后。长呼人，即代叫。人不在，己即到。」讲日常起居里的长幼之序：吃饭、坐下、走路，先请长辈；长辈要叫谁，听见了就帮着传话；要找的人不在，就自己过去回一声。礼仪不在大场面，就在一顿饭、一步路、一句应答里。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
