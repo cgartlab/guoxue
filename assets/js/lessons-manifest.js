@@ -7718,5 +7718,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '551-cheng-zun-zhang',
+        num: '551',
+        title: '勿呼名 · 敬在称呼与进退',
+        subtitle: '《弟子规》出则悌第三段：称尊长，勿呼名',
+        path: 'lessons/551-cheng-zun-zhang/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第十一课，出则悌第三段。原文「称尊长，勿呼名。对尊长，勿见能。路遇长，疾趋揖。长无言，退恭立。」讲见了长辈怎么办：称呼要带称呼，不直呼其名；在长辈面前不卖弄本事、不抢话；路上遇见长辈，快步上前问好行礼；长辈没话说了，退到一旁恭敬站着。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
