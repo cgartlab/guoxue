@@ -7956,5 +7956,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '568-jian-ren-e',
+        num: '568',
+        title: '见人恶 · 照见自己，自己磨炼（信第五段）',
+        subtitle: '《弟子规》信第五段：见人恶，即内省',
+        path: 'lessons/568-jian-ren-e/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第二十八课，信第五段。原文：「见人恶，即内省。有则改，无加警。唯德学，唯才艺。不如人，当自砺。」前四句讲看见别人的坏处，先回头反省自己有没有，有的就改，没有也要加倍警惕；后四句讲要比的只有品德学问和才能技艺，这些不如别人，就该自己下功夫磨炼。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
