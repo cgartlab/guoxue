@@ -1,0 +1,236 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""build567: 以 566 为骨架，按行号替换文字生成第 567 课
+《弟子规·信》第四段：彼说长，此说短。不关己，莫闲管。见人善，即思齐。纵去远，以渐跻。
+只换文字，不动任何 HTML 标签；生成后校验行数与标签计数必须与 566 全等。"""
+import io, os
+
+ROOT = "C:/Users/Chenzhigang/WorkBuddy/国学课堂/网站"
+SRC = f"{ROOT}/lessons/566-shi-fei-yi/index.html"
+DST_DIR = f"{ROOT}/lessons/567-bei-shuo-chang"
+DST = f"{DST_DIR}/index.html"
+
+DESC = ('《弟子规》第二十七课，信第四段。原文：「彼说长，此说短。不关己，莫闲管。'
+        '见人善，即思齐。纵去远，以渐跻。」前四句讲别人议论是非的话不要去接、与自己无关的闲事不要去管；'
+        '后四句讲看见别人的好处就想着看齐，纵然相差很远，也能靠一点点努力慢慢赶上。')
+
+def _p(first, style_first=False):
+    st = ('padding-top:0;' if style_first else '') + 'text-align:left;text-indent:0;letter-spacing:0.06em;font-size:1.75rem;line-height:1.8;width:100%;max-width:none;'
+    st += 'margin:0' if style_first else 'margin:0.05em 0 0'
+    return '<p style="' + st + '">' + first + '</p>'
+
+def _r(chars):
+    return "".join('<ruby lang="zh-Hans">%s<rt>%s</rt></ruby>' % (c, p) for c, p in chars)
+
+RAW = (
+ _p(_r([("彼","bǐ"),("说","shuō"),("长","cháng")]) + "，" + _r([("此","cǐ"),("说","shuō"),("短","duǎn")]) + "。", True)
+ + _p(_r([("不","bù"),("关","guān"),("己","jǐ")]) + "，" + _r([("莫","mò"),("闲","xián"),("管","guǎn")]) + "。")
+ + _p(_r([("见","jiàn"),("人","rén"),("善","shàn")]) + "，" + _r([("即","jí"),("思","sī"),("齐","qí")]) + "。")
+ + _p(_r([("纵","zòng"),("去","qù"),("远","yuǎn")]) + "，" + _r([("以","yǐ"),("渐","jiàn"),("跻","jī")]) + "。")
+)
+
+NEW = {
+ 6: '<meta content="' + DESC + '" name="description"/>',
+ 7: '<meta content="彼说长，此说短；见人善，即思齐 · 弟子规课堂" property="og:title"/>',
+ 8: '<meta content="《弟子规》第二十七课：不传是非闲话，多看人长处。信第四段。" property="og:description"/>',
+ 10: '<meta content="https://guoxue.8023laozhanshi.cc/lessons/567-bei-shuo-chang/index.html" property="og:url"/>',
+ 11: '<link href="https://guoxue.8023laozhanshi.cc/lessons/567-bei-shuo-chang/index.html" rel="canonical"/>',
+ 12: '<title>信 · 彼说长，此说短，见人善，即思齐 ·《弟子规》国学问答 · 国学课堂</title>',
+
+ 52: ('<div class="slide active cover-slide" data-page="0" data-section="lecture"><div class="cover-ornament"></div>'
+      '<h2 class="ds-display">彼说长</h2><div class="cover-ornament"></div>'
+      '<p class="cover-subtitle">《弟子规》信第四段：见人善，即思齐</p>'
+      '<p class="cover-desc">耳朵要会挑。东家长、西家短，别人的闲话，与自己无关就别去凑；'
+      '看见别人的好处，就想着学过来；就算差得远，一天一点也能赶上。'
+      '一句话：少论人短，多学人善。</p><div class="cover-seal">信</div></div>'),
+
+ 54: ('<div class="slide" data-page="1" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span>'
+      '<h2 style="margin-bottom:6px;">原文 · 信第四段</h2>'
+      '<div class="ds-quote" style="margin:6px 0;padding:14px 16px 10px;line-height:1.6;">'),
+
+ 55: RAW,
+
+ 56: ('</div><p style="font-size:0.78rem;line-height:1.45;width:100%;max-width:none;margin-top:var(--ds-space-1)"><strong>通译</strong>：'
+      '<strong>别人说这个长、说那个短，议论别人的是非；与自己没有关系，就不要去多管。'
+      '看见别人的好处，就想着向他看齐；纵然相差很远，也能靠着一步一步的努力慢慢赶上。</strong></p>'
+      '<p style="font-size:0.78rem;line-height:1.45;width:100%;max-width:none"><strong>背景</strong>：'
+      '<strong>「长」「短」在这里指说人好坏、论人是非；「关」是关系；「己」是自己；「莫」是不要；'
+      '「闲管」是多管闲事；「善」是好处、长处；「即」是立刻；「思齐」是想向他看齐，「齐」是看齐、一样；'
+      '「纵」是纵然、即使；「去」是相差；「渐」是渐渐、一步一步；「跻」读 jī，是登、赶上。'
+      '这一段接着上一段，讲嘴巴和眼睛怎么用：嘴上不传是非，眼里多看人好处。</strong></p>'
+      '<p style="font-size:0.78rem;line-height:1.45;width:100%;max-width:none"><strong>小记</strong>：'
+      '<strong>彼说长，此说短；不关己，莫闲管；见人善，即思齐；纵去远，以渐跻。</strong></p></div>'),
+
+ 58: ('<div class="slide" data-page="2" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span>'
+      '<h2>总说 · 少论人短，多学人善</h2>'
+      '<p style="margin:0"><strong>先说「管住嘴上的闲话」</strong><br/>'
+      '① <strong>东家长、西家短，传来传去最伤人</strong><br/>'
+      '② <strong>与自己无关的事，不去搅和</strong><br/><br/>'
+      '<strong>一句话：不管闲事。</strong></p>'
+      '<p><strong>再说「用好眼里的榜样」</strong><br/>'
+      '① <strong>看见别人的好处，就想着学</strong><br/>'
+      '② <strong>差得远也不怕，一天一点赶上</strong><br/><br/>'
+      '<strong>一句话：见善思齐。</strong></p>'
+      '<p><strong>一句话看全段</strong><br/>'
+      '① <strong>上一段讲答应要慎、吐字要清，这一段讲不传闲话、多看人长处</strong><br/>'
+      '② <strong>嘴上少是非，眼里多榜样，人就往高处走</strong><br/><br/>'
+      '<strong>一句话：口不惹事，眼向好处。</strong></p></div>'),
+
+ 60: ('<div class="slide" data-page="3" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span>'
+      '<h2>彼说长，此说短；不关己，莫闲管</h2>'
+      '<p style="margin:0"><strong>先认字</strong><br/>'
+      '① <strong>长 cháng、短 duǎn：这里指说人好坏长短</strong><br/>'
+      '② <strong>关：关系；己：自己；莫：不要；闲管：多管闲事</strong><br/><br/>'
+      '<strong>一句话：说人是非的话，别接。</strong></p>'
+      '<p><strong>彼说长，此说短</strong><br/>'
+      '① <strong>张口就评这个人、那个人，最伤和气</strong><br/>'
+      '② <strong>一句闲话传三个人，就变了味</strong><br/><br/>'
+      '<strong>一句话：不接是非话。</strong></p>'
+      '<p><strong>不关己，莫闲管</strong><br/>'
+      '① <strong>与自己无关的争执，别去插一嘴</strong><br/>'
+      '② <strong>「莫闲管」不是不管该管的事，是别多事</strong><br/><br/>'
+      '<strong>一句话：不关己的，不掺和。</strong></p></div>'),
+
+ 62: ('<div class="slide" data-page="4" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span>'
+      '<h2>见人善，即思齐；纵去远，以渐跻</h2>'
+      '<p style="margin:0"><strong>先认字</strong><br/>'
+      '① <strong>善：好处、长处；即：立刻；思齐：想着向他看齐</strong><br/>'
+      '② <strong>纵：纵然、即使；去：相差；渐：一步一步；跻 jī：登、赶上</strong><br/><br/>'
+      '<strong>一句话：看见好样子就学。</strong></p>'
+      '<p><strong>见人善，即思齐</strong><br/>'
+      '① <strong>看见同学字写得好、题算得快，先想到学</strong><br/>'
+      '② <strong>学人长处不是丢人，是长本事</strong><br/><br/>'
+      '<strong>一句话：见好就学。</strong></p>'
+      '<p><strong>纵去远，以渐跻</strong><br/>'
+      '① <strong>差得远不要紧，怕的是不肯动</strong><br/>'
+      '② <strong>一天一点，慢慢就登上去</strong><br/><br/>'
+      '<strong>一句话：慢慢赶，赶得上。</strong></p></div>'),
+
+ 64: ('<div class="slide" data-page="5" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span>'
+      '<h2>两句合看 · 闲与齐</h2>'
+      '<p style="margin:0"><strong>前四句讲「不闲」</strong><br/>'
+      '① <strong>不接是非话</strong><br/>'
+      '② <strong>不管别人的闲事</strong><br/><br/>'
+      '<strong>一句话：嘴上干净。</strong></p>'
+      '<p><strong>后四句讲「思齐」</strong><br/>'
+      '① <strong>见人好处就学</strong><br/>'
+      '② <strong>差得远也一步步赶</strong><br/><br/>'
+      '<strong>一句话：眼里有样。</strong></p>'
+      '<p><strong>今天怎么做</strong><br/>'
+      '① <strong>同学背后议论人，你不接话、不传话</strong><br/>'
+      '② <strong>看见谁哪样好，回家就学着做一遍</strong><br/><br/>'
+      '<strong>一句话：不传是非，学人长处。</strong></p></div>'),
+
+ 66: ('<div class="slide" data-page="6" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span>'
+      '<h2>逐句解读 · 四句两两成对</h2>'
+      '<p style="margin:0"><strong>前四句：嘴巴要收</strong><br/>'
+      '① <strong>彼说长，此说短——说人是非的话不接</strong><br/>'
+      '② <strong>不关己，莫闲管——与自己无关的不掺和</strong><br/><br/>'
+      '<strong>一句话：收。</strong></p>'
+      '<p><strong>后四句：眼睛要亮</strong><br/>'
+      '① <strong>见人善，即思齐——见人好处就想学</strong><br/>'
+      '② <strong>纵去远，以渐跻——差得远也慢慢赶</strong><br/><br/>'
+      '<strong>一句话：齐。</strong></p>'
+      '<p><strong>一句口诀记住</strong><br/>'
+      '① <strong>别人的闲话不接，别人的闲事不掺</strong><br/>'
+      '② <strong>别人的好处就学，差得远就慢慢赶</strong><br/><br/>'
+      '<strong>一句话：不管闲话，学好样子。</strong></p></div>'),
+
+ 68: ('<div class="slide" data-page="7" data-section="lecture"><span class="ds-badge ds-badge--accent">讲义</span>'
+      '<h2>核心思想 · 彼说长，此说短。不关己，莫闲管。见人善，即思齐。纵去远，以渐跻。</h2>'
+      '<p>一句话，两层意思——</p>'
+      '<h3>"彼说长，此说短。不关己，莫闲管。见人善，即思齐。纵去远，以渐跻。"</h3>'),
+ 69: ('<p style="margin:var(--ds-space-1) 0 0"><strong>看表面：</strong>不接是非话、不管闲事；'
+      '见人好处就学，差得远慢慢赶。</p><p>📖 闲齐</p>'),
+ 70: ('<p style="margin:var(--ds-space-1) 0 0"><strong>看内里：</strong>嘴不惹是非，眼向人长处，人就长进。</p>'
+      '<p>💡 口眼</p>'),
+ 71: ('<p style="margin:var(--ds-space-1) 0 0"><strong>落点：</strong>彼说长，此说短；不关己，莫闲管；'
+      '见人善，即思齐；纵去远，以渐跻。</p><p>🌱 莫闲管，即思齐</p>'),
+ 72: '<p>这是「弟子规课堂」第二十七课：信第四段。</p></div>',
+
+ 102: ('<div class="slide" data-page="20" data-section="review"><span class="ds-badge ds-badge--accent">答疑解惑</span>'
+       '<h2>常见问题</h2>'
+       '<h3>❓ 为什么议论别人不能算「关心」？</h3>'
+       '<p><strong>因为说长短多半是背后议论，不是帮人。</strong><br/><br/>'
+       '① <strong>话传来传去就变味，最容易伤人</strong><br/>'
+       '② <strong>真想帮一个人，当面好好说</strong><br/>'
+       '③ <strong>记法：背后说人，一句也嫌多。</strong></p>'
+       '<h3>❓ 「不关己，莫闲管」是叫我别管别人的困难吗？</h3>'
+       '<p><strong>不是。不管的是闲事，该帮的忙要帮。</strong><br/><br/>'
+       '① <strong>该管的：同学摔倒、有人受欺负，要管</strong><br/>'
+       '② <strong>不该掺的：别人的私事、别人的吵架，别起哄</strong><br/>'
+       '③ <strong>记法：闲事不管，正事不躲。</strong></p>'
+       '<h3>❓ 「即思齐」的「齐」是什么意思？</h3>'
+       '<p><strong>是看齐、一样，不是嫉妒。</strong><br/><br/>'
+       '① <strong>见人好，先想「他是怎么做到的」</strong><br/>'
+       '② <strong>把别人的长处变成自己的，才叫齐</strong><br/>'
+       '③ <strong>记法：见好就学，别见好就气。</strong></p>'
+       '<h3>❓ 「以渐跻」的「跻」怎么讲？</h3>'
+       '<p><strong>读 jī，是登、赶上。</strong><br/><br/>'
+       '① <strong>纵是纵然，差得远也没关系</strong><br/>'
+       '② <strong>渐是一步一步，不怕慢，就怕站</strong><br/>'
+       '③ <strong>记法：一天进一点，慢慢就登上去。</strong></p></div>'),
+
+ 104: ('<div class="slide" data-page="21" data-section="review"><span class="ds-badge ds-badge--accent">答疑解惑</span>'
+       '<h2>生活应用</h2><p>这一课练三样本事——</p><p>📖 不接闲话</p>'),
+ 105: ('<p style="margin:var(--ds-space-1) 0 0"><strong>同学背后议论人，你不接话、不传话，转身做自己的事</strong>；'
+       '<strong>这就是「彼说长，此说短；不关己，莫闲管」</strong>。</p><p>💡 见好就学</p>'),
+ 106: ('<p style="margin:var(--ds-space-1) 0 0"><strong>看到谁字写得好、书读得熟，就问一句「你怎么练的」</strong>；'
+       '<strong>这就是「见人善，即思齐」</strong>。</p><p>🌱 不跟人比气</p>'),
+ 107: ('<p style="margin:var(--ds-space-1) 0 0"><strong>暂时不如人，不生气也不泄气，定个小目标天天练</strong>；'
+       '<strong>这就是「纵去远，以渐跻」</strong><br/><br/>'
+       '<strong>本课的落点：不管闲话，学好样子。</strong></p></div>'),
+
+ 109: ('<div class="slide" data-page="22" data-section="review"><span class="ds-badge ds-badge--accent">答疑解惑</span>'
+       '<h2>课程总结</h2><p>今天讲信第四段，接着说嘴巴，也说到眼睛。记牢：<strong>莫闲管，即思齐</strong>。</p>'
+       '<p style="text-align:center;margin:var(--ds-space-4) 0">彼说长，此说短。不关己，莫闲管。'
+       '见人善，即思齐。纵去远，以渐跻。</p><p>回顾本课要点:</p>'
+       '<p>信第四段 · 不管闲话学好样子。<strong>嘴收眼亮</strong>。</p>'
+       '<p>彼说长，此说短 · 说人是非的话不接。<strong>不传闲话</strong>。</p>'
+       '<p>不关己，莫闲管 · 无关的闲事不掺和。<strong>不惹是非</strong>。</p>'
+       '<p>见人善，即思齐 · 见人好处就想学。<strong>见好就学</strong>。</p>'
+       '<p>纵去远，以渐跻 · 差得远也慢慢赶。<strong>不怕慢就怕站</strong>。</p>'
+       '<p><strong>在全篇中的位置:</strong>信第四段；上一段（事非宜，勿轻诺）讲答应要慎、吐字要清，'
+       '这一段讲不传是非、多看人长处——先把嘴收住，再把眼抬高。</p><div class="ds-quote">'),
+ 111: '<p>彼说长，此说短。不关己，莫闲管。见人善，即思齐。纵去远，以渐跻。</p>',
+ 112: ('</div><p><strong>课后小挑战:</strong>① 说说「跻」怎么读、怎么讲。'
+       '② 今天听到别人议论同学，你不接一句话。'
+       '③ 找一个同学的长处，学着做一遍。</p>'
+       '<p><strong>把这一课记在心里:</strong><strong>彼说长，此说短；不关己，莫闲管；'
+       '见人善，即思齐；纵去远，以渐跻。</strong></p></div>'),
+
+ 119: '            "彼说长，此说短。不关己，莫闲管。见人善，即思齐。纵去远，以渐跻。"<br/>',
+
+ 127: "    window.GUOXUE_COURSE_ID = '567-bei-shuo-chang';",
+
+ # 页面注释
+ 59: '<!-- 4. 彼说长此说短·不关己莫闲管 -->',
+ 61: '<!-- 5. 见人善即思齐·纵去远以渐跻 -->',
+}
+
+QUIZ_LINES = [
+ "  {q: '1. 「彼说长，此说短」讲的是什么？', opts: ['议论别人的是非', '量东西的长短', '说话声音高低'], ans: 0, exp: '指说人好坏、论人是非'},",
+ "  {q: '2. 「不关己」的「己」是什么意思？', opts: ['自己', '已经', '记在心里'], ans: 0, exp: '己是自己'},",
+ "  {q: '3. 「莫闲管」的「莫」是什么意思？', opts: ['不要', '没有谁', '傍晚'], ans: 0, exp: '莫是不要'},",
+ "  {q: '4. 「莫闲管」要求我们怎样？', opts: ['与自己无关的闲事不掺和', '什么忙都不帮', '别人的事一概不理'], ans: 0, exp: '只管闲事，该帮的忙要帮'},",
+ "  {q: '5. 「见人善」的「善」是什么意思？', opts: ['好处、长处', '善良的人', '擅长'], ans: 0, exp: '善是好处、长处'},",
+ "  {q: '6. 「即思齐」的「思齐」是什么意思？', opts: ['想着向他看齐', '想念整齐', '思考整齐'], ans: 0, exp: '思齐＝想着看齐'},",
+ "  {q: '7. 「纵去远」的「纵」是什么意思？', opts: ['纵然、即使', '纵向', '放纵'], ans: 0, exp: '纵是纵然、即使'},",
+ "  {q: '8. 「以渐跻」的「跻」怎么读？', opts: ['jī', 'jì', 'qí'], ans: 0, exp: '跻读 jī，是登、赶上'},",
+ "  {q: '9. 「渐」在句中的意思？', opts: ['渐渐、一步一步', '浸泡', '突然'], ans: 0, exp: '渐是渐渐、一步一步'},",
+ "  {q: '10. 这一段总的讲什么？', opts: ['不传是非闲话，多看人长处并学着赶上', '怎么打听别人的事', '怎么跟人比高低'], ans: 0, exp: '不管闲话，学好样子'},",
+]
+for i, ln in enumerate(QUIZ_LINES):
+    NEW[130 + i] = ln
+
+if __name__ == "__main__":
+    src = io.open(SRC, "r", encoding="utf-8", newline="").read().split("\n")
+    buf = list(src)
+    for no, txt in NEW.items():
+        buf[no - 1] = txt
+    out = "\n".join(buf)
+    out = out.replace("566-shi-fei-yi", "567-bei-shuo-chang")
+    out = out.replace("yaoyue567", "yaoyue568")
+    os.makedirs(DST_DIR, exist_ok=True)
+    io.open(DST, "w", encoding="utf-8", newline="").write(out)
+    print("written:", DST, "lines:", len(buf), "src lines:", len(src))

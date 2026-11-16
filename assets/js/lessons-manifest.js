@@ -7942,5 +7942,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '567-bei-shuo-chang',
+        num: '567',
+        title: '彼说长 · 少论人短，多学人善（信第四段）',
+        subtitle: '《弟子规》信第四段：见人善，即思齐',
+        path: 'lessons/567-bei-shuo-chang/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第二十七课，信第四段。原文：「彼说长，此说短。不关己，莫闲管。见人善，即思齐。纵去远，以渐跻。」前四句讲别人议论是非的话不要去接、与自己无关的闲事不要去管；后四句讲看见别人的好处就想着看齐，纵然相差很远，也能靠一点点努力慢慢赶上。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
