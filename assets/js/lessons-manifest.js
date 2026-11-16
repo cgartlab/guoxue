@@ -7886,5 +7886,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '563-jie-ren-wu',
+        num: '563',
+        title: '借人物 · 借了就还，谨门收官（谨第九段）',
+        subtitle: '《弟子规》谨第九段：借人物，及时还',
+        path: 'lessons/563-jie-ren-wu/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第二十三课，谨第九段（收官）。原文「借人物，及时还。后有急，借不难。」借了别人的东西，用完及时归还；这样以后有急用再借，人家才愿意借给你。一个还字攒的是信用。谨门至此完结。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
