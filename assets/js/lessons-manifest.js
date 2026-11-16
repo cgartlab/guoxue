@@ -7984,5 +7984,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '570-wen-yu-kong',
+        num: '570',
+        title: '闻誉恐 · 夸我不飘，批我不恼（信第七段）',
+        subtitle: '《弟子规》信第七段：闻誉恐，闻过欣',
+        path: 'lessons/570-wen-yu-kong/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第三十课，信第七段。原文：「闻誉恐，闻过欣。直谅士，渐相亲。无心非，名为错。有心非，名为恶。」前四句讲听到称赞反而惶恐、听到批评反而欢喜，正直诚实的朋友就渐渐和你亲近；后四句讲不是存心做的过失叫「错」，存心做的坏事叫「恶」。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
