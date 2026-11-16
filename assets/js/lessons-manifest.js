@@ -7690,5 +7690,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '549-xiong-dao-you',
+        num: '549',
+        title: '兄道友 · 兄弟睦、孝在中',
+        subtitle: '《弟子规》出则悌第一段：兄道友，弟道恭',
+        path: 'lessons/549-xiong-dao-you/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第九课，出则悌第一段，也是出则悌一门开篇。原文「兄道友，弟道恭。兄弟睦，孝在中。财物轻，怨何生。言语忍，忿自泯。」讲兄弟姐妹怎么相处：哥哥爱护弟弟，弟弟尊敬哥哥；兄弟和睦，父母最安心，孝就在里面了。不为一支笔一块橡皮争，怨气就生不出来；气头上把话放软，火自然就下去了。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
