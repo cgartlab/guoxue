@@ -133,6 +133,27 @@ test.describe('付费墙 — 面包多解锁', () => {
     expect(isFree).toBe(false);
   });
 
+  test('弟子规课堂免费段末课(545):不弹窗,可直接学习', async ({ page }) => {
+    await page.goto(`${BASE}/lessons/545-qin-suo-hao/index.html`, { waitUntil: 'domcontentloaded' });
+
+    await expect(page.locator('.paywall-overlay--show')).toHaveCount(0);
+    await expect(page.locator('#page-indicator')).toHaveText('1 / 24');
+    await expect(page.locator('#quiz-0 .quiz-option').first()).toBeAttached();
+
+    const isFree = await page.evaluate(() => window.UNLOCK.isCourseFree('545-qin-suo-hao'));
+    expect(isFree).toBe(true);
+  });
+
+  test('弟子规课堂 546 课起付费:弹窗出现且引擎不初始化', async ({ page }) => {
+    await page.goto(`${BASE}/lessons/546-qin-ai-wo/index.html`, { waitUntil: 'domcontentloaded' });
+
+    await expect(page.locator('.paywall-overlay--show')).toBeVisible();
+    await expect(page.locator('#quiz-0 .quiz-option')).toHaveCount(0);
+
+    const isFree = await page.evaluate(() => window.UNLOCK.isCourseFree('546-qin-ai-wo'));
+    expect(isFree).toBe(false);
+  });
+
   test('输入订单号解锁成功:提示解锁码、localStorage 记录、刷新后不再弹窗且测验可渲染', async ({ page }) => {
     let captured = null;
     await page.route('**/api/redeem', async (route) => {

@@ -7648,5 +7648,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '546-qin-ai-wo',
+        num: '546',
+        title: '亲爱我 · 孝何难、孝方贤',
+        subtitle: '《弟子规》入则孝第五段：亲爱我，孝何难',
+        path: 'lessons/546-qin-ai-wo/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第六课，入则孝第五段。原文「亲爱我，孝何难。亲憎我，孝方贤。亲有过，谏使更。怡吾色，柔吾声。」讲两层：父母疼我，孝顺不算难；父母不疼我还能尽孝，才见修养。父母有了过错，做子女的要劝，但劝要有法子——脸色和缓、声音柔和，让父母听得进去、改得过来。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
