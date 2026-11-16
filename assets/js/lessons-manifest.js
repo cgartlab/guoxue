@@ -8082,5 +8082,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '577-qu-yu-fen-xiao',
+        num: '577',
+        title: '贵分晓 · 账要清，给多拿少（泛爱众第六段）',
+        subtitle: '《弟子规》泛爱众第六段：凡取与，贵分晓',
+        path: 'lessons/577-qu-yu-fen-xiao/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第三十七课，泛爱众第六段。原文：「凡取与，贵分晓。与宜多，取宜少。将加人，先问己。己不欲，即速已。」前两句讲拿和给要清清楚楚，给别人宁可多些，拿别人的宁可少些；后两句讲要把什么加到别人身上，先问自己愿不愿意，自己不愿意就赶紧停。合起来：取与分明，将心比心。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
