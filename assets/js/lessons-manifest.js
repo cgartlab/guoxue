@@ -7858,5 +7858,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '561-dou-nao-chang',
+        num: '561',
+        title: '斗闹场 · 远是非，讲礼貌（谨第七段）',
+        subtitle: '《弟子规》谨第七段：斗闹场，绝勿近',
+        path: 'lessons/561-dou-nao-chang/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第二十一课，谨第七段。原文「斗闹场，绝勿近。邪僻事，绝勿问。将入门，问孰存。将上堂，声必扬。」前四句讲远离是非：争吵打闹的场合绝不靠近，邪僻不正的事绝不打听；后四句讲进门有礼：进门先问有人在不在，上堂先出声让人知道。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
