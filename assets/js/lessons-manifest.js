@@ -7676,5 +7676,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '548-sang-san-nian',
+        num: '548',
+        title: '丧三年 · 事死者、如事生',
+        subtitle: '《弟子规》入则孝第七段：丧三年，常悲咽',
+        path: 'lessons/548-sang-san-nian/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第八课，入则孝第七段，也是入则孝一门收官。原文「丧三年，常悲咽。居处变，酒肉绝。丧尽礼，祭尽诚。事死者，如事生。」讲父母身后的事：守丧三年，想起父母就难过，日子过得简朴；办丧事礼数要做全，祭祀时心里要真，对待去世的父母像活着时一样。孝从生前一直走到身后。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
