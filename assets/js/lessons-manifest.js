@@ -7662,5 +7662,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '547-jian-bu-ru',
+        num: '547',
+        title: '谏不入 · 悦复谏、昼夜侍',
+        subtitle: '《弟子规》入则孝第六段：谏不入，悦复谏',
+        path: 'lessons/547-jian-bu-ru/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第七课，入则孝第六段。原文「谏不入，悦复谏。号泣随，挞无怨。亲有疾，药先尝。昼夜侍，不离床。」两层意思：父母一时听不进劝，别赌气走开，等他气顺了再来一次，急到哭、挨了打也不记恨；父母病了，先替他尝药，白天黑夜守在床边。孝到难处才见真。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
