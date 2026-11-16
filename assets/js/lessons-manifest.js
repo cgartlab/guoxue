@@ -7788,5 +7788,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '556-zhi-guan-fu',
+        num: '556',
+        title: '有定位 · 东西不乱放（谨第二段）',
+        subtitle: '《弟子规》谨第二段：置冠服，有定位',
+        path: 'lessons/556-zhi-guan-fu/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第十六课，谨第二段。原文「置冠服，有定位。勿乱顿，致污秽。」讲东西放好：帽子和衣服脱下来要放到固定的位置，不乱堆乱丢，免得弄脏弄坏。东西有自己的家，找起来快，也不会弄糟。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
