@@ -168,6 +168,7 @@ const targets = [
   ['561', 'lessons/561-dou-nao-chang/index.html'],
   ['562', 'lessons/562-ren-wen-shei/index.html'],
   ['563', 'lessons/563-jie-ren-wu/index.html'],
+  ['564', 'lessons/564-fan-chu-yan/index.html'],
 ];
 
 (async () => {

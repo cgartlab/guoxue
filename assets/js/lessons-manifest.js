@@ -7900,5 +7900,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '564-fan-chu-yan',
+        num: '564',
+        title: '凡出言 · 说话守信，说对话（信第一段）',
+        subtitle: '《弟子规》信第一段：凡出言，信为先',
+        path: 'lessons/564-fan-chu-yan/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第二十四课，信第一段（开篇）。原文「凡出言，信为先。诈与妄，奚可焉。话说多，不如少。惟其是，勿佞巧。」前四句讲开口先把信放在第一位，欺诈骗人的话怎么可以；后四句讲话不在多而在对，说话要实在，不花言巧语。信门开篇。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
