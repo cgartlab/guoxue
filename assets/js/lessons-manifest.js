@@ -7746,5 +7746,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '553-zun-zhang-qian',
+        num: '553',
+        title: '声要低 · 敬在声音与进退',
+        subtitle: '《弟子规》出则悌第五段：尊长前，声要低',
+        path: 'lessons/553-zun-zhang-qian/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第十三课，出则悌第五段。原文「尊长前，声要低。低不闻，却非宜。进必趋，退必迟。问起对，视勿移。」讲在长辈跟前怎么办：说话声音放低，但低到听不见也不合适；叫你就快些过去，退出来要慢；长辈问话，站起来答，目光看着长辈。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
