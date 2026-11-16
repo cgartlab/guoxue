@@ -8026,5 +8026,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '573-cai-da-zhe',
+        num: '573',
+        title: '才大者 · 本事大声望自大，服人不服嘴（泛爱众第二段）',
+        subtitle: '《弟子规》泛爱众第二段：才大者，望自大',
+        path: 'lessons/573-cai-da-zhe/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第三十三课，泛爱众第二段。原文：「才大者，望自大。人所服，非言大。」前两句讲才能大的人，声望自然就大，不用自己吹；后两句讲别人佩服你，靠的是真本事，不是话说得大。跟上一段「人所重，非貌高」连起来看：看人不看长相，也不听大话，要看德行和真本事。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
