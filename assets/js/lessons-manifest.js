@@ -7914,5 +7914,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '565-jian-qiao-yu',
+        num: '565',
+        title: '奸巧语 · 口要干净，话要留稳（信第二段）',
+        subtitle: '《弟子规》信第二段：奸巧语，秽污词',
+        path: 'lessons/565-jian-qiao-yu/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第二十五课，信第二段。原文「奸巧语，秽污词。市井气，切戒之。见未真，勿轻言。知未的，勿轻传。」前四句讲奸诈取巧的话、脏话粗话、粗俗习气，都要切切戒掉；后四句讲没看清的事不要随便说，没弄清的事不要随便传。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
