@@ -7844,5 +7844,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '560-zhi-xu-qi',
+        num: '560',
+        title: '执虚器 · 心里有敬，做事有稳（谨第六段）',
+        subtitle: '《弟子规》谨第六段：执虚器，如执盈',
+        path: 'lessons/560-zhi-xu-qi/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第二十课，谨第六段。原文「执虚器，如执盈。入虚室，如有人。事勿忙，忙多错。勿畏难，勿轻略。」前四句讲恭敬用心：空器皿也端得像满的一样小心，空屋子也像有人在一样守规矩；后四句讲做事态度：不慌不乱、不怕难、不马虎。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
