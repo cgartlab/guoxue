@@ -8012,5 +8012,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '572-fan-shi-ren',
+        num: '572',
+        title: '凡是人 · 人都要爱，重德不重貌（泛爱众第一段）',
+        subtitle: '《弟子规》泛爱众第一段：凡是人，皆须爱',
+        path: 'lessons/572-fan-shi-ren/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第三十二课，泛爱众第一段。原文：「凡是人，皆须爱。天同覆，地同载。行高者，名自高。人所重，非貌高。」前四句讲只要是人就该去爱，因为大家同顶一片天、同踩一块地；后四句讲品行高的人名声自然高，别人看重的是德行，不是相貌外表。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
