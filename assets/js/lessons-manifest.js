@@ -7998,5 +7998,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '571-guo-neng-gai',
+        num: '571',
+        title: '过能改 · 错了就改，别遮（信末段）',
+        subtitle: '《弟子规》信第八段：过能改，归于无',
+        path: 'lessons/571-guo-neng-gai/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第三十一课，信第八段（信门末段）。原文：「过能改，归于无。倘揜饰，增一辜。」前两句讲有了过错肯改，就像没有过错一样；后两句讲如果犯了错还遮盖掩饰，就等于又添了一条罪。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
