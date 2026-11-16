@@ -7970,5 +7970,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '569-ruo-yi-fu',
+        num: '569',
+        title: '若衣服 · 不慕吃穿，能受批评（信第六段）',
+        subtitle: '《弟子规》信第六段：若衣服，若饮食',
+        path: 'lessons/569-ruo-yi-fu/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第二十九课，信第六段。原文：「若衣服，若饮食。不如人，勿生戚。闻过怒，闻誉乐。损友来，益友却。」前四句讲穿的吃的比不上别人，不必忧愁难过；后四句讲一听批评就发怒、一听称赞就高兴，坏朋友就会凑上来，好朋友就会走开。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];

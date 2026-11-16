@@ -33,7 +33,7 @@ const TARGETS = [
     bad.forEach((b) => console.log(`   page ${b.i} (${b.sec}) 纵向+${b.over}px 横向+${b.wide}px`));
     await page.close();
   }
-  const a = all['568'], b = all['568'];
+  const a = all['568'], b = all['567'];
   console.log('\n逐页对照 (568 vs 567):');
   let same = true;
   for (let i = 0; i < Math.max(a.length, b.length); i++) {
