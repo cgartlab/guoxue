@@ -7928,5 +7928,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '566-shi-fei-yi',
+        num: '566',
+        title: '事非宜 · 诺要慎，话要清（信第三段）',
+        subtitle: '《弟子规》信第三段：事非宜，勿轻诺',
+        path: 'lessons/566-shi-fei-yi/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第二十六课，信第三段。原文：「事非宜，勿轻诺。苟轻诺，进退错。凡道字，重且舒。勿急疾，勿模糊。」前四句讲不合情理的事不要轻易答应，轻易答应了就会进退两难；后四句讲说话吐字要稳重舒缓，不要又急又快、含含糊糊。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
