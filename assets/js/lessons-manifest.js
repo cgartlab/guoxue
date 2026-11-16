@@ -8040,5 +8040,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '574-wu-chan-fu',
+        num: '574',
+        title: '勿谄富 · 看人不看钱，说话看时候（泛爱众第三段）',
+        subtitle: '《弟子规》泛爱众第三段：勿谄富，勿骄贫',
+        path: 'lessons/574-wu-chan-fu/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第三十四课，泛爱众第三段。原文：「勿谄富，勿骄贫。勿厌故，勿喜新。人不闲，勿事搅。人不安，勿话扰。」前两句讲不看钱待人：不巴结有钱的，不看轻穷的；不嫌弃旧人旧物，也不一味贪新。后两句讲找人要挑时候：人家正忙别拿事去搅，人家心里不安别拿话去烦。合起来：待人有分寸。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
