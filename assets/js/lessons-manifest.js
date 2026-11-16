@@ -7830,5 +7830,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '559-wu-jian-yu',
+        num: '559',
+        title: '勿践阈 · 姿势稳重，动作轻缓（谨第五段）',
+        subtitle: '《弟子规》谨第五段：勿践阈，勿跛倚',
+        path: 'lessons/559-wu-jian-yu/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第十九课，谨第五段。原文「勿践阈，勿跛倚。勿箕踞，勿摇髀。缓揭帘，勿有声。宽转弯，勿触棱。」前四句讲坐立规矩：不踩门槛、不斜靠墙、不叉腿坐、不抖腿；后四句讲做事轻缓：掀帘开门都轻手轻脚，转弯绕大弯不碰棱角。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
