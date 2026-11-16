@@ -7802,5 +7802,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '557-yi-gui-jie',
+        num: '557',
+        title: '衣贵洁 · 穿吃有度（谨第三段）',
+        subtitle: '《弟子规》谨第三段：衣贵洁，不贵华',
+        path: 'lessons/557-yi-gui-jie/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第十七课，谨第三段。原文「衣贵洁，不贵华。上循分，下称家。对饮食，勿拣择。食适可，勿过则。」讲穿衣吃饭的度：衣服干净就好不攀比，合乎身份与家境；吃饭不挑食，吃到合适就停，不暴饮暴食。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
