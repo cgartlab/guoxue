@@ -7872,5 +7872,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '562-ren-wen-shei',
+        num: '562',
+        title: '人问谁 · 说清楚，先征求（谨第八段）',
+        subtitle: '《弟子规》谨第八段：人问谁，对以名',
+        path: 'lessons/562-ren-wen-shei/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第二十二课，谨第八段。原文「人问谁，对以名。吾与我，不分明。用人物，须明求。倘不问，即为偷。」前四句讲报名姓：人家问是谁，要报出名字，光说「我」「吾」分不清；后四句讲用物有礼：用别人的东西要先明明白白请求，不问就拿，就跟偷一样。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
