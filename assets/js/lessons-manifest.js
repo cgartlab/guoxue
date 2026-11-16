@@ -7760,5 +7760,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '554-shi-zhu-fu',
+        num: '554',
+        title: '如事父 · 敬及诸父诸兄（出则悌收官）',
+        subtitle: '《弟子规》出则悌第六段：事诸父，如事父',
+        path: 'lessons/554-shi-zhu-fu/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第十四课，出则悌第六段（收官）。原文「事诸父，如事父。事诸兄，如事兄。」讲把敬放大一圈：对待叔叔伯伯这些长辈，像对待父亲一样；对待堂哥表哥这些兄长，像对待哥哥一样。家里的礼练熟了，带到门外，见谁都自然。出则悌至此完结。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
