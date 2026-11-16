@@ -7732,5 +7732,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '552-qi-xia-ma',
+        num: '552',
+        title: '百步余 · 敬在下车与陪坐',
+        subtitle: '《弟子规》出则悌第四段：骑下马，乘下车',
+        path: 'lessons/552-qi-xia-ma/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第十二课，出则悌第四段。原文「骑下马，乘下车。过犹待，百步余。长者立，幼勿坐。长者坐，命乃坐。」讲一路上的规矩：路上遇见长辈，骑马要下马、坐车要下车；长辈走过去了还要站着等；长辈站着，年纪小的不要先坐；长辈让你坐，你才坐。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
