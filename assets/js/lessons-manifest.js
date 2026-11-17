@@ -8194,5 +8194,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yulixuewen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '585-fang-shi-qing',
+        num: '585',
+        title: '房室清 · 地方干净字端正，字如其心（余力学文第四段）',
+        subtitle: '《弟子规》余力学文第四段：房室清，墙壁净',
+        path: 'lessons/585-fang-shi-qing/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第四十五课，余力学文第四段。原文：「房室清，墙壁净。几案洁，笔砚正。墨磨偏，心不端。字不敬，心先病。」前两句讲房间、墙壁、书桌、笔砚都收拾得干净端正；后两句讲磨墨磨歪了是心没在这儿，字写得潦草是心先出了毛病。合起来：地方干净，字才端正，心先要正。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yulixuewen',
+        tier: 'core',
+        featured: false
     }
 ];
