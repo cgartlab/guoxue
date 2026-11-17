@@ -8418,5 +8418,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '601-qing-dui-dan',
+        num: '601',
+        title: '二冬 · 清对淡，薄对浓（前段）',
+        subtitle: '《笠翁对韵》二冬其二前段：清对淡',
+        path: 'lessons/601-qing-dui-dan/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》二冬其二前段。原文：「清对淡，薄对浓。暮鼓对晨钟。山茶对石菊，烟锁对云封。」清对淡是同义相对，薄对浓是反义相对，薄念 bó；暮鼓晨钟是寺庙早晚报时，为了让上句收仄、下句收平才写成暮鼓对晨钟；山茶是花大色艳的名花，石菊是山石间的野菊；烟锁云封，拿人的动作写山的深静。三个韵脚：浓、钟、封，同押二冬。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
