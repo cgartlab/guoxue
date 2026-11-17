@@ -8110,5 +8110,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '579-shi-fu-ren',
+        num: '579',
+        title: '势服人 · 压得住嘴，压不住心（泛爱众末段）',
+        subtitle: '《弟子规》泛爱众末段：势服人，心不然',
+        path: 'lessons/579-shi-fu-ren/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第三十九课，泛爱众末段。原文：「势服人，心不然。理服人，方无言。」前两句讲靠权势、嗓门、人多人少压人，人家当面点头，心里并不服，势一没了照样不听；后两句讲把道理讲清楚，人家自己想通了，才真没话说。合起来：以势服人服一时，以理服人服一生。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
