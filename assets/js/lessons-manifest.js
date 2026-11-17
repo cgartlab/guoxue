@@ -8488,5 +8488,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '606-gao-huang-mie-xiang',
+        num: '606',
+        title: '二冬 · 高皇灭项凭三杰（其三末段）',
+        subtitle: '《笠翁对韵》二冬其三末段：高皇灭项凭三杰',
+        path: 'lessons/606-gao-huang-mie-xiang/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》二冬其三末段。原文：「高皇灭项凭三杰，虞帝承尧殛四凶。内苑佳人，满地风光愁不尽；边关过客，连天烟草憾无穷。」高皇是汉高祖刘邦，项是项羽，三杰是张良、萧何、韩信；虞帝是舜，承尧是接尧的位，殛念 jí 是惩处或流放，四凶指共工、驩兜、三苗、鲧。后两句一内一外：宫内佳人满眼好景却愁不尽，边关过客看野草连天却憾无穷。两个韵脚：凶、穷，同押二冬。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
