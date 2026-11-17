@@ -8334,5 +8334,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '595-shan-dui-hai',
+        num: '595',
+        title: '一东 · 山对海，华对嵩（其三前段）',
+        subtitle: '《笠翁对韵》一东其三前段：山对海',
+        path: 'lessons/595-shan-dui-hai/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》一东其三前段。原文：「山对海，华对嵩。四岳对三公。宫花对禁柳，塞雁对江龙。」山对海，西岳华山对中岳嵩山；四方诸侯之长对朝廷三公，四对三、官对官；宫里花对禁苑柳，塞上雁对江中龙，一上一下。三个韵脚：嵩、公、龙，同押一东。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
