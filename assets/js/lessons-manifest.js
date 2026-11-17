@@ -8166,5 +8166,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yulixuewen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '583-du-shu-fa-san-dao',
+        num: '583',
+        title: '读书法 · 心到眼到口到，一本读完再读下一本（余力学文第二段）',
+        subtitle: '《弟子规》余力学文第二段：读书法，有三到',
+        path: 'lessons/583-du-shu-fa-san-dao/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第四十三课，余力学文第二段。原文：「读书法，有三到。心眼口，信皆要。方读此，勿慕彼。此未终，彼勿起。」前两句讲读书的方法：心到、眼到、口到，三样都要紧；后两句讲手里这本没读完，别急着开另一本。合起来：读书要专心，一本一本读。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yulixuewen',
+        tier: 'core',
+        featured: false
     }
 ];
