@@ -8502,5 +8502,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '607-zhu-qi-jian',
+        num: '607',
+        title: '三江 · 朱漆槛，碧纱窗（其一中段）',
+        subtitle: '《笠翁对韵》三江其一中段：朱漆槛',
+        path: 'lessons/607-zhu-qi-jian/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》三江其一中段。原文：「朱漆槛，碧纱窗。舞调对歌腔。汉兴推马武，夏谏著尨逄。」朱漆是红漆，槛念 jiàn 指栏杆，碧是青绿色；舞调配歌腔，一个管身子一个管嗓子。汉兴指东汉中兴，功劳首推马武，云台二十八将之一；尨逄即关龙逄，念 lóng páng，夏桀时直谏被杀。三个韵脚：窗、腔、逄，同押三江。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
