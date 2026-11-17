@@ -8292,5 +8292,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '592-yun-ai-dai',
+        num: '592',
+        title: '一东 · 云叆叇，日曈曚（其二中段）',
+        subtitle: '《笠翁对韵》一东其二中段：云叆叇，日曈曚',
+        path: 'lessons/592-yun-ai-dai/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》一东其二中段。原文：「云叆叇，日曈曚。蜡屐对渔篷。过天星似箭，吐魄月如弓。」云厚日暗，涂蜡的木屐对渔船的篷，流星像箭对弯月像弓；箭和弓本来一套，比方也成对。句尾曚、篷、弓同属东韵。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
