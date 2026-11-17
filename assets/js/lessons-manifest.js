@@ -8250,5 +8250,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '589-yi-dong',
+        num: '589',
+        title: '一东 · 天对地，雨对风（上卷第一韵第一段）',
+        subtitle: '《笠翁对韵》一东第一段：天对地，雨对风',
+        path: 'lessons/589-yi-dong/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》一东第一段。原文：「天对地，雨对风。大陆对长空。山花对海树，赤日对苍穹。」天与地、雨与风、大陆与长空、山花与海树、赤日与苍穹，五组对句；句尾风、空、穹同属东韵，一口韵到底。学对仗，从一东开始。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
