@@ -8390,5 +8390,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '599-chui-diao-ke',
+        num: '599',
+        title: '二冬 · 垂钓客，荷锄翁（续）',
+        subtitle: '《笠翁对韵》二冬续：垂钓客',
+        path: 'lessons/599-chui-diao-ke/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》二冬续。原文：「垂钓客，荷锄翁。仙鹤对神龙。凤冠珠闪烁，螭带玉玲珑。」钓鱼的客对扛锄的老农（荷读 hè），仙鹤对神龙都是灵物，凤冠上珠光闪动，螭带上玉石玲珑。三个韵脚：翁、龙、珑，同押二冬。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
