@@ -8306,5 +8306,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '593-yi-lu-ke',
+        num: '593',
+        title: '一东 · 驿旅客逢梅子雨（其二后段）',
+        subtitle: '《笠翁对韵》一东其二后段：驿旅客逢梅子雨',
+        path: 'lessons/593-yi-lu-ke/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》一东其二后段。原文：「驿旅客逢梅子雨，池亭人挹藕花风。」赶路的人在驿站碰上梅雨，池边亭子里的人把荷花的香风舀过来；十字对十字，一苦一闲。上句「雨」是仄声不押，下句「风」押东韵。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
