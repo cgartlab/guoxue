@@ -8124,5 +8124,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '580-tong-shi-ren',
+        num: '580',
+        title: '同是人 · 人分几等，仁者稀少（亲仁第一段）',
+        subtitle: '《弟子规》亲仁第一段：同是人，类不齐',
+        path: 'lessons/580-tong-shi-ren/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第四十课，亲仁第一段。原文：「同是人，类不齐。流俗众，仁者希。果仁者，人多畏。言不讳，色不媚。」前两句讲一样是人，品类却不一样，随大流的人多、真正讲仁的人少；后两句讲真有仁德的人，人们敬重他——说话直不隐瞒，神色正不讨好。合起来：先认得出仁者，才谈得上亲近。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'qinren',
+        tier: 'core',
+        featured: false
     }
 ];

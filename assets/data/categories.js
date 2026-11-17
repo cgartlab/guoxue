@@ -203,5 +203,13 @@ window.GUOXUE_CATEGORIES = [
         description: '《弟子规》逐句精讲 · 先做人后学文',
         status: 'ready',
         order: 24
+    }    ,
+    {
+        key: 'qinren',
+        label: '亲仁课堂',
+        num: '25',
+        description: '《弟子规·亲仁》逐句精讲 · 先识人再择友',
+        status: 'ready',
+        order: 25
     }
 ];
