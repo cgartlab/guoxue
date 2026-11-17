@@ -8432,5 +8432,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '602-jin-han-dan',
+        num: '602',
+        title: '二冬 · 金菡萏，玉芙蓉（中段）',
+        subtitle: '《笠翁对韵》二冬其二中段：金菡萏',
+        path: 'lessons/602-jin-han-dan/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》二冬其二中段。原文：「金菡萏，玉芙蓉。绿绮对青锋。早汤先宿酒，晚食继朝饔。」菡萏念 hàn dàn，是荷花的别称，金菡萏对玉芙蓉就是金铸的荷对玉雕的荷；绿绮是司马相如的琴名，泛指名琴，青锋指宝剑，一琴一剑一文一武；早汤先宿酒是早起喝热汤解隔夜的酒，晚食继朝饔是晚饭接着早饭，古人一日两餐。三个韵脚：蓉、锋、饔，同押二冬。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
