@@ -8222,5 +8222,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yulixuewen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '587-fei-sheng-shu',
+        num: '587',
+        title: '非圣书 · 坏书别看，别放弃自己（《弟子规》全篇收官）',
+        subtitle: '《弟子规》余力学文末段：非圣书，屏勿视',
+        path: 'lessons/587-fei-sheng-shu/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第四十七课，余力学文末段，也是全篇最后一课。原文：「非圣书，屏勿视。蔽聪明，坏心志。勿自暴，勿自弃。圣与贤，可驯致。」前两句讲不是讲道理的好书就别看，它会蒙住聪明、败坏志向；后两句讲不要糟蹋自己、不要放弃自己，圣贤的境界是渐渐能到的。合起来：外面把好门，里面不认输。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yulixuewen',
+        tier: 'core',
+        featured: false
     }
 ];
