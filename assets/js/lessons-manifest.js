@@ -8348,5 +8348,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '596-qing-shu-dian',
+        num: '596',
+        title: '一东 · 清暑殿，广寒宫（其三后段）',
+        subtitle: '《笠翁对韵》一东其三后段：清暑殿',
+        path: 'lessons/596-qing-shu-dian/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》一东其三后段。原文：「清暑殿，广寒宫。拾翠对题红。」清暑殿是人间避暑的宫殿，广寒宫是月里嫦娥的宫殿，暑对寒、一地上一天上；拾翠是拾翠鸟羽毛，念 shí；题红是宫女在红叶上题诗顺水流出的故事，后指姻缘巧合。两个韵脚：宫、红，同押一东。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
