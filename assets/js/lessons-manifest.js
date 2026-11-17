@@ -8446,5 +8446,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '603-tang-ku-jin-qian',
+        num: '603',
+        title: '二冬 · 唐库金钱能化蝶（末段）',
+        subtitle: '《笠翁对韵》二冬其二末段：唐库金钱',
+        path: 'lessons/603-tang-ku-jin-qian/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》二冬其二末段。原文：「唐库金钱能化蝶，延津宝剑会成龙。巫峡浪传，云雨荒唐神女庙；岱宗遥望，儿孙罗列丈人峰。」唐库金钱化蝶、延津宝剑成龙是两件奇事；巫峡神女庙用宋玉《高唐赋》楚王梦神女、朝云暮雨的旧话，加「浪传」「荒唐」明说不足信；岱宗指泰山，丈人峰四周群峰罗列如儿孙。两个韵脚：龙、峰，同押二冬。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
