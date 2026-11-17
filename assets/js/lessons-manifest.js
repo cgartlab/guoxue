@@ -8376,5 +8376,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '598-chen-dui-wu',
+        num: '598',
+        title: '一东 · 晨对午，夏对冬（其四前段）',
+        subtitle: '《笠翁对韵》一东其四前段：晨对午',
+        path: 'lessons/598-chen-dui-wu/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》一东其四前段。原文：「晨对午，夏对冬。下饷对高舂。青春对白昼，古柏对苍松。」早晨对正午、夏天对冬天，是一天对一天、一年对一年；下饷是午后傍晚那顿饭，高舂是日落舂米的时辰，都是天快黑；青春指春天，对白天；古柏对苍松，都是常青老树。三个韵脚：冬、舂、松，同押一东。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
