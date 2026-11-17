@@ -8264,5 +8264,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '590-lei-yin-yin',
+        num: '590',
+        title: '一东 · 雷隐隐，雾蒙蒙（其一后四句）',
+        subtitle: '《笠翁对韵》一东其一后四句：雷隐隐，雾蒙蒙',
+        path: 'lessons/590-lei-yin-yin/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》一东其一后四句。原文：「雷隐隐，雾蒙蒙。日下对天中。风高秋月白，雨霁晚霞红。」前两句叠字写雷与雾，一听一看；日下对天中，日对天、下对中；秋月白对晚霞红，颜色对颜色。句尾蒙、中、红同属东韵。一东其一，至此讲完。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
