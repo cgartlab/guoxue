@@ -8362,5 +8362,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '597-bei-you-dang-feng',
+        num: '597',
+        title: '一东 · 北牖当风停夏扇（其三末段）',
+        subtitle: '《笠翁对韵》一东其三末段：北牖当风',
+        path: 'lessons/597-bei-you-dang-feng/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》一东其三末段。原文：「北牖当风停夏扇，南帘曝日省冬烘。鹤舞楼头，玉笛弄残仙子月；凤翔台上，紫箫吹断美人风。」北窗迎风，夏天省了扇子；南帘晒日，冬天省了烤火。鹤舞楼头用吹笛引鹤的旧话，凤翔台上用弄玉萧史吹箫引凤的故事。两个韵脚：烘、风，同押一东。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
