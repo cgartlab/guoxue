@@ -8278,5 +8278,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '591-he-dui-han',
+        num: '591',
+        title: '一东 · 河对汉，绿对红（其二前四句）',
+        subtitle: '《笠翁对韵》一东其二前四句：河对汉，绿对红',
+        path: 'lessons/591-he-dui-han/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》一东其二前四句。原文：「河对汉，绿对红。雨伯对雷公。烟楼对雪洞，月殿对天宫。」黄河对汉水，绿色对红色，雨神对雷神，烟雾里的楼阁对积雪的山洞，月宫对天宫。越往后越虚，一路从地上对到天上；句尾红、公、宫同属东韵。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
