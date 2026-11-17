@@ -8404,5 +8404,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '600-san-yuan-ji-di',
+        num: '600',
+        title: '二冬 · 三元及第才千顷（末段）',
+        subtitle: '《笠翁对韵》二冬末段：三元及第',
+        path: 'lessons/600-san-yuan-ji-di/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》二冬末段。原文：「三元及第才千顷，一品当朝禄万钟。花萼楼前，仙李盘根调国脉；沉香亭畔，娇杨擅宠起边风。」三元及第是乡试、会试、殿试都考第一，才千顷说才学像千顷良田；一品当朝是官居一品，禄万钟说俸禄极厚；花萼楼写李唐皇族根基深固、调理国脉，沉香亭写杨贵妃专宠、引出边地战火。两个韵脚：钟、风，同押二冬。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
