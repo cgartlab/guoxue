@@ -8180,5 +8180,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yulixuewen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '584-kuan-wei-xian',
+        num: '584',
+        title: '宽为限 · 期限放宽功夫抓紧，疑问记下来问明白（余力学文第三段）',
+        subtitle: '《弟子规》余力学文第三段：宽为限，紧用功',
+        path: 'lessons/584-kuan-wei-xian/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第四十四课，余力学文第三段。原文：「宽为限，紧用功。工夫到，滞塞通。心有疑，随札记。就人问，求确义。」前两句讲读书期限定宽、功夫抓紧，功夫下够了卡住的地方自然通开；后两句讲有疑问随手记下，去请教人问到确切的意思。合起来：功夫要够，疑问要问。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yulixuewen',
+        tier: 'core',
+        featured: false
     }
 ];
