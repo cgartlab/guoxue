@@ -8208,5 +8208,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yulixuewen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '586-lie-dian-ji',
+        num: '586',
+        title: '列典籍 · 书有定位用完归位，破了就补（余力学文第五段）',
+        subtitle: '《弟子规》余力学文第五段：列典籍，有定处',
+        path: 'lessons/586-lie-dian-ji/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第四十六课，余力学文第五段。原文：「列典籍，有定处。读看毕，还原处。虽有急，卷束齐。有缺坏，就补之。」前两句讲书要摆在固定的地方，读完看完放回原处；后两句讲即使有急事也要把书卷起捆整齐，书有破损就随手补好。合起来：书有定位，物有始终，还要爱惜。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yulixuewen',
+        tier: 'core',
+        featured: false
     }
 ];
