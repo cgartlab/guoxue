@@ -8320,5 +8320,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '594-mao-dian-cun-qian',
+        num: '594',
+        title: '一东 · 茅店村前，皓月坠林鸡唱韵（其二末段）',
+        subtitle: '《笠翁对韵》一东其二末段：茅店村前',
+        path: 'lessons/594-mao-dian-cun-qian/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》一东其二末段。原文：「茅店村前，皓月坠林鸡唱韵；板桥路上，青霜锁道马行踪。」茅草野店立在村口，月落林后、鸡叫成韵；板桥之上霜封住道路，只剩马蹄印。十一字对十一字，上句有声、下句无声。句尾「踪」押一东，一东其二至此讲完。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
