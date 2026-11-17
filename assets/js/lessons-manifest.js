@@ -8474,5 +8474,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '605-hua-zhuo-zhuo',
+        num: '605',
+        title: '二冬 · 花灼灼，草茸茸（其三中段）',
+        subtitle: '《笠翁对韵》二冬其三中段：花灼灼',
+        path: 'lessons/605-hua-zhuo-zhuo/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》二冬其三中段。原文：「花灼灼，草茸茸。浪蝶对狂蜂。数竿君子竹，五树大夫松。」灼灼是花开得红艳鲜亮，出自《诗经》「灼灼其华」；茸茸是草又细又软又密。浪蝶轻飘没定处，狂蜂乱撞急得很。竹子有节、中空、常青，故称君子竹；秦始皇封禅泰山遇雨避松，封这树为五大夫——五大夫是爵位名，不是五个大夫。三个韵脚：茸、蜂、松，同押二冬。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
