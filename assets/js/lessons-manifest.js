@@ -8096,5 +8096,19 @@ window.GUOXUE_LESSONS = [
         subject: 'dizigui',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '578-en-yu-bao',
+        num: '578',
+        title: '恩欲报 · 记恩放怨，对下不傲（泛爱众第七段）',
+        subtitle: '《弟子规》泛爱众第七段：恩欲报，怨欲忘',
+        path: 'lessons/578-en-yu-bao/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第三十八课，泛爱众第七段。原文：「恩欲报，怨欲忘。报怨短，报恩长。待婢仆，身贵端。虽贵端，慈而宽。」前两句讲心里怎么处理恩怨：人家给的好处记着还，心里的不满学着放；报怨越短越好，报恩越长越好。后两句讲对身边比自己弱的人：自己先站正，光正还不够，还要慈和宽厚。合起来：恩怨分明，宽严有度。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'dizigui',
+        tier: 'core',
+        featured: false
     }
 ];
