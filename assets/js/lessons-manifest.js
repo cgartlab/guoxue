@@ -8138,5 +8138,19 @@ window.GUOXUE_LESSONS = [
         subject: 'qinren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '581-neng-qin-ren',
+        num: '581',
+        title: '能亲仁 · 跟对了人天天长，跟错了人事事坏（亲仁第二段）',
+        subtitle: '《弟子规》亲仁第二段：能亲仁，无限好',
+        path: 'lessons/581-neng-qin-ren/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第四十一课，亲仁第二段。原文：「能亲仁，无限好。德日进，过日少。不亲仁，无限害。小人进，百事坏。」前两句讲肯跟仁者走近，好处说不完：德行天天长进，过错天天减少；后两句讲不肯亲近仁者，坏处也说不完：小人一个个凑上来，件件事都办坏。合起来：跟着谁，慢慢就成了谁。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'qinren',
+        tier: 'core',
+        featured: false
     }
 ];
