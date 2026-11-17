@@ -8460,5 +8460,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '604-fan-dui-jian',
+        num: '604',
+        title: '二冬 · 繁对简，叠对重（其三前段）',
+        subtitle: '《笠翁对韵》二冬其三前段：繁对简',
+        path: 'lessons/604-fan-dui-jian/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》二冬其三前段。原文：「繁对简，叠对重。意懒对心慵。仙翁对释伴，道范对儒宗。」繁对简说多寡，叠对重说层数，重念 chóng；意懒对心慵是同义相对，都是提不起劲；仙翁、道范属道家，释伴属佛家，儒宗属儒家，二十字里把三教摆齐。三个韵脚：重、慵、宗，同押二冬。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
