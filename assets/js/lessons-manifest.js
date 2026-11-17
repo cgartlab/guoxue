@@ -8236,5 +8236,19 @@ window.GUOXUE_LESSONS = [
         subject: 'yulixuewen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '588-li-weng-dui-yun',
+        num: '588',
+        title: '笠翁对韵 · 开篇简介（清·李渔，上下两卷三十韵）',
+        subtitle: '《笠翁对韵》开篇简介：天对地，雨对风',
+        path: 'lessons/588-li-weng-dui-yun/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》开篇简介。清·李渔（号笠翁）著，全书分上下两卷，每卷十五个韵部，共三十韵。这一课讲清楚：这本书是谁写的、为什么叫「笠翁对韵」、三十韵怎么排、小学生怎么用。一句话：学对仗、练语感、认韵部。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];

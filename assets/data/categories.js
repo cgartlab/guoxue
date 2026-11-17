@@ -219,5 +219,13 @@ window.GUOXUE_CATEGORIES = [
         description: '《弟子规·余力学文》逐句精讲 · 学与做两条腿',
         status: 'ready',
         order: 26
+    }    ,
+    {
+        key: 'liwengduiyun',
+        label: '笠翁对韵课堂',
+        num: '27',
+        description: '《笠翁对韵》三十韵精讲 · 学对仗、练语感',
+        status: 'ready',
+        order: 27
     }
 ];
