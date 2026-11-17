@@ -8152,5 +8152,19 @@ window.GUOXUE_LESSONS = [
         subject: 'qinren',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '582-bu-li-xing',
+        num: '582',
+        title: '不力行 · 光学不做越长越浮，学做两条腿（余力学文第一段）',
+        subtitle: '《弟子规》余力学文第一段：不力行，但学文',
+        path: 'lessons/582-bu-li-xing/index.html',
+        grade: '小学低中年级',
+        description: '《弟子规》第四十二课，余力学文第一段。原文：「不力行，但学文。长浮华，成何人。但力行，不学文。任己见，昧理真。」前两句讲光学书本不肯动手，只会越长越浮华，成了空架子；后两句讲只闷头做不肯读书，就会凭自己一点见解行事，辨不清真正的道理。合起来：学和做，两条腿走路。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'yulixuewen',
+        tier: 'core',
+        featured: false
     }
 ];

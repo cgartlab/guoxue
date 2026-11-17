@@ -211,5 +211,13 @@ window.GUOXUE_CATEGORIES = [
         description: '《弟子规·亲仁》逐句精讲 · 先识人再择友',
         status: 'ready',
         order: 25
+    }    ,
+    {
+        key: 'yulixuewen',
+        label: '余力学文课堂',
+        num: '26',
+        description: '《弟子规·余力学文》逐句精讲 · 学与做两条腿',
+        status: 'ready',
+        order: 26
     }
 ];
