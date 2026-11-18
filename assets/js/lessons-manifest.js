@@ -8614,5 +8614,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '615-zu-dui-hai',
+        num: '615',
+        title: '四支 · 俎对醢，赋对诗（其二开篇）',
+        subtitle: '《笠翁对韵》四支其二开篇：俎对醢',
+        path: 'lessons/615-zu-dui-hai/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》四支其二开篇。原文：「俎对醢，赋对诗。点漆对描脂。瑶簪对珠履，剑客对琴师。」俎念 zǔ 是古代祭祀宴享盛肉的长方形礼器，也指砧板，醢念 hǎi 是肉酱，一粗一细都是席上之物；赋是汉代铺陈叙事的长篇文体，诗短而含蓄，同为文体故能相对；点漆是用黑漆点画，古人也说「眼如点漆」夸眼睛黑亮，描脂是描画胭脂，一黑一红；瑶是美玉，瑶簪即玉簪，履念 lǚ 是鞋，珠履即缀珠的鞋，《史记》说春申君上客皆蹑珠履；剑客讲义，琴师讲雅，一武一文各有一手绝技。韵脚诗、脂、师，同押四支。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
