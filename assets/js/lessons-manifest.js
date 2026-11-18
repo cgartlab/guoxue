@@ -8656,5 +8656,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '618-zhen-dui-zan',
+        num: '618',
+        title: '四支 · 箴对赞，缶对卮（其三开篇）',
+        subtitle: '《笠翁对韵》四支其三开篇：箴对赞',
+        path: 'lessons/618-zhen-dui-zan/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》四支其三开篇。原文：「箴对赞，缶对卮。萤炤对蚕丝。轻裾对长袖，瑞草对灵芝。」箴念 zhēn 是古代劝诫之文，专挑毛病劝人改过，《虞箴》即是；赞念 zàn 是称颂之文，多写在画像后面，一劝一颂正相反。缶念 fǒu 是大肚小口的瓦器，可盛酒浆也能敲打，《史记》载蔺相如逼秦王击缶；卮念 zhī 是圆形酒器，缶粗卮精。萤炤的炤同照，即萤火虫之光，车胤家贫囊萤夜读；蚕丝是蚕吐之丝，一光一线，都细小。轻裾的裾念 jū 是衣襟，也泛指衣袖，轻裾写舞姿，长袖即长袖善舞之袖。瑞草是吉祥之草的总名，朱草、蓂荚都算，灵芝是其中一种，属总名对一种。韵脚卮、丝、芝，同押四支。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
