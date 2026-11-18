@@ -8628,5 +8628,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '616-gu-jiu-jia',
+        num: '616',
+        title: '四支 · 沽酒价，买山资（其二中段）',
+        subtitle: '《笠翁对韵》四支其二中段：沽酒价',
+        path: 'lessons/616-gu-jiu-jia/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》四支其二中段。原文：「沽酒价，买山资。国色对仙姿。晚霞明似锦，春雨细如丝。」沽念 gū，是买也作卖，沽酒即打酒；买山资用《世说新语》支道林托人向深公买岇山隐居、深公答「未闻巢由买山而隐」的典故，后世指归隐生活的本钱，一壶酒的钱对一座山的钱，一小一大；国色是一国之中最美的容貌，仙姿是超凡脱俗的姿态，一间一天；晚霞明似锦以彩色丝织品比喻霞光之亮，春雨细如丝以蚕丝比喻雨之细，「似」「如」两个比喻字相对，一写天上、一写地上。韵脚资、姿、丝，同押四支。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
