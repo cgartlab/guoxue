@@ -8642,5 +8642,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '617-liu-ban-chang-di',
+        num: '617',
+        title: '四支 · 柳绊长堤千万树（其二末段）',
+        subtitle: '《笠翁对韵》四支其二末段：柳绊长堤',
+        path: 'lessons/617-liu-ban-chang-di/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》四支其二末段。原文：「柳绊长堤千万树，花横野寺两三枝。紫盖黄旗，天象预占江左地；青袍白马，童谣终应寿阳儿。」绊是牵住、缠住，柳条低垂像被堤岸拉住；千万树对两三枝是多对少，长堤繁盛对野寺荒凉。紫盖是紫色车盖、黄旗是黄色旗帜，都是帝王仪仗与祥瑞之气；占念 zhān 是占卜望气，传说秦始皇时望气者称东南有天子气，后来晋室南渡在建康建东晋，应了此兆；江左即江东，今江南一带。青袍白马讲梁时童谣「青丝白马寿阳来」，降将侯景镇寿阳，骑白马、青丝为缰、部众青袍，攻破建康，童谣终应，应念 yìng。全段以典故对典故：颜色对颜色、器物对器物、征兆对征兆、地名对人名。韵脚枝、儿，同押四支，四支全韵到此讲完。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
