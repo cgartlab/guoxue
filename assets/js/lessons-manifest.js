@@ -8544,5 +8544,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '610-deng-shan-shan',
+        num: '610',
+        title: '三江 · 灯闪闪，月幢幢（其二中段）',
+        subtitle: '《笠翁对韵》三江其二中段：灯闪闪',
+        path: 'lessons/610-deng-shan-shan/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》三江其二中段。原文：「灯闪闪，月幢幢。揽辔对飞艎。柳堤驰骏马，花院吠村尨。」灯闪闪是烛火被风吹得忽明忽暗，月幢幢的幢念 chuáng，指月影朦胧摇晃，不读 zhuàng；辔念 pèi 是马缰绳，揽辔即挽缰待发，艎念 huáng 是船，飞艎即快船；吠念 fèi 专指狗叫，尨念 máng 指多毛的狗（上一课人名「尨逄」读 lóng）。韵脚幢、艎、尨，同押三江。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
