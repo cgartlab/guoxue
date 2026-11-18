@@ -8516,5 +8516,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '608-kua-feng-deng-tai',
+        num: '608',
+        title: '三江 · 跨凤登台，斩蛇当道（其末段）',
+        subtitle: '《笠翁对韵》三江其一末段：跨凤登台',
+        path: 'lessons/608-kua-feng-deng-tai/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》三江其一末段。原文：「四收列国群王服，三筑高城众敌降。跨凤登台，潇洒仙姬秦弄玉；斩蛇当道，英雄天子汉刘邦。」四收列国指北宋大将曹彬平定后蜀、南汉、南唐、北汉，不妄杀故人心悦服；三筑高城指唐中宗时张仁愿筑中东西三座受降城，突厥不敢过山放牧，降念 xiáng。弄玉是秦穆公之女，嫁萧史，凤凰台吹箫乘凤飞去；刘邦醉中斩白蛇，赤帝子斩白帝子。韵脚降、邦，同押三江。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
