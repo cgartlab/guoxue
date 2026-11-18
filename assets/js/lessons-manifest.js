@@ -8600,5 +8600,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '614-hua-jie-duo-jin',
+        num: '614',
+        title: '四支 · 几处花街新夺锦（其一末段）',
+        subtitle: '《笠翁对韵》四支其一末段：花街夺锦',
+        path: 'lessons/614-hua-jie-duo-jin/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》四支其一末段。原文：「几处花街新夺锦，有人香径淡凝脂。万里烽烟，战士边头争保塞；一犁膏雨，农夫村外尽乘时。」夺锦用武则天游洛阳龙门、命群臣赋诗赐锦袍、宋之问诗成夺袍的典故，后世以夺锦、夺袍指诗文夺魁；花街是落花铺地的闹市，香径是落花铺的小路；凝脂出自《诗经》「肤如凝脂」，淡凝脂即薄施脂粉。万里烽烟指边关报警的烟火，塞念 sài 指关塞，保塞即守住边关，一个争字写出士气；膏雨是像油一样滋润的及时雨，一犁指雨透一犁深，乘时念 chéng shí 即趁着农时，尽念 jìn 是全、都。韵脚脂、时，同押四支，四支其一到此讲完。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
