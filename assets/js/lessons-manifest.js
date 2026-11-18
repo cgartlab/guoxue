@@ -8586,5 +8586,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '613-wu-se-bi-shi-xiang-ci',
+        num: '613',
+        title: '四支 · 五色笔，十香词（其一中段）',
+        subtitle: '《笠翁对韵》四支其一中段：五色笔',
+        path: 'lessons/613-wu-se-bi-shi-xiang-ci/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》四支其一中段。原文：「五色笔，十香词。泼墨对传卮。神奇韩干画，雄浑李陵诗。」五色笔用南朝梁江淹梦见郭璞讨还五色笔、此后才尽的典故，后世以「五色笔」「梦笔生花」夸人文采；十香词相传为辽代皇后萧观音所作，一首写一香，古人评「艳而工」。泼墨是中国水墨画的一种画法，相传唐代王洽醉后泼墨成山水；卮念 zhī 是古代酒器，传卮即依次递杯饮酒。韩干念 Hán Gàn，唐代画马名家，以御马房真马为师，杜甫赞其「画马穷殊相」，唐人笔记更有画马夜里不见的传说，故称神奇。李陵是汉代李广之孙，《文选》所收《与苏武诗》气沉力厚，后人评为雄浑。韵脚词、卮、诗，同押四支。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
