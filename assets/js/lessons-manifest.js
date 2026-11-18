@@ -8558,5 +8558,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '611-jiu-yun-wei-tuo',
+        num: '611',
+        title: '三江 · 酒晕微酡，泪弹斑竹（其二末段）',
+        subtitle: '《笠翁对韵》三江其二末段：酒晕微酡',
+        path: 'lessons/611-jiu-yun-wei-tuo/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》三江其二末段。原文：「酒晕微酡琼杏颊，香尘浅印玉莲双。诗写丹枫，韩女幽怀流御水；泪弹斑竹，舜妃遗憾积湘江。」晕念 yùn 是脸上红晕，酡念 tuó 指酒后微红，琼杏颊形容白里透红；香尘浅印玉莲双写女子走过留下浅淡脚印，玉莲比双足。韩女是唐宫女韩氏红叶题诗、随御沟流出的故事（《云溪友议》）；斑竹是娥皇女英哭舜、泪洒竹上成斑。韵脚双、江，同押三江，三江到此讲完。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
