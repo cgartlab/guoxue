@@ -8530,5 +8530,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '609-yan-dui-mao',
+        num: '609',
+        title: '三江 · 颜对貌，像对庞（其二开篇）',
+        subtitle: '《笠翁对韵》三江其二开篇：颜对貌',
+        path: 'lessons/609-yan-dui-mao/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》三江其二开篇。原文：「颜对貌，像对庞。步辇对徒杠。停针对搁竺，意懒对心降。」颜本指眉目之间，貌指整张脸，像指形貌，庞是面庞；步辇念 niǎn，是人抬的轿子，徒杠念 gāng，是只容人步行的小木桥；停针是女子放下针线，搁竺即搁杼、放下织布梭；心降的降念 xiáng，同祥，出自《诗经》「我心则降」。韵脚庞、杠、降，同押三江。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
