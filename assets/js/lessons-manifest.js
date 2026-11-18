@@ -8572,5 +8572,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '612-quan-dui-shi',
+        num: '612',
+        title: '四支 · 泉对石，干对枝（其一开篇）',
+        subtitle: '《笠翁对韵》四支其一开篇：泉对石',
+        path: 'lessons/612-quan-dui-shi/index.html',
+        grade: '小学低中年级',
+        description: '《笠翁对韵》四支其一开篇。原文：「泉对石，干对枝。吹竹对弹丝。山亭对水榭，鹦鹉对鸬鹚。」三江讲完进四支。泉对石是水与石，干读 gàn 指主干，枝是分杈；吹竹是箫笛一类竹管乐器，弹丝是琴瑟一类丝弦乐器，合称「丝竹」；山亭有顶无墙多在山，水榭念 xiè 临水敞开；鹦鹉会学舌，鸬鹚念 lú cí 是潜水捕鱼的鱼鹰。五副对全是同类相对，正是对韵的根本规矩。韵脚枝、丝、鹚，同押四支。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
