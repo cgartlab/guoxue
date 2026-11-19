@@ -36,3 +36,6 @@ tmp_*
 deploy_*.ps1
 .trash/
 .playwright/
+
+# PR patrol state (本地运行状态，不入库)
+.pr-patrol-state.json
