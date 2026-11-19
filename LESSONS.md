@@ -76,3 +76,11 @@
 
 ### token 覆盖 + skip links
 - 失误：token 覆盖不完整、缺少 skip links → 规则：完整 token 覆盖 + skip links（commit b52b6d6）
+
+## 加新课
+
+### manifest 的 num 必须写字符串
+- 失误：新增条目写成 `num: 652,`（数字）→ 首页 `(a.num || "").localeCompare is not a function` 报错，课程卡片 0 个、三个端到端测试全挂 → 规则：`num` 一律写引号，`num: '652',`（commit e295bc55c0）
+
+### 讲义页行数是版面硬约束
+- 失误：新增课的 p3–p6 按「3 段、每段 3–4 条」写成长句，scrollHeight 759–788，页底最后一行被裁 → 规则：每页三段、段内 3/3/2 条（合计 17 行）时 scrollHeight 恰好 730，与既有课件一致；730 减去 clientHeight 678 的 52px 是底部 padding，不算裁切，超过 730 才是真裁
