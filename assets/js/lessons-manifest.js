@@ -9426,5 +9426,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        num: '673',
+        id: '673-lin-du-bu',
+        title: '对韵 · 麟独步，鹤孤栖（瑞兽与山水）',
+        subtitle: '麟鹤熊罴：瑞兽与山水',
+        path: 'lessons/673-lin-du-bu/index.html',
+        grade: '小学低中年级',
+        description: '对韵段，原文：「麟独步，鹤孤栖。虎豹对熊罴。花开红锦绣，水漾碧琉璃。」麟为仁兽，有角而不用，《春秋》哀公十四年西狩获麟，孔子叹「吾道穷矣」；鹤性孤高，宋林逋隐居孤山，梅妻鹤子。罴读pí，即大熊，《诗经·斯干》「维熊维罴，男子之祥」，《尚书·牧誓》「如熊如罴」以比勇士。后四句见《声律启蒙》上卷四支其二。锦为有文彩之丝织品，绣为针刺成文；琉璃为古代烧制之有色玻璃，碧琉璃谓青绿透亮。前二句一独一群，后二句一静一动、一红一碧。落点：各有各的伴。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
