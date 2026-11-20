@@ -9384,5 +9384,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        num: '670',
+        id: '670-feng-xi-xi',
+        title: '十四盐 · 风飁飁，雨绵绵（续段）',
+        subtitle: '十四盐续段：风飁飁，雨绵绵',
+        path: 'lessons/670-feng-xi-xi/index.html',
+        grade: '小学低中年级',
+        description: '十四盐续段，原文：「风飁飁，雨绵绵。李苦对瓜甜。画堂施锦帐，酒市舞青帘。」飁读 xí，飁飁为大风之声，与「凉风习习」的习习（微风和煦）正相反，此字冷僻今已少用；绵绵谓雨细微而连续不断。李苦指李子味涩，兼含王戎「道边苦李」之典：王戎七岁与群儿游，见道边李树多子折枝，诸儿竞走取之，戎独不动，曰树在道边而多子此必苦李，取之信然。画堂本汉代宫中彩绘殿堂，后泛指华丽堂舍；施为张挂铺开；锦帐即锦制帷帐。酒市为古代城中卖酒之所，亦指酒店；青帘即酒旗幌子，以青布为之，青布价廉而显眼，风中飘舞，不待吆喝而招客，后遂为酒店代称。落点：风雨照常，日子照过。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
