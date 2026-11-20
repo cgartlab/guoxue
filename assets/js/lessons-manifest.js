@@ -9412,5 +9412,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        num: '672',
+        id: '672-zhu-dui-yu',
+        title: '对韵 · 珠对玉，璧对圭（珍宝与仪仗）',
+        subtitle: '珠玉璧圭：珍宝与仪仗',
+        path: 'lessons/672-zhu-dui-yu/index.html',
+        grade: '小学低中年级',
+        description: '对韵段，原文：「珠对玉，璧对圭。蚁阵对蜂衙。南山对北塞，凤辇对龙旂。」珠是蚌里结的圆珠，玉是山里出的美石，《礼记·聘义》「君子比德于玉」。璧扁圆中孔，《周礼》「苍璧礼天」，用以祭天；圭上尖下方，诸侯朝见天子所执，形不同则用不同。蚁阵谓蚂蚁列队如兵阵，蜂衙谓蜜蜂早晚聚集簇拥蜂王，如属吏到衙门参见长官，衙读yá，二语见《声律启蒙》六麻「松对柏，缕对麻，蚁阵对蜂衙」。南山多指终南山，长安城南，隐者所居；北塞即北方边塞，塞读sài，一安一险。凤辇为饰凤之车，辇读niǎn，多皇后所乘；旂读qí，画交龙垂铃之旗，凤对龙、辇对旂，同为仪仗。落点：各有其形，各有其用。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
