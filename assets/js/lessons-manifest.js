@@ -9482,5 +9482,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        num: '677',
+        id: '677-chao-yan-sai-hong',
+        title: '对韵 · 春燕秋鸿，泰山沧海（守时与无常）',
+        subtitle: '燕鸿砺尘：守时与无常',
+        path: 'lessons/677-chao-yan-sai-hong/index.html',
+        grade: '小学低中年级',
+        description: '对韵段，原文：「巢燕三春尝唤友，塞鸿八月始来宾。古往今来，谁见泰山曾作砺；天长地久，人传沧海几扬尘。」巢燕为檐下筑巢之燕，三春指孟春仲春季春，尝读cháng为曾经常常，唤友出《诗经·小雅·伐木》「嘤其鸣矣，求其友声」；塞鸿为边塞南飞之雁，塞读sài，八月始来宾本《礼记·月令》仲秋之月鸿雁来，宾谓把雁当守礼远客。砺读lì为磨刀石，泰山作砺出《史记·高祖功臣侯者年表》封爵之誓「使河如带，泰山若厉」，言纵使黄河细如衣带、泰山磨成砺石，封国亦不绝；沧海扬尘出《神仙传》，麻姑自言已见东海三为桑田。前二句写候鸟守时，后二句写时间无常。接676课，同属《笠翁对韵》十一真第一段。落点：天地也会老，人只争朝夕。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
