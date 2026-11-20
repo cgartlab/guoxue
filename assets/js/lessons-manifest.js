@@ -9468,5 +9468,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        num: '676',
+        id: '676-luo-yue-sou',
+        title: '对韵 · 萝月葛天，金埒玉楼（隐者与繁华）',
+        subtitle: '萝葛金玉：隐者与繁华',
+        path: 'lessons/676-luo-yue-sou/index.html',
+        grade: '小学低中年级',
+        description: '对韵段，原文：「萝月叟，葛天民。国宝对家珍。草迎金埒马，花醉玉楼人。」萝月谓藤萝间月色，萝月叟指山居隐逸之老翁；葛天民谓葛天氏之民，葛天氏为上古帝王，其民淳朴自在，陶渊明《五柳先生传》「无怀氏之民欤？葛天氏之民欤？」国宝谓一国所宝在贤才，《礼记·大学》「楚国无以为宝，惟善以为宝」；家珍谓一家相传之宝。金埒读jīn liè，埒为矮墙界沟，《世说新语·汰侈》载晋王济好马射，买地作埒，编钱匝地竟埒，时人号曰金沟，喻豪奢马场；玉楼为华美楼阁。前二句写清，中一句写宝，后二句写艳。接675课，同属《声律启蒙》十一真第一段。落点：宝在贤人，不在金玉。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
