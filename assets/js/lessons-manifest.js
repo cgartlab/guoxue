@@ -9398,5 +9398,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        num: '671',
+        id: '671-heng-shuo-fu-shi',
+        title: '十四盐 · 横槊赋诗传孟德（续段）',
+        subtitle: '十四盐续段：横槊赋诗传孟德',
+        path: 'lessons/671-heng-shuo-fu-shi/index.html',
+        grade: '小学低中年级',
+        description: '十四盐续段，原文：「横槊赋诗传孟德，引壶酌酒尚陶潜。两曜迭明，日东生而月西出；五行式序，水下润而火上炎。」槊读shuò，长矛，横槊谓横端长矛；语出苏轼《赤壁赋》「酾酒临江，横槊赋诗，固一世之雄也」，史书未载横矛作诗一幕，画面为苏轼所补。曹操字孟德，所赋即《短歌行》「对酒当歌，人生几何」；传谓流传。引壶酌酒出陶潜《归去来兮辞》「引壶觞以自酌，眄庭柯以怡颜」，尚谓推崇。两曜指日月，曜读yào，本义日光；迭读dié，谓轮流交替；《礼记·礼器》「大明生于东，月生于西」。五行谓金木水火土，行读xíng；式序谓按法度次序各尽其职；《尚书·洪范》「水曰润下，火曰炎上」，水往下渗润其根，火往上腾炎其天。落点：各安其位，各走其道。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
