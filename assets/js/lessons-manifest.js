@@ -9370,5 +9370,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        num: '669',
+        id: '669-bei-dui-le',
+        title: '十四盐 · 悲对乐，爱对嫌（开篇）',
+        subtitle: '十四盐开篇：悲对乐，爱对嫌',
+        path: 'lessons/669-bei-dui-le/index.html',
+        grade: '小学低中年级',
+        description: '十四盐开篇，原文：「悲对乐，爱对嫌。玉兔对银蟾。醉侯对诗史，眼底对眉尖。」悲与乐是情绪两头，爱与嫌是亲疏两头，皆为反义相对。玉兔、银蟾同指月亮，一兽一虫，玉对银是颜色，兔对蟾是物类，字面各各不同，故不算死合掌；意思可以近，字面必须远。醉侯指刘伶，竹林七贤之一，嗜酒，常乘鹿车携一壶酒，使人荷锸相随，曰死便埋我，唐皮日休《夏景冲澹偶然作》有「他年谒帝言何事，请赠刘伶作醉侯」。诗史指杜甫，其诗善陈时事，唐人孟棨《本事诗》称为诗史。眼底即眼前，眉尖即眉头，李清照「才下眉头，却上心头」。落点：会找反的，还得会找近的。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
