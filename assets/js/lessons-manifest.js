@@ -9706,5 +9706,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        num: '693',
+        id: '693-bei-dui-zhang',
+        title: '对韵 · 卑长季昆，永巷长门（称呼与地方）',
+        subtitle: '卑长季昆：称呼与地方',
+        path: 'lessons/693-bei-dui-zhang/index.html',
+        grade: '小学低中年级',
+        description: '对韵段，原文：「卑对长，季对昆。永巷对长门。山亭对水阁，旅舍对军屯。」此段见《笠翁对韵》上卷十三元其一开篇，接692课十二文收尾之后，是新一章的开头。卑对长：卑是地位低微，长是年长位高，读 zhǎng，不读 cháng。季对昆：季是兄弟排行最小的（伯仲叔季），昆是哥哥。永巷对长门：永巷是宫中长巷，《史记·吕太后本纪》载吕后把戚夫人囚在永巷；长门是汉宫名，汉武帝陈皇后失宠后幽居长门宫，请司马相如作《长门赋》。两处都是失宠人所居，所以成对。山亭对水阁：山亭是山上的亭子，水阁是临水的楼阁，都是园林建筑。旅舍对军屯：旅舍是旅店，军屯是军队驻扎屯田之地，一民一兵。全段从称呼讲到地方：称呼有尊卑长幼，地方有冷有暖。落点：同是门，同是屋，里头的日子不一样。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
