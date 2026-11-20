@@ -9454,5 +9454,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        num: '675',
+        id: '675-lian-dui-ju',
+        title: '对韵 · 莲菊凤麟，浊富清贫（清物与清贫）',
+        subtitle: '莲菊凤麟：清物与清贫',
+        path: 'lessons/675-lian-dui-ju/index.html',
+        grade: '小学低中年级',
+        description: '对韵段，原文：「莲对菊，凤对麟。浊富对清贫。渔庄对佛舍，松盖对花茵。」莲即荷花，周敦颐《爱莲说》「出淤泥而不染」，称花之君子；菊开于秋，傲霜不凋，陶渊明「采菊东篱下」，为花之隐逸者。凤为百鸟之王，见则天下安宁；麟为仁兽，行不履生虫、不折生草，《春秋》哀公十四年西狩获麟，孔子叹「吾道穷矣」。浊富谓财来不洁，清贫谓贫而清白，浊对清、富对贫，两字皆反。渔庄为渔家水村，佛舍为僧家寺舍。松盖谓松枝如车盖，花茵谓落花如褥垫，茵读yīn。接674课，同属《声律启蒙》十一真第一段。落点：宁可清贫，不求浊富。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
