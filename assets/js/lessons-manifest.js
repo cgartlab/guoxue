@@ -9440,5 +9440,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        num: '674',
+        id: '674-qu-fu-tan-zao',
+        title: '对韵 · 去妇探枣，出妻种葵（廉吏与清音）',
+        subtitle: '枣葵橹笛：廉吏与清音',
+        path: 'lessons/674-qu-fu-tan-zao/index.html',
+        grade: '小学低中年级',
+        description: '对韵段，原文：「去妇因探邻舍枣，出妻为种后园葵。笛韵和谐，仙管恰从云里降；橹声咿轧，渔舟正向雪中移。」去妇典出《汉书·王吉传》，东邻枣树枝垂吉庭，吉妇取枣啖吉，吉乃去妇，谚曰「东家枣完，去妇复还」；出妻典出《史记·循吏列传》，公仪休食葵而美，拔葵去织、休妻，不与民争利。仙管指箫笙之属，暗用萧史弄玉吹箫引凤事；咿轧读yī yà，摇橹之声，渔舟雪中，有柳宗元「独钓寒江雪」之意。前联两典皆言清白，后联一声高一声低、一清亮一沉闷。接673课《声律启蒙》四支其二后四句。落点：不是自己的，一丝也不沾。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
