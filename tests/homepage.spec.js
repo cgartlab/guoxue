@@ -144,6 +144,11 @@ test.describe('Desktop (1470x910)', () => {
     await expect(firstCard.locator('.lesson-title')).toContainText('论语');
     await expect(firstCard.locator('.lesson-num')).toBeVisible();
     await expect(firstCard.locator('.lesson-num')).toHaveText('01');
+
+    // 每张卡都必须带可点链接：manifest 条目漏 path 会让 href 为空，点不进去
+    const hrefs = await cards.evaluateAll(els => els.map(el => el.getAttribute('href') || ''));
+    const badLinks = hrefs.filter(h => !h.startsWith('lessons/'));
+    expect(badLinks).toEqual([]);
   });
 
   test('series cover stats show correct counts (705/0/27)', async ({ page }) => {
