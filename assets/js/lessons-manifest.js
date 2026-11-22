@@ -10154,4 +10154,18 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        num: '725',
+        id: '725-zu-sheng-bian',
+        title: '对韵 · 孙子祖生，茶力酒权',
+        subtitle: '一先其四续句',
+        path: 'lessons/725-zu-sheng-bian/index.html',
+        grade: '小学低中年级',
+        description: '对韵段，原文：「孙子策，祖生鞭。盛席对华筵。解醉知茶力，消愁识酒权。」此段见《笠翁对韵》下卷一先其四第二段，接724课「叠嶂对平川」。孙子即孙武，春秋齐人，著《孙子兵法》十三篇，策是计策谋略，一说指战国孙膑。祖生是东晋祖逖，与刘琨同为主簿，中夜闻荒鸡鸣即起习武，是为闻鸡起舞；后祖逖北伐，刘琨说「常恐祖生先吾著鞭」，著鞭即挥鞭上路，喻先人一步建功。盛席是丰盛的酒席，华筵是华美的筵席，筵读 yán，本指铺地而坐的大竹席，古人席地而坐，后合称筵席。解醉知茶力、消愁识酒权：醉了才知茶的力气，愁时才知酒的分量；权本指秤锤，称过才知轻重，故引申为分量、作用。三句韵脚鞭、筵、权，同属下平一先。落点：真本事一半靠谋，一半靠勤。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }];
