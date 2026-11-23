@@ -169,6 +169,16 @@ const targets = [
   ['562', 'lessons/562-ren-wen-shei/index.html'],
   ['563', 'lessons/563-jie-ren-wu/index.html'],
   ['564', 'lessons/564-fan-chu-yan/index.html'],
+  ['754', 'lessons/754-qing-dui-zhuo/index.html'],
+  ['755', 'lessons/755-zhi-he-zhai/index.html'],
+  ['756', 'lessons/756-shen-xiao-wang-leng/index.html'],
+  ['757', 'lessons/757-lei-dui-dian/index.html'],
+  ['758', 'lessons/758-yi-nan-yi-mu/index.html'],
+  ['759', 'lessons/759-wu-xie-ge-lou/index.html'],
+  ['760', 'lessons/760-bai-she-liang-tou/index.html'],
+  ['761', 'lessons/761-qiao-shang-shou-shu/index.html'],
+  ['762', 'lessons/762-shu-dui-mi/index.html'],
+  ['763', 'lessons/763-du-san-dao/index.html'],
 ];
 
 (async () => {
