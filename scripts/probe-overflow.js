@@ -182,6 +182,7 @@ const targets = [
   ['764', 'lessons/764-zhu-shi-zheng-sha/index.html'],
   ['765', 'lessons/765-tai-dui-ge/index.html'],
   ['766', 'lessons/766-san-cun-she/index.html'],
+  ['767', 'lessons/767-qing-ping-ye-xiao/index.html'],
 ];
 
 (async () => {
