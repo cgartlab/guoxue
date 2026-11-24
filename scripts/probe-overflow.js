@@ -196,6 +196,7 @@ const targets = [
   ['778', 'lessons/778-ren-lao-lao-wo-qing-qing/index.html'],
   ['779', 'lessons/779-jia-ke-jun-shan-qiu-nong-di/index.html'],
   ['780', 'lessons/780-gong-dui-ye-xing-dui-qing/index.html'],
+  ['781', 'lessons/781-chun-qiu-bi-yue-dan-ping/index.html'],
 ];
 
 (async () => {
