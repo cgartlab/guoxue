@@ -10896,5 +10896,19 @@ window.GUOXUE_LESSONS = [
         subject: 'liwengduiyun',
         tier: 'core',
         featured: false
+    },
+    {
+        num: '778',
+        id: '778-ren-lao-lao-wo-qing-qing',
+        title: '对韵 · 人老老我卿卿',
+        subtitle: '八庚对课',
+        path: 'lessons/778-ren-lao-lao-wo-qing-qing/index.html',
+        grade: '小学低中年级',
+        description: '对韵段，原文：「人老老，我卿卿。晓燕对春莺。玄霜舂玉杵，白露贮金茎。」此为《笠翁对韵·下平八庚》其一后段，前接 777 课。人老老：前一个「老」是动词，尊敬老人，语出《孟子》「老吾老，以及人之老」。我卿卿：卿是夫妻间的爱称，《世说新语》里王戎的妻子说「亲卿爱卿，是以卿卿」，成语「卿卿我我」由此而来，一敬一爱正好成对。晓燕对春莺：晓对春是时令，燕对莺是禽鸟，报晓对唤春。玄霜舂玉杵：唐代秀才裴航在蓝桥驿用玉杵臼捣仙药玄霜百日，「玄霜捣尽见云英」，娶了云英。白露贮金茎：汉武帝立铜仙人托盘接白露，拌玉屑喝下求长生，金茎是承露盘的铜柱，杜甫「承露金茎霄汉间」。韵：卿 qīng、莺 yīng、茎 jīng 同属下平八庚；杵 chǔ 上声、露 lù 去声，出句不入韵。落点：人间敬与爱是真的，仙药金茎是传说；敬老爱亲最实在。下一课预告「贾客君山秋弄笛，仙人缑岭夜吹笙」（八庚其一续段）。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'liwengduiyun',
+        tier: 'core',
+        featured: false
     }
 ];
