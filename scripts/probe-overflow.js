@@ -199,6 +199,7 @@ const targets = [
   ['781', 'lessons/781-chun-qiu-bi-yue-dan-ping/index.html'],
   ['782', 'lessons/782-san-jian-san-ren-tang-jiang-yong/index.html'],
   ['783', 'lessons/783-hun-dui-dan-hui-dui-ming/index.html'],
+  ['784', 'lessons/784-huang-shi-sou-dan-qiu-sheng/index.html'],
 ];
 
 (async () => {
