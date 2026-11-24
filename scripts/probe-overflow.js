@@ -207,6 +207,7 @@ const targets = [
   ['789', 'lessons/789-wei-luan-tai-ning/index.html'],
   ['790', 'lessons/790-qi-niu-mu-shi/index.html'],
   ['791', 'lessons/791-yan-ge-zhao-wu/index.html'],
+  ['792', 'lessons/792-yan-yi-yu-zeng/index.html'],
 ];
 
 (async () => {
