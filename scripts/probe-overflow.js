@@ -191,6 +191,7 @@ const targets = [
   ['773', 'lessons/773-chi-cao-ru-shi-hai-tang/index.html'],
   ['774', 'lessons/774-chen-dui-zi-di-dui-wang/index.html'],
   ['775', 'lessons/775-xiang-shan-she-zhou-jin-tang/index.html'],
+  ['776', 'lessons/776-pin-nv-dong-bi-ying/index.html'],
 ];
 
 (async () => {
