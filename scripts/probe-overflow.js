@@ -219,6 +219,7 @@ const targets = [
   ['801', 'lessons/801-guan-lv-xi-qiu/index.html'],
   ['802', 'lessons/802-gu-zhang-da-jiang/index.html'],
   ['803', 'lessons/803-ying-lan-yan-mang/index.html'],
+  ['804', 'lessons/804-ji-ling-san-you/index.html'],
 ];
 
 (async () => {
