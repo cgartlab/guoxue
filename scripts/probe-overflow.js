@@ -233,6 +233,7 @@ const targets = [
   ['815', 'lessons/815-shi-kuang-cao-sheng/index.html'],
   ['816', 'lessons/816-huang-tong-bai-sou/index.html'],
   ['817', 'lessons/817-hai-se-shan-lan/index.html'],
+  ['818', 'lessons/818-zhi-shui-tan-quan/index.html'],
 ];
 
 (async () => {
