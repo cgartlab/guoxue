@@ -214,6 +214,7 @@ const targets = [
   ['796', 'lessons/796-bai-zhu-hong-ling/index.html'],
   ['797', 'lessons/797-ren-jie-wang-ling/index.html'],
   ['798', 'lessons/798-rong-ru-xi-you/index.html'],
+  ['799', 'lessons/799-cha-jie-ke-jiu-xiao-chou/index.html'],
 ];
 
 (async () => {
