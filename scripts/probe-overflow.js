@@ -239,6 +239,7 @@ const targets = [
   ['821', 'lessons/821-pei-yin-chui-lian/index.html'],
   ['822', 'lessons/822-dan-bo-an-tian/index.html'],
   ['823', 'lessons/823-kai-tian-zhu-hai/index.html'],
+  ['824', 'lessons/824-kua-feng-cheng-long/index.html'],
 ];
 
 (async () => {
