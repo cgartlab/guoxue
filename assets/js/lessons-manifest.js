@@ -11834,5 +11834,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zengguangxianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        num: '845',
+        id: '845-xiang-jian-yi-de-hao',
+        title: '增广贤文 · 相见易得好',
+        subtitle: '《增广贤文》亲疏与贫富',
+        path: 'lessons/845-xiang-jian-yi-de-hao/index.html',
+        grade: '小学低中年级',
+        description: '《增广贤文》正文第十课：「相见易得好，久住难为人。马行无力皆因瘦，人不风流只为贫。」通译：刚见面容易处得好，住久了就难做人；马跑不动全因为身上瘦，人不体面只因为手里穷。前两句讲亲疏——《礼记》「君子之接如水」，《论语·里仁》子游曰「事君数，斯辱矣；朋友数，斯疏矣」，数读 shuò，是唠叨太密；《庄子·山木》「君子之交淡若水，小人之交甘若醴」。后两句讲世态——俗语「人穷志短，马瘦毛长」；《战国策·秦策》苏秦游说秦王不成回家「妻不下纴，嫂不为炊，父母不与言」，佩相印后家人郊迎三十里、嫂蛇行匍伏，苏秦问「嫂何前倨而后卑也」。风流指风度、体面、从容，不是男女之事；「为」难为读 wéi，只为贫读 wèi。落点：处人别贴太紧，看人别用钱称；穷不是错，笑穷才是。本门类第十一课。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zengguangxianwen',
+        tier: 'core',
+        featured: false
     }
 ];
