@@ -227,5 +227,13 @@ window.GUOXUE_CATEGORIES = [
         description: '《笠翁对韵》三十韵精讲 · 学对仗、练语感',
         status: 'ready',
         order: 27
+    },
+    {
+        key: 'zengguangxianwen',
+        label: '增广贤文课堂',
+        num: '28',
+        description: '《增广贤文》逐句精讲 · 读了《增广》会说话',
+        status: 'ready',
+        order: 28
     }
 ];
