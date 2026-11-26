@@ -11806,5 +11806,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zengguangxianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        num: '843',
+        id: '843-dang-shi-ruo-bu-deng-gao-wang',
+        title: '增广贤文 · 当时若不登高望',
+        subtitle: '《增广贤文》眼界与日久',
+        path: 'lessons/843-dang-shi-ruo-bu-deng-gao-wang/index.html',
+        grade: '小学低中年级',
+        description: '《增广贤文》正文第八课：「当时若不登高望，谁信东流海洋深。路遥知马力，事久见人心。」通译：当初要不是站到高处去望一望，谁会相信东流的水到头来是那么深的汪洋；路走得远才知道马的脚力，事处得久才看得出人的心。前两句讲眼界——《荀子·劝学》「不登高山，不知天之高也；不临深溪，不知地之厚也」「吾尝跂而望矣，不如登高之博见也」；王之涣「欲穷千里目，更上一层楼」，杜甫《望岳》「会当凌绝顶，一览众山小」；不见海的人不信海深，《庄子·秋水》井蛙不可语海、夏虫不可语冰，河伯望洋向若而叹。后两句讲时间——荀子「骐骥一跃不能十步，驽马十驾功在不舍」；《论语·子罕》「岁寒，然后知松柏之后凋也」；白居易《放言》「试玉要烧三日满，辨材须待七年期」「周公恐惧流言日，王莽谦恭未篡时」。落点：一句管眼，一句管心；看事要登高，看人要日久。本门类第九课。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zengguangxianwen',
+        tier: 'core',
+        featured: false
     }
 ];
