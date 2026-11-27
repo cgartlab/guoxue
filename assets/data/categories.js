@@ -235,13 +235,5 @@ window.GUOXUE_CATEGORIES = [
         description: '《增广贤文》逐句精讲 · 读了《增广》会说话',
         status: 'ready',
         order: 28
-    },
-    {
-        key: 'shengtongshi',
-        label: '神童诗课堂',
-        num: '29',
-        description: '《神童诗》逐句精讲 · 汪洙蒙学诗词',
-        status: 'ready',
-        order: 29
     }
 ];
