@@ -12520,5 +12520,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zengguangxianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '894-ping-bu-yu-bai-ma-you',
+        num: '894',
+        title: '增广贤文 · 沉静与连累',
+        subtitle: '《增广贤文》沉住气·有人求·别拖累',
+        path: 'lessons/894-ping-bu-yu-bai-ma-you/index.html',
+        grade: '小学低中年级',
+        description: '《增广贤文》正文第五十八课：「人平不语，水平不流。一家养女百家求，一马不行百马忧。」四句三层——沉得住气、好东西有人求、一人牵动众人。人平不语：人心里安稳、有底气，就不浮躁不多话——「平」是平和、安定。水平不流：水面平了就不流动；用来说安定下来才稳当，也反衬「不平则鸣」。一家养女百家求：一家养的好闺女，许多人家来求亲——比喻好东西人人争着要。一马不行百马忧：一匹马走不动，一百匹马都跟着发愁——比喻一个人、一个环节出问题，会连累大家。四句合起来：自己稳住、把事做好，也别拖累别人。最容易讲歪的：别把「人平不语」讲成叫人别说话，别把「一家养女百家求」讲成看轻女孩——这里恰恰是夸姑娘好、人人求。注意「语」读 yǔ、「流」读 liú、「行」读 xíng（走），不读 háng。落点：沉住气、做好自己、别拖累人。本门类第五十九课。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zengguangxianwen',
+        tier: 'core',
+        featured: false
     }
 ];
