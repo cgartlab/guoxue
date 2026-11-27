@@ -12422,5 +12422,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zengguangxianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '887-pin-qiong-zhi-qu',
+        num: '887',
+        title: '增广贤文 · 安贫与正直',
+        subtitle: '《增广贤文》心安·不怨·守正',
+        path: 'lessons/887-pin-qiong-zhi-qu/index.html',
+        grade: '小学低中年级',
+        description: '《增广贤文》正文第五十一课：「贫穷自在，富贵多忧。不以我为德，反以我为仇。宁向直中取，不可曲中求。」六句三层——对自己、对人、对事。贫穷自在，富贵多忧：穷日子牵绊少、心里自在；富贵了牵挂多、患得患失——不是赞美贫穷，是夸心里安，接上节课「君子固穷」。不以我为德，反以我为仇：「为」读 wéi，我对他有恩，他不感激，反倒把我当仇人——讲人情冷暖，帮人不图报，恩怨放一边。宁向直中取，不可曲中求：「宁」读 nìng 是宁可，「曲」读 qū 是歪曲；宁可正大光明地得到，也不走歪门邪道去强求。三句合起来：对自己，穷也心安；对人，施恩不图报；对事，走正道不取巧。最容易讲歪的：别把「贫穷自在」讲成赞美贫穷、叫人不求上进；「为」不读 wèi、「曲」不读 qǔ、「宁」不读 níng。落点：心安、不怨、走正道。本门类第五十二课。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zengguangxianwen',
+        tier: 'core',
+        featured: false
     }
 ];
