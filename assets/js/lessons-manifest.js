@@ -12464,5 +12464,19 @@ window.GUOXUE_LESSONS = [
         subject: 'zengguangxianwen',
         tier: 'core',
         featured: false
+    },
+    {
+        id: '890-ren-qi-wu-gui-fa',
+        num: '890',
+        title: '增广贤文 · 忍气与守规矩',
+        subtitle: '《增广贤文》忍一时·缩得住·守规矩',
+        path: 'lessons/890-ren-qi-wu-gui-fa/index.html',
+        grade: '小学低中年级',
+        description: '《增广贤文》正文第五十四课：「忍得一时之气，免得百日之忧。近来学得乌龟法，得缩头时且缩头。惧法朝朝乐，欺公日日忧。」六句三层——忍、缩、守。忍得一时之气，免得百日之忧：忍住一时的气，省下百日的愁；不是叫人窝囊，是别让一口气坏了一天的事。近来学得乌龟法，得缩头时且缩头：乌龟遇险就缩头，比喻人要学会收敛退让；「得」读 dé，是「该、要」；不是教人胆小，是没把握时先稳住。惧法朝朝乐，欺公日日忧：怕犯法的人天天安稳，欺负公家、耍小聪明的人天天发愁；「朝朝」读 zhāo zhāo，是「天天」。三句合起来：忍得住气、收得住头、守得住规矩。最容易讲歪的：别把「忍」讲成没原则，别把「缩头」讲成懦弱，别把「惧法」讲成胆小。注意「得」读 dé、「朝」读 zhāo、「乐」读 lè。落点：忍一时、退一步、守规矩。本门类第五十五课。',
+        status: 'ready',
+        duration: '约 15 分钟',
+        subject: 'zengguangxianwen',
+        tier: 'core',
+        featured: false
     }
 ];
